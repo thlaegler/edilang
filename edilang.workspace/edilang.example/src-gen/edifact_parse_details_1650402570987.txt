@@ -1,0 +1,108 @@
+Parsed EDIFACT model:
+
+UNB segment:
+	InterchangeSender=(Interchange=STYLUSSTUDIO, Interchange2=1)
+	InterchangeRecipient=(Interchange=DATADIRECT, Interchange2=1)
+	DateAndTime=[(Date6=20051107, Time4=1159)]
+	Num1=3
+	Syntax=UNOA
+	InterchangeControlSenderRef=6002
+
+UNH segment:
+	MessageReferenceNumber=SSDD1
+	Message=(ControllingAgency=UN, Release=03B, More=EAN008, Type=ORDERS, Version=D)
+
+BGM segment:
+	Num1=220
+	Num2=BKOD99
+	Num3=9
+
+DTM segment:
+	Num1=137
+	Num2=20051107
+	Num3=102
+
+NAD segment:
+	Manufacturer1=5412345000176
+	Manufacturer3=9
+	Code=BY
+
+NAD segment:
+	Manufacturer1=4012345000094
+	Manufacturer3=9
+	Code=SU
+
+LIN segment:
+	Code1=1
+	Code2=1
+	Code3=0764569104
+	Code4=IB
+
+QTY segment:
+	Code1=1
+	Code2=25
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=XPath 2.0 Programmer?s Reference
+
+LIN segment:
+	Code1=2
+	Code2=1
+	Code3=0764569090
+	Code4=IB
+
+QTY segment:
+	Code1=1
+	Code2=25
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=XSLT 2.0 Programmer?s Reference
+
+LIN segment:
+	Code1=3
+	Code2=1
+	Code3=1861004656
+	Code4=IB
+
+QTY segment:
+	Code1=1
+	Code2=16
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=Java Server Programming
+
+LIN segment:
+	Code1=4
+	Code2=1
+	Code3=0596006756
+	Code4=IB
+
+QTY segment:
+	Code1=1
+	Code2=10
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=Enterprise Service Bus
+
+UNS segment:
+	SegmentCount=S
+
+CNT segment:
+	Todo1=2
+	Todo2=4
+
+UNT segment:
+	MessageReferenceNumber=SSDD1
+	SegmentCount=22
+
+UNZ segment:
+	InterchangeControlCount=1
+	InterchangeControlRef=6002

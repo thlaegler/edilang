@@ -1,0 +1,734 @@
+grammar io.thlaegler.edifact.Edilang with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate edilang "http://www.thlaegler.io/edifact/Edilang"
+
+EdiModel:
+	segments+=AbstractEdiSegment*;
+
+AbstractEdiSegment:
+	UNASegment | 
+	UNBSegment | // header for trailer UNZ
+	UNHSegment | // header for trailer UNT
+	
+	MSGSegment | // Message type identification
+	ORGSegment | // Organisation
+	POCSegment | // Purpose of conveyance call
+	ODISegment | // Origin/destination
+	UCISegment | // ?
+	PDISegment | // Person demographic information
+	RPISegment | // ?
+	TVLSegment | // Travel itinerary
+	BGMSegment | // Beginning of message
+	DTMSegment | // Date/time/period
+	NADSegment | // Name and address
+	RFFSegment | // Reference
+	CUXSegment | // Currencies
+	TAXSegment | // Duty/tax/fee details
+	LINSegment | // Line item
+	QTYSegment | // Quantity
+	MOASegment | // Monetary amount
+	PRISegment | // Price details
+	PATSegment | // Payment terms basis
+	PCISegment | // Package identification
+	CTASegment | // Contact information
+	CNTSegment | // Control total
+	FTXSegment | // Free text
+	ERCSegment | // Application error information
+	
+//    ADR  Address
+//    AGR  Agreement identification
+//    AJT  Adjustment details
+//    ALC  Allowance or charge
+//    ALI  Additional information
+//+   APP  Applicability
+//    APR  Additional price information
+//    ARD  Monetary amount function
+//    ARR  Array information
+//    ASI  Array structure identification
+//    ATT  Attribute
+//    AUT  Authentication result
+//+   BAS  Basis
+//    BII  Structure identification
+//    BUS  Business function
+//    CAV  Characteristic value
+//    CCD  Credit cover details
+//    CCI  Characteristic/class id
+//    CDI  Physical or logical state
+//    CDS  Code set identification
+//    CDV  Code value definition
+//    CED  Computer environment details
+//    CIN  Clinical information
+//+   CLA  Clause identification
+//    CLI  Clinical intervention
+//    CMP  Composite data element identification
+//    CNI  Consignment information
+//    COD  Component details
+//    COM  Communication contact
+//    COT  Contribution details
+//    CPI  Charge payment instructions
+//    CPS  Consignment packing sequence
+//    CPT  Account identification
+//    CST  Customs status of goods
+//    DAM  Damage
+//    DFN  Definition function
+//    DGS  Dangerous goods
+//    DII  Directory identification
+//    DIM  Dimensions
+//    DLI  Document line identification
+//    DLM  Delivery limitations
+//    DMS  Document/message summary
+//    DOC  Document/message details
+//    DRD  Data representation details
+//    DSG  Dosage administration
+//    DSI  Data set identification
+//    EDT  Editing details
+//    EFI  External file link identification
+//    ELM  Simple data element details
+//    ELU  Data element usage details
+//    ELV  Element value definition
+//    EMP  Employment details
+//    EQA  Attached equipment
+//    EQD  Equipment details
+//    EQN  Number of units
+//    ERP  Error point details
+//*   EVE  Event
+//X   EVT  Event
+//    FCA  Financial charges allocation
+//    FII  Financial institution information
+//    FNS  Footnote set
+//    FNT  Footnote
+//    FOR  Formula
+//    FSQ  Formula sequence
+//    GDS  Nature of cargo
+//    GEI  Processing information
+//    GID  Goods item details
+//    GIN  Goods identity number
+//    GIR  Related identification numbers
+//X   GIS  General indicator
+//    GOR  Governmental requirements
+//    GRU  Segment group usage details
+//    HAN  Handling instructions
+//    HYN  Hierarchy information
+//    ICD  Insurance cover description
+//    IDE  Identity
+//*   IFD  Information detail
+//    IHC  Person characteristic
+//    IMD  Item description
+//    IND  Index details
+//    INP  Parties and instruction
+//    INV  Inventory management related details
+//    IRQ  Information required
+//    LAN  Language
+//    LOC  Place/location identification
+//    MEA  Measurements
+//    MEM  Membership details
+//    MKS  Market/sales channel information
+//    NAT  Nationality
+//    PAC  Package
+//    PAI  Payment instructions
+//    PAS  Attendance
+//    PCC  Premium calculation component details
+//*   PCD  Percentage details
+//+   PER  Period related details
+//    PGI  Product group information
+//    PIA  Additional product id
+//    PNA  Party identification
+//    PRC  Process identification
+//+   PRV  Proviso details
+//    PSD  Physical sample description
+//    PTY  Priority
+//    PYT  Payment terms
+//    QRS  Query and response
+//    QUA  Qualification
+//    QVR  Quantity variances
+//    RCS  Requirements and conditions
+//    REL  Relationship
+//    RJL  Accounting journal identification
+//    RNG  Range details
+//    ROD  Risk object type
+//    RSL  Result
+//*   RTE  Rate details
+//    SAL  Remuneration type identification
+//    SCC  Scheduling conditions
+//    SCD  Structure component definition
+//    SEG  Segment identification
+//    SEL  Seal number
+//    SEQ  Sequence details
+//    SFI  Safety information
+//    SGP  Split goods placement
+//    SGU  Segment usage details
+//    SPR  Organisation classification details
+//    SPS  Sampling parameters for summary statistics
+//    STA  Statistics
+//    STC  Statistical concept
+//    STG  Stages
+//    STS  Status
+//    TCC  Transport charge/rate calculations
+//    TDT  Details of transport
+//    TEM  Test method
+//    TMD  Transport movement details
+//    TMP  Temperature
+//    TOD  Terms of delivery or transport
+//    TPL  Transport placement
+//    TRU  Technical rules
+//    TSR  Transport service requirements
+//    VLI  Value list identification
+
+	UNSSegment |
+	UNZSegment | // trailer for header UNB
+	UNTSegment // trailer for header UNH
+;
+
+UNASegment:
+	segment="UNA"
+	COLON
+	PLUS
+	".?"
+	lineEnd=QUOTE_AND_NL
+;
+//UNB+IATB:1+1APPC+NZ0AV+200120:2136+039I42XXTK0001+++O'
+UNBSegment:
+	segment="UNB"
+	PLUS
+	(
+		(syntax=ID)?
+		COLON
+		(num1=ID)?
+	)?
+	PLUS
+	( interchangeSender=InterchangerFunction )?
+	PLUS
+	( interchangeRecipient=InterchangerFunction )?
+	PLUS
+	( dateAndTime+=DateAndTimeFunction )?
+	PLUS
+	( interchangeControlSenderRef=ID )?
+	(
+		PLUS
+		( interchangeControlRecipientRef=ID )?
+		(
+			PLUS
+			( fse=ID )?
+			(
+				PLUS
+				( assiciationCode=ID )?
+			)?
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+
+//UNH+1+PAOREQ:96:2:IA+00012432090782'
+UNHSegment:
+	segment="UNH"
+	PLUS
+	messageReferenceNumber=ID
+	PLUS
+	message=MessageBodyFunction
+	(
+		PLUS
+		commonAccessReference=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//MSG+1:46'
+MSGSegment:
+	segment="MSG"
+	PLUS
+	( messageFunction=MSGFunction )?
+	(
+		PLUS
+		responseType=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//ORG+1A:MUC+27213082:ATHGR28CS+ATH++T+GR:EUR:EN+A9996WSSU+04261178+1A'
+//ORG+NZ:AKL:00++AKL+NZ+A+NZ:NZD+PR'
+ORGSegment:
+	segment="ORG"
+	PLUS
+	( systemDetail1=SystemDetailFunction )?
+	PLUS
+	( originatorIdentification=OriginatorIdentificationFunction )?
+	PLUS
+	( location=LocationFunction )?
+	PLUS
+	( systemDetail2=SystemDetailFunction )?
+	PLUS
+	( originatorTypeCode=ID )?
+	PLUS
+	( originator=OriginatorFunction )?
+	PLUS
+	( originatorsAuthorityRequestCode=ID )?
+	(
+		PLUS
+		communicationNumber=ID
+		(
+			PLUS
+			partyIdIdentification=ID
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//POC+BNE+220120'
+POCSegment:
+	segment="POC"
+	PLUS
+	(location=ID)?
+	PLUS
+	(departureDate=ID)?
+	(
+		PLUS
+		departureTime=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//ODI+BNE+ZQN'
+ODISegment:
+	segment="ODI"
+	(
+		PLUS
+		(origin=ID)?
+		PLUS
+		(destination=ID)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//
+UCISegment:
+	segment="UCI"
+	PLUS
+	( interchangeControlReference=ID )?
+	PLUS
+	( interchangeSender=ID )?
+	PLUS
+	( interchangeRecipient=ID )?
+	PLUS
+	( action=ID )?
+	PLUS
+	( syntaxErrorCode=ID )?
+	PLUS
+	( segmentTagCode=ID )?
+	lineEnd=QUOTE_AND_NL
+;
+//
+PDISegment:
+	segment="PDI"
+	PLUS
+	( productDetailsQualifier=ID )?
+	(
+		PLUS
+		products+=ProductFunction
+	)*
+	lineEnd=QUOTE_AND_NL
+;
+//TVL+230120+CHC+ZQN+NZ+5641+3+2+P"
+TVLSegment:
+	segment="TVL"
+	PLUS
+	(
+		(
+			dateAndTime+=DateOnlyFunction
+//			(
+//				COLON 
+//				dateAndTime+=DateOnly
+//			)*
+		)
+		|
+		(
+			dateAndTime+=DateAndTimeFunction
+			(
+				COLON 
+				dateAndTime+=DateAndTimeFunction
+			)*
+		)
+	)
+	PLUS
+	(originCode=ID)?
+	PLUS
+	(destinationCode=ID)?
+	PLUS
+	(carrierId=ID)?
+	PLUS
+	(
+		productId=ID
+		(
+			COLON
+			characteristicId=ID
+			(
+				COLON
+				productIdCharacteristic=ID
+				(
+					COLON
+					descriptionIds+=ID	
+				)*
+			)?
+		)?
+	)?
+	(
+		PLUS
+		productType=ID
+		( 
+			PLUS
+			lineItemNumber=ID
+			(
+				PLUS
+				processingIndicatorCode=ID
+			)?
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//RPI+1+SS'
+RPISegment:
+	segment="RPI"
+	PLUS
+	(numberOfPax=ID)?
+	PLUS
+	(status=ID)?
+	lineEnd=QUOTE_AND_NL
+;
+//MOA+203:1960.29'
+MOASegment:
+	segment="MOA"
+	PLUS
+	code1=ID
+	(
+		COLON
+		code2=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//LIN+++090346642:IN'
+LINSegment:
+	segment="LIN"
+	PLUS
+	( code1=ID )?
+	PLUS
+	( code2=ID )?
+	PLUS
+	(
+		code3=ID
+		COLON
+		code4=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//PRI+AAA:3630.1724::NTP:100:C62'
+PRISegment:
+	segment="PRI"
+	PLUS
+	sub=PRIFunction
+	lineEnd=QUOTE_AND_NL
+;
+//QTY+12:54:PCE'
+QTYSegment:
+	segment="QTY"
+	PLUS
+	code1=ID
+	(
+		COLON
+		code2=ID
+		(
+			COLON
+			code3=ID
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//CUX+2:EUR'
+CUXSegment:
+	segment="CUX"
+	PLUS
+	num=ID
+	(
+		COLON
+		currency=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//TAX+7+VAT'
+TAXSegment:
+	segment="TAX"
+	PLUS
+	num=ID
+	PLUS
+	type=ID
+	(
+		PLUS
+		( todo1=ID )?
+		PLUS
+		( todo2=ID )?
+		PLUS
+		(
+			( todo3=ID )?
+			COLON
+			( todo4=ID )?
+			COLON
+			( todo5=ID )?
+			COLON
+			( todo6=ID )?
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//RFF+VA:382324067'
+RFFSegment:
+	segment="RFF"
+	PLUS
+	rff1=ID
+	(
+		COLON
+		rff2=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//NAD+BT+VAUXHALL MOTORS LTD::91'
+NADSegment:
+	segment="NAD"
+	PLUS
+	code=ID
+	PLUS
+	(
+		( manufacturer1=ID )?
+		COLON
+		( manufacturer2=ID )?
+		COLON
+		( manufacturer3=ID )?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//DTM+137:199910060000:102'
+DTMSegment:
+	segment="DTM"
+	PLUS
+	num1=ID
+	(
+		COLON
+		num2=ID
+		COLON
+		num3=ID
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//BGM+381+1060113800026+9'
+BGMSegment:
+	segment="BGM"
+	PLUS
+	(num1=ID)?
+	PLUS
+	(num2=ID)?
+	PLUS
+	(num3=ID)?
+	lineEnd=QUOTE_AND_NL
+;
+//PAT+1'
+PATSegment:
+	segment="PAT"
+	PLUS
+	segmentCount=ID
+	lineEnd=QUOTE_AND_NL
+;
+//FTX+AFM+1++XPath 2.0 Programmer?'s Reference'
+FTXSegment:
+	segment="FTX"
+	PLUS
+	( todo1=ID )?
+	PLUS
+	( todo2=ID )?
+	PLUS
+	( todo3=ID )?
+	PLUS
+	( todo4=ID )?
+	lineEnd=QUOTE_AND_NL
+;
+ERCSegment:
+	segment="ERC"
+	PLUS
+	code1=ID
+	lineEnd=QUOTE_AND_NL
+;
+//CNT+2:4'
+CNTSegment:
+	segment="CNT"
+	PLUS
+	(
+		( todo1=ID )?
+		COLON
+		( todo2=ID )?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+
+CTASegment:
+	segment="CTA"
+	PLUS
+	( todo=ID )?
+	lineEnd=QUOTE_AND_NL
+;
+
+PCISegment:
+	segment="PCI"
+	PLUS
+	( todo=ID )?
+	lineEnd=QUOTE_AND_NL
+;
+
+//UNS+S'
+UNSSegment:
+	segment="UNS"
+	PLUS
+	segmentCount=ID
+	lineEnd=QUOTE_AND_NL
+;
+//UNT+9+1'
+UNTSegment:
+	segment="UNT"
+	PLUS
+	( segmentCount=ID )?
+	PLUS
+	( messageReferenceNumber=ID )?
+	lineEnd=QUOTE_AND_NL
+;
+//UNZ+1+039I42XXTK0001'
+UNZSegment:
+	segment="UNZ"
+	PLUS
+	( interchangeControlCount=ID )?
+	PLUS
+	( interchangeControlRef=ID )?
+	lineEnd=QUOTE_AND_NL
+;
+
+// EDIFACT Functions
+AbstractEdiFunction:
+	PRIFunction |
+	MessageBodyFunction |
+	MSGFunction |
+	ProductFunction |
+	SystemDetailFunction |
+	OriginatorFunction |
+	OriginatorIdentificationFunction |
+	LocationFunction |
+	InterchangerFunction |
+	DateOnlyFunction |
+	DateAndTimeFunction
+;
+
+PRIFunction:
+	code1=ID
+	COLON
+	( code2=ID )?
+	COLON
+	( code3=ID )?
+	COLON
+	( code4=ID )?
+	COLON
+	( code5=ID )?
+	COLON
+	( code6=ID )?
+;
+MessageBodyFunction:
+	type=ID
+	COLON
+	( version=ID )?
+	COLON
+	( release=ID )?
+	COLON
+	( controllingAgency=ID )?
+	(
+		COLON
+		more=ID
+	)?
+;
+MSGFunction:
+	( businessFunction=ID )?
+	COLON
+	messageFunction1=ID
+	(
+		COLON
+		codeListResponsibleAgency=ID
+		(
+			COLON
+			messageFunction2=ID
+		)?
+	)?
+;
+ProductFunction:
+	bookingClass=ID
+	(
+		COLON
+		avail=ID
+	)?
+;
+SystemDetailFunction:
+	companyIdentification=ID
+	(
+		COLON
+		locationCode=ID
+		(
+			COLON
+			locationName=ID
+		)?
+	)?
+;
+OriginatorFunction:
+	countryCode=ID
+	(
+		COLON
+		currencyCode=ID
+		(
+			COLON
+			languageCode=ID
+		)?
+	)?
+;
+OriginatorIdentificationFunction:
+	travelAgentId=ID
+	(
+		COLON
+		inHouseId1=ID?
+		(
+			COLON
+			inHouseId2=ID	
+		)?
+	)?
+;
+LocationFunction:
+	locationId=ID
+	(
+		COLON
+		locationName=ID
+	)?
+;
+InterchangerFunction:
+	interchange=ID
+	(
+		COLON
+		interchange2=ID
+	)?
+;
+DateOnlyFunction:
+	date6=ID
+;
+DateAndTimeFunction:
+	date6=ID
+	COLON
+	time4=ID
+;
+
+terminal QUOTE_AND_NL: ( "'" | "~" ) ( "\n" )?;
+terminal PLUS: ( "+" | "*" );
+terminal COLON: ":";
+//terminal INT_DATE returns ecore::EString: ( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" );
+//terminal INT_TIME returns ecore::EString: ( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" );
+@Override
+terminal INT returns ecore::EInt: ( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" );
+@Override
+terminal ID returns ecore::EString: ( "a".."z" | "A".."Z" | "0".."9" ) ( ( "a".."z" | "A".."Z" | "0".."9" | "-" | "_" | "." | " " | "?" )* ( "a".."z" | "A".."Z" | "0".."9" ) )?;
+@Override
+terminal STRING returns ecore::EString: '"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"';
+@Override
+terminal WS: ( "\t" | "\r" | "\n" )+;

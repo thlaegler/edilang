@@ -1,0 +1,102 @@
+Parsed EDIFACT model:
+
+UNB segment:
+	InterchangeSender=(Interchange=1APPC)
+	InterchangeRecipient=(Interchange=NZ0AV)
+	AssiciationCode=0
+	DateAndTime=[(Date6=220217, Time4=2030)]
+	Num1=1
+	Syntax=IATB
+	InterchangeControlSenderRef=01EJA07RJ80001
+
+UNH segment:
+	MessageReferenceNumber=1
+	CommonAccessReference=0004P6EF2C1
+	Message=(ControllingAgency=IA, Release=2, Type=PAOREQ, Version=96)
+
+MSG segment:
+	MessageFunction=(BusinessFunction=1, MessageFunction1=A46)
+
+ORG segment:
+	SystemDetail1=(CompanyIdentification=1A, LocationCode=MUC)
+	OriginatorTypeCode=A
+	Originator=(CountryCode=SG, LanguageCode=EN, CurrencyCode=SGD)
+	CommunicationNumber=04261178
+	PartyIdIdentification=1A
+	OriginatorIdentification=(TravelAgentId=32392102, InHouseId1=SINSQ0900)
+	OriginatorsAuthorityRequestCode=A7106X0SU
+	Location=(LocationId=SIN)
+
+POC segment:
+	DepartureDate=200322
+	Location=BKK
+
+ODI segment:
+	Destination=SIN
+	Origin=BKK
+
+TVL segment:
+	DateAndTime=[(Date6=200322)]
+	OriginCode=BKK
+	DestinationCode=SIN
+	CarrierId=NZ
+	ProductType=1
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+	ProductId=3451
+
+TVL segment:
+	DateAndTime=[(Date6=200322)]
+	OriginCode=BKK
+	DestinationCode=SIN
+	CarrierId=NZ
+	ProductType=2
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+	ProductId=3453
+
+TVL segment:
+	DateAndTime=[(Date6=200322)]
+	OriginCode=BKK
+	DestinationCode=SIN
+	CarrierId=NZ
+	ProductType=3
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+	ProductId=3465
+
+TVL segment:
+	DateAndTime=[(Date6=200322)]
+	OriginCode=BKK
+	DestinationCode=SIN
+	CarrierId=NZ
+	ProductType=4
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+	ProductId=3455
+
+ODI segment:
+
+
+MSG segment:
+	MessageFunction=(MessageFunction1=F7)
+
+TVL segment:
+	DateAndTime=[(Date6=100322, Time4=0945), (Date6=100322, Time4=1110)]
+	OriginCode=SIN
+	DestinationCode=BKK
+	CarrierId=SQ
+	CharacteristicId=W
+	ProductId=708
+
+RPI segment:
+	NumberOfPax=1
+	Status=SS
+
+UNT segment:
+	MessageReferenceNumber=1
+	SegmentCount=14
+
+UNZ segment:
+	InterchangeControlCount=1
+	InterchangeControlRef=01EJA07RJ80001
