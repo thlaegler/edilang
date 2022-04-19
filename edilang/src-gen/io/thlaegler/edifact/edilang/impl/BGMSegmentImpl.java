@@ -4,11 +4,15 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.BGMSegment;
+import io.thlaegler.edifact.edilang.DocumentMessage;
+import io.thlaegler.edifact.edilang.DocumentMessageIdentification;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,9 +24,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.BGMSegmentImpl#getNum1 <em>Num1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.BGMSegmentImpl#getNum2 <em>Num2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.BGMSegmentImpl#getNum3 <em>Num3</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BGMSegmentImpl#getDocumentMessageName <em>Document Message Name</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BGMSegmentImpl#getDocumentMessageIdentification <em>Document Message Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BGMSegmentImpl#getMessageFunctionCode <em>Message Function Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BGMSegmentImpl#getResponseTypeCode <em>Response Type Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,64 +35,64 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
 {
   /**
-   * The default value of the '{@link #getNum1() <em>Num1</em>}' attribute.
+   * The cached value of the '{@link #getDocumentMessageName() <em>Document Message Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum1()
+   * @see #getDocumentMessageName()
    * @generated
    * @ordered
    */
-  protected static final String NUM1_EDEFAULT = null;
+  protected DocumentMessage documentMessageName;
 
   /**
-   * The cached value of the '{@link #getNum1() <em>Num1</em>}' attribute.
+   * The cached value of the '{@link #getDocumentMessageIdentification() <em>Document Message Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum1()
+   * @see #getDocumentMessageIdentification()
    * @generated
    * @ordered
    */
-  protected String num1 = NUM1_EDEFAULT;
+  protected DocumentMessageIdentification documentMessageIdentification;
 
   /**
-   * The default value of the '{@link #getNum2() <em>Num2</em>}' attribute.
+   * The default value of the '{@link #getMessageFunctionCode() <em>Message Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum2()
+   * @see #getMessageFunctionCode()
    * @generated
    * @ordered
    */
-  protected static final String NUM2_EDEFAULT = null;
+  protected static final String MESSAGE_FUNCTION_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNum2() <em>Num2</em>}' attribute.
+   * The cached value of the '{@link #getMessageFunctionCode() <em>Message Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum2()
+   * @see #getMessageFunctionCode()
    * @generated
    * @ordered
    */
-  protected String num2 = NUM2_EDEFAULT;
+  protected String messageFunctionCode = MESSAGE_FUNCTION_CODE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getNum3() <em>Num3</em>}' attribute.
+   * The default value of the '{@link #getResponseTypeCode() <em>Response Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum3()
+   * @see #getResponseTypeCode()
    * @generated
    * @ordered
    */
-  protected static final String NUM3_EDEFAULT = null;
+  protected static final String RESPONSE_TYPE_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNum3() <em>Num3</em>}' attribute.
+   * The cached value of the '{@link #getResponseTypeCode() <em>Response Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum3()
+   * @see #getResponseTypeCode()
    * @generated
    * @ordered
    */
-  protected String num3 = NUM3_EDEFAULT;
+  protected String responseTypeCode = RESPONSE_TYPE_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,9 +121,9 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
    * @generated
    */
   @Override
-  public String getNum1()
+  public DocumentMessage getDocumentMessageName()
   {
-    return num1;
+    return documentMessageName;
   }
 
   /**
@@ -126,13 +131,16 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setNum1(String newNum1)
+  public NotificationChain basicSetDocumentMessageName(DocumentMessage newDocumentMessageName, NotificationChain msgs)
   {
-    String oldNum1 = num1;
-    num1 = newNum1;
+    DocumentMessage oldDocumentMessageName = documentMessageName;
+    documentMessageName = newDocumentMessageName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__NUM1, oldNum1, num1));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME, oldDocumentMessageName, newDocumentMessageName);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -141,9 +149,20 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
    * @generated
    */
   @Override
-  public String getNum2()
+  public void setDocumentMessageName(DocumentMessage newDocumentMessageName)
   {
-    return num2;
+    if (newDocumentMessageName != documentMessageName)
+    {
+      NotificationChain msgs = null;
+      if (documentMessageName != null)
+        msgs = ((InternalEObject)documentMessageName).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME, null, msgs);
+      if (newDocumentMessageName != null)
+        msgs = ((InternalEObject)newDocumentMessageName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME, null, msgs);
+      msgs = basicSetDocumentMessageName(newDocumentMessageName, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME, newDocumentMessageName, newDocumentMessageName));
   }
 
   /**
@@ -152,12 +171,26 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
    * @generated
    */
   @Override
-  public void setNum2(String newNum2)
+  public DocumentMessageIdentification getDocumentMessageIdentification()
   {
-    String oldNum2 = num2;
-    num2 = newNum2;
+    return documentMessageIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDocumentMessageIdentification(DocumentMessageIdentification newDocumentMessageIdentification, NotificationChain msgs)
+  {
+    DocumentMessageIdentification oldDocumentMessageIdentification = documentMessageIdentification;
+    documentMessageIdentification = newDocumentMessageIdentification;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__NUM2, oldNum2, num2));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION, oldDocumentMessageIdentification, newDocumentMessageIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -166,9 +199,20 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
    * @generated
    */
   @Override
-  public String getNum3()
+  public void setDocumentMessageIdentification(DocumentMessageIdentification newDocumentMessageIdentification)
   {
-    return num3;
+    if (newDocumentMessageIdentification != documentMessageIdentification)
+    {
+      NotificationChain msgs = null;
+      if (documentMessageIdentification != null)
+        msgs = ((InternalEObject)documentMessageIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION, null, msgs);
+      if (newDocumentMessageIdentification != null)
+        msgs = ((InternalEObject)newDocumentMessageIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION, null, msgs);
+      msgs = basicSetDocumentMessageIdentification(newDocumentMessageIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION, newDocumentMessageIdentification, newDocumentMessageIdentification));
   }
 
   /**
@@ -177,12 +221,66 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
    * @generated
    */
   @Override
-  public void setNum3(String newNum3)
+  public String getMessageFunctionCode()
   {
-    String oldNum3 = num3;
-    num3 = newNum3;
+    return messageFunctionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setMessageFunctionCode(String newMessageFunctionCode)
+  {
+    String oldMessageFunctionCode = messageFunctionCode;
+    messageFunctionCode = newMessageFunctionCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__NUM3, oldNum3, num3));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__MESSAGE_FUNCTION_CODE, oldMessageFunctionCode, messageFunctionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getResponseTypeCode()
+  {
+    return responseTypeCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setResponseTypeCode(String newResponseTypeCode)
+  {
+    String oldResponseTypeCode = responseTypeCode;
+    responseTypeCode = newResponseTypeCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BGM_SEGMENT__RESPONSE_TYPE_CODE, oldResponseTypeCode, responseTypeCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME:
+        return basicSetDocumentMessageName(null, msgs);
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION:
+        return basicSetDocumentMessageIdentification(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -195,12 +293,14 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BGM_SEGMENT__NUM1:
-        return getNum1();
-      case EdilangPackage.BGM_SEGMENT__NUM2:
-        return getNum2();
-      case EdilangPackage.BGM_SEGMENT__NUM3:
-        return getNum3();
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME:
+        return getDocumentMessageName();
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION:
+        return getDocumentMessageIdentification();
+      case EdilangPackage.BGM_SEGMENT__MESSAGE_FUNCTION_CODE:
+        return getMessageFunctionCode();
+      case EdilangPackage.BGM_SEGMENT__RESPONSE_TYPE_CODE:
+        return getResponseTypeCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -215,14 +315,17 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BGM_SEGMENT__NUM1:
-        setNum1((String)newValue);
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME:
+        setDocumentMessageName((DocumentMessage)newValue);
         return;
-      case EdilangPackage.BGM_SEGMENT__NUM2:
-        setNum2((String)newValue);
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION:
+        setDocumentMessageIdentification((DocumentMessageIdentification)newValue);
         return;
-      case EdilangPackage.BGM_SEGMENT__NUM3:
-        setNum3((String)newValue);
+      case EdilangPackage.BGM_SEGMENT__MESSAGE_FUNCTION_CODE:
+        setMessageFunctionCode((String)newValue);
+        return;
+      case EdilangPackage.BGM_SEGMENT__RESPONSE_TYPE_CODE:
+        setResponseTypeCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,14 +341,17 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BGM_SEGMENT__NUM1:
-        setNum1(NUM1_EDEFAULT);
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME:
+        setDocumentMessageName((DocumentMessage)null);
         return;
-      case EdilangPackage.BGM_SEGMENT__NUM2:
-        setNum2(NUM2_EDEFAULT);
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION:
+        setDocumentMessageIdentification((DocumentMessageIdentification)null);
         return;
-      case EdilangPackage.BGM_SEGMENT__NUM3:
-        setNum3(NUM3_EDEFAULT);
+      case EdilangPackage.BGM_SEGMENT__MESSAGE_FUNCTION_CODE:
+        setMessageFunctionCode(MESSAGE_FUNCTION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.BGM_SEGMENT__RESPONSE_TYPE_CODE:
+        setResponseTypeCode(RESPONSE_TYPE_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -261,12 +367,14 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BGM_SEGMENT__NUM1:
-        return NUM1_EDEFAULT == null ? num1 != null : !NUM1_EDEFAULT.equals(num1);
-      case EdilangPackage.BGM_SEGMENT__NUM2:
-        return NUM2_EDEFAULT == null ? num2 != null : !NUM2_EDEFAULT.equals(num2);
-      case EdilangPackage.BGM_SEGMENT__NUM3:
-        return NUM3_EDEFAULT == null ? num3 != null : !NUM3_EDEFAULT.equals(num3);
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_NAME:
+        return documentMessageName != null;
+      case EdilangPackage.BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION:
+        return documentMessageIdentification != null;
+      case EdilangPackage.BGM_SEGMENT__MESSAGE_FUNCTION_CODE:
+        return MESSAGE_FUNCTION_CODE_EDEFAULT == null ? messageFunctionCode != null : !MESSAGE_FUNCTION_CODE_EDEFAULT.equals(messageFunctionCode);
+      case EdilangPackage.BGM_SEGMENT__RESPONSE_TYPE_CODE:
+        return RESPONSE_TYPE_CODE_EDEFAULT == null ? responseTypeCode != null : !RESPONSE_TYPE_CODE_EDEFAULT.equals(responseTypeCode);
     }
     return super.eIsSet(featureID);
   }
@@ -282,12 +390,10 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (num1: ");
-    result.append(num1);
-    result.append(", num2: ");
-    result.append(num2);
-    result.append(", num3: ");
-    result.append(num3);
+    result.append(" (messageFunctionCode: ");
+    result.append(messageFunctionCode);
+    result.append(", responseTypeCode: ");
+    result.append(responseTypeCode);
     result.append(')');
     return result.toString();
   }

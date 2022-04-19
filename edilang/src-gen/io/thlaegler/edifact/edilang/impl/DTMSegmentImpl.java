@@ -4,13 +4,20 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.DTMSegment;
+import io.thlaegler.edifact.edilang.DateTimePeriod;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.DTMSegmentImpl#getNum1 <em>Num1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.DTMSegmentImpl#getNum2 <em>Num2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.DTMSegmentImpl#getNum3 <em>Num3</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.DTMSegmentImpl#getDateTimePeriods <em>Date Time Periods</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,64 +35,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
 {
   /**
-   * The default value of the '{@link #getNum1() <em>Num1</em>}' attribute.
+   * The cached value of the '{@link #getDateTimePeriods() <em>Date Time Periods</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum1()
+   * @see #getDateTimePeriods()
    * @generated
    * @ordered
    */
-  protected static final String NUM1_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNum1() <em>Num1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNum1()
-   * @generated
-   * @ordered
-   */
-  protected String num1 = NUM1_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getNum2() <em>Num2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNum2()
-   * @generated
-   * @ordered
-   */
-  protected static final String NUM2_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNum2() <em>Num2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNum2()
-   * @generated
-   * @ordered
-   */
-  protected String num2 = NUM2_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getNum3() <em>Num3</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNum3()
-   * @generated
-   * @ordered
-   */
-  protected static final String NUM3_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNum3() <em>Num3</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNum3()
-   * @generated
-   * @ordered
-   */
-  protected String num3 = NUM3_EDEFAULT;
+  protected EList<DateTimePeriod> dateTimePeriods;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,9 +71,13 @@ public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
    * @generated
    */
   @Override
-  public String getNum1()
+  public EList<DateTimePeriod> getDateTimePeriods()
   {
-    return num1;
+    if (dateTimePeriods == null)
+    {
+      dateTimePeriods = new EObjectContainmentEList<DateTimePeriod>(DateTimePeriod.class, this, EdilangPackage.DTM_SEGMENT__DATE_TIME_PERIODS);
+    }
+    return dateTimePeriods;
   }
 
   /**
@@ -127,62 +86,14 @@ public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
    * @generated
    */
   @Override
-  public void setNum1(String newNum1)
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldNum1 = num1;
-    num1 = newNum1;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DTM_SEGMENT__NUM1, oldNum1, num1));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getNum2()
-  {
-    return num2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setNum2(String newNum2)
-  {
-    String oldNum2 = num2;
-    num2 = newNum2;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DTM_SEGMENT__NUM2, oldNum2, num2));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getNum3()
-  {
-    return num3;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setNum3(String newNum3)
-  {
-    String oldNum3 = num3;
-    num3 = newNum3;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DTM_SEGMENT__NUM3, oldNum3, num3));
+    switch (featureID)
+    {
+      case EdilangPackage.DTM_SEGMENT__DATE_TIME_PERIODS:
+        return ((InternalEList<?>)getDateTimePeriods()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -195,12 +106,8 @@ public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.DTM_SEGMENT__NUM1:
-        return getNum1();
-      case EdilangPackage.DTM_SEGMENT__NUM2:
-        return getNum2();
-      case EdilangPackage.DTM_SEGMENT__NUM3:
-        return getNum3();
+      case EdilangPackage.DTM_SEGMENT__DATE_TIME_PERIODS:
+        return getDateTimePeriods();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -210,19 +117,15 @@ public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.DTM_SEGMENT__NUM1:
-        setNum1((String)newValue);
-        return;
-      case EdilangPackage.DTM_SEGMENT__NUM2:
-        setNum2((String)newValue);
-        return;
-      case EdilangPackage.DTM_SEGMENT__NUM3:
-        setNum3((String)newValue);
+      case EdilangPackage.DTM_SEGMENT__DATE_TIME_PERIODS:
+        getDateTimePeriods().clear();
+        getDateTimePeriods().addAll((Collection<? extends DateTimePeriod>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,14 +141,8 @@ public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.DTM_SEGMENT__NUM1:
-        setNum1(NUM1_EDEFAULT);
-        return;
-      case EdilangPackage.DTM_SEGMENT__NUM2:
-        setNum2(NUM2_EDEFAULT);
-        return;
-      case EdilangPackage.DTM_SEGMENT__NUM3:
-        setNum3(NUM3_EDEFAULT);
+      case EdilangPackage.DTM_SEGMENT__DATE_TIME_PERIODS:
+        getDateTimePeriods().clear();
         return;
     }
     super.eUnset(featureID);
@@ -261,35 +158,10 @@ public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.DTM_SEGMENT__NUM1:
-        return NUM1_EDEFAULT == null ? num1 != null : !NUM1_EDEFAULT.equals(num1);
-      case EdilangPackage.DTM_SEGMENT__NUM2:
-        return NUM2_EDEFAULT == null ? num2 != null : !NUM2_EDEFAULT.equals(num2);
-      case EdilangPackage.DTM_SEGMENT__NUM3:
-        return NUM3_EDEFAULT == null ? num3 != null : !NUM3_EDEFAULT.equals(num3);
+      case EdilangPackage.DTM_SEGMENT__DATE_TIME_PERIODS:
+        return dateTimePeriods != null && !dateTimePeriods.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (num1: ");
-    result.append(num1);
-    result.append(", num2: ");
-    result.append(num2);
-    result.append(", num3: ");
-    result.append(num3);
-    result.append(')');
-    return result.toString();
   }
 
 } //DTMSegmentImpl

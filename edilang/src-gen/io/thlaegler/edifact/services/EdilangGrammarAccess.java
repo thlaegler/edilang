@@ -6,6 +6,7 @@ package io.thlaegler.edifact.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Grammar;
@@ -722,12 +723,8 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentUNBKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cSyntaxAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cSyntaxIDTerminalRuleCall_2_0_0 = (RuleCall)cSyntaxAssignment_2_0.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Assignment cNum1Assignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cNum1IDTerminalRuleCall_2_2_0 = (RuleCall)cNum1Assignment_2_2.eContents().get(0);
+		private final Assignment cHeaderAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cHeaderUNBHeaderParserRuleCall_2_0 = (RuleCall)cHeaderAssignment_2.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		private final Assignment cInterchangeSenderAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cInterchangeSenderInterchangerFunctionParserRuleCall_4_0 = (RuleCall)cInterchangeSenderAssignment_4.eContents().get(0);
@@ -759,11 +756,7 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//UNBSegment:
 		//    segment="UNB"
 		//    PLUS
-		//    (
-		//        (syntax=ID)?
-		//        COLON
-		//        (num1=ID)?
-		//    )?
+		//    ( header=UNBHeader )?
 		//    PLUS
 		//    ( interchangeSender=InterchangerFunction )?
 		//    PLUS
@@ -790,11 +783,7 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//segment="UNB"
 		//PLUS
-		//(
-		//    (syntax=ID)?
-		//    COLON
-		//    (num1=ID)?
-		//)?
+		//( header=UNBHeader )?
 		//PLUS
 		//( interchangeSender=InterchangerFunction )?
 		//PLUS
@@ -827,27 +816,11 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//(
-		//    (syntax=ID)?
-		//    COLON
-		//    (num1=ID)?
-		//)?
-		public Group getGroup_2() { return cGroup_2; }
+		//( header=UNBHeader )?
+		public Assignment getHeaderAssignment_2() { return cHeaderAssignment_2; }
 		
-		//(syntax=ID)?
-		public Assignment getSyntaxAssignment_2_0() { return cSyntaxAssignment_2_0; }
-		
-		//ID
-		public RuleCall getSyntaxIDTerminalRuleCall_2_0_0() { return cSyntaxIDTerminalRuleCall_2_0_0; }
-		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_2_1() { return cCOLONTerminalRuleCall_2_1; }
-		
-		//(num1=ID)?
-		public Assignment getNum1Assignment_2_2() { return cNum1Assignment_2_2; }
-		
-		//ID
-		public RuleCall getNum1IDTerminalRuleCall_2_2_0() { return cNum1IDTerminalRuleCall_2_2_0; }
+		//UNBHeader
+		public RuleCall getHeaderUNBHeaderParserRuleCall_2_0() { return cHeaderUNBHeaderParserRuleCall_2_0; }
 		
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_3() { return cPLUSTerminalRuleCall_3; }
@@ -1044,12 +1017,20 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentMSGKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cMessageFunctionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMessageFunctionMSGFunctionParserRuleCall_2_0 = (RuleCall)cMessageFunctionAssignment_2.eContents().get(0);
+		private final Assignment cMessageIdentifierAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cMessageIdentifierMessageIndentifierParserRuleCall_2_0 = (RuleCall)cMessageIdentifierAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final RuleCall cPLUSTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final Assignment cResponseTypeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cResponseTypeIDTerminalRuleCall_3_1_0 = (RuleCall)cResponseTypeAssignment_3_1.eContents().get(0);
+		private final Assignment cDesignatedClassCodeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cDesignatedClassCodeIDTerminalRuleCall_3_1_0 = (RuleCall)cDesignatedClassCodeAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
+		private final Assignment cMaintenanceOperationCodeAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cMaintenanceOperationCodeIDTerminalRuleCall_3_2_1_0 = (RuleCall)cMaintenanceOperationCodeAssignment_3_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2 = (Group)cGroup_3_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_0 = (RuleCall)cGroup_3_2_2.eContents().get(0);
+		private final Assignment cRelationshipAssignment_3_2_2_1 = (Assignment)cGroup_3_2_2.eContents().get(1);
+		private final RuleCall cRelationshipRelationshipParserRuleCall_3_2_2_1_0 = (RuleCall)cRelationshipAssignment_3_2_2_1.eContents().get(0);
 		private final Assignment cLineEndAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_4_0 = (RuleCall)cLineEndAssignment_4.eContents().get(0);
 		
@@ -1057,10 +1038,18 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//MSGSegment:
 		//    segment="MSG"
 		//    PLUS
-		//    ( messageFunction=MSGFunction )?
+		//    ( messageIdentifier=MessageIndentifier )? // C709
 		//    (
 		//        PLUS
-		//        responseType=ID
+		//        designatedClassCode=ID // 1507
+		//        (
+		//            PLUS
+		//            maintenanceOperationCode=ID // 4513
+		//                (
+		//                PLUS
+		//                relationship=Relationship // C941
+		//            )?
+		//        )?
 		//    )?
 		//    lineEnd=QUOTE_AND_NL
 		//;
@@ -1068,10 +1057,18 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//segment="MSG"
 		//PLUS
-		//( messageFunction=MSGFunction )?
+		//( messageIdentifier=MessageIndentifier )? // C709
 		//(
 		//    PLUS
-		//    responseType=ID
+		//    designatedClassCode=ID // 1507
+		//    (
+		//        PLUS
+		//        maintenanceOperationCode=ID // 4513
+		//            (
+		//            PLUS
+		//            relationship=Relationship // C941
+		//        )?
+		//    )?
 		//)?
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
@@ -1085,26 +1082,71 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//( messageFunction=MSGFunction )?
-		public Assignment getMessageFunctionAssignment_2() { return cMessageFunctionAssignment_2; }
+		//( messageIdentifier=MessageIndentifier )?
+		public Assignment getMessageIdentifierAssignment_2() { return cMessageIdentifierAssignment_2; }
 		
-		//MSGFunction
-		public RuleCall getMessageFunctionMSGFunctionParserRuleCall_2_0() { return cMessageFunctionMSGFunctionParserRuleCall_2_0; }
+		//MessageIndentifier
+		public RuleCall getMessageIdentifierMessageIndentifierParserRuleCall_2_0() { return cMessageIdentifierMessageIndentifierParserRuleCall_2_0; }
 		
-		//(
-		//    PLUS
-		//    responseType=ID
-		//)?
+		//// C709
+		//   (
+		//       PLUS
+		//       designatedClassCode=ID // 1507
+		//       (
+		//           PLUS
+		//           maintenanceOperationCode=ID // 4513
+		//               (
+		//               PLUS
+		//               relationship=Relationship // C941
+		//           )?
+		//       )?
+		//   )?
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_3_0() { return cPLUSTerminalRuleCall_3_0; }
 		
-		//responseType=ID
-		public Assignment getResponseTypeAssignment_3_1() { return cResponseTypeAssignment_3_1; }
+		//designatedClassCode=ID
+		public Assignment getDesignatedClassCodeAssignment_3_1() { return cDesignatedClassCodeAssignment_3_1; }
 		
 		//ID
-		public RuleCall getResponseTypeIDTerminalRuleCall_3_1_0() { return cResponseTypeIDTerminalRuleCall_3_1_0; }
+		public RuleCall getDesignatedClassCodeIDTerminalRuleCall_3_1_0() { return cDesignatedClassCodeIDTerminalRuleCall_3_1_0; }
+		
+		//// 1507
+		//       (
+		//           PLUS
+		//           maintenanceOperationCode=ID // 4513
+		//               (
+		//               PLUS
+		//               relationship=Relationship // C941
+		//           )?
+		//       )?
+		public Group getGroup_3_2() { return cGroup_3_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_0() { return cPLUSTerminalRuleCall_3_2_0; }
+		
+		//maintenanceOperationCode=ID
+		public Assignment getMaintenanceOperationCodeAssignment_3_2_1() { return cMaintenanceOperationCodeAssignment_3_2_1; }
+		
+		//ID
+		public RuleCall getMaintenanceOperationCodeIDTerminalRuleCall_3_2_1_0() { return cMaintenanceOperationCodeIDTerminalRuleCall_3_2_1_0; }
+		
+		//// 4513
+		//               (
+		//               PLUS
+		//               relationship=Relationship // C941
+		//           )?
+		public Group getGroup_3_2_2() { return cGroup_3_2_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_0; }
+		
+		//relationship=Relationship
+		public Assignment getRelationshipAssignment_3_2_2_1() { return cRelationshipAssignment_3_2_2_1; }
+		
+		//Relationship
+		public RuleCall getRelationshipRelationshipParserRuleCall_3_2_2_1_0() { return cRelationshipRelationshipParserRuleCall_3_2_2_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
 		public Assignment getLineEndAssignment_4() { return cLineEndAssignment_4; }
@@ -2164,12 +2206,24 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentMOAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cCode1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCode1IDTerminalRuleCall_2_0 = (RuleCall)cCode1Assignment_2.eContents().get(0);
+		private final Assignment cMonetaryAmountTypeCodeQualifierAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cMonetaryAmountTypeCodeQualifierIDTerminalRuleCall_2_0 = (RuleCall)cMonetaryAmountTypeCodeQualifierAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final RuleCall cCOLONTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final Assignment cCode2Assignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cCode2IDTerminalRuleCall_3_1_0 = (RuleCall)cCode2Assignment_3_1.eContents().get(0);
+		private final Assignment cMonetaryAmountAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cMonetaryAmountIDTerminalRuleCall_3_1_0 = (RuleCall)cMonetaryAmountAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
+		private final Assignment cCurrencyIdentificationCodeAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cCurrencyIdentificationCodeIDTerminalRuleCall_3_2_1_0 = (RuleCall)cCurrencyIdentificationCodeAssignment_3_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2 = (Group)cGroup_3_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_2_0 = (RuleCall)cGroup_3_2_2.eContents().get(0);
+		private final Assignment cCurrencyTypeCodeQualifierAssignment_3_2_2_1 = (Assignment)cGroup_3_2_2.eContents().get(1);
+		private final RuleCall cCurrencyTypeCodeQualifierIDTerminalRuleCall_3_2_2_1_0 = (RuleCall)cCurrencyTypeCodeQualifierAssignment_3_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2 = (Group)cGroup_3_2_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_2_2_0 = (RuleCall)cGroup_3_2_2_2.eContents().get(0);
+		private final Assignment cStatusDescriptionCodeAssignment_3_2_2_2_1 = (Assignment)cGroup_3_2_2_2.eContents().get(1);
+		private final RuleCall cStatusDescriptionCodeIDTerminalRuleCall_3_2_2_2_1_0 = (RuleCall)cStatusDescriptionCodeAssignment_3_2_2_2_1.eContents().get(0);
 		private final Assignment cLineEndAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_4_0 = (RuleCall)cLineEndAssignment_4.eContents().get(0);
 		
@@ -2177,10 +2231,22 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//MOASegment:
 		//    segment="MOA"
 		//    PLUS
-		//    code1=ID
+		//    monetaryAmountTypeCodeQualifier=ID // 5025
 		//    (
 		//        COLON
-		//        code2=ID
+		//        monetaryAmount=ID // 5004
+		//        (
+		//            COLON
+		//            currencyIdentificationCode=ID // 6345
+		//            (
+		//                COLON
+		//                currencyTypeCodeQualifier=ID // 6343
+		//                (
+		//                    COLON
+		//                    statusDescriptionCode=ID // 4405
+		//                )?
+		//            )?
+		//        )?
 		//    )?
 		//    lineEnd=QUOTE_AND_NL
 		//;
@@ -2188,10 +2254,22 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//segment="MOA"
 		//PLUS
-		//code1=ID
+		//monetaryAmountTypeCodeQualifier=ID // 5025
 		//(
 		//    COLON
-		//    code2=ID
+		//    monetaryAmount=ID // 5004
+		//    (
+		//        COLON
+		//        currencyIdentificationCode=ID // 6345
+		//        (
+		//            COLON
+		//            currencyTypeCodeQualifier=ID // 6343
+		//            (
+		//                COLON
+		//                statusDescriptionCode=ID // 4405
+		//            )?
+		//        )?
+		//    )?
 		//)?
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
@@ -2205,26 +2283,99 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//code1=ID
-		public Assignment getCode1Assignment_2() { return cCode1Assignment_2; }
+		//monetaryAmountTypeCodeQualifier=ID
+		public Assignment getMonetaryAmountTypeCodeQualifierAssignment_2() { return cMonetaryAmountTypeCodeQualifierAssignment_2; }
 		
 		//ID
-		public RuleCall getCode1IDTerminalRuleCall_2_0() { return cCode1IDTerminalRuleCall_2_0; }
+		public RuleCall getMonetaryAmountTypeCodeQualifierIDTerminalRuleCall_2_0() { return cMonetaryAmountTypeCodeQualifierIDTerminalRuleCall_2_0; }
 		
-		//(
-		//    COLON
-		//    code2=ID
-		//)?
+		//// 5025
+		//   (
+		//       COLON
+		//       monetaryAmount=ID // 5004
+		//       (
+		//           COLON
+		//           currencyIdentificationCode=ID // 6345
+		//           (
+		//               COLON
+		//               currencyTypeCodeQualifier=ID // 6343
+		//               (
+		//                   COLON
+		//                   statusDescriptionCode=ID // 4405
+		//               )?
+		//           )?
+		//       )?
+		//   )?
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//COLON
 		public RuleCall getCOLONTerminalRuleCall_3_0() { return cCOLONTerminalRuleCall_3_0; }
 		
-		//code2=ID
-		public Assignment getCode2Assignment_3_1() { return cCode2Assignment_3_1; }
+		//monetaryAmount=ID
+		public Assignment getMonetaryAmountAssignment_3_1() { return cMonetaryAmountAssignment_3_1; }
 		
 		//ID
-		public RuleCall getCode2IDTerminalRuleCall_3_1_0() { return cCode2IDTerminalRuleCall_3_1_0; }
+		public RuleCall getMonetaryAmountIDTerminalRuleCall_3_1_0() { return cMonetaryAmountIDTerminalRuleCall_3_1_0; }
+		
+		//// 5004
+		//       (
+		//           COLON
+		//           currencyIdentificationCode=ID // 6345
+		//           (
+		//               COLON
+		//               currencyTypeCodeQualifier=ID // 6343
+		//               (
+		//                   COLON
+		//                   statusDescriptionCode=ID // 4405
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_3_2() { return cGroup_3_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_0() { return cCOLONTerminalRuleCall_3_2_0; }
+		
+		//currencyIdentificationCode=ID
+		public Assignment getCurrencyIdentificationCodeAssignment_3_2_1() { return cCurrencyIdentificationCodeAssignment_3_2_1; }
+		
+		//ID
+		public RuleCall getCurrencyIdentificationCodeIDTerminalRuleCall_3_2_1_0() { return cCurrencyIdentificationCodeIDTerminalRuleCall_3_2_1_0; }
+		
+		//// 6345
+		//           (
+		//               COLON
+		//               currencyTypeCodeQualifier=ID // 6343
+		//               (
+		//                   COLON
+		//                   statusDescriptionCode=ID // 4405
+		//               )?
+		//           )?
+		public Group getGroup_3_2_2() { return cGroup_3_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_2_0() { return cCOLONTerminalRuleCall_3_2_2_0; }
+		
+		//currencyTypeCodeQualifier=ID
+		public Assignment getCurrencyTypeCodeQualifierAssignment_3_2_2_1() { return cCurrencyTypeCodeQualifierAssignment_3_2_2_1; }
+		
+		//ID
+		public RuleCall getCurrencyTypeCodeQualifierIDTerminalRuleCall_3_2_2_1_0() { return cCurrencyTypeCodeQualifierIDTerminalRuleCall_3_2_2_1_0; }
+		
+		//// 6343
+		//               (
+		//                   COLON
+		//                   statusDescriptionCode=ID // 4405
+		//               )?
+		public Group getGroup_3_2_2_2() { return cGroup_3_2_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_2_2_0() { return cCOLONTerminalRuleCall_3_2_2_2_0; }
+		
+		//statusDescriptionCode=ID
+		public Assignment getStatusDescriptionCodeAssignment_3_2_2_2_1() { return cStatusDescriptionCodeAssignment_3_2_2_2_1; }
+		
+		//ID
+		public RuleCall getStatusDescriptionCodeIDTerminalRuleCall_3_2_2_2_1_0() { return cStatusDescriptionCodeIDTerminalRuleCall_3_2_2_2_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
 		public Assignment getLineEndAssignment_4() { return cLineEndAssignment_4; }
@@ -2238,18 +2389,27 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentLINKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cCode1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCode1IDTerminalRuleCall_2_0 = (RuleCall)cCode1Assignment_2.eContents().get(0);
+		private final Assignment cLineItemIdentifierAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLineItemIdentifierIDTerminalRuleCall_2_0 = (RuleCall)cLineItemIdentifierAssignment_2.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cCode2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cCode2IDTerminalRuleCall_4_0 = (RuleCall)cCode2Assignment_4.eContents().get(0);
+		private final Assignment cActionRequestAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cActionRequestIDTerminalRuleCall_4_0 = (RuleCall)cActionRequestAssignment_4.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Assignment cCode3Assignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
-		private final RuleCall cCode3IDTerminalRuleCall_6_0_0 = (RuleCall)cCode3Assignment_6_0.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_6_1 = (RuleCall)cGroup_6.eContents().get(1);
-		private final Assignment cCode4Assignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final RuleCall cCode4IDTerminalRuleCall_6_2_0 = (RuleCall)cCode4Assignment_6_2.eContents().get(0);
+		private final Assignment cItemNumberIdentificationAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
+		private final RuleCall cItemNumberIdentificationItemNumberIdentificationParserRuleCall_6_0_0 = (RuleCall)cItemNumberIdentificationAssignment_6_0.eContents().get(0);
+		private final Group cGroup_6_1 = (Group)cGroup_6.eContents().get(1);
+		private final RuleCall cPLUSTerminalRuleCall_6_1_0 = (RuleCall)cGroup_6_1.eContents().get(0);
+		private final Assignment cSublineInformationAssignment_6_1_1 = (Assignment)cGroup_6_1.eContents().get(1);
+		private final RuleCall cSublineInformationSublineInformationParserRuleCall_6_1_1_0 = (RuleCall)cSublineInformationAssignment_6_1_1.eContents().get(0);
+		private final Group cGroup_6_1_2 = (Group)cGroup_6_1.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_6_1_2_0 = (RuleCall)cGroup_6_1_2.eContents().get(0);
+		private final Assignment cConfigurationLevelNumberAssignment_6_1_2_1 = (Assignment)cGroup_6_1_2.eContents().get(1);
+		private final RuleCall cConfigurationLevelNumberIDTerminalRuleCall_6_1_2_1_0 = (RuleCall)cConfigurationLevelNumberAssignment_6_1_2_1.eContents().get(0);
+		private final Group cGroup_6_1_2_2 = (Group)cGroup_6_1_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_6_1_2_2_0 = (RuleCall)cGroup_6_1_2_2.eContents().get(0);
+		private final Assignment cConfigurationOperationCodeAssignment_6_1_2_2_1 = (Assignment)cGroup_6_1_2_2.eContents().get(1);
+		private final RuleCall cConfigurationOperationCodeIDTerminalRuleCall_6_1_2_2_1_0 = (RuleCall)cConfigurationOperationCodeAssignment_6_1_2_2_1.eContents().get(0);
 		private final Assignment cLineEndAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_7_0 = (RuleCall)cLineEndAssignment_7.eContents().get(0);
 		
@@ -2257,14 +2417,24 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//LINSegment:
 		//    segment="LIN"
 		//    PLUS
-		//    ( code1=ID )?
+		//    ( lineItemIdentifier=ID )? // 1082
 		//    PLUS
-		//    ( code2=ID )?
+		//    ( actionRequest=ID )? // 1229
 		//    PLUS
 		//    (
-		//        code3=ID
-		//        COLON
-		//        code4=ID
+		//        itemNumberIdentification=ItemNumberIdentification // C212
+		//        (
+		//            PLUS
+		//            sublineInformation=SublineInformation // C829
+		//            (
+		//                PLUS
+		//                configurationLevelNumber=ID // 1222
+		//                (
+		//                    PLUS
+		//                    configurationOperationCode=ID // 7083
+		//                )?
+		//            )?
+		//        )?
 		//    )?
 		//    lineEnd=QUOTE_AND_NL
 		//;
@@ -2272,14 +2442,24 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//segment="LIN"
 		//PLUS
-		//( code1=ID )?
+		//( lineItemIdentifier=ID )? // 1082
 		//PLUS
-		//( code2=ID )?
+		//( actionRequest=ID )? // 1229
 		//PLUS
 		//(
-		//    code3=ID
-		//    COLON
-		//    code4=ID
+		//    itemNumberIdentification=ItemNumberIdentification // C212
+		//    (
+		//        PLUS
+		//        sublineInformation=SublineInformation // C829
+		//        (
+		//            PLUS
+		//            configurationLevelNumber=ID // 1222
+		//            (
+		//                PLUS
+		//                configurationOperationCode=ID // 7083
+		//            )?
+		//        )?
+		//    )?
 		//)?
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
@@ -2293,45 +2473,108 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//( code1=ID )?
-		public Assignment getCode1Assignment_2() { return cCode1Assignment_2; }
+		//( lineItemIdentifier=ID )?
+		public Assignment getLineItemIdentifierAssignment_2() { return cLineItemIdentifierAssignment_2; }
 		
 		//ID
-		public RuleCall getCode1IDTerminalRuleCall_2_0() { return cCode1IDTerminalRuleCall_2_0; }
+		public RuleCall getLineItemIdentifierIDTerminalRuleCall_2_0() { return cLineItemIdentifierIDTerminalRuleCall_2_0; }
 		
-		//PLUS
+		//// 1082
+		//   PLUS
 		public RuleCall getPLUSTerminalRuleCall_3() { return cPLUSTerminalRuleCall_3; }
 		
-		//( code2=ID )?
-		public Assignment getCode2Assignment_4() { return cCode2Assignment_4; }
+		//( actionRequest=ID )?
+		public Assignment getActionRequestAssignment_4() { return cActionRequestAssignment_4; }
 		
 		//ID
-		public RuleCall getCode2IDTerminalRuleCall_4_0() { return cCode2IDTerminalRuleCall_4_0; }
+		public RuleCall getActionRequestIDTerminalRuleCall_4_0() { return cActionRequestIDTerminalRuleCall_4_0; }
 		
-		//PLUS
+		//// 1229
+		//   PLUS
 		public RuleCall getPLUSTerminalRuleCall_5() { return cPLUSTerminalRuleCall_5; }
 		
 		//(
-		//    code3=ID
-		//    COLON
-		//    code4=ID
+		//    itemNumberIdentification=ItemNumberIdentification // C212
+		//    (
+		//        PLUS
+		//        sublineInformation=SublineInformation // C829
+		//        (
+		//            PLUS
+		//            configurationLevelNumber=ID // 1222
+		//            (
+		//                PLUS
+		//                configurationOperationCode=ID // 7083
+		//            )?
+		//        )?
+		//    )?
 		//)?
 		public Group getGroup_6() { return cGroup_6; }
 		
-		//code3=ID
-		public Assignment getCode3Assignment_6_0() { return cCode3Assignment_6_0; }
+		//itemNumberIdentification=ItemNumberIdentification
+		public Assignment getItemNumberIdentificationAssignment_6_0() { return cItemNumberIdentificationAssignment_6_0; }
+		
+		//ItemNumberIdentification
+		public RuleCall getItemNumberIdentificationItemNumberIdentificationParserRuleCall_6_0_0() { return cItemNumberIdentificationItemNumberIdentificationParserRuleCall_6_0_0; }
+		
+		//// C212
+		//       (
+		//           PLUS
+		//           sublineInformation=SublineInformation // C829
+		//           (
+		//               PLUS
+		//               configurationLevelNumber=ID // 1222
+		//               (
+		//                   PLUS
+		//                   configurationOperationCode=ID // 7083
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_6_1() { return cGroup_6_1; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_6_1_0() { return cPLUSTerminalRuleCall_6_1_0; }
+		
+		//sublineInformation=SublineInformation
+		public Assignment getSublineInformationAssignment_6_1_1() { return cSublineInformationAssignment_6_1_1; }
+		
+		//SublineInformation
+		public RuleCall getSublineInformationSublineInformationParserRuleCall_6_1_1_0() { return cSublineInformationSublineInformationParserRuleCall_6_1_1_0; }
+		
+		//// C829
+		//           (
+		//               PLUS
+		//               configurationLevelNumber=ID // 1222
+		//               (
+		//                   PLUS
+		//                   configurationOperationCode=ID // 7083
+		//               )?
+		//           )?
+		public Group getGroup_6_1_2() { return cGroup_6_1_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_6_1_2_0() { return cPLUSTerminalRuleCall_6_1_2_0; }
+		
+		//configurationLevelNumber=ID
+		public Assignment getConfigurationLevelNumberAssignment_6_1_2_1() { return cConfigurationLevelNumberAssignment_6_1_2_1; }
 		
 		//ID
-		public RuleCall getCode3IDTerminalRuleCall_6_0_0() { return cCode3IDTerminalRuleCall_6_0_0; }
+		public RuleCall getConfigurationLevelNumberIDTerminalRuleCall_6_1_2_1_0() { return cConfigurationLevelNumberIDTerminalRuleCall_6_1_2_1_0; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_6_1() { return cCOLONTerminalRuleCall_6_1; }
+		//// 1222
+		//               (
+		//                   PLUS
+		//                   configurationOperationCode=ID // 7083
+		//               )?
+		public Group getGroup_6_1_2_2() { return cGroup_6_1_2_2; }
 		
-		//code4=ID
-		public Assignment getCode4Assignment_6_2() { return cCode4Assignment_6_2; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_6_1_2_2_0() { return cPLUSTerminalRuleCall_6_1_2_2_0; }
+		
+		//configurationOperationCode=ID
+		public Assignment getConfigurationOperationCodeAssignment_6_1_2_2_1() { return cConfigurationOperationCodeAssignment_6_1_2_2_1; }
 		
 		//ID
-		public RuleCall getCode4IDTerminalRuleCall_6_2_0() { return cCode4IDTerminalRuleCall_6_2_0; }
+		public RuleCall getConfigurationOperationCodeIDTerminalRuleCall_6_1_2_2_1_0() { return cConfigurationOperationCodeIDTerminalRuleCall_6_1_2_2_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
 		public Assignment getLineEndAssignment_7() { return cLineEndAssignment_7; }
@@ -2346,7 +2589,7 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Keyword cSegmentPRIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Assignment cSubAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSubPRIFunctionParserRuleCall_2_0 = (RuleCall)cSubAssignment_2.eContents().get(0);
+		private final RuleCall cSubPriceInformationParserRuleCall_2_0 = (RuleCall)cSubAssignment_2.eContents().get(0);
 		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
 		
@@ -2354,14 +2597,14 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PRISegment:
 		//    segment="PRI"
 		//    PLUS
-		//    sub=PRIFunction
+		//    sub=PriceInformation
 		//    lineEnd=QUOTE_AND_NL
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//segment="PRI"
 		//PLUS
-		//sub=PRIFunction
+		//sub=PriceInformation
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
 		
@@ -2374,11 +2617,11 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//sub=PRIFunction
+		//sub=PriceInformation
 		public Assignment getSubAssignment_2() { return cSubAssignment_2; }
 		
-		//PRIFunction
-		public RuleCall getSubPRIFunctionParserRuleCall_2_0() { return cSubPRIFunctionParserRuleCall_2_0; }
+		//PriceInformation
+		public RuleCall getSubPriceInformationParserRuleCall_2_0() { return cSubPriceInformationParserRuleCall_2_0; }
 		
 		//lineEnd=QUOTE_AND_NL
 		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
@@ -2391,48 +2634,29 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentQTYKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
-		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cCode1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCode1IDTerminalRuleCall_2_0 = (RuleCall)cCode1Assignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final RuleCall cCOLONTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final Assignment cCode2Assignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cCode2IDTerminalRuleCall_3_1_0 = (RuleCall)cCode2Assignment_3_1.eContents().get(0);
-		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
-		private final RuleCall cCOLONTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
-		private final Assignment cCode3Assignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
-		private final RuleCall cCode3IDTerminalRuleCall_3_2_1_0 = (RuleCall)cCode3Assignment_3_2_1.eContents().get(0);
-		private final Assignment cLineEndAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_4_0 = (RuleCall)cLineEndAssignment_4.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cPLUSTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cQuantityDetailsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cQuantityDetailsQuantityDetailParserRuleCall_1_1_0 = (RuleCall)cQuantityDetailsAssignment_1_1.eContents().get(0);
+		private final Assignment cLineEndAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_2_0 = (RuleCall)cLineEndAssignment_2.eContents().get(0);
 		
 		////QTY+12:54:PCE'
 		//QTYSegment:
 		//    segment="QTY"
-		//    PLUS
-		//    code1=ID
 		//    (
-		//        COLON
-		//        code2=ID
-		//        (
-		//            COLON
-		//            code3=ID
-		//        )?
-		//    )?
+		//        PLUS
+		//        quantityDetails+=QuantityDetail // C186
+		//    )*
 		//    lineEnd=QUOTE_AND_NL
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//segment="QTY"
-		//PLUS
-		//code1=ID
 		//(
-		//    COLON
-		//    code2=ID
-		//    (
-		//        COLON
-		//        code3=ID
-		//    )?
-		//)?
+		//    PLUS
+		//    quantityDetails+=QuantityDetail // C186
+		//)*
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
 		
@@ -2442,54 +2666,26 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//"QTY"
 		public Keyword getSegmentQTYKeyword_0_0() { return cSegmentQTYKeyword_0_0; }
 		
+		//(
+		//    PLUS
+		//    quantityDetails+=QuantityDetail // C186
+		//)*
+		public Group getGroup_1() { return cGroup_1; }
+		
 		//PLUS
-		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		public RuleCall getPLUSTerminalRuleCall_1_0() { return cPLUSTerminalRuleCall_1_0; }
 		
-		//code1=ID
-		public Assignment getCode1Assignment_2() { return cCode1Assignment_2; }
+		//quantityDetails+=QuantityDetail
+		public Assignment getQuantityDetailsAssignment_1_1() { return cQuantityDetailsAssignment_1_1; }
 		
-		//ID
-		public RuleCall getCode1IDTerminalRuleCall_2_0() { return cCode1IDTerminalRuleCall_2_0; }
-		
-		//(
-		//    COLON
-		//    code2=ID
-		//    (
-		//        COLON
-		//        code3=ID
-		//    )?
-		//)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_3_0() { return cCOLONTerminalRuleCall_3_0; }
-		
-		//code2=ID
-		public Assignment getCode2Assignment_3_1() { return cCode2Assignment_3_1; }
-		
-		//ID
-		public RuleCall getCode2IDTerminalRuleCall_3_1_0() { return cCode2IDTerminalRuleCall_3_1_0; }
-		
-		//(
-		//    COLON
-		//    code3=ID
-		//)?
-		public Group getGroup_3_2() { return cGroup_3_2; }
-		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_3_2_0() { return cCOLONTerminalRuleCall_3_2_0; }
-		
-		//code3=ID
-		public Assignment getCode3Assignment_3_2_1() { return cCode3Assignment_3_2_1; }
-		
-		//ID
-		public RuleCall getCode3IDTerminalRuleCall_3_2_1_0() { return cCode3IDTerminalRuleCall_3_2_1_0; }
+		//QuantityDetail
+		public RuleCall getQuantityDetailsQuantityDetailParserRuleCall_1_1_0() { return cQuantityDetailsQuantityDetailParserRuleCall_1_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
-		public Assignment getLineEndAssignment_4() { return cLineEndAssignment_4; }
+		public Assignment getLineEndAssignment_2() { return cLineEndAssignment_2; }
 		
 		//QUOTE_AND_NL
-		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_4_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_4_0; }
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_2_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_2_0; }
 	}
 	public class CUXSegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CUXSegment");
@@ -2497,12 +2693,20 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentCUXKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cNumAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNumIDTerminalRuleCall_2_0 = (RuleCall)cNumAssignment_2.eContents().get(0);
+		private final Assignment cCurrencyDetails1Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCurrencyDetails1CurrencyDetailParserRuleCall_2_0 = (RuleCall)cCurrencyDetails1Assignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final RuleCall cCOLONTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final Assignment cCurrencyAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cCurrencyIDTerminalRuleCall_3_1_0 = (RuleCall)cCurrencyAssignment_3_1.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
+		private final Assignment cCurrencyDetails2Assignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cCurrencyDetails2CurrencyDetailParserRuleCall_3_1_0 = (RuleCall)cCurrencyDetails2Assignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
+		private final Assignment cCurrencyExchangeRateAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cCurrencyExchangeRateIDTerminalRuleCall_3_2_1_0 = (RuleCall)cCurrencyExchangeRateAssignment_3_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2 = (Group)cGroup_3_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_0 = (RuleCall)cGroup_3_2_2.eContents().get(0);
+		private final Assignment cExchangeRateCurrencyMarketIdentifierAssignment_3_2_2_1 = (Assignment)cGroup_3_2_2.eContents().get(1);
+		private final RuleCall cExchangeRateCurrencyMarketIdentifierIDTerminalRuleCall_3_2_2_1_0 = (RuleCall)cExchangeRateCurrencyMarketIdentifierAssignment_3_2_2_1.eContents().get(0);
 		private final Assignment cLineEndAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_4_0 = (RuleCall)cLineEndAssignment_4.eContents().get(0);
 		
@@ -2510,10 +2714,18 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//CUXSegment:
 		//    segment="CUX"
 		//    PLUS
-		//    num=ID
+		//    currencyDetails1=CurrencyDetail
 		//    (
-		//        COLON
-		//        currency=ID
+		//        PLUS
+		//        currencyDetails2=CurrencyDetail
+		//        (
+		//            PLUS
+		//            currencyExchangeRate=ID
+		//            (
+		//                PLUS
+		//                exchangeRateCurrencyMarketIdentifier=ID
+		//            )?
+		//        )?
 		//    )?
 		//    lineEnd=QUOTE_AND_NL
 		//;
@@ -2521,10 +2733,18 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//segment="CUX"
 		//PLUS
-		//num=ID
+		//currencyDetails1=CurrencyDetail
 		//(
-		//    COLON
-		//    currency=ID
+		//    PLUS
+		//    currencyDetails2=CurrencyDetail
+		//    (
+		//        PLUS
+		//        currencyExchangeRate=ID
+		//        (
+		//            PLUS
+		//            exchangeRateCurrencyMarketIdentifier=ID
+		//        )?
+		//    )?
 		//)?
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
@@ -2538,26 +2758,68 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//num=ID
-		public Assignment getNumAssignment_2() { return cNumAssignment_2; }
+		//currencyDetails1=CurrencyDetail
+		public Assignment getCurrencyDetails1Assignment_2() { return cCurrencyDetails1Assignment_2; }
 		
-		//ID
-		public RuleCall getNumIDTerminalRuleCall_2_0() { return cNumIDTerminalRuleCall_2_0; }
+		//CurrencyDetail
+		public RuleCall getCurrencyDetails1CurrencyDetailParserRuleCall_2_0() { return cCurrencyDetails1CurrencyDetailParserRuleCall_2_0; }
 		
 		//(
-		//    COLON
-		//    currency=ID
+		//    PLUS
+		//    currencyDetails2=CurrencyDetail
+		//    (
+		//        PLUS
+		//        currencyExchangeRate=ID
+		//        (
+		//            PLUS
+		//            exchangeRateCurrencyMarketIdentifier=ID
+		//        )?
+		//    )?
 		//)?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_3_0() { return cCOLONTerminalRuleCall_3_0; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_0() { return cPLUSTerminalRuleCall_3_0; }
 		
-		//currency=ID
-		public Assignment getCurrencyAssignment_3_1() { return cCurrencyAssignment_3_1; }
+		//currencyDetails2=CurrencyDetail
+		public Assignment getCurrencyDetails2Assignment_3_1() { return cCurrencyDetails2Assignment_3_1; }
+		
+		//CurrencyDetail
+		public RuleCall getCurrencyDetails2CurrencyDetailParserRuleCall_3_1_0() { return cCurrencyDetails2CurrencyDetailParserRuleCall_3_1_0; }
+		
+		//(
+		//    PLUS
+		//    currencyExchangeRate=ID
+		//    (
+		//        PLUS
+		//        exchangeRateCurrencyMarketIdentifier=ID
+		//    )?
+		//)?
+		public Group getGroup_3_2() { return cGroup_3_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_0() { return cPLUSTerminalRuleCall_3_2_0; }
+		
+		//currencyExchangeRate=ID
+		public Assignment getCurrencyExchangeRateAssignment_3_2_1() { return cCurrencyExchangeRateAssignment_3_2_1; }
 		
 		//ID
-		public RuleCall getCurrencyIDTerminalRuleCall_3_1_0() { return cCurrencyIDTerminalRuleCall_3_1_0; }
+		public RuleCall getCurrencyExchangeRateIDTerminalRuleCall_3_2_1_0() { return cCurrencyExchangeRateIDTerminalRuleCall_3_2_1_0; }
+		
+		//(
+		//    PLUS
+		//    exchangeRateCurrencyMarketIdentifier=ID
+		//)?
+		public Group getGroup_3_2_2() { return cGroup_3_2_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_0; }
+		
+		//exchangeRateCurrencyMarketIdentifier=ID
+		public Assignment getExchangeRateCurrencyMarketIdentifierAssignment_3_2_2_1() { return cExchangeRateCurrencyMarketIdentifierAssignment_3_2_2_1; }
+		
+		//ID
+		public RuleCall getExchangeRateCurrencyMarketIdentifierIDTerminalRuleCall_3_2_2_1_0() { return cExchangeRateCurrencyMarketIdentifierIDTerminalRuleCall_3_2_2_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
 		public Assignment getLineEndAssignment_4() { return cLineEndAssignment_4; }
@@ -2571,31 +2833,35 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentTAXKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cNumAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNumIDTerminalRuleCall_2_0 = (RuleCall)cNumAssignment_2.eContents().get(0);
+		private final Assignment cTaxFunctionCodeQualifierAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTaxFunctionCodeQualifierIDTerminalRuleCall_2_0 = (RuleCall)cTaxFunctionCodeQualifierAssignment_2.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTypeIDTerminalRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final Assignment cTaxTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTaxTypeTaxTypeParserRuleCall_4_0 = (RuleCall)cTaxTypeAssignment_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final RuleCall cPLUSTerminalRuleCall_5_0 = (RuleCall)cGroup_5.eContents().get(0);
-		private final Assignment cTodo1Assignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cTodo1IDTerminalRuleCall_5_1_0 = (RuleCall)cTodo1Assignment_5_1.eContents().get(0);
-		private final RuleCall cPLUSTerminalRuleCall_5_2 = (RuleCall)cGroup_5.eContents().get(2);
-		private final Assignment cTodo2Assignment_5_3 = (Assignment)cGroup_5.eContents().get(3);
-		private final RuleCall cTodo2IDTerminalRuleCall_5_3_0 = (RuleCall)cTodo2Assignment_5_3.eContents().get(0);
-		private final RuleCall cPLUSTerminalRuleCall_5_4 = (RuleCall)cGroup_5.eContents().get(4);
-		private final Group cGroup_5_5 = (Group)cGroup_5.eContents().get(5);
-		private final Assignment cTodo3Assignment_5_5_0 = (Assignment)cGroup_5_5.eContents().get(0);
-		private final RuleCall cTodo3IDTerminalRuleCall_5_5_0_0 = (RuleCall)cTodo3Assignment_5_5_0.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_5_5_1 = (RuleCall)cGroup_5_5.eContents().get(1);
-		private final Assignment cTodo4Assignment_5_5_2 = (Assignment)cGroup_5_5.eContents().get(2);
-		private final RuleCall cTodo4IDTerminalRuleCall_5_5_2_0 = (RuleCall)cTodo4Assignment_5_5_2.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_5_5_3 = (RuleCall)cGroup_5_5.eContents().get(3);
-		private final Assignment cTodo5Assignment_5_5_4 = (Assignment)cGroup_5_5.eContents().get(4);
-		private final RuleCall cTodo5IDTerminalRuleCall_5_5_4_0 = (RuleCall)cTodo5Assignment_5_5_4.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_5_5_5 = (RuleCall)cGroup_5_5.eContents().get(5);
-		private final Assignment cTodo6Assignment_5_5_6 = (Assignment)cGroup_5_5.eContents().get(6);
-		private final RuleCall cTodo6IDTerminalRuleCall_5_5_6_0 = (RuleCall)cTodo6Assignment_5_5_6.eContents().get(0);
+		private final Assignment cTaxAccountDetailAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cTaxAccountDetailTaxAccountDetailParserRuleCall_5_1_0 = (RuleCall)cTaxAccountDetailAssignment_5_1.eContents().get(0);
+		private final Group cGroup_5_2 = (Group)cGroup_5.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_5_2_0 = (RuleCall)cGroup_5_2.eContents().get(0);
+		private final Assignment cTaxAssessmentBasicValueAssignment_5_2_1 = (Assignment)cGroup_5_2.eContents().get(1);
+		private final RuleCall cTaxAssessmentBasicValueIDTerminalRuleCall_5_2_1_0 = (RuleCall)cTaxAssessmentBasicValueAssignment_5_2_1.eContents().get(0);
+		private final Group cGroup_5_2_2 = (Group)cGroup_5_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_5_2_2_0 = (RuleCall)cGroup_5_2_2.eContents().get(0);
+		private final Assignment cTaxDetailAssignment_5_2_2_1 = (Assignment)cGroup_5_2_2.eContents().get(1);
+		private final RuleCall cTaxDetailTaxDetailParserRuleCall_5_2_2_1_0 = (RuleCall)cTaxDetailAssignment_5_2_2_1.eContents().get(0);
+		private final Group cGroup_5_2_2_2 = (Group)cGroup_5_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_5_2_2_2_0 = (RuleCall)cGroup_5_2_2_2.eContents().get(0);
+		private final Assignment cTaxCategoryCodeAssignment_5_2_2_2_1 = (Assignment)cGroup_5_2_2_2.eContents().get(1);
+		private final RuleCall cTaxCategoryCodeIDTerminalRuleCall_5_2_2_2_1_0 = (RuleCall)cTaxCategoryCodeAssignment_5_2_2_2_1.eContents().get(0);
+		private final Group cGroup_5_2_2_2_2 = (Group)cGroup_5_2_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_5_2_2_2_2_0 = (RuleCall)cGroup_5_2_2_2_2.eContents().get(0);
+		private final Assignment cPartyTaxIdentifierAssignment_5_2_2_2_2_1 = (Assignment)cGroup_5_2_2_2_2.eContents().get(1);
+		private final RuleCall cPartyTaxIdentifierIDTerminalRuleCall_5_2_2_2_2_1_0 = (RuleCall)cPartyTaxIdentifierAssignment_5_2_2_2_2_1.eContents().get(0);
+		private final Group cGroup_5_2_2_2_2_2 = (Group)cGroup_5_2_2_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_5_2_2_2_2_2_0 = (RuleCall)cGroup_5_2_2_2_2_2.eContents().get(0);
+		private final Assignment cCalculationSequenceCodeAssignment_5_2_2_2_2_2_1 = (Assignment)cGroup_5_2_2_2_2_2.eContents().get(1);
+		private final RuleCall cCalculationSequenceCodeIDTerminalRuleCall_5_2_2_2_2_2_1_0 = (RuleCall)cCalculationSequenceCodeAssignment_5_2_2_2_2_2_1.eContents().get(0);
 		private final Assignment cLineEndAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_6_0 = (RuleCall)cLineEndAssignment_6.eContents().get(0);
 		
@@ -2603,23 +2869,31 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//TAXSegment:
 		//    segment="TAX"
 		//    PLUS
-		//    num=ID
+		//    taxFunctionCodeQualifier=ID // 5283
 		//    PLUS
-		//    type=ID
+		//    taxType=TaxType // C241
 		//    (
 		//        PLUS
-		//        ( todo1=ID )?
-		//        PLUS
-		//        ( todo2=ID )?
-		//        PLUS
+		//        ( taxAccountDetail=TaxAccountDetail )? // C533
 		//        (
-		//            ( todo3=ID )?
-		//            COLON
-		//            ( todo4=ID )?
-		//            COLON
-		//            ( todo5=ID )?
-		//            COLON
-		//            ( todo6=ID )?
+		//            PLUS
+		//            ( taxAssessmentBasicValue=ID )? // 5286
+		//            (
+		//                PLUS
+		//                ( taxDetail=TaxDetail )? // C243
+		//                (
+		//                    PLUS
+		//                    ( taxCategoryCode=ID )? // 5305
+		//                    (
+		//                        PLUS
+		//                        ( partyTaxIdentifier=ID )? // 3446
+		//                        (
+		//                            PLUS
+		//                            ( calculationSequenceCode=ID )? // 1227
+		//                        )?
+		//                    )?
+		//                )?
+		//            )?
 		//        )?
 		//    )?
 		//    lineEnd=QUOTE_AND_NL
@@ -2628,23 +2902,31 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//segment="TAX"
 		//PLUS
-		//num=ID
+		//taxFunctionCodeQualifier=ID // 5283
 		//PLUS
-		//type=ID
+		//taxType=TaxType // C241
 		//(
 		//    PLUS
-		//    ( todo1=ID )?
-		//    PLUS
-		//    ( todo2=ID )?
-		//    PLUS
+		//    ( taxAccountDetail=TaxAccountDetail )? // C533
 		//    (
-		//        ( todo3=ID )?
-		//        COLON
-		//        ( todo4=ID )?
-		//        COLON
-		//        ( todo5=ID )?
-		//        COLON
-		//        ( todo6=ID )?
+		//        PLUS
+		//        ( taxAssessmentBasicValue=ID )? // 5286
+		//        (
+		//            PLUS
+		//            ( taxDetail=TaxDetail )? // C243
+		//            (
+		//                PLUS
+		//                ( taxCategoryCode=ID )? // 5305
+		//                (
+		//                    PLUS
+		//                    ( partyTaxIdentifier=ID )? // 3446
+		//                    (
+		//                        PLUS
+		//                        ( calculationSequenceCode=ID )? // 1227
+		//                    )?
+		//                )?
+		//            )?
+		//        )?
 		//    )?
 		//)?
 		//lineEnd=QUOTE_AND_NL
@@ -2659,103 +2941,177 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//num=ID
-		public Assignment getNumAssignment_2() { return cNumAssignment_2; }
+		//taxFunctionCodeQualifier=ID
+		public Assignment getTaxFunctionCodeQualifierAssignment_2() { return cTaxFunctionCodeQualifierAssignment_2; }
 		
 		//ID
-		public RuleCall getNumIDTerminalRuleCall_2_0() { return cNumIDTerminalRuleCall_2_0; }
+		public RuleCall getTaxFunctionCodeQualifierIDTerminalRuleCall_2_0() { return cTaxFunctionCodeQualifierIDTerminalRuleCall_2_0; }
 		
-		//PLUS
+		//// 5283
+		//   PLUS
 		public RuleCall getPLUSTerminalRuleCall_3() { return cPLUSTerminalRuleCall_3; }
 		
-		//type=ID
-		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
+		//taxType=TaxType
+		public Assignment getTaxTypeAssignment_4() { return cTaxTypeAssignment_4; }
 		
-		//ID
-		public RuleCall getTypeIDTerminalRuleCall_4_0() { return cTypeIDTerminalRuleCall_4_0; }
+		//TaxType
+		public RuleCall getTaxTypeTaxTypeParserRuleCall_4_0() { return cTaxTypeTaxTypeParserRuleCall_4_0; }
 		
-		//(
-		//    PLUS
-		//    ( todo1=ID )?
-		//    PLUS
-		//    ( todo2=ID )?
-		//    PLUS
-		//    (
-		//        ( todo3=ID )?
-		//        COLON
-		//        ( todo4=ID )?
-		//        COLON
-		//        ( todo5=ID )?
-		//        COLON
-		//        ( todo6=ID )?
-		//    )?
-		//)?
+		//// C241
+		//   (
+		//       PLUS
+		//       ( taxAccountDetail=TaxAccountDetail )? // C533
+		//       (
+		//           PLUS
+		//           ( taxAssessmentBasicValue=ID )? // 5286
+		//           (
+		//               PLUS
+		//               ( taxDetail=TaxDetail )? // C243
+		//               (
+		//                   PLUS
+		//                   ( taxCategoryCode=ID )? // 5305
+		//                   (
+		//                       PLUS
+		//                       ( partyTaxIdentifier=ID )? // 3446
+		//                       (
+		//                           PLUS
+		//                           ( calculationSequenceCode=ID )? // 1227
+		//                       )?
+		//                   )?
+		//               )?
+		//           )?
+		//       )?
+		//   )?
 		public Group getGroup_5() { return cGroup_5; }
 		
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_5_0() { return cPLUSTerminalRuleCall_5_0; }
 		
-		//( todo1=ID )?
-		public Assignment getTodo1Assignment_5_1() { return cTodo1Assignment_5_1; }
+		//( taxAccountDetail=TaxAccountDetail )?
+		public Assignment getTaxAccountDetailAssignment_5_1() { return cTaxAccountDetailAssignment_5_1; }
 		
-		//ID
-		public RuleCall getTodo1IDTerminalRuleCall_5_1_0() { return cTodo1IDTerminalRuleCall_5_1_0; }
+		//TaxAccountDetail
+		public RuleCall getTaxAccountDetailTaxAccountDetailParserRuleCall_5_1_0() { return cTaxAccountDetailTaxAccountDetailParserRuleCall_5_1_0; }
+		
+		//// C533
+		//       (
+		//           PLUS
+		//           ( taxAssessmentBasicValue=ID )? // 5286
+		//           (
+		//               PLUS
+		//               ( taxDetail=TaxDetail )? // C243
+		//               (
+		//                   PLUS
+		//                   ( taxCategoryCode=ID )? // 5305
+		//                   (
+		//                       PLUS
+		//                       ( partyTaxIdentifier=ID )? // 3446
+		//                       (
+		//                           PLUS
+		//                           ( calculationSequenceCode=ID )? // 1227
+		//                       )?
+		//                   )?
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_5_2() { return cGroup_5_2; }
 		
 		//PLUS
-		public RuleCall getPLUSTerminalRuleCall_5_2() { return cPLUSTerminalRuleCall_5_2; }
+		public RuleCall getPLUSTerminalRuleCall_5_2_0() { return cPLUSTerminalRuleCall_5_2_0; }
 		
-		//( todo2=ID )?
-		public Assignment getTodo2Assignment_5_3() { return cTodo2Assignment_5_3; }
+		//( taxAssessmentBasicValue=ID )?
+		public Assignment getTaxAssessmentBasicValueAssignment_5_2_1() { return cTaxAssessmentBasicValueAssignment_5_2_1; }
 		
 		//ID
-		public RuleCall getTodo2IDTerminalRuleCall_5_3_0() { return cTodo2IDTerminalRuleCall_5_3_0; }
+		public RuleCall getTaxAssessmentBasicValueIDTerminalRuleCall_5_2_1_0() { return cTaxAssessmentBasicValueIDTerminalRuleCall_5_2_1_0; }
+		
+		//// 5286
+		//           (
+		//               PLUS
+		//               ( taxDetail=TaxDetail )? // C243
+		//               (
+		//                   PLUS
+		//                   ( taxCategoryCode=ID )? // 5305
+		//                   (
+		//                       PLUS
+		//                       ( partyTaxIdentifier=ID )? // 3446
+		//                       (
+		//                           PLUS
+		//                           ( calculationSequenceCode=ID )? // 1227
+		//                       )?
+		//                   )?
+		//               )?
+		//           )?
+		public Group getGroup_5_2_2() { return cGroup_5_2_2; }
 		
 		//PLUS
-		public RuleCall getPLUSTerminalRuleCall_5_4() { return cPLUSTerminalRuleCall_5_4; }
+		public RuleCall getPLUSTerminalRuleCall_5_2_2_0() { return cPLUSTerminalRuleCall_5_2_2_0; }
 		
-		//(
-		//    ( todo3=ID )?
-		//    COLON
-		//    ( todo4=ID )?
-		//    COLON
-		//    ( todo5=ID )?
-		//    COLON
-		//    ( todo6=ID )?
-		//)?
-		public Group getGroup_5_5() { return cGroup_5_5; }
+		//( taxDetail=TaxDetail )?
+		public Assignment getTaxDetailAssignment_5_2_2_1() { return cTaxDetailAssignment_5_2_2_1; }
 		
-		//( todo3=ID )?
-		public Assignment getTodo3Assignment_5_5_0() { return cTodo3Assignment_5_5_0; }
+		//TaxDetail
+		public RuleCall getTaxDetailTaxDetailParserRuleCall_5_2_2_1_0() { return cTaxDetailTaxDetailParserRuleCall_5_2_2_1_0; }
 		
-		//ID
-		public RuleCall getTodo3IDTerminalRuleCall_5_5_0_0() { return cTodo3IDTerminalRuleCall_5_5_0_0; }
+		//// C243
+		//               (
+		//                   PLUS
+		//                   ( taxCategoryCode=ID )? // 5305
+		//                   (
+		//                       PLUS
+		//                       ( partyTaxIdentifier=ID )? // 3446
+		//                       (
+		//                           PLUS
+		//                           ( calculationSequenceCode=ID )? // 1227
+		//                       )?
+		//                   )?
+		//               )?
+		public Group getGroup_5_2_2_2() { return cGroup_5_2_2_2; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_5_5_1() { return cCOLONTerminalRuleCall_5_5_1; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_5_2_2_2_0() { return cPLUSTerminalRuleCall_5_2_2_2_0; }
 		
-		//( todo4=ID )?
-		public Assignment getTodo4Assignment_5_5_2() { return cTodo4Assignment_5_5_2; }
-		
-		//ID
-		public RuleCall getTodo4IDTerminalRuleCall_5_5_2_0() { return cTodo4IDTerminalRuleCall_5_5_2_0; }
-		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_5_5_3() { return cCOLONTerminalRuleCall_5_5_3; }
-		
-		//( todo5=ID )?
-		public Assignment getTodo5Assignment_5_5_4() { return cTodo5Assignment_5_5_4; }
+		//( taxCategoryCode=ID )?
+		public Assignment getTaxCategoryCodeAssignment_5_2_2_2_1() { return cTaxCategoryCodeAssignment_5_2_2_2_1; }
 		
 		//ID
-		public RuleCall getTodo5IDTerminalRuleCall_5_5_4_0() { return cTodo5IDTerminalRuleCall_5_5_4_0; }
+		public RuleCall getTaxCategoryCodeIDTerminalRuleCall_5_2_2_2_1_0() { return cTaxCategoryCodeIDTerminalRuleCall_5_2_2_2_1_0; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_5_5_5() { return cCOLONTerminalRuleCall_5_5_5; }
+		//// 5305
+		//                   (
+		//                       PLUS
+		//                       ( partyTaxIdentifier=ID )? // 3446
+		//                       (
+		//                           PLUS
+		//                           ( calculationSequenceCode=ID )? // 1227
+		//                       )?
+		//                   )?
+		public Group getGroup_5_2_2_2_2() { return cGroup_5_2_2_2_2; }
 		
-		//( todo6=ID )?
-		public Assignment getTodo6Assignment_5_5_6() { return cTodo6Assignment_5_5_6; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_5_2_2_2_2_0() { return cPLUSTerminalRuleCall_5_2_2_2_2_0; }
+		
+		//( partyTaxIdentifier=ID )?
+		public Assignment getPartyTaxIdentifierAssignment_5_2_2_2_2_1() { return cPartyTaxIdentifierAssignment_5_2_2_2_2_1; }
 		
 		//ID
-		public RuleCall getTodo6IDTerminalRuleCall_5_5_6_0() { return cTodo6IDTerminalRuleCall_5_5_6_0; }
+		public RuleCall getPartyTaxIdentifierIDTerminalRuleCall_5_2_2_2_2_1_0() { return cPartyTaxIdentifierIDTerminalRuleCall_5_2_2_2_2_1_0; }
+		
+		//// 3446
+		//                       (
+		//                           PLUS
+		//                           ( calculationSequenceCode=ID )? // 1227
+		//                       )?
+		public Group getGroup_5_2_2_2_2_2() { return cGroup_5_2_2_2_2_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_5_2_2_2_2_2_0() { return cPLUSTerminalRuleCall_5_2_2_2_2_2_0; }
+		
+		//( calculationSequenceCode=ID )?
+		public Assignment getCalculationSequenceCodeAssignment_5_2_2_2_2_2_1() { return cCalculationSequenceCodeAssignment_5_2_2_2_2_2_1; }
+		
+		//ID
+		public RuleCall getCalculationSequenceCodeIDTerminalRuleCall_5_2_2_2_2_2_1_0() { return cCalculationSequenceCodeIDTerminalRuleCall_5_2_2_2_2_2_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
 		public Assignment getLineEndAssignment_6() { return cLineEndAssignment_6; }
@@ -2843,33 +3199,79 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentNADKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cCodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCodeIDTerminalRuleCall_2_0 = (RuleCall)cCodeAssignment_2.eContents().get(0);
-		private final RuleCall cPLUSTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Assignment cManufacturer1Assignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final RuleCall cManufacturer1IDTerminalRuleCall_4_0_0 = (RuleCall)cManufacturer1Assignment_4_0.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_4_1 = (RuleCall)cGroup_4.eContents().get(1);
-		private final Assignment cManufacturer2Assignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cManufacturer2IDTerminalRuleCall_4_2_0 = (RuleCall)cManufacturer2Assignment_4_2.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_4_3 = (RuleCall)cGroup_4.eContents().get(3);
-		private final Assignment cManufacturer3Assignment_4_4 = (Assignment)cGroup_4.eContents().get(4);
-		private final RuleCall cManufacturer3IDTerminalRuleCall_4_4_0 = (RuleCall)cManufacturer3Assignment_4_4.eContents().get(0);
-		private final Assignment cLineEndAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_5_0 = (RuleCall)cLineEndAssignment_5.eContents().get(0);
+		private final Assignment cPartyFunctionCodeQualifierAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPartyFunctionCodeQualifierIDTerminalRuleCall_2_0 = (RuleCall)cPartyFunctionCodeQualifierAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final RuleCall cPLUSTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
+		private final Assignment cPartyIdentificationDetailsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPartyIdentificationDetailsPartyIdentificationDetailParserRuleCall_3_1_0 = (RuleCall)cPartyIdentificationDetailsAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
+		private final Assignment cNameAndAddressAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cNameAndAddressNameAndAddressParserRuleCall_3_2_1_0 = (RuleCall)cNameAndAddressAssignment_3_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2 = (Group)cGroup_3_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_0 = (RuleCall)cGroup_3_2_2.eContents().get(0);
+		private final Assignment cPartyNameAssignment_3_2_2_1 = (Assignment)cGroup_3_2_2.eContents().get(1);
+		private final RuleCall cPartyNamePartyNameParserRuleCall_3_2_2_1_0 = (RuleCall)cPartyNameAssignment_3_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2 = (Group)cGroup_3_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_2_0 = (RuleCall)cGroup_3_2_2_2.eContents().get(0);
+		private final Assignment cStreetAssignment_3_2_2_2_1 = (Assignment)cGroup_3_2_2_2.eContents().get(1);
+		private final RuleCall cStreetStreetParserRuleCall_3_2_2_2_1_0 = (RuleCall)cStreetAssignment_3_2_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2_2 = (Group)cGroup_3_2_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_2_2_0 = (RuleCall)cGroup_3_2_2_2_2.eContents().get(0);
+		private final Assignment cCityNameAssignment_3_2_2_2_2_1 = (Assignment)cGroup_3_2_2_2_2.eContents().get(1);
+		private final RuleCall cCityNameIDTerminalRuleCall_3_2_2_2_2_1_0 = (RuleCall)cCityNameAssignment_3_2_2_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2_2_2 = (Group)cGroup_3_2_2_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_2_2_2_0 = (RuleCall)cGroup_3_2_2_2_2_2.eContents().get(0);
+		private final Assignment cCountrySubEntityDetailsAssignment_3_2_2_2_2_2_1 = (Assignment)cGroup_3_2_2_2_2_2.eContents().get(1);
+		private final RuleCall cCountrySubEntityDetailsCountrySubEntityDetailParserRuleCall_3_2_2_2_2_2_1_0 = (RuleCall)cCountrySubEntityDetailsAssignment_3_2_2_2_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2_2_2_2 = (Group)cGroup_3_2_2_2_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_2_2_2_2_0 = (RuleCall)cGroup_3_2_2_2_2_2_2.eContents().get(0);
+		private final Assignment cPostalIdentificationCodeAssignment_3_2_2_2_2_2_2_1 = (Assignment)cGroup_3_2_2_2_2_2_2.eContents().get(1);
+		private final RuleCall cPostalIdentificationCodeIDTerminalRuleCall_3_2_2_2_2_2_2_1_0 = (RuleCall)cPostalIdentificationCodeAssignment_3_2_2_2_2_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2_2_2_2_2 = (Group)cGroup_3_2_2_2_2_2_2.eContents().get(2);
+		private final RuleCall cPLUSTerminalRuleCall_3_2_2_2_2_2_2_2_0 = (RuleCall)cGroup_3_2_2_2_2_2_2_2.eContents().get(0);
+		private final Assignment cCountryNameCodeAssignment_3_2_2_2_2_2_2_2_1 = (Assignment)cGroup_3_2_2_2_2_2_2_2.eContents().get(1);
+		private final RuleCall cCountryNameCodeIDTerminalRuleCall_3_2_2_2_2_2_2_2_1_0 = (RuleCall)cCountryNameCodeAssignment_3_2_2_2_2_2_2_2_1.eContents().get(0);
+		private final Assignment cLineEndAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_4_0 = (RuleCall)cLineEndAssignment_4.eContents().get(0);
 		
 		////NAD+BT+VAUXHALL MOTORS LTD::91'
 		//NADSegment:
 		//    segment="NAD"
 		//    PLUS
-		//    code=ID
-		//    PLUS
+		//    partyFunctionCodeQualifier=ID
 		//    (
-		//        ( manufacturer1=ID )?
-		//        COLON
-		//        ( manufacturer2=ID )?
-		//        COLON
-		//        ( manufacturer3=ID )?
+		//        PLUS
+		//        partyIdentificationDetails=PartyIdentificationDetail // C082
+		//        (
+		//            PLUS
+		//            nameAndAddress=NameAndAddress // C058
+		//            (
+		//                PLUS
+		//                partyName=PartyName // C080
+		//                (
+		//                    PLUS
+		//                    street=Street // C059
+		//                    (
+		//                        PLUS
+		//                        cityName=ID // 3164
+		//                        (
+		//                            PLUS
+		//                            countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                            (
+		//                                PLUS
+		//                                postalIdentificationCode=ID // 3251
+		//                                (
+		//                                    PLUS
+		//                                    countryNameCode=ID // 3207
+		//                                )?
+		//                            )?
+		//                        )?
+		//                    )?
+		//                )?
+		//            )?
+		//        )?
 		//    )?
 		//    lineEnd=QUOTE_AND_NL
 		//;
@@ -2877,14 +3279,38 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//segment="NAD"
 		//PLUS
-		//code=ID
-		//PLUS
+		//partyFunctionCodeQualifier=ID
 		//(
-		//    ( manufacturer1=ID )?
-		//    COLON
-		//    ( manufacturer2=ID )?
-		//    COLON
-		//    ( manufacturer3=ID )?
+		//    PLUS
+		//    partyIdentificationDetails=PartyIdentificationDetail // C082
+		//    (
+		//        PLUS
+		//        nameAndAddress=NameAndAddress // C058
+		//        (
+		//            PLUS
+		//            partyName=PartyName // C080
+		//            (
+		//                PLUS
+		//                street=Street // C059
+		//                (
+		//                    PLUS
+		//                    cityName=ID // 3164
+		//                    (
+		//                        PLUS
+		//                        countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                        (
+		//                            PLUS
+		//                            postalIdentificationCode=ID // 3251
+		//                            (
+		//                                PLUS
+		//                                countryNameCode=ID // 3207
+		//                            )?
+		//                        )?
+		//                    )?
+		//                )?
+		//            )?
+		//        )?
+		//    )?
 		//)?
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
@@ -2898,96 +3324,285 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//code=ID
-		public Assignment getCodeAssignment_2() { return cCodeAssignment_2; }
+		//partyFunctionCodeQualifier=ID
+		public Assignment getPartyFunctionCodeQualifierAssignment_2() { return cPartyFunctionCodeQualifierAssignment_2; }
 		
 		//ID
-		public RuleCall getCodeIDTerminalRuleCall_2_0() { return cCodeIDTerminalRuleCall_2_0; }
-		
-		//PLUS
-		public RuleCall getPLUSTerminalRuleCall_3() { return cPLUSTerminalRuleCall_3; }
+		public RuleCall getPartyFunctionCodeQualifierIDTerminalRuleCall_2_0() { return cPartyFunctionCodeQualifierIDTerminalRuleCall_2_0; }
 		
 		//(
-		//    ( manufacturer1=ID )?
-		//    COLON
-		//    ( manufacturer2=ID )?
-		//    COLON
-		//    ( manufacturer3=ID )?
+		//    PLUS
+		//    partyIdentificationDetails=PartyIdentificationDetail // C082
+		//    (
+		//        PLUS
+		//        nameAndAddress=NameAndAddress // C058
+		//        (
+		//            PLUS
+		//            partyName=PartyName // C080
+		//            (
+		//                PLUS
+		//                street=Street // C059
+		//                (
+		//                    PLUS
+		//                    cityName=ID // 3164
+		//                    (
+		//                        PLUS
+		//                        countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                        (
+		//                            PLUS
+		//                            postalIdentificationCode=ID // 3251
+		//                            (
+		//                                PLUS
+		//                                countryNameCode=ID // 3207
+		//                            )?
+		//                        )?
+		//                    )?
+		//                )?
+		//            )?
+		//        )?
+		//    )?
 		//)?
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_3() { return cGroup_3; }
 		
-		//( manufacturer1=ID )?
-		public Assignment getManufacturer1Assignment_4_0() { return cManufacturer1Assignment_4_0; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_0() { return cPLUSTerminalRuleCall_3_0; }
+		
+		//partyIdentificationDetails=PartyIdentificationDetail
+		public Assignment getPartyIdentificationDetailsAssignment_3_1() { return cPartyIdentificationDetailsAssignment_3_1; }
+		
+		//PartyIdentificationDetail
+		public RuleCall getPartyIdentificationDetailsPartyIdentificationDetailParserRuleCall_3_1_0() { return cPartyIdentificationDetailsPartyIdentificationDetailParserRuleCall_3_1_0; }
+		
+		//// C082
+		//       (
+		//           PLUS
+		//           nameAndAddress=NameAndAddress // C058
+		//           (
+		//               PLUS
+		//               partyName=PartyName // C080
+		//               (
+		//                   PLUS
+		//                   street=Street // C059
+		//                   (
+		//                       PLUS
+		//                       cityName=ID // 3164
+		//                       (
+		//                           PLUS
+		//                           countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                           (
+		//                               PLUS
+		//                               postalIdentificationCode=ID // 3251
+		//                               (
+		//                                   PLUS
+		//                                   countryNameCode=ID // 3207
+		//                               )?
+		//                           )?
+		//                       )?
+		//                   )?
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_3_2() { return cGroup_3_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_0() { return cPLUSTerminalRuleCall_3_2_0; }
+		
+		//nameAndAddress=NameAndAddress
+		public Assignment getNameAndAddressAssignment_3_2_1() { return cNameAndAddressAssignment_3_2_1; }
+		
+		//NameAndAddress
+		public RuleCall getNameAndAddressNameAndAddressParserRuleCall_3_2_1_0() { return cNameAndAddressNameAndAddressParserRuleCall_3_2_1_0; }
+		
+		//// C058
+		//           (
+		//               PLUS
+		//               partyName=PartyName // C080
+		//               (
+		//                   PLUS
+		//                   street=Street // C059
+		//                   (
+		//                       PLUS
+		//                       cityName=ID // 3164
+		//                       (
+		//                           PLUS
+		//                           countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                           (
+		//                               PLUS
+		//                               postalIdentificationCode=ID // 3251
+		//                               (
+		//                                   PLUS
+		//                                   countryNameCode=ID // 3207
+		//                               )?
+		//                           )?
+		//                       )?
+		//                   )?
+		//               )?
+		//           )?
+		public Group getGroup_3_2_2() { return cGroup_3_2_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_0; }
+		
+		//partyName=PartyName
+		public Assignment getPartyNameAssignment_3_2_2_1() { return cPartyNameAssignment_3_2_2_1; }
+		
+		//PartyName
+		public RuleCall getPartyNamePartyNameParserRuleCall_3_2_2_1_0() { return cPartyNamePartyNameParserRuleCall_3_2_2_1_0; }
+		
+		//// C080
+		//               (
+		//                   PLUS
+		//                   street=Street // C059
+		//                   (
+		//                       PLUS
+		//                       cityName=ID // 3164
+		//                       (
+		//                           PLUS
+		//                           countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                           (
+		//                               PLUS
+		//                               postalIdentificationCode=ID // 3251
+		//                               (
+		//                                   PLUS
+		//                                   countryNameCode=ID // 3207
+		//                               )?
+		//                           )?
+		//                       )?
+		//                   )?
+		//               )?
+		public Group getGroup_3_2_2_2() { return cGroup_3_2_2_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_2_0; }
+		
+		//street=Street
+		public Assignment getStreetAssignment_3_2_2_2_1() { return cStreetAssignment_3_2_2_2_1; }
+		
+		//Street
+		public RuleCall getStreetStreetParserRuleCall_3_2_2_2_1_0() { return cStreetStreetParserRuleCall_3_2_2_2_1_0; }
+		
+		//// C059
+		//                   (
+		//                       PLUS
+		//                       cityName=ID // 3164
+		//                       (
+		//                           PLUS
+		//                           countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                           (
+		//                               PLUS
+		//                               postalIdentificationCode=ID // 3251
+		//                               (
+		//                                   PLUS
+		//                                   countryNameCode=ID // 3207
+		//                               )?
+		//                           )?
+		//                       )?
+		//                   )?
+		public Group getGroup_3_2_2_2_2() { return cGroup_3_2_2_2_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_2_2_0; }
+		
+		//cityName=ID
+		public Assignment getCityNameAssignment_3_2_2_2_2_1() { return cCityNameAssignment_3_2_2_2_2_1; }
 		
 		//ID
-		public RuleCall getManufacturer1IDTerminalRuleCall_4_0_0() { return cManufacturer1IDTerminalRuleCall_4_0_0; }
+		public RuleCall getCityNameIDTerminalRuleCall_3_2_2_2_2_1_0() { return cCityNameIDTerminalRuleCall_3_2_2_2_2_1_0; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_4_1() { return cCOLONTerminalRuleCall_4_1; }
+		//// 3164
+		//                       (
+		//                           PLUS
+		//                           countrySubEntityDetails=CountrySubEntityDetail // C819
+		//                           (
+		//                               PLUS
+		//                               postalIdentificationCode=ID // 3251
+		//                               (
+		//                                   PLUS
+		//                                   countryNameCode=ID // 3207
+		//                               )?
+		//                           )?
+		//                       )?
+		public Group getGroup_3_2_2_2_2_2() { return cGroup_3_2_2_2_2_2; }
 		
-		//( manufacturer2=ID )?
-		public Assignment getManufacturer2Assignment_4_2() { return cManufacturer2Assignment_4_2; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_2_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_2_2_2_0; }
+		
+		//countrySubEntityDetails=CountrySubEntityDetail
+		public Assignment getCountrySubEntityDetailsAssignment_3_2_2_2_2_2_1() { return cCountrySubEntityDetailsAssignment_3_2_2_2_2_2_1; }
+		
+		//CountrySubEntityDetail
+		public RuleCall getCountrySubEntityDetailsCountrySubEntityDetailParserRuleCall_3_2_2_2_2_2_1_0() { return cCountrySubEntityDetailsCountrySubEntityDetailParserRuleCall_3_2_2_2_2_2_1_0; }
+		
+		//// C819
+		//                           (
+		//                               PLUS
+		//                               postalIdentificationCode=ID // 3251
+		//                               (
+		//                                   PLUS
+		//                                   countryNameCode=ID // 3207
+		//                               )?
+		//                           )?
+		public Group getGroup_3_2_2_2_2_2_2() { return cGroup_3_2_2_2_2_2_2; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_2_2_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_2_2_2_2_0; }
+		
+		//postalIdentificationCode=ID
+		public Assignment getPostalIdentificationCodeAssignment_3_2_2_2_2_2_2_1() { return cPostalIdentificationCodeAssignment_3_2_2_2_2_2_2_1; }
 		
 		//ID
-		public RuleCall getManufacturer2IDTerminalRuleCall_4_2_0() { return cManufacturer2IDTerminalRuleCall_4_2_0; }
+		public RuleCall getPostalIdentificationCodeIDTerminalRuleCall_3_2_2_2_2_2_2_1_0() { return cPostalIdentificationCodeIDTerminalRuleCall_3_2_2_2_2_2_2_1_0; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_4_3() { return cCOLONTerminalRuleCall_4_3; }
+		//// 3251
+		//                               (
+		//                                   PLUS
+		//                                   countryNameCode=ID // 3207
+		//                               )?
+		public Group getGroup_3_2_2_2_2_2_2_2() { return cGroup_3_2_2_2_2_2_2_2; }
 		
-		//( manufacturer3=ID )?
-		public Assignment getManufacturer3Assignment_4_4() { return cManufacturer3Assignment_4_4; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_3_2_2_2_2_2_2_2_0() { return cPLUSTerminalRuleCall_3_2_2_2_2_2_2_2_0; }
+		
+		//countryNameCode=ID
+		public Assignment getCountryNameCodeAssignment_3_2_2_2_2_2_2_2_1() { return cCountryNameCodeAssignment_3_2_2_2_2_2_2_2_1; }
 		
 		//ID
-		public RuleCall getManufacturer3IDTerminalRuleCall_4_4_0() { return cManufacturer3IDTerminalRuleCall_4_4_0; }
+		public RuleCall getCountryNameCodeIDTerminalRuleCall_3_2_2_2_2_2_2_2_1_0() { return cCountryNameCodeIDTerminalRuleCall_3_2_2_2_2_2_2_2_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
-		public Assignment getLineEndAssignment_5() { return cLineEndAssignment_5; }
+		public Assignment getLineEndAssignment_4() { return cLineEndAssignment_4; }
 		
 		//QUOTE_AND_NL
-		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_5_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_5_0; }
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_4_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_4_0; }
 	}
 	public class DTMSegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DTMSegment");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentDTMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
-		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cNum1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNum1IDTerminalRuleCall_2_0 = (RuleCall)cNum1Assignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final RuleCall cCOLONTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final Assignment cNum2Assignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cNum2IDTerminalRuleCall_3_1_0 = (RuleCall)cNum2Assignment_3_1.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
-		private final Assignment cNum3Assignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
-		private final RuleCall cNum3IDTerminalRuleCall_3_3_0 = (RuleCall)cNum3Assignment_3_3.eContents().get(0);
-		private final Assignment cLineEndAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_4_0 = (RuleCall)cLineEndAssignment_4.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cPLUSTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cDateTimePeriodsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cDateTimePeriodsDateTimePeriodParserRuleCall_1_1_0 = (RuleCall)cDateTimePeriodsAssignment_1_1.eContents().get(0);
+		private final Assignment cLineEndAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_2_0 = (RuleCall)cLineEndAssignment_2.eContents().get(0);
 		
 		////DTM+137:199910060000:102'
 		//DTMSegment:
 		//    segment="DTM"
-		//    PLUS
-		//    num1=ID
 		//    (
-		//        COLON
-		//        num2=ID
-		//        COLON
-		//        num3=ID
-		//    )?
+		//        PLUS
+		//        dateTimePeriods+=DateTimePeriod
+		//    )*
 		//    lineEnd=QUOTE_AND_NL
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//segment="DTM"
-		//PLUS
-		//num1=ID
 		//(
-		//    COLON
-		//    num2=ID
-		//    COLON
-		//    num3=ID
-		//)?
+		//    PLUS
+		//    dateTimePeriods+=DateTimePeriod
+		//)*
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
 		
@@ -2997,46 +3612,26 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//"DTM"
 		public Keyword getSegmentDTMKeyword_0_0() { return cSegmentDTMKeyword_0_0; }
 		
-		//PLUS
-		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
-		
-		//num1=ID
-		public Assignment getNum1Assignment_2() { return cNum1Assignment_2; }
-		
-		//ID
-		public RuleCall getNum1IDTerminalRuleCall_2_0() { return cNum1IDTerminalRuleCall_2_0; }
-		
 		//(
-		//    COLON
-		//    num2=ID
-		//    COLON
-		//    num3=ID
-		//)?
-		public Group getGroup_3() { return cGroup_3; }
+		//    PLUS
+		//    dateTimePeriods+=DateTimePeriod
+		//)*
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_3_0() { return cCOLONTerminalRuleCall_3_0; }
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1_0() { return cPLUSTerminalRuleCall_1_0; }
 		
-		//num2=ID
-		public Assignment getNum2Assignment_3_1() { return cNum2Assignment_3_1; }
+		//dateTimePeriods+=DateTimePeriod
+		public Assignment getDateTimePeriodsAssignment_1_1() { return cDateTimePeriodsAssignment_1_1; }
 		
-		//ID
-		public RuleCall getNum2IDTerminalRuleCall_3_1_0() { return cNum2IDTerminalRuleCall_3_1_0; }
-		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_3_2() { return cCOLONTerminalRuleCall_3_2; }
-		
-		//num3=ID
-		public Assignment getNum3Assignment_3_3() { return cNum3Assignment_3_3; }
-		
-		//ID
-		public RuleCall getNum3IDTerminalRuleCall_3_3_0() { return cNum3IDTerminalRuleCall_3_3_0; }
+		//DateTimePeriod
+		public RuleCall getDateTimePeriodsDateTimePeriodParserRuleCall_1_1_0() { return cDateTimePeriodsDateTimePeriodParserRuleCall_1_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
-		public Assignment getLineEndAssignment_4() { return cLineEndAssignment_4; }
+		public Assignment getLineEndAssignment_2() { return cLineEndAssignment_2; }
 		
 		//QUOTE_AND_NL
-		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_4_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_4_0; }
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_2_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_2_0; }
 	}
 	public class BGMSegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.BGMSegment");
@@ -3044,37 +3639,49 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentBGMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cNum1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNum1IDTerminalRuleCall_2_0 = (RuleCall)cNum1Assignment_2.eContents().get(0);
+		private final Assignment cDocumentMessageNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDocumentMessageNameDocumentMessageParserRuleCall_2_0 = (RuleCall)cDocumentMessageNameAssignment_2.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cNum2Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cNum2IDTerminalRuleCall_4_0 = (RuleCall)cNum2Assignment_4.eContents().get(0);
+		private final Assignment cDocumentMessageIdentificationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDocumentMessageIdentificationDocumentMessageIdentificationParserRuleCall_4_0 = (RuleCall)cDocumentMessageIdentificationAssignment_4.eContents().get(0);
 		private final RuleCall cPLUSTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final Assignment cNum3Assignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cNum3IDTerminalRuleCall_6_0 = (RuleCall)cNum3Assignment_6.eContents().get(0);
-		private final Assignment cLineEndAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_7_0 = (RuleCall)cLineEndAssignment_7.eContents().get(0);
+		private final Assignment cMessageFunctionCodeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cMessageFunctionCodeIDTerminalRuleCall_6_0 = (RuleCall)cMessageFunctionCodeAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final RuleCall cPLUSTerminalRuleCall_7_0 = (RuleCall)cGroup_7.eContents().get(0);
+		private final Assignment cResponseTypeCodeAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cResponseTypeCodeIDTerminalRuleCall_7_1_0 = (RuleCall)cResponseTypeCodeAssignment_7_1.eContents().get(0);
+		private final Assignment cLineEndAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_8_0 = (RuleCall)cLineEndAssignment_8.eContents().get(0);
 		
 		////BGM+381+1060113800026+9'
 		//BGMSegment:
 		//    segment="BGM"
 		//    PLUS
-		//    (num1=ID)?
+		//    ( documentMessageName=DocumentMessage )?
 		//    PLUS
-		//    (num2=ID)?
+		//    ( documentMessageIdentification=DocumentMessageIdentification )?
 		//    PLUS
-		//    (num3=ID)?
+		//    ( messageFunctionCode=ID )?
+		//    (
+		//        PLUS
+		//        responseTypeCode=ID
+		//    )?
 		//    lineEnd=QUOTE_AND_NL
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//segment="BGM"
 		//PLUS
-		//(num1=ID)?
+		//( documentMessageName=DocumentMessage )?
 		//PLUS
-		//(num2=ID)?
+		//( documentMessageIdentification=DocumentMessageIdentification )?
 		//PLUS
-		//(num3=ID)?
+		//( messageFunctionCode=ID )?
+		//(
+		//    PLUS
+		//    responseTypeCode=ID
+		//)?
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
 		
@@ -3087,35 +3694,50 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
 		
-		//(num1=ID)?
-		public Assignment getNum1Assignment_2() { return cNum1Assignment_2; }
+		//( documentMessageName=DocumentMessage )?
+		public Assignment getDocumentMessageNameAssignment_2() { return cDocumentMessageNameAssignment_2; }
 		
-		//ID
-		public RuleCall getNum1IDTerminalRuleCall_2_0() { return cNum1IDTerminalRuleCall_2_0; }
+		//DocumentMessage
+		public RuleCall getDocumentMessageNameDocumentMessageParserRuleCall_2_0() { return cDocumentMessageNameDocumentMessageParserRuleCall_2_0; }
 		
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_3() { return cPLUSTerminalRuleCall_3; }
 		
-		//(num2=ID)?
-		public Assignment getNum2Assignment_4() { return cNum2Assignment_4; }
+		//( documentMessageIdentification=DocumentMessageIdentification )?
+		public Assignment getDocumentMessageIdentificationAssignment_4() { return cDocumentMessageIdentificationAssignment_4; }
 		
-		//ID
-		public RuleCall getNum2IDTerminalRuleCall_4_0() { return cNum2IDTerminalRuleCall_4_0; }
+		//DocumentMessageIdentification
+		public RuleCall getDocumentMessageIdentificationDocumentMessageIdentificationParserRuleCall_4_0() { return cDocumentMessageIdentificationDocumentMessageIdentificationParserRuleCall_4_0; }
 		
 		//PLUS
 		public RuleCall getPLUSTerminalRuleCall_5() { return cPLUSTerminalRuleCall_5; }
 		
-		//(num3=ID)?
-		public Assignment getNum3Assignment_6() { return cNum3Assignment_6; }
+		//( messageFunctionCode=ID )?
+		public Assignment getMessageFunctionCodeAssignment_6() { return cMessageFunctionCodeAssignment_6; }
 		
 		//ID
-		public RuleCall getNum3IDTerminalRuleCall_6_0() { return cNum3IDTerminalRuleCall_6_0; }
+		public RuleCall getMessageFunctionCodeIDTerminalRuleCall_6_0() { return cMessageFunctionCodeIDTerminalRuleCall_6_0; }
+		
+		//(
+		//    PLUS
+		//    responseTypeCode=ID
+		//)?
+		public Group getGroup_7() { return cGroup_7; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_7_0() { return cPLUSTerminalRuleCall_7_0; }
+		
+		//responseTypeCode=ID
+		public Assignment getResponseTypeCodeAssignment_7_1() { return cResponseTypeCodeAssignment_7_1; }
+		
+		//ID
+		public RuleCall getResponseTypeCodeIDTerminalRuleCall_7_1_0() { return cResponseTypeCodeIDTerminalRuleCall_7_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
-		public Assignment getLineEndAssignment_7() { return cLineEndAssignment_7; }
+		public Assignment getLineEndAssignment_8() { return cLineEndAssignment_8; }
 		
 		//QUOTE_AND_NL
-		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_7_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_7_0; }
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_8_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_8_0; }
 	}
 	public class PATSegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PATSegment");
@@ -3264,23 +3886,28 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cSegmentERCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
-		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cCode1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCode1IDTerminalRuleCall_2_0 = (RuleCall)cCode1Assignment_2.eContents().get(0);
-		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cPLUSTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cApplicationErrorDetailsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cApplicationErrorDetailsApplicationErrorDetailParserRuleCall_1_1_0 = (RuleCall)cApplicationErrorDetailsAssignment_1_1.eContents().get(0);
+		private final Assignment cLineEndAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_2_0 = (RuleCall)cLineEndAssignment_2.eContents().get(0);
 		
 		//ERCSegment:
 		//    segment="ERC"
-		//    PLUS
-		//    code1=ID
+		//    (
+		//        PLUS
+		//        applicationErrorDetails+=ApplicationErrorDetail
+		//    )*
 		//    lineEnd=QUOTE_AND_NL
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//segment="ERC"
-		//PLUS
-		//code1=ID
+		//(
+		//    PLUS
+		//    applicationErrorDetails+=ApplicationErrorDetail
+		//)*
 		//lineEnd=QUOTE_AND_NL
 		public Group getGroup() { return cGroup; }
 		
@@ -3290,20 +3917,26 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//"ERC"
 		public Keyword getSegmentERCKeyword_0_0() { return cSegmentERCKeyword_0_0; }
 		
+		//(
+		//    PLUS
+		//    applicationErrorDetails+=ApplicationErrorDetail
+		//)*
+		public Group getGroup_1() { return cGroup_1; }
+		
 		//PLUS
-		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		public RuleCall getPLUSTerminalRuleCall_1_0() { return cPLUSTerminalRuleCall_1_0; }
 		
-		//code1=ID
-		public Assignment getCode1Assignment_2() { return cCode1Assignment_2; }
+		//applicationErrorDetails+=ApplicationErrorDetail
+		public Assignment getApplicationErrorDetailsAssignment_1_1() { return cApplicationErrorDetailsAssignment_1_1; }
 		
-		//ID
-		public RuleCall getCode1IDTerminalRuleCall_2_0() { return cCode1IDTerminalRuleCall_2_0; }
+		//ApplicationErrorDetail
+		public RuleCall getApplicationErrorDetailsApplicationErrorDetailParserRuleCall_1_1_0() { return cApplicationErrorDetailsApplicationErrorDetailParserRuleCall_1_1_0; }
 		
 		//lineEnd=QUOTE_AND_NL
-		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		public Assignment getLineEndAssignment_2() { return cLineEndAssignment_2; }
 		
 		//QUOTE_AND_NL
-		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_2_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_2_0; }
 	}
 	public class CNTSegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CNTSegment");
@@ -3648,179 +4281,330 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	public class AbstractEdiFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.AbstractEdiFunction");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cPRIFunctionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cMessageBodyFunctionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cMSGFunctionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cProductFunctionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cSystemDetailFunctionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cOriginatorFunctionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cOriginatorIdentificationFunctionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cLocationFunctionParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cInterchangerFunctionParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cDateOnlyFunctionParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cDateAndTimeFunctionParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cUNBHeaderParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cPriceInformationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cMessageBodyFunctionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cMessageIndentifierParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cRelationshipParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cProductFunctionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cItemNumberIdentificationParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cSublineInformationParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cQuantityDetailParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cStreetParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cCountrySubEntityDetailParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cPartyNameParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cNameAndAddressParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cApplicationErrorDetailParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cSystemDetailFunctionParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cTaxDetailParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cTaxAccountDetailParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cTaxTypeParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cCurrencyDetailParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cDocumentMessageIdentificationParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cDocumentMessageParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cOriginatorFunctionParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cOriginatorIdentificationFunctionParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cLocationFunctionParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cInterchangerFunctionParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cDateOnlyFunctionParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cDateAndTimeFunctionParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cDateTimePeriodParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
 		
 		//// EDIFACT Functions
 		//AbstractEdiFunction:
-		//    PRIFunction |
+		//    UNBHeader |
+		//    PriceInformation |
 		//    MessageBodyFunction |
-		//    MSGFunction |
+		//    MessageIndentifier |
+		//    Relationship |
 		//    ProductFunction |
+		//    ItemNumberIdentification |
+		//    SublineInformation |
+		//    QuantityDetail |
+		//    Street |
+		//    CountrySubEntityDetail |
+		//    PartyName |
+		//    NameAndAddress |
+		//    ApplicationErrorDetail |
 		//    SystemDetailFunction |
+		//    TaxDetail |
+		//    TaxAccountDetail |
+		//    TaxType |
+		//    CurrencyDetail |
+		//    DocumentMessageIdentification |
+		//    DocumentMessage |
 		//    OriginatorFunction |
 		//    OriginatorIdentificationFunction |
 		//    LocationFunction |
 		//    InterchangerFunction |
 		//    DateOnlyFunction |
-		//    DateAndTimeFunction
+		//    DateAndTimeFunction |
+		//    DateTimePeriod
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//PRIFunction |
+		//UNBHeader |
+		//PriceInformation |
 		//MessageBodyFunction |
-		//MSGFunction |
+		//MessageIndentifier |
+		//Relationship |
 		//ProductFunction |
+		//ItemNumberIdentification |
+		//SublineInformation |
+		//QuantityDetail |
+		//Street |
+		//CountrySubEntityDetail |
+		//PartyName |
+		//NameAndAddress |
+		//ApplicationErrorDetail |
 		//SystemDetailFunction |
+		//TaxDetail |
+		//TaxAccountDetail |
+		//TaxType |
+		//CurrencyDetail |
+		//DocumentMessageIdentification |
+		//DocumentMessage |
 		//OriginatorFunction |
 		//OriginatorIdentificationFunction |
 		//LocationFunction |
 		//InterchangerFunction |
 		//DateOnlyFunction |
-		//DateAndTimeFunction
+		//DateAndTimeFunction |
+		//DateTimePeriod
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//PRIFunction
-		public RuleCall getPRIFunctionParserRuleCall_0() { return cPRIFunctionParserRuleCall_0; }
+		//UNBHeader
+		public RuleCall getUNBHeaderParserRuleCall_0() { return cUNBHeaderParserRuleCall_0; }
+		
+		//PriceInformation
+		public RuleCall getPriceInformationParserRuleCall_1() { return cPriceInformationParserRuleCall_1; }
 		
 		//MessageBodyFunction
-		public RuleCall getMessageBodyFunctionParserRuleCall_1() { return cMessageBodyFunctionParserRuleCall_1; }
+		public RuleCall getMessageBodyFunctionParserRuleCall_2() { return cMessageBodyFunctionParserRuleCall_2; }
 		
-		//MSGFunction
-		public RuleCall getMSGFunctionParserRuleCall_2() { return cMSGFunctionParserRuleCall_2; }
+		//MessageIndentifier
+		public RuleCall getMessageIndentifierParserRuleCall_3() { return cMessageIndentifierParserRuleCall_3; }
+		
+		//Relationship
+		public RuleCall getRelationshipParserRuleCall_4() { return cRelationshipParserRuleCall_4; }
 		
 		//ProductFunction
-		public RuleCall getProductFunctionParserRuleCall_3() { return cProductFunctionParserRuleCall_3; }
+		public RuleCall getProductFunctionParserRuleCall_5() { return cProductFunctionParserRuleCall_5; }
+		
+		//ItemNumberIdentification
+		public RuleCall getItemNumberIdentificationParserRuleCall_6() { return cItemNumberIdentificationParserRuleCall_6; }
+		
+		//SublineInformation
+		public RuleCall getSublineInformationParserRuleCall_7() { return cSublineInformationParserRuleCall_7; }
+		
+		//QuantityDetail
+		public RuleCall getQuantityDetailParserRuleCall_8() { return cQuantityDetailParserRuleCall_8; }
+		
+		//Street
+		public RuleCall getStreetParserRuleCall_9() { return cStreetParserRuleCall_9; }
+		
+		//CountrySubEntityDetail
+		public RuleCall getCountrySubEntityDetailParserRuleCall_10() { return cCountrySubEntityDetailParserRuleCall_10; }
+		
+		//PartyName
+		public RuleCall getPartyNameParserRuleCall_11() { return cPartyNameParserRuleCall_11; }
+		
+		//NameAndAddress
+		public RuleCall getNameAndAddressParserRuleCall_12() { return cNameAndAddressParserRuleCall_12; }
+		
+		//ApplicationErrorDetail
+		public RuleCall getApplicationErrorDetailParserRuleCall_13() { return cApplicationErrorDetailParserRuleCall_13; }
 		
 		//SystemDetailFunction
-		public RuleCall getSystemDetailFunctionParserRuleCall_4() { return cSystemDetailFunctionParserRuleCall_4; }
+		public RuleCall getSystemDetailFunctionParserRuleCall_14() { return cSystemDetailFunctionParserRuleCall_14; }
+		
+		//TaxDetail
+		public RuleCall getTaxDetailParserRuleCall_15() { return cTaxDetailParserRuleCall_15; }
+		
+		//TaxAccountDetail
+		public RuleCall getTaxAccountDetailParserRuleCall_16() { return cTaxAccountDetailParserRuleCall_16; }
+		
+		//TaxType
+		public RuleCall getTaxTypeParserRuleCall_17() { return cTaxTypeParserRuleCall_17; }
+		
+		//CurrencyDetail
+		public RuleCall getCurrencyDetailParserRuleCall_18() { return cCurrencyDetailParserRuleCall_18; }
+		
+		//DocumentMessageIdentification
+		public RuleCall getDocumentMessageIdentificationParserRuleCall_19() { return cDocumentMessageIdentificationParserRuleCall_19; }
+		
+		//DocumentMessage
+		public RuleCall getDocumentMessageParserRuleCall_20() { return cDocumentMessageParserRuleCall_20; }
 		
 		//OriginatorFunction
-		public RuleCall getOriginatorFunctionParserRuleCall_5() { return cOriginatorFunctionParserRuleCall_5; }
+		public RuleCall getOriginatorFunctionParserRuleCall_21() { return cOriginatorFunctionParserRuleCall_21; }
 		
 		//OriginatorIdentificationFunction
-		public RuleCall getOriginatorIdentificationFunctionParserRuleCall_6() { return cOriginatorIdentificationFunctionParserRuleCall_6; }
+		public RuleCall getOriginatorIdentificationFunctionParserRuleCall_22() { return cOriginatorIdentificationFunctionParserRuleCall_22; }
 		
 		//LocationFunction
-		public RuleCall getLocationFunctionParserRuleCall_7() { return cLocationFunctionParserRuleCall_7; }
+		public RuleCall getLocationFunctionParserRuleCall_23() { return cLocationFunctionParserRuleCall_23; }
 		
 		//InterchangerFunction
-		public RuleCall getInterchangerFunctionParserRuleCall_8() { return cInterchangerFunctionParserRuleCall_8; }
+		public RuleCall getInterchangerFunctionParserRuleCall_24() { return cInterchangerFunctionParserRuleCall_24; }
 		
 		//DateOnlyFunction
-		public RuleCall getDateOnlyFunctionParserRuleCall_9() { return cDateOnlyFunctionParserRuleCall_9; }
+		public RuleCall getDateOnlyFunctionParserRuleCall_25() { return cDateOnlyFunctionParserRuleCall_25; }
 		
 		//DateAndTimeFunction
-		public RuleCall getDateAndTimeFunctionParserRuleCall_10() { return cDateAndTimeFunctionParserRuleCall_10; }
-	}
-	public class PRIFunctionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PRIFunction");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cCode1Assignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cCode1IDTerminalRuleCall_0_0 = (RuleCall)cCode1Assignment_0.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cCode2Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCode2IDTerminalRuleCall_2_0 = (RuleCall)cCode2Assignment_2.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cCode3Assignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cCode3IDTerminalRuleCall_4_0 = (RuleCall)cCode3Assignment_4.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
-		private final Assignment cCode4Assignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cCode4IDTerminalRuleCall_6_0 = (RuleCall)cCode4Assignment_6.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
-		private final Assignment cCode5Assignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cCode5IDTerminalRuleCall_8_0 = (RuleCall)cCode5Assignment_8.eContents().get(0);
-		private final RuleCall cCOLONTerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final Assignment cCode6Assignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cCode6IDTerminalRuleCall_10_0 = (RuleCall)cCode6Assignment_10.eContents().get(0);
+		public RuleCall getDateAndTimeFunctionParserRuleCall_26() { return cDateAndTimeFunctionParserRuleCall_26; }
 		
-		//PRIFunction:
-		//    code1=ID
+		//DateTimePeriod
+		public RuleCall getDateTimePeriodParserRuleCall_27() { return cDateTimePeriodParserRuleCall_27; }
+	}
+	public class UNBHeaderElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.UNBHeader");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cUNBHeaderAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cSyntaxAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSyntaxIDTerminalRuleCall_1_0 = (RuleCall)cSyntaxAssignment_1.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cNum1Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNum1IDTerminalRuleCall_3_0 = (RuleCall)cNum1Assignment_3.eContents().get(0);
+		
+		//UNBHeader:
+		//    {UNBHeader}
+		//    ( syntax=ID )?
 		//    COLON
-		//    ( code2=ID )?
-		//    COLON
-		//    ( code3=ID )?
-		//    COLON
-		//    ( code4=ID )?
-		//    COLON
-		//    ( code5=ID )?
-		//    COLON
-		//    ( code6=ID )?
+		//    ( num1=ID )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//code1=ID
+		//{UNBHeader}
+		//( syntax=ID )?
 		//COLON
-		//( code2=ID )?
-		//COLON
-		//( code3=ID )?
-		//COLON
-		//( code4=ID )?
-		//COLON
-		//( code5=ID )?
-		//COLON
-		//( code6=ID )?
+		//( num1=ID )?
 		public Group getGroup() { return cGroup; }
 		
-		//code1=ID
-		public Assignment getCode1Assignment_0() { return cCode1Assignment_0; }
+		//{UNBHeader}
+		public Action getUNBHeaderAction_0() { return cUNBHeaderAction_0; }
+		
+		//( syntax=ID )?
+		public Assignment getSyntaxAssignment_1() { return cSyntaxAssignment_1; }
 		
 		//ID
-		public RuleCall getCode1IDTerminalRuleCall_0_0() { return cCode1IDTerminalRuleCall_0_0; }
+		public RuleCall getSyntaxIDTerminalRuleCall_1_0() { return cSyntaxIDTerminalRuleCall_1_0; }
 		
 		//COLON
+		public RuleCall getCOLONTerminalRuleCall_2() { return cCOLONTerminalRuleCall_2; }
+		
+		//( num1=ID )?
+		public Assignment getNum1Assignment_3() { return cNum1Assignment_3; }
+		
+		//ID
+		public RuleCall getNum1IDTerminalRuleCall_3_0() { return cNum1IDTerminalRuleCall_3_0; }
+	}
+	public class PriceInformationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PriceInformation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cPriceCodeQualifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPriceCodeQualifierIDTerminalRuleCall_0_0 = (RuleCall)cPriceCodeQualifierAssignment_0.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cPriceAmountAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPriceAmountIDTerminalRuleCall_2_0 = (RuleCall)cPriceAmountAssignment_2.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cPriceTypeCodeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPriceTypeCodeIDTerminalRuleCall_4_0 = (RuleCall)cPriceTypeCodeAssignment_4.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final Assignment cPriceSpecificationCodeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPriceSpecificationCodeIDTerminalRuleCall_6_0 = (RuleCall)cPriceSpecificationCodeAssignment_6.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
+		private final Assignment cUnitPriceBasisValueAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cUnitPriceBasisValueIDTerminalRuleCall_8_0 = (RuleCall)cUnitPriceBasisValueAssignment_8.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
+		private final Assignment cMeasurementUnitCodeAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cMeasurementUnitCodeIDTerminalRuleCall_10_0 = (RuleCall)cMeasurementUnitCodeAssignment_10.eContents().get(0);
+		
+		//PriceInformation: // C509
+		//    priceCodeQualifier=ID // 5125
+		//    COLON
+		//    ( priceAmount=ID )? // 5118
+		//    COLON
+		//    ( priceTypeCode=ID )? // 5375
+		//    COLON
+		//    ( priceSpecificationCode=ID )? // 5287
+		//    COLON
+		//    ( unitPriceBasisValue=ID )? // 5284
+		//    COLON
+		//    ( measurementUnitCode=ID )? // 6411
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C509
+		//   priceCodeQualifier=ID // 5125
+		//   COLON
+		//   ( priceAmount=ID )? // 5118
+		//   COLON
+		//   ( priceTypeCode=ID )? // 5375
+		//   COLON
+		//   ( priceSpecificationCode=ID )? // 5287
+		//   COLON
+		//   ( unitPriceBasisValue=ID )? // 5284
+		//   COLON
+		//   ( measurementUnitCode=ID )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C509
+		//   priceCodeQualifier=ID
+		public Assignment getPriceCodeQualifierAssignment_0() { return cPriceCodeQualifierAssignment_0; }
+		
+		//ID
+		public RuleCall getPriceCodeQualifierIDTerminalRuleCall_0_0() { return cPriceCodeQualifierIDTerminalRuleCall_0_0; }
+		
+		//// 5125
+		//   COLON
 		public RuleCall getCOLONTerminalRuleCall_1() { return cCOLONTerminalRuleCall_1; }
 		
-		//( code2=ID )?
-		public Assignment getCode2Assignment_2() { return cCode2Assignment_2; }
+		//( priceAmount=ID )?
+		public Assignment getPriceAmountAssignment_2() { return cPriceAmountAssignment_2; }
 		
 		//ID
-		public RuleCall getCode2IDTerminalRuleCall_2_0() { return cCode2IDTerminalRuleCall_2_0; }
+		public RuleCall getPriceAmountIDTerminalRuleCall_2_0() { return cPriceAmountIDTerminalRuleCall_2_0; }
 		
-		//COLON
+		//// 5118
+		//   COLON
 		public RuleCall getCOLONTerminalRuleCall_3() { return cCOLONTerminalRuleCall_3; }
 		
-		//( code3=ID )?
-		public Assignment getCode3Assignment_4() { return cCode3Assignment_4; }
+		//( priceTypeCode=ID )?
+		public Assignment getPriceTypeCodeAssignment_4() { return cPriceTypeCodeAssignment_4; }
 		
 		//ID
-		public RuleCall getCode3IDTerminalRuleCall_4_0() { return cCode3IDTerminalRuleCall_4_0; }
+		public RuleCall getPriceTypeCodeIDTerminalRuleCall_4_0() { return cPriceTypeCodeIDTerminalRuleCall_4_0; }
 		
-		//COLON
+		//// 5375
+		//   COLON
 		public RuleCall getCOLONTerminalRuleCall_5() { return cCOLONTerminalRuleCall_5; }
 		
-		//( code4=ID )?
-		public Assignment getCode4Assignment_6() { return cCode4Assignment_6; }
+		//( priceSpecificationCode=ID )?
+		public Assignment getPriceSpecificationCodeAssignment_6() { return cPriceSpecificationCodeAssignment_6; }
 		
 		//ID
-		public RuleCall getCode4IDTerminalRuleCall_6_0() { return cCode4IDTerminalRuleCall_6_0; }
+		public RuleCall getPriceSpecificationCodeIDTerminalRuleCall_6_0() { return cPriceSpecificationCodeIDTerminalRuleCall_6_0; }
 		
-		//COLON
+		//// 5287
+		//   COLON
 		public RuleCall getCOLONTerminalRuleCall_7() { return cCOLONTerminalRuleCall_7; }
 		
-		//( code5=ID )?
-		public Assignment getCode5Assignment_8() { return cCode5Assignment_8; }
+		//( unitPriceBasisValue=ID )?
+		public Assignment getUnitPriceBasisValueAssignment_8() { return cUnitPriceBasisValueAssignment_8; }
 		
 		//ID
-		public RuleCall getCode5IDTerminalRuleCall_8_0() { return cCode5IDTerminalRuleCall_8_0; }
+		public RuleCall getUnitPriceBasisValueIDTerminalRuleCall_8_0() { return cUnitPriceBasisValueIDTerminalRuleCall_8_0; }
 		
-		//COLON
+		//// 5284
+		//   COLON
 		public RuleCall getCOLONTerminalRuleCall_9() { return cCOLONTerminalRuleCall_9; }
 		
-		//( code6=ID )?
-		public Assignment getCode6Assignment_10() { return cCode6Assignment_10; }
+		//( measurementUnitCode=ID )?
+		public Assignment getMeasurementUnitCodeAssignment_10() { return cMeasurementUnitCodeAssignment_10; }
 		
 		//ID
-		public RuleCall getCode6IDTerminalRuleCall_10_0() { return cCode6IDTerminalRuleCall_10_0; }
+		public RuleCall getMeasurementUnitCodeIDTerminalRuleCall_10_0() { return cMeasurementUnitCodeIDTerminalRuleCall_10_0; }
 	}
 	public class MessageBodyFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.MessageBodyFunction");
@@ -3917,74 +4701,297 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//ID
 		public RuleCall getMoreIDTerminalRuleCall_7_1_0() { return cMoreIDTerminalRuleCall_7_1_0; }
 	}
-	public class MSGFunctionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.MSGFunction");
+	public class MessageIndentifierElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.MessageIndentifier");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cBusinessFunctionAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cBusinessFunctionIDTerminalRuleCall_0_0 = (RuleCall)cBusinessFunctionAssignment_0.eContents().get(0);
+		private final Assignment cMessageTypeCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cMessageTypeCodeIDTerminalRuleCall_0_0 = (RuleCall)cMessageTypeCodeAssignment_0.eContents().get(0);
 		private final RuleCall cCOLONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cMessageFunction1Assignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMessageFunction1IDTerminalRuleCall_2_0 = (RuleCall)cMessageFunction1Assignment_2.eContents().get(0);
+		private final Assignment cVersionIdentifierAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cVersionIdentifierIDTerminalRuleCall_2_0 = (RuleCall)cVersionIdentifierAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final RuleCall cCOLONTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
+		private final Assignment cReleaseIdentifierAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cReleaseIdentifierIDTerminalRuleCall_3_1_0 = (RuleCall)cReleaseIdentifierAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
+		private final Assignment cControllingAgencyIdentifierAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cControllingAgencyIdentifierIDTerminalRuleCall_3_2_1_0 = (RuleCall)cControllingAgencyIdentifierAssignment_3_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2 = (Group)cGroup_3_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_2_0 = (RuleCall)cGroup_3_2_2.eContents().get(0);
+		private final Assignment cMessageImplementationIdentificationCodeAssignment_3_2_2_1 = (Assignment)cGroup_3_2_2.eContents().get(1);
+		private final RuleCall cMessageImplementationIdentificationCodeIDTerminalRuleCall_3_2_2_1_0 = (RuleCall)cMessageImplementationIdentificationCodeAssignment_3_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2 = (Group)cGroup_3_2_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_2_2_0 = (RuleCall)cGroup_3_2_2_2.eContents().get(0);
+		private final Assignment cRevisionIdentifierAssignment_3_2_2_2_1 = (Assignment)cGroup_3_2_2_2.eContents().get(1);
+		private final RuleCall cRevisionIdentifierIDTerminalRuleCall_3_2_2_2_1_0 = (RuleCall)cRevisionIdentifierAssignment_3_2_2_2_1.eContents().get(0);
+		private final Group cGroup_3_2_2_2_2 = (Group)cGroup_3_2_2_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_2_2_2_0 = (RuleCall)cGroup_3_2_2_2_2.eContents().get(0);
+		private final Assignment cDocumentStatusCodeAssignment_3_2_2_2_2_1 = (Assignment)cGroup_3_2_2_2_2.eContents().get(1);
+		private final RuleCall cDocumentStatusCodeIDTerminalRuleCall_3_2_2_2_2_1_0 = (RuleCall)cDocumentStatusCodeAssignment_3_2_2_2_2_1.eContents().get(0);
+		
+		//MessageIndentifier: // C709
+		//    ( messageTypeCode=ID )? // 1475
+		//    COLON
+		//    versionIdentifier=ID // 1056
+		//    (
+		//        COLON
+		//        releaseIdentifier=ID // 1058
+		//        (
+		//            COLON
+		//            controllingAgencyIdentifier=ID // 1476
+		//            (
+		//                COLON
+		//                messageImplementationIdentificationCode=ID // 1523
+		//                (
+		//                    COLON
+		//                    revisionIdentifier=ID // 1060
+		//                    (
+		//                        COLON
+		//                        documentStatusCode=ID // 1373
+		//                    )?
+		//                )?
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C709
+		//   ( messageTypeCode=ID )? // 1475
+		//   COLON
+		//   versionIdentifier=ID // 1056
+		//   (
+		//       COLON
+		//       releaseIdentifier=ID // 1058
+		//       (
+		//           COLON
+		//           controllingAgencyIdentifier=ID // 1476
+		//           (
+		//               COLON
+		//               messageImplementationIdentificationCode=ID // 1523
+		//               (
+		//                   COLON
+		//                   revisionIdentifier=ID // 1060
+		//                   (
+		//                       COLON
+		//                       documentStatusCode=ID // 1373
+		//                   )?
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C709
+		//   ( messageTypeCode=ID )?
+		public Assignment getMessageTypeCodeAssignment_0() { return cMessageTypeCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getMessageTypeCodeIDTerminalRuleCall_0_0() { return cMessageTypeCodeIDTerminalRuleCall_0_0; }
+		
+		//// 1475
+		//   COLON
+		public RuleCall getCOLONTerminalRuleCall_1() { return cCOLONTerminalRuleCall_1; }
+		
+		//versionIdentifier=ID
+		public Assignment getVersionIdentifierAssignment_2() { return cVersionIdentifierAssignment_2; }
+		
+		//ID
+		public RuleCall getVersionIdentifierIDTerminalRuleCall_2_0() { return cVersionIdentifierIDTerminalRuleCall_2_0; }
+		
+		//// 1056
+		//   (
+		//       COLON
+		//       releaseIdentifier=ID // 1058
+		//       (
+		//           COLON
+		//           controllingAgencyIdentifier=ID // 1476
+		//           (
+		//               COLON
+		//               messageImplementationIdentificationCode=ID // 1523
+		//               (
+		//                   COLON
+		//                   revisionIdentifier=ID // 1060
+		//                   (
+		//                       COLON
+		//                       documentStatusCode=ID // 1373
+		//                   )?
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_0() { return cCOLONTerminalRuleCall_3_0; }
+		
+		//releaseIdentifier=ID
+		public Assignment getReleaseIdentifierAssignment_3_1() { return cReleaseIdentifierAssignment_3_1; }
+		
+		//ID
+		public RuleCall getReleaseIdentifierIDTerminalRuleCall_3_1_0() { return cReleaseIdentifierIDTerminalRuleCall_3_1_0; }
+		
+		//// 1058
+		//       (
+		//           COLON
+		//           controllingAgencyIdentifier=ID // 1476
+		//           (
+		//               COLON
+		//               messageImplementationIdentificationCode=ID // 1523
+		//               (
+		//                   COLON
+		//                   revisionIdentifier=ID // 1060
+		//                   (
+		//                       COLON
+		//                       documentStatusCode=ID // 1373
+		//                   )?
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_3_2() { return cGroup_3_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_0() { return cCOLONTerminalRuleCall_3_2_0; }
+		
+		//controllingAgencyIdentifier=ID
+		public Assignment getControllingAgencyIdentifierAssignment_3_2_1() { return cControllingAgencyIdentifierAssignment_3_2_1; }
+		
+		//ID
+		public RuleCall getControllingAgencyIdentifierIDTerminalRuleCall_3_2_1_0() { return cControllingAgencyIdentifierIDTerminalRuleCall_3_2_1_0; }
+		
+		//// 1476
+		//           (
+		//               COLON
+		//               messageImplementationIdentificationCode=ID // 1523
+		//               (
+		//                   COLON
+		//                   revisionIdentifier=ID // 1060
+		//                   (
+		//                       COLON
+		//                       documentStatusCode=ID // 1373
+		//                   )?
+		//               )?
+		//           )?
+		public Group getGroup_3_2_2() { return cGroup_3_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_2_0() { return cCOLONTerminalRuleCall_3_2_2_0; }
+		
+		//messageImplementationIdentificationCode=ID
+		public Assignment getMessageImplementationIdentificationCodeAssignment_3_2_2_1() { return cMessageImplementationIdentificationCodeAssignment_3_2_2_1; }
+		
+		//ID
+		public RuleCall getMessageImplementationIdentificationCodeIDTerminalRuleCall_3_2_2_1_0() { return cMessageImplementationIdentificationCodeIDTerminalRuleCall_3_2_2_1_0; }
+		
+		//// 1523
+		//               (
+		//                   COLON
+		//                   revisionIdentifier=ID // 1060
+		//                   (
+		//                       COLON
+		//                       documentStatusCode=ID // 1373
+		//                   )?
+		//               )?
+		public Group getGroup_3_2_2_2() { return cGroup_3_2_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_2_2_0() { return cCOLONTerminalRuleCall_3_2_2_2_0; }
+		
+		//revisionIdentifier=ID
+		public Assignment getRevisionIdentifierAssignment_3_2_2_2_1() { return cRevisionIdentifierAssignment_3_2_2_2_1; }
+		
+		//ID
+		public RuleCall getRevisionIdentifierIDTerminalRuleCall_3_2_2_2_1_0() { return cRevisionIdentifierIDTerminalRuleCall_3_2_2_2_1_0; }
+		
+		//// 1060
+		//                   (
+		//                       COLON
+		//                       documentStatusCode=ID // 1373
+		//                   )?
+		public Group getGroup_3_2_2_2_2() { return cGroup_3_2_2_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_2_2_2_0() { return cCOLONTerminalRuleCall_3_2_2_2_2_0; }
+		
+		//documentStatusCode=ID
+		public Assignment getDocumentStatusCodeAssignment_3_2_2_2_2_1() { return cDocumentStatusCodeAssignment_3_2_2_2_2_1; }
+		
+		//ID
+		public RuleCall getDocumentStatusCodeIDTerminalRuleCall_3_2_2_2_2_1_0() { return cDocumentStatusCodeIDTerminalRuleCall_3_2_2_2_2_1_0; }
+	}
+	public class RelationshipElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.Relationship");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cRelationshipDescriptionCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cRelationshipDescriptionCodeIDTerminalRuleCall_0_0 = (RuleCall)cRelationshipDescriptionCodeAssignment_0.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cCodeListIdentificationCodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_2_0 = (RuleCall)cCodeListIdentificationCodeAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final RuleCall cCOLONTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
 		private final Assignment cCodeListResponsibleAgencyAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cCodeListResponsibleAgencyIDTerminalRuleCall_3_1_0 = (RuleCall)cCodeListResponsibleAgencyAssignment_3_1.eContents().get(0);
 		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
 		private final RuleCall cCOLONTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
-		private final Assignment cMessageFunction2Assignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
-		private final RuleCall cMessageFunction2IDTerminalRuleCall_3_2_1_0 = (RuleCall)cMessageFunction2Assignment_3_2_1.eContents().get(0);
+		private final Assignment cRelationshipDescriptionAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cRelationshipDescriptionIDTerminalRuleCall_3_2_1_0 = (RuleCall)cRelationshipDescriptionAssignment_3_2_1.eContents().get(0);
 		
-		//MSGFunction:
-		//    ( businessFunction=ID )?
+		//Relationship: // C941
+		//    ( relationshipDescriptionCode=ID )? // 9143
 		//    COLON
-		//    messageFunction1=ID
+		//    codeListIdentificationCode=ID // 1131
 		//    (
 		//        COLON
-		//        codeListResponsibleAgency=ID
+		//        codeListResponsibleAgency=ID // 3055
 		//        (
 		//            COLON
-		//            messageFunction2=ID
+		//            relationshipDescription=ID // 9142
 		//        )?
 		//    )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//( businessFunction=ID )?
-		//COLON
-		//messageFunction1=ID
-		//(
-		//    COLON
-		//    codeListResponsibleAgency=ID
-		//    (
-		//        COLON
-		//        messageFunction2=ID
-		//    )?
-		//)?
+		//// C941
+		//   ( relationshipDescriptionCode=ID )? // 9143
+		//   COLON
+		//   codeListIdentificationCode=ID // 1131
+		//   (
+		//       COLON
+		//       codeListResponsibleAgency=ID // 3055
+		//       (
+		//           COLON
+		//           relationshipDescription=ID // 9142
+		//       )?
+		//   )?
 		public Group getGroup() { return cGroup; }
 		
-		//( businessFunction=ID )?
-		public Assignment getBusinessFunctionAssignment_0() { return cBusinessFunctionAssignment_0; }
+		//// C941
+		//   ( relationshipDescriptionCode=ID )?
+		public Assignment getRelationshipDescriptionCodeAssignment_0() { return cRelationshipDescriptionCodeAssignment_0; }
 		
 		//ID
-		public RuleCall getBusinessFunctionIDTerminalRuleCall_0_0() { return cBusinessFunctionIDTerminalRuleCall_0_0; }
+		public RuleCall getRelationshipDescriptionCodeIDTerminalRuleCall_0_0() { return cRelationshipDescriptionCodeIDTerminalRuleCall_0_0; }
 		
-		//COLON
+		//// 9143
+		//   COLON
 		public RuleCall getCOLONTerminalRuleCall_1() { return cCOLONTerminalRuleCall_1; }
 		
-		//messageFunction1=ID
-		public Assignment getMessageFunction1Assignment_2() { return cMessageFunction1Assignment_2; }
+		//codeListIdentificationCode=ID
+		public Assignment getCodeListIdentificationCodeAssignment_2() { return cCodeListIdentificationCodeAssignment_2; }
 		
 		//ID
-		public RuleCall getMessageFunction1IDTerminalRuleCall_2_0() { return cMessageFunction1IDTerminalRuleCall_2_0; }
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_2_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_2_0; }
 		
-		//(
-		//    COLON
-		//    codeListResponsibleAgency=ID
-		//    (
-		//        COLON
-		//        messageFunction2=ID
-		//    )?
-		//)?
+		//// 1131
+		//   (
+		//       COLON
+		//       codeListResponsibleAgency=ID // 3055
+		//       (
+		//           COLON
+		//           relationshipDescription=ID // 9142
+		//       )?
+		//   )?
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//COLON
@@ -3996,20 +5003,21 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//ID
 		public RuleCall getCodeListResponsibleAgencyIDTerminalRuleCall_3_1_0() { return cCodeListResponsibleAgencyIDTerminalRuleCall_3_1_0; }
 		
-		//(
-		//    COLON
-		//    messageFunction2=ID
-		//)?
+		//// 3055
+		//       (
+		//           COLON
+		//           relationshipDescription=ID // 9142
+		//       )?
 		public Group getGroup_3_2() { return cGroup_3_2; }
 		
 		//COLON
 		public RuleCall getCOLONTerminalRuleCall_3_2_0() { return cCOLONTerminalRuleCall_3_2_0; }
 		
-		//messageFunction2=ID
-		public Assignment getMessageFunction2Assignment_3_2_1() { return cMessageFunction2Assignment_3_2_1; }
+		//relationshipDescription=ID
+		public Assignment getRelationshipDescriptionAssignment_3_2_1() { return cRelationshipDescriptionAssignment_3_2_1; }
 		
 		//ID
-		public RuleCall getMessageFunction2IDTerminalRuleCall_3_2_1_0() { return cMessageFunction2IDTerminalRuleCall_3_2_1_0; }
+		public RuleCall getRelationshipDescriptionIDTerminalRuleCall_3_2_1_0() { return cRelationshipDescriptionIDTerminalRuleCall_3_2_1_0; }
 	}
 	public class ProductFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ProductFunction");
@@ -4057,6 +5065,987 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//ID
 		public RuleCall getAvailIDTerminalRuleCall_1_1_0() { return cAvailIDTerminalRuleCall_1_1_0; }
+	}
+	public class ItemNumberIdentificationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ItemNumberIdentification");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cItemIdentifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cItemIdentifierIDTerminalRuleCall_0_0 = (RuleCall)cItemIdentifierAssignment_0.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cItemTypeIdentificationCodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cItemTypeIdentificationCodeIDTerminalRuleCall_2_0 = (RuleCall)cItemTypeIdentificationCodeAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final RuleCall cCOLONTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
+		private final Assignment cCodeListIdentificationCodeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_3_1_0 = (RuleCall)cCodeListIdentificationCodeAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_3_2_0 = (RuleCall)cGroup_3_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCodeAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCodeIDTerminalRuleCall_3_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCodeAssignment_3_2_1.eContents().get(0);
+		
+		//ItemNumberIdentification:
+		//    itemIdentifier=ID // 7140
+		//    COLON
+		//    itemTypeIdentificationCode=ID // 7143
+		//    (
+		//        COLON
+		//        codeListIdentificationCode=ID // 1131
+		//        (
+		//            COLON
+		//            codeListResponsibleAgencyCode=ID // 3055
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//itemIdentifier=ID // 7140
+		//COLON
+		//itemTypeIdentificationCode=ID // 7143
+		//(
+		//    COLON
+		//    codeListIdentificationCode=ID // 1131
+		//    (
+		//        COLON
+		//        codeListResponsibleAgencyCode=ID // 3055
+		//    )?
+		//)?
+		public Group getGroup() { return cGroup; }
+		
+		//itemIdentifier=ID
+		public Assignment getItemIdentifierAssignment_0() { return cItemIdentifierAssignment_0; }
+		
+		//ID
+		public RuleCall getItemIdentifierIDTerminalRuleCall_0_0() { return cItemIdentifierIDTerminalRuleCall_0_0; }
+		
+		//// 7140
+		//   COLON
+		public RuleCall getCOLONTerminalRuleCall_1() { return cCOLONTerminalRuleCall_1; }
+		
+		//itemTypeIdentificationCode=ID
+		public Assignment getItemTypeIdentificationCodeAssignment_2() { return cItemTypeIdentificationCodeAssignment_2; }
+		
+		//ID
+		public RuleCall getItemTypeIdentificationCodeIDTerminalRuleCall_2_0() { return cItemTypeIdentificationCodeIDTerminalRuleCall_2_0; }
+		
+		//// 7143
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		//   )?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_0() { return cCOLONTerminalRuleCall_3_0; }
+		
+		//codeListIdentificationCode=ID
+		public Assignment getCodeListIdentificationCodeAssignment_3_1() { return cCodeListIdentificationCodeAssignment_3_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_3_1_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_3_1_0; }
+		
+		//// 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		public Group getGroup_3_2() { return cGroup_3_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_3_2_0() { return cCOLONTerminalRuleCall_3_2_0; }
+		
+		//codeListResponsibleAgencyCode=ID
+		public Assignment getCodeListResponsibleAgencyCodeAssignment_3_2_1() { return cCodeListResponsibleAgencyCodeAssignment_3_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCodeIDTerminalRuleCall_3_2_1_0() { return cCodeListResponsibleAgencyCodeIDTerminalRuleCall_3_2_1_0; }
+	}
+	public class SublineInformationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SublineInformation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSublineIndicatorCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cSublineIndicatorCodeIDTerminalRuleCall_0_0 = (RuleCall)cSublineIndicatorCodeAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cLineItemIdentifierAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cLineItemIdentifierIDTerminalRuleCall_1_1_0 = (RuleCall)cLineItemIdentifierAssignment_1_1.eContents().get(0);
+		
+		//SublineInformation:
+		//    sublineIndicatorCode=ID // 5495
+		//    (
+		//        COLON
+		//        lineItemIdentifier=ID // 1082
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//sublineIndicatorCode=ID // 5495
+		//(
+		//    COLON
+		//    lineItemIdentifier=ID // 1082
+		//)?
+		public Group getGroup() { return cGroup; }
+		
+		//sublineIndicatorCode=ID
+		public Assignment getSublineIndicatorCodeAssignment_0() { return cSublineIndicatorCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getSublineIndicatorCodeIDTerminalRuleCall_0_0() { return cSublineIndicatorCodeIDTerminalRuleCall_0_0; }
+		
+		//// 5495
+		//   (
+		//       COLON
+		//       lineItemIdentifier=ID // 1082
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//lineItemIdentifier=ID
+		public Assignment getLineItemIdentifierAssignment_1_1() { return cLineItemIdentifierAssignment_1_1; }
+		
+		//ID
+		public RuleCall getLineItemIdentifierIDTerminalRuleCall_1_1_0() { return cLineItemIdentifierIDTerminalRuleCall_1_1_0; }
+	}
+	public class QuantityDetailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.QuantityDetail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cQuantityTypeCodeQualifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cQuantityTypeCodeQualifierIDTerminalRuleCall_0_0 = (RuleCall)cQuantityTypeCodeQualifierAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cQuantityAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cQuantityIDTerminalRuleCall_1_1_0 = (RuleCall)cQuantityAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cMeasurementUnitCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cMeasurementUnitCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cMeasurementUnitCodeAssignment_1_2_1.eContents().get(0);
+		
+		//QuantityDetail: // C186
+		//    quantityTypeCodeQualifier=ID // 6063
+		//    (
+		//        COLON
+		//        quantity=ID // 6060
+		//        (
+		//            COLON
+		//            measurementUnitCode=ID // 6411
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C186
+		//   quantityTypeCodeQualifier=ID // 6063
+		//   (
+		//       COLON
+		//       quantity=ID // 6060
+		//       (
+		//           COLON
+		//           measurementUnitCode=ID // 6411
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C186
+		//   quantityTypeCodeQualifier=ID
+		public Assignment getQuantityTypeCodeQualifierAssignment_0() { return cQuantityTypeCodeQualifierAssignment_0; }
+		
+		//ID
+		public RuleCall getQuantityTypeCodeQualifierIDTerminalRuleCall_0_0() { return cQuantityTypeCodeQualifierIDTerminalRuleCall_0_0; }
+		
+		//// 6063
+		//   (
+		//       COLON
+		//       quantity=ID // 6060
+		//       (
+		//           COLON
+		//           measurementUnitCode=ID // 6411
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//quantity=ID
+		public Assignment getQuantityAssignment_1_1() { return cQuantityAssignment_1_1; }
+		
+		//ID
+		public RuleCall getQuantityIDTerminalRuleCall_1_1_0() { return cQuantityIDTerminalRuleCall_1_1_0; }
+		
+		//// 6060
+		//       (
+		//           COLON
+		//           measurementUnitCode=ID // 6411
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//measurementUnitCode=ID
+		public Assignment getMeasurementUnitCodeAssignment_1_2_1() { return cMeasurementUnitCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getMeasurementUnitCodeIDTerminalRuleCall_1_2_1_0() { return cMeasurementUnitCodeIDTerminalRuleCall_1_2_1_0; }
+	}
+	public class StreetElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.Street");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cStreetAndNumberAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cStreetAndNumberIDTerminalRuleCall_0_0 = (RuleCall)cStreetAndNumberAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cStreetAndNumberAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cStreetAndNumberIDTerminalRuleCall_1_1_0 = (RuleCall)cStreetAndNumberAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cStreetAndNumberAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cStreetAndNumberIDTerminalRuleCall_1_2_1_0 = (RuleCall)cStreetAndNumberAssignment_1_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2 = (Group)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_0 = (RuleCall)cGroup_1_2_2.eContents().get(0);
+		private final Assignment cStreetAndNumberAssignment_1_2_2_1 = (Assignment)cGroup_1_2_2.eContents().get(1);
+		private final RuleCall cStreetAndNumberIDTerminalRuleCall_1_2_2_1_0 = (RuleCall)cStreetAndNumberAssignment_1_2_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2_2 = (Group)cGroup_1_2_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_2_0 = (RuleCall)cGroup_1_2_2_2.eContents().get(0);
+		private final Assignment cStreetAndNumberAssignment_1_2_2_2_1 = (Assignment)cGroup_1_2_2_2.eContents().get(1);
+		private final RuleCall cStreetAndNumberIDTerminalRuleCall_1_2_2_2_1_0 = (RuleCall)cStreetAndNumberAssignment_1_2_2_2_1.eContents().get(0);
+		
+		//Street: // C059
+		//    streetAndNumber+=ID // 3042
+		//    (
+		//        COLON
+		//        streetAndNumber+=ID // 3042
+		//        (
+		//            COLON
+		//            streetAndNumber+=ID // 3042
+		//            (
+		//                COLON
+		//                streetAndNumber+=ID // 3042
+		//                (
+		//                    COLON
+		//                    streetAndNumber+=ID // 3042
+		//                )?
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C059
+		//   streetAndNumber+=ID // 3042
+		//   (
+		//       COLON
+		//       streetAndNumber+=ID // 3042
+		//       (
+		//           COLON
+		//           streetAndNumber+=ID // 3042
+		//           (
+		//               COLON
+		//               streetAndNumber+=ID // 3042
+		//               (
+		//                   COLON
+		//                   streetAndNumber+=ID // 3042
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C059
+		//   streetAndNumber+=ID
+		public Assignment getStreetAndNumberAssignment_0() { return cStreetAndNumberAssignment_0; }
+		
+		//ID
+		public RuleCall getStreetAndNumberIDTerminalRuleCall_0_0() { return cStreetAndNumberIDTerminalRuleCall_0_0; }
+		
+		//// 3042
+		//   (
+		//       COLON
+		//       streetAndNumber+=ID // 3042
+		//       (
+		//           COLON
+		//           streetAndNumber+=ID // 3042
+		//           (
+		//               COLON
+		//               streetAndNumber+=ID // 3042
+		//               (
+		//                   COLON
+		//                   streetAndNumber+=ID // 3042
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//streetAndNumber+=ID
+		public Assignment getStreetAndNumberAssignment_1_1() { return cStreetAndNumberAssignment_1_1; }
+		
+		//ID
+		public RuleCall getStreetAndNumberIDTerminalRuleCall_1_1_0() { return cStreetAndNumberIDTerminalRuleCall_1_1_0; }
+		
+		//// 3042
+		//       (
+		//           COLON
+		//           streetAndNumber+=ID // 3042
+		//           (
+		//               COLON
+		//               streetAndNumber+=ID // 3042
+		//               (
+		//                   COLON
+		//                   streetAndNumber+=ID // 3042
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//streetAndNumber+=ID
+		public Assignment getStreetAndNumberAssignment_1_2_1() { return cStreetAndNumberAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getStreetAndNumberIDTerminalRuleCall_1_2_1_0() { return cStreetAndNumberIDTerminalRuleCall_1_2_1_0; }
+		
+		//// 3042
+		//           (
+		//               COLON
+		//               streetAndNumber+=ID // 3042
+		//               (
+		//                   COLON
+		//                   streetAndNumber+=ID // 3042
+		//               )?
+		//           )?
+		public Group getGroup_1_2_2() { return cGroup_1_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_0; }
+		
+		//streetAndNumber+=ID
+		public Assignment getStreetAndNumberAssignment_1_2_2_1() { return cStreetAndNumberAssignment_1_2_2_1; }
+		
+		//ID
+		public RuleCall getStreetAndNumberIDTerminalRuleCall_1_2_2_1_0() { return cStreetAndNumberIDTerminalRuleCall_1_2_2_1_0; }
+		
+		//// 3042
+		//               (
+		//                   COLON
+		//                   streetAndNumber+=ID // 3042
+		//               )?
+		public Group getGroup_1_2_2_2() { return cGroup_1_2_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_2_0; }
+		
+		//streetAndNumber+=ID
+		public Assignment getStreetAndNumberAssignment_1_2_2_2_1() { return cStreetAndNumberAssignment_1_2_2_2_1; }
+		
+		//ID
+		public RuleCall getStreetAndNumberIDTerminalRuleCall_1_2_2_2_1_0() { return cStreetAndNumberIDTerminalRuleCall_1_2_2_2_1_0; }
+	}
+	public class CountrySubEntityDetailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CountrySubEntityDetail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cCountrySubEntityNameCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cCountrySubEntityNameCodeIDTerminalRuleCall_0_0 = (RuleCall)cCountrySubEntityNameCodeAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cCodeListIdentificationCodeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0 = (RuleCall)cCodeListIdentificationCodeAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCodeAssignment_1_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2 = (Group)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_0 = (RuleCall)cGroup_1_2_2.eContents().get(0);
+		private final Assignment cCountrySubEntityNameAssignment_1_2_2_1 = (Assignment)cGroup_1_2_2.eContents().get(1);
+		private final RuleCall cCountrySubEntityNameIDTerminalRuleCall_1_2_2_1_0 = (RuleCall)cCountrySubEntityNameAssignment_1_2_2_1.eContents().get(0);
+		
+		//CountrySubEntityDetail: // C819
+		//    countrySubEntityNameCode+=ID // 3229
+		//    (
+		//        COLON
+		//        codeListIdentificationCode+=ID // 1131
+		//        (
+		//            COLON
+		//            codeListResponsibleAgencyCode+=ID // 3055
+		//            (
+		//                COLON
+		//                countrySubEntityName+=ID // 3228
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C819
+		//   countrySubEntityNameCode+=ID // 3229
+		//   (
+		//       COLON
+		//       codeListIdentificationCode+=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode+=ID // 3055
+		//           (
+		//               COLON
+		//               countrySubEntityName+=ID // 3228
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C819
+		//   countrySubEntityNameCode+=ID
+		public Assignment getCountrySubEntityNameCodeAssignment_0() { return cCountrySubEntityNameCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getCountrySubEntityNameCodeIDTerminalRuleCall_0_0() { return cCountrySubEntityNameCodeIDTerminalRuleCall_0_0; }
+		
+		//// 3229
+		//   (
+		//       COLON
+		//       codeListIdentificationCode+=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode+=ID // 3055
+		//           (
+		//               COLON
+		//               countrySubEntityName+=ID // 3228
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//codeListIdentificationCode+=ID
+		public Assignment getCodeListIdentificationCodeAssignment_1_1() { return cCodeListIdentificationCodeAssignment_1_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0; }
+		
+		//// 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode+=ID // 3055
+		//           (
+		//               COLON
+		//               countrySubEntityName+=ID // 3228
+		//           )?
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//codeListResponsibleAgencyCode+=ID
+		public Assignment getCodeListResponsibleAgencyCodeAssignment_1_2_1() { return cCodeListResponsibleAgencyCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0() { return cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0; }
+		
+		//// 3055
+		//           (
+		//               COLON
+		//               countrySubEntityName+=ID // 3228
+		//           )?
+		public Group getGroup_1_2_2() { return cGroup_1_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_0; }
+		
+		//countrySubEntityName+=ID
+		public Assignment getCountrySubEntityNameAssignment_1_2_2_1() { return cCountrySubEntityNameAssignment_1_2_2_1; }
+		
+		//ID
+		public RuleCall getCountrySubEntityNameIDTerminalRuleCall_1_2_2_1_0() { return cCountrySubEntityNameIDTerminalRuleCall_1_2_2_1_0; }
+	}
+	public class PartyNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PartyName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cPartyNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPartyNameIDTerminalRuleCall_0_0 = (RuleCall)cPartyNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cPartyNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cPartyNameIDTerminalRuleCall_1_1_0 = (RuleCall)cPartyNameAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cPartyNameAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cPartyNameIDTerminalRuleCall_1_2_1_0 = (RuleCall)cPartyNameAssignment_1_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2 = (Group)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_0 = (RuleCall)cGroup_1_2_2.eContents().get(0);
+		private final Assignment cPartyNameAssignment_1_2_2_1 = (Assignment)cGroup_1_2_2.eContents().get(1);
+		private final RuleCall cPartyNameIDTerminalRuleCall_1_2_2_1_0 = (RuleCall)cPartyNameAssignment_1_2_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2_2 = (Group)cGroup_1_2_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_2_0 = (RuleCall)cGroup_1_2_2_2.eContents().get(0);
+		private final Assignment cPartyNameAssignment_1_2_2_2_1 = (Assignment)cGroup_1_2_2_2.eContents().get(1);
+		private final RuleCall cPartyNameIDTerminalRuleCall_1_2_2_2_1_0 = (RuleCall)cPartyNameAssignment_1_2_2_2_1.eContents().get(0);
+		
+		//PartyName: // C080
+		//    partyName+=ID // 3036
+		//    (
+		//        COLON
+		//        partyName+=ID // 3036
+		//        (
+		//            COLON
+		//            partyName+=ID // 3036
+		//            (
+		//                COLON
+		//                partyName+=ID // 3036
+		//                (
+		//                    COLON
+		//                    partyName+=ID // 3036
+		//                )?
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C080
+		//   partyName+=ID // 3036
+		//   (
+		//       COLON
+		//       partyName+=ID // 3036
+		//       (
+		//           COLON
+		//           partyName+=ID // 3036
+		//           (
+		//               COLON
+		//               partyName+=ID // 3036
+		//               (
+		//                   COLON
+		//                   partyName+=ID // 3036
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C080
+		//   partyName+=ID
+		public Assignment getPartyNameAssignment_0() { return cPartyNameAssignment_0; }
+		
+		//ID
+		public RuleCall getPartyNameIDTerminalRuleCall_0_0() { return cPartyNameIDTerminalRuleCall_0_0; }
+		
+		//// 3036
+		//   (
+		//       COLON
+		//       partyName+=ID // 3036
+		//       (
+		//           COLON
+		//           partyName+=ID // 3036
+		//           (
+		//               COLON
+		//               partyName+=ID // 3036
+		//               (
+		//                   COLON
+		//                   partyName+=ID // 3036
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//partyName+=ID
+		public Assignment getPartyNameAssignment_1_1() { return cPartyNameAssignment_1_1; }
+		
+		//ID
+		public RuleCall getPartyNameIDTerminalRuleCall_1_1_0() { return cPartyNameIDTerminalRuleCall_1_1_0; }
+		
+		//// 3036
+		//       (
+		//           COLON
+		//           partyName+=ID // 3036
+		//           (
+		//               COLON
+		//               partyName+=ID // 3036
+		//               (
+		//                   COLON
+		//                   partyName+=ID // 3036
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//partyName+=ID
+		public Assignment getPartyNameAssignment_1_2_1() { return cPartyNameAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getPartyNameIDTerminalRuleCall_1_2_1_0() { return cPartyNameIDTerminalRuleCall_1_2_1_0; }
+		
+		//// 3036
+		//           (
+		//               COLON
+		//               partyName+=ID // 3036
+		//               (
+		//                   COLON
+		//                   partyName+=ID // 3036
+		//               )?
+		//           )?
+		public Group getGroup_1_2_2() { return cGroup_1_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_0; }
+		
+		//partyName+=ID
+		public Assignment getPartyNameAssignment_1_2_2_1() { return cPartyNameAssignment_1_2_2_1; }
+		
+		//ID
+		public RuleCall getPartyNameIDTerminalRuleCall_1_2_2_1_0() { return cPartyNameIDTerminalRuleCall_1_2_2_1_0; }
+		
+		//// 3036
+		//               (
+		//                   COLON
+		//                   partyName+=ID // 3036
+		//               )?
+		public Group getGroup_1_2_2_2() { return cGroup_1_2_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_2_0; }
+		
+		//partyName+=ID
+		public Assignment getPartyNameAssignment_1_2_2_2_1() { return cPartyNameAssignment_1_2_2_2_1; }
+		
+		//ID
+		public RuleCall getPartyNameIDTerminalRuleCall_1_2_2_2_1_0() { return cPartyNameIDTerminalRuleCall_1_2_2_2_1_0; }
+	}
+	public class NameAndAddressElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.NameAndAddress");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAndAddressAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameAndAddressIDTerminalRuleCall_0_0 = (RuleCall)cNameAndAddressAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cNameAndAddressAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNameAndAddressIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAndAddressAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cNameAndAddressAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cNameAndAddressIDTerminalRuleCall_1_2_1_0 = (RuleCall)cNameAndAddressAssignment_1_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2 = (Group)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_0 = (RuleCall)cGroup_1_2_2.eContents().get(0);
+		private final Assignment cNameAndAddressAssignment_1_2_2_1 = (Assignment)cGroup_1_2_2.eContents().get(1);
+		private final RuleCall cNameAndAddressIDTerminalRuleCall_1_2_2_1_0 = (RuleCall)cNameAndAddressAssignment_1_2_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2_2 = (Group)cGroup_1_2_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_2_0 = (RuleCall)cGroup_1_2_2_2.eContents().get(0);
+		private final Assignment cNameAndAddressAssignment_1_2_2_2_1 = (Assignment)cGroup_1_2_2_2.eContents().get(1);
+		private final RuleCall cNameAndAddressIDTerminalRuleCall_1_2_2_2_1_0 = (RuleCall)cNameAndAddressAssignment_1_2_2_2_1.eContents().get(0);
+		
+		//NameAndAddress: // C058
+		//    nameAndAddress+=ID // 3124
+		//    (
+		//        COLON
+		//        nameAndAddress+=ID // 3124
+		//        (
+		//            COLON
+		//            nameAndAddress+=ID // 3124
+		//            (
+		//                COLON
+		//                nameAndAddress+=ID // 3124
+		//                (
+		//                    COLON
+		//                    nameAndAddress+=ID // 3124
+		//                )?
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C058
+		//   nameAndAddress+=ID // 3124
+		//   (
+		//       COLON
+		//       nameAndAddress+=ID // 3124
+		//       (
+		//           COLON
+		//           nameAndAddress+=ID // 3124
+		//           (
+		//               COLON
+		//               nameAndAddress+=ID // 3124
+		//               (
+		//                   COLON
+		//                   nameAndAddress+=ID // 3124
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C058
+		//   nameAndAddress+=ID
+		public Assignment getNameAndAddressAssignment_0() { return cNameAndAddressAssignment_0; }
+		
+		//ID
+		public RuleCall getNameAndAddressIDTerminalRuleCall_0_0() { return cNameAndAddressIDTerminalRuleCall_0_0; }
+		
+		//// 3124
+		//   (
+		//       COLON
+		//       nameAndAddress+=ID // 3124
+		//       (
+		//           COLON
+		//           nameAndAddress+=ID // 3124
+		//           (
+		//               COLON
+		//               nameAndAddress+=ID // 3124
+		//               (
+		//                   COLON
+		//                   nameAndAddress+=ID // 3124
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//nameAndAddress+=ID
+		public Assignment getNameAndAddressAssignment_1_1() { return cNameAndAddressAssignment_1_1; }
+		
+		//ID
+		public RuleCall getNameAndAddressIDTerminalRuleCall_1_1_0() { return cNameAndAddressIDTerminalRuleCall_1_1_0; }
+		
+		//// 3124
+		//       (
+		//           COLON
+		//           nameAndAddress+=ID // 3124
+		//           (
+		//               COLON
+		//               nameAndAddress+=ID // 3124
+		//               (
+		//                   COLON
+		//                   nameAndAddress+=ID // 3124
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//nameAndAddress+=ID
+		public Assignment getNameAndAddressAssignment_1_2_1() { return cNameAndAddressAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getNameAndAddressIDTerminalRuleCall_1_2_1_0() { return cNameAndAddressIDTerminalRuleCall_1_2_1_0; }
+		
+		//// 3124
+		//           (
+		//               COLON
+		//               nameAndAddress+=ID // 3124
+		//               (
+		//                   COLON
+		//                   nameAndAddress+=ID // 3124
+		//               )?
+		//           )?
+		public Group getGroup_1_2_2() { return cGroup_1_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_0; }
+		
+		//nameAndAddress+=ID
+		public Assignment getNameAndAddressAssignment_1_2_2_1() { return cNameAndAddressAssignment_1_2_2_1; }
+		
+		//ID
+		public RuleCall getNameAndAddressIDTerminalRuleCall_1_2_2_1_0() { return cNameAndAddressIDTerminalRuleCall_1_2_2_1_0; }
+		
+		//// 3124
+		//               (
+		//                   COLON
+		//                   nameAndAddress+=ID // 3124
+		//               )?
+		public Group getGroup_1_2_2_2() { return cGroup_1_2_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_2_0; }
+		
+		//nameAndAddress+=ID
+		public Assignment getNameAndAddressAssignment_1_2_2_2_1() { return cNameAndAddressAssignment_1_2_2_2_1; }
+		
+		//ID
+		public RuleCall getNameAndAddressIDTerminalRuleCall_1_2_2_2_1_0() { return cNameAndAddressIDTerminalRuleCall_1_2_2_2_1_0; }
+	}
+	public class PartyIdentificationDetailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PartyIdentificationDetail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cPartyIdentifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPartyIdentifierIDTerminalRuleCall_0_0 = (RuleCall)cPartyIdentifierAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cCodeListIdentificationCodeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0 = (RuleCall)cCodeListIdentificationCodeAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCodeAssignment_1_2_1.eContents().get(0);
+		
+		//PartyIdentificationDetail:
+		//    partyIdentifier=ID // 3039
+		//    (
+		//        COLON
+		//        ( codeListIdentificationCode=ID )? // 1331
+		//        (
+		//            COLON
+		//            codeListResponsibleAgencyCode=ID // 3055
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//partyIdentifier=ID // 3039
+		//(
+		//    COLON
+		//    ( codeListIdentificationCode=ID )? // 1331
+		//    (
+		//        COLON
+		//        codeListResponsibleAgencyCode=ID // 3055
+		//    )?
+		//)?
+		public Group getGroup() { return cGroup; }
+		
+		//partyIdentifier=ID
+		public Assignment getPartyIdentifierAssignment_0() { return cPartyIdentifierAssignment_0; }
+		
+		//ID
+		public RuleCall getPartyIdentifierIDTerminalRuleCall_0_0() { return cPartyIdentifierIDTerminalRuleCall_0_0; }
+		
+		//// 3039
+		//   (
+		//       COLON
+		//       ( codeListIdentificationCode=ID )? // 1331
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//( codeListIdentificationCode=ID )?
+		public Assignment getCodeListIdentificationCodeAssignment_1_1() { return cCodeListIdentificationCodeAssignment_1_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0; }
+		
+		//// 1331
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//codeListResponsibleAgencyCode=ID
+		public Assignment getCodeListResponsibleAgencyCodeAssignment_1_2_1() { return cCodeListResponsibleAgencyCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0() { return cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0; }
+	}
+	public class ApplicationErrorDetailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ApplicationErrorDetail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cApplictionErrorCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cApplictionErrorCodeIDTerminalRuleCall_0_0 = (RuleCall)cApplictionErrorCodeAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cCodeListIdentificationCodeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0 = (RuleCall)cCodeListIdentificationCodeAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCodeAssignment_1_2_1.eContents().get(0);
+		
+		//ApplicationErrorDetail: // C901
+		//    applictionErrorCode=ID // 9321
+		//    (
+		//        COLON
+		//        codeListIdentificationCode=ID // 1331
+		//        (
+		//            COLON
+		//            codeListResponsibleAgencyCode=ID // 3055
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C901
+		//   applictionErrorCode=ID // 9321
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1331
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C901
+		//   applictionErrorCode=ID
+		public Assignment getApplictionErrorCodeAssignment_0() { return cApplictionErrorCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getApplictionErrorCodeIDTerminalRuleCall_0_0() { return cApplictionErrorCodeIDTerminalRuleCall_0_0; }
+		
+		//// 9321
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1331
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//codeListIdentificationCode=ID
+		public Assignment getCodeListIdentificationCodeAssignment_1_1() { return cCodeListIdentificationCodeAssignment_1_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0; }
+		
+		//// 1331
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//codeListResponsibleAgencyCode=ID
+		public Assignment getCodeListResponsibleAgencyCodeAssignment_1_2_1() { return cCodeListResponsibleAgencyCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0() { return cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0; }
 	}
 	public class SystemDetailFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SystemDetailFunction");
@@ -4135,6 +6124,716 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//ID
 		public RuleCall getLocationNameIDTerminalRuleCall_1_2_1_0() { return cLocationNameIDTerminalRuleCall_1_2_1_0; }
+	}
+	public class TaxDetailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TaxDetail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cTaxRateDescriptionCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cTaxRateDescriptionCodeIDTerminalRuleCall_0_0 = (RuleCall)cTaxRateDescriptionCodeAssignment_0.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cCodeListIdentificationCode1Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCodeListIdentificationCode1IDTerminalRuleCall_2_0 = (RuleCall)cCodeListIdentificationCode1Assignment_2.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cCodeListResponsibleAgencyCode1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCodeListResponsibleAgencyCode1IDTerminalRuleCall_4_0 = (RuleCall)cCodeListResponsibleAgencyCode1Assignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final RuleCall cCOLONTerminalRuleCall_5_0 = (RuleCall)cGroup_5.eContents().get(0);
+		private final Assignment cTaxRateDescriptionAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cTaxRateDescriptionIDTerminalRuleCall_5_1_0 = (RuleCall)cTaxRateDescriptionAssignment_5_1.eContents().get(0);
+		private final Group cGroup_5_2 = (Group)cGroup_5.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_5_2_0 = (RuleCall)cGroup_5_2.eContents().get(0);
+		private final Assignment cTaxRateBasisCodeAssignment_5_2_1 = (Assignment)cGroup_5_2.eContents().get(1);
+		private final RuleCall cTaxRateBasisCodeIDTerminalRuleCall_5_2_1_0 = (RuleCall)cTaxRateBasisCodeAssignment_5_2_1.eContents().get(0);
+		private final Group cGroup_5_2_2 = (Group)cGroup_5_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_5_2_2_0 = (RuleCall)cGroup_5_2_2.eContents().get(0);
+		private final Assignment cCodeListIdentificationCode2Assignment_5_2_2_1 = (Assignment)cGroup_5_2_2.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCode2IDTerminalRuleCall_5_2_2_1_0 = (RuleCall)cCodeListIdentificationCode2Assignment_5_2_2_1.eContents().get(0);
+		private final Group cGroup_5_2_2_2 = (Group)cGroup_5_2_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_5_2_2_2_0 = (RuleCall)cGroup_5_2_2_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCode2Assignment_5_2_2_2_1 = (Assignment)cGroup_5_2_2_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCode2IDTerminalRuleCall_5_2_2_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCode2Assignment_5_2_2_2_1.eContents().get(0);
+		
+		//TaxDetail: // C243
+		//    ( taxRateDescriptionCode=ID )? // 5279
+		//    COLON
+		//    ( codeListIdentificationCode1=ID )? // 1131
+		//    COLON
+		//    ( codeListResponsibleAgencyCode1=ID )? // 3055
+		//    (
+		//        COLON
+		//        taxRateDescription=ID // 5278
+		//        (
+		//            COLON
+		//            taxRateBasisCode=ID // 5273
+		//            (
+		//                COLON
+		//                codeListIdentificationCode2=ID // 1131
+		//                (
+		//                    COLON
+		//                    codeListResponsibleAgencyCode2=ID // 3055
+		//                )?
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C243
+		//   ( taxRateDescriptionCode=ID )? // 5279
+		//   COLON
+		//   ( codeListIdentificationCode1=ID )? // 1131
+		//   COLON
+		//   ( codeListResponsibleAgencyCode1=ID )? // 3055
+		//   (
+		//       COLON
+		//       taxRateDescription=ID // 5278
+		//       (
+		//           COLON
+		//           taxRateBasisCode=ID // 5273
+		//           (
+		//               COLON
+		//               codeListIdentificationCode2=ID // 1131
+		//               (
+		//                   COLON
+		//                   codeListResponsibleAgencyCode2=ID // 3055
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C243
+		//   ( taxRateDescriptionCode=ID )?
+		public Assignment getTaxRateDescriptionCodeAssignment_0() { return cTaxRateDescriptionCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getTaxRateDescriptionCodeIDTerminalRuleCall_0_0() { return cTaxRateDescriptionCodeIDTerminalRuleCall_0_0; }
+		
+		//// 5279
+		//   COLON
+		public RuleCall getCOLONTerminalRuleCall_1() { return cCOLONTerminalRuleCall_1; }
+		
+		//( codeListIdentificationCode1=ID )?
+		public Assignment getCodeListIdentificationCode1Assignment_2() { return cCodeListIdentificationCode1Assignment_2; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCode1IDTerminalRuleCall_2_0() { return cCodeListIdentificationCode1IDTerminalRuleCall_2_0; }
+		
+		//// 1131
+		//   COLON
+		public RuleCall getCOLONTerminalRuleCall_3() { return cCOLONTerminalRuleCall_3; }
+		
+		//( codeListResponsibleAgencyCode1=ID )?
+		public Assignment getCodeListResponsibleAgencyCode1Assignment_4() { return cCodeListResponsibleAgencyCode1Assignment_4; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCode1IDTerminalRuleCall_4_0() { return cCodeListResponsibleAgencyCode1IDTerminalRuleCall_4_0; }
+		
+		//// 3055
+		//   (
+		//       COLON
+		//       taxRateDescription=ID // 5278
+		//       (
+		//           COLON
+		//           taxRateBasisCode=ID // 5273
+		//           (
+		//               COLON
+		//               codeListIdentificationCode2=ID // 1131
+		//               (
+		//                   COLON
+		//                   codeListResponsibleAgencyCode2=ID // 3055
+		//               )?
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_5_0() { return cCOLONTerminalRuleCall_5_0; }
+		
+		//taxRateDescription=ID
+		public Assignment getTaxRateDescriptionAssignment_5_1() { return cTaxRateDescriptionAssignment_5_1; }
+		
+		//ID
+		public RuleCall getTaxRateDescriptionIDTerminalRuleCall_5_1_0() { return cTaxRateDescriptionIDTerminalRuleCall_5_1_0; }
+		
+		//// 5278
+		//       (
+		//           COLON
+		//           taxRateBasisCode=ID // 5273
+		//           (
+		//               COLON
+		//               codeListIdentificationCode2=ID // 1131
+		//               (
+		//                   COLON
+		//                   codeListResponsibleAgencyCode2=ID // 3055
+		//               )?
+		//           )?
+		//       )?
+		public Group getGroup_5_2() { return cGroup_5_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_5_2_0() { return cCOLONTerminalRuleCall_5_2_0; }
+		
+		//taxRateBasisCode=ID
+		public Assignment getTaxRateBasisCodeAssignment_5_2_1() { return cTaxRateBasisCodeAssignment_5_2_1; }
+		
+		//ID
+		public RuleCall getTaxRateBasisCodeIDTerminalRuleCall_5_2_1_0() { return cTaxRateBasisCodeIDTerminalRuleCall_5_2_1_0; }
+		
+		//// 5273
+		//           (
+		//               COLON
+		//               codeListIdentificationCode2=ID // 1131
+		//               (
+		//                   COLON
+		//                   codeListResponsibleAgencyCode2=ID // 3055
+		//               )?
+		//           )?
+		public Group getGroup_5_2_2() { return cGroup_5_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_5_2_2_0() { return cCOLONTerminalRuleCall_5_2_2_0; }
+		
+		//codeListIdentificationCode2=ID
+		public Assignment getCodeListIdentificationCode2Assignment_5_2_2_1() { return cCodeListIdentificationCode2Assignment_5_2_2_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCode2IDTerminalRuleCall_5_2_2_1_0() { return cCodeListIdentificationCode2IDTerminalRuleCall_5_2_2_1_0; }
+		
+		//// 1131
+		//               (
+		//                   COLON
+		//                   codeListResponsibleAgencyCode2=ID // 3055
+		//               )?
+		public Group getGroup_5_2_2_2() { return cGroup_5_2_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_5_2_2_2_0() { return cCOLONTerminalRuleCall_5_2_2_2_0; }
+		
+		//codeListResponsibleAgencyCode2=ID
+		public Assignment getCodeListResponsibleAgencyCode2Assignment_5_2_2_2_1() { return cCodeListResponsibleAgencyCode2Assignment_5_2_2_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCode2IDTerminalRuleCall_5_2_2_2_1_0() { return cCodeListResponsibleAgencyCode2IDTerminalRuleCall_5_2_2_2_1_0; }
+	}
+	public class TaxAccountDetailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TaxAccountDetail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cTaxAccountCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cTaxAccountCodeIDTerminalRuleCall_0_0 = (RuleCall)cTaxAccountCodeAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cCodeListIdentificationCodeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0 = (RuleCall)cCodeListIdentificationCodeAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCodeAssignment_1_2_1.eContents().get(0);
+		
+		//TaxAccountDetail: // C533
+		//    taxAccountCode=ID // 5289
+		//    (
+		//        COLON
+		//        codeListIdentificationCode=ID // 1131
+		//        (
+		//            COLON
+		//            codeListResponsibleAgencyCode=ID // 3055
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C533
+		//   taxAccountCode=ID // 5289
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C533
+		//   taxAccountCode=ID
+		public Assignment getTaxAccountCodeAssignment_0() { return cTaxAccountCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getTaxAccountCodeIDTerminalRuleCall_0_0() { return cTaxAccountCodeIDTerminalRuleCall_0_0; }
+		
+		//// 5289
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//codeListIdentificationCode=ID
+		public Assignment getCodeListIdentificationCodeAssignment_1_1() { return cCodeListIdentificationCodeAssignment_1_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0; }
+		
+		//// 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//codeListResponsibleAgencyCode=ID
+		public Assignment getCodeListResponsibleAgencyCodeAssignment_1_2_1() { return cCodeListResponsibleAgencyCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0() { return cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0; }
+	}
+	public class TaxTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TaxType");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cTaxTypeNameCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cTaxTypeNameCodeIDTerminalRuleCall_0_0 = (RuleCall)cTaxTypeNameCodeAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cCodeListIdentificationCodeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0 = (RuleCall)cCodeListIdentificationCodeAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCodeAssignment_1_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2 = (Group)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_0 = (RuleCall)cGroup_1_2_2.eContents().get(0);
+		private final Assignment cTaxTypeNameAssignment_1_2_2_1 = (Assignment)cGroup_1_2_2.eContents().get(1);
+		private final RuleCall cTaxTypeNameIDTerminalRuleCall_1_2_2_1_0 = (RuleCall)cTaxTypeNameAssignment_1_2_2_1.eContents().get(0);
+		
+		//TaxType: // C241
+		//    taxTypeNameCode=ID // 5153
+		//    (
+		//        COLON
+		//        codeListIdentificationCode=ID // 1131
+		//        (
+		//            COLON
+		//            codeListResponsibleAgencyCode=ID // 3055
+		//            (
+		//                COLON
+		//                taxTypeName=ID // 5152
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C241
+		//   taxTypeNameCode=ID // 5153
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//           (
+		//               COLON
+		//               taxTypeName=ID // 5152
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C241
+		//   taxTypeNameCode=ID
+		public Assignment getTaxTypeNameCodeAssignment_0() { return cTaxTypeNameCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getTaxTypeNameCodeIDTerminalRuleCall_0_0() { return cTaxTypeNameCodeIDTerminalRuleCall_0_0; }
+		
+		//// 5153
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//           (
+		//               COLON
+		//               taxTypeName=ID // 5152
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//codeListIdentificationCode=ID
+		public Assignment getCodeListIdentificationCodeAssignment_1_1() { return cCodeListIdentificationCodeAssignment_1_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0; }
+		
+		//// 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//           (
+		//               COLON
+		//               taxTypeName=ID // 5152
+		//           )?
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//codeListResponsibleAgencyCode=ID
+		public Assignment getCodeListResponsibleAgencyCodeAssignment_1_2_1() { return cCodeListResponsibleAgencyCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0() { return cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0; }
+		
+		//// 3055
+		//           (
+		//               COLON
+		//               taxTypeName=ID // 5152
+		//           )?
+		public Group getGroup_1_2_2() { return cGroup_1_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_0; }
+		
+		//taxTypeName=ID
+		public Assignment getTaxTypeNameAssignment_1_2_2_1() { return cTaxTypeNameAssignment_1_2_2_1; }
+		
+		//ID
+		public RuleCall getTaxTypeNameIDTerminalRuleCall_1_2_2_1_0() { return cTaxTypeNameIDTerminalRuleCall_1_2_2_1_0; }
+	}
+	public class CurrencyDetailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CurrencyDetail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cCurrencyUsageCodeQualifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cCurrencyUsageCodeQualifierIDTerminalRuleCall_0_0 = (RuleCall)cCurrencyUsageCodeQualifierAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cCurrencyIdentificationCodeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCurrencyIdentificationCodeIDTerminalRuleCall_1_1_0 = (RuleCall)cCurrencyIdentificationCodeAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cCurrencyTypeCodeQualifierAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cCurrencyTypeCodeQualifierIDTerminalRuleCall_1_2_1_0 = (RuleCall)cCurrencyTypeCodeQualifierAssignment_1_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2 = (Group)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_0 = (RuleCall)cGroup_1_2_2.eContents().get(0);
+		private final Assignment cCurrencyRateValueAssignment_1_2_2_1 = (Assignment)cGroup_1_2_2.eContents().get(1);
+		private final RuleCall cCurrencyRateValueIDTerminalRuleCall_1_2_2_1_0 = (RuleCall)cCurrencyRateValueAssignment_1_2_2_1.eContents().get(0);
+		
+		//CurrencyDetail: // C504
+		//    currencyUsageCodeQualifier=ID // 6347
+		//    (
+		//        COLON
+		//        currencyIdentificationCode=ID // 6345
+		//        (
+		//            COLON
+		//            currencyTypeCodeQualifier=ID // 6343
+		//            (
+		//                COLON
+		//                currencyRateValue=ID // 6348
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C504
+		//   currencyUsageCodeQualifier=ID // 6347
+		//   (
+		//       COLON
+		//       currencyIdentificationCode=ID // 6345
+		//       (
+		//           COLON
+		//           currencyTypeCodeQualifier=ID // 6343
+		//           (
+		//               COLON
+		//               currencyRateValue=ID // 6348
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C504
+		//   currencyUsageCodeQualifier=ID
+		public Assignment getCurrencyUsageCodeQualifierAssignment_0() { return cCurrencyUsageCodeQualifierAssignment_0; }
+		
+		//ID
+		public RuleCall getCurrencyUsageCodeQualifierIDTerminalRuleCall_0_0() { return cCurrencyUsageCodeQualifierIDTerminalRuleCall_0_0; }
+		
+		//// 6347
+		//   (
+		//       COLON
+		//       currencyIdentificationCode=ID // 6345
+		//       (
+		//           COLON
+		//           currencyTypeCodeQualifier=ID // 6343
+		//           (
+		//               COLON
+		//               currencyRateValue=ID // 6348
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//currencyIdentificationCode=ID
+		public Assignment getCurrencyIdentificationCodeAssignment_1_1() { return cCurrencyIdentificationCodeAssignment_1_1; }
+		
+		//ID
+		public RuleCall getCurrencyIdentificationCodeIDTerminalRuleCall_1_1_0() { return cCurrencyIdentificationCodeIDTerminalRuleCall_1_1_0; }
+		
+		//// 6345
+		//       (
+		//           COLON
+		//           currencyTypeCodeQualifier=ID // 6343
+		//           (
+		//               COLON
+		//               currencyRateValue=ID // 6348
+		//           )?
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//currencyTypeCodeQualifier=ID
+		public Assignment getCurrencyTypeCodeQualifierAssignment_1_2_1() { return cCurrencyTypeCodeQualifierAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getCurrencyTypeCodeQualifierIDTerminalRuleCall_1_2_1_0() { return cCurrencyTypeCodeQualifierIDTerminalRuleCall_1_2_1_0; }
+		
+		//// 6343
+		//           (
+		//               COLON
+		//               currencyRateValue=ID // 6348
+		//           )?
+		public Group getGroup_1_2_2() { return cGroup_1_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_0; }
+		
+		//currencyRateValue=ID
+		public Assignment getCurrencyRateValueAssignment_1_2_2_1() { return cCurrencyRateValueAssignment_1_2_2_1; }
+		
+		//ID
+		public RuleCall getCurrencyRateValueIDTerminalRuleCall_1_2_2_1_0() { return cCurrencyRateValueIDTerminalRuleCall_1_2_2_1_0; }
+	}
+	public class DocumentMessageIdentificationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DocumentMessageIdentification");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cDocumentIdentifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cDocumentIdentifierIDTerminalRuleCall_0_0 = (RuleCall)cDocumentIdentifierAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cVersionIdentifierAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cVersionIdentifierIDTerminalRuleCall_1_1_0 = (RuleCall)cVersionIdentifierAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cRevisionIdentifierAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cRevisionIdentifierIDTerminalRuleCall_1_2_1_0 = (RuleCall)cRevisionIdentifierAssignment_1_2_1.eContents().get(0);
+		
+		//DocumentMessageIdentification: // C106
+		//    documentIdentifier=ID // 1004
+		//    (
+		//        COLON
+		//        versionIdentifier=ID // 1056
+		//        (
+		//            COLON
+		//            revisionIdentifier=ID // 1060
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C106
+		//   documentIdentifier=ID // 1004
+		//   (
+		//       COLON
+		//       versionIdentifier=ID // 1056
+		//       (
+		//           COLON
+		//           revisionIdentifier=ID // 1060
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C106
+		//   documentIdentifier=ID
+		public Assignment getDocumentIdentifierAssignment_0() { return cDocumentIdentifierAssignment_0; }
+		
+		//ID
+		public RuleCall getDocumentIdentifierIDTerminalRuleCall_0_0() { return cDocumentIdentifierIDTerminalRuleCall_0_0; }
+		
+		//// 1004
+		//   (
+		//       COLON
+		//       versionIdentifier=ID // 1056
+		//       (
+		//           COLON
+		//           revisionIdentifier=ID // 1060
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//versionIdentifier=ID
+		public Assignment getVersionIdentifierAssignment_1_1() { return cVersionIdentifierAssignment_1_1; }
+		
+		//ID
+		public RuleCall getVersionIdentifierIDTerminalRuleCall_1_1_0() { return cVersionIdentifierIDTerminalRuleCall_1_1_0; }
+		
+		//// 1056
+		//       (
+		//           COLON
+		//           revisionIdentifier=ID // 1060
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//revisionIdentifier=ID
+		public Assignment getRevisionIdentifierAssignment_1_2_1() { return cRevisionIdentifierAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getRevisionIdentifierIDTerminalRuleCall_1_2_1_0() { return cRevisionIdentifierIDTerminalRuleCall_1_2_1_0; }
+	}
+	public class DocumentMessageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DocumentMessage");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cDocumentNameCodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cDocumentNameCodeIDTerminalRuleCall_0_0 = (RuleCall)cDocumentNameCodeAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cCodeListIdentificationCodeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0 = (RuleCall)cCodeListIdentificationCodeAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cCodeListResponsibleAgencyCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cCodeListResponsibleAgencyCodeAssignment_1_2_1.eContents().get(0);
+		private final Group cGroup_1_2_2 = (Group)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_2_0 = (RuleCall)cGroup_1_2_2.eContents().get(0);
+		private final Assignment cDocumentNameAssignment_1_2_2_1 = (Assignment)cGroup_1_2_2.eContents().get(1);
+		private final RuleCall cDocumentNameIDTerminalRuleCall_1_2_2_1_0 = (RuleCall)cDocumentNameAssignment_1_2_2_1.eContents().get(0);
+		
+		//DocumentMessage: // C002
+		//    documentNameCode=ID // 1001
+		//    (
+		//        COLON
+		//        codeListIdentificationCode=ID // 1131
+		//        (
+		//            COLON
+		//            codeListResponsibleAgencyCode=ID // 3055
+		//            (
+		//                COLON
+		//                documentName=ID // 1000
+		//            )?
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//// C002
+		//   documentNameCode=ID // 1001
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//           (
+		//               COLON
+		//               documentName=ID // 1000
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup() { return cGroup; }
+		
+		//// C002
+		//   documentNameCode=ID
+		public Assignment getDocumentNameCodeAssignment_0() { return cDocumentNameCodeAssignment_0; }
+		
+		//ID
+		public RuleCall getDocumentNameCodeIDTerminalRuleCall_0_0() { return cDocumentNameCodeIDTerminalRuleCall_0_0; }
+		
+		//// 1001
+		//   (
+		//       COLON
+		//       codeListIdentificationCode=ID // 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//           (
+		//               COLON
+		//               documentName=ID // 1000
+		//           )?
+		//       )?
+		//   )?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//codeListIdentificationCode=ID
+		public Assignment getCodeListIdentificationCodeAssignment_1_1() { return cCodeListIdentificationCodeAssignment_1_1; }
+		
+		//ID
+		public RuleCall getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0() { return cCodeListIdentificationCodeIDTerminalRuleCall_1_1_0; }
+		
+		//// 1131
+		//       (
+		//           COLON
+		//           codeListResponsibleAgencyCode=ID // 3055
+		//           (
+		//               COLON
+		//               documentName=ID // 1000
+		//           )?
+		//       )?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//codeListResponsibleAgencyCode=ID
+		public Assignment getCodeListResponsibleAgencyCodeAssignment_1_2_1() { return cCodeListResponsibleAgencyCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0() { return cCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0; }
+		
+		//// 3055
+		//           (
+		//               COLON
+		//               documentName=ID // 1000
+		//           )?
+		public Group getGroup_1_2_2() { return cGroup_1_2_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_2_0() { return cCOLONTerminalRuleCall_1_2_2_0; }
+		
+		//documentName=ID
+		public Assignment getDocumentNameAssignment_1_2_2_1() { return cDocumentNameAssignment_1_2_2_1; }
+		
+		//ID
+		public RuleCall getDocumentNameIDTerminalRuleCall_1_2_2_1_0() { return cDocumentNameIDTerminalRuleCall_1_2_2_1_0; }
 	}
 	public class OriginatorFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.OriginatorFunction");
@@ -4438,6 +7137,84 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//ID
 		public RuleCall getTime4IDTerminalRuleCall_2_0() { return cTime4IDTerminalRuleCall_2_0; }
 	}
+	public class DateTimePeriodElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DateTimePeriod");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cDateTimePeriodFunctionCodeQualifierAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cDateTimePeriodFunctionCodeQualifierIDTerminalRuleCall_0_0 = (RuleCall)cDateTimePeriodFunctionCodeQualifierAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cDateTimePeriodValueAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cDateTimePeriodValueIDTerminalRuleCall_1_1_0 = (RuleCall)cDateTimePeriodValueAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final RuleCall cCOLONTerminalRuleCall_1_2_0 = (RuleCall)cGroup_1_2.eContents().get(0);
+		private final Assignment cDateTimePeriodFormatCodeAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cDateTimePeriodFormatCodeIDTerminalRuleCall_1_2_1_0 = (RuleCall)cDateTimePeriodFormatCodeAssignment_1_2_1.eContents().get(0);
+		
+		//DateTimePeriod:
+		//    dateTimePeriodFunctionCodeQualifier=ID
+		//    (
+		//        COLON
+		//        dateTimePeriodValue=ID
+		//        (
+		//            COLON
+		//            dateTimePeriodFormatCode=ID
+		//        )?
+		//    )?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//dateTimePeriodFunctionCodeQualifier=ID
+		//(
+		//    COLON
+		//    dateTimePeriodValue=ID
+		//    (
+		//        COLON
+		//        dateTimePeriodFormatCode=ID
+		//    )?
+		//)?
+		public Group getGroup() { return cGroup; }
+		
+		//dateTimePeriodFunctionCodeQualifier=ID
+		public Assignment getDateTimePeriodFunctionCodeQualifierAssignment_0() { return cDateTimePeriodFunctionCodeQualifierAssignment_0; }
+		
+		//ID
+		public RuleCall getDateTimePeriodFunctionCodeQualifierIDTerminalRuleCall_0_0() { return cDateTimePeriodFunctionCodeQualifierIDTerminalRuleCall_0_0; }
+		
+		//(
+		//    COLON
+		//    dateTimePeriodValue=ID
+		//    (
+		//        COLON
+		//        dateTimePeriodFormatCode=ID
+		//    )?
+		//)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_0() { return cCOLONTerminalRuleCall_1_0; }
+		
+		//dateTimePeriodValue=ID
+		public Assignment getDateTimePeriodValueAssignment_1_1() { return cDateTimePeriodValueAssignment_1_1; }
+		
+		//ID
+		public RuleCall getDateTimePeriodValueIDTerminalRuleCall_1_1_0() { return cDateTimePeriodValueIDTerminalRuleCall_1_1_0; }
+		
+		//(
+		//    COLON
+		//    dateTimePeriodFormatCode=ID
+		//)?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+		
+		//COLON
+		public RuleCall getCOLONTerminalRuleCall_1_2_0() { return cCOLONTerminalRuleCall_1_2_0; }
+		
+		//dateTimePeriodFormatCode=ID
+		public Assignment getDateTimePeriodFormatCodeAssignment_1_2_1() { return cDateTimePeriodFormatCodeAssignment_1_2_1; }
+		
+		//ID
+		public RuleCall getDateTimePeriodFormatCodeIDTerminalRuleCall_1_2_1_0() { return cDateTimePeriodFormatCodeIDTerminalRuleCall_1_2_1_0; }
+	}
 	
 	
 	private final EdiModelElements pEdiModel;
@@ -4473,17 +7250,35 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	private final UNTSegmentElements pUNTSegment;
 	private final UNZSegmentElements pUNZSegment;
 	private final AbstractEdiFunctionElements pAbstractEdiFunction;
-	private final PRIFunctionElements pPRIFunction;
+	private final UNBHeaderElements pUNBHeader;
+	private final PriceInformationElements pPriceInformation;
 	private final MessageBodyFunctionElements pMessageBodyFunction;
-	private final MSGFunctionElements pMSGFunction;
+	private final MessageIndentifierElements pMessageIndentifier;
+	private final RelationshipElements pRelationship;
 	private final ProductFunctionElements pProductFunction;
+	private final ItemNumberIdentificationElements pItemNumberIdentification;
+	private final SublineInformationElements pSublineInformation;
+	private final QuantityDetailElements pQuantityDetail;
+	private final StreetElements pStreet;
+	private final CountrySubEntityDetailElements pCountrySubEntityDetail;
+	private final PartyNameElements pPartyName;
+	private final NameAndAddressElements pNameAndAddress;
+	private final PartyIdentificationDetailElements pPartyIdentificationDetail;
+	private final ApplicationErrorDetailElements pApplicationErrorDetail;
 	private final SystemDetailFunctionElements pSystemDetailFunction;
+	private final TaxDetailElements pTaxDetail;
+	private final TaxAccountDetailElements pTaxAccountDetail;
+	private final TaxTypeElements pTaxType;
+	private final CurrencyDetailElements pCurrencyDetail;
+	private final DocumentMessageIdentificationElements pDocumentMessageIdentification;
+	private final DocumentMessageElements pDocumentMessage;
 	private final OriginatorFunctionElements pOriginatorFunction;
 	private final OriginatorIdentificationFunctionElements pOriginatorIdentificationFunction;
 	private final LocationFunctionElements pLocationFunction;
 	private final InterchangerFunctionElements pInterchangerFunction;
 	private final DateOnlyFunctionElements pDateOnlyFunction;
 	private final DateAndTimeFunctionElements pDateAndTimeFunction;
+	private final DateTimePeriodElements pDateTimePeriod;
 	private final TerminalRule tQUOTE_AND_NL;
 	private final TerminalRule tPLUS;
 	private final TerminalRule tCOLON;
@@ -4534,17 +7329,35 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		this.pUNTSegment = new UNTSegmentElements();
 		this.pUNZSegment = new UNZSegmentElements();
 		this.pAbstractEdiFunction = new AbstractEdiFunctionElements();
-		this.pPRIFunction = new PRIFunctionElements();
+		this.pUNBHeader = new UNBHeaderElements();
+		this.pPriceInformation = new PriceInformationElements();
 		this.pMessageBodyFunction = new MessageBodyFunctionElements();
-		this.pMSGFunction = new MSGFunctionElements();
+		this.pMessageIndentifier = new MessageIndentifierElements();
+		this.pRelationship = new RelationshipElements();
 		this.pProductFunction = new ProductFunctionElements();
+		this.pItemNumberIdentification = new ItemNumberIdentificationElements();
+		this.pSublineInformation = new SublineInformationElements();
+		this.pQuantityDetail = new QuantityDetailElements();
+		this.pStreet = new StreetElements();
+		this.pCountrySubEntityDetail = new CountrySubEntityDetailElements();
+		this.pPartyName = new PartyNameElements();
+		this.pNameAndAddress = new NameAndAddressElements();
+		this.pPartyIdentificationDetail = new PartyIdentificationDetailElements();
+		this.pApplicationErrorDetail = new ApplicationErrorDetailElements();
 		this.pSystemDetailFunction = new SystemDetailFunctionElements();
+		this.pTaxDetail = new TaxDetailElements();
+		this.pTaxAccountDetail = new TaxAccountDetailElements();
+		this.pTaxType = new TaxTypeElements();
+		this.pCurrencyDetail = new CurrencyDetailElements();
+		this.pDocumentMessageIdentification = new DocumentMessageIdentificationElements();
+		this.pDocumentMessage = new DocumentMessageElements();
 		this.pOriginatorFunction = new OriginatorFunctionElements();
 		this.pOriginatorIdentificationFunction = new OriginatorIdentificationFunctionElements();
 		this.pLocationFunction = new LocationFunctionElements();
 		this.pInterchangerFunction = new InterchangerFunctionElements();
 		this.pDateOnlyFunction = new DateOnlyFunctionElements();
 		this.pDateAndTimeFunction = new DateAndTimeFunctionElements();
+		this.pDateTimePeriod = new DateTimePeriodElements();
 		this.tQUOTE_AND_NL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 		this.tPLUS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PLUS");
 		this.tCOLON = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.COLON");
@@ -4788,11 +7601,7 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//UNBSegment:
 	//    segment="UNB"
 	//    PLUS
-	//    (
-	//        (syntax=ID)?
-	//        COLON
-	//        (num1=ID)?
-	//    )?
+	//    ( header=UNBHeader )?
 	//    PLUS
 	//    ( interchangeSender=InterchangerFunction )?
 	//    PLUS
@@ -4848,10 +7657,18 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//MSGSegment:
 	//    segment="MSG"
 	//    PLUS
-	//    ( messageFunction=MSGFunction )?
+	//    ( messageIdentifier=MessageIndentifier )? // C709
 	//    (
 	//        PLUS
-	//        responseType=ID
+	//        designatedClassCode=ID // 1507
+	//        (
+	//            PLUS
+	//            maintenanceOperationCode=ID // 4513
+	//                (
+	//                PLUS
+	//                relationship=Relationship // C941
+	//            )?
+	//        )?
 	//    )?
 	//    lineEnd=QUOTE_AND_NL
 	//;
@@ -5069,10 +7886,22 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//MOASegment:
 	//    segment="MOA"
 	//    PLUS
-	//    code1=ID
+	//    monetaryAmountTypeCodeQualifier=ID // 5025
 	//    (
 	//        COLON
-	//        code2=ID
+	//        monetaryAmount=ID // 5004
+	//        (
+	//            COLON
+	//            currencyIdentificationCode=ID // 6345
+	//            (
+	//                COLON
+	//                currencyTypeCodeQualifier=ID // 6343
+	//                (
+	//                    COLON
+	//                    statusDescriptionCode=ID // 4405
+	//                )?
+	//            )?
+	//        )?
 	//    )?
 	//    lineEnd=QUOTE_AND_NL
 	//;
@@ -5088,14 +7917,24 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//LINSegment:
 	//    segment="LIN"
 	//    PLUS
-	//    ( code1=ID )?
+	//    ( lineItemIdentifier=ID )? // 1082
 	//    PLUS
-	//    ( code2=ID )?
+	//    ( actionRequest=ID )? // 1229
 	//    PLUS
 	//    (
-	//        code3=ID
-	//        COLON
-	//        code4=ID
+	//        itemNumberIdentification=ItemNumberIdentification // C212
+	//        (
+	//            PLUS
+	//            sublineInformation=SublineInformation // C829
+	//            (
+	//                PLUS
+	//                configurationLevelNumber=ID // 1222
+	//                (
+	//                    PLUS
+	//                    configurationOperationCode=ID // 7083
+	//                )?
+	//            )?
+	//        )?
 	//    )?
 	//    lineEnd=QUOTE_AND_NL
 	//;
@@ -5111,7 +7950,7 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//PRISegment:
 	//    segment="PRI"
 	//    PLUS
-	//    sub=PRIFunction
+	//    sub=PriceInformation
 	//    lineEnd=QUOTE_AND_NL
 	//;
 	public PRISegmentElements getPRISegmentAccess() {
@@ -5125,16 +7964,10 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	////QTY+12:54:PCE'
 	//QTYSegment:
 	//    segment="QTY"
-	//    PLUS
-	//    code1=ID
 	//    (
-	//        COLON
-	//        code2=ID
-	//        (
-	//            COLON
-	//            code3=ID
-	//        )?
-	//    )?
+	//        PLUS
+	//        quantityDetails+=QuantityDetail // C186
+	//    )*
 	//    lineEnd=QUOTE_AND_NL
 	//;
 	public QTYSegmentElements getQTYSegmentAccess() {
@@ -5149,10 +7982,18 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//CUXSegment:
 	//    segment="CUX"
 	//    PLUS
-	//    num=ID
+	//    currencyDetails1=CurrencyDetail
 	//    (
-	//        COLON
-	//        currency=ID
+	//        PLUS
+	//        currencyDetails2=CurrencyDetail
+	//        (
+	//            PLUS
+	//            currencyExchangeRate=ID
+	//            (
+	//                PLUS
+	//                exchangeRateCurrencyMarketIdentifier=ID
+	//            )?
+	//        )?
 	//    )?
 	//    lineEnd=QUOTE_AND_NL
 	//;
@@ -5168,23 +8009,31 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//TAXSegment:
 	//    segment="TAX"
 	//    PLUS
-	//    num=ID
+	//    taxFunctionCodeQualifier=ID // 5283
 	//    PLUS
-	//    type=ID
+	//    taxType=TaxType // C241
 	//    (
 	//        PLUS
-	//        ( todo1=ID )?
-	//        PLUS
-	//        ( todo2=ID )?
-	//        PLUS
+	//        ( taxAccountDetail=TaxAccountDetail )? // C533
 	//        (
-	//            ( todo3=ID )?
-	//            COLON
-	//            ( todo4=ID )?
-	//            COLON
-	//            ( todo5=ID )?
-	//            COLON
-	//            ( todo6=ID )?
+	//            PLUS
+	//            ( taxAssessmentBasicValue=ID )? // 5286
+	//            (
+	//                PLUS
+	//                ( taxDetail=TaxDetail )? // C243
+	//                (
+	//                    PLUS
+	//                    ( taxCategoryCode=ID )? // 5305
+	//                    (
+	//                        PLUS
+	//                        ( partyTaxIdentifier=ID )? // 3446
+	//                        (
+	//                            PLUS
+	//                            ( calculationSequenceCode=ID )? // 1227
+	//                        )?
+	//                    )?
+	//                )?
+	//            )?
 	//        )?
 	//    )?
 	//    lineEnd=QUOTE_AND_NL
@@ -5220,14 +8069,38 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//NADSegment:
 	//    segment="NAD"
 	//    PLUS
-	//    code=ID
-	//    PLUS
+	//    partyFunctionCodeQualifier=ID
 	//    (
-	//        ( manufacturer1=ID )?
-	//        COLON
-	//        ( manufacturer2=ID )?
-	//        COLON
-	//        ( manufacturer3=ID )?
+	//        PLUS
+	//        partyIdentificationDetails=PartyIdentificationDetail // C082
+	//        (
+	//            PLUS
+	//            nameAndAddress=NameAndAddress // C058
+	//            (
+	//                PLUS
+	//                partyName=PartyName // C080
+	//                (
+	//                    PLUS
+	//                    street=Street // C059
+	//                    (
+	//                        PLUS
+	//                        cityName=ID // 3164
+	//                        (
+	//                            PLUS
+	//                            countrySubEntityDetails=CountrySubEntityDetail // C819
+	//                            (
+	//                                PLUS
+	//                                postalIdentificationCode=ID // 3251
+	//                                (
+	//                                    PLUS
+	//                                    countryNameCode=ID // 3207
+	//                                )?
+	//                            )?
+	//                        )?
+	//                    )?
+	//                )?
+	//            )?
+	//        )?
 	//    )?
 	//    lineEnd=QUOTE_AND_NL
 	//;
@@ -5242,14 +8115,10 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	////DTM+137:199910060000:102'
 	//DTMSegment:
 	//    segment="DTM"
-	//    PLUS
-	//    num1=ID
 	//    (
-	//        COLON
-	//        num2=ID
-	//        COLON
-	//        num3=ID
-	//    )?
+	//        PLUS
+	//        dateTimePeriods+=DateTimePeriod
+	//    )*
 	//    lineEnd=QUOTE_AND_NL
 	//;
 	public DTMSegmentElements getDTMSegmentAccess() {
@@ -5264,11 +8133,15 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//BGMSegment:
 	//    segment="BGM"
 	//    PLUS
-	//    (num1=ID)?
+	//    ( documentMessageName=DocumentMessage )?
 	//    PLUS
-	//    (num2=ID)?
+	//    ( documentMessageIdentification=DocumentMessageIdentification )?
 	//    PLUS
-	//    (num3=ID)?
+	//    ( messageFunctionCode=ID )?
+	//    (
+	//        PLUS
+	//        responseTypeCode=ID
+	//    )?
 	//    lineEnd=QUOTE_AND_NL
 	//;
 	public BGMSegmentElements getBGMSegmentAccess() {
@@ -5317,8 +8190,10 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	//ERCSegment:
 	//    segment="ERC"
-	//    PLUS
-	//    code1=ID
+	//    (
+	//        PLUS
+	//        applicationErrorDetails+=ApplicationErrorDetail
+	//    )*
 	//    lineEnd=QUOTE_AND_NL
 	//;
 	public ERCSegmentElements getERCSegmentAccess() {
@@ -5427,17 +8302,34 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	//// EDIFACT Functions
 	//AbstractEdiFunction:
-	//    PRIFunction |
+	//    UNBHeader |
+	//    PriceInformation |
 	//    MessageBodyFunction |
-	//    MSGFunction |
+	//    MessageIndentifier |
+	//    Relationship |
 	//    ProductFunction |
+	//    ItemNumberIdentification |
+	//    SublineInformation |
+	//    QuantityDetail |
+	//    Street |
+	//    CountrySubEntityDetail |
+	//    PartyName |
+	//    NameAndAddress |
+	//    ApplicationErrorDetail |
 	//    SystemDetailFunction |
+	//    TaxDetail |
+	//    TaxAccountDetail |
+	//    TaxType |
+	//    CurrencyDetail |
+	//    DocumentMessageIdentification |
+	//    DocumentMessage |
 	//    OriginatorFunction |
 	//    OriginatorIdentificationFunction |
 	//    LocationFunction |
 	//    InterchangerFunction |
 	//    DateOnlyFunction |
-	//    DateAndTimeFunction
+	//    DateAndTimeFunction |
+	//    DateTimePeriod
 	//;
 	public AbstractEdiFunctionElements getAbstractEdiFunctionAccess() {
 		return pAbstractEdiFunction;
@@ -5447,25 +8339,39 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		return getAbstractEdiFunctionAccess().getRule();
 	}
 	
-	//PRIFunction:
-	//    code1=ID
+	//UNBHeader:
+	//    {UNBHeader}
+	//    ( syntax=ID )?
 	//    COLON
-	//    ( code2=ID )?
-	//    COLON
-	//    ( code3=ID )?
-	//    COLON
-	//    ( code4=ID )?
-	//    COLON
-	//    ( code5=ID )?
-	//    COLON
-	//    ( code6=ID )?
+	//    ( num1=ID )?
 	//;
-	public PRIFunctionElements getPRIFunctionAccess() {
-		return pPRIFunction;
+	public UNBHeaderElements getUNBHeaderAccess() {
+		return pUNBHeader;
 	}
 	
-	public ParserRule getPRIFunctionRule() {
-		return getPRIFunctionAccess().getRule();
+	public ParserRule getUNBHeaderRule() {
+		return getUNBHeaderAccess().getRule();
+	}
+	
+	//PriceInformation: // C509
+	//    priceCodeQualifier=ID // 5125
+	//    COLON
+	//    ( priceAmount=ID )? // 5118
+	//    COLON
+	//    ( priceTypeCode=ID )? // 5375
+	//    COLON
+	//    ( priceSpecificationCode=ID )? // 5287
+	//    COLON
+	//    ( unitPriceBasisValue=ID )? // 5284
+	//    COLON
+	//    ( measurementUnitCode=ID )? // 6411
+	//;
+	public PriceInformationElements getPriceInformationAccess() {
+		return pPriceInformation;
+	}
+	
+	public ParserRule getPriceInformationRule() {
+		return getPriceInformationAccess().getRule();
 	}
 	
 	//MessageBodyFunction:
@@ -5489,25 +8395,58 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		return getMessageBodyFunctionAccess().getRule();
 	}
 	
-	//MSGFunction:
-	//    ( businessFunction=ID )?
+	//MessageIndentifier: // C709
+	//    ( messageTypeCode=ID )? // 1475
 	//    COLON
-	//    messageFunction1=ID
+	//    versionIdentifier=ID // 1056
 	//    (
 	//        COLON
-	//        codeListResponsibleAgency=ID
+	//        releaseIdentifier=ID // 1058
 	//        (
 	//            COLON
-	//            messageFunction2=ID
+	//            controllingAgencyIdentifier=ID // 1476
+	//            (
+	//                COLON
+	//                messageImplementationIdentificationCode=ID // 1523
+	//                (
+	//                    COLON
+	//                    revisionIdentifier=ID // 1060
+	//                    (
+	//                        COLON
+	//                        documentStatusCode=ID // 1373
+	//                    )?
+	//                )?
+	//            )?
 	//        )?
 	//    )?
 	//;
-	public MSGFunctionElements getMSGFunctionAccess() {
-		return pMSGFunction;
+	public MessageIndentifierElements getMessageIndentifierAccess() {
+		return pMessageIndentifier;
 	}
 	
-	public ParserRule getMSGFunctionRule() {
-		return getMSGFunctionAccess().getRule();
+	public ParserRule getMessageIndentifierRule() {
+		return getMessageIndentifierAccess().getRule();
+	}
+	
+	//Relationship: // C941
+	//    ( relationshipDescriptionCode=ID )? // 9143
+	//    COLON
+	//    codeListIdentificationCode=ID // 1131
+	//    (
+	//        COLON
+	//        codeListResponsibleAgency=ID // 3055
+	//        (
+	//            COLON
+	//            relationshipDescription=ID // 9142
+	//        )?
+	//    )?
+	//;
+	public RelationshipElements getRelationshipAccess() {
+		return pRelationship;
+	}
+	
+	public ParserRule getRelationshipRule() {
+		return getRelationshipAccess().getRule();
 	}
 	
 	//ProductFunction:
@@ -5523,6 +8462,203 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getProductFunctionRule() {
 		return getProductFunctionAccess().getRule();
+	}
+	
+	//ItemNumberIdentification:
+	//    itemIdentifier=ID // 7140
+	//    COLON
+	//    itemTypeIdentificationCode=ID // 7143
+	//    (
+	//        COLON
+	//        codeListIdentificationCode=ID // 1131
+	//        (
+	//            COLON
+	//            codeListResponsibleAgencyCode=ID // 3055
+	//        )?
+	//    )?
+	//;
+	public ItemNumberIdentificationElements getItemNumberIdentificationAccess() {
+		return pItemNumberIdentification;
+	}
+	
+	public ParserRule getItemNumberIdentificationRule() {
+		return getItemNumberIdentificationAccess().getRule();
+	}
+	
+	//SublineInformation:
+	//    sublineIndicatorCode=ID // 5495
+	//    (
+	//        COLON
+	//        lineItemIdentifier=ID // 1082
+	//    )?
+	//;
+	public SublineInformationElements getSublineInformationAccess() {
+		return pSublineInformation;
+	}
+	
+	public ParserRule getSublineInformationRule() {
+		return getSublineInformationAccess().getRule();
+	}
+	
+	//QuantityDetail: // C186
+	//    quantityTypeCodeQualifier=ID // 6063
+	//    (
+	//        COLON
+	//        quantity=ID // 6060
+	//        (
+	//            COLON
+	//            measurementUnitCode=ID // 6411
+	//        )?
+	//    )?
+	//;
+	public QuantityDetailElements getQuantityDetailAccess() {
+		return pQuantityDetail;
+	}
+	
+	public ParserRule getQuantityDetailRule() {
+		return getQuantityDetailAccess().getRule();
+	}
+	
+	//Street: // C059
+	//    streetAndNumber+=ID // 3042
+	//    (
+	//        COLON
+	//        streetAndNumber+=ID // 3042
+	//        (
+	//            COLON
+	//            streetAndNumber+=ID // 3042
+	//            (
+	//                COLON
+	//                streetAndNumber+=ID // 3042
+	//                (
+	//                    COLON
+	//                    streetAndNumber+=ID // 3042
+	//                )?
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public StreetElements getStreetAccess() {
+		return pStreet;
+	}
+	
+	public ParserRule getStreetRule() {
+		return getStreetAccess().getRule();
+	}
+	
+	//CountrySubEntityDetail: // C819
+	//    countrySubEntityNameCode+=ID // 3229
+	//    (
+	//        COLON
+	//        codeListIdentificationCode+=ID // 1131
+	//        (
+	//            COLON
+	//            codeListResponsibleAgencyCode+=ID // 3055
+	//            (
+	//                COLON
+	//                countrySubEntityName+=ID // 3228
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public CountrySubEntityDetailElements getCountrySubEntityDetailAccess() {
+		return pCountrySubEntityDetail;
+	}
+	
+	public ParserRule getCountrySubEntityDetailRule() {
+		return getCountrySubEntityDetailAccess().getRule();
+	}
+	
+	//PartyName: // C080
+	//    partyName+=ID // 3036
+	//    (
+	//        COLON
+	//        partyName+=ID // 3036
+	//        (
+	//            COLON
+	//            partyName+=ID // 3036
+	//            (
+	//                COLON
+	//                partyName+=ID // 3036
+	//                (
+	//                    COLON
+	//                    partyName+=ID // 3036
+	//                )?
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public PartyNameElements getPartyNameAccess() {
+		return pPartyName;
+	}
+	
+	public ParserRule getPartyNameRule() {
+		return getPartyNameAccess().getRule();
+	}
+	
+	//NameAndAddress: // C058
+	//    nameAndAddress+=ID // 3124
+	//    (
+	//        COLON
+	//        nameAndAddress+=ID // 3124
+	//        (
+	//            COLON
+	//            nameAndAddress+=ID // 3124
+	//            (
+	//                COLON
+	//                nameAndAddress+=ID // 3124
+	//                (
+	//                    COLON
+	//                    nameAndAddress+=ID // 3124
+	//                )?
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public NameAndAddressElements getNameAndAddressAccess() {
+		return pNameAndAddress;
+	}
+	
+	public ParserRule getNameAndAddressRule() {
+		return getNameAndAddressAccess().getRule();
+	}
+	
+	//PartyIdentificationDetail:
+	//    partyIdentifier=ID // 3039
+	//    (
+	//        COLON
+	//        ( codeListIdentificationCode=ID )? // 1331
+	//        (
+	//            COLON
+	//            codeListResponsibleAgencyCode=ID // 3055
+	//        )?
+	//    )?
+	//;
+	public PartyIdentificationDetailElements getPartyIdentificationDetailAccess() {
+		return pPartyIdentificationDetail;
+	}
+	
+	public ParserRule getPartyIdentificationDetailRule() {
+		return getPartyIdentificationDetailAccess().getRule();
+	}
+	
+	//ApplicationErrorDetail: // C901
+	//    applictionErrorCode=ID // 9321
+	//    (
+	//        COLON
+	//        codeListIdentificationCode=ID // 1331
+	//        (
+	//            COLON
+	//            codeListResponsibleAgencyCode=ID // 3055
+	//        )?
+	//    )?
+	//;
+	public ApplicationErrorDetailElements getApplicationErrorDetailAccess() {
+		return pApplicationErrorDetail;
+	}
+	
+	public ParserRule getApplicationErrorDetailRule() {
+		return getApplicationErrorDetailAccess().getRule();
 	}
 	
 	//SystemDetailFunction:
@@ -5542,6 +8678,144 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getSystemDetailFunctionRule() {
 		return getSystemDetailFunctionAccess().getRule();
+	}
+	
+	//TaxDetail: // C243
+	//    ( taxRateDescriptionCode=ID )? // 5279
+	//    COLON
+	//    ( codeListIdentificationCode1=ID )? // 1131
+	//    COLON
+	//    ( codeListResponsibleAgencyCode1=ID )? // 3055
+	//    (
+	//        COLON
+	//        taxRateDescription=ID // 5278
+	//        (
+	//            COLON
+	//            taxRateBasisCode=ID // 5273
+	//            (
+	//                COLON
+	//                codeListIdentificationCode2=ID // 1131
+	//                (
+	//                    COLON
+	//                    codeListResponsibleAgencyCode2=ID // 3055
+	//                )?
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public TaxDetailElements getTaxDetailAccess() {
+		return pTaxDetail;
+	}
+	
+	public ParserRule getTaxDetailRule() {
+		return getTaxDetailAccess().getRule();
+	}
+	
+	//TaxAccountDetail: // C533
+	//    taxAccountCode=ID // 5289
+	//    (
+	//        COLON
+	//        codeListIdentificationCode=ID // 1131
+	//        (
+	//            COLON
+	//            codeListResponsibleAgencyCode=ID // 3055
+	//        )?
+	//    )?
+	//;
+	public TaxAccountDetailElements getTaxAccountDetailAccess() {
+		return pTaxAccountDetail;
+	}
+	
+	public ParserRule getTaxAccountDetailRule() {
+		return getTaxAccountDetailAccess().getRule();
+	}
+	
+	//TaxType: // C241
+	//    taxTypeNameCode=ID // 5153
+	//    (
+	//        COLON
+	//        codeListIdentificationCode=ID // 1131
+	//        (
+	//            COLON
+	//            codeListResponsibleAgencyCode=ID // 3055
+	//            (
+	//                COLON
+	//                taxTypeName=ID // 5152
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public TaxTypeElements getTaxTypeAccess() {
+		return pTaxType;
+	}
+	
+	public ParserRule getTaxTypeRule() {
+		return getTaxTypeAccess().getRule();
+	}
+	
+	//CurrencyDetail: // C504
+	//    currencyUsageCodeQualifier=ID // 6347
+	//    (
+	//        COLON
+	//        currencyIdentificationCode=ID // 6345
+	//        (
+	//            COLON
+	//            currencyTypeCodeQualifier=ID // 6343
+	//            (
+	//                COLON
+	//                currencyRateValue=ID // 6348
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public CurrencyDetailElements getCurrencyDetailAccess() {
+		return pCurrencyDetail;
+	}
+	
+	public ParserRule getCurrencyDetailRule() {
+		return getCurrencyDetailAccess().getRule();
+	}
+	
+	//DocumentMessageIdentification: // C106
+	//    documentIdentifier=ID // 1004
+	//    (
+	//        COLON
+	//        versionIdentifier=ID // 1056
+	//        (
+	//            COLON
+	//            revisionIdentifier=ID // 1060
+	//        )?
+	//    )?
+	//;
+	public DocumentMessageIdentificationElements getDocumentMessageIdentificationAccess() {
+		return pDocumentMessageIdentification;
+	}
+	
+	public ParserRule getDocumentMessageIdentificationRule() {
+		return getDocumentMessageIdentificationAccess().getRule();
+	}
+	
+	//DocumentMessage: // C002
+	//    documentNameCode=ID // 1001
+	//    (
+	//        COLON
+	//        codeListIdentificationCode=ID // 1131
+	//        (
+	//            COLON
+	//            codeListResponsibleAgencyCode=ID // 3055
+	//            (
+	//                COLON
+	//                documentName=ID // 1000
+	//            )?
+	//        )?
+	//    )?
+	//;
+	public DocumentMessageElements getDocumentMessageAccess() {
+		return pDocumentMessage;
+	}
+	
+	public ParserRule getDocumentMessageRule() {
+		return getDocumentMessageAccess().getRule();
 	}
 	
 	//OriginatorFunction:
@@ -5634,6 +8908,25 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getDateAndTimeFunctionRule() {
 		return getDateAndTimeFunctionAccess().getRule();
+	}
+	
+	//DateTimePeriod:
+	//    dateTimePeriodFunctionCodeQualifier=ID
+	//    (
+	//        COLON
+	//        dateTimePeriodValue=ID
+	//        (
+	//            COLON
+	//            dateTimePeriodFormatCode=ID
+	//        )?
+	//    )?
+	//;
+	public DateTimePeriodElements getDateTimePeriodAccess() {
+		return pDateTimePeriod;
+	}
+	
+	public ParserRule getDateTimePeriodRule() {
+		return getDateTimePeriodAccess().getRule();
 	}
 	
 	//terminal QUOTE_AND_NL: ( "'" | "~" ) ( "\n" )?;

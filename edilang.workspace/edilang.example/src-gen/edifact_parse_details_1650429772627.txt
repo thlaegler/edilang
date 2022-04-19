@@ -1,0 +1,101 @@
+Parsed EDIFACT model:
+
+UNB segment:
+	InterchangeSender=(Interchange=01010000253001)
+	InterchangeRecipient=(Interchange=O0013000093SCHA-Z59)
+	DateAndTime=[(Date6=991006, Time4=1902)]
+	InterchangeControlSenderRef=PAYO0012101221
+	Header=(Syntax=UNOA, Num1=1)
+
+UNH segment:
+	MessageReferenceNumber=1
+	Message=(Release=97A, ControllingAgency=UN, Type=INVOIC, Version=D)
+
+BGM segment:
+	DocumentMessageName=(DocumentNameCode=381)
+	MessageFunctionCode=9
+	DocumentMessageIdentification=(DocumentIdentifier=1060113800026)
+
+DTM segment:
+	DateTimePeriods=[(DateTimePeriodValue=199910060000, DateTimePeriodFunctionCodeQualifier=137, DateTimePeriodFormatCode=102)]
+
+NAD segment:
+	PartyFunctionCodeQualifier=BT
+	PartyIdentificationDetails=io.thlaegler.edifact.edilang.impl.PartyIdentificationDetailImpl@756f8b12 (partyIdentifier: VAUXHALL-MOTORS-LTD, codeListIdentificationCode: null, codeListResponsibleAgencyCode: 91)
+
+RFF segment:
+	Rff1=VA
+	Rff2=382324067
+
+NAD segment:
+	PartyFunctionCodeQualifier=SU
+	PartyIdentificationDetails=io.thlaegler.edifact.edilang.impl.PartyIdentificationDetailImpl@21f690cf (partyIdentifier: 2002993, codeListIdentificationCode: null, codeListResponsibleAgencyCode: 92)
+
+RFF segment:
+	Rff1=VA
+	Rff2=123844750
+
+CUX segment:
+	CurrencyDetails1=(CurrencyUsageCodeQualifier=2, CurrencyIdentificationCode=EUR)
+
+PAT segment:
+	SegmentCount=1
+
+DTM segment:
+	DateTimePeriods=[(DateTimePeriodValue=19991031, DateTimePeriodFunctionCodeQualifier=140, DateTimePeriodFormatCode=102)]
+
+LIN segment:
+	ItemNumberIdentification=(ItemIdentifier=090346642, ItemTypeIdentificationCode=IN)
+
+QTY segment:
+	QuantityDetails=[(Quantity=54, MeasurementUnitCode=PCE, QuantityTypeCodeQualifier=12)]
+
+MOA segment:
+	MonetaryAmount=1960.29
+	MonetaryAmountTypeCodeQualifier=203
+
+PRI segment:
+	Sub=(MeasurementUnitCode=C62, PriceCodeQualifier=AAA, PriceAmount=3630.1724, PriceSpecificationCode=NTP, UnitPriceBasisValue=100)
+
+RFF segment:
+	Rff1=SI
+	Rff2=165480
+
+DTM segment:
+	DateTimePeriods=[(DateTimePeriodValue=199909280000, DateTimePeriodFunctionCodeQualifier=11, DateTimePeriodFormatCode=102)]
+
+RFF segment:
+	Rff1=ON
+	Rff2=X18V00003
+
+RFF segment:
+	Rff1=TN
+	Rff2=AB1
+
+TAX segment:
+	TaxType=(TaxTypeNameCode=VAT)
+	TaxDetail=(TaxRateDescription=0)
+	TaxFunctionCodeQualifier=7
+
+NAD segment:
+	PartyFunctionCodeQualifier=ST
+	PartyIdentificationDetails=io.thlaegler.edifact.edilang.impl.PartyIdentificationDetailImpl@7b8e461a (partyIdentifier: 023, codeListIdentificationCode: null, codeListResponsibleAgencyCode: 92)
+
+UNS segment:
+	SegmentCount=S
+
+MOA segment:
+	MonetaryAmount=1960.29
+	MonetaryAmountTypeCodeQualifier=77
+
+TAX segment:
+	TaxType=(TaxTypeNameCode=VAT)
+	TaxFunctionCodeQualifier=7
+
+UNT segment:
+	SegmentCount=24
+	MessageReferenceNumber=1
+
+UNZ segment:
+	InterchangeControlCount=1
+	InterchangeControlRef=PAYO0012101221

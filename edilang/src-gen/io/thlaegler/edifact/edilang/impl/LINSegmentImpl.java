@@ -4,11 +4,15 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.ItemNumberIdentification;
 import io.thlaegler.edifact.edilang.LINSegment;
+import io.thlaegler.edifact.edilang.SublineInformation;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,10 +24,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getCode1 <em>Code1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getCode2 <em>Code2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getCode3 <em>Code3</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getCode4 <em>Code4</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getLineItemIdentifier <em>Line Item Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getActionRequest <em>Action Request</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getItemNumberIdentification <em>Item Number Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getSublineInformation <em>Subline Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getConfigurationLevelNumber <em>Configuration Level Number</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LINSegmentImpl#getConfigurationOperationCode <em>Configuration Operation Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,84 +37,104 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
 {
   /**
-   * The default value of the '{@link #getCode1() <em>Code1</em>}' attribute.
+   * The default value of the '{@link #getLineItemIdentifier() <em>Line Item Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode1()
+   * @see #getLineItemIdentifier()
    * @generated
    * @ordered
    */
-  protected static final String CODE1_EDEFAULT = null;
+  protected static final String LINE_ITEM_IDENTIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCode1() <em>Code1</em>}' attribute.
+   * The cached value of the '{@link #getLineItemIdentifier() <em>Line Item Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode1()
+   * @see #getLineItemIdentifier()
    * @generated
    * @ordered
    */
-  protected String code1 = CODE1_EDEFAULT;
+  protected String lineItemIdentifier = LINE_ITEM_IDENTIFIER_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getCode2() <em>Code2</em>}' attribute.
+   * The default value of the '{@link #getActionRequest() <em>Action Request</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode2()
+   * @see #getActionRequest()
    * @generated
    * @ordered
    */
-  protected static final String CODE2_EDEFAULT = null;
+  protected static final String ACTION_REQUEST_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCode2() <em>Code2</em>}' attribute.
+   * The cached value of the '{@link #getActionRequest() <em>Action Request</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode2()
+   * @see #getActionRequest()
    * @generated
    * @ordered
    */
-  protected String code2 = CODE2_EDEFAULT;
+  protected String actionRequest = ACTION_REQUEST_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getCode3() <em>Code3</em>}' attribute.
+   * The cached value of the '{@link #getItemNumberIdentification() <em>Item Number Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode3()
+   * @see #getItemNumberIdentification()
    * @generated
    * @ordered
    */
-  protected static final String CODE3_EDEFAULT = null;
+  protected ItemNumberIdentification itemNumberIdentification;
 
   /**
-   * The cached value of the '{@link #getCode3() <em>Code3</em>}' attribute.
+   * The cached value of the '{@link #getSublineInformation() <em>Subline Information</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode3()
+   * @see #getSublineInformation()
    * @generated
    * @ordered
    */
-  protected String code3 = CODE3_EDEFAULT;
+  protected SublineInformation sublineInformation;
 
   /**
-   * The default value of the '{@link #getCode4() <em>Code4</em>}' attribute.
+   * The default value of the '{@link #getConfigurationLevelNumber() <em>Configuration Level Number</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode4()
+   * @see #getConfigurationLevelNumber()
    * @generated
    * @ordered
    */
-  protected static final String CODE4_EDEFAULT = null;
+  protected static final String CONFIGURATION_LEVEL_NUMBER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCode4() <em>Code4</em>}' attribute.
+   * The cached value of the '{@link #getConfigurationLevelNumber() <em>Configuration Level Number</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode4()
+   * @see #getConfigurationLevelNumber()
    * @generated
    * @ordered
    */
-  protected String code4 = CODE4_EDEFAULT;
+  protected String configurationLevelNumber = CONFIGURATION_LEVEL_NUMBER_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getConfigurationOperationCode() <em>Configuration Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConfigurationOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String CONFIGURATION_OPERATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getConfigurationOperationCode() <em>Configuration Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConfigurationOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected String configurationOperationCode = CONFIGURATION_OPERATION_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -137,9 +163,9 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * @generated
    */
   @Override
-  public String getCode1()
+  public String getLineItemIdentifier()
   {
-    return code1;
+    return lineItemIdentifier;
   }
 
   /**
@@ -148,12 +174,12 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * @generated
    */
   @Override
-  public void setCode1(String newCode1)
+  public void setLineItemIdentifier(String newLineItemIdentifier)
   {
-    String oldCode1 = code1;
-    code1 = newCode1;
+    String oldLineItemIdentifier = lineItemIdentifier;
+    lineItemIdentifier = newLineItemIdentifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__CODE1, oldCode1, code1));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__LINE_ITEM_IDENTIFIER, oldLineItemIdentifier, lineItemIdentifier));
   }
 
   /**
@@ -162,9 +188,9 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * @generated
    */
   @Override
-  public String getCode2()
+  public String getActionRequest()
   {
-    return code2;
+    return actionRequest;
   }
 
   /**
@@ -173,12 +199,12 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * @generated
    */
   @Override
-  public void setCode2(String newCode2)
+  public void setActionRequest(String newActionRequest)
   {
-    String oldCode2 = code2;
-    code2 = newCode2;
+    String oldActionRequest = actionRequest;
+    actionRequest = newActionRequest;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__CODE2, oldCode2, code2));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__ACTION_REQUEST, oldActionRequest, actionRequest));
   }
 
   /**
@@ -187,9 +213,9 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * @generated
    */
   @Override
-  public String getCode3()
+  public ItemNumberIdentification getItemNumberIdentification()
   {
-    return code3;
+    return itemNumberIdentification;
   }
 
   /**
@@ -197,13 +223,16 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setCode3(String newCode3)
+  public NotificationChain basicSetItemNumberIdentification(ItemNumberIdentification newItemNumberIdentification, NotificationChain msgs)
   {
-    String oldCode3 = code3;
-    code3 = newCode3;
+    ItemNumberIdentification oldItemNumberIdentification = itemNumberIdentification;
+    itemNumberIdentification = newItemNumberIdentification;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__CODE3, oldCode3, code3));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION, oldItemNumberIdentification, newItemNumberIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -212,9 +241,20 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * @generated
    */
   @Override
-  public String getCode4()
+  public void setItemNumberIdentification(ItemNumberIdentification newItemNumberIdentification)
   {
-    return code4;
+    if (newItemNumberIdentification != itemNumberIdentification)
+    {
+      NotificationChain msgs = null;
+      if (itemNumberIdentification != null)
+        msgs = ((InternalEObject)itemNumberIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION, null, msgs);
+      if (newItemNumberIdentification != null)
+        msgs = ((InternalEObject)newItemNumberIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION, null, msgs);
+      msgs = basicSetItemNumberIdentification(newItemNumberIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION, newItemNumberIdentification, newItemNumberIdentification));
   }
 
   /**
@@ -223,12 +263,116 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
    * @generated
    */
   @Override
-  public void setCode4(String newCode4)
+  public SublineInformation getSublineInformation()
   {
-    String oldCode4 = code4;
-    code4 = newCode4;
+    return sublineInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSublineInformation(SublineInformation newSublineInformation, NotificationChain msgs)
+  {
+    SublineInformation oldSublineInformation = sublineInformation;
+    sublineInformation = newSublineInformation;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__CODE4, oldCode4, code4));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION, oldSublineInformation, newSublineInformation);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSublineInformation(SublineInformation newSublineInformation)
+  {
+    if (newSublineInformation != sublineInformation)
+    {
+      NotificationChain msgs = null;
+      if (sublineInformation != null)
+        msgs = ((InternalEObject)sublineInformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION, null, msgs);
+      if (newSublineInformation != null)
+        msgs = ((InternalEObject)newSublineInformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION, null, msgs);
+      msgs = basicSetSublineInformation(newSublineInformation, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION, newSublineInformation, newSublineInformation));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getConfigurationLevelNumber()
+  {
+    return configurationLevelNumber;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setConfigurationLevelNumber(String newConfigurationLevelNumber)
+  {
+    String oldConfigurationLevelNumber = configurationLevelNumber;
+    configurationLevelNumber = newConfigurationLevelNumber;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__CONFIGURATION_LEVEL_NUMBER, oldConfigurationLevelNumber, configurationLevelNumber));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getConfigurationOperationCode()
+  {
+    return configurationOperationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setConfigurationOperationCode(String newConfigurationOperationCode)
+  {
+    String oldConfigurationOperationCode = configurationOperationCode;
+    configurationOperationCode = newConfigurationOperationCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LIN_SEGMENT__CONFIGURATION_OPERATION_CODE, oldConfigurationOperationCode, configurationOperationCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION:
+        return basicSetItemNumberIdentification(null, msgs);
+      case EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION:
+        return basicSetSublineInformation(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -241,14 +385,18 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LIN_SEGMENT__CODE1:
-        return getCode1();
-      case EdilangPackage.LIN_SEGMENT__CODE2:
-        return getCode2();
-      case EdilangPackage.LIN_SEGMENT__CODE3:
-        return getCode3();
-      case EdilangPackage.LIN_SEGMENT__CODE4:
-        return getCode4();
+      case EdilangPackage.LIN_SEGMENT__LINE_ITEM_IDENTIFIER:
+        return getLineItemIdentifier();
+      case EdilangPackage.LIN_SEGMENT__ACTION_REQUEST:
+        return getActionRequest();
+      case EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION:
+        return getItemNumberIdentification();
+      case EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION:
+        return getSublineInformation();
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        return getConfigurationLevelNumber();
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_OPERATION_CODE:
+        return getConfigurationOperationCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -263,17 +411,23 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LIN_SEGMENT__CODE1:
-        setCode1((String)newValue);
+      case EdilangPackage.LIN_SEGMENT__LINE_ITEM_IDENTIFIER:
+        setLineItemIdentifier((String)newValue);
         return;
-      case EdilangPackage.LIN_SEGMENT__CODE2:
-        setCode2((String)newValue);
+      case EdilangPackage.LIN_SEGMENT__ACTION_REQUEST:
+        setActionRequest((String)newValue);
         return;
-      case EdilangPackage.LIN_SEGMENT__CODE3:
-        setCode3((String)newValue);
+      case EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION:
+        setItemNumberIdentification((ItemNumberIdentification)newValue);
         return;
-      case EdilangPackage.LIN_SEGMENT__CODE4:
-        setCode4((String)newValue);
+      case EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION:
+        setSublineInformation((SublineInformation)newValue);
+        return;
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        setConfigurationLevelNumber((String)newValue);
+        return;
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_OPERATION_CODE:
+        setConfigurationOperationCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -289,17 +443,23 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LIN_SEGMENT__CODE1:
-        setCode1(CODE1_EDEFAULT);
+      case EdilangPackage.LIN_SEGMENT__LINE_ITEM_IDENTIFIER:
+        setLineItemIdentifier(LINE_ITEM_IDENTIFIER_EDEFAULT);
         return;
-      case EdilangPackage.LIN_SEGMENT__CODE2:
-        setCode2(CODE2_EDEFAULT);
+      case EdilangPackage.LIN_SEGMENT__ACTION_REQUEST:
+        setActionRequest(ACTION_REQUEST_EDEFAULT);
         return;
-      case EdilangPackage.LIN_SEGMENT__CODE3:
-        setCode3(CODE3_EDEFAULT);
+      case EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION:
+        setItemNumberIdentification((ItemNumberIdentification)null);
         return;
-      case EdilangPackage.LIN_SEGMENT__CODE4:
-        setCode4(CODE4_EDEFAULT);
+      case EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION:
+        setSublineInformation((SublineInformation)null);
+        return;
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        setConfigurationLevelNumber(CONFIGURATION_LEVEL_NUMBER_EDEFAULT);
+        return;
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_OPERATION_CODE:
+        setConfigurationOperationCode(CONFIGURATION_OPERATION_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -315,14 +475,18 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LIN_SEGMENT__CODE1:
-        return CODE1_EDEFAULT == null ? code1 != null : !CODE1_EDEFAULT.equals(code1);
-      case EdilangPackage.LIN_SEGMENT__CODE2:
-        return CODE2_EDEFAULT == null ? code2 != null : !CODE2_EDEFAULT.equals(code2);
-      case EdilangPackage.LIN_SEGMENT__CODE3:
-        return CODE3_EDEFAULT == null ? code3 != null : !CODE3_EDEFAULT.equals(code3);
-      case EdilangPackage.LIN_SEGMENT__CODE4:
-        return CODE4_EDEFAULT == null ? code4 != null : !CODE4_EDEFAULT.equals(code4);
+      case EdilangPackage.LIN_SEGMENT__LINE_ITEM_IDENTIFIER:
+        return LINE_ITEM_IDENTIFIER_EDEFAULT == null ? lineItemIdentifier != null : !LINE_ITEM_IDENTIFIER_EDEFAULT.equals(lineItemIdentifier);
+      case EdilangPackage.LIN_SEGMENT__ACTION_REQUEST:
+        return ACTION_REQUEST_EDEFAULT == null ? actionRequest != null : !ACTION_REQUEST_EDEFAULT.equals(actionRequest);
+      case EdilangPackage.LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION:
+        return itemNumberIdentification != null;
+      case EdilangPackage.LIN_SEGMENT__SUBLINE_INFORMATION:
+        return sublineInformation != null;
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        return CONFIGURATION_LEVEL_NUMBER_EDEFAULT == null ? configurationLevelNumber != null : !CONFIGURATION_LEVEL_NUMBER_EDEFAULT.equals(configurationLevelNumber);
+      case EdilangPackage.LIN_SEGMENT__CONFIGURATION_OPERATION_CODE:
+        return CONFIGURATION_OPERATION_CODE_EDEFAULT == null ? configurationOperationCode != null : !CONFIGURATION_OPERATION_CODE_EDEFAULT.equals(configurationOperationCode);
     }
     return super.eIsSet(featureID);
   }
@@ -338,14 +502,14 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (code1: ");
-    result.append(code1);
-    result.append(", code2: ");
-    result.append(code2);
-    result.append(", code3: ");
-    result.append(code3);
-    result.append(", code4: ");
-    result.append(code4);
+    result.append(" (lineItemIdentifier: ");
+    result.append(lineItemIdentifier);
+    result.append(", actionRequest: ");
+    result.append(actionRequest);
+    result.append(", configurationLevelNumber: ");
+    result.append(configurationLevelNumber);
+    result.append(", configurationOperationCode: ");
+    result.append(configurationOperationCode);
     result.append(')');
     return result.toString();
   }

@@ -1,21 +1,20 @@
 Parsed EDIFACT model:
 
 UNB segment:
+	InterchangeControlSenderRef=49O697P70001
+	InterchangeControlRecipientRef=94B142C20001
+	DateAndTime=[(Date6=220419, Time4=0153)]
 	InterchangeSender=(Interchange=UA)
 	InterchangeRecipient=(Interchange=NZ, Interchange2=IEDI)
 	AssiciationCode=T
-	DateAndTime=[(Date6=220419, Time4=0153)]
-	Num1=1
-	Syntax=IATA
-	InterchangeControlSenderRef=49O697P70001
-	InterchangeControlRecipientRef=94B142C20001
+	Header=(Syntax=IATA, Num1=1)
 
 UNH segment:
 	MessageReferenceNumber=001
 	Message=(ControllingAgency=IA, Release=2, Type=PAORES, Version=96)
 
 MSG segment:
-	MessageFunction=(BusinessFunction=1, MessageFunction1=47)
+	MessageIdentifier=(VersionIdentifier=47, MessageTypeCode=1)
 
 ODI segment:
 	Destination=NYC
@@ -136,7 +135,7 @@ TVL segment:
 	ProductId=1802
 
 ERC segment:
-	Code1=114
+	ApplicationErrorDetails=[(ApplictionErrorCode=114)]
 
 TVL segment:
 	DateAndTime=[(Date6=101022)]

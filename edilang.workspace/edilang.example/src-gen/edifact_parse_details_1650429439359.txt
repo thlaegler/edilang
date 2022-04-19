@@ -1,13 +1,12 @@
 Parsed EDIFACT model:
 
 UNB segment:
+	InterchangeControlSenderRef=039I42XXTK0001
+	DateAndTime=[(Date6=200120, Time4=2136)]
 	InterchangeSender=(Interchange=1APPC)
 	InterchangeRecipient=(Interchange=NZ0AV)
 	AssiciationCode=0
-	DateAndTime=[(Date6=200120, Time4=2136)]
-	Num1=1
-	Syntax=IATB
-	InterchangeControlSenderRef=039I42XXTK0001
+	Header=(Syntax=IATB, Num1=1)
 
 UNH segment:
 	MessageReferenceNumber=1
@@ -15,16 +14,16 @@ UNH segment:
 	Message=(ControllingAgency=IA, Release=2, Type=PAOREQ, Version=96)
 
 MSG segment:
-	MessageFunction=(BusinessFunction=1, MessageFunction1=A46)
+	MessageIdentifier=(VersionIdentifier=A46, MessageTypeCode=1)
 
 ORG segment:
+	OriginatorIdentification=(TravelAgentId=27213082, InHouseId1=ATHGR28CS)
+	OriginatorsAuthorityRequestCode=A9996WSSU
 	SystemDetail1=(CompanyIdentification=1A, LocationCode=MUC)
 	OriginatorTypeCode=T
 	Originator=(CountryCode=GR, LanguageCode=EN, CurrencyCode=EUR)
 	CommunicationNumber=04261178
 	PartyIdIdentification=1A
-	OriginatorIdentification=(TravelAgentId=27213082, InHouseId1=ATHGR28CS)
-	OriginatorsAuthorityRequestCode=A9996WSSU
 	Location=(LocationId=ATH)
 
 POC segment:

@@ -6,6 +6,7 @@ package io.thlaegler.edifact.edilang.impl;
 import io.thlaegler.edifact.edilang.DateAndTimeFunction;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.InterchangerFunction;
+import io.thlaegler.edifact.edilang.UNBHeader;
 import io.thlaegler.edifact.edilang.UNBSegment;
 
 import java.util.Collection;
@@ -31,8 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.UNBSegmentImpl#getSyntax <em>Syntax</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.UNBSegmentImpl#getNum1 <em>Num1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.UNBSegmentImpl#getHeader <em>Header</em>}</li>
  *   <li>{@link io.thlaegler.edifact.edilang.impl.UNBSegmentImpl#getInterchangeSender <em>Interchange Sender</em>}</li>
  *   <li>{@link io.thlaegler.edifact.edilang.impl.UNBSegmentImpl#getInterchangeRecipient <em>Interchange Recipient</em>}</li>
  *   <li>{@link io.thlaegler.edifact.edilang.impl.UNBSegmentImpl#getDateAndTime <em>Date And Time</em>}</li>
@@ -47,44 +47,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
 {
   /**
-   * The default value of the '{@link #getSyntax() <em>Syntax</em>}' attribute.
+   * The cached value of the '{@link #getHeader() <em>Header</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSyntax()
+   * @see #getHeader()
    * @generated
    * @ordered
    */
-  protected static final String SYNTAX_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getSyntax() <em>Syntax</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSyntax()
-   * @generated
-   * @ordered
-   */
-  protected String syntax = SYNTAX_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getNum1() <em>Num1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNum1()
-   * @generated
-   * @ordered
-   */
-  protected static final String NUM1_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNum1() <em>Num1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNum1()
-   * @generated
-   * @ordered
-   */
-  protected String num1 = NUM1_EDEFAULT;
+  protected UNBHeader header;
 
   /**
    * The cached value of the '{@link #getInterchangeSender() <em>Interchange Sender</em>}' containment reference.
@@ -223,9 +193,9 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
    * @generated
    */
   @Override
-  public String getSyntax()
+  public UNBHeader getHeader()
   {
-    return syntax;
+    return header;
   }
 
   /**
@@ -233,13 +203,16 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setSyntax(String newSyntax)
+  public NotificationChain basicSetHeader(UNBHeader newHeader, NotificationChain msgs)
   {
-    String oldSyntax = syntax;
-    syntax = newSyntax;
+    UNBHeader oldHeader = header;
+    header = newHeader;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.UNB_SEGMENT__SYNTAX, oldSyntax, syntax));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.UNB_SEGMENT__HEADER, oldHeader, newHeader);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -248,23 +221,20 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
    * @generated
    */
   @Override
-  public String getNum1()
+  public void setHeader(UNBHeader newHeader)
   {
-    return num1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setNum1(String newNum1)
-  {
-    String oldNum1 = num1;
-    num1 = newNum1;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.UNB_SEGMENT__NUM1, oldNum1, num1));
+    if (newHeader != header)
+    {
+      NotificationChain msgs = null;
+      if (header != null)
+        msgs = ((InternalEObject)header).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.UNB_SEGMENT__HEADER, null, msgs);
+      if (newHeader != null)
+        msgs = ((InternalEObject)newHeader).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.UNB_SEGMENT__HEADER, null, msgs);
+      msgs = basicSetHeader(newHeader, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.UNB_SEGMENT__HEADER, newHeader, newHeader));
   }
 
   /**
@@ -492,6 +462,8 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
   {
     switch (featureID)
     {
+      case EdilangPackage.UNB_SEGMENT__HEADER:
+        return basicSetHeader(null, msgs);
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_SENDER:
         return basicSetInterchangeSender(null, msgs);
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_RECIPIENT:
@@ -512,10 +484,8 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.UNB_SEGMENT__SYNTAX:
-        return getSyntax();
-      case EdilangPackage.UNB_SEGMENT__NUM1:
-        return getNum1();
+      case EdilangPackage.UNB_SEGMENT__HEADER:
+        return getHeader();
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_SENDER:
         return getInterchangeSender();
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_RECIPIENT:
@@ -545,11 +515,8 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.UNB_SEGMENT__SYNTAX:
-        setSyntax((String)newValue);
-        return;
-      case EdilangPackage.UNB_SEGMENT__NUM1:
-        setNum1((String)newValue);
+      case EdilangPackage.UNB_SEGMENT__HEADER:
+        setHeader((UNBHeader)newValue);
         return;
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_SENDER:
         setInterchangeSender((InterchangerFunction)newValue);
@@ -587,11 +554,8 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.UNB_SEGMENT__SYNTAX:
-        setSyntax(SYNTAX_EDEFAULT);
-        return;
-      case EdilangPackage.UNB_SEGMENT__NUM1:
-        setNum1(NUM1_EDEFAULT);
+      case EdilangPackage.UNB_SEGMENT__HEADER:
+        setHeader((UNBHeader)null);
         return;
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_SENDER:
         setInterchangeSender((InterchangerFunction)null);
@@ -628,10 +592,8 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.UNB_SEGMENT__SYNTAX:
-        return SYNTAX_EDEFAULT == null ? syntax != null : !SYNTAX_EDEFAULT.equals(syntax);
-      case EdilangPackage.UNB_SEGMENT__NUM1:
-        return NUM1_EDEFAULT == null ? num1 != null : !NUM1_EDEFAULT.equals(num1);
+      case EdilangPackage.UNB_SEGMENT__HEADER:
+        return header != null;
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_SENDER:
         return interchangeSender != null;
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_RECIPIENT:
@@ -661,11 +623,7 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (syntax: ");
-    result.append(syntax);
-    result.append(", num1: ");
-    result.append(num1);
-    result.append(", interchangeControlSenderRef: ");
+    result.append(" (interchangeControlSenderRef: ");
     result.append(interchangeControlSenderRef);
     result.append(", interchangeControlRecipientRef: ");
     result.append(interchangeControlRecipientRef);

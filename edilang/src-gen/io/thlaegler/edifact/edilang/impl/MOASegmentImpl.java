@@ -20,8 +20,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.MOASegmentImpl#getCode1 <em>Code1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.MOASegmentImpl#getCode2 <em>Code2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MOASegmentImpl#getMonetaryAmountTypeCodeQualifier <em>Monetary Amount Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MOASegmentImpl#getMonetaryAmount <em>Monetary Amount</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MOASegmentImpl#getCurrencyIdentificationCode <em>Currency Identification Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MOASegmentImpl#getCurrencyTypeCodeQualifier <em>Currency Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MOASegmentImpl#getStatusDescriptionCode <em>Status Description Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +32,104 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
 {
   /**
-   * The default value of the '{@link #getCode1() <em>Code1</em>}' attribute.
+   * The default value of the '{@link #getMonetaryAmountTypeCodeQualifier() <em>Monetary Amount Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode1()
+   * @see #getMonetaryAmountTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String CODE1_EDEFAULT = null;
+  protected static final String MONETARY_AMOUNT_TYPE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCode1() <em>Code1</em>}' attribute.
+   * The cached value of the '{@link #getMonetaryAmountTypeCodeQualifier() <em>Monetary Amount Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode1()
+   * @see #getMonetaryAmountTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String code1 = CODE1_EDEFAULT;
+  protected String monetaryAmountTypeCodeQualifier = MONETARY_AMOUNT_TYPE_CODE_QUALIFIER_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getCode2() <em>Code2</em>}' attribute.
+   * The default value of the '{@link #getMonetaryAmount() <em>Monetary Amount</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode2()
+   * @see #getMonetaryAmount()
    * @generated
    * @ordered
    */
-  protected static final String CODE2_EDEFAULT = null;
+  protected static final String MONETARY_AMOUNT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCode2() <em>Code2</em>}' attribute.
+   * The cached value of the '{@link #getMonetaryAmount() <em>Monetary Amount</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode2()
+   * @see #getMonetaryAmount()
    * @generated
    * @ordered
    */
-  protected String code2 = CODE2_EDEFAULT;
+  protected String monetaryAmount = MONETARY_AMOUNT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCurrencyIdentificationCode() <em>Currency Identification Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrencyIdentificationCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String CURRENCY_IDENTIFICATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCurrencyIdentificationCode() <em>Currency Identification Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrencyIdentificationCode()
+   * @generated
+   * @ordered
+   */
+  protected String currencyIdentificationCode = CURRENCY_IDENTIFICATION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCurrencyTypeCodeQualifier() <em>Currency Type Code Qualifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrencyTypeCodeQualifier()
+   * @generated
+   * @ordered
+   */
+  protected static final String CURRENCY_TYPE_CODE_QUALIFIER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCurrencyTypeCodeQualifier() <em>Currency Type Code Qualifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCurrencyTypeCodeQualifier()
+   * @generated
+   * @ordered
+   */
+  protected String currencyTypeCodeQualifier = CURRENCY_TYPE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String STATUS_DESCRIPTION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected String statusDescriptionCode = STATUS_DESCRIPTION_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,9 +158,9 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
    * @generated
    */
   @Override
-  public String getCode1()
+  public String getMonetaryAmountTypeCodeQualifier()
   {
-    return code1;
+    return monetaryAmountTypeCodeQualifier;
   }
 
   /**
@@ -106,12 +169,12 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
    * @generated
    */
   @Override
-  public void setCode1(String newCode1)
+  public void setMonetaryAmountTypeCodeQualifier(String newMonetaryAmountTypeCodeQualifier)
   {
-    String oldCode1 = code1;
-    code1 = newCode1;
+    String oldMonetaryAmountTypeCodeQualifier = monetaryAmountTypeCodeQualifier;
+    monetaryAmountTypeCodeQualifier = newMonetaryAmountTypeCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MOA_SEGMENT__CODE1, oldCode1, code1));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT_TYPE_CODE_QUALIFIER, oldMonetaryAmountTypeCodeQualifier, monetaryAmountTypeCodeQualifier));
   }
 
   /**
@@ -120,9 +183,9 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
    * @generated
    */
   @Override
-  public String getCode2()
+  public String getMonetaryAmount()
   {
-    return code2;
+    return monetaryAmount;
   }
 
   /**
@@ -131,12 +194,87 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
    * @generated
    */
   @Override
-  public void setCode2(String newCode2)
+  public void setMonetaryAmount(String newMonetaryAmount)
   {
-    String oldCode2 = code2;
-    code2 = newCode2;
+    String oldMonetaryAmount = monetaryAmount;
+    monetaryAmount = newMonetaryAmount;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MOA_SEGMENT__CODE2, oldCode2, code2));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT, oldMonetaryAmount, monetaryAmount));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCurrencyIdentificationCode()
+  {
+    return currencyIdentificationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCurrencyIdentificationCode(String newCurrencyIdentificationCode)
+  {
+    String oldCurrencyIdentificationCode = currencyIdentificationCode;
+    currencyIdentificationCode = newCurrencyIdentificationCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MOA_SEGMENT__CURRENCY_IDENTIFICATION_CODE, oldCurrencyIdentificationCode, currencyIdentificationCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCurrencyTypeCodeQualifier()
+  {
+    return currencyTypeCodeQualifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCurrencyTypeCodeQualifier(String newCurrencyTypeCodeQualifier)
+  {
+    String oldCurrencyTypeCodeQualifier = currencyTypeCodeQualifier;
+    currencyTypeCodeQualifier = newCurrencyTypeCodeQualifier;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MOA_SEGMENT__CURRENCY_TYPE_CODE_QUALIFIER, oldCurrencyTypeCodeQualifier, currencyTypeCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getStatusDescriptionCode()
+  {
+    return statusDescriptionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setStatusDescriptionCode(String newStatusDescriptionCode)
+  {
+    String oldStatusDescriptionCode = statusDescriptionCode;
+    statusDescriptionCode = newStatusDescriptionCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MOA_SEGMENT__STATUS_DESCRIPTION_CODE, oldStatusDescriptionCode, statusDescriptionCode));
   }
 
   /**
@@ -149,10 +287,16 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MOA_SEGMENT__CODE1:
-        return getCode1();
-      case EdilangPackage.MOA_SEGMENT__CODE2:
-        return getCode2();
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT_TYPE_CODE_QUALIFIER:
+        return getMonetaryAmountTypeCodeQualifier();
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT:
+        return getMonetaryAmount();
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_IDENTIFICATION_CODE:
+        return getCurrencyIdentificationCode();
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_TYPE_CODE_QUALIFIER:
+        return getCurrencyTypeCodeQualifier();
+      case EdilangPackage.MOA_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return getStatusDescriptionCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,11 +311,20 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MOA_SEGMENT__CODE1:
-        setCode1((String)newValue);
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT_TYPE_CODE_QUALIFIER:
+        setMonetaryAmountTypeCodeQualifier((String)newValue);
         return;
-      case EdilangPackage.MOA_SEGMENT__CODE2:
-        setCode2((String)newValue);
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT:
+        setMonetaryAmount((String)newValue);
+        return;
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_IDENTIFICATION_CODE:
+        setCurrencyIdentificationCode((String)newValue);
+        return;
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_TYPE_CODE_QUALIFIER:
+        setCurrencyTypeCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.MOA_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,11 +340,20 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MOA_SEGMENT__CODE1:
-        setCode1(CODE1_EDEFAULT);
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT_TYPE_CODE_QUALIFIER:
+        setMonetaryAmountTypeCodeQualifier(MONETARY_AMOUNT_TYPE_CODE_QUALIFIER_EDEFAULT);
         return;
-      case EdilangPackage.MOA_SEGMENT__CODE2:
-        setCode2(CODE2_EDEFAULT);
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT:
+        setMonetaryAmount(MONETARY_AMOUNT_EDEFAULT);
+        return;
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_IDENTIFICATION_CODE:
+        setCurrencyIdentificationCode(CURRENCY_IDENTIFICATION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_TYPE_CODE_QUALIFIER:
+        setCurrencyTypeCodeQualifier(CURRENCY_TYPE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.MOA_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode(STATUS_DESCRIPTION_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -207,10 +369,16 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MOA_SEGMENT__CODE1:
-        return CODE1_EDEFAULT == null ? code1 != null : !CODE1_EDEFAULT.equals(code1);
-      case EdilangPackage.MOA_SEGMENT__CODE2:
-        return CODE2_EDEFAULT == null ? code2 != null : !CODE2_EDEFAULT.equals(code2);
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT_TYPE_CODE_QUALIFIER:
+        return MONETARY_AMOUNT_TYPE_CODE_QUALIFIER_EDEFAULT == null ? monetaryAmountTypeCodeQualifier != null : !MONETARY_AMOUNT_TYPE_CODE_QUALIFIER_EDEFAULT.equals(monetaryAmountTypeCodeQualifier);
+      case EdilangPackage.MOA_SEGMENT__MONETARY_AMOUNT:
+        return MONETARY_AMOUNT_EDEFAULT == null ? monetaryAmount != null : !MONETARY_AMOUNT_EDEFAULT.equals(monetaryAmount);
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_IDENTIFICATION_CODE:
+        return CURRENCY_IDENTIFICATION_CODE_EDEFAULT == null ? currencyIdentificationCode != null : !CURRENCY_IDENTIFICATION_CODE_EDEFAULT.equals(currencyIdentificationCode);
+      case EdilangPackage.MOA_SEGMENT__CURRENCY_TYPE_CODE_QUALIFIER:
+        return CURRENCY_TYPE_CODE_QUALIFIER_EDEFAULT == null ? currencyTypeCodeQualifier != null : !CURRENCY_TYPE_CODE_QUALIFIER_EDEFAULT.equals(currencyTypeCodeQualifier);
+      case EdilangPackage.MOA_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return STATUS_DESCRIPTION_CODE_EDEFAULT == null ? statusDescriptionCode != null : !STATUS_DESCRIPTION_CODE_EDEFAULT.equals(statusDescriptionCode);
     }
     return super.eIsSet(featureID);
   }
@@ -226,10 +394,16 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (code1: ");
-    result.append(code1);
-    result.append(", code2: ");
-    result.append(code2);
+    result.append(" (monetaryAmountTypeCodeQualifier: ");
+    result.append(monetaryAmountTypeCodeQualifier);
+    result.append(", monetaryAmount: ");
+    result.append(monetaryAmount);
+    result.append(", currencyIdentificationCode: ");
+    result.append(currencyIdentificationCode);
+    result.append(", currencyTypeCodeQualifier: ");
+    result.append(currencyTypeCodeQualifier);
+    result.append(", statusDescriptionCode: ");
+    result.append(statusDescriptionCode);
     result.append(')');
     return result.toString();
   }

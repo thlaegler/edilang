@@ -3,6 +3,7 @@
  */
 package io.thlaegler.edifact.edilang;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,9 +14,7 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.DTMSegment#getNum1 <em>Num1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.DTMSegment#getNum2 <em>Num2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.DTMSegment#getNum3 <em>Num3</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.DTMSegment#getDateTimePeriods <em>Date Time Periods</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getDTMSegment()
@@ -25,69 +24,15 @@ package io.thlaegler.edifact.edilang;
 public interface DTMSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Num1</b></em>' attribute.
+   * Returns the value of the '<em><b>Date Time Periods</b></em>' containment reference list.
+   * The list contents are of type {@link io.thlaegler.edifact.edilang.DateTimePeriod}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Num1</em>' attribute.
-   * @see #setNum1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDTMSegment_Num1()
-   * @model
+   * @return the value of the '<em>Date Time Periods</em>' containment reference list.
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDTMSegment_DateTimePeriods()
+   * @model containment="true"
    * @generated
    */
-  String getNum1();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DTMSegment#getNum1 <em>Num1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num1</em>' attribute.
-   * @see #getNum1()
-   * @generated
-   */
-  void setNum1(String value);
-
-  /**
-   * Returns the value of the '<em><b>Num2</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Num2</em>' attribute.
-   * @see #setNum2(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDTMSegment_Num2()
-   * @model
-   * @generated
-   */
-  String getNum2();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DTMSegment#getNum2 <em>Num2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num2</em>' attribute.
-   * @see #getNum2()
-   * @generated
-   */
-  void setNum2(String value);
-
-  /**
-   * Returns the value of the '<em><b>Num3</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Num3</em>' attribute.
-   * @see #setNum3(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDTMSegment_Num3()
-   * @model
-   * @generated
-   */
-  String getNum3();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DTMSegment#getNum3 <em>Num3</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num3</em>' attribute.
-   * @see #getNum3()
-   * @generated
-   */
-  void setNum3(String value);
+  EList<DateTimePeriod> getDateTimePeriods();
 
 } // DTMSegment

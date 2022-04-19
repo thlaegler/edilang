@@ -3,6 +3,7 @@
  */
 package io.thlaegler.edifact.edilang;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,7 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ERCSegment#getCode1 <em>Code1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ERCSegment#getApplicationErrorDetails <em>Application Error Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getERCSegment()
@@ -23,25 +24,15 @@ package io.thlaegler.edifact.edilang;
 public interface ERCSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Code1</b></em>' attribute.
+   * Returns the value of the '<em><b>Application Error Details</b></em>' containment reference list.
+   * The list contents are of type {@link io.thlaegler.edifact.edilang.ApplicationErrorDetail}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code1</em>' attribute.
-   * @see #setCode1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getERCSegment_Code1()
-   * @model
+   * @return the value of the '<em>Application Error Details</em>' containment reference list.
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getERCSegment_ApplicationErrorDetails()
+   * @model containment="true"
    * @generated
    */
-  String getCode1();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ERCSegment#getCode1 <em>Code1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code1</em>' attribute.
-   * @see #getCode1()
-   * @generated
-   */
-  void setCode1(String value);
+  EList<ApplicationErrorDetail> getApplicationErrorDetails();
 
 } // ERCSegment

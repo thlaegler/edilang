@@ -1,0 +1,95 @@
+Parsed EDIFACT model:
+
+UNB segment:
+	InterchangeControlSenderRef=6002
+	DateAndTime=[(Date6=20051107, Time4=1159)]
+	InterchangeSender=(Interchange=STYLUSSTUDIO, Interchange2=1)
+	InterchangeRecipient=(Interchange=DATADIRECT, Interchange2=1)
+	Header=(Syntax=UNOA, Num1=3)
+
+UNH segment:
+	MessageReferenceNumber=SSDD1
+	Message=(ControllingAgency=UN, Release=03B, More=EAN008, Type=ORDERS, Version=D)
+
+BGM segment:
+	DocumentMessageIdentification=(DocumentIdentifier=BKOD99)
+	DocumentMessageName=(DocumentNameCode=220)
+	MessageFunctionCode=9
+
+DTM segment:
+	DateTimePeriods=[(DateTimePeriodFunctionCodeQualifier=137, DateTimePeriodFormatCode=102, DateTimePeriodValue=20051107)]
+
+NAD segment:
+	PartyFunctionCodeQualifier=BY
+	PartyIdentificationDetails=io.thlaegler.edifact.edilang.impl.PartyIdentificationDetailImpl@4fef3764 (partyIdentifier: 5412345000176, codeListIdentificationCode: null, codeListResponsibleAgencyCode: 9)
+
+NAD segment:
+	PartyFunctionCodeQualifier=SU
+	PartyIdentificationDetails=io.thlaegler.edifact.edilang.impl.PartyIdentificationDetailImpl@e5dfdf6 (partyIdentifier: 4012345000094, codeListIdentificationCode: null, codeListResponsibleAgencyCode: 9)
+
+LIN segment:
+	ItemNumberIdentification=(ItemTypeIdentificationCode=IB, ItemIdentifier=0764569104)
+	LineItemIdentifier=1
+	ActionRequest=1
+
+QTY segment:
+	QuantityDetails=[(QuantityTypeCodeQualifier=1, Quantity=25)]
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=XPath 2.0 Programmer?s Reference
+
+LIN segment:
+	ItemNumberIdentification=(ItemTypeIdentificationCode=IB, ItemIdentifier=0764569090)
+	LineItemIdentifier=2
+	ActionRequest=1
+
+QTY segment:
+	QuantityDetails=[(QuantityTypeCodeQualifier=1, Quantity=25)]
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=XSLT 2.0 Programmer?s Reference
+
+LIN segment:
+	ItemNumberIdentification=(ItemTypeIdentificationCode=IB, ItemIdentifier=1861004656)
+	LineItemIdentifier=3
+	ActionRequest=1
+
+QTY segment:
+	QuantityDetails=[(QuantityTypeCodeQualifier=1, Quantity=16)]
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=Java Server Programming
+
+LIN segment:
+	ItemNumberIdentification=(ItemTypeIdentificationCode=IB, ItemIdentifier=0596006756)
+	LineItemIdentifier=4
+	ActionRequest=1
+
+QTY segment:
+	QuantityDetails=[(QuantityTypeCodeQualifier=1, Quantity=10)]
+
+FTX segment:
+	Todo1=AFM
+	Todo2=1
+	Todo4=Enterprise Service Bus
+
+UNS segment:
+	SegmentCount=S
+
+CNT segment:
+	Todo1=2
+	Todo2=4
+
+UNT segment:
+	MessageReferenceNumber=SSDD1
+	SegmentCount=22
+
+UNZ segment:
+	InterchangeControlCount=1
+	InterchangeControlRef=6002

@@ -321,13 +321,22 @@ public interface EdilangFactory extends EFactory
   AbstractEdiFunction createAbstractEdiFunction();
 
   /**
-   * Returns a new object of class '<em>PRI Function</em>'.
+   * Returns a new object of class '<em>UNB Header</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>PRI Function</em>'.
+   * @return a new object of class '<em>UNB Header</em>'.
    * @generated
    */
-  PRIFunction createPRIFunction();
+  UNBHeader createUNBHeader();
+
+  /**
+   * Returns a new object of class '<em>Price Information</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Price Information</em>'.
+   * @generated
+   */
+  PriceInformation createPriceInformation();
 
   /**
    * Returns a new object of class '<em>Message Body Function</em>'.
@@ -339,13 +348,22 @@ public interface EdilangFactory extends EFactory
   MessageBodyFunction createMessageBodyFunction();
 
   /**
-   * Returns a new object of class '<em>MSG Function</em>'.
+   * Returns a new object of class '<em>Message Indentifier</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>MSG Function</em>'.
+   * @return a new object of class '<em>Message Indentifier</em>'.
    * @generated
    */
-  MSGFunction createMSGFunction();
+  MessageIndentifier createMessageIndentifier();
+
+  /**
+   * Returns a new object of class '<em>Relationship</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Relationship</em>'.
+   * @generated
+   */
+  Relationship createRelationship();
 
   /**
    * Returns a new object of class '<em>Product Function</em>'.
@@ -357,6 +375,87 @@ public interface EdilangFactory extends EFactory
   ProductFunction createProductFunction();
 
   /**
+   * Returns a new object of class '<em>Item Number Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Item Number Identification</em>'.
+   * @generated
+   */
+  ItemNumberIdentification createItemNumberIdentification();
+
+  /**
+   * Returns a new object of class '<em>Subline Information</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Subline Information</em>'.
+   * @generated
+   */
+  SublineInformation createSublineInformation();
+
+  /**
+   * Returns a new object of class '<em>Quantity Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Quantity Detail</em>'.
+   * @generated
+   */
+  QuantityDetail createQuantityDetail();
+
+  /**
+   * Returns a new object of class '<em>Street</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Street</em>'.
+   * @generated
+   */
+  Street createStreet();
+
+  /**
+   * Returns a new object of class '<em>Country Sub Entity Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Country Sub Entity Detail</em>'.
+   * @generated
+   */
+  CountrySubEntityDetail createCountrySubEntityDetail();
+
+  /**
+   * Returns a new object of class '<em>Party Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Party Name</em>'.
+   * @generated
+   */
+  PartyName createPartyName();
+
+  /**
+   * Returns a new object of class '<em>Name And Address</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Name And Address</em>'.
+   * @generated
+   */
+  NameAndAddress createNameAndAddress();
+
+  /**
+   * Returns a new object of class '<em>Party Identification Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Party Identification Detail</em>'.
+   * @generated
+   */
+  PartyIdentificationDetail createPartyIdentificationDetail();
+
+  /**
+   * Returns a new object of class '<em>Application Error Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Application Error Detail</em>'.
+   * @generated
+   */
+  ApplicationErrorDetail createApplicationErrorDetail();
+
+  /**
    * Returns a new object of class '<em>System Detail Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -364,6 +463,60 @@ public interface EdilangFactory extends EFactory
    * @generated
    */
   SystemDetailFunction createSystemDetailFunction();
+
+  /**
+   * Returns a new object of class '<em>Tax Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tax Detail</em>'.
+   * @generated
+   */
+  TaxDetail createTaxDetail();
+
+  /**
+   * Returns a new object of class '<em>Tax Account Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tax Account Detail</em>'.
+   * @generated
+   */
+  TaxAccountDetail createTaxAccountDetail();
+
+  /**
+   * Returns a new object of class '<em>Tax Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tax Type</em>'.
+   * @generated
+   */
+  TaxType createTaxType();
+
+  /**
+   * Returns a new object of class '<em>Currency Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Currency Detail</em>'.
+   * @generated
+   */
+  CurrencyDetail createCurrencyDetail();
+
+  /**
+   * Returns a new object of class '<em>Document Message Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Document Message Identification</em>'.
+   * @generated
+   */
+  DocumentMessageIdentification createDocumentMessageIdentification();
+
+  /**
+   * Returns a new object of class '<em>Document Message</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Document Message</em>'.
+   * @generated
+   */
+  DocumentMessage createDocumentMessage();
 
   /**
    * Returns a new object of class '<em>Originator Function</em>'.
@@ -418,6 +571,15 @@ public interface EdilangFactory extends EFactory
    * @generated
    */
   DateAndTimeFunction createDateAndTimeFunction();
+
+  /**
+   * Returns a new object of class '<em>Date Time Period</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Date Time Period</em>'.
+   * @generated
+   */
+  DateTimePeriod createDateTimePeriod();
 
   /**
    * Returns the package supported by this factory.

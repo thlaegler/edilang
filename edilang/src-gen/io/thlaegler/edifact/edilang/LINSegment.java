@@ -13,10 +13,12 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getCode1 <em>Code1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getCode2 <em>Code2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getCode3 <em>Code3</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getCode4 <em>Code4</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getLineItemIdentifier <em>Line Item Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getActionRequest <em>Action Request</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getItemNumberIdentification <em>Item Number Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getSublineInformation <em>Subline Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getConfigurationLevelNumber <em>Configuration Level Number</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LINSegment#getConfigurationOperationCode <em>Configuration Operation Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment()
@@ -26,91 +28,135 @@ package io.thlaegler.edifact.edilang;
 public interface LINSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Code1</b></em>' attribute.
+   * Returns the value of the '<em><b>Line Item Identifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code1</em>' attribute.
-   * @see #setCode1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_Code1()
+   * @return the value of the '<em>Line Item Identifier</em>' attribute.
+   * @see #setLineItemIdentifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_LineItemIdentifier()
    * @model
    * @generated
    */
-  String getCode1();
+  String getLineItemIdentifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getCode1 <em>Code1</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getLineItemIdentifier <em>Line Item Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code1</em>' attribute.
-   * @see #getCode1()
+   * @param value the new value of the '<em>Line Item Identifier</em>' attribute.
+   * @see #getLineItemIdentifier()
    * @generated
    */
-  void setCode1(String value);
+  void setLineItemIdentifier(String value);
 
   /**
-   * Returns the value of the '<em><b>Code2</b></em>' attribute.
+   * Returns the value of the '<em><b>Action Request</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code2</em>' attribute.
-   * @see #setCode2(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_Code2()
+   * @return the value of the '<em>Action Request</em>' attribute.
+   * @see #setActionRequest(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_ActionRequest()
    * @model
    * @generated
    */
-  String getCode2();
+  String getActionRequest();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getCode2 <em>Code2</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getActionRequest <em>Action Request</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code2</em>' attribute.
-   * @see #getCode2()
+   * @param value the new value of the '<em>Action Request</em>' attribute.
+   * @see #getActionRequest()
    * @generated
    */
-  void setCode2(String value);
+  void setActionRequest(String value);
 
   /**
-   * Returns the value of the '<em><b>Code3</b></em>' attribute.
+   * Returns the value of the '<em><b>Item Number Identification</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code3</em>' attribute.
-   * @see #setCode3(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_Code3()
+   * @return the value of the '<em>Item Number Identification</em>' containment reference.
+   * @see #setItemNumberIdentification(ItemNumberIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_ItemNumberIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  ItemNumberIdentification getItemNumberIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getItemNumberIdentification <em>Item Number Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Item Number Identification</em>' containment reference.
+   * @see #getItemNumberIdentification()
+   * @generated
+   */
+  void setItemNumberIdentification(ItemNumberIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Subline Information</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Subline Information</em>' containment reference.
+   * @see #setSublineInformation(SublineInformation)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_SublineInformation()
+   * @model containment="true"
+   * @generated
+   */
+  SublineInformation getSublineInformation();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getSublineInformation <em>Subline Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Subline Information</em>' containment reference.
+   * @see #getSublineInformation()
+   * @generated
+   */
+  void setSublineInformation(SublineInformation value);
+
+  /**
+   * Returns the value of the '<em><b>Configuration Level Number</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Configuration Level Number</em>' attribute.
+   * @see #setConfigurationLevelNumber(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_ConfigurationLevelNumber()
    * @model
    * @generated
    */
-  String getCode3();
+  String getConfigurationLevelNumber();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getCode3 <em>Code3</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getConfigurationLevelNumber <em>Configuration Level Number</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code3</em>' attribute.
-   * @see #getCode3()
+   * @param value the new value of the '<em>Configuration Level Number</em>' attribute.
+   * @see #getConfigurationLevelNumber()
    * @generated
    */
-  void setCode3(String value);
+  void setConfigurationLevelNumber(String value);
 
   /**
-   * Returns the value of the '<em><b>Code4</b></em>' attribute.
+   * Returns the value of the '<em><b>Configuration Operation Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code4</em>' attribute.
-   * @see #setCode4(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_Code4()
+   * @return the value of the '<em>Configuration Operation Code</em>' attribute.
+   * @see #setConfigurationOperationCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLINSegment_ConfigurationOperationCode()
    * @model
    * @generated
    */
-  String getCode4();
+  String getConfigurationOperationCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getCode4 <em>Code4</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LINSegment#getConfigurationOperationCode <em>Configuration Operation Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code4</em>' attribute.
-   * @see #getCode4()
+   * @param value the new value of the '<em>Configuration Operation Code</em>' attribute.
+   * @see #getConfigurationOperationCode()
    * @generated
    */
-  void setCode4(String value);
+  void setConfigurationOperationCode(String value);
 
 } // LINSegment

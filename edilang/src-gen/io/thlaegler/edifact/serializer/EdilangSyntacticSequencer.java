@@ -22,12 +22,15 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected EdilangGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_CNTSegment_COLONTerminalRuleCall_2_1_q;
-	protected AbstractElementAlias match_NADSegment___COLONTerminalRuleCall_4_1_COLONTerminalRuleCall_4_3__q;
 	protected AbstractElementAlias match_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q;
 	protected AbstractElementAlias match_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q;
-	protected AbstractElementAlias match_TAXSegment___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q;
-	protected AbstractElementAlias match_TAXSegment___PLUSTerminalRuleCall_5_0_PLUSTerminalRuleCall_5_2_PLUSTerminalRuleCall_5_4___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q__q;
-	protected AbstractElementAlias match_UNBSegment_COLONTerminalRuleCall_2_1_q;
+	protected AbstractElementAlias match_PartyIdentificationDetail_COLONTerminalRuleCall_1_0_q;
+	protected AbstractElementAlias match_TAXSegment_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q;
+	protected AbstractElementAlias match_TAXSegment___PLUSTerminalRuleCall_5_0___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q__q;
+	protected AbstractElementAlias match_TAXSegment___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q;
+	protected AbstractElementAlias match_TAXSegment___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q;
+	protected AbstractElementAlias match_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q;
+	protected AbstractElementAlias match_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q;
 	protected AbstractElementAlias match_UNBSegment_PLUSTerminalRuleCall_11_2_2_0_q;
 	protected AbstractElementAlias match_UNBSegment___PLUSTerminalRuleCall_11_0___PLUSTerminalRuleCall_11_2_0_PLUSTerminalRuleCall_11_2_2_0_q__q__q;
 	protected AbstractElementAlias match_UNBSegment___PLUSTerminalRuleCall_11_2_0_PLUSTerminalRuleCall_11_2_2_0_q__q;
@@ -36,12 +39,15 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (EdilangGrammarAccess) access;
 		match_CNTSegment_COLONTerminalRuleCall_2_1_q = new TokenAlias(false, true, grammarAccess.getCNTSegmentAccess().getCOLONTerminalRuleCall_2_1());
-		match_NADSegment___COLONTerminalRuleCall_4_1_COLONTerminalRuleCall_4_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getNADSegmentAccess().getCOLONTerminalRuleCall_4_1()), new TokenAlias(false, false, grammarAccess.getNADSegmentAccess().getCOLONTerminalRuleCall_4_3()));
 		match_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getODISegmentAccess().getPLUSTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getODISegmentAccess().getPLUSTerminalRuleCall_1_2()));
 		match_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q = new TokenAlias(false, true, grammarAccess.getOriginatorIdentificationFunctionAccess().getCOLONTerminalRuleCall_1_0());
-		match_TAXSegment___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getCOLONTerminalRuleCall_5_5_1()), new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getCOLONTerminalRuleCall_5_5_3()), new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getCOLONTerminalRuleCall_5_5_5()));
-		match_TAXSegment___PLUSTerminalRuleCall_5_0_PLUSTerminalRuleCall_5_2_PLUSTerminalRuleCall_5_4___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_0()), new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2()), new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_4()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getCOLONTerminalRuleCall_5_5_1()), new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getCOLONTerminalRuleCall_5_5_3()), new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getCOLONTerminalRuleCall_5_5_5())));
-		match_UNBSegment_COLONTerminalRuleCall_2_1_q = new TokenAlias(false, true, grammarAccess.getUNBSegmentAccess().getCOLONTerminalRuleCall_2_1());
+		match_PartyIdentificationDetail_COLONTerminalRuleCall_1_0_q = new TokenAlias(false, true, grammarAccess.getPartyIdentificationDetailAccess().getCOLONTerminalRuleCall_1_0());
+		match_TAXSegment_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q = new TokenAlias(false, true, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_2_0());
+		match_TAXSegment___PLUSTerminalRuleCall_5_0___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_0()), new TokenAlias(false, true, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_2_0()))))));
+		match_TAXSegment___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_0()), new TokenAlias(false, true, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_2_0())))));
+		match_TAXSegment___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_0()), new TokenAlias(false, true, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_2_0()))));
+		match_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_0()), new TokenAlias(false, true, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_2_0())));
+		match_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_0()), new TokenAlias(false, true, grammarAccess.getTAXSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_2_0()));
 		match_UNBSegment_PLUSTerminalRuleCall_11_2_2_0_q = new TokenAlias(false, true, grammarAccess.getUNBSegmentAccess().getPLUSTerminalRuleCall_11_2_2_0());
 		match_UNBSegment___PLUSTerminalRuleCall_11_0___PLUSTerminalRuleCall_11_2_0_PLUSTerminalRuleCall_11_2_2_0_q__q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getUNBSegmentAccess().getPLUSTerminalRuleCall_11_0()), new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getUNBSegmentAccess().getPLUSTerminalRuleCall_11_2_0()), new TokenAlias(false, true, grammarAccess.getUNBSegmentAccess().getPLUSTerminalRuleCall_11_2_2_0())));
 		match_UNBSegment___PLUSTerminalRuleCall_11_2_0_PLUSTerminalRuleCall_11_2_2_0_q__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getUNBSegmentAccess().getPLUSTerminalRuleCall_11_2_0()), new TokenAlias(false, true, grammarAccess.getUNBSegmentAccess().getPLUSTerminalRuleCall_11_2_2_0()));
@@ -82,18 +88,24 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if (match_CNTSegment_COLONTerminalRuleCall_2_1_q.equals(syntax))
 				emit_CNTSegment_COLONTerminalRuleCall_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_NADSegment___COLONTerminalRuleCall_4_1_COLONTerminalRuleCall_4_3__q.equals(syntax))
-				emit_NADSegment___COLONTerminalRuleCall_4_1_COLONTerminalRuleCall_4_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q.equals(syntax))
 				emit_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q.equals(syntax))
 				emit_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TAXSegment___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q.equals(syntax))
-				emit_TAXSegment___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TAXSegment___PLUSTerminalRuleCall_5_0_PLUSTerminalRuleCall_5_2_PLUSTerminalRuleCall_5_4___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q__q.equals(syntax))
-				emit_TAXSegment___PLUSTerminalRuleCall_5_0_PLUSTerminalRuleCall_5_2_PLUSTerminalRuleCall_5_4___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_UNBSegment_COLONTerminalRuleCall_2_1_q.equals(syntax))
-				emit_UNBSegment_COLONTerminalRuleCall_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_PartyIdentificationDetail_COLONTerminalRuleCall_1_0_q.equals(syntax))
+				emit_PartyIdentificationDetail_COLONTerminalRuleCall_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TAXSegment_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q.equals(syntax))
+				emit_TAXSegment_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TAXSegment___PLUSTerminalRuleCall_5_0___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q__q.equals(syntax))
+				emit_TAXSegment___PLUSTerminalRuleCall_5_0___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TAXSegment___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q.equals(syntax))
+				emit_TAXSegment___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TAXSegment___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q.equals(syntax))
+				emit_TAXSegment___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q.equals(syntax))
+				emit_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q.equals(syntax))
+				emit_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_UNBSegment_PLUSTerminalRuleCall_11_2_2_0_q.equals(syntax))
 				emit_UNBSegment_PLUSTerminalRuleCall_11_2_2_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_UNBSegment___PLUSTerminalRuleCall_11_0___PLUSTerminalRuleCall_11_2_0_PLUSTerminalRuleCall_11_2_2_0_q__q__q.equals(syntax))
@@ -115,20 +127,6 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * </pre>
 	 */
 	protected void emit_CNTSegment_COLONTerminalRuleCall_2_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     (COLON COLON)?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     code=ID PLUS (ambiguity) lineEnd=QUOTE_AND_NL
-	 
-	 * </pre>
-	 */
-	protected void emit_NADSegment___COLONTerminalRuleCall_4_1_COLONTerminalRuleCall_4_3__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -163,50 +161,98 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 	/**
 	 * <pre>
 	 * Ambiguous syntax:
-	 *     (COLON COLON COLON)?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     todo1=ID PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
-	 *     todo2=ID PLUS (ambiguity) lineEnd=QUOTE_AND_NL
-	 
-	 * </pre>
-	 */
-	protected void emit_TAXSegment___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     (PLUS PLUS PLUS (COLON COLON COLON)?)?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     type=ID (ambiguity) lineEnd=QUOTE_AND_NL
-	 
-	 * </pre>
-	 */
-	protected void emit_TAXSegment___PLUSTerminalRuleCall_5_0_PLUSTerminalRuleCall_5_2_PLUSTerminalRuleCall_5_4___COLONTerminalRuleCall_5_5_1_COLONTerminalRuleCall_5_5_3_COLONTerminalRuleCall_5_5_5__q__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
 	 *     COLON?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     segment='UNB' PLUS (ambiguity) PLUS PLUS PLUS PLUS (PLUS (PLUS PLUS?)?)? lineEnd=QUOTE_AND_NL
-	 *     segment='UNB' PLUS (ambiguity) PLUS PLUS PLUS PLUS PLUS PLUS PLUS assiciationCode=ID
-	 *     segment='UNB' PLUS (ambiguity) PLUS PLUS PLUS PLUS PLUS PLUS fse=ID
-	 *     segment='UNB' PLUS (ambiguity) PLUS PLUS PLUS PLUS PLUS interchangeControlRecipientRef=ID
-	 *     segment='UNB' PLUS (ambiguity) PLUS PLUS PLUS PLUS interchangeControlSenderRef=ID
-	 *     segment='UNB' PLUS (ambiguity) PLUS PLUS PLUS dateAndTime+=DateAndTimeFunction
-	 *     segment='UNB' PLUS (ambiguity) PLUS PLUS interchangeRecipient=InterchangerFunction
-	 *     segment='UNB' PLUS (ambiguity) PLUS interchangeSender=InterchangerFunction
+	 *     partyIdentifier=ID (ambiguity) (rule end)
 	 
 	 * </pre>
 	 */
-	protected void emit_UNBSegment_COLONTerminalRuleCall_2_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_PartyIdentificationDetail_COLONTerminalRuleCall_1_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     PLUS?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     partyTaxIdentifier=ID (ambiguity) lineEnd=QUOTE_AND_NL
+	 
+	 * </pre>
+	 */
+	protected void emit_TAXSegment_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     (PLUS (PLUS (PLUS (PLUS (PLUS PLUS?)?)?)?)?)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     taxType=TaxType (ambiguity) lineEnd=QUOTE_AND_NL
+	 
+	 * </pre>
+	 */
+	protected void emit_TAXSegment___PLUSTerminalRuleCall_5_0___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     (PLUS (PLUS (PLUS (PLUS PLUS?)?)?)?)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     taxAccountDetail=TaxAccountDetail (ambiguity) lineEnd=QUOTE_AND_NL
+	 
+	 * </pre>
+	 */
+	protected void emit_TAXSegment___PLUSTerminalRuleCall_5_2_0___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     (PLUS (PLUS (PLUS PLUS?)?)?)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     taxAssessmentBasicValue=ID (ambiguity) lineEnd=QUOTE_AND_NL
+	 
+	 * </pre>
+	 */
+	protected void emit_TAXSegment___PLUSTerminalRuleCall_5_2_2_0___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     (PLUS (PLUS PLUS?)?)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     taxDetail=TaxDetail (ambiguity) lineEnd=QUOTE_AND_NL
+	 
+	 * </pre>
+	 */
+	protected void emit_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_0___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     (PLUS PLUS?)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     taxCategoryCode=ID (ambiguity) lineEnd=QUOTE_AND_NL
+	 
+	 * </pre>
+	 */
+	protected void emit_TAXSegment___PLUSTerminalRuleCall_5_2_2_2_2_0_PLUSTerminalRuleCall_5_2_2_2_2_2_0_q__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -231,12 +277,11 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     dateAndTime+=DateAndTimeFunction PLUS (ambiguity) lineEnd=QUOTE_AND_NL
+	 *     header=UNBHeader PLUS PLUS PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
 	 *     interchangeControlSenderRef=ID (ambiguity) lineEnd=QUOTE_AND_NL
 	 *     interchangeRecipient=InterchangerFunction PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
 	 *     interchangeSender=InterchangerFunction PLUS PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
-	 *     num1=ID PLUS PLUS PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
-	 *     segment='UNB' PLUS COLON? PLUS PLUS PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
-	 *     syntax=ID COLON PLUS PLUS PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
+	 *     segment='UNB' PLUS PLUS PLUS PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
 	 
 	 * </pre>
 	 */

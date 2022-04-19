@@ -5,10 +5,15 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.TAXSegment;
+import io.thlaegler.edifact.edilang.TaxAccountDetail;
+import io.thlaegler.edifact.edilang.TaxDetail;
+import io.thlaegler.edifact.edilang.TaxType;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,14 +25,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getNum <em>Num</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getType <em>Type</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTodo1 <em>Todo1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTodo2 <em>Todo2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTodo3 <em>Todo3</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTodo4 <em>Todo4</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTodo5 <em>Todo5</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTodo6 <em>Todo6</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTaxFunctionCodeQualifier <em>Tax Function Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTaxType <em>Tax Type</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTaxAccountDetail <em>Tax Account Detail</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTaxAssessmentBasicValue <em>Tax Assessment Basic Value</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTaxDetail <em>Tax Detail</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getTaxCategoryCode <em>Tax Category Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getPartyTaxIdentifier <em>Party Tax Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TAXSegmentImpl#getCalculationSequenceCode <em>Calculation Sequence Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -35,164 +40,134 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
 {
   /**
-   * The default value of the '{@link #getNum() <em>Num</em>}' attribute.
+   * The default value of the '{@link #getTaxFunctionCodeQualifier() <em>Tax Function Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum()
+   * @see #getTaxFunctionCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String NUM_EDEFAULT = null;
+  protected static final String TAX_FUNCTION_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNum() <em>Num</em>}' attribute.
+   * The cached value of the '{@link #getTaxFunctionCodeQualifier() <em>Tax Function Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum()
+   * @see #getTaxFunctionCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String num = NUM_EDEFAULT;
+  protected String taxFunctionCodeQualifier = TAX_FUNCTION_CODE_QUALIFIER_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getTaxType() <em>Tax Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getTaxType()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected TaxType taxType;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getTaxAccountDetail() <em>Tax Account Detail</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getTaxAccountDetail()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected TaxAccountDetail taxAccountDetail;
 
   /**
-   * The default value of the '{@link #getTodo1() <em>Todo1</em>}' attribute.
+   * The default value of the '{@link #getTaxAssessmentBasicValue() <em>Tax Assessment Basic Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo1()
+   * @see #getTaxAssessmentBasicValue()
    * @generated
    * @ordered
    */
-  protected static final String TODO1_EDEFAULT = null;
+  protected static final String TAX_ASSESSMENT_BASIC_VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo1() <em>Todo1</em>}' attribute.
+   * The cached value of the '{@link #getTaxAssessmentBasicValue() <em>Tax Assessment Basic Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo1()
+   * @see #getTaxAssessmentBasicValue()
    * @generated
    * @ordered
    */
-  protected String todo1 = TODO1_EDEFAULT;
+  protected String taxAssessmentBasicValue = TAX_ASSESSMENT_BASIC_VALUE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getTodo2() <em>Todo2</em>}' attribute.
+   * The cached value of the '{@link #getTaxDetail() <em>Tax Detail</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo2()
+   * @see #getTaxDetail()
    * @generated
    * @ordered
    */
-  protected static final String TODO2_EDEFAULT = null;
+  protected TaxDetail taxDetail;
 
   /**
-   * The cached value of the '{@link #getTodo2() <em>Todo2</em>}' attribute.
+   * The default value of the '{@link #getTaxCategoryCode() <em>Tax Category Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo2()
+   * @see #getTaxCategoryCode()
    * @generated
    * @ordered
    */
-  protected String todo2 = TODO2_EDEFAULT;
+  protected static final String TAX_CATEGORY_CODE_EDEFAULT = null;
 
   /**
-   * The default value of the '{@link #getTodo3() <em>Todo3</em>}' attribute.
+   * The cached value of the '{@link #getTaxCategoryCode() <em>Tax Category Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo3()
+   * @see #getTaxCategoryCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO3_EDEFAULT = null;
+  protected String taxCategoryCode = TAX_CATEGORY_CODE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTodo3() <em>Todo3</em>}' attribute.
+   * The default value of the '{@link #getPartyTaxIdentifier() <em>Party Tax Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo3()
+   * @see #getPartyTaxIdentifier()
    * @generated
    * @ordered
    */
-  protected String todo3 = TODO3_EDEFAULT;
+  protected static final String PARTY_TAX_IDENTIFIER_EDEFAULT = null;
 
   /**
-   * The default value of the '{@link #getTodo4() <em>Todo4</em>}' attribute.
+   * The cached value of the '{@link #getPartyTaxIdentifier() <em>Party Tax Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo4()
+   * @see #getPartyTaxIdentifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO4_EDEFAULT = null;
+  protected String partyTaxIdentifier = PARTY_TAX_IDENTIFIER_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTodo4() <em>Todo4</em>}' attribute.
+   * The default value of the '{@link #getCalculationSequenceCode() <em>Calculation Sequence Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo4()
+   * @see #getCalculationSequenceCode()
    * @generated
    * @ordered
    */
-  protected String todo4 = TODO4_EDEFAULT;
+  protected static final String CALCULATION_SEQUENCE_CODE_EDEFAULT = null;
 
   /**
-   * The default value of the '{@link #getTodo5() <em>Todo5</em>}' attribute.
+   * The cached value of the '{@link #getCalculationSequenceCode() <em>Calculation Sequence Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo5()
+   * @see #getCalculationSequenceCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO5_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTodo5() <em>Todo5</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo5()
-   * @generated
-   * @ordered
-   */
-  protected String todo5 = TODO5_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getTodo6() <em>Todo6</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo6()
-   * @generated
-   * @ordered
-   */
-  protected static final String TODO6_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTodo6() <em>Todo6</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo6()
-   * @generated
-   * @ordered
-   */
-  protected String todo6 = TODO6_EDEFAULT;
+  protected String calculationSequenceCode = CALCULATION_SEQUENCE_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -221,9 +196,9 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getNum()
+  public String getTaxFunctionCodeQualifier()
   {
-    return num;
+    return taxFunctionCodeQualifier;
   }
 
   /**
@@ -232,12 +207,12 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public void setNum(String newNum)
+  public void setTaxFunctionCodeQualifier(String newTaxFunctionCodeQualifier)
   {
-    String oldNum = num;
-    num = newNum;
+    String oldTaxFunctionCodeQualifier = taxFunctionCodeQualifier;
+    taxFunctionCodeQualifier = newTaxFunctionCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__NUM, oldNum, num));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_FUNCTION_CODE_QUALIFIER, oldTaxFunctionCodeQualifier, taxFunctionCodeQualifier));
   }
 
   /**
@@ -246,9 +221,9 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getType()
+  public TaxType getTaxType()
   {
-    return type;
+    return taxType;
   }
 
   /**
@@ -256,13 +231,16 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setType(String newType)
+  public NotificationChain basicSetTaxType(TaxType newTaxType, NotificationChain msgs)
   {
-    String oldType = type;
-    type = newType;
+    TaxType oldTaxType = taxType;
+    taxType = newTaxType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TYPE, oldType, type));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_TYPE, oldTaxType, newTaxType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -271,9 +249,20 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getTodo1()
+  public void setTaxType(TaxType newTaxType)
   {
-    return todo1;
+    if (newTaxType != taxType)
+    {
+      NotificationChain msgs = null;
+      if (taxType != null)
+        msgs = ((InternalEObject)taxType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TAX_SEGMENT__TAX_TYPE, null, msgs);
+      if (newTaxType != null)
+        msgs = ((InternalEObject)newTaxType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TAX_SEGMENT__TAX_TYPE, null, msgs);
+      msgs = basicSetTaxType(newTaxType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_TYPE, newTaxType, newTaxType));
   }
 
   /**
@@ -282,12 +271,26 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public void setTodo1(String newTodo1)
+  public TaxAccountDetail getTaxAccountDetail()
   {
-    String oldTodo1 = todo1;
-    todo1 = newTodo1;
+    return taxAccountDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetTaxAccountDetail(TaxAccountDetail newTaxAccountDetail, NotificationChain msgs)
+  {
+    TaxAccountDetail oldTaxAccountDetail = taxAccountDetail;
+    taxAccountDetail = newTaxAccountDetail;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TODO1, oldTodo1, todo1));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL, oldTaxAccountDetail, newTaxAccountDetail);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -296,9 +299,20 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getTodo2()
+  public void setTaxAccountDetail(TaxAccountDetail newTaxAccountDetail)
   {
-    return todo2;
+    if (newTaxAccountDetail != taxAccountDetail)
+    {
+      NotificationChain msgs = null;
+      if (taxAccountDetail != null)
+        msgs = ((InternalEObject)taxAccountDetail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL, null, msgs);
+      if (newTaxAccountDetail != null)
+        msgs = ((InternalEObject)newTaxAccountDetail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL, null, msgs);
+      msgs = basicSetTaxAccountDetail(newTaxAccountDetail, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL, newTaxAccountDetail, newTaxAccountDetail));
   }
 
   /**
@@ -307,12 +321,23 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public void setTodo2(String newTodo2)
+  public String getTaxAssessmentBasicValue()
   {
-    String oldTodo2 = todo2;
-    todo2 = newTodo2;
+    return taxAssessmentBasicValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTaxAssessmentBasicValue(String newTaxAssessmentBasicValue)
+  {
+    String oldTaxAssessmentBasicValue = taxAssessmentBasicValue;
+    taxAssessmentBasicValue = newTaxAssessmentBasicValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TODO2, oldTodo2, todo2));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_ASSESSMENT_BASIC_VALUE, oldTaxAssessmentBasicValue, taxAssessmentBasicValue));
   }
 
   /**
@@ -321,9 +346,9 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getTodo3()
+  public TaxDetail getTaxDetail()
   {
-    return todo3;
+    return taxDetail;
   }
 
   /**
@@ -331,13 +356,16 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setTodo3(String newTodo3)
+  public NotificationChain basicSetTaxDetail(TaxDetail newTaxDetail, NotificationChain msgs)
   {
-    String oldTodo3 = todo3;
-    todo3 = newTodo3;
+    TaxDetail oldTaxDetail = taxDetail;
+    taxDetail = newTaxDetail;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TODO3, oldTodo3, todo3));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_DETAIL, oldTaxDetail, newTaxDetail);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -346,9 +374,20 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getTodo4()
+  public void setTaxDetail(TaxDetail newTaxDetail)
   {
-    return todo4;
+    if (newTaxDetail != taxDetail)
+    {
+      NotificationChain msgs = null;
+      if (taxDetail != null)
+        msgs = ((InternalEObject)taxDetail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TAX_SEGMENT__TAX_DETAIL, null, msgs);
+      if (newTaxDetail != null)
+        msgs = ((InternalEObject)newTaxDetail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TAX_SEGMENT__TAX_DETAIL, null, msgs);
+      msgs = basicSetTaxDetail(newTaxDetail, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_DETAIL, newTaxDetail, newTaxDetail));
   }
 
   /**
@@ -357,12 +396,23 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public void setTodo4(String newTodo4)
+  public String getTaxCategoryCode()
   {
-    String oldTodo4 = todo4;
-    todo4 = newTodo4;
+    return taxCategoryCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTaxCategoryCode(String newTaxCategoryCode)
+  {
+    String oldTaxCategoryCode = taxCategoryCode;
+    taxCategoryCode = newTaxCategoryCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TODO4, oldTodo4, todo4));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TAX_CATEGORY_CODE, oldTaxCategoryCode, taxCategoryCode));
   }
 
   /**
@@ -371,9 +421,9 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getTodo5()
+  public String getPartyTaxIdentifier()
   {
-    return todo5;
+    return partyTaxIdentifier;
   }
 
   /**
@@ -382,12 +432,12 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public void setTodo5(String newTodo5)
+  public void setPartyTaxIdentifier(String newPartyTaxIdentifier)
   {
-    String oldTodo5 = todo5;
-    todo5 = newTodo5;
+    String oldPartyTaxIdentifier = partyTaxIdentifier;
+    partyTaxIdentifier = newPartyTaxIdentifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TODO5, oldTodo5, todo5));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__PARTY_TAX_IDENTIFIER, oldPartyTaxIdentifier, partyTaxIdentifier));
   }
 
   /**
@@ -396,9 +446,9 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public String getTodo6()
+  public String getCalculationSequenceCode()
   {
-    return todo6;
+    return calculationSequenceCode;
   }
 
   /**
@@ -407,12 +457,32 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
    * @generated
    */
   @Override
-  public void setTodo6(String newTodo6)
+  public void setCalculationSequenceCode(String newCalculationSequenceCode)
   {
-    String oldTodo6 = todo6;
-    todo6 = newTodo6;
+    String oldCalculationSequenceCode = calculationSequenceCode;
+    calculationSequenceCode = newCalculationSequenceCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__TODO6, oldTodo6, todo6));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TAX_SEGMENT__CALCULATION_SEQUENCE_CODE, oldCalculationSequenceCode, calculationSequenceCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.TAX_SEGMENT__TAX_TYPE:
+        return basicSetTaxType(null, msgs);
+      case EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL:
+        return basicSetTaxAccountDetail(null, msgs);
+      case EdilangPackage.TAX_SEGMENT__TAX_DETAIL:
+        return basicSetTaxDetail(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -425,22 +495,22 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TAX_SEGMENT__NUM:
-        return getNum();
-      case EdilangPackage.TAX_SEGMENT__TYPE:
-        return getType();
-      case EdilangPackage.TAX_SEGMENT__TODO1:
-        return getTodo1();
-      case EdilangPackage.TAX_SEGMENT__TODO2:
-        return getTodo2();
-      case EdilangPackage.TAX_SEGMENT__TODO3:
-        return getTodo3();
-      case EdilangPackage.TAX_SEGMENT__TODO4:
-        return getTodo4();
-      case EdilangPackage.TAX_SEGMENT__TODO5:
-        return getTodo5();
-      case EdilangPackage.TAX_SEGMENT__TODO6:
-        return getTodo6();
+      case EdilangPackage.TAX_SEGMENT__TAX_FUNCTION_CODE_QUALIFIER:
+        return getTaxFunctionCodeQualifier();
+      case EdilangPackage.TAX_SEGMENT__TAX_TYPE:
+        return getTaxType();
+      case EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL:
+        return getTaxAccountDetail();
+      case EdilangPackage.TAX_SEGMENT__TAX_ASSESSMENT_BASIC_VALUE:
+        return getTaxAssessmentBasicValue();
+      case EdilangPackage.TAX_SEGMENT__TAX_DETAIL:
+        return getTaxDetail();
+      case EdilangPackage.TAX_SEGMENT__TAX_CATEGORY_CODE:
+        return getTaxCategoryCode();
+      case EdilangPackage.TAX_SEGMENT__PARTY_TAX_IDENTIFIER:
+        return getPartyTaxIdentifier();
+      case EdilangPackage.TAX_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        return getCalculationSequenceCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -455,29 +525,29 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TAX_SEGMENT__NUM:
-        setNum((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__TAX_FUNCTION_CODE_QUALIFIER:
+        setTaxFunctionCodeQualifier((String)newValue);
         return;
-      case EdilangPackage.TAX_SEGMENT__TYPE:
-        setType((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__TAX_TYPE:
+        setTaxType((TaxType)newValue);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO1:
-        setTodo1((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL:
+        setTaxAccountDetail((TaxAccountDetail)newValue);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO2:
-        setTodo2((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__TAX_ASSESSMENT_BASIC_VALUE:
+        setTaxAssessmentBasicValue((String)newValue);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO3:
-        setTodo3((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__TAX_DETAIL:
+        setTaxDetail((TaxDetail)newValue);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO4:
-        setTodo4((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__TAX_CATEGORY_CODE:
+        setTaxCategoryCode((String)newValue);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO5:
-        setTodo5((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__PARTY_TAX_IDENTIFIER:
+        setPartyTaxIdentifier((String)newValue);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO6:
-        setTodo6((String)newValue);
+      case EdilangPackage.TAX_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        setCalculationSequenceCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -493,29 +563,29 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TAX_SEGMENT__NUM:
-        setNum(NUM_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__TAX_FUNCTION_CODE_QUALIFIER:
+        setTaxFunctionCodeQualifier(TAX_FUNCTION_CODE_QUALIFIER_EDEFAULT);
         return;
-      case EdilangPackage.TAX_SEGMENT__TYPE:
-        setType(TYPE_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__TAX_TYPE:
+        setTaxType((TaxType)null);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO1:
-        setTodo1(TODO1_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL:
+        setTaxAccountDetail((TaxAccountDetail)null);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO2:
-        setTodo2(TODO2_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__TAX_ASSESSMENT_BASIC_VALUE:
+        setTaxAssessmentBasicValue(TAX_ASSESSMENT_BASIC_VALUE_EDEFAULT);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO3:
-        setTodo3(TODO3_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__TAX_DETAIL:
+        setTaxDetail((TaxDetail)null);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO4:
-        setTodo4(TODO4_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__TAX_CATEGORY_CODE:
+        setTaxCategoryCode(TAX_CATEGORY_CODE_EDEFAULT);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO5:
-        setTodo5(TODO5_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__PARTY_TAX_IDENTIFIER:
+        setPartyTaxIdentifier(PARTY_TAX_IDENTIFIER_EDEFAULT);
         return;
-      case EdilangPackage.TAX_SEGMENT__TODO6:
-        setTodo6(TODO6_EDEFAULT);
+      case EdilangPackage.TAX_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        setCalculationSequenceCode(CALCULATION_SEQUENCE_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -531,22 +601,22 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TAX_SEGMENT__NUM:
-        return NUM_EDEFAULT == null ? num != null : !NUM_EDEFAULT.equals(num);
-      case EdilangPackage.TAX_SEGMENT__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case EdilangPackage.TAX_SEGMENT__TODO1:
-        return TODO1_EDEFAULT == null ? todo1 != null : !TODO1_EDEFAULT.equals(todo1);
-      case EdilangPackage.TAX_SEGMENT__TODO2:
-        return TODO2_EDEFAULT == null ? todo2 != null : !TODO2_EDEFAULT.equals(todo2);
-      case EdilangPackage.TAX_SEGMENT__TODO3:
-        return TODO3_EDEFAULT == null ? todo3 != null : !TODO3_EDEFAULT.equals(todo3);
-      case EdilangPackage.TAX_SEGMENT__TODO4:
-        return TODO4_EDEFAULT == null ? todo4 != null : !TODO4_EDEFAULT.equals(todo4);
-      case EdilangPackage.TAX_SEGMENT__TODO5:
-        return TODO5_EDEFAULT == null ? todo5 != null : !TODO5_EDEFAULT.equals(todo5);
-      case EdilangPackage.TAX_SEGMENT__TODO6:
-        return TODO6_EDEFAULT == null ? todo6 != null : !TODO6_EDEFAULT.equals(todo6);
+      case EdilangPackage.TAX_SEGMENT__TAX_FUNCTION_CODE_QUALIFIER:
+        return TAX_FUNCTION_CODE_QUALIFIER_EDEFAULT == null ? taxFunctionCodeQualifier != null : !TAX_FUNCTION_CODE_QUALIFIER_EDEFAULT.equals(taxFunctionCodeQualifier);
+      case EdilangPackage.TAX_SEGMENT__TAX_TYPE:
+        return taxType != null;
+      case EdilangPackage.TAX_SEGMENT__TAX_ACCOUNT_DETAIL:
+        return taxAccountDetail != null;
+      case EdilangPackage.TAX_SEGMENT__TAX_ASSESSMENT_BASIC_VALUE:
+        return TAX_ASSESSMENT_BASIC_VALUE_EDEFAULT == null ? taxAssessmentBasicValue != null : !TAX_ASSESSMENT_BASIC_VALUE_EDEFAULT.equals(taxAssessmentBasicValue);
+      case EdilangPackage.TAX_SEGMENT__TAX_DETAIL:
+        return taxDetail != null;
+      case EdilangPackage.TAX_SEGMENT__TAX_CATEGORY_CODE:
+        return TAX_CATEGORY_CODE_EDEFAULT == null ? taxCategoryCode != null : !TAX_CATEGORY_CODE_EDEFAULT.equals(taxCategoryCode);
+      case EdilangPackage.TAX_SEGMENT__PARTY_TAX_IDENTIFIER:
+        return PARTY_TAX_IDENTIFIER_EDEFAULT == null ? partyTaxIdentifier != null : !PARTY_TAX_IDENTIFIER_EDEFAULT.equals(partyTaxIdentifier);
+      case EdilangPackage.TAX_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        return CALCULATION_SEQUENCE_CODE_EDEFAULT == null ? calculationSequenceCode != null : !CALCULATION_SEQUENCE_CODE_EDEFAULT.equals(calculationSequenceCode);
     }
     return super.eIsSet(featureID);
   }
@@ -562,22 +632,16 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (num: ");
-    result.append(num);
-    result.append(", type: ");
-    result.append(type);
-    result.append(", todo1: ");
-    result.append(todo1);
-    result.append(", todo2: ");
-    result.append(todo2);
-    result.append(", todo3: ");
-    result.append(todo3);
-    result.append(", todo4: ");
-    result.append(todo4);
-    result.append(", todo5: ");
-    result.append(todo5);
-    result.append(", todo6: ");
-    result.append(todo6);
+    result.append(" (taxFunctionCodeQualifier: ");
+    result.append(taxFunctionCodeQualifier);
+    result.append(", taxAssessmentBasicValue: ");
+    result.append(taxAssessmentBasicValue);
+    result.append(", taxCategoryCode: ");
+    result.append(taxCategoryCode);
+    result.append(", partyTaxIdentifier: ");
+    result.append(partyTaxIdentifier);
+    result.append(", calculationSequenceCode: ");
+    result.append(calculationSequenceCode);
     result.append(')');
     return result.toString();
   }

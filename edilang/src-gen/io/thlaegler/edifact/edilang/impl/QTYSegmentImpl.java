@@ -5,12 +5,19 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.QTYSegment;
+import io.thlaegler.edifact.edilang.QuantityDetail;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.QTYSegmentImpl#getCode1 <em>Code1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.QTYSegmentImpl#getCode2 <em>Code2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.QTYSegmentImpl#getCode3 <em>Code3</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.QTYSegmentImpl#getQuantityDetails <em>Quantity Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,64 +35,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
 {
   /**
-   * The default value of the '{@link #getCode1() <em>Code1</em>}' attribute.
+   * The cached value of the '{@link #getQuantityDetails() <em>Quantity Details</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode1()
+   * @see #getQuantityDetails()
    * @generated
    * @ordered
    */
-  protected static final String CODE1_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getCode1() <em>Code1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCode1()
-   * @generated
-   * @ordered
-   */
-  protected String code1 = CODE1_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getCode2() <em>Code2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCode2()
-   * @generated
-   * @ordered
-   */
-  protected static final String CODE2_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getCode2() <em>Code2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCode2()
-   * @generated
-   * @ordered
-   */
-  protected String code2 = CODE2_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getCode3() <em>Code3</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCode3()
-   * @generated
-   * @ordered
-   */
-  protected static final String CODE3_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getCode3() <em>Code3</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCode3()
-   * @generated
-   * @ordered
-   */
-  protected String code3 = CODE3_EDEFAULT;
+  protected EList<QuantityDetail> quantityDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,9 +71,13 @@ public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
    * @generated
    */
   @Override
-  public String getCode1()
+  public EList<QuantityDetail> getQuantityDetails()
   {
-    return code1;
+    if (quantityDetails == null)
+    {
+      quantityDetails = new EObjectContainmentEList<QuantityDetail>(QuantityDetail.class, this, EdilangPackage.QTY_SEGMENT__QUANTITY_DETAILS);
+    }
+    return quantityDetails;
   }
 
   /**
@@ -127,62 +86,14 @@ public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
    * @generated
    */
   @Override
-  public void setCode1(String newCode1)
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldCode1 = code1;
-    code1 = newCode1;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.QTY_SEGMENT__CODE1, oldCode1, code1));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getCode2()
-  {
-    return code2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setCode2(String newCode2)
-  {
-    String oldCode2 = code2;
-    code2 = newCode2;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.QTY_SEGMENT__CODE2, oldCode2, code2));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getCode3()
-  {
-    return code3;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setCode3(String newCode3)
-  {
-    String oldCode3 = code3;
-    code3 = newCode3;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.QTY_SEGMENT__CODE3, oldCode3, code3));
+    switch (featureID)
+    {
+      case EdilangPackage.QTY_SEGMENT__QUANTITY_DETAILS:
+        return ((InternalEList<?>)getQuantityDetails()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -195,12 +106,8 @@ public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.QTY_SEGMENT__CODE1:
-        return getCode1();
-      case EdilangPackage.QTY_SEGMENT__CODE2:
-        return getCode2();
-      case EdilangPackage.QTY_SEGMENT__CODE3:
-        return getCode3();
+      case EdilangPackage.QTY_SEGMENT__QUANTITY_DETAILS:
+        return getQuantityDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -210,19 +117,15 @@ public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.QTY_SEGMENT__CODE1:
-        setCode1((String)newValue);
-        return;
-      case EdilangPackage.QTY_SEGMENT__CODE2:
-        setCode2((String)newValue);
-        return;
-      case EdilangPackage.QTY_SEGMENT__CODE3:
-        setCode3((String)newValue);
+      case EdilangPackage.QTY_SEGMENT__QUANTITY_DETAILS:
+        getQuantityDetails().clear();
+        getQuantityDetails().addAll((Collection<? extends QuantityDetail>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,14 +141,8 @@ public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.QTY_SEGMENT__CODE1:
-        setCode1(CODE1_EDEFAULT);
-        return;
-      case EdilangPackage.QTY_SEGMENT__CODE2:
-        setCode2(CODE2_EDEFAULT);
-        return;
-      case EdilangPackage.QTY_SEGMENT__CODE3:
-        setCode3(CODE3_EDEFAULT);
+      case EdilangPackage.QTY_SEGMENT__QUANTITY_DETAILS:
+        getQuantityDetails().clear();
         return;
     }
     super.eUnset(featureID);
@@ -261,35 +158,10 @@ public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.QTY_SEGMENT__CODE1:
-        return CODE1_EDEFAULT == null ? code1 != null : !CODE1_EDEFAULT.equals(code1);
-      case EdilangPackage.QTY_SEGMENT__CODE2:
-        return CODE2_EDEFAULT == null ? code2 != null : !CODE2_EDEFAULT.equals(code2);
-      case EdilangPackage.QTY_SEGMENT__CODE3:
-        return CODE3_EDEFAULT == null ? code3 != null : !CODE3_EDEFAULT.equals(code3);
+      case EdilangPackage.QTY_SEGMENT__QUANTITY_DETAILS:
+        return quantityDetails != null && !quantityDetails.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (code1: ");
-    result.append(code1);
-    result.append(", code2: ");
-    result.append(code2);
-    result.append(", code3: ");
-    result.append(code3);
-    result.append(')');
-    return result.toString();
   }
 
 } //QTYSegmentImpl

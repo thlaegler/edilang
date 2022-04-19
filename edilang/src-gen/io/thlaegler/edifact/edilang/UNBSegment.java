@@ -14,8 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.UNBSegment#getSyntax <em>Syntax</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.UNBSegment#getNum1 <em>Num1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.UNBSegment#getHeader <em>Header</em>}</li>
  *   <li>{@link io.thlaegler.edifact.edilang.UNBSegment#getInterchangeSender <em>Interchange Sender</em>}</li>
  *   <li>{@link io.thlaegler.edifact.edilang.UNBSegment#getInterchangeRecipient <em>Interchange Recipient</em>}</li>
  *   <li>{@link io.thlaegler.edifact.edilang.UNBSegment#getDateAndTime <em>Date And Time</em>}</li>
@@ -32,48 +31,26 @@ import org.eclipse.emf.common.util.EList;
 public interface UNBSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Syntax</b></em>' attribute.
+   * Returns the value of the '<em><b>Header</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Syntax</em>' attribute.
-   * @see #setSyntax(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getUNBSegment_Syntax()
-   * @model
+   * @return the value of the '<em>Header</em>' containment reference.
+   * @see #setHeader(UNBHeader)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getUNBSegment_Header()
+   * @model containment="true"
    * @generated
    */
-  String getSyntax();
+  UNBHeader getHeader();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.UNBSegment#getSyntax <em>Syntax</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.UNBSegment#getHeader <em>Header</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Syntax</em>' attribute.
-   * @see #getSyntax()
+   * @param value the new value of the '<em>Header</em>' containment reference.
+   * @see #getHeader()
    * @generated
    */
-  void setSyntax(String value);
-
-  /**
-   * Returns the value of the '<em><b>Num1</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Num1</em>' attribute.
-   * @see #setNum1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getUNBSegment_Num1()
-   * @model
-   * @generated
-   */
-  String getNum1();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.UNBSegment#getNum1 <em>Num1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num1</em>' attribute.
-   * @see #getNum1()
-   * @generated
-   */
-  void setNum1(String value);
+  void setHeader(UNBHeader value);
 
   /**
    * Returns the value of the '<em><b>Interchange Sender</b></em>' containment reference.

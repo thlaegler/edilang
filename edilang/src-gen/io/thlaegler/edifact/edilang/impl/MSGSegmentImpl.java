@@ -4,8 +4,9 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
-import io.thlaegler.edifact.edilang.MSGFunction;
 import io.thlaegler.edifact.edilang.MSGSegment;
+import io.thlaegler.edifact.edilang.MessageIndentifier;
+import io.thlaegler.edifact.edilang.Relationship;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -23,8 +24,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.MSGSegmentImpl#getMessageFunction <em>Message Function</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.MSGSegmentImpl#getResponseType <em>Response Type</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MSGSegmentImpl#getMessageIdentifier <em>Message Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MSGSegmentImpl#getDesignatedClassCode <em>Designated Class Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MSGSegmentImpl#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.MSGSegmentImpl#getRelationship <em>Relationship</em>}</li>
  * </ul>
  *
  * @generated
@@ -32,34 +35,64 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
 {
   /**
-   * The cached value of the '{@link #getMessageFunction() <em>Message Function</em>}' containment reference.
+   * The cached value of the '{@link #getMessageIdentifier() <em>Message Identifier</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMessageFunction()
+   * @see #getMessageIdentifier()
    * @generated
    * @ordered
    */
-  protected MSGFunction messageFunction;
+  protected MessageIndentifier messageIdentifier;
 
   /**
-   * The default value of the '{@link #getResponseType() <em>Response Type</em>}' attribute.
+   * The default value of the '{@link #getDesignatedClassCode() <em>Designated Class Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getResponseType()
+   * @see #getDesignatedClassCode()
    * @generated
    * @ordered
    */
-  protected static final String RESPONSE_TYPE_EDEFAULT = null;
+  protected static final String DESIGNATED_CLASS_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getResponseType() <em>Response Type</em>}' attribute.
+   * The cached value of the '{@link #getDesignatedClassCode() <em>Designated Class Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getResponseType()
+   * @see #getDesignatedClassCode()
    * @generated
    * @ordered
    */
-  protected String responseType = RESPONSE_TYPE_EDEFAULT;
+  protected String designatedClassCode = DESIGNATED_CLASS_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMaintenanceOperationCode() <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String MAINTENANCE_OPERATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMaintenanceOperationCode() <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected String maintenanceOperationCode = MAINTENANCE_OPERATION_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getRelationship() <em>Relationship</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRelationship()
+   * @generated
+   * @ordered
+   */
+  protected Relationship relationship;
 
   /**
    * <!-- begin-user-doc -->
@@ -88,9 +121,9 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
    * @generated
    */
   @Override
-  public MSGFunction getMessageFunction()
+  public MessageIndentifier getMessageIdentifier()
   {
-    return messageFunction;
+    return messageIdentifier;
   }
 
   /**
@@ -98,13 +131,13 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetMessageFunction(MSGFunction newMessageFunction, NotificationChain msgs)
+  public NotificationChain basicSetMessageIdentifier(MessageIndentifier newMessageIdentifier, NotificationChain msgs)
   {
-    MSGFunction oldMessageFunction = messageFunction;
-    messageFunction = newMessageFunction;
+    MessageIndentifier oldMessageIdentifier = messageIdentifier;
+    messageIdentifier = newMessageIdentifier;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION, oldMessageFunction, newMessageFunction);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER, oldMessageIdentifier, newMessageIdentifier);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -116,20 +149,20 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
    * @generated
    */
   @Override
-  public void setMessageFunction(MSGFunction newMessageFunction)
+  public void setMessageIdentifier(MessageIndentifier newMessageIdentifier)
   {
-    if (newMessageFunction != messageFunction)
+    if (newMessageIdentifier != messageIdentifier)
     {
       NotificationChain msgs = null;
-      if (messageFunction != null)
-        msgs = ((InternalEObject)messageFunction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION, null, msgs);
-      if (newMessageFunction != null)
-        msgs = ((InternalEObject)newMessageFunction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION, null, msgs);
-      msgs = basicSetMessageFunction(newMessageFunction, msgs);
+      if (messageIdentifier != null)
+        msgs = ((InternalEObject)messageIdentifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER, null, msgs);
+      if (newMessageIdentifier != null)
+        msgs = ((InternalEObject)newMessageIdentifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER, null, msgs);
+      msgs = basicSetMessageIdentifier(newMessageIdentifier, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION, newMessageFunction, newMessageFunction));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER, newMessageIdentifier, newMessageIdentifier));
   }
 
   /**
@@ -138,9 +171,9 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
    * @generated
    */
   @Override
-  public String getResponseType()
+  public String getDesignatedClassCode()
   {
-    return responseType;
+    return designatedClassCode;
   }
 
   /**
@@ -149,12 +182,87 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
    * @generated
    */
   @Override
-  public void setResponseType(String newResponseType)
+  public void setDesignatedClassCode(String newDesignatedClassCode)
   {
-    String oldResponseType = responseType;
-    responseType = newResponseType;
+    String oldDesignatedClassCode = designatedClassCode;
+    designatedClassCode = newDesignatedClassCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__RESPONSE_TYPE, oldResponseType, responseType));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__DESIGNATED_CLASS_CODE, oldDesignatedClassCode, designatedClassCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getMaintenanceOperationCode()
+  {
+    return maintenanceOperationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setMaintenanceOperationCode(String newMaintenanceOperationCode)
+  {
+    String oldMaintenanceOperationCode = maintenanceOperationCode;
+    maintenanceOperationCode = newMaintenanceOperationCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__MAINTENANCE_OPERATION_CODE, oldMaintenanceOperationCode, maintenanceOperationCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Relationship getRelationship()
+  {
+    return relationship;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRelationship(Relationship newRelationship, NotificationChain msgs)
+  {
+    Relationship oldRelationship = relationship;
+    relationship = newRelationship;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__RELATIONSHIP, oldRelationship, newRelationship);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setRelationship(Relationship newRelationship)
+  {
+    if (newRelationship != relationship)
+    {
+      NotificationChain msgs = null;
+      if (relationship != null)
+        msgs = ((InternalEObject)relationship).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.MSG_SEGMENT__RELATIONSHIP, null, msgs);
+      if (newRelationship != null)
+        msgs = ((InternalEObject)newRelationship).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.MSG_SEGMENT__RELATIONSHIP, null, msgs);
+      msgs = basicSetRelationship(newRelationship, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.MSG_SEGMENT__RELATIONSHIP, newRelationship, newRelationship));
   }
 
   /**
@@ -167,8 +275,10 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION:
-        return basicSetMessageFunction(null, msgs);
+      case EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER:
+        return basicSetMessageIdentifier(null, msgs);
+      case EdilangPackage.MSG_SEGMENT__RELATIONSHIP:
+        return basicSetRelationship(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,10 +293,14 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION:
-        return getMessageFunction();
-      case EdilangPackage.MSG_SEGMENT__RESPONSE_TYPE:
-        return getResponseType();
+      case EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER:
+        return getMessageIdentifier();
+      case EdilangPackage.MSG_SEGMENT__DESIGNATED_CLASS_CODE:
+        return getDesignatedClassCode();
+      case EdilangPackage.MSG_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        return getMaintenanceOperationCode();
+      case EdilangPackage.MSG_SEGMENT__RELATIONSHIP:
+        return getRelationship();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -201,11 +315,17 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION:
-        setMessageFunction((MSGFunction)newValue);
+      case EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER:
+        setMessageIdentifier((MessageIndentifier)newValue);
         return;
-      case EdilangPackage.MSG_SEGMENT__RESPONSE_TYPE:
-        setResponseType((String)newValue);
+      case EdilangPackage.MSG_SEGMENT__DESIGNATED_CLASS_CODE:
+        setDesignatedClassCode((String)newValue);
+        return;
+      case EdilangPackage.MSG_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        setMaintenanceOperationCode((String)newValue);
+        return;
+      case EdilangPackage.MSG_SEGMENT__RELATIONSHIP:
+        setRelationship((Relationship)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,11 +341,17 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION:
-        setMessageFunction((MSGFunction)null);
+      case EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER:
+        setMessageIdentifier((MessageIndentifier)null);
         return;
-      case EdilangPackage.MSG_SEGMENT__RESPONSE_TYPE:
-        setResponseType(RESPONSE_TYPE_EDEFAULT);
+      case EdilangPackage.MSG_SEGMENT__DESIGNATED_CLASS_CODE:
+        setDesignatedClassCode(DESIGNATED_CLASS_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.MSG_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        setMaintenanceOperationCode(MAINTENANCE_OPERATION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.MSG_SEGMENT__RELATIONSHIP:
+        setRelationship((Relationship)null);
         return;
     }
     super.eUnset(featureID);
@@ -241,10 +367,14 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.MSG_SEGMENT__MESSAGE_FUNCTION:
-        return messageFunction != null;
-      case EdilangPackage.MSG_SEGMENT__RESPONSE_TYPE:
-        return RESPONSE_TYPE_EDEFAULT == null ? responseType != null : !RESPONSE_TYPE_EDEFAULT.equals(responseType);
+      case EdilangPackage.MSG_SEGMENT__MESSAGE_IDENTIFIER:
+        return messageIdentifier != null;
+      case EdilangPackage.MSG_SEGMENT__DESIGNATED_CLASS_CODE:
+        return DESIGNATED_CLASS_CODE_EDEFAULT == null ? designatedClassCode != null : !DESIGNATED_CLASS_CODE_EDEFAULT.equals(designatedClassCode);
+      case EdilangPackage.MSG_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        return MAINTENANCE_OPERATION_CODE_EDEFAULT == null ? maintenanceOperationCode != null : !MAINTENANCE_OPERATION_CODE_EDEFAULT.equals(maintenanceOperationCode);
+      case EdilangPackage.MSG_SEGMENT__RELATIONSHIP:
+        return relationship != null;
     }
     return super.eIsSet(featureID);
   }
@@ -260,8 +390,10 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (responseType: ");
-    result.append(responseType);
+    result.append(" (designatedClassCode: ");
+    result.append(designatedClassCode);
+    result.append(", maintenanceOperationCode: ");
+    result.append(maintenanceOperationCode);
     result.append(')');
     return result.toString();
   }

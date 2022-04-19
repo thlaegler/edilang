@@ -49,6 +49,6 @@ class EdilangParsingTest {
 		Assertions.assertEquals("220", result.getSegments().stream()
 				.filter(s -> s.getSegment().equals("BGM"))
 				.map(s -> (BGMSegment) s)
-				.findFirst().get().getNum1());
+				.findFirst().get().getDocumentMessageName());
 	}
 }

@@ -3,14 +3,21 @@
  */
 package io.thlaegler.edifact.edilang.impl;
 
+import io.thlaegler.edifact.edilang.ApplicationErrorDetail;
 import io.thlaegler.edifact.edilang.ERCSegment;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ERCSegmentImpl#getCode1 <em>Code1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ERCSegmentImpl#getApplicationErrorDetails <em>Application Error Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +35,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
 {
   /**
-   * The default value of the '{@link #getCode1() <em>Code1</em>}' attribute.
+   * The cached value of the '{@link #getApplicationErrorDetails() <em>Application Error Details</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode1()
+   * @see #getApplicationErrorDetails()
    * @generated
    * @ordered
    */
-  protected static final String CODE1_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getCode1() <em>Code1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCode1()
-   * @generated
-   * @ordered
-   */
-  protected String code1 = CODE1_EDEFAULT;
+  protected EList<ApplicationErrorDetail> applicationErrorDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +71,13 @@ public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
    * @generated
    */
   @Override
-  public String getCode1()
+  public EList<ApplicationErrorDetail> getApplicationErrorDetails()
   {
-    return code1;
+    if (applicationErrorDetails == null)
+    {
+      applicationErrorDetails = new EObjectContainmentEList<ApplicationErrorDetail>(ApplicationErrorDetail.class, this, EdilangPackage.ERC_SEGMENT__APPLICATION_ERROR_DETAILS);
+    }
+    return applicationErrorDetails;
   }
 
   /**
@@ -85,12 +86,14 @@ public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
    * @generated
    */
   @Override
-  public void setCode1(String newCode1)
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldCode1 = code1;
-    code1 = newCode1;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ERC_SEGMENT__CODE1, oldCode1, code1));
+    switch (featureID)
+    {
+      case EdilangPackage.ERC_SEGMENT__APPLICATION_ERROR_DETAILS:
+        return ((InternalEList<?>)getApplicationErrorDetails()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +106,8 @@ public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ERC_SEGMENT__CODE1:
-        return getCode1();
+      case EdilangPackage.ERC_SEGMENT__APPLICATION_ERROR_DETAILS:
+        return getApplicationErrorDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -114,13 +117,15 @@ public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.ERC_SEGMENT__CODE1:
-        setCode1((String)newValue);
+      case EdilangPackage.ERC_SEGMENT__APPLICATION_ERROR_DETAILS:
+        getApplicationErrorDetails().clear();
+        getApplicationErrorDetails().addAll((Collection<? extends ApplicationErrorDetail>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +141,8 @@ public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ERC_SEGMENT__CODE1:
-        setCode1(CODE1_EDEFAULT);
+      case EdilangPackage.ERC_SEGMENT__APPLICATION_ERROR_DETAILS:
+        getApplicationErrorDetails().clear();
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +158,10 @@ public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ERC_SEGMENT__CODE1:
-        return CODE1_EDEFAULT == null ? code1 != null : !CODE1_EDEFAULT.equals(code1);
+      case EdilangPackage.ERC_SEGMENT__APPLICATION_ERROR_DETAILS:
+        return applicationErrorDetails != null && !applicationErrorDetails.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (code1: ");
-    result.append(code1);
-    result.append(')');
-    return result.toString();
   }
 
 } //ERCSegmentImpl

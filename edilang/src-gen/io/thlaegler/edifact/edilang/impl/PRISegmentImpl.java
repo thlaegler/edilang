@@ -4,8 +4,8 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
-import io.thlaegler.edifact.edilang.PRIFunction;
 import io.thlaegler.edifact.edilang.PRISegment;
+import io.thlaegler.edifact.edilang.PriceInformation;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -38,7 +38,7 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
    * @generated
    * @ordered
    */
-  protected PRIFunction sub;
+  protected PriceInformation sub;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
    * @generated
    */
   @Override
-  public PRIFunction getSub()
+  public PriceInformation getSub()
   {
     return sub;
   }
@@ -77,9 +77,9 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSub(PRIFunction newSub, NotificationChain msgs)
+  public NotificationChain basicSetSub(PriceInformation newSub, NotificationChain msgs)
   {
-    PRIFunction oldSub = sub;
+    PriceInformation oldSub = sub;
     sub = newSub;
     if (eNotificationRequired())
     {
@@ -95,7 +95,7 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
    * @generated
    */
   @Override
-  public void setSub(PRIFunction newSub)
+  public void setSub(PriceInformation newSub)
   {
     if (newSub != sub)
     {
@@ -154,7 +154,7 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
     switch (featureID)
     {
       case EdilangPackage.PRI_SEGMENT__SUB:
-        setSub((PRIFunction)newValue);
+        setSub((PriceInformation)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -171,7 +171,7 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
     switch (featureID)
     {
       case EdilangPackage.PRI_SEGMENT__SUB:
-        setSub((PRIFunction)null);
+        setSub((PriceInformation)null);
         return;
     }
     super.eUnset(featureID);

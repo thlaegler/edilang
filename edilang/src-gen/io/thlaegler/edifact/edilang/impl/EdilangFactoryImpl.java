@@ -98,17 +98,35 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.UNT_SEGMENT: return createUNTSegment();
       case EdilangPackage.UNZ_SEGMENT: return createUNZSegment();
       case EdilangPackage.ABSTRACT_EDI_FUNCTION: return createAbstractEdiFunction();
-      case EdilangPackage.PRI_FUNCTION: return createPRIFunction();
+      case EdilangPackage.UNB_HEADER: return createUNBHeader();
+      case EdilangPackage.PRICE_INFORMATION: return createPriceInformation();
       case EdilangPackage.MESSAGE_BODY_FUNCTION: return createMessageBodyFunction();
-      case EdilangPackage.MSG_FUNCTION: return createMSGFunction();
+      case EdilangPackage.MESSAGE_INDENTIFIER: return createMessageIndentifier();
+      case EdilangPackage.RELATIONSHIP: return createRelationship();
       case EdilangPackage.PRODUCT_FUNCTION: return createProductFunction();
+      case EdilangPackage.ITEM_NUMBER_IDENTIFICATION: return createItemNumberIdentification();
+      case EdilangPackage.SUBLINE_INFORMATION: return createSublineInformation();
+      case EdilangPackage.QUANTITY_DETAIL: return createQuantityDetail();
+      case EdilangPackage.STREET: return createStreet();
+      case EdilangPackage.COUNTRY_SUB_ENTITY_DETAIL: return createCountrySubEntityDetail();
+      case EdilangPackage.PARTY_NAME: return createPartyName();
+      case EdilangPackage.NAME_AND_ADDRESS: return createNameAndAddress();
+      case EdilangPackage.PARTY_IDENTIFICATION_DETAIL: return createPartyIdentificationDetail();
+      case EdilangPackage.APPLICATION_ERROR_DETAIL: return createApplicationErrorDetail();
       case EdilangPackage.SYSTEM_DETAIL_FUNCTION: return createSystemDetailFunction();
+      case EdilangPackage.TAX_DETAIL: return createTaxDetail();
+      case EdilangPackage.TAX_ACCOUNT_DETAIL: return createTaxAccountDetail();
+      case EdilangPackage.TAX_TYPE: return createTaxType();
+      case EdilangPackage.CURRENCY_DETAIL: return createCurrencyDetail();
+      case EdilangPackage.DOCUMENT_MESSAGE_IDENTIFICATION: return createDocumentMessageIdentification();
+      case EdilangPackage.DOCUMENT_MESSAGE: return createDocumentMessage();
       case EdilangPackage.ORIGINATOR_FUNCTION: return createOriginatorFunction();
       case EdilangPackage.ORIGINATOR_IDENTIFICATION_FUNCTION: return createOriginatorIdentificationFunction();
       case EdilangPackage.LOCATION_FUNCTION: return createLocationFunction();
       case EdilangPackage.INTERCHANGER_FUNCTION: return createInterchangerFunction();
       case EdilangPackage.DATE_ONLY_FUNCTION: return createDateOnlyFunction();
       case EdilangPackage.DATE_AND_TIME_FUNCTION: return createDateAndTimeFunction();
+      case EdilangPackage.DATE_TIME_PERIOD: return createDateTimePeriod();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -516,10 +534,22 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
-  public PRIFunction createPRIFunction()
+  public UNBHeader createUNBHeader()
   {
-    PRIFunctionImpl priFunction = new PRIFunctionImpl();
-    return priFunction;
+    UNBHeaderImpl unbHeader = new UNBHeaderImpl();
+    return unbHeader;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PriceInformation createPriceInformation()
+  {
+    PriceInformationImpl priceInformation = new PriceInformationImpl();
+    return priceInformation;
   }
 
   /**
@@ -540,10 +570,22 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
-  public MSGFunction createMSGFunction()
+  public MessageIndentifier createMessageIndentifier()
   {
-    MSGFunctionImpl msgFunction = new MSGFunctionImpl();
-    return msgFunction;
+    MessageIndentifierImpl messageIndentifier = new MessageIndentifierImpl();
+    return messageIndentifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Relationship createRelationship()
+  {
+    RelationshipImpl relationship = new RelationshipImpl();
+    return relationship;
   }
 
   /**
@@ -564,10 +606,190 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
+  public ItemNumberIdentification createItemNumberIdentification()
+  {
+    ItemNumberIdentificationImpl itemNumberIdentification = new ItemNumberIdentificationImpl();
+    return itemNumberIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SublineInformation createSublineInformation()
+  {
+    SublineInformationImpl sublineInformation = new SublineInformationImpl();
+    return sublineInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public QuantityDetail createQuantityDetail()
+  {
+    QuantityDetailImpl quantityDetail = new QuantityDetailImpl();
+    return quantityDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Street createStreet()
+  {
+    StreetImpl street = new StreetImpl();
+    return street;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CountrySubEntityDetail createCountrySubEntityDetail()
+  {
+    CountrySubEntityDetailImpl countrySubEntityDetail = new CountrySubEntityDetailImpl();
+    return countrySubEntityDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PartyName createPartyName()
+  {
+    PartyNameImpl partyName = new PartyNameImpl();
+    return partyName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NameAndAddress createNameAndAddress()
+  {
+    NameAndAddressImpl nameAndAddress = new NameAndAddressImpl();
+    return nameAndAddress;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PartyIdentificationDetail createPartyIdentificationDetail()
+  {
+    PartyIdentificationDetailImpl partyIdentificationDetail = new PartyIdentificationDetailImpl();
+    return partyIdentificationDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ApplicationErrorDetail createApplicationErrorDetail()
+  {
+    ApplicationErrorDetailImpl applicationErrorDetail = new ApplicationErrorDetailImpl();
+    return applicationErrorDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public SystemDetailFunction createSystemDetailFunction()
   {
     SystemDetailFunctionImpl systemDetailFunction = new SystemDetailFunctionImpl();
     return systemDetailFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TaxDetail createTaxDetail()
+  {
+    TaxDetailImpl taxDetail = new TaxDetailImpl();
+    return taxDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TaxAccountDetail createTaxAccountDetail()
+  {
+    TaxAccountDetailImpl taxAccountDetail = new TaxAccountDetailImpl();
+    return taxAccountDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TaxType createTaxType()
+  {
+    TaxTypeImpl taxType = new TaxTypeImpl();
+    return taxType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CurrencyDetail createCurrencyDetail()
+  {
+    CurrencyDetailImpl currencyDetail = new CurrencyDetailImpl();
+    return currencyDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DocumentMessageIdentification createDocumentMessageIdentification()
+  {
+    DocumentMessageIdentificationImpl documentMessageIdentification = new DocumentMessageIdentificationImpl();
+    return documentMessageIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DocumentMessage createDocumentMessage()
+  {
+    DocumentMessageImpl documentMessage = new DocumentMessageImpl();
+    return documentMessage;
   }
 
   /**
@@ -640,6 +862,18 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
   {
     DateAndTimeFunctionImpl dateAndTimeFunction = new DateAndTimeFunctionImpl();
     return dateAndTimeFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DateTimePeriod createDateTimePeriod()
+  {
+    DateTimePeriodImpl dateTimePeriod = new DateTimePeriodImpl();
+    return dateTimePeriod;
   }
 
   /**

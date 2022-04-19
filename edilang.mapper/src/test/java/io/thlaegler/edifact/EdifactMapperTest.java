@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import io.thlaegler.edifact.EdifactMapper;
 import io.thlaegler.edifact.edilang.EdiModel;
 import io.thlaegler.edifact.edilang.TVLSegment;
+import io.thlaegler.edifact.edilang.UNBHeader;
 import io.thlaegler.edifact.edilang.UNBSegment;
 import io.thlaegler.edifact.edilang.impl.EdilangFactoryImpl;
 
@@ -30,7 +31,9 @@ public class EdifactMapperTest {
 	public void serialize() {
 		EdiModel model = modelFactory.createEdiModel();
 		UNBSegment unbSegment = modelFactory.createUNBSegment();
-		unbSegment.setSyntax("IATB");
+		UNBHeader header = modelFactory.createUNBHeader();
+		header.setSyntax("IATB");
+		unbSegment.setHeader(header);
 		model.getSegments().add(unbSegment);
 		String actualEdifactString = unitUnderTest.writeValueAsString(model);
 
@@ -56,7 +59,7 @@ public class EdifactMapperTest {
 
 		UNBSegment unbSegment = (UNBSegment) actualModel.getSegments().stream()
 				.filter(s -> s.getSegment().equalsIgnoreCase("UNB")).findFirst().orElseThrow();
-		assertEquals("IATB", unbSegment.getSyntax());
+		assertEquals("IATB", unbSegment.getHeader().getSyntax());
 
 		TVLSegment tvlSegment = (TVLSegment) actualModel.getSegments().stream()
 				.filter(s -> s.getSegment().equalsIgnoreCase("TVL")).findFirst().orElseThrow();

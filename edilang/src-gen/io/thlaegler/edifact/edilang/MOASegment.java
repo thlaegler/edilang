@@ -13,8 +13,11 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.MOASegment#getCode1 <em>Code1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.MOASegment#getCode2 <em>Code2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MOASegment#getMonetaryAmountTypeCodeQualifier <em>Monetary Amount Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MOASegment#getMonetaryAmount <em>Monetary Amount</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MOASegment#getCurrencyIdentificationCode <em>Currency Identification Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MOASegment#getCurrencyTypeCodeQualifier <em>Currency Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MOASegment#getStatusDescriptionCode <em>Status Description Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment()
@@ -24,47 +27,113 @@ package io.thlaegler.edifact.edilang;
 public interface MOASegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Code1</b></em>' attribute.
+   * Returns the value of the '<em><b>Monetary Amount Type Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code1</em>' attribute.
-   * @see #setCode1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment_Code1()
+   * @return the value of the '<em>Monetary Amount Type Code Qualifier</em>' attribute.
+   * @see #setMonetaryAmountTypeCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment_MonetaryAmountTypeCodeQualifier()
    * @model
    * @generated
    */
-  String getCode1();
+  String getMonetaryAmountTypeCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MOASegment#getCode1 <em>Code1</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MOASegment#getMonetaryAmountTypeCodeQualifier <em>Monetary Amount Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code1</em>' attribute.
-   * @see #getCode1()
+   * @param value the new value of the '<em>Monetary Amount Type Code Qualifier</em>' attribute.
+   * @see #getMonetaryAmountTypeCodeQualifier()
    * @generated
    */
-  void setCode1(String value);
+  void setMonetaryAmountTypeCodeQualifier(String value);
 
   /**
-   * Returns the value of the '<em><b>Code2</b></em>' attribute.
+   * Returns the value of the '<em><b>Monetary Amount</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code2</em>' attribute.
-   * @see #setCode2(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment_Code2()
+   * @return the value of the '<em>Monetary Amount</em>' attribute.
+   * @see #setMonetaryAmount(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment_MonetaryAmount()
    * @model
    * @generated
    */
-  String getCode2();
+  String getMonetaryAmount();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MOASegment#getCode2 <em>Code2</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MOASegment#getMonetaryAmount <em>Monetary Amount</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code2</em>' attribute.
-   * @see #getCode2()
+   * @param value the new value of the '<em>Monetary Amount</em>' attribute.
+   * @see #getMonetaryAmount()
    * @generated
    */
-  void setCode2(String value);
+  void setMonetaryAmount(String value);
+
+  /**
+   * Returns the value of the '<em><b>Currency Identification Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Currency Identification Code</em>' attribute.
+   * @see #setCurrencyIdentificationCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment_CurrencyIdentificationCode()
+   * @model
+   * @generated
+   */
+  String getCurrencyIdentificationCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MOASegment#getCurrencyIdentificationCode <em>Currency Identification Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Currency Identification Code</em>' attribute.
+   * @see #getCurrencyIdentificationCode()
+   * @generated
+   */
+  void setCurrencyIdentificationCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Currency Type Code Qualifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Currency Type Code Qualifier</em>' attribute.
+   * @see #setCurrencyTypeCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment_CurrencyTypeCodeQualifier()
+   * @model
+   * @generated
+   */
+  String getCurrencyTypeCodeQualifier();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MOASegment#getCurrencyTypeCodeQualifier <em>Currency Type Code Qualifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Currency Type Code Qualifier</em>' attribute.
+   * @see #getCurrencyTypeCodeQualifier()
+   * @generated
+   */
+  void setCurrencyTypeCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Status Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status Description Code</em>' attribute.
+   * @see #setStatusDescriptionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMOASegment_StatusDescriptionCode()
+   * @model
+   * @generated
+   */
+  String getStatusDescriptionCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MOASegment#getStatusDescriptionCode <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Status Description Code</em>' attribute.
+   * @see #getStatusDescriptionCode()
+   * @generated
+   */
+  void setStatusDescriptionCode(String value);
 
 } // MOASegment

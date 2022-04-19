@@ -5,26 +5,34 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.AbstractEdiFunction;
 import io.thlaegler.edifact.edilang.AbstractEdiSegment;
+import io.thlaegler.edifact.edilang.ApplicationErrorDetail;
 import io.thlaegler.edifact.edilang.BGMSegment;
 import io.thlaegler.edifact.edilang.CNTSegment;
 import io.thlaegler.edifact.edilang.CTASegment;
 import io.thlaegler.edifact.edilang.CUXSegment;
+import io.thlaegler.edifact.edilang.CountrySubEntityDetail;
+import io.thlaegler.edifact.edilang.CurrencyDetail;
 import io.thlaegler.edifact.edilang.DTMSegment;
 import io.thlaegler.edifact.edilang.DateAndTimeFunction;
 import io.thlaegler.edifact.edilang.DateOnlyFunction;
+import io.thlaegler.edifact.edilang.DateTimePeriod;
+import io.thlaegler.edifact.edilang.DocumentMessage;
+import io.thlaegler.edifact.edilang.DocumentMessageIdentification;
 import io.thlaegler.edifact.edilang.ERCSegment;
 import io.thlaegler.edifact.edilang.EdiModel;
 import io.thlaegler.edifact.edilang.EdilangFactory;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.FTXSegment;
 import io.thlaegler.edifact.edilang.InterchangerFunction;
+import io.thlaegler.edifact.edilang.ItemNumberIdentification;
 import io.thlaegler.edifact.edilang.LINSegment;
 import io.thlaegler.edifact.edilang.LocationFunction;
 import io.thlaegler.edifact.edilang.MOASegment;
-import io.thlaegler.edifact.edilang.MSGFunction;
 import io.thlaegler.edifact.edilang.MSGSegment;
 import io.thlaegler.edifact.edilang.MessageBodyFunction;
+import io.thlaegler.edifact.edilang.MessageIndentifier;
 import io.thlaegler.edifact.edilang.NADSegment;
+import io.thlaegler.edifact.edilang.NameAndAddress;
 import io.thlaegler.edifact.edilang.ODISegment;
 import io.thlaegler.edifact.edilang.ORGSegment;
 import io.thlaegler.edifact.edilang.OriginatorFunction;
@@ -33,17 +41,27 @@ import io.thlaegler.edifact.edilang.PATSegment;
 import io.thlaegler.edifact.edilang.PCISegment;
 import io.thlaegler.edifact.edilang.PDISegment;
 import io.thlaegler.edifact.edilang.POCSegment;
-import io.thlaegler.edifact.edilang.PRIFunction;
 import io.thlaegler.edifact.edilang.PRISegment;
+import io.thlaegler.edifact.edilang.PartyIdentificationDetail;
+import io.thlaegler.edifact.edilang.PartyName;
+import io.thlaegler.edifact.edilang.PriceInformation;
 import io.thlaegler.edifact.edilang.ProductFunction;
 import io.thlaegler.edifact.edilang.QTYSegment;
+import io.thlaegler.edifact.edilang.QuantityDetail;
 import io.thlaegler.edifact.edilang.RFFSegment;
 import io.thlaegler.edifact.edilang.RPISegment;
+import io.thlaegler.edifact.edilang.Relationship;
+import io.thlaegler.edifact.edilang.Street;
+import io.thlaegler.edifact.edilang.SublineInformation;
 import io.thlaegler.edifact.edilang.SystemDetailFunction;
 import io.thlaegler.edifact.edilang.TAXSegment;
 import io.thlaegler.edifact.edilang.TVLSegment;
+import io.thlaegler.edifact.edilang.TaxAccountDetail;
+import io.thlaegler.edifact.edilang.TaxDetail;
+import io.thlaegler.edifact.edilang.TaxType;
 import io.thlaegler.edifact.edilang.UCISegment;
 import io.thlaegler.edifact.edilang.UNASegment;
+import io.thlaegler.edifact.edilang.UNBHeader;
 import io.thlaegler.edifact.edilang.UNBSegment;
 import io.thlaegler.edifact.edilang.UNHSegment;
 import io.thlaegler.edifact.edilang.UNSSegment;
@@ -301,7 +319,14 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass priFunctionEClass = null;
+  private EClass unbHeaderEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass priceInformationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -315,7 +340,14 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass msgFunctionEClass = null;
+  private EClass messageIndentifierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass relationshipEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -329,7 +361,112 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass itemNumberIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sublineInformationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass quantityDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass streetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass countrySubEntityDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass partyNameEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nameAndAddressEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass partyIdentificationDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass applicationErrorDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass systemDetailFunctionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass taxDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass taxAccountDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass taxTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass currencyDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass documentMessageIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass documentMessageEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -372,6 +509,13 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   private EClass dateAndTimeFunctionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dateTimePeriodEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -519,20 +663,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getUNBSegment_Syntax()
+  public EReference getUNBSegment_Header()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getUNBSegment_Num1()
-  {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -543,7 +676,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNBSegment_InterchangeSender()
   {
-    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(2);
+    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -554,7 +687,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNBSegment_InterchangeRecipient()
   {
-    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(3);
+    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -565,7 +698,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNBSegment_DateAndTime()
   {
-    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(4);
+    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -576,7 +709,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_InterchangeControlSenderRef()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -587,7 +720,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_InterchangeControlRecipientRef()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(6);
+    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -598,7 +731,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_Fse()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -609,7 +742,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_AssiciationCode()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -673,7 +806,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EReference getMSGSegment_MessageFunction()
+  public EReference getMSGSegment_MessageIdentifier()
   {
     return (EReference)msgSegmentEClass.getEStructuralFeatures().get(0);
   }
@@ -684,9 +817,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getMSGSegment_ResponseType()
+  public EAttribute getMSGSegment_DesignatedClassCode()
   {
     return (EAttribute)msgSegmentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMSGSegment_MaintenanceOperationCode()
+  {
+    return (EAttribute)msgSegmentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getMSGSegment_Relationship()
+  {
+    return (EReference)msgSegmentEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1168,7 +1323,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getMOASegment_Code1()
+  public EAttribute getMOASegment_MonetaryAmountTypeCodeQualifier()
   {
     return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(0);
   }
@@ -1179,9 +1334,42 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getMOASegment_Code2()
+  public EAttribute getMOASegment_MonetaryAmount()
   {
     return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMOASegment_CurrencyIdentificationCode()
+  {
+    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMOASegment_CurrencyTypeCodeQualifier()
+  {
+    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMOASegment_StatusDescriptionCode()
+  {
+    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1201,7 +1389,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getLINSegment_Code1()
+  public EAttribute getLINSegment_LineItemIdentifier()
   {
     return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(0);
   }
@@ -1212,7 +1400,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getLINSegment_Code2()
+  public EAttribute getLINSegment_ActionRequest()
   {
     return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(1);
   }
@@ -1223,9 +1411,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getLINSegment_Code3()
+  public EReference getLINSegment_ItemNumberIdentification()
   {
-    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(2);
+    return (EReference)linSegmentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1234,9 +1422,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getLINSegment_Code4()
+  public EReference getLINSegment_SublineInformation()
   {
-    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(3);
+    return (EReference)linSegmentEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLINSegment_ConfigurationLevelNumber()
+  {
+    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLINSegment_ConfigurationOperationCode()
+  {
+    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1278,31 +1488,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getQTYSegment_Code1()
+  public EReference getQTYSegment_QuantityDetails()
   {
-    return (EAttribute)qtySegmentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getQTYSegment_Code2()
-  {
-    return (EAttribute)qtySegmentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getQTYSegment_Code3()
-  {
-    return (EAttribute)qtySegmentEClass.getEStructuralFeatures().get(2);
+    return (EReference)qtySegmentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1322,9 +1510,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCUXSegment_Num()
+  public EReference getCUXSegment_CurrencyDetails1()
   {
-    return (EAttribute)cuxSegmentEClass.getEStructuralFeatures().get(0);
+    return (EReference)cuxSegmentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1333,9 +1521,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCUXSegment_Currency()
+  public EReference getCUXSegment_CurrencyDetails2()
   {
-    return (EAttribute)cuxSegmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)cuxSegmentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCUXSegment_CurrencyExchangeRate()
+  {
+    return (EAttribute)cuxSegmentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCUXSegment_ExchangeRateCurrencyMarketIdentifier()
+  {
+    return (EAttribute)cuxSegmentEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1355,7 +1565,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Num()
+  public EAttribute getTAXSegment_TaxFunctionCodeQualifier()
   {
     return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(0);
   }
@@ -1366,9 +1576,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Type()
+  public EReference getTAXSegment_TaxType()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)taxSegmentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1377,9 +1587,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Todo1()
+  public EReference getTAXSegment_TaxAccountDetail()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(2);
+    return (EReference)taxSegmentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1388,7 +1598,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Todo2()
+  public EAttribute getTAXSegment_TaxAssessmentBasicValue()
   {
     return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(3);
   }
@@ -1399,9 +1609,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Todo3()
+  public EReference getTAXSegment_TaxDetail()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(4);
+    return (EReference)taxSegmentEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1410,7 +1620,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Todo4()
+  public EAttribute getTAXSegment_TaxCategoryCode()
   {
     return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(5);
   }
@@ -1421,7 +1631,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Todo5()
+  public EAttribute getTAXSegment_PartyTaxIdentifier()
   {
     return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(6);
   }
@@ -1432,7 +1642,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getTAXSegment_Todo6()
+  public EAttribute getTAXSegment_CalculationSequenceCode()
   {
     return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(7);
   }
@@ -1487,7 +1697,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getNADSegment_Code()
+  public EAttribute getNADSegment_PartyFunctionCodeQualifier()
   {
     return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(0);
   }
@@ -1498,9 +1708,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getNADSegment_Manufacturer1()
+  public EReference getNADSegment_PartyIdentificationDetails()
   {
-    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1509,9 +1719,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getNADSegment_Manufacturer2()
+  public EReference getNADSegment_NameAndAddress()
   {
-    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(2);
+    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1520,9 +1730,64 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getNADSegment_Manufacturer3()
+  public EReference getNADSegment_PartyName()
   {
-    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(3);
+    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getNADSegment_Street()
+  {
+    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getNADSegment_CityName()
+  {
+    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getNADSegment_CountrySubEntityDetails()
+  {
+    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getNADSegment_PostalIdentificationCode()
+  {
+    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getNADSegment_CountryNameCode()
+  {
+    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -1542,31 +1807,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getDTMSegment_Num1()
+  public EReference getDTMSegment_DateTimePeriods()
   {
-    return (EAttribute)dtmSegmentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDTMSegment_Num2()
-  {
-    return (EAttribute)dtmSegmentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDTMSegment_Num3()
-  {
-    return (EAttribute)dtmSegmentEClass.getEStructuralFeatures().get(2);
+    return (EReference)dtmSegmentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1586,9 +1829,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getBGMSegment_Num1()
+  public EReference getBGMSegment_DocumentMessageName()
   {
-    return (EAttribute)bgmSegmentEClass.getEStructuralFeatures().get(0);
+    return (EReference)bgmSegmentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1597,9 +1840,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getBGMSegment_Num2()
+  public EReference getBGMSegment_DocumentMessageIdentification()
   {
-    return (EAttribute)bgmSegmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)bgmSegmentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1608,9 +1851,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getBGMSegment_Num3()
+  public EAttribute getBGMSegment_MessageFunctionCode()
   {
     return (EAttribute)bgmSegmentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBGMSegment_ResponseTypeCode()
+  {
+    return (EAttribute)bgmSegmentEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1707,9 +1961,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getERCSegment_Code1()
+  public EReference getERCSegment_ApplicationErrorDetails()
   {
-    return (EAttribute)ercSegmentEClass.getEStructuralFeatures().get(0);
+    return (EReference)ercSegmentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1894,9 +2148,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EClass getPRIFunction()
+  public EClass getUNBHeader()
   {
-    return priFunctionEClass;
+    return unbHeaderEClass;
   }
 
   /**
@@ -1905,9 +2159,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getPRIFunction_Code1()
+  public EAttribute getUNBHeader_Syntax()
   {
-    return (EAttribute)priFunctionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)unbHeaderEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1916,9 +2170,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getPRIFunction_Code2()
+  public EAttribute getUNBHeader_Num1()
   {
-    return (EAttribute)priFunctionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)unbHeaderEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1927,9 +2181,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getPRIFunction_Code3()
+  public EClass getPriceInformation()
   {
-    return (EAttribute)priFunctionEClass.getEStructuralFeatures().get(2);
+    return priceInformationEClass;
   }
 
   /**
@@ -1938,9 +2192,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getPRIFunction_Code4()
+  public EAttribute getPriceInformation_PriceCodeQualifier()
   {
-    return (EAttribute)priFunctionEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1949,9 +2203,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getPRIFunction_Code5()
+  public EAttribute getPriceInformation_PriceAmount()
   {
-    return (EAttribute)priFunctionEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1960,9 +2214,42 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getPRIFunction_Code6()
+  public EAttribute getPriceInformation_PriceTypeCode()
   {
-    return (EAttribute)priFunctionEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPriceInformation_PriceSpecificationCode()
+  {
+    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPriceInformation_UnitPriceBasisValue()
+  {
+    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPriceInformation_MeasurementUnitCode()
+  {
+    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -2037,9 +2324,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EClass getMSGFunction()
+  public EClass getMessageIndentifier()
   {
-    return msgFunctionEClass;
+    return messageIndentifierEClass;
   }
 
   /**
@@ -2048,9 +2335,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getMSGFunction_BusinessFunction()
+  public EAttribute getMessageIndentifier_MessageTypeCode()
   {
-    return (EAttribute)msgFunctionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2059,9 +2346,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getMSGFunction_MessageFunction1()
+  public EAttribute getMessageIndentifier_VersionIdentifier()
   {
-    return (EAttribute)msgFunctionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2070,9 +2357,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getMSGFunction_CodeListResponsibleAgency()
+  public EAttribute getMessageIndentifier_ReleaseIdentifier()
   {
-    return (EAttribute)msgFunctionEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2081,9 +2368,97 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getMSGFunction_MessageFunction2()
+  public EAttribute getMessageIndentifier_ControllingAgencyIdentifier()
   {
-    return (EAttribute)msgFunctionEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMessageIndentifier_MessageImplementationIdentificationCode()
+  {
+    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMessageIndentifier_RevisionIdentifier()
+  {
+    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMessageIndentifier_DocumentStatusCode()
+  {
+    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRelationship()
+  {
+    return relationshipEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRelationship_RelationshipDescriptionCode()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRelationship_CodeListIdentificationCode()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRelationship_CodeListResponsibleAgency()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRelationship_RelationshipDescription()
+  {
+    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2117,6 +2492,347 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   public EAttribute getProductFunction_Avail()
   {
     return (EAttribute)productFunctionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getItemNumberIdentification()
+  {
+    return itemNumberIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getItemNumberIdentification_ItemIdentifier()
+  {
+    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getItemNumberIdentification_ItemTypeIdentificationCode()
+  {
+    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getItemNumberIdentification_CodeListIdentificationCode()
+  {
+    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getItemNumberIdentification_CodeListResponsibleAgencyCode()
+  {
+    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSublineInformation()
+  {
+    return sublineInformationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSublineInformation_SublineIndicatorCode()
+  {
+    return (EAttribute)sublineInformationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSublineInformation_LineItemIdentifier()
+  {
+    return (EAttribute)sublineInformationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getQuantityDetail()
+  {
+    return quantityDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getQuantityDetail_QuantityTypeCodeQualifier()
+  {
+    return (EAttribute)quantityDetailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getQuantityDetail_Quantity()
+  {
+    return (EAttribute)quantityDetailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getQuantityDetail_MeasurementUnitCode()
+  {
+    return (EAttribute)quantityDetailEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getStreet()
+  {
+    return streetEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getStreet_StreetAndNumber()
+  {
+    return (EAttribute)streetEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCountrySubEntityDetail()
+  {
+    return countrySubEntityDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCountrySubEntityDetail_CountrySubEntityNameCode()
+  {
+    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCountrySubEntityDetail_CodeListIdentificationCode()
+  {
+    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCountrySubEntityDetail_CodeListResponsibleAgencyCode()
+  {
+    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCountrySubEntityDetail_CountrySubEntityName()
+  {
+    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPartyName()
+  {
+    return partyNameEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPartyName_PartyName()
+  {
+    return (EAttribute)partyNameEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getNameAndAddress()
+  {
+    return nameAndAddressEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getNameAndAddress_NameAndAddress()
+  {
+    return (EAttribute)nameAndAddressEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPartyIdentificationDetail()
+  {
+    return partyIdentificationDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPartyIdentificationDetail_PartyIdentifier()
+  {
+    return (EAttribute)partyIdentificationDetailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPartyIdentificationDetail_CodeListIdentificationCode()
+  {
+    return (EAttribute)partyIdentificationDetailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPartyIdentificationDetail_CodeListResponsibleAgencyCode()
+  {
+    return (EAttribute)partyIdentificationDetailEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getApplicationErrorDetail()
+  {
+    return applicationErrorDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getApplicationErrorDetail_ApplictionErrorCode()
+  {
+    return (EAttribute)applicationErrorDetailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getApplicationErrorDetail_CodeListIdentificationCode()
+  {
+    return (EAttribute)applicationErrorDetailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getApplicationErrorDetail_CodeListResponsibleAgencyCode()
+  {
+    return (EAttribute)applicationErrorDetailEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2161,6 +2877,347 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   public EAttribute getSystemDetailFunction_LocationName()
   {
     return (EAttribute)systemDetailFunctionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTaxDetail()
+  {
+    return taxDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxDetail_TaxRateDescriptionCode()
+  {
+    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxDetail_CodeListIdentificationCode1()
+  {
+    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxDetail_CodeListResponsibleAgencyCode1()
+  {
+    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxDetail_TaxRateDescription()
+  {
+    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxDetail_TaxRateBasisCode()
+  {
+    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxDetail_CodeListIdentificationCode2()
+  {
+    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxDetail_CodeListResponsibleAgencyCode2()
+  {
+    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTaxAccountDetail()
+  {
+    return taxAccountDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxAccountDetail_TaxAccountCode()
+  {
+    return (EAttribute)taxAccountDetailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxAccountDetail_CodeListIdentificationCode()
+  {
+    return (EAttribute)taxAccountDetailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxAccountDetail_CodeListResponsibleAgencyCode()
+  {
+    return (EAttribute)taxAccountDetailEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTaxType()
+  {
+    return taxTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxType_TaxTypeNameCode()
+  {
+    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxType_CodeListIdentificationCode()
+  {
+    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxType_CodeListResponsibleAgencyCode()
+  {
+    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTaxType_TaxTypeName()
+  {
+    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCurrencyDetail()
+  {
+    return currencyDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCurrencyDetail_CurrencyUsageCodeQualifier()
+  {
+    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCurrencyDetail_CurrencyIdentificationCode()
+  {
+    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCurrencyDetail_CurrencyTypeCodeQualifier()
+  {
+    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCurrencyDetail_CurrencyRateValue()
+  {
+    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDocumentMessageIdentification()
+  {
+    return documentMessageIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDocumentMessageIdentification_DocumentIdentifier()
+  {
+    return (EAttribute)documentMessageIdentificationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDocumentMessageIdentification_VersionIdentifier()
+  {
+    return (EAttribute)documentMessageIdentificationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDocumentMessageIdentification_RevisionIdentifier()
+  {
+    return (EAttribute)documentMessageIdentificationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDocumentMessage()
+  {
+    return documentMessageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDocumentMessage_DocumentNameCode()
+  {
+    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDocumentMessage_CodeListIdentificationCode()
+  {
+    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDocumentMessage_CodeListResponsibleAgencyCode()
+  {
+    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDocumentMessage_DocumentName()
+  {
+    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2378,6 +3435,50 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
+  public EClass getDateTimePeriod()
+  {
+    return dateTimePeriodEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDateTimePeriod_DateTimePeriodFunctionCodeQualifier()
+  {
+    return (EAttribute)dateTimePeriodEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDateTimePeriod_DateTimePeriodValue()
+  {
+    return (EAttribute)dateTimePeriodEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDateTimePeriod_DateTimePeriodFormatCode()
+  {
+    return (EAttribute)dateTimePeriodEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EdilangFactory getEdilangFactory()
   {
     return (EdilangFactory)getEFactoryInstance();
@@ -2413,8 +3514,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     unaSegmentEClass = createEClass(UNA_SEGMENT);
 
     unbSegmentEClass = createEClass(UNB_SEGMENT);
-    createEAttribute(unbSegmentEClass, UNB_SEGMENT__SYNTAX);
-    createEAttribute(unbSegmentEClass, UNB_SEGMENT__NUM1);
+    createEReference(unbSegmentEClass, UNB_SEGMENT__HEADER);
     createEReference(unbSegmentEClass, UNB_SEGMENT__INTERCHANGE_SENDER);
     createEReference(unbSegmentEClass, UNB_SEGMENT__INTERCHANGE_RECIPIENT);
     createEReference(unbSegmentEClass, UNB_SEGMENT__DATE_AND_TIME);
@@ -2429,8 +3529,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     createEAttribute(unhSegmentEClass, UNH_SEGMENT__COMMON_ACCESS_REFERENCE);
 
     msgSegmentEClass = createEClass(MSG_SEGMENT);
-    createEReference(msgSegmentEClass, MSG_SEGMENT__MESSAGE_FUNCTION);
-    createEAttribute(msgSegmentEClass, MSG_SEGMENT__RESPONSE_TYPE);
+    createEReference(msgSegmentEClass, MSG_SEGMENT__MESSAGE_IDENTIFIER);
+    createEAttribute(msgSegmentEClass, MSG_SEGMENT__DESIGNATED_CLASS_CODE);
+    createEAttribute(msgSegmentEClass, MSG_SEGMENT__MAINTENANCE_OPERATION_CODE);
+    createEReference(msgSegmentEClass, MSG_SEGMENT__RELATIONSHIP);
 
     orgSegmentEClass = createEClass(ORG_SEGMENT);
     createEReference(orgSegmentEClass, ORG_SEGMENT__SYSTEM_DETAIL1);
@@ -2482,56 +3584,65 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     createEAttribute(rpiSegmentEClass, RPI_SEGMENT__STATUS);
 
     moaSegmentEClass = createEClass(MOA_SEGMENT);
-    createEAttribute(moaSegmentEClass, MOA_SEGMENT__CODE1);
-    createEAttribute(moaSegmentEClass, MOA_SEGMENT__CODE2);
+    createEAttribute(moaSegmentEClass, MOA_SEGMENT__MONETARY_AMOUNT_TYPE_CODE_QUALIFIER);
+    createEAttribute(moaSegmentEClass, MOA_SEGMENT__MONETARY_AMOUNT);
+    createEAttribute(moaSegmentEClass, MOA_SEGMENT__CURRENCY_IDENTIFICATION_CODE);
+    createEAttribute(moaSegmentEClass, MOA_SEGMENT__CURRENCY_TYPE_CODE_QUALIFIER);
+    createEAttribute(moaSegmentEClass, MOA_SEGMENT__STATUS_DESCRIPTION_CODE);
 
     linSegmentEClass = createEClass(LIN_SEGMENT);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__CODE1);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__CODE2);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__CODE3);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__CODE4);
+    createEAttribute(linSegmentEClass, LIN_SEGMENT__LINE_ITEM_IDENTIFIER);
+    createEAttribute(linSegmentEClass, LIN_SEGMENT__ACTION_REQUEST);
+    createEReference(linSegmentEClass, LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION);
+    createEReference(linSegmentEClass, LIN_SEGMENT__SUBLINE_INFORMATION);
+    createEAttribute(linSegmentEClass, LIN_SEGMENT__CONFIGURATION_LEVEL_NUMBER);
+    createEAttribute(linSegmentEClass, LIN_SEGMENT__CONFIGURATION_OPERATION_CODE);
 
     priSegmentEClass = createEClass(PRI_SEGMENT);
     createEReference(priSegmentEClass, PRI_SEGMENT__SUB);
 
     qtySegmentEClass = createEClass(QTY_SEGMENT);
-    createEAttribute(qtySegmentEClass, QTY_SEGMENT__CODE1);
-    createEAttribute(qtySegmentEClass, QTY_SEGMENT__CODE2);
-    createEAttribute(qtySegmentEClass, QTY_SEGMENT__CODE3);
+    createEReference(qtySegmentEClass, QTY_SEGMENT__QUANTITY_DETAILS);
 
     cuxSegmentEClass = createEClass(CUX_SEGMENT);
-    createEAttribute(cuxSegmentEClass, CUX_SEGMENT__NUM);
-    createEAttribute(cuxSegmentEClass, CUX_SEGMENT__CURRENCY);
+    createEReference(cuxSegmentEClass, CUX_SEGMENT__CURRENCY_DETAILS1);
+    createEReference(cuxSegmentEClass, CUX_SEGMENT__CURRENCY_DETAILS2);
+    createEAttribute(cuxSegmentEClass, CUX_SEGMENT__CURRENCY_EXCHANGE_RATE);
+    createEAttribute(cuxSegmentEClass, CUX_SEGMENT__EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER);
 
     taxSegmentEClass = createEClass(TAX_SEGMENT);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__NUM);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TYPE);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TODO1);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TODO2);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TODO3);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TODO4);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TODO5);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TODO6);
+    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TAX_FUNCTION_CODE_QUALIFIER);
+    createEReference(taxSegmentEClass, TAX_SEGMENT__TAX_TYPE);
+    createEReference(taxSegmentEClass, TAX_SEGMENT__TAX_ACCOUNT_DETAIL);
+    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TAX_ASSESSMENT_BASIC_VALUE);
+    createEReference(taxSegmentEClass, TAX_SEGMENT__TAX_DETAIL);
+    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TAX_CATEGORY_CODE);
+    createEAttribute(taxSegmentEClass, TAX_SEGMENT__PARTY_TAX_IDENTIFIER);
+    createEAttribute(taxSegmentEClass, TAX_SEGMENT__CALCULATION_SEQUENCE_CODE);
 
     rffSegmentEClass = createEClass(RFF_SEGMENT);
     createEAttribute(rffSegmentEClass, RFF_SEGMENT__RFF1);
     createEAttribute(rffSegmentEClass, RFF_SEGMENT__RFF2);
 
     nadSegmentEClass = createEClass(NAD_SEGMENT);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__CODE);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__MANUFACTURER1);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__MANUFACTURER2);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__MANUFACTURER3);
+    createEAttribute(nadSegmentEClass, NAD_SEGMENT__PARTY_FUNCTION_CODE_QUALIFIER);
+    createEReference(nadSegmentEClass, NAD_SEGMENT__PARTY_IDENTIFICATION_DETAILS);
+    createEReference(nadSegmentEClass, NAD_SEGMENT__NAME_AND_ADDRESS);
+    createEReference(nadSegmentEClass, NAD_SEGMENT__PARTY_NAME);
+    createEReference(nadSegmentEClass, NAD_SEGMENT__STREET);
+    createEAttribute(nadSegmentEClass, NAD_SEGMENT__CITY_NAME);
+    createEReference(nadSegmentEClass, NAD_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS);
+    createEAttribute(nadSegmentEClass, NAD_SEGMENT__POSTAL_IDENTIFICATION_CODE);
+    createEAttribute(nadSegmentEClass, NAD_SEGMENT__COUNTRY_NAME_CODE);
 
     dtmSegmentEClass = createEClass(DTM_SEGMENT);
-    createEAttribute(dtmSegmentEClass, DTM_SEGMENT__NUM1);
-    createEAttribute(dtmSegmentEClass, DTM_SEGMENT__NUM2);
-    createEAttribute(dtmSegmentEClass, DTM_SEGMENT__NUM3);
+    createEReference(dtmSegmentEClass, DTM_SEGMENT__DATE_TIME_PERIODS);
 
     bgmSegmentEClass = createEClass(BGM_SEGMENT);
-    createEAttribute(bgmSegmentEClass, BGM_SEGMENT__NUM1);
-    createEAttribute(bgmSegmentEClass, BGM_SEGMENT__NUM2);
-    createEAttribute(bgmSegmentEClass, BGM_SEGMENT__NUM3);
+    createEReference(bgmSegmentEClass, BGM_SEGMENT__DOCUMENT_MESSAGE_NAME);
+    createEReference(bgmSegmentEClass, BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION);
+    createEAttribute(bgmSegmentEClass, BGM_SEGMENT__MESSAGE_FUNCTION_CODE);
+    createEAttribute(bgmSegmentEClass, BGM_SEGMENT__RESPONSE_TYPE_CODE);
 
     patSegmentEClass = createEClass(PAT_SEGMENT);
     createEAttribute(patSegmentEClass, PAT_SEGMENT__SEGMENT_COUNT);
@@ -2543,7 +3654,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     createEAttribute(ftxSegmentEClass, FTX_SEGMENT__TODO4);
 
     ercSegmentEClass = createEClass(ERC_SEGMENT);
-    createEAttribute(ercSegmentEClass, ERC_SEGMENT__CODE1);
+    createEReference(ercSegmentEClass, ERC_SEGMENT__APPLICATION_ERROR_DETAILS);
 
     cntSegmentEClass = createEClass(CNT_SEGMENT);
     createEAttribute(cntSegmentEClass, CNT_SEGMENT__TODO1);
@@ -2568,13 +3679,17 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
 
     abstractEdiFunctionEClass = createEClass(ABSTRACT_EDI_FUNCTION);
 
-    priFunctionEClass = createEClass(PRI_FUNCTION);
-    createEAttribute(priFunctionEClass, PRI_FUNCTION__CODE1);
-    createEAttribute(priFunctionEClass, PRI_FUNCTION__CODE2);
-    createEAttribute(priFunctionEClass, PRI_FUNCTION__CODE3);
-    createEAttribute(priFunctionEClass, PRI_FUNCTION__CODE4);
-    createEAttribute(priFunctionEClass, PRI_FUNCTION__CODE5);
-    createEAttribute(priFunctionEClass, PRI_FUNCTION__CODE6);
+    unbHeaderEClass = createEClass(UNB_HEADER);
+    createEAttribute(unbHeaderEClass, UNB_HEADER__SYNTAX);
+    createEAttribute(unbHeaderEClass, UNB_HEADER__NUM1);
+
+    priceInformationEClass = createEClass(PRICE_INFORMATION);
+    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_CODE_QUALIFIER);
+    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_AMOUNT);
+    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_TYPE_CODE);
+    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_SPECIFICATION_CODE);
+    createEAttribute(priceInformationEClass, PRICE_INFORMATION__UNIT_PRICE_BASIS_VALUE);
+    createEAttribute(priceInformationEClass, PRICE_INFORMATION__MEASUREMENT_UNIT_CODE);
 
     messageBodyFunctionEClass = createEClass(MESSAGE_BODY_FUNCTION);
     createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__TYPE);
@@ -2583,20 +3698,106 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__CONTROLLING_AGENCY);
     createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__MORE);
 
-    msgFunctionEClass = createEClass(MSG_FUNCTION);
-    createEAttribute(msgFunctionEClass, MSG_FUNCTION__BUSINESS_FUNCTION);
-    createEAttribute(msgFunctionEClass, MSG_FUNCTION__MESSAGE_FUNCTION1);
-    createEAttribute(msgFunctionEClass, MSG_FUNCTION__CODE_LIST_RESPONSIBLE_AGENCY);
-    createEAttribute(msgFunctionEClass, MSG_FUNCTION__MESSAGE_FUNCTION2);
+    messageIndentifierEClass = createEClass(MESSAGE_INDENTIFIER);
+    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__MESSAGE_TYPE_CODE);
+    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__VERSION_IDENTIFIER);
+    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__RELEASE_IDENTIFIER);
+    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__CONTROLLING_AGENCY_IDENTIFIER);
+    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__MESSAGE_IMPLEMENTATION_IDENTIFICATION_CODE);
+    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__REVISION_IDENTIFIER);
+    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__DOCUMENT_STATUS_CODE);
+
+    relationshipEClass = createEClass(RELATIONSHIP);
+    createEAttribute(relationshipEClass, RELATIONSHIP__RELATIONSHIP_DESCRIPTION_CODE);
+    createEAttribute(relationshipEClass, RELATIONSHIP__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(relationshipEClass, RELATIONSHIP__CODE_LIST_RESPONSIBLE_AGENCY);
+    createEAttribute(relationshipEClass, RELATIONSHIP__RELATIONSHIP_DESCRIPTION);
 
     productFunctionEClass = createEClass(PRODUCT_FUNCTION);
     createEAttribute(productFunctionEClass, PRODUCT_FUNCTION__BOOKING_CLASS);
     createEAttribute(productFunctionEClass, PRODUCT_FUNCTION__AVAIL);
 
+    itemNumberIdentificationEClass = createEClass(ITEM_NUMBER_IDENTIFICATION);
+    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__ITEM_IDENTIFIER);
+    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__ITEM_TYPE_IDENTIFICATION_CODE);
+    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
+
+    sublineInformationEClass = createEClass(SUBLINE_INFORMATION);
+    createEAttribute(sublineInformationEClass, SUBLINE_INFORMATION__SUBLINE_INDICATOR_CODE);
+    createEAttribute(sublineInformationEClass, SUBLINE_INFORMATION__LINE_ITEM_IDENTIFIER);
+
+    quantityDetailEClass = createEClass(QUANTITY_DETAIL);
+    createEAttribute(quantityDetailEClass, QUANTITY_DETAIL__QUANTITY_TYPE_CODE_QUALIFIER);
+    createEAttribute(quantityDetailEClass, QUANTITY_DETAIL__QUANTITY);
+    createEAttribute(quantityDetailEClass, QUANTITY_DETAIL__MEASUREMENT_UNIT_CODE);
+
+    streetEClass = createEClass(STREET);
+    createEAttribute(streetEClass, STREET__STREET_AND_NUMBER);
+
+    countrySubEntityDetailEClass = createEClass(COUNTRY_SUB_ENTITY_DETAIL);
+    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__COUNTRY_SUB_ENTITY_NAME_CODE);
+    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
+    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__COUNTRY_SUB_ENTITY_NAME);
+
+    partyNameEClass = createEClass(PARTY_NAME);
+    createEAttribute(partyNameEClass, PARTY_NAME__PARTY_NAME);
+
+    nameAndAddressEClass = createEClass(NAME_AND_ADDRESS);
+    createEAttribute(nameAndAddressEClass, NAME_AND_ADDRESS__NAME_AND_ADDRESS);
+
+    partyIdentificationDetailEClass = createEClass(PARTY_IDENTIFICATION_DETAIL);
+    createEAttribute(partyIdentificationDetailEClass, PARTY_IDENTIFICATION_DETAIL__PARTY_IDENTIFIER);
+    createEAttribute(partyIdentificationDetailEClass, PARTY_IDENTIFICATION_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(partyIdentificationDetailEClass, PARTY_IDENTIFICATION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
+
+    applicationErrorDetailEClass = createEClass(APPLICATION_ERROR_DETAIL);
+    createEAttribute(applicationErrorDetailEClass, APPLICATION_ERROR_DETAIL__APPLICTION_ERROR_CODE);
+    createEAttribute(applicationErrorDetailEClass, APPLICATION_ERROR_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(applicationErrorDetailEClass, APPLICATION_ERROR_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
+
     systemDetailFunctionEClass = createEClass(SYSTEM_DETAIL_FUNCTION);
     createEAttribute(systemDetailFunctionEClass, SYSTEM_DETAIL_FUNCTION__COMPANY_IDENTIFICATION);
     createEAttribute(systemDetailFunctionEClass, SYSTEM_DETAIL_FUNCTION__LOCATION_CODE);
     createEAttribute(systemDetailFunctionEClass, SYSTEM_DETAIL_FUNCTION__LOCATION_NAME);
+
+    taxDetailEClass = createEClass(TAX_DETAIL);
+    createEAttribute(taxDetailEClass, TAX_DETAIL__TAX_RATE_DESCRIPTION_CODE);
+    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_IDENTIFICATION_CODE1);
+    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE1);
+    createEAttribute(taxDetailEClass, TAX_DETAIL__TAX_RATE_DESCRIPTION);
+    createEAttribute(taxDetailEClass, TAX_DETAIL__TAX_RATE_BASIS_CODE);
+    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_IDENTIFICATION_CODE2);
+    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE2);
+
+    taxAccountDetailEClass = createEClass(TAX_ACCOUNT_DETAIL);
+    createEAttribute(taxAccountDetailEClass, TAX_ACCOUNT_DETAIL__TAX_ACCOUNT_CODE);
+    createEAttribute(taxAccountDetailEClass, TAX_ACCOUNT_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(taxAccountDetailEClass, TAX_ACCOUNT_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
+
+    taxTypeEClass = createEClass(TAX_TYPE);
+    createEAttribute(taxTypeEClass, TAX_TYPE__TAX_TYPE_NAME_CODE);
+    createEAttribute(taxTypeEClass, TAX_TYPE__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(taxTypeEClass, TAX_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
+    createEAttribute(taxTypeEClass, TAX_TYPE__TAX_TYPE_NAME);
+
+    currencyDetailEClass = createEClass(CURRENCY_DETAIL);
+    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_USAGE_CODE_QUALIFIER);
+    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_IDENTIFICATION_CODE);
+    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_TYPE_CODE_QUALIFIER);
+    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_RATE_VALUE);
+
+    documentMessageIdentificationEClass = createEClass(DOCUMENT_MESSAGE_IDENTIFICATION);
+    createEAttribute(documentMessageIdentificationEClass, DOCUMENT_MESSAGE_IDENTIFICATION__DOCUMENT_IDENTIFIER);
+    createEAttribute(documentMessageIdentificationEClass, DOCUMENT_MESSAGE_IDENTIFICATION__VERSION_IDENTIFIER);
+    createEAttribute(documentMessageIdentificationEClass, DOCUMENT_MESSAGE_IDENTIFICATION__REVISION_IDENTIFIER);
+
+    documentMessageEClass = createEClass(DOCUMENT_MESSAGE);
+    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__DOCUMENT_NAME_CODE);
+    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__CODE_LIST_IDENTIFICATION_CODE);
+    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
+    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__DOCUMENT_NAME);
 
     originatorFunctionEClass = createEClass(ORIGINATOR_FUNCTION);
     createEAttribute(originatorFunctionEClass, ORIGINATOR_FUNCTION__COUNTRY_CODE);
@@ -2622,6 +3823,11 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     dateAndTimeFunctionEClass = createEClass(DATE_AND_TIME_FUNCTION);
     createEAttribute(dateAndTimeFunctionEClass, DATE_AND_TIME_FUNCTION__DATE6);
     createEAttribute(dateAndTimeFunctionEClass, DATE_AND_TIME_FUNCTION__TIME4);
+
+    dateTimePeriodEClass = createEClass(DATE_TIME_PERIOD);
+    createEAttribute(dateTimePeriodEClass, DATE_TIME_PERIOD__DATE_TIME_PERIOD_FUNCTION_CODE_QUALIFIER);
+    createEAttribute(dateTimePeriodEClass, DATE_TIME_PERIOD__DATE_TIME_PERIOD_VALUE);
+    createEAttribute(dateTimePeriodEClass, DATE_TIME_PERIOD__DATE_TIME_PERIOD_FORMAT_CODE);
   }
 
   /**
@@ -2683,17 +3889,34 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     unsSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
     untSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
     unzSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    priFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    unbHeaderEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    priceInformationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     messageBodyFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    msgFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    messageIndentifierEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    relationshipEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     productFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    itemNumberIdentificationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    sublineInformationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    quantityDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    streetEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    countrySubEntityDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    partyNameEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    nameAndAddressEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    applicationErrorDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     systemDetailFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    taxDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    taxAccountDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    taxTypeEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    currencyDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    documentMessageIdentificationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    documentMessageEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     originatorFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     originatorIdentificationFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     locationFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     interchangerFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     dateOnlyFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
     dateAndTimeFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
+    dateTimePeriodEClass.getESuperTypes().add(this.getAbstractEdiFunction());
 
     // Initialize classes and features; add operations and parameters
     initEClass(ediModelEClass, EdiModel.class, "EdiModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2706,8 +3929,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     initEClass(unaSegmentEClass, UNASegment.class, "UNASegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(unbSegmentEClass, UNBSegment.class, "UNBSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUNBSegment_Syntax(), ecorePackage.getEString(), "syntax", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNBSegment_Num1(), ecorePackage.getEString(), "num1", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUNBSegment_Header(), this.getUNBHeader(), null, "header", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUNBSegment_InterchangeSender(), this.getInterchangerFunction(), null, "interchangeSender", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUNBSegment_InterchangeRecipient(), this.getInterchangerFunction(), null, "interchangeRecipient", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUNBSegment_DateAndTime(), this.getDateAndTimeFunction(), null, "dateAndTime", null, 0, -1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2722,8 +3944,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     initEAttribute(getUNHSegment_CommonAccessReference(), ecorePackage.getEString(), "commonAccessReference", null, 0, 1, UNHSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(msgSegmentEClass, MSGSegment.class, "MSGSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMSGSegment_MessageFunction(), this.getMSGFunction(), null, "messageFunction", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMSGSegment_ResponseType(), ecorePackage.getEString(), "responseType", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMSGSegment_MessageIdentifier(), this.getMessageIndentifier(), null, "messageIdentifier", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMSGSegment_DesignatedClassCode(), ecorePackage.getEString(), "designatedClassCode", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMSGSegment_MaintenanceOperationCode(), ecorePackage.getEString(), "maintenanceOperationCode", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMSGSegment_Relationship(), this.getRelationship(), null, "relationship", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(orgSegmentEClass, ORGSegment.class, "ORGSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getORGSegment_SystemDetail1(), this.getSystemDetailFunction(), null, "systemDetail1", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2775,56 +3999,65 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     initEAttribute(getRPISegment_Status(), ecorePackage.getEString(), "status", null, 0, 1, RPISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(moaSegmentEClass, MOASegment.class, "MOASegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMOASegment_Code1(), ecorePackage.getEString(), "code1", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMOASegment_Code2(), ecorePackage.getEString(), "code2", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMOASegment_MonetaryAmountTypeCodeQualifier(), ecorePackage.getEString(), "monetaryAmountTypeCodeQualifier", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMOASegment_MonetaryAmount(), ecorePackage.getEString(), "monetaryAmount", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMOASegment_CurrencyIdentificationCode(), ecorePackage.getEString(), "currencyIdentificationCode", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMOASegment_CurrencyTypeCodeQualifier(), ecorePackage.getEString(), "currencyTypeCodeQualifier", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMOASegment_StatusDescriptionCode(), ecorePackage.getEString(), "statusDescriptionCode", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(linSegmentEClass, LINSegment.class, "LINSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLINSegment_Code1(), ecorePackage.getEString(), "code1", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLINSegment_Code2(), ecorePackage.getEString(), "code2", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLINSegment_Code3(), ecorePackage.getEString(), "code3", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLINSegment_Code4(), ecorePackage.getEString(), "code4", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLINSegment_LineItemIdentifier(), ecorePackage.getEString(), "lineItemIdentifier", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLINSegment_ActionRequest(), ecorePackage.getEString(), "actionRequest", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLINSegment_ItemNumberIdentification(), this.getItemNumberIdentification(), null, "itemNumberIdentification", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLINSegment_SublineInformation(), this.getSublineInformation(), null, "sublineInformation", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLINSegment_ConfigurationLevelNumber(), ecorePackage.getEString(), "configurationLevelNumber", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLINSegment_ConfigurationOperationCode(), ecorePackage.getEString(), "configurationOperationCode", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(priSegmentEClass, PRISegment.class, "PRISegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPRISegment_Sub(), this.getPRIFunction(), null, "sub", null, 0, 1, PRISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPRISegment_Sub(), this.getPriceInformation(), null, "sub", null, 0, 1, PRISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qtySegmentEClass, QTYSegment.class, "QTYSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getQTYSegment_Code1(), ecorePackage.getEString(), "code1", null, 0, 1, QTYSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQTYSegment_Code2(), ecorePackage.getEString(), "code2", null, 0, 1, QTYSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQTYSegment_Code3(), ecorePackage.getEString(), "code3", null, 0, 1, QTYSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQTYSegment_QuantityDetails(), this.getQuantityDetail(), null, "quantityDetails", null, 0, -1, QTYSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(cuxSegmentEClass, CUXSegment.class, "CUXSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCUXSegment_Num(), ecorePackage.getEString(), "num", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCUXSegment_Currency(), ecorePackage.getEString(), "currency", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCUXSegment_CurrencyDetails1(), this.getCurrencyDetail(), null, "currencyDetails1", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCUXSegment_CurrencyDetails2(), this.getCurrencyDetail(), null, "currencyDetails2", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCUXSegment_CurrencyExchangeRate(), ecorePackage.getEString(), "currencyExchangeRate", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCUXSegment_ExchangeRateCurrencyMarketIdentifier(), ecorePackage.getEString(), "exchangeRateCurrencyMarketIdentifier", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taxSegmentEClass, TAXSegment.class, "TAXSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTAXSegment_Num(), ecorePackage.getEString(), "num", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_Type(), ecorePackage.getEString(), "type", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_Todo1(), ecorePackage.getEString(), "todo1", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_Todo2(), ecorePackage.getEString(), "todo2", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_Todo3(), ecorePackage.getEString(), "todo3", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_Todo4(), ecorePackage.getEString(), "todo4", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_Todo5(), ecorePackage.getEString(), "todo5", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_Todo6(), ecorePackage.getEString(), "todo6", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTAXSegment_TaxFunctionCodeQualifier(), ecorePackage.getEString(), "taxFunctionCodeQualifier", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTAXSegment_TaxType(), this.getTaxType(), null, "taxType", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTAXSegment_TaxAccountDetail(), this.getTaxAccountDetail(), null, "taxAccountDetail", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTAXSegment_TaxAssessmentBasicValue(), ecorePackage.getEString(), "taxAssessmentBasicValue", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTAXSegment_TaxDetail(), this.getTaxDetail(), null, "taxDetail", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTAXSegment_TaxCategoryCode(), ecorePackage.getEString(), "taxCategoryCode", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTAXSegment_PartyTaxIdentifier(), ecorePackage.getEString(), "partyTaxIdentifier", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTAXSegment_CalculationSequenceCode(), ecorePackage.getEString(), "calculationSequenceCode", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rffSegmentEClass, RFFSegment.class, "RFFSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRFFSegment_Rff1(), ecorePackage.getEString(), "rff1", null, 0, 1, RFFSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRFFSegment_Rff2(), ecorePackage.getEString(), "rff2", null, 0, 1, RFFSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nadSegmentEClass, NADSegment.class, "NADSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNADSegment_Code(), ecorePackage.getEString(), "code", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNADSegment_Manufacturer1(), ecorePackage.getEString(), "manufacturer1", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNADSegment_Manufacturer2(), ecorePackage.getEString(), "manufacturer2", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNADSegment_Manufacturer3(), ecorePackage.getEString(), "manufacturer3", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNADSegment_PartyFunctionCodeQualifier(), ecorePackage.getEString(), "partyFunctionCodeQualifier", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNADSegment_PartyIdentificationDetails(), this.getPartyIdentificationDetail(), null, "partyIdentificationDetails", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNADSegment_NameAndAddress(), this.getNameAndAddress(), null, "nameAndAddress", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNADSegment_PartyName(), this.getPartyName(), null, "partyName", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNADSegment_Street(), this.getStreet(), null, "street", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNADSegment_CityName(), ecorePackage.getEString(), "cityName", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNADSegment_CountrySubEntityDetails(), this.getCountrySubEntityDetail(), null, "countrySubEntityDetails", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNADSegment_PostalIdentificationCode(), ecorePackage.getEString(), "postalIdentificationCode", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNADSegment_CountryNameCode(), ecorePackage.getEString(), "countryNameCode", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dtmSegmentEClass, DTMSegment.class, "DTMSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDTMSegment_Num1(), ecorePackage.getEString(), "num1", null, 0, 1, DTMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDTMSegment_Num2(), ecorePackage.getEString(), "num2", null, 0, 1, DTMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDTMSegment_Num3(), ecorePackage.getEString(), "num3", null, 0, 1, DTMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDTMSegment_DateTimePeriods(), this.getDateTimePeriod(), null, "dateTimePeriods", null, 0, -1, DTMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bgmSegmentEClass, BGMSegment.class, "BGMSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBGMSegment_Num1(), ecorePackage.getEString(), "num1", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBGMSegment_Num2(), ecorePackage.getEString(), "num2", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBGMSegment_Num3(), ecorePackage.getEString(), "num3", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBGMSegment_DocumentMessageName(), this.getDocumentMessage(), null, "documentMessageName", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBGMSegment_DocumentMessageIdentification(), this.getDocumentMessageIdentification(), null, "documentMessageIdentification", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBGMSegment_MessageFunctionCode(), ecorePackage.getEString(), "messageFunctionCode", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBGMSegment_ResponseTypeCode(), ecorePackage.getEString(), "responseTypeCode", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(patSegmentEClass, PATSegment.class, "PATSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPATSegment_SegmentCount(), ecorePackage.getEString(), "segmentCount", null, 0, 1, PATSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2836,7 +4069,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     initEAttribute(getFTXSegment_Todo4(), ecorePackage.getEString(), "todo4", null, 0, 1, FTXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ercSegmentEClass, ERCSegment.class, "ERCSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getERCSegment_Code1(), ecorePackage.getEString(), "code1", null, 0, 1, ERCSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getERCSegment_ApplicationErrorDetails(), this.getApplicationErrorDetail(), null, "applicationErrorDetails", null, 0, -1, ERCSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(cntSegmentEClass, CNTSegment.class, "CNTSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCNTSegment_Todo1(), ecorePackage.getEString(), "todo1", null, 0, 1, CNTSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2861,13 +4094,17 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
 
     initEClass(abstractEdiFunctionEClass, AbstractEdiFunction.class, "AbstractEdiFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(priFunctionEClass, PRIFunction.class, "PRIFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPRIFunction_Code1(), ecorePackage.getEString(), "code1", null, 0, 1, PRIFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPRIFunction_Code2(), ecorePackage.getEString(), "code2", null, 0, 1, PRIFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPRIFunction_Code3(), ecorePackage.getEString(), "code3", null, 0, 1, PRIFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPRIFunction_Code4(), ecorePackage.getEString(), "code4", null, 0, 1, PRIFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPRIFunction_Code5(), ecorePackage.getEString(), "code5", null, 0, 1, PRIFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPRIFunction_Code6(), ecorePackage.getEString(), "code6", null, 0, 1, PRIFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(unbHeaderEClass, UNBHeader.class, "UNBHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUNBHeader_Syntax(), ecorePackage.getEString(), "syntax", null, 0, 1, UNBHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getUNBHeader_Num1(), ecorePackage.getEString(), "num1", null, 0, 1, UNBHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(priceInformationEClass, PriceInformation.class, "PriceInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPriceInformation_PriceCodeQualifier(), ecorePackage.getEString(), "priceCodeQualifier", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPriceInformation_PriceAmount(), ecorePackage.getEString(), "priceAmount", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPriceInformation_PriceTypeCode(), ecorePackage.getEString(), "priceTypeCode", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPriceInformation_PriceSpecificationCode(), ecorePackage.getEString(), "priceSpecificationCode", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPriceInformation_UnitPriceBasisValue(), ecorePackage.getEString(), "unitPriceBasisValue", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPriceInformation_MeasurementUnitCode(), ecorePackage.getEString(), "measurementUnitCode", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(messageBodyFunctionEClass, MessageBodyFunction.class, "MessageBodyFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMessageBodyFunction_Type(), ecorePackage.getEString(), "type", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2876,20 +4113,106 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     initEAttribute(getMessageBodyFunction_ControllingAgency(), ecorePackage.getEString(), "controllingAgency", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMessageBodyFunction_More(), ecorePackage.getEString(), "more", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(msgFunctionEClass, MSGFunction.class, "MSGFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMSGFunction_BusinessFunction(), ecorePackage.getEString(), "businessFunction", null, 0, 1, MSGFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMSGFunction_MessageFunction1(), ecorePackage.getEString(), "messageFunction1", null, 0, 1, MSGFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMSGFunction_CodeListResponsibleAgency(), ecorePackage.getEString(), "codeListResponsibleAgency", null, 0, 1, MSGFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMSGFunction_MessageFunction2(), ecorePackage.getEString(), "messageFunction2", null, 0, 1, MSGFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(messageIndentifierEClass, MessageIndentifier.class, "MessageIndentifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMessageIndentifier_MessageTypeCode(), ecorePackage.getEString(), "messageTypeCode", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMessageIndentifier_VersionIdentifier(), ecorePackage.getEString(), "versionIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMessageIndentifier_ReleaseIdentifier(), ecorePackage.getEString(), "releaseIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMessageIndentifier_ControllingAgencyIdentifier(), ecorePackage.getEString(), "controllingAgencyIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMessageIndentifier_MessageImplementationIdentificationCode(), ecorePackage.getEString(), "messageImplementationIdentificationCode", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMessageIndentifier_RevisionIdentifier(), ecorePackage.getEString(), "revisionIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMessageIndentifier_DocumentStatusCode(), ecorePackage.getEString(), "documentStatusCode", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRelationship_RelationshipDescriptionCode(), ecorePackage.getEString(), "relationshipDescriptionCode", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_CodeListResponsibleAgency(), ecorePackage.getEString(), "codeListResponsibleAgency", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRelationship_RelationshipDescription(), ecorePackage.getEString(), "relationshipDescription", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(productFunctionEClass, ProductFunction.class, "ProductFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProductFunction_BookingClass(), ecorePackage.getEString(), "bookingClass", null, 0, 1, ProductFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProductFunction_Avail(), ecorePackage.getEString(), "avail", null, 0, 1, ProductFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(itemNumberIdentificationEClass, ItemNumberIdentification.class, "ItemNumberIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getItemNumberIdentification_ItemIdentifier(), ecorePackage.getEString(), "itemIdentifier", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getItemNumberIdentification_ItemTypeIdentificationCode(), ecorePackage.getEString(), "itemTypeIdentificationCode", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getItemNumberIdentification_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getItemNumberIdentification_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sublineInformationEClass, SublineInformation.class, "SublineInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSublineInformation_SublineIndicatorCode(), ecorePackage.getEString(), "sublineIndicatorCode", null, 0, 1, SublineInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSublineInformation_LineItemIdentifier(), ecorePackage.getEString(), "lineItemIdentifier", null, 0, 1, SublineInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(quantityDetailEClass, QuantityDetail.class, "QuantityDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getQuantityDetail_QuantityTypeCodeQualifier(), ecorePackage.getEString(), "quantityTypeCodeQualifier", null, 0, 1, QuantityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getQuantityDetail_Quantity(), ecorePackage.getEString(), "quantity", null, 0, 1, QuantityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getQuantityDetail_MeasurementUnitCode(), ecorePackage.getEString(), "measurementUnitCode", null, 0, 1, QuantityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(streetEClass, Street.class, "Street", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStreet_StreetAndNumber(), ecorePackage.getEString(), "streetAndNumber", null, 0, -1, Street.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(countrySubEntityDetailEClass, CountrySubEntityDetail.class, "CountrySubEntityDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCountrySubEntityDetail_CountrySubEntityNameCode(), ecorePackage.getEString(), "countrySubEntityNameCode", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCountrySubEntityDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCountrySubEntityDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCountrySubEntityDetail_CountrySubEntityName(), ecorePackage.getEString(), "countrySubEntityName", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(partyNameEClass, PartyName.class, "PartyName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPartyName_PartyName(), ecorePackage.getEString(), "partyName", null, 0, -1, PartyName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(nameAndAddressEClass, NameAndAddress.class, "NameAndAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNameAndAddress_NameAndAddress(), ecorePackage.getEString(), "nameAndAddress", null, 0, -1, NameAndAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(partyIdentificationDetailEClass, PartyIdentificationDetail.class, "PartyIdentificationDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPartyIdentificationDetail_PartyIdentifier(), ecorePackage.getEString(), "partyIdentifier", null, 0, 1, PartyIdentificationDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPartyIdentificationDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, PartyIdentificationDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPartyIdentificationDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, PartyIdentificationDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(applicationErrorDetailEClass, ApplicationErrorDetail.class, "ApplicationErrorDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getApplicationErrorDetail_ApplictionErrorCode(), ecorePackage.getEString(), "applictionErrorCode", null, 0, 1, ApplicationErrorDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getApplicationErrorDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, ApplicationErrorDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getApplicationErrorDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, ApplicationErrorDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(systemDetailFunctionEClass, SystemDetailFunction.class, "SystemDetailFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSystemDetailFunction_CompanyIdentification(), ecorePackage.getEString(), "companyIdentification", null, 0, 1, SystemDetailFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSystemDetailFunction_LocationCode(), ecorePackage.getEString(), "locationCode", null, 0, 1, SystemDetailFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSystemDetailFunction_LocationName(), ecorePackage.getEString(), "locationName", null, 0, 1, SystemDetailFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(taxDetailEClass, TaxDetail.class, "TaxDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTaxDetail_TaxRateDescriptionCode(), ecorePackage.getEString(), "taxRateDescriptionCode", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxDetail_CodeListIdentificationCode1(), ecorePackage.getEString(), "codeListIdentificationCode1", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxDetail_CodeListResponsibleAgencyCode1(), ecorePackage.getEString(), "codeListResponsibleAgencyCode1", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxDetail_TaxRateDescription(), ecorePackage.getEString(), "taxRateDescription", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxDetail_TaxRateBasisCode(), ecorePackage.getEString(), "taxRateBasisCode", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxDetail_CodeListIdentificationCode2(), ecorePackage.getEString(), "codeListIdentificationCode2", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxDetail_CodeListResponsibleAgencyCode2(), ecorePackage.getEString(), "codeListResponsibleAgencyCode2", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(taxAccountDetailEClass, TaxAccountDetail.class, "TaxAccountDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTaxAccountDetail_TaxAccountCode(), ecorePackage.getEString(), "taxAccountCode", null, 0, 1, TaxAccountDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxAccountDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, TaxAccountDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxAccountDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, TaxAccountDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(taxTypeEClass, TaxType.class, "TaxType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTaxType_TaxTypeNameCode(), ecorePackage.getEString(), "taxTypeNameCode", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxType_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxType_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaxType_TaxTypeName(), ecorePackage.getEString(), "taxTypeName", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(currencyDetailEClass, CurrencyDetail.class, "CurrencyDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCurrencyDetail_CurrencyUsageCodeQualifier(), ecorePackage.getEString(), "currencyUsageCodeQualifier", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCurrencyDetail_CurrencyIdentificationCode(), ecorePackage.getEString(), "currencyIdentificationCode", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCurrencyDetail_CurrencyTypeCodeQualifier(), ecorePackage.getEString(), "currencyTypeCodeQualifier", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCurrencyDetail_CurrencyRateValue(), ecorePackage.getEString(), "currencyRateValue", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(documentMessageIdentificationEClass, DocumentMessageIdentification.class, "DocumentMessageIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDocumentMessageIdentification_DocumentIdentifier(), ecorePackage.getEString(), "documentIdentifier", null, 0, 1, DocumentMessageIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDocumentMessageIdentification_VersionIdentifier(), ecorePackage.getEString(), "versionIdentifier", null, 0, 1, DocumentMessageIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDocumentMessageIdentification_RevisionIdentifier(), ecorePackage.getEString(), "revisionIdentifier", null, 0, 1, DocumentMessageIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(documentMessageEClass, DocumentMessage.class, "DocumentMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDocumentMessage_DocumentNameCode(), ecorePackage.getEString(), "documentNameCode", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDocumentMessage_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDocumentMessage_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDocumentMessage_DocumentName(), ecorePackage.getEString(), "documentName", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(originatorFunctionEClass, OriginatorFunction.class, "OriginatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOriginatorFunction_CountryCode(), ecorePackage.getEString(), "countryCode", null, 0, 1, OriginatorFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2915,6 +4238,11 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
     initEClass(dateAndTimeFunctionEClass, DateAndTimeFunction.class, "DateAndTimeFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDateAndTimeFunction_Date6(), ecorePackage.getEString(), "date6", null, 0, 1, DateAndTimeFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDateAndTimeFunction_Time4(), ecorePackage.getEString(), "time4", null, 0, 1, DateAndTimeFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dateTimePeriodEClass, DateTimePeriod.class, "DateTimePeriod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDateTimePeriod_DateTimePeriodFunctionCodeQualifier(), ecorePackage.getEString(), "dateTimePeriodFunctionCodeQualifier", null, 0, 1, DateTimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDateTimePeriod_DateTimePeriodValue(), ecorePackage.getEString(), "dateTimePeriodValue", null, 0, 1, DateTimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDateTimePeriod_DateTimePeriodFormatCode(), ecorePackage.getEString(), "dateTimePeriodFormatCode", null, 0, 1, DateTimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

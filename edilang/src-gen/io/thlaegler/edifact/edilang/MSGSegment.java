@@ -13,8 +13,10 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.MSGSegment#getMessageFunction <em>Message Function</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.MSGSegment#getResponseType <em>Response Type</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MSGSegment#getMessageIdentifier <em>Message Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MSGSegment#getDesignatedClassCode <em>Designated Class Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MSGSegment#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.MSGSegment#getRelationship <em>Relationship</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getMSGSegment()
@@ -24,47 +26,91 @@ package io.thlaegler.edifact.edilang;
 public interface MSGSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Message Function</b></em>' containment reference.
+   * Returns the value of the '<em><b>Message Identifier</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Message Function</em>' containment reference.
-   * @see #setMessageFunction(MSGFunction)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMSGSegment_MessageFunction()
+   * @return the value of the '<em>Message Identifier</em>' containment reference.
+   * @see #setMessageIdentifier(MessageIndentifier)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMSGSegment_MessageIdentifier()
    * @model containment="true"
    * @generated
    */
-  MSGFunction getMessageFunction();
+  MessageIndentifier getMessageIdentifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MSGSegment#getMessageFunction <em>Message Function</em>}' containment reference.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MSGSegment#getMessageIdentifier <em>Message Identifier</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Message Function</em>' containment reference.
-   * @see #getMessageFunction()
+   * @param value the new value of the '<em>Message Identifier</em>' containment reference.
+   * @see #getMessageIdentifier()
    * @generated
    */
-  void setMessageFunction(MSGFunction value);
+  void setMessageIdentifier(MessageIndentifier value);
 
   /**
-   * Returns the value of the '<em><b>Response Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Designated Class Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Response Type</em>' attribute.
-   * @see #setResponseType(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMSGSegment_ResponseType()
+   * @return the value of the '<em>Designated Class Code</em>' attribute.
+   * @see #setDesignatedClassCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMSGSegment_DesignatedClassCode()
    * @model
    * @generated
    */
-  String getResponseType();
+  String getDesignatedClassCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MSGSegment#getResponseType <em>Response Type</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MSGSegment#getDesignatedClassCode <em>Designated Class Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Response Type</em>' attribute.
-   * @see #getResponseType()
+   * @param value the new value of the '<em>Designated Class Code</em>' attribute.
+   * @see #getDesignatedClassCode()
    * @generated
    */
-  void setResponseType(String value);
+  void setDesignatedClassCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Maintenance Operation Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Maintenance Operation Code</em>' attribute.
+   * @see #setMaintenanceOperationCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMSGSegment_MaintenanceOperationCode()
+   * @model
+   * @generated
+   */
+  String getMaintenanceOperationCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MSGSegment#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Maintenance Operation Code</em>' attribute.
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   */
+  void setMaintenanceOperationCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Relationship</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Relationship</em>' containment reference.
+   * @see #setRelationship(Relationship)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getMSGSegment_Relationship()
+   * @model containment="true"
+   * @generated
+   */
+  Relationship getRelationship();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.MSGSegment#getRelationship <em>Relationship</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Relationship</em>' containment reference.
+   * @see #getRelationship()
+   * @generated
+   */
+  void setRelationship(Relationship value);
 
 } // MSGSegment

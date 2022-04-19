@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CUXSegment;
+import io.thlaegler.edifact.edilang.CurrencyDetail;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,8 +23,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CUXSegmentImpl#getNum <em>Num</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CUXSegmentImpl#getCurrency <em>Currency</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CUXSegmentImpl#getCurrencyDetails1 <em>Currency Details1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CUXSegmentImpl#getCurrencyDetails2 <em>Currency Details2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CUXSegmentImpl#getCurrencyExchangeRate <em>Currency Exchange Rate</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CUXSegmentImpl#getExchangeRateCurrencyMarketIdentifier <em>Exchange Rate Currency Market Identifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +34,64 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
 {
   /**
-   * The default value of the '{@link #getNum() <em>Num</em>}' attribute.
+   * The cached value of the '{@link #getCurrencyDetails1() <em>Currency Details1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum()
+   * @see #getCurrencyDetails1()
    * @generated
    * @ordered
    */
-  protected static final String NUM_EDEFAULT = null;
+  protected CurrencyDetail currencyDetails1;
 
   /**
-   * The cached value of the '{@link #getNum() <em>Num</em>}' attribute.
+   * The cached value of the '{@link #getCurrencyDetails2() <em>Currency Details2</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNum()
+   * @see #getCurrencyDetails2()
    * @generated
    * @ordered
    */
-  protected String num = NUM_EDEFAULT;
+  protected CurrencyDetail currencyDetails2;
 
   /**
-   * The default value of the '{@link #getCurrency() <em>Currency</em>}' attribute.
+   * The default value of the '{@link #getCurrencyExchangeRate() <em>Currency Exchange Rate</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCurrency()
+   * @see #getCurrencyExchangeRate()
    * @generated
    * @ordered
    */
-  protected static final String CURRENCY_EDEFAULT = null;
+  protected static final String CURRENCY_EXCHANGE_RATE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCurrency() <em>Currency</em>}' attribute.
+   * The cached value of the '{@link #getCurrencyExchangeRate() <em>Currency Exchange Rate</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCurrency()
+   * @see #getCurrencyExchangeRate()
    * @generated
    * @ordered
    */
-  protected String currency = CURRENCY_EDEFAULT;
+  protected String currencyExchangeRate = CURRENCY_EXCHANGE_RATE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getExchangeRateCurrencyMarketIdentifier() <em>Exchange Rate Currency Market Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExchangeRateCurrencyMarketIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected static final String EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getExchangeRateCurrencyMarketIdentifier() <em>Exchange Rate Currency Market Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExchangeRateCurrencyMarketIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected String exchangeRateCurrencyMarketIdentifier = EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,9 +120,9 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
    * @generated
    */
   @Override
-  public String getNum()
+  public CurrencyDetail getCurrencyDetails1()
   {
-    return num;
+    return currencyDetails1;
   }
 
   /**
@@ -105,13 +130,16 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setNum(String newNum)
+  public NotificationChain basicSetCurrencyDetails1(CurrencyDetail newCurrencyDetails1, NotificationChain msgs)
   {
-    String oldNum = num;
-    num = newNum;
+    CurrencyDetail oldCurrencyDetails1 = currencyDetails1;
+    currencyDetails1 = newCurrencyDetails1;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__NUM, oldNum, num));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1, oldCurrencyDetails1, newCurrencyDetails1);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -120,9 +148,20 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
    * @generated
    */
   @Override
-  public String getCurrency()
+  public void setCurrencyDetails1(CurrencyDetail newCurrencyDetails1)
   {
-    return currency;
+    if (newCurrencyDetails1 != currencyDetails1)
+    {
+      NotificationChain msgs = null;
+      if (currencyDetails1 != null)
+        msgs = ((InternalEObject)currencyDetails1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1, null, msgs);
+      if (newCurrencyDetails1 != null)
+        msgs = ((InternalEObject)newCurrencyDetails1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1, null, msgs);
+      msgs = basicSetCurrencyDetails1(newCurrencyDetails1, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1, newCurrencyDetails1, newCurrencyDetails1));
   }
 
   /**
@@ -131,12 +170,116 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
    * @generated
    */
   @Override
-  public void setCurrency(String newCurrency)
+  public CurrencyDetail getCurrencyDetails2()
   {
-    String oldCurrency = currency;
-    currency = newCurrency;
+    return currencyDetails2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCurrencyDetails2(CurrencyDetail newCurrencyDetails2, NotificationChain msgs)
+  {
+    CurrencyDetail oldCurrencyDetails2 = currencyDetails2;
+    currencyDetails2 = newCurrencyDetails2;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__CURRENCY, oldCurrency, currency));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2, oldCurrencyDetails2, newCurrencyDetails2);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCurrencyDetails2(CurrencyDetail newCurrencyDetails2)
+  {
+    if (newCurrencyDetails2 != currencyDetails2)
+    {
+      NotificationChain msgs = null;
+      if (currencyDetails2 != null)
+        msgs = ((InternalEObject)currencyDetails2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2, null, msgs);
+      if (newCurrencyDetails2 != null)
+        msgs = ((InternalEObject)newCurrencyDetails2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2, null, msgs);
+      msgs = basicSetCurrencyDetails2(newCurrencyDetails2, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2, newCurrencyDetails2, newCurrencyDetails2));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCurrencyExchangeRate()
+  {
+    return currencyExchangeRate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCurrencyExchangeRate(String newCurrencyExchangeRate)
+  {
+    String oldCurrencyExchangeRate = currencyExchangeRate;
+    currencyExchangeRate = newCurrencyExchangeRate;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__CURRENCY_EXCHANGE_RATE, oldCurrencyExchangeRate, currencyExchangeRate));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getExchangeRateCurrencyMarketIdentifier()
+  {
+    return exchangeRateCurrencyMarketIdentifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setExchangeRateCurrencyMarketIdentifier(String newExchangeRateCurrencyMarketIdentifier)
+  {
+    String oldExchangeRateCurrencyMarketIdentifier = exchangeRateCurrencyMarketIdentifier;
+    exchangeRateCurrencyMarketIdentifier = newExchangeRateCurrencyMarketIdentifier;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CUX_SEGMENT__EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER, oldExchangeRateCurrencyMarketIdentifier, exchangeRateCurrencyMarketIdentifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1:
+        return basicSetCurrencyDetails1(null, msgs);
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2:
+        return basicSetCurrencyDetails2(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -149,10 +292,14 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CUX_SEGMENT__NUM:
-        return getNum();
-      case EdilangPackage.CUX_SEGMENT__CURRENCY:
-        return getCurrency();
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1:
+        return getCurrencyDetails1();
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2:
+        return getCurrencyDetails2();
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_EXCHANGE_RATE:
+        return getCurrencyExchangeRate();
+      case EdilangPackage.CUX_SEGMENT__EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER:
+        return getExchangeRateCurrencyMarketIdentifier();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,11 +314,17 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CUX_SEGMENT__NUM:
-        setNum((String)newValue);
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1:
+        setCurrencyDetails1((CurrencyDetail)newValue);
         return;
-      case EdilangPackage.CUX_SEGMENT__CURRENCY:
-        setCurrency((String)newValue);
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2:
+        setCurrencyDetails2((CurrencyDetail)newValue);
+        return;
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_EXCHANGE_RATE:
+        setCurrencyExchangeRate((String)newValue);
+        return;
+      case EdilangPackage.CUX_SEGMENT__EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER:
+        setExchangeRateCurrencyMarketIdentifier((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,11 +340,17 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CUX_SEGMENT__NUM:
-        setNum(NUM_EDEFAULT);
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1:
+        setCurrencyDetails1((CurrencyDetail)null);
         return;
-      case EdilangPackage.CUX_SEGMENT__CURRENCY:
-        setCurrency(CURRENCY_EDEFAULT);
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2:
+        setCurrencyDetails2((CurrencyDetail)null);
+        return;
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_EXCHANGE_RATE:
+        setCurrencyExchangeRate(CURRENCY_EXCHANGE_RATE_EDEFAULT);
+        return;
+      case EdilangPackage.CUX_SEGMENT__EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER:
+        setExchangeRateCurrencyMarketIdentifier(EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -207,10 +366,14 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CUX_SEGMENT__NUM:
-        return NUM_EDEFAULT == null ? num != null : !NUM_EDEFAULT.equals(num);
-      case EdilangPackage.CUX_SEGMENT__CURRENCY:
-        return CURRENCY_EDEFAULT == null ? currency != null : !CURRENCY_EDEFAULT.equals(currency);
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS1:
+        return currencyDetails1 != null;
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_DETAILS2:
+        return currencyDetails2 != null;
+      case EdilangPackage.CUX_SEGMENT__CURRENCY_EXCHANGE_RATE:
+        return CURRENCY_EXCHANGE_RATE_EDEFAULT == null ? currencyExchangeRate != null : !CURRENCY_EXCHANGE_RATE_EDEFAULT.equals(currencyExchangeRate);
+      case EdilangPackage.CUX_SEGMENT__EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER:
+        return EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER_EDEFAULT == null ? exchangeRateCurrencyMarketIdentifier != null : !EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER_EDEFAULT.equals(exchangeRateCurrencyMarketIdentifier);
     }
     return super.eIsSet(featureID);
   }
@@ -226,10 +389,10 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (num: ");
-    result.append(num);
-    result.append(", currency: ");
-    result.append(currency);
+    result.append(" (currencyExchangeRate: ");
+    result.append(currencyExchangeRate);
+    result.append(", exchangeRateCurrencyMarketIdentifier: ");
+    result.append(exchangeRateCurrencyMarketIdentifier);
     result.append(')');
     return result.toString();
   }

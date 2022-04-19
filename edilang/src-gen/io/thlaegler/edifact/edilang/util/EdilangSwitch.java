@@ -334,11 +334,19 @@ public class EdilangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EdilangPackage.PRI_FUNCTION:
+      case EdilangPackage.UNB_HEADER:
       {
-        PRIFunction priFunction = (PRIFunction)theEObject;
-        T result = casePRIFunction(priFunction);
-        if (result == null) result = caseAbstractEdiFunction(priFunction);
+        UNBHeader unbHeader = (UNBHeader)theEObject;
+        T result = caseUNBHeader(unbHeader);
+        if (result == null) result = caseAbstractEdiFunction(unbHeader);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PRICE_INFORMATION:
+      {
+        PriceInformation priceInformation = (PriceInformation)theEObject;
+        T result = casePriceInformation(priceInformation);
+        if (result == null) result = caseAbstractEdiFunction(priceInformation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -350,11 +358,19 @@ public class EdilangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EdilangPackage.MSG_FUNCTION:
+      case EdilangPackage.MESSAGE_INDENTIFIER:
       {
-        MSGFunction msgFunction = (MSGFunction)theEObject;
-        T result = caseMSGFunction(msgFunction);
-        if (result == null) result = caseAbstractEdiFunction(msgFunction);
+        MessageIndentifier messageIndentifier = (MessageIndentifier)theEObject;
+        T result = caseMessageIndentifier(messageIndentifier);
+        if (result == null) result = caseAbstractEdiFunction(messageIndentifier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.RELATIONSHIP:
+      {
+        Relationship relationship = (Relationship)theEObject;
+        T result = caseRelationship(relationship);
+        if (result == null) result = caseAbstractEdiFunction(relationship);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -366,11 +382,130 @@ public class EdilangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EdilangPackage.ITEM_NUMBER_IDENTIFICATION:
+      {
+        ItemNumberIdentification itemNumberIdentification = (ItemNumberIdentification)theEObject;
+        T result = caseItemNumberIdentification(itemNumberIdentification);
+        if (result == null) result = caseAbstractEdiFunction(itemNumberIdentification);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SUBLINE_INFORMATION:
+      {
+        SublineInformation sublineInformation = (SublineInformation)theEObject;
+        T result = caseSublineInformation(sublineInformation);
+        if (result == null) result = caseAbstractEdiFunction(sublineInformation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.QUANTITY_DETAIL:
+      {
+        QuantityDetail quantityDetail = (QuantityDetail)theEObject;
+        T result = caseQuantityDetail(quantityDetail);
+        if (result == null) result = caseAbstractEdiFunction(quantityDetail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.STREET:
+      {
+        Street street = (Street)theEObject;
+        T result = caseStreet(street);
+        if (result == null) result = caseAbstractEdiFunction(street);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.COUNTRY_SUB_ENTITY_DETAIL:
+      {
+        CountrySubEntityDetail countrySubEntityDetail = (CountrySubEntityDetail)theEObject;
+        T result = caseCountrySubEntityDetail(countrySubEntityDetail);
+        if (result == null) result = caseAbstractEdiFunction(countrySubEntityDetail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PARTY_NAME:
+      {
+        PartyName partyName = (PartyName)theEObject;
+        T result = casePartyName(partyName);
+        if (result == null) result = caseAbstractEdiFunction(partyName);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.NAME_AND_ADDRESS:
+      {
+        NameAndAddress nameAndAddress = (NameAndAddress)theEObject;
+        T result = caseNameAndAddress(nameAndAddress);
+        if (result == null) result = caseAbstractEdiFunction(nameAndAddress);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PARTY_IDENTIFICATION_DETAIL:
+      {
+        PartyIdentificationDetail partyIdentificationDetail = (PartyIdentificationDetail)theEObject;
+        T result = casePartyIdentificationDetail(partyIdentificationDetail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.APPLICATION_ERROR_DETAIL:
+      {
+        ApplicationErrorDetail applicationErrorDetail = (ApplicationErrorDetail)theEObject;
+        T result = caseApplicationErrorDetail(applicationErrorDetail);
+        if (result == null) result = caseAbstractEdiFunction(applicationErrorDetail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EdilangPackage.SYSTEM_DETAIL_FUNCTION:
       {
         SystemDetailFunction systemDetailFunction = (SystemDetailFunction)theEObject;
         T result = caseSystemDetailFunction(systemDetailFunction);
         if (result == null) result = caseAbstractEdiFunction(systemDetailFunction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TAX_DETAIL:
+      {
+        TaxDetail taxDetail = (TaxDetail)theEObject;
+        T result = caseTaxDetail(taxDetail);
+        if (result == null) result = caseAbstractEdiFunction(taxDetail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TAX_ACCOUNT_DETAIL:
+      {
+        TaxAccountDetail taxAccountDetail = (TaxAccountDetail)theEObject;
+        T result = caseTaxAccountDetail(taxAccountDetail);
+        if (result == null) result = caseAbstractEdiFunction(taxAccountDetail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TAX_TYPE:
+      {
+        TaxType taxType = (TaxType)theEObject;
+        T result = caseTaxType(taxType);
+        if (result == null) result = caseAbstractEdiFunction(taxType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CURRENCY_DETAIL:
+      {
+        CurrencyDetail currencyDetail = (CurrencyDetail)theEObject;
+        T result = caseCurrencyDetail(currencyDetail);
+        if (result == null) result = caseAbstractEdiFunction(currencyDetail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DOCUMENT_MESSAGE_IDENTIFICATION:
+      {
+        DocumentMessageIdentification documentMessageIdentification = (DocumentMessageIdentification)theEObject;
+        T result = caseDocumentMessageIdentification(documentMessageIdentification);
+        if (result == null) result = caseAbstractEdiFunction(documentMessageIdentification);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DOCUMENT_MESSAGE:
+      {
+        DocumentMessage documentMessage = (DocumentMessage)theEObject;
+        T result = caseDocumentMessage(documentMessage);
+        if (result == null) result = caseAbstractEdiFunction(documentMessage);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -419,6 +554,14 @@ public class EdilangSwitch<T> extends Switch<T>
         DateAndTimeFunction dateAndTimeFunction = (DateAndTimeFunction)theEObject;
         T result = caseDateAndTimeFunction(dateAndTimeFunction);
         if (result == null) result = caseAbstractEdiFunction(dateAndTimeFunction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DATE_TIME_PERIOD:
+      {
+        DateTimePeriod dateTimePeriod = (DateTimePeriod)theEObject;
+        T result = caseDateTimePeriod(dateTimePeriod);
+        if (result == null) result = caseAbstractEdiFunction(dateTimePeriod);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -955,17 +1098,33 @@ public class EdilangSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>PRI Function</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>UNB Header</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>PRI Function</em>'.
+   * @return the result of interpreting the object as an instance of '<em>UNB Header</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePRIFunction(PRIFunction object)
+  public T caseUNBHeader(UNBHeader object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Price Information</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Price Information</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePriceInformation(PriceInformation object)
   {
     return null;
   }
@@ -987,17 +1146,33 @@ public class EdilangSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>MSG Function</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Message Indentifier</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>MSG Function</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Message Indentifier</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMSGFunction(MSGFunction object)
+  public T caseMessageIndentifier(MessageIndentifier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Relationship</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Relationship</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRelationship(Relationship object)
   {
     return null;
   }
@@ -1019,6 +1194,150 @@ public class EdilangSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Item Number Identification</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Item Number Identification</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseItemNumberIdentification(ItemNumberIdentification object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Subline Information</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Subline Information</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSublineInformation(SublineInformation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Quantity Detail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Quantity Detail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQuantityDetail(QuantityDetail object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Street</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Street</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStreet(Street object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Country Sub Entity Detail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Country Sub Entity Detail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCountrySubEntityDetail(CountrySubEntityDetail object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Party Name</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Party Name</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePartyName(PartyName object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Name And Address</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Name And Address</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNameAndAddress(NameAndAddress object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Party Identification Detail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Party Identification Detail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePartyIdentificationDetail(PartyIdentificationDetail object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Application Error Detail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Application Error Detail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseApplicationErrorDetail(ApplicationErrorDetail object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>System Detail Function</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1030,6 +1349,102 @@ public class EdilangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSystemDetailFunction(SystemDetailFunction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tax Detail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tax Detail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaxDetail(TaxDetail object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tax Account Detail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tax Account Detail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaxAccountDetail(TaxAccountDetail object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tax Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tax Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaxType(TaxType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Currency Detail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Currency Detail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCurrencyDetail(CurrencyDetail object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Document Message Identification</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Document Message Identification</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDocumentMessageIdentification(DocumentMessageIdentification object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Document Message</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Document Message</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDocumentMessage(DocumentMessage object)
   {
     return null;
   }
@@ -1126,6 +1541,22 @@ public class EdilangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDateAndTimeFunction(DateAndTimeFunction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Date Time Period</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Date Time Period</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDateTimePeriod(DateTimePeriod object)
   {
     return null;
   }

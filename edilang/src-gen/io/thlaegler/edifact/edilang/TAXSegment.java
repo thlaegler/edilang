@@ -13,14 +13,14 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getNum <em>Num</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getType <em>Type</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo1 <em>Todo1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo2 <em>Todo2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo3 <em>Todo3</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo4 <em>Todo4</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo5 <em>Todo5</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo6 <em>Todo6</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxFunctionCodeQualifier <em>Tax Function Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxType <em>Tax Type</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxAccountDetail <em>Tax Account Detail</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxAssessmentBasicValue <em>Tax Assessment Basic Value</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxDetail <em>Tax Detail</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxCategoryCode <em>Tax Category Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getPartyTaxIdentifier <em>Party Tax Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TAXSegment#getCalculationSequenceCode <em>Calculation Sequence Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment()
@@ -30,179 +30,179 @@ package io.thlaegler.edifact.edilang;
 public interface TAXSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Num</b></em>' attribute.
+   * Returns the value of the '<em><b>Tax Function Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Num</em>' attribute.
-   * @see #setNum(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Num()
+   * @return the value of the '<em>Tax Function Code Qualifier</em>' attribute.
+   * @see #setTaxFunctionCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_TaxFunctionCodeQualifier()
    * @model
    * @generated
    */
-  String getNum();
+  String getTaxFunctionCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getNum <em>Num</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxFunctionCodeQualifier <em>Tax Function Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num</em>' attribute.
-   * @see #getNum()
+   * @param value the new value of the '<em>Tax Function Code Qualifier</em>' attribute.
+   * @see #getTaxFunctionCodeQualifier()
    * @generated
    */
-  void setNum(String value);
+  void setTaxFunctionCodeQualifier(String value);
 
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Tax Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Type()
+   * @return the value of the '<em>Tax Type</em>' containment reference.
+   * @see #setTaxType(TaxType)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_TaxType()
+   * @model containment="true"
+   * @generated
+   */
+  TaxType getTaxType();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxType <em>Tax Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tax Type</em>' containment reference.
+   * @see #getTaxType()
+   * @generated
+   */
+  void setTaxType(TaxType value);
+
+  /**
+   * Returns the value of the '<em><b>Tax Account Detail</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tax Account Detail</em>' containment reference.
+   * @see #setTaxAccountDetail(TaxAccountDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_TaxAccountDetail()
+   * @model containment="true"
+   * @generated
+   */
+  TaxAccountDetail getTaxAccountDetail();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxAccountDetail <em>Tax Account Detail</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tax Account Detail</em>' containment reference.
+   * @see #getTaxAccountDetail()
+   * @generated
+   */
+  void setTaxAccountDetail(TaxAccountDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Tax Assessment Basic Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tax Assessment Basic Value</em>' attribute.
+   * @see #setTaxAssessmentBasicValue(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_TaxAssessmentBasicValue()
    * @model
    * @generated
    */
-  String getType();
+  String getTaxAssessmentBasicValue();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxAssessmentBasicValue <em>Tax Assessment Basic Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see #getType()
+   * @param value the new value of the '<em>Tax Assessment Basic Value</em>' attribute.
+   * @see #getTaxAssessmentBasicValue()
    * @generated
    */
-  void setType(String value);
+  void setTaxAssessmentBasicValue(String value);
 
   /**
-   * Returns the value of the '<em><b>Todo1</b></em>' attribute.
+   * Returns the value of the '<em><b>Tax Detail</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo1</em>' attribute.
-   * @see #setTodo1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Todo1()
+   * @return the value of the '<em>Tax Detail</em>' containment reference.
+   * @see #setTaxDetail(TaxDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_TaxDetail()
+   * @model containment="true"
+   * @generated
+   */
+  TaxDetail getTaxDetail();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxDetail <em>Tax Detail</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tax Detail</em>' containment reference.
+   * @see #getTaxDetail()
+   * @generated
+   */
+  void setTaxDetail(TaxDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Tax Category Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tax Category Code</em>' attribute.
+   * @see #setTaxCategoryCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_TaxCategoryCode()
    * @model
    * @generated
    */
-  String getTodo1();
+  String getTaxCategoryCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo1 <em>Todo1</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTaxCategoryCode <em>Tax Category Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo1</em>' attribute.
-   * @see #getTodo1()
+   * @param value the new value of the '<em>Tax Category Code</em>' attribute.
+   * @see #getTaxCategoryCode()
    * @generated
    */
-  void setTodo1(String value);
+  void setTaxCategoryCode(String value);
 
   /**
-   * Returns the value of the '<em><b>Todo2</b></em>' attribute.
+   * Returns the value of the '<em><b>Party Tax Identifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo2</em>' attribute.
-   * @see #setTodo2(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Todo2()
+   * @return the value of the '<em>Party Tax Identifier</em>' attribute.
+   * @see #setPartyTaxIdentifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_PartyTaxIdentifier()
    * @model
    * @generated
    */
-  String getTodo2();
+  String getPartyTaxIdentifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo2 <em>Todo2</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getPartyTaxIdentifier <em>Party Tax Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo2</em>' attribute.
-   * @see #getTodo2()
+   * @param value the new value of the '<em>Party Tax Identifier</em>' attribute.
+   * @see #getPartyTaxIdentifier()
    * @generated
    */
-  void setTodo2(String value);
+  void setPartyTaxIdentifier(String value);
 
   /**
-   * Returns the value of the '<em><b>Todo3</b></em>' attribute.
+   * Returns the value of the '<em><b>Calculation Sequence Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo3</em>' attribute.
-   * @see #setTodo3(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Todo3()
+   * @return the value of the '<em>Calculation Sequence Code</em>' attribute.
+   * @see #setCalculationSequenceCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_CalculationSequenceCode()
    * @model
    * @generated
    */
-  String getTodo3();
+  String getCalculationSequenceCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo3 <em>Todo3</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getCalculationSequenceCode <em>Calculation Sequence Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo3</em>' attribute.
-   * @see #getTodo3()
+   * @param value the new value of the '<em>Calculation Sequence Code</em>' attribute.
+   * @see #getCalculationSequenceCode()
    * @generated
    */
-  void setTodo3(String value);
-
-  /**
-   * Returns the value of the '<em><b>Todo4</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo4</em>' attribute.
-   * @see #setTodo4(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Todo4()
-   * @model
-   * @generated
-   */
-  String getTodo4();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo4 <em>Todo4</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo4</em>' attribute.
-   * @see #getTodo4()
-   * @generated
-   */
-  void setTodo4(String value);
-
-  /**
-   * Returns the value of the '<em><b>Todo5</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo5</em>' attribute.
-   * @see #setTodo5(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Todo5()
-   * @model
-   * @generated
-   */
-  String getTodo5();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo5 <em>Todo5</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo5</em>' attribute.
-   * @see #getTodo5()
-   * @generated
-   */
-  void setTodo5(String value);
-
-  /**
-   * Returns the value of the '<em><b>Todo6</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo6</em>' attribute.
-   * @see #setTodo6(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTAXSegment_Todo6()
-   * @model
-   * @generated
-   */
-  String getTodo6();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TAXSegment#getTodo6 <em>Todo6</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo6</em>' attribute.
-   * @see #getTodo6()
-   * @generated
-   */
-  void setTodo6(String value);
+  void setCalculationSequenceCode(String value);
 
 } // TAXSegment

@@ -5,19 +5,18 @@ UNB segment:
 	InterchangeRecipient=(Interchange=UA)
 	AssiciationCode=O
 	DateAndTime=[(Date6=140806, Time4=1838)]
-	Num1=1
-	Syntax=IATA
 	InterchangeControlSenderRef=94B142C20001
+	Header=(Syntax=IATA, Num1=1)
 
 UNH segment:
 	MessageReferenceNumber=001
-	Message=(ControllingAgency=IA, Release=2, Type=PAOREQ, Version=96)
+	Message=(Release=2, ControllingAgency=IA, Type=PAOREQ, Version=96)
 
 MSG segment:
-	MessageFunction=(BusinessFunction=1, MessageFunction1=46)
+	MessageIdentifier=(VersionIdentifier=46, MessageTypeCode=1)
 
 ORG segment:
-	SystemDetail1=(CompanyIdentification=NZ, LocationCode=AKL, LocationName=00)
+	SystemDetail1=(LocationName=00, LocationCode=AKL, CompanyIdentification=NZ)
 	SystemDetail2=(CompanyIdentification=NZ)
 	OriginatorTypeCode=A
 	Originator=(CountryCode=NZ, CurrencyCode=NZD)
@@ -25,322 +24,322 @@ ORG segment:
 	Location=(LocationId=AKL)
 
 ODI segment:
-	Destination=NYC
 	Origin=LAX
+	Destination=NYC
 
 TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=1
-	LineItemNumber=1
-	ProcessingIndicatorCode=N
 	ProductId=9519
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=1
+	OriginCode=LAX
 	LineItemNumber=1
-	ProcessingIndicatorCode=P
+	ProcessingIndicatorCode=N
+
+TVL segment:
 	ProductId=2213
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=1
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
 
 TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=2
-	LineItemNumber=1
-	ProcessingIndicatorCode=N
 	ProductId=9515
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=2
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1990
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
 	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=3
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=1990
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=2
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9516
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=3
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1802
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
 	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=4
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=1802
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=3
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9517
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=4
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=2335
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
 	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=5
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=2335
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=4
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9520
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=5
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=2614
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
 	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=6
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=2614
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=5
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9514
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=6
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=0247
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
 	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=7
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=0247
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=6
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9511
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=7
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1700
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
 	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=8
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=1700
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=7
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9513
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=8
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1928
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
 	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=NZ
-	ProductType=9
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=1928
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=8
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9518
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=9
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1802
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
 	CarrierId=NZ
-	ProductType=10
+	DestinationCode=EWR
+	ProductType=9
+	OriginCode=LAX
 	LineItemNumber=1
 	ProcessingIndicatorCode=N
+
+TVL segment:
+	ProductId=1802
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=9
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=9512
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
+	CarrierId=NZ
 	DestinationCode=EWR
-	CarrierId=UA
 	ProductType=10
+	OriginCode=LAX
 	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=2473
+	ProcessingIndicatorCode=N
 
 TVL segment:
+	ProductId=2473
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=JFK
 	CarrierId=UA
-	ProductType=11
+	DestinationCode=EWR
+	ProductType=10
+	OriginCode=LAX
 	LineItemNumber=1
 	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=0514
-
-TVL segment:
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
 	CarrierId=UA
-	ProductType=12
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1990
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=13
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1802
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=14
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=2335
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=15
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=2614
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=16
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=0247
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=17
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1700
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=18
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1928
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
-	CarrierId=UA
-	ProductType=19
-	LineItemNumber=1
-	ProcessingIndicatorCode=P
-	ProductId=1802
-
-TVL segment:
-	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
 	DestinationCode=JFK
-	CarrierId=UA
-	ProductType=20
+	ProductType=11
+	OriginCode=LAX
 	LineItemNumber=1
 	ProcessingIndicatorCode=P
-	ProductId=0516
 
 TVL segment:
+	ProductId=1990
 	DateAndTime=[(Date6=101022)]
-	OriginCode=LAX
-	DestinationCode=EWR
 	CarrierId=UA
-	ProductType=21
+	DestinationCode=EWR
+	ProductType=12
+	OriginCode=LAX
 	LineItemNumber=1
 	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=1802
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=13
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=2335
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=14
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=2614
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=15
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=0247
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=16
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=1700
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=17
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=1928
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=18
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=1802
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=19
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
+	ProductId=0516
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=JFK
+	ProductType=20
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
+
+TVL segment:
 	ProductId=2473
+	DateAndTime=[(Date6=101022)]
+	CarrierId=UA
+	DestinationCode=EWR
+	ProductType=21
+	OriginCode=LAX
+	LineItemNumber=1
+	ProcessingIndicatorCode=P
 
 UNT segment:
-	MessageReferenceNumber=001
 	SegmentCount=36
+	MessageReferenceNumber=001
 
 UNZ segment:
 	InterchangeControlCount=1

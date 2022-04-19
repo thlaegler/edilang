@@ -4,9 +4,9 @@ Xtext DSL to edit, parse, and serialize EDIFACT messages.
 
 For all  EDIFACT segments see [https://service.unece.org/trade/untdid/d00a/trsd/trsdi1.htm](https://service.unece.org/trade/untdid/d00a/trsd/trsdi1.htm).
 
-Xtext language definition: [src/io/thlaegler/edifact/Edilang.xtext](src/io/thlaegler/edifact/Edilang.xtext)
+Xtext language definition: [/edilang/src/io/thlaegler/edifact/Edilang.xtext](/edilang/src/io/thlaegler/edifact/Edilang.xtext)
 
-Either launch submodule `edifact` as an Eclipse application or just use the library `edifact.mapper` in your project (either as fat-jar or plain jar).
+Either launch submodule `edilang` as an Eclipse application or just use the library `edilang.mapper` in your project (either as fat-jar or plain jar).
 
 ## Serialize
 

@@ -241,9 +241,14 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
         return createAbstractEdiFunctionAdapter();
       }
       @Override
-      public Adapter casePRIFunction(PRIFunction object)
+      public Adapter caseUNBHeader(UNBHeader object)
       {
-        return createPRIFunctionAdapter();
+        return createUNBHeaderAdapter();
+      }
+      @Override
+      public Adapter casePriceInformation(PriceInformation object)
+      {
+        return createPriceInformationAdapter();
       }
       @Override
       public Adapter caseMessageBodyFunction(MessageBodyFunction object)
@@ -251,9 +256,14 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
         return createMessageBodyFunctionAdapter();
       }
       @Override
-      public Adapter caseMSGFunction(MSGFunction object)
+      public Adapter caseMessageIndentifier(MessageIndentifier object)
       {
-        return createMSGFunctionAdapter();
+        return createMessageIndentifierAdapter();
+      }
+      @Override
+      public Adapter caseRelationship(Relationship object)
+      {
+        return createRelationshipAdapter();
       }
       @Override
       public Adapter caseProductFunction(ProductFunction object)
@@ -261,9 +271,84 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
         return createProductFunctionAdapter();
       }
       @Override
+      public Adapter caseItemNumberIdentification(ItemNumberIdentification object)
+      {
+        return createItemNumberIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseSublineInformation(SublineInformation object)
+      {
+        return createSublineInformationAdapter();
+      }
+      @Override
+      public Adapter caseQuantityDetail(QuantityDetail object)
+      {
+        return createQuantityDetailAdapter();
+      }
+      @Override
+      public Adapter caseStreet(Street object)
+      {
+        return createStreetAdapter();
+      }
+      @Override
+      public Adapter caseCountrySubEntityDetail(CountrySubEntityDetail object)
+      {
+        return createCountrySubEntityDetailAdapter();
+      }
+      @Override
+      public Adapter casePartyName(PartyName object)
+      {
+        return createPartyNameAdapter();
+      }
+      @Override
+      public Adapter caseNameAndAddress(NameAndAddress object)
+      {
+        return createNameAndAddressAdapter();
+      }
+      @Override
+      public Adapter casePartyIdentificationDetail(PartyIdentificationDetail object)
+      {
+        return createPartyIdentificationDetailAdapter();
+      }
+      @Override
+      public Adapter caseApplicationErrorDetail(ApplicationErrorDetail object)
+      {
+        return createApplicationErrorDetailAdapter();
+      }
+      @Override
       public Adapter caseSystemDetailFunction(SystemDetailFunction object)
       {
         return createSystemDetailFunctionAdapter();
+      }
+      @Override
+      public Adapter caseTaxDetail(TaxDetail object)
+      {
+        return createTaxDetailAdapter();
+      }
+      @Override
+      public Adapter caseTaxAccountDetail(TaxAccountDetail object)
+      {
+        return createTaxAccountDetailAdapter();
+      }
+      @Override
+      public Adapter caseTaxType(TaxType object)
+      {
+        return createTaxTypeAdapter();
+      }
+      @Override
+      public Adapter caseCurrencyDetail(CurrencyDetail object)
+      {
+        return createCurrencyDetailAdapter();
+      }
+      @Override
+      public Adapter caseDocumentMessageIdentification(DocumentMessageIdentification object)
+      {
+        return createDocumentMessageIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseDocumentMessage(DocumentMessage object)
+      {
+        return createDocumentMessageAdapter();
       }
       @Override
       public Adapter caseOriginatorFunction(OriginatorFunction object)
@@ -294,6 +379,11 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDateAndTimeFunction(DateAndTimeFunction object)
       {
         return createDateAndTimeFunctionAdapter();
+      }
+      @Override
+      public Adapter caseDateTimePeriod(DateTimePeriod object)
+      {
+        return createDateTimePeriodAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -813,16 +903,31 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PRIFunction <em>PRI Function</em>}'.
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.UNBHeader <em>UNB Header</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see io.thlaegler.edifact.edilang.PRIFunction
+   * @see io.thlaegler.edifact.edilang.UNBHeader
    * @generated
    */
-  public Adapter createPRIFunctionAdapter()
+  public Adapter createUNBHeaderAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PriceInformation <em>Price Information</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PriceInformation
+   * @generated
+   */
+  public Adapter createPriceInformationAdapter()
   {
     return null;
   }
@@ -843,16 +948,31 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MSGFunction <em>MSG Function</em>}'.
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MessageIndentifier <em>Message Indentifier</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see io.thlaegler.edifact.edilang.MSGFunction
+   * @see io.thlaegler.edifact.edilang.MessageIndentifier
    * @generated
    */
-  public Adapter createMSGFunctionAdapter()
+  public Adapter createMessageIndentifierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.Relationship <em>Relationship</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.Relationship
+   * @generated
+   */
+  public Adapter createRelationshipAdapter()
   {
     return null;
   }
@@ -873,6 +993,141 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ItemNumberIdentification <em>Item Number Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ItemNumberIdentification
+   * @generated
+   */
+  public Adapter createItemNumberIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SublineInformation <em>Subline Information</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SublineInformation
+   * @generated
+   */
+  public Adapter createSublineInformationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.QuantityDetail <em>Quantity Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.QuantityDetail
+   * @generated
+   */
+  public Adapter createQuantityDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.Street <em>Street</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.Street
+   * @generated
+   */
+  public Adapter createStreetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CountrySubEntityDetail <em>Country Sub Entity Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CountrySubEntityDetail
+   * @generated
+   */
+  public Adapter createCountrySubEntityDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PartyName <em>Party Name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PartyName
+   * @generated
+   */
+  public Adapter createPartyNameAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.NameAndAddress <em>Name And Address</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.NameAndAddress
+   * @generated
+   */
+  public Adapter createNameAndAddressAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PartyIdentificationDetail <em>Party Identification Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PartyIdentificationDetail
+   * @generated
+   */
+  public Adapter createPartyIdentificationDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ApplicationErrorDetail <em>Application Error Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ApplicationErrorDetail
+   * @generated
+   */
+  public Adapter createApplicationErrorDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SystemDetailFunction <em>System Detail Function</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -883,6 +1138,96 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSystemDetailFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TaxDetail <em>Tax Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TaxDetail
+   * @generated
+   */
+  public Adapter createTaxDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TaxAccountDetail <em>Tax Account Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TaxAccountDetail
+   * @generated
+   */
+  public Adapter createTaxAccountDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TaxType <em>Tax Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TaxType
+   * @generated
+   */
+  public Adapter createTaxTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CurrencyDetail <em>Currency Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CurrencyDetail
+   * @generated
+   */
+  public Adapter createCurrencyDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DocumentMessageIdentification <em>Document Message Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DocumentMessageIdentification
+   * @generated
+   */
+  public Adapter createDocumentMessageIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DocumentMessage <em>Document Message</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DocumentMessage
+   * @generated
+   */
+  public Adapter createDocumentMessageAdapter()
   {
     return null;
   }
@@ -973,6 +1318,21 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDateAndTimeFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DateTimePeriod <em>Date Time Period</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DateTimePeriod
+   * @generated
+   */
+  public Adapter createDateTimePeriodAdapter()
   {
     return null;
   }

@@ -13,9 +13,10 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.BGMSegment#getNum1 <em>Num1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.BGMSegment#getNum2 <em>Num2</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.BGMSegment#getNum3 <em>Num3</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BGMSegment#getDocumentMessageName <em>Document Message Name</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BGMSegment#getDocumentMessageIdentification <em>Document Message Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BGMSegment#getMessageFunctionCode <em>Message Function Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BGMSegment#getResponseTypeCode <em>Response Type Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment()
@@ -25,69 +26,91 @@ package io.thlaegler.edifact.edilang;
 public interface BGMSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Num1</b></em>' attribute.
+   * Returns the value of the '<em><b>Document Message Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Num1</em>' attribute.
-   * @see #setNum1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment_Num1()
+   * @return the value of the '<em>Document Message Name</em>' containment reference.
+   * @see #setDocumentMessageName(DocumentMessage)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment_DocumentMessageName()
+   * @model containment="true"
+   * @generated
+   */
+  DocumentMessage getDocumentMessageName();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BGMSegment#getDocumentMessageName <em>Document Message Name</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Document Message Name</em>' containment reference.
+   * @see #getDocumentMessageName()
+   * @generated
+   */
+  void setDocumentMessageName(DocumentMessage value);
+
+  /**
+   * Returns the value of the '<em><b>Document Message Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Document Message Identification</em>' containment reference.
+   * @see #setDocumentMessageIdentification(DocumentMessageIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment_DocumentMessageIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  DocumentMessageIdentification getDocumentMessageIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BGMSegment#getDocumentMessageIdentification <em>Document Message Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Document Message Identification</em>' containment reference.
+   * @see #getDocumentMessageIdentification()
+   * @generated
+   */
+  void setDocumentMessageIdentification(DocumentMessageIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Message Function Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Message Function Code</em>' attribute.
+   * @see #setMessageFunctionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment_MessageFunctionCode()
    * @model
    * @generated
    */
-  String getNum1();
+  String getMessageFunctionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BGMSegment#getNum1 <em>Num1</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BGMSegment#getMessageFunctionCode <em>Message Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num1</em>' attribute.
-   * @see #getNum1()
+   * @param value the new value of the '<em>Message Function Code</em>' attribute.
+   * @see #getMessageFunctionCode()
    * @generated
    */
-  void setNum1(String value);
+  void setMessageFunctionCode(String value);
 
   /**
-   * Returns the value of the '<em><b>Num2</b></em>' attribute.
+   * Returns the value of the '<em><b>Response Type Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Num2</em>' attribute.
-   * @see #setNum2(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment_Num2()
+   * @return the value of the '<em>Response Type Code</em>' attribute.
+   * @see #setResponseTypeCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment_ResponseTypeCode()
    * @model
    * @generated
    */
-  String getNum2();
+  String getResponseTypeCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BGMSegment#getNum2 <em>Num2</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BGMSegment#getResponseTypeCode <em>Response Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num2</em>' attribute.
-   * @see #getNum2()
+   * @param value the new value of the '<em>Response Type Code</em>' attribute.
+   * @see #getResponseTypeCode()
    * @generated
    */
-  void setNum2(String value);
-
-  /**
-   * Returns the value of the '<em><b>Num3</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Num3</em>' attribute.
-   * @see #setNum3(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBGMSegment_Num3()
-   * @model
-   * @generated
-   */
-  String getNum3();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BGMSegment#getNum3 <em>Num3</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num3</em>' attribute.
-   * @see #getNum3()
-   * @generated
-   */
-  void setNum3(String value);
+  void setResponseTypeCode(String value);
 
 } // BGMSegment

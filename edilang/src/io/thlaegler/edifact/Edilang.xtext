@@ -192,11 +192,7 @@ UNASegment:
 UNBSegment:
 	segment="UNB"
 	PLUS
-	(
-		(syntax=ID)?
-		COLON
-		(num1=ID)?
-	)?
+	( header=UNBHeader )?
 	PLUS
 	( interchangeSender=InterchangerFunction )?
 	PLUS
@@ -219,7 +215,6 @@ UNBSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-
 //UNH+1+PAOREQ:96:2:IA+00012432090782'
 UNHSegment:
 	segment="UNH"
@@ -237,10 +232,18 @@ UNHSegment:
 MSGSegment:
 	segment="MSG"
 	PLUS
-	( messageFunction=MSGFunction )?
+	( messageIdentifier=MessageIndentifier )? // C709
 	(
 		PLUS
-		responseType=ID
+		designatedClassCode=ID // 1507
+		(
+			PLUS
+			maintenanceOperationCode=ID // 4513
+				(
+				PLUS
+				relationship=Relationship // C941
+			)?
+		)?
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
@@ -394,10 +397,22 @@ RPISegment:
 MOASegment:
 	segment="MOA"
 	PLUS
-	code1=ID
+	monetaryAmountTypeCodeQualifier=ID // 5025
 	(
 		COLON
-		code2=ID
+		monetaryAmount=ID // 5004
+		(
+			COLON
+			currencyIdentificationCode=ID // 6345
+			(
+				COLON
+				currencyTypeCodeQualifier=ID // 6343
+				(
+					COLON
+					statusDescriptionCode=ID // 4405
+				)?
+			)?
+		)?
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
@@ -405,14 +420,24 @@ MOASegment:
 LINSegment:
 	segment="LIN"
 	PLUS
-	( code1=ID )?
+	( lineItemIdentifier=ID )? // 1082
 	PLUS
-	( code2=ID )?
+	( actionRequest=ID )? // 1229
 	PLUS
 	(
-		code3=ID
-		COLON
-		code4=ID
+		itemNumberIdentification=ItemNumberIdentification // C212
+		(
+			PLUS
+			sublineInformation=SublineInformation // C829
+			(
+				PLUS
+				configurationLevelNumber=ID // 1222
+				(
+					PLUS
+					configurationOperationCode=ID // 7083
+				)?
+			)?
+		)?
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
@@ -420,32 +445,34 @@ LINSegment:
 PRISegment:
 	segment="PRI"
 	PLUS
-	sub=PRIFunction
+	sub=PriceInformation
 	lineEnd=QUOTE_AND_NL
 ;
 //QTY+12:54:PCE'
 QTYSegment:
 	segment="QTY"
-	PLUS
-	code1=ID
 	(
-		COLON
-		code2=ID
-		(
-			COLON
-			code3=ID
-		)?
-	)?
+		PLUS
+		quantityDetails+=QuantityDetail // C186
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
 //CUX+2:EUR'
 CUXSegment:
 	segment="CUX"
 	PLUS
-	num=ID
+	currencyDetails1=CurrencyDetail
 	(
-		COLON
-		currency=ID
+		PLUS
+		currencyDetails2=CurrencyDetail
+		(
+			PLUS
+			currencyExchangeRate=ID
+			(
+				PLUS
+				exchangeRateCurrencyMarketIdentifier=ID
+			)?
+		)?
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
@@ -453,23 +480,31 @@ CUXSegment:
 TAXSegment:
 	segment="TAX"
 	PLUS
-	num=ID
+	taxFunctionCodeQualifier=ID // 5283
 	PLUS
-	type=ID
+	taxType=TaxType // C241
 	(
 		PLUS
-		( todo1=ID )?
-		PLUS
-		( todo2=ID )?
-		PLUS
+		( taxAccountDetail=TaxAccountDetail )? // C533
 		(
-			( todo3=ID )?
-			COLON
-			( todo4=ID )?
-			COLON
-			( todo5=ID )?
-			COLON
-			( todo6=ID )?
+			PLUS
+			( taxAssessmentBasicValue=ID )? // 5286
+			(
+				PLUS
+				( taxDetail=TaxDetail )? // C243
+				(
+					PLUS
+					( taxCategoryCode=ID )? // 5305
+					(
+						PLUS
+						( partyTaxIdentifier=ID )? // 3446
+						(
+							PLUS
+							( calculationSequenceCode=ID )? // 1227
+						)?
+					)?
+				)?
+			)?
 		)?
 	)?
 	lineEnd=QUOTE_AND_NL
@@ -489,39 +524,63 @@ RFFSegment:
 NADSegment:
 	segment="NAD"
 	PLUS
-	code=ID
-	PLUS
+	partyFunctionCodeQualifier=ID
 	(
-		( manufacturer1=ID )?
-		COLON
-		( manufacturer2=ID )?
-		COLON
-		( manufacturer3=ID )?
+		PLUS
+		partyIdentificationDetails=PartyIdentificationDetail // C082
+		(
+			PLUS
+			nameAndAddress=NameAndAddress // C058
+			(
+				PLUS
+				partyName=PartyName // C080
+				(
+					PLUS
+					street=Street // C059
+					(
+						PLUS
+						cityName=ID // 3164
+						(
+							PLUS
+							countrySubEntityDetails=CountrySubEntityDetail // C819
+							(
+								PLUS
+								postalIdentificationCode=ID // 3251
+								(
+									PLUS
+									countryNameCode=ID // 3207
+								)?
+							)?
+						)?
+					)?
+				)?
+			)?
+		)?
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //DTM+137:199910060000:102'
 DTMSegment:
 	segment="DTM"
-	PLUS
-	num1=ID
 	(
-		COLON
-		num2=ID
-		COLON
-		num3=ID
-	)?
+		PLUS
+		dateTimePeriods+=DateTimePeriod
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
 //BGM+381+1060113800026+9'
 BGMSegment:
 	segment="BGM"
 	PLUS
-	(num1=ID)?
+	( documentMessageName=DocumentMessage )?
 	PLUS
-	(num2=ID)?
+	( documentMessageIdentification=DocumentMessageIdentification )?
 	PLUS
-	(num3=ID)?
+	( messageFunctionCode=ID )?
+	(
+		PLUS
+		responseTypeCode=ID
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //PAT+1'
@@ -546,8 +605,10 @@ FTXSegment:
 ;
 ERCSegment:
 	segment="ERC"
-	PLUS
-	code1=ID
+	(
+		PLUS
+		applicationErrorDetails+=ApplicationErrorDetail
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
 //CNT+2:4'
@@ -604,31 +665,53 @@ UNZSegment:
 
 // EDIFACT Functions
 AbstractEdiFunction:
-	PRIFunction |
+	UNBHeader |
+	PriceInformation |
 	MessageBodyFunction |
-	MSGFunction |
+	MessageIndentifier |
+	Relationship |
 	ProductFunction |
+	ItemNumberIdentification |
+	SublineInformation |
+	QuantityDetail |
+	Street |
+	CountrySubEntityDetail |
+	PartyName |
+	NameAndAddress |
+	ApplicationErrorDetail |
 	SystemDetailFunction |
+	TaxDetail |
+	TaxAccountDetail |
+	TaxType |
+	CurrencyDetail |
+	DocumentMessageIdentification |
+	DocumentMessage |
 	OriginatorFunction |
 	OriginatorIdentificationFunction |
 	LocationFunction |
 	InterchangerFunction |
 	DateOnlyFunction |
-	DateAndTimeFunction
+	DateAndTimeFunction |
+	DateTimePeriod
 ;
-
-PRIFunction:
-	code1=ID
+UNBHeader:
+	{UNBHeader}
+	( syntax=ID )?
 	COLON
-	( code2=ID )?
+	( num1=ID )?
+;
+PriceInformation: // C509
+	priceCodeQualifier=ID // 5125
 	COLON
-	( code3=ID )?
+	( priceAmount=ID )? // 5118
 	COLON
-	( code4=ID )?
+	( priceTypeCode=ID )? // 5375
 	COLON
-	( code5=ID )?
+	( priceSpecificationCode=ID )? // 5287
 	COLON
-	( code6=ID )?
+	( unitPriceBasisValue=ID )? // 5284
+	COLON
+	( measurementUnitCode=ID )? // 6411
 ;
 MessageBodyFunction:
 	type=ID
@@ -643,16 +726,41 @@ MessageBodyFunction:
 		more=ID
 	)?
 ;
-MSGFunction:
-	( businessFunction=ID )?
+MessageIndentifier: // C709
+	( messageTypeCode=ID )? // 1475
 	COLON
-	messageFunction1=ID
+	versionIdentifier=ID // 1056
 	(
 		COLON
-		codeListResponsibleAgency=ID
+		releaseIdentifier=ID // 1058
 		(
 			COLON
-			messageFunction2=ID
+			controllingAgencyIdentifier=ID // 1476
+			(
+				COLON
+				messageImplementationIdentificationCode=ID // 1523
+				(
+					COLON
+					revisionIdentifier=ID // 1060
+					(
+						COLON
+						documentStatusCode=ID // 1373
+					)?
+				)?
+			)?
+		)?
+	)?
+;
+Relationship: // C941
+	( relationshipDescriptionCode=ID )? // 9143
+	COLON
+	codeListIdentificationCode=ID // 1131
+	(
+		COLON
+		codeListResponsibleAgency=ID // 3055
+		(
+			COLON
+			relationshipDescription=ID // 9142
 		)?
 	)?
 ;
@@ -663,6 +771,131 @@ ProductFunction:
 		avail=ID
 	)?
 ;
+ItemNumberIdentification:
+	itemIdentifier=ID // 7140
+	COLON
+	itemTypeIdentificationCode=ID // 7143
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
+SublineInformation:
+	sublineIndicatorCode=ID // 5495
+	(
+		COLON
+		lineItemIdentifier=ID // 1082
+	)?
+;
+QuantityDetail: // C186
+	quantityTypeCodeQualifier=ID // 6063
+	(
+		COLON
+		quantity=ID // 6060
+		(
+			COLON
+			measurementUnitCode=ID // 6411
+		)?
+	)?
+;
+Street: // C059
+	streetAndNumber+=ID // 3042
+	(
+		COLON
+		streetAndNumber+=ID // 3042
+		(
+			COLON
+			streetAndNumber+=ID // 3042
+			(
+				COLON
+				streetAndNumber+=ID // 3042
+				(
+					COLON
+					streetAndNumber+=ID // 3042
+				)?
+			)?
+		)?
+	)?
+;
+CountrySubEntityDetail: // C819
+	countrySubEntityNameCode+=ID // 3229
+	(
+		COLON
+		codeListIdentificationCode+=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode+=ID // 3055
+			(
+				COLON
+				countrySubEntityName+=ID // 3228
+			)?
+		)?
+	)?
+;
+PartyName: // C080
+	partyName+=ID // 3036
+	(
+		COLON
+		partyName+=ID // 3036
+		(
+			COLON
+			partyName+=ID // 3036
+			(
+				COLON
+				partyName+=ID // 3036
+				(
+					COLON
+					partyName+=ID // 3036
+				)?
+			)?
+		)?
+	)?
+;
+NameAndAddress: // C058
+	nameAndAddress+=ID // 3124
+	(
+		COLON
+		nameAndAddress+=ID // 3124
+		(
+			COLON
+			nameAndAddress+=ID // 3124
+			(
+				COLON
+				nameAndAddress+=ID // 3124
+				(
+					COLON
+					nameAndAddress+=ID // 3124
+				)?
+			)?
+		)?
+	)?
+;
+PartyIdentificationDetail:
+	partyIdentifier=ID // 3039
+	(
+		COLON
+		( codeListIdentificationCode=ID )? // 1331
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
+ApplicationErrorDetail: // C901
+	applictionErrorCode=ID // 9321
+	(
+		COLON
+		codeListIdentificationCode=ID // 1331
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
 SystemDetailFunction:
 	companyIdentification=ID
 	(
@@ -671,6 +904,96 @@ SystemDetailFunction:
 		(
 			COLON
 			locationName=ID
+		)?
+	)?
+;
+TaxDetail: // C243
+	( taxRateDescriptionCode=ID )? // 5279
+	COLON
+	( codeListIdentificationCode1=ID )? // 1131
+	COLON
+	( codeListResponsibleAgencyCode1=ID )? // 3055
+	(
+		COLON
+		taxRateDescription=ID // 5278
+		(
+			COLON
+			taxRateBasisCode=ID // 5273
+			(
+				COLON
+				codeListIdentificationCode2=ID // 1131
+				(
+					COLON
+					codeListResponsibleAgencyCode2=ID // 3055
+				)?
+			)?
+		)?
+	)?
+;
+TaxAccountDetail: // C533
+	taxAccountCode=ID // 5289
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
+TaxType: // C241
+	taxTypeNameCode=ID // 5153
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				taxTypeName=ID // 5152
+			)?
+		)?
+	)?
+;
+CurrencyDetail: // C504
+	currencyUsageCodeQualifier=ID // 6347
+	(
+		COLON
+		currencyIdentificationCode=ID // 6345
+		(
+			COLON
+			currencyTypeCodeQualifier=ID // 6343
+			(
+				COLON
+				currencyRateValue=ID // 6348
+			)?
+		)?
+	)?
+;
+DocumentMessageIdentification: // C106
+	documentIdentifier=ID // 1004
+	(
+		COLON
+		versionIdentifier=ID // 1056
+		(
+			COLON
+			revisionIdentifier=ID // 1060
+		)?
+	)?
+;
+DocumentMessage: // C002
+	documentNameCode=ID // 1001
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				documentName=ID // 1000
+			)?
 		)?
 	)?
 ;
@@ -717,6 +1040,17 @@ DateAndTimeFunction:
 	date6=ID
 	COLON
 	time4=ID
+;
+DateTimePeriod:
+	dateTimePeriodFunctionCodeQualifier=ID
+	(
+		COLON
+		dateTimePeriodValue=ID
+		(
+			COLON
+			dateTimePeriodFormatCode=ID
+		)?
+	)?
 ;
 
 terminal QUOTE_AND_NL: ( "'" | "~" ) ( "\n" )?;

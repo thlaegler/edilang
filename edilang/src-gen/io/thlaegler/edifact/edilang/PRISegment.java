@@ -27,12 +27,12 @@ public interface PRISegment extends AbstractEdiSegment
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sub</em>' containment reference.
-   * @see #setSub(PRIFunction)
+   * @see #setSub(PriceInformation)
    * @see io.thlaegler.edifact.edilang.EdilangPackage#getPRISegment_Sub()
    * @model containment="true"
    * @generated
    */
-  PRIFunction getSub();
+  PriceInformation getSub();
 
   /**
    * Sets the value of the '{@link io.thlaegler.edifact.edilang.PRISegment#getSub <em>Sub</em>}' containment reference.
@@ -42,6 +42,6 @@ public interface PRISegment extends AbstractEdiSegment
    * @see #getSub()
    * @generated
    */
-  void setSub(PRIFunction value);
+  void setSub(PriceInformation value);
 
 } // PRISegment

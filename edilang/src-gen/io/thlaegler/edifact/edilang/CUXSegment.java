@@ -13,8 +13,10 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CUXSegment#getNum <em>Num</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrency <em>Currency</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrencyDetails1 <em>Currency Details1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrencyDetails2 <em>Currency Details2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrencyExchangeRate <em>Currency Exchange Rate</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CUXSegment#getExchangeRateCurrencyMarketIdentifier <em>Exchange Rate Currency Market Identifier</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCUXSegment()
@@ -24,47 +26,91 @@ package io.thlaegler.edifact.edilang;
 public interface CUXSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Num</b></em>' attribute.
+   * Returns the value of the '<em><b>Currency Details1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Num</em>' attribute.
-   * @see #setNum(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCUXSegment_Num()
+   * @return the value of the '<em>Currency Details1</em>' containment reference.
+   * @see #setCurrencyDetails1(CurrencyDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCUXSegment_CurrencyDetails1()
+   * @model containment="true"
+   * @generated
+   */
+  CurrencyDetail getCurrencyDetails1();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrencyDetails1 <em>Currency Details1</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Currency Details1</em>' containment reference.
+   * @see #getCurrencyDetails1()
+   * @generated
+   */
+  void setCurrencyDetails1(CurrencyDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Currency Details2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Currency Details2</em>' containment reference.
+   * @see #setCurrencyDetails2(CurrencyDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCUXSegment_CurrencyDetails2()
+   * @model containment="true"
+   * @generated
+   */
+  CurrencyDetail getCurrencyDetails2();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrencyDetails2 <em>Currency Details2</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Currency Details2</em>' containment reference.
+   * @see #getCurrencyDetails2()
+   * @generated
+   */
+  void setCurrencyDetails2(CurrencyDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Currency Exchange Rate</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Currency Exchange Rate</em>' attribute.
+   * @see #setCurrencyExchangeRate(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCUXSegment_CurrencyExchangeRate()
    * @model
    * @generated
    */
-  String getNum();
+  String getCurrencyExchangeRate();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CUXSegment#getNum <em>Num</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrencyExchangeRate <em>Currency Exchange Rate</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num</em>' attribute.
-   * @see #getNum()
+   * @param value the new value of the '<em>Currency Exchange Rate</em>' attribute.
+   * @see #getCurrencyExchangeRate()
    * @generated
    */
-  void setNum(String value);
+  void setCurrencyExchangeRate(String value);
 
   /**
-   * Returns the value of the '<em><b>Currency</b></em>' attribute.
+   * Returns the value of the '<em><b>Exchange Rate Currency Market Identifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Currency</em>' attribute.
-   * @see #setCurrency(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCUXSegment_Currency()
+   * @return the value of the '<em>Exchange Rate Currency Market Identifier</em>' attribute.
+   * @see #setExchangeRateCurrencyMarketIdentifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCUXSegment_ExchangeRateCurrencyMarketIdentifier()
    * @model
    * @generated
    */
-  String getCurrency();
+  String getExchangeRateCurrencyMarketIdentifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CUXSegment#getCurrency <em>Currency</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CUXSegment#getExchangeRateCurrencyMarketIdentifier <em>Exchange Rate Currency Market Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Currency</em>' attribute.
-   * @see #getCurrency()
+   * @param value the new value of the '<em>Exchange Rate Currency Market Identifier</em>' attribute.
+   * @see #getExchangeRateCurrencyMarketIdentifier()
    * @generated
    */
-  void setCurrency(String value);
+  void setExchangeRateCurrencyMarketIdentifier(String value);
 
 } // CUXSegment
