@@ -6,16 +6,37 @@ For all  EDIFACT segments see [https://service.unece.org/trade/untdid/d00a/trsd/
 
 Xtext language definition: [/edilang/src/io/thlaegler/edifact/Edilang.xtext](/edilang/src/io/thlaegler/edifact/Edilang.xtext)
 
-Either launch submodule `edilang` as an Eclipse application or just use the library `edilang.mapper` in your project (either as fat-jar or plain jar).
 
-## Serialize
+## Usage
+
+### Eclipse application
+
+Launch submodule `edilang` as Eclipse application/plugin.
+
+### Web application
+
+Launch a Jetty server and open EDIFACT editor in browser: http://localhost:8080
+
+```
+$ cd edilang.web
+$ mvn jetty:run
+```
+
+### Java library/dependency
+
+Use the library `edilang.mapper` in your project (either as fat-jar or plain jar).
+
+
+## SerDe
+
+### Serialize
 
 ```
 EdiModel edifactModel = new EdiModel ...;
 String edifactMessage = new EdifactMapper().writeValueAsString(edifactModel);
 ```
 
-## Deserialize
+### Deserialize
 
 ```
 String edifactString = "UNB+IATB:1+1APPC+NZ0AV+200120:2136+039I42XXTK0001+++0'" +
