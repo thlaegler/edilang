@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.RTESegment;
+import io.thlaegler.edifact.edilang.RateDetail;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.RTESegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.RTESegmentImpl#getRateDetails <em>Rate Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.RTESegmentImpl#getStatusDescriptionCode <em>Status Description Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getRateDetails() <em>Rate Details</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getRateDetails()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected RateDetail rateDetails;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getStatusDescriptionCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected static final String STATUS_DESCRIPTION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected String statusDescriptionCode = STATUS_DESCRIPTION_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,26 @@ public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public RateDetail getRateDetails()
   {
-    return todo;
+    return rateDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRateDetails(RateDetail newRateDetails, NotificationChain msgs)
+  {
+    RateDetail oldRateDetails = rateDetails;
+    rateDetails = newRateDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.RTE_SEGMENT__RATE_DETAILS, oldRateDetails, newRateDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +116,61 @@ public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setRateDetails(RateDetail newRateDetails)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newRateDetails != rateDetails)
+    {
+      NotificationChain msgs = null;
+      if (rateDetails != null)
+        msgs = ((InternalEObject)rateDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.RTE_SEGMENT__RATE_DETAILS, null, msgs);
+      if (newRateDetails != null)
+        msgs = ((InternalEObject)newRateDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.RTE_SEGMENT__RATE_DETAILS, null, msgs);
+      msgs = basicSetRateDetails(newRateDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.RTE_SEGMENT__RATE_DETAILS, newRateDetails, newRateDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getStatusDescriptionCode()
+  {
+    return statusDescriptionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setStatusDescriptionCode(String newStatusDescriptionCode)
+  {
+    String oldStatusDescriptionCode = statusDescriptionCode;
+    statusDescriptionCode = newStatusDescriptionCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.RTE_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.RTE_SEGMENT__STATUS_DESCRIPTION_CODE, oldStatusDescriptionCode, statusDescriptionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.RTE_SEGMENT__RATE_DETAILS:
+        return basicSetRateDetails(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.RTE_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.RTE_SEGMENT__RATE_DETAILS:
+        return getRateDetails();
+      case EdilangPackage.RTE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return getStatusDescriptionCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.RTE_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.RTE_SEGMENT__RATE_DETAILS:
+        setRateDetails((RateDetail)newValue);
+        return;
+      case EdilangPackage.RTE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.RTE_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.RTE_SEGMENT__RATE_DETAILS:
+        setRateDetails((RateDetail)null);
+        return;
+      case EdilangPackage.RTE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode(STATUS_DESCRIPTION_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.RTE_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.RTE_SEGMENT__RATE_DETAILS:
+        return rateDetails != null;
+      case EdilangPackage.RTE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return STATUS_DESCRIPTION_CODE_EDEFAULT == null ? statusDescriptionCode != null : !STATUS_DESCRIPTION_CODE_EDEFAULT.equals(statusDescriptionCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class RTESegmentImpl extends AbstractEdiSegmentImpl implements RTESegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (statusDescriptionCode: ");
+    result.append(statusDescriptionCode);
     result.append(')');
     return result.toString();
   }

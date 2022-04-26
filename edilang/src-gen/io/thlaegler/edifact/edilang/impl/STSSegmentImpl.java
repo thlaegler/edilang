@@ -5,12 +5,24 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.STSSegment;
+import io.thlaegler.edifact.edilang.Status;
+import io.thlaegler.edifact.edilang.StatusCategory;
+import io.thlaegler.edifact.edilang.StatusReason;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +32,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.STSSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.STSSegmentImpl#getStatusCategory <em>Status Category</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.STSSegmentImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.STSSegmentImpl#getStatusReasons <em>Status Reasons</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +42,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class STSSegmentImpl extends AbstractEdiSegmentImpl implements STSSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getStatusCategory() <em>Status Category</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getStatusCategory()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected StatusCategory statusCategory;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getStatus()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected Status status;
+
+  /**
+   * The cached value of the '{@link #getStatusReasons() <em>Status Reasons</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusReasons()
+   * @generated
+   * @ordered
+   */
+  protected EList<StatusReason> statusReasons;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +98,26 @@ public class STSSegmentImpl extends AbstractEdiSegmentImpl implements STSSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public StatusCategory getStatusCategory()
   {
-    return todo;
+    return statusCategory;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetStatusCategory(StatusCategory newStatusCategory, NotificationChain msgs)
+  {
+    StatusCategory oldStatusCategory = statusCategory;
+    statusCategory = newStatusCategory;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.STS_SEGMENT__STATUS_CATEGORY, oldStatusCategory, newStatusCategory);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +126,105 @@ public class STSSegmentImpl extends AbstractEdiSegmentImpl implements STSSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setStatusCategory(StatusCategory newStatusCategory)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newStatusCategory != statusCategory)
+    {
+      NotificationChain msgs = null;
+      if (statusCategory != null)
+        msgs = ((InternalEObject)statusCategory).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.STS_SEGMENT__STATUS_CATEGORY, null, msgs);
+      if (newStatusCategory != null)
+        msgs = ((InternalEObject)newStatusCategory).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.STS_SEGMENT__STATUS_CATEGORY, null, msgs);
+      msgs = basicSetStatusCategory(newStatusCategory, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.STS_SEGMENT__STATUS_CATEGORY, newStatusCategory, newStatusCategory));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Status getStatus()
+  {
+    return status;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetStatus(Status newStatus, NotificationChain msgs)
+  {
+    Status oldStatus = status;
+    status = newStatus;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.STS_SEGMENT__TODO, oldTodo, todo));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.STS_SEGMENT__STATUS, oldStatus, newStatus);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setStatus(Status newStatus)
+  {
+    if (newStatus != status)
+    {
+      NotificationChain msgs = null;
+      if (status != null)
+        msgs = ((InternalEObject)status).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.STS_SEGMENT__STATUS, null, msgs);
+      if (newStatus != null)
+        msgs = ((InternalEObject)newStatus).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.STS_SEGMENT__STATUS, null, msgs);
+      msgs = basicSetStatus(newStatus, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.STS_SEGMENT__STATUS, newStatus, newStatus));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<StatusReason> getStatusReasons()
+  {
+    if (statusReasons == null)
+    {
+      statusReasons = new EObjectContainmentEList<StatusReason>(StatusReason.class, this, EdilangPackage.STS_SEGMENT__STATUS_REASONS);
+    }
+    return statusReasons;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.STS_SEGMENT__STATUS_CATEGORY:
+        return basicSetStatusCategory(null, msgs);
+      case EdilangPackage.STS_SEGMENT__STATUS:
+        return basicSetStatus(null, msgs);
+      case EdilangPackage.STS_SEGMENT__STATUS_REASONS:
+        return ((InternalEList<?>)getStatusReasons()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +237,12 @@ public class STSSegmentImpl extends AbstractEdiSegmentImpl implements STSSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.STS_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.STS_SEGMENT__STATUS_CATEGORY:
+        return getStatusCategory();
+      case EdilangPackage.STS_SEGMENT__STATUS:
+        return getStatus();
+      case EdilangPackage.STS_SEGMENT__STATUS_REASONS:
+        return getStatusReasons();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -114,13 +252,21 @@ public class STSSegmentImpl extends AbstractEdiSegmentImpl implements STSSegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.STS_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.STS_SEGMENT__STATUS_CATEGORY:
+        setStatusCategory((StatusCategory)newValue);
+        return;
+      case EdilangPackage.STS_SEGMENT__STATUS:
+        setStatus((Status)newValue);
+        return;
+      case EdilangPackage.STS_SEGMENT__STATUS_REASONS:
+        getStatusReasons().clear();
+        getStatusReasons().addAll((Collection<? extends StatusReason>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +282,14 @@ public class STSSegmentImpl extends AbstractEdiSegmentImpl implements STSSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.STS_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.STS_SEGMENT__STATUS_CATEGORY:
+        setStatusCategory((StatusCategory)null);
+        return;
+      case EdilangPackage.STS_SEGMENT__STATUS:
+        setStatus((Status)null);
+        return;
+      case EdilangPackage.STS_SEGMENT__STATUS_REASONS:
+        getStatusReasons().clear();
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +305,14 @@ public class STSSegmentImpl extends AbstractEdiSegmentImpl implements STSSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.STS_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.STS_SEGMENT__STATUS_CATEGORY:
+        return statusCategory != null;
+      case EdilangPackage.STS_SEGMENT__STATUS:
+        return status != null;
+      case EdilangPackage.STS_SEGMENT__STATUS_REASONS:
+        return statusReasons != null && !statusReasons.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
-    result.append(')');
-    return result.toString();
   }
 
 } //STSSegmentImpl

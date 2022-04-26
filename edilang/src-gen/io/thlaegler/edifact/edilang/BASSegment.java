@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.BASSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BASSegment#getBasisCodeQualifier <em>Basis Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BASSegment#getBasisType <em>Basis Type</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getBASSegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface BASSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Basis Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBASSegment_Todo()
+   * @return the value of the '<em>Basis Code Qualifier</em>' attribute.
+   * @see #setBasisCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBASSegment_BasisCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getBasisCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BASSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BASSegment#getBasisCodeQualifier <em>Basis Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Basis Code Qualifier</em>' attribute.
+   * @see #getBasisCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setBasisCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Basis Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Basis Type</em>' containment reference.
+   * @see #setBasisType(BasisType)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBASSegment_BasisType()
+   * @model containment="true"
+   * @generated
+   */
+  BasisType getBasisType();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BASSegment#getBasisType <em>Basis Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Basis Type</em>' containment reference.
+   * @see #getBasisType()
+   * @generated
+   */
+  void setBasisType(BasisType value);
 
 } // BASSegment

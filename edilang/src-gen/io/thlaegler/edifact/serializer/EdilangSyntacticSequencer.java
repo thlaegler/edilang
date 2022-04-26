@@ -21,7 +21,6 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected EdilangGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_CNTSegment_COLONTerminalRuleCall_2_1_q;
 	protected AbstractElementAlias match_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q;
 	protected AbstractElementAlias match_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q;
 	protected AbstractElementAlias match_PartyIdentificationDetail_COLONTerminalRuleCall_1_0_q;
@@ -38,7 +37,6 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (EdilangGrammarAccess) access;
-		match_CNTSegment_COLONTerminalRuleCall_2_1_q = new TokenAlias(false, true, grammarAccess.getCNTSegmentAccess().getCOLONTerminalRuleCall_2_1());
 		match_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getODISegmentAccess().getPLUSTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getODISegmentAccess().getPLUSTerminalRuleCall_1_2()));
 		match_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q = new TokenAlias(false, true, grammarAccess.getOriginatorIdentificationFunctionAccess().getCOLONTerminalRuleCall_1_0());
 		match_PartyIdentificationDetail_COLONTerminalRuleCall_1_0_q = new TokenAlias(false, true, grammarAccess.getPartyIdentificationDetailAccess().getCOLONTerminalRuleCall_1_0());
@@ -86,9 +84,7 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_CNTSegment_COLONTerminalRuleCall_2_1_q.equals(syntax))
-				emit_CNTSegment_COLONTerminalRuleCall_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q.equals(syntax))
+			if (match_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q.equals(syntax))
 				emit_ODISegment___PLUSTerminalRuleCall_1_0_PLUSTerminalRuleCall_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q.equals(syntax))
 				emit_OriginatorIdentificationFunction_COLONTerminalRuleCall_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -116,20 +112,6 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     COLON?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     segment='CNT' PLUS (ambiguity) lineEnd=QUOTE_AND_NL
-	 
-	 * </pre>
-	 */
-	protected void emit_CNTSegment_COLONTerminalRuleCall_2_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * <pre>
 	 * Ambiguous syntax:

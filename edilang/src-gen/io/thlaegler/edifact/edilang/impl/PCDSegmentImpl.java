@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.PCDSegment;
+import io.thlaegler.edifact.edilang.PercentageDetail;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.PCDSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.PCDSegmentImpl#getPercentageDetails <em>Percentage Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.PCDSegmentImpl#getStatusDescriptionCode <em>Status Description Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getPercentageDetails() <em>Percentage Details</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getPercentageDetails()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected PercentageDetail percentageDetails;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getStatusDescriptionCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected static final String STATUS_DESCRIPTION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected String statusDescriptionCode = STATUS_DESCRIPTION_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,26 @@ public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public PercentageDetail getPercentageDetails()
   {
-    return todo;
+    return percentageDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPercentageDetails(PercentageDetail newPercentageDetails, NotificationChain msgs)
+  {
+    PercentageDetail oldPercentageDetails = percentageDetails;
+    percentageDetails = newPercentageDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS, oldPercentageDetails, newPercentageDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +116,61 @@ public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setPercentageDetails(PercentageDetail newPercentageDetails)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newPercentageDetails != percentageDetails)
+    {
+      NotificationChain msgs = null;
+      if (percentageDetails != null)
+        msgs = ((InternalEObject)percentageDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS, null, msgs);
+      if (newPercentageDetails != null)
+        msgs = ((InternalEObject)newPercentageDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS, null, msgs);
+      msgs = basicSetPercentageDetails(newPercentageDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS, newPercentageDetails, newPercentageDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getStatusDescriptionCode()
+  {
+    return statusDescriptionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setStatusDescriptionCode(String newStatusDescriptionCode)
+  {
+    String oldStatusDescriptionCode = statusDescriptionCode;
+    statusDescriptionCode = newStatusDescriptionCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.PCD_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.PCD_SEGMENT__STATUS_DESCRIPTION_CODE, oldStatusDescriptionCode, statusDescriptionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS:
+        return basicSetPercentageDetails(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PCD_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS:
+        return getPercentageDetails();
+      case EdilangPackage.PCD_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return getStatusDescriptionCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PCD_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS:
+        setPercentageDetails((PercentageDetail)newValue);
+        return;
+      case EdilangPackage.PCD_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PCD_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS:
+        setPercentageDetails((PercentageDetail)null);
+        return;
+      case EdilangPackage.PCD_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode(STATUS_DESCRIPTION_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PCD_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.PCD_SEGMENT__PERCENTAGE_DETAILS:
+        return percentageDetails != null;
+      case EdilangPackage.PCD_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return STATUS_DESCRIPTION_CODE_EDEFAULT == null ? statusDescriptionCode != null : !STATUS_DESCRIPTION_CODE_EDEFAULT.equals(statusDescriptionCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class PCDSegmentImpl extends AbstractEdiSegmentImpl implements PCDSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (statusDescriptionCode: ");
+    result.append(statusDescriptionCode);
     result.append(')');
     return result.toString();
   }

@@ -13,7 +13,13 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getObjectTypeCodeQualifier <em>Object Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getIdentificationNumber <em>Identification Number</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getPartyIdentificationDetails <em>Party Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getStatusDescriptionCode <em>Status Description Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getConfigurationLevelNumber <em>Configuration Level Number</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getPositionIdentification <em>Position Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.IDESegment#getProductCharacteristic <em>Product Characteristic</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment()
@@ -23,25 +29,157 @@ package io.thlaegler.edifact.edilang;
 public interface IDESegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Object Type Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_Todo()
+   * @return the value of the '<em>Object Type Code Qualifier</em>' attribute.
+   * @see #setObjectTypeCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_ObjectTypeCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getObjectTypeCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getObjectTypeCodeQualifier <em>Object Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Object Type Code Qualifier</em>' attribute.
+   * @see #getObjectTypeCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setObjectTypeCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Identification Number</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Identification Number</em>' containment reference.
+   * @see #setIdentificationNumber(IdentificationNumber)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_IdentificationNumber()
+   * @model containment="true"
+   * @generated
+   */
+  IdentificationNumber getIdentificationNumber();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getIdentificationNumber <em>Identification Number</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Identification Number</em>' containment reference.
+   * @see #getIdentificationNumber()
+   * @generated
+   */
+  void setIdentificationNumber(IdentificationNumber value);
+
+  /**
+   * Returns the value of the '<em><b>Party Identification Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Party Identification Details</em>' containment reference.
+   * @see #setPartyIdentificationDetails(PartyIdentificationDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_PartyIdentificationDetails()
+   * @model containment="true"
+   * @generated
+   */
+  PartyIdentificationDetail getPartyIdentificationDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getPartyIdentificationDetails <em>Party Identification Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Party Identification Details</em>' containment reference.
+   * @see #getPartyIdentificationDetails()
+   * @generated
+   */
+  void setPartyIdentificationDetails(PartyIdentificationDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Status Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status Description Code</em>' attribute.
+   * @see #setStatusDescriptionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_StatusDescriptionCode()
+   * @model
+   * @generated
+   */
+  String getStatusDescriptionCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getStatusDescriptionCode <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Status Description Code</em>' attribute.
+   * @see #getStatusDescriptionCode()
+   * @generated
+   */
+  void setStatusDescriptionCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Configuration Level Number</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Configuration Level Number</em>' attribute.
+   * @see #setConfigurationLevelNumber(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_ConfigurationLevelNumber()
+   * @model
+   * @generated
+   */
+  String getConfigurationLevelNumber();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getConfigurationLevelNumber <em>Configuration Level Number</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Configuration Level Number</em>' attribute.
+   * @see #getConfigurationLevelNumber()
+   * @generated
+   */
+  void setConfigurationLevelNumber(String value);
+
+  /**
+   * Returns the value of the '<em><b>Position Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Position Identification</em>' containment reference.
+   * @see #setPositionIdentification(PositionIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_PositionIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  PositionIdentification getPositionIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getPositionIdentification <em>Position Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Position Identification</em>' containment reference.
+   * @see #getPositionIdentification()
+   * @generated
+   */
+  void setPositionIdentification(PositionIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Product Characteristic</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Product Characteristic</em>' containment reference.
+   * @see #setProductCharacteristic(ProductCharacteristic)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getIDESegment_ProductCharacteristic()
+   * @model containment="true"
+   * @generated
+   */
+  ProductCharacteristic getProductCharacteristic();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.IDESegment#getProductCharacteristic <em>Product Characteristic</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Product Characteristic</em>' containment reference.
+   * @see #getProductCharacteristic()
+   * @generated
+   */
+  void setProductCharacteristic(ProductCharacteristic value);
 
 } // IDESegment

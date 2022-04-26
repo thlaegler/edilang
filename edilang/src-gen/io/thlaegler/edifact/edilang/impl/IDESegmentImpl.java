@@ -5,10 +5,16 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.IDESegment;
+import io.thlaegler.edifact.edilang.IdentificationNumber;
+import io.thlaegler.edifact.edilang.PartyIdentificationDetail;
+import io.thlaegler.edifact.edilang.PositionIdentification;
+import io.thlaegler.edifact.edilang.ProductCharacteristic;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +26,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getObjectTypeCodeQualifier <em>Object Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getIdentificationNumber <em>Identification Number</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getPartyIdentificationDetails <em>Party Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getStatusDescriptionCode <em>Status Description Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getConfigurationLevelNumber <em>Configuration Level Number</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getPositionIdentification <em>Position Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IDESegmentImpl#getProductCharacteristic <em>Product Characteristic</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +40,104 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getObjectTypeCodeQualifier() <em>Object Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getObjectTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String OBJECT_TYPE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getObjectTypeCodeQualifier() <em>Object Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getObjectTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String objectTypeCodeQualifier = OBJECT_TYPE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getIdentificationNumber() <em>Identification Number</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIdentificationNumber()
+   * @generated
+   * @ordered
+   */
+  protected IdentificationNumber identificationNumber;
+
+  /**
+   * The cached value of the '{@link #getPartyIdentificationDetails() <em>Party Identification Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPartyIdentificationDetails()
+   * @generated
+   * @ordered
+   */
+  protected PartyIdentificationDetail partyIdentificationDetails;
+
+  /**
+   * The default value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String STATUS_DESCRIPTION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected String statusDescriptionCode = STATUS_DESCRIPTION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getConfigurationLevelNumber() <em>Configuration Level Number</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConfigurationLevelNumber()
+   * @generated
+   * @ordered
+   */
+  protected static final String CONFIGURATION_LEVEL_NUMBER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getConfigurationLevelNumber() <em>Configuration Level Number</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConfigurationLevelNumber()
+   * @generated
+   * @ordered
+   */
+  protected String configurationLevelNumber = CONFIGURATION_LEVEL_NUMBER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getPositionIdentification() <em>Position Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPositionIdentification()
+   * @generated
+   * @ordered
+   */
+  protected PositionIdentification positionIdentification;
+
+  /**
+   * The cached value of the '{@link #getProductCharacteristic() <em>Product Characteristic</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProductCharacteristic()
+   * @generated
+   * @ordered
+   */
+  protected ProductCharacteristic productCharacteristic;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +166,9 @@ public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getObjectTypeCodeQualifier()
   {
-    return todo;
+    return objectTypeCodeQualifier;
   }
 
   /**
@@ -85,12 +177,284 @@ public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setObjectTypeCodeQualifier(String newObjectTypeCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldObjectTypeCodeQualifier = objectTypeCodeQualifier;
+    objectTypeCodeQualifier = newObjectTypeCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__OBJECT_TYPE_CODE_QUALIFIER, oldObjectTypeCodeQualifier, objectTypeCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IdentificationNumber getIdentificationNumber()
+  {
+    return identificationNumber;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIdentificationNumber(IdentificationNumber newIdentificationNumber, NotificationChain msgs)
+  {
+    IdentificationNumber oldIdentificationNumber = identificationNumber;
+    identificationNumber = newIdentificationNumber;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER, oldIdentificationNumber, newIdentificationNumber);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setIdentificationNumber(IdentificationNumber newIdentificationNumber)
+  {
+    if (newIdentificationNumber != identificationNumber)
+    {
+      NotificationChain msgs = null;
+      if (identificationNumber != null)
+        msgs = ((InternalEObject)identificationNumber).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER, null, msgs);
+      if (newIdentificationNumber != null)
+        msgs = ((InternalEObject)newIdentificationNumber).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER, null, msgs);
+      msgs = basicSetIdentificationNumber(newIdentificationNumber, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER, newIdentificationNumber, newIdentificationNumber));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PartyIdentificationDetail getPartyIdentificationDetails()
+  {
+    return partyIdentificationDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPartyIdentificationDetails(PartyIdentificationDetail newPartyIdentificationDetails, NotificationChain msgs)
+  {
+    PartyIdentificationDetail oldPartyIdentificationDetails = partyIdentificationDetails;
+    partyIdentificationDetails = newPartyIdentificationDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS, oldPartyIdentificationDetails, newPartyIdentificationDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPartyIdentificationDetails(PartyIdentificationDetail newPartyIdentificationDetails)
+  {
+    if (newPartyIdentificationDetails != partyIdentificationDetails)
+    {
+      NotificationChain msgs = null;
+      if (partyIdentificationDetails != null)
+        msgs = ((InternalEObject)partyIdentificationDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS, null, msgs);
+      if (newPartyIdentificationDetails != null)
+        msgs = ((InternalEObject)newPartyIdentificationDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS, null, msgs);
+      msgs = basicSetPartyIdentificationDetails(newPartyIdentificationDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS, newPartyIdentificationDetails, newPartyIdentificationDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getStatusDescriptionCode()
+  {
+    return statusDescriptionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setStatusDescriptionCode(String newStatusDescriptionCode)
+  {
+    String oldStatusDescriptionCode = statusDescriptionCode;
+    statusDescriptionCode = newStatusDescriptionCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__STATUS_DESCRIPTION_CODE, oldStatusDescriptionCode, statusDescriptionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getConfigurationLevelNumber()
+  {
+    return configurationLevelNumber;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setConfigurationLevelNumber(String newConfigurationLevelNumber)
+  {
+    String oldConfigurationLevelNumber = configurationLevelNumber;
+    configurationLevelNumber = newConfigurationLevelNumber;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__CONFIGURATION_LEVEL_NUMBER, oldConfigurationLevelNumber, configurationLevelNumber));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PositionIdentification getPositionIdentification()
+  {
+    return positionIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPositionIdentification(PositionIdentification newPositionIdentification, NotificationChain msgs)
+  {
+    PositionIdentification oldPositionIdentification = positionIdentification;
+    positionIdentification = newPositionIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION, oldPositionIdentification, newPositionIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPositionIdentification(PositionIdentification newPositionIdentification)
+  {
+    if (newPositionIdentification != positionIdentification)
+    {
+      NotificationChain msgs = null;
+      if (positionIdentification != null)
+        msgs = ((InternalEObject)positionIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION, null, msgs);
+      if (newPositionIdentification != null)
+        msgs = ((InternalEObject)newPositionIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION, null, msgs);
+      msgs = basicSetPositionIdentification(newPositionIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION, newPositionIdentification, newPositionIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ProductCharacteristic getProductCharacteristic()
+  {
+    return productCharacteristic;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProductCharacteristic(ProductCharacteristic newProductCharacteristic, NotificationChain msgs)
+  {
+    ProductCharacteristic oldProductCharacteristic = productCharacteristic;
+    productCharacteristic = newProductCharacteristic;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC, oldProductCharacteristic, newProductCharacteristic);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setProductCharacteristic(ProductCharacteristic newProductCharacteristic)
+  {
+    if (newProductCharacteristic != productCharacteristic)
+    {
+      NotificationChain msgs = null;
+      if (productCharacteristic != null)
+        msgs = ((InternalEObject)productCharacteristic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC, null, msgs);
+      if (newProductCharacteristic != null)
+        msgs = ((InternalEObject)newProductCharacteristic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC, null, msgs);
+      msgs = basicSetProductCharacteristic(newProductCharacteristic, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC, newProductCharacteristic, newProductCharacteristic));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER:
+        return basicSetIdentificationNumber(null, msgs);
+      case EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return basicSetPartyIdentificationDetails(null, msgs);
+      case EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION:
+        return basicSetPositionIdentification(null, msgs);
+      case EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return basicSetProductCharacteristic(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +467,20 @@ public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IDE_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.IDE_SEGMENT__OBJECT_TYPE_CODE_QUALIFIER:
+        return getObjectTypeCodeQualifier();
+      case EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER:
+        return getIdentificationNumber();
+      case EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return getPartyIdentificationDetails();
+      case EdilangPackage.IDE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return getStatusDescriptionCode();
+      case EdilangPackage.IDE_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        return getConfigurationLevelNumber();
+      case EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION:
+        return getPositionIdentification();
+      case EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return getProductCharacteristic();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +495,26 @@ public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IDE_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.IDE_SEGMENT__OBJECT_TYPE_CODE_QUALIFIER:
+        setObjectTypeCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER:
+        setIdentificationNumber((IdentificationNumber)newValue);
+        return;
+      case EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        setPartyIdentificationDetails((PartyIdentificationDetail)newValue);
+        return;
+      case EdilangPackage.IDE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode((String)newValue);
+        return;
+      case EdilangPackage.IDE_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        setConfigurationLevelNumber((String)newValue);
+        return;
+      case EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION:
+        setPositionIdentification((PositionIdentification)newValue);
+        return;
+      case EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC:
+        setProductCharacteristic((ProductCharacteristic)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +530,26 @@ public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IDE_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.IDE_SEGMENT__OBJECT_TYPE_CODE_QUALIFIER:
+        setObjectTypeCodeQualifier(OBJECT_TYPE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER:
+        setIdentificationNumber((IdentificationNumber)null);
+        return;
+      case EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        setPartyIdentificationDetails((PartyIdentificationDetail)null);
+        return;
+      case EdilangPackage.IDE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode(STATUS_DESCRIPTION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.IDE_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        setConfigurationLevelNumber(CONFIGURATION_LEVEL_NUMBER_EDEFAULT);
+        return;
+      case EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION:
+        setPositionIdentification((PositionIdentification)null);
+        return;
+      case EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC:
+        setProductCharacteristic((ProductCharacteristic)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +565,20 @@ public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IDE_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.IDE_SEGMENT__OBJECT_TYPE_CODE_QUALIFIER:
+        return OBJECT_TYPE_CODE_QUALIFIER_EDEFAULT == null ? objectTypeCodeQualifier != null : !OBJECT_TYPE_CODE_QUALIFIER_EDEFAULT.equals(objectTypeCodeQualifier);
+      case EdilangPackage.IDE_SEGMENT__IDENTIFICATION_NUMBER:
+        return identificationNumber != null;
+      case EdilangPackage.IDE_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return partyIdentificationDetails != null;
+      case EdilangPackage.IDE_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return STATUS_DESCRIPTION_CODE_EDEFAULT == null ? statusDescriptionCode != null : !STATUS_DESCRIPTION_CODE_EDEFAULT.equals(statusDescriptionCode);
+      case EdilangPackage.IDE_SEGMENT__CONFIGURATION_LEVEL_NUMBER:
+        return CONFIGURATION_LEVEL_NUMBER_EDEFAULT == null ? configurationLevelNumber != null : !CONFIGURATION_LEVEL_NUMBER_EDEFAULT.equals(configurationLevelNumber);
+      case EdilangPackage.IDE_SEGMENT__POSITION_IDENTIFICATION:
+        return positionIdentification != null;
+      case EdilangPackage.IDE_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return productCharacteristic != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +594,12 @@ public class IDESegmentImpl extends AbstractEdiSegmentImpl implements IDESegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (objectTypeCodeQualifier: ");
+    result.append(objectTypeCodeQualifier);
+    result.append(", statusDescriptionCode: ");
+    result.append(statusDescriptionCode);
+    result.append(", configurationLevelNumber: ");
+    result.append(configurationLevelNumber);
     result.append(')');
     return result.toString();
   }

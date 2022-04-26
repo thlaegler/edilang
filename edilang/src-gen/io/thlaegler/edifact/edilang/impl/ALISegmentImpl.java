@@ -4,13 +4,22 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.ALISegment;
+import io.thlaegler.edifact.edilang.AddressDetail;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +29,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ALISegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALISegmentImpl#getCountryOfOriginNameCode <em>Country Of Origin Name Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALISegmentImpl#getDutyRegimeTypeCode <em>Duty Regime Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALISegmentImpl#getSpecialConditionCodes <em>Special Condition Codes</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +39,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getCountryOfOriginNameCode() <em>Country Of Origin Name Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getCountryOfOriginNameCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String COUNTRY_OF_ORIGIN_NAME_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getCountryOfOriginNameCode() <em>Country Of Origin Name Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getCountryOfOriginNameCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String countryOfOriginNameCode = COUNTRY_OF_ORIGIN_NAME_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getDutyRegimeTypeCode() <em>Duty Regime Type Code</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDutyRegimeTypeCode()
+   * @generated
+   * @ordered
+   */
+  protected AddressDetail dutyRegimeTypeCode;
+
+  /**
+   * The cached value of the '{@link #getSpecialConditionCodes() <em>Special Condition Codes</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSpecialConditionCodes()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> specialConditionCodes;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +105,9 @@ public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getCountryOfOriginNameCode()
   {
-    return todo;
+    return countryOfOriginNameCode;
   }
 
   /**
@@ -85,12 +116,93 @@ public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setCountryOfOriginNameCode(String newCountryOfOriginNameCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldCountryOfOriginNameCode = countryOfOriginNameCode;
+    countryOfOriginNameCode = newCountryOfOriginNameCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALI_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALI_SEGMENT__COUNTRY_OF_ORIGIN_NAME_CODE, oldCountryOfOriginNameCode, countryOfOriginNameCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AddressDetail getDutyRegimeTypeCode()
+  {
+    return dutyRegimeTypeCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDutyRegimeTypeCode(AddressDetail newDutyRegimeTypeCode, NotificationChain msgs)
+  {
+    AddressDetail oldDutyRegimeTypeCode = dutyRegimeTypeCode;
+    dutyRegimeTypeCode = newDutyRegimeTypeCode;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE, oldDutyRegimeTypeCode, newDutyRegimeTypeCode);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDutyRegimeTypeCode(AddressDetail newDutyRegimeTypeCode)
+  {
+    if (newDutyRegimeTypeCode != dutyRegimeTypeCode)
+    {
+      NotificationChain msgs = null;
+      if (dutyRegimeTypeCode != null)
+        msgs = ((InternalEObject)dutyRegimeTypeCode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE, null, msgs);
+      if (newDutyRegimeTypeCode != null)
+        msgs = ((InternalEObject)newDutyRegimeTypeCode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE, null, msgs);
+      msgs = basicSetDutyRegimeTypeCode(newDutyRegimeTypeCode, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE, newDutyRegimeTypeCode, newDutyRegimeTypeCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<String> getSpecialConditionCodes()
+  {
+    if (specialConditionCodes == null)
+    {
+      specialConditionCodes = new EDataTypeEList<String>(String.class, this, EdilangPackage.ALI_SEGMENT__SPECIAL_CONDITION_CODES);
+    }
+    return specialConditionCodes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE:
+        return basicSetDutyRegimeTypeCode(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +215,12 @@ public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ALI_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.ALI_SEGMENT__COUNTRY_OF_ORIGIN_NAME_CODE:
+        return getCountryOfOriginNameCode();
+      case EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE:
+        return getDutyRegimeTypeCode();
+      case EdilangPackage.ALI_SEGMENT__SPECIAL_CONDITION_CODES:
+        return getSpecialConditionCodes();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -114,13 +230,21 @@ public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.ALI_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.ALI_SEGMENT__COUNTRY_OF_ORIGIN_NAME_CODE:
+        setCountryOfOriginNameCode((String)newValue);
+        return;
+      case EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE:
+        setDutyRegimeTypeCode((AddressDetail)newValue);
+        return;
+      case EdilangPackage.ALI_SEGMENT__SPECIAL_CONDITION_CODES:
+        getSpecialConditionCodes().clear();
+        getSpecialConditionCodes().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +260,14 @@ public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ALI_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.ALI_SEGMENT__COUNTRY_OF_ORIGIN_NAME_CODE:
+        setCountryOfOriginNameCode(COUNTRY_OF_ORIGIN_NAME_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE:
+        setDutyRegimeTypeCode((AddressDetail)null);
+        return;
+      case EdilangPackage.ALI_SEGMENT__SPECIAL_CONDITION_CODES:
+        getSpecialConditionCodes().clear();
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +283,12 @@ public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ALI_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.ALI_SEGMENT__COUNTRY_OF_ORIGIN_NAME_CODE:
+        return COUNTRY_OF_ORIGIN_NAME_CODE_EDEFAULT == null ? countryOfOriginNameCode != null : !COUNTRY_OF_ORIGIN_NAME_CODE_EDEFAULT.equals(countryOfOriginNameCode);
+      case EdilangPackage.ALI_SEGMENT__DUTY_REGIME_TYPE_CODE:
+        return dutyRegimeTypeCode != null;
+      case EdilangPackage.ALI_SEGMENT__SPECIAL_CONDITION_CODES:
+        return specialConditionCodes != null && !specialConditionCodes.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +304,10 @@ public class ALISegmentImpl extends AbstractEdiSegmentImpl implements ALISegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (countryOfOriginNameCode: ");
+    result.append(countryOfOriginNameCode);
+    result.append(", specialConditionCodes: ");
+    result.append(specialConditionCodes);
     result.append(')');
     return result.toString();
   }

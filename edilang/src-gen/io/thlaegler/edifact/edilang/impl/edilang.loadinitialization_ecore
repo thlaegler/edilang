@@ -34,8 +34,33 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="commonAccessReference"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UNGSegment" eSuperTypes="#//AbstractEdiSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addressUsage" eType="#//AddressUsage"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addressDetails" eType="#//AddressDetail"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryNameCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="countrySubEntityDetails"
+        eType="#//CountrySubEntityDetail" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationIdentification"
+        eType="#//LocationIdentification" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ADRSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addressUsage" eType="#//AddressUsage"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addressDetails" eType="#//AddressDetail"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryNameCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="countrySubEntityDetails"
+        eType="#//CountrySubEntityDetail" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationIdentification"
+        eType="#//LocationIdentification" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AGRSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -47,7 +72,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ALISegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryOfOriginNameCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dutyRegimeTypeCode" eType="#//AddressDetail"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="specialConditionCodes"
+        unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="APPSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -65,19 +95,34 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ATTSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributeFunctionCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeType" eType="#//AttributeType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeDetail" eType="#//AttributeDetail"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AUTSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BASSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="basisCodeQualifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basisType" eType="#//BasisType"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BIISegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BUSSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessFunction" eType="#//BusinessFunction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geographicAreaCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="financialTransactionTypeCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bankOperation" eType="#//BankOperation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intraCompanyPaymentIndicatorCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CAVSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -260,7 +305,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IDESegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectTypeCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identificationNumber" eType="#//IdentificationNumber"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partyIdentificationDetails"
+        eType="#//PartyIdentificationDetail" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="configurationLevelNumber"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positionIdentification"
+        eType="#//PositionIdentification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productCharacteristic"
+        eType="#//ProductCharacteristic" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IFDSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -272,7 +330,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="INDSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="indexIdentification" eType="#//IndexIdentification"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="indexValue" eType="#//IndexValue"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="INPSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -281,10 +342,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IRQSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="informationRequest" eType="#//InformationRequest"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LANSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="languageCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="languageDetails" eType="#//LanguageDetail"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LOCSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -299,7 +364,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NATSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationalityCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nationalityDetails" eType="#//NationalityDetail"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PACSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -314,7 +382,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PCDSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="percentageDetails" eType="#//PercentageDetail"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PERSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -350,7 +421,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QVRSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantityDifferenceInformation"
+        eType="#//QuantityDifferenceInformation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="discrepancyNatureIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reasonForChange" eType="#//ReasonForChange"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RCSSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -371,7 +447,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RTESegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rateDetails" eType="#//RateDetail"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SALSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -383,7 +462,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SEGSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentTagIdentifer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="designatedClassCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maintenanceOperationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SELSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -416,6 +498,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="STSSegment" eSuperTypes="#//AbstractEdiSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statusCategory" eType="#//StatusCategory"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="status" eType="#//Status"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statusReasons" upperBound="-1"
+        eType="#//StatusReason" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="STXSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCCSegment" eSuperTypes="#//AbstractEdiSegment">
@@ -434,7 +524,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TODSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deliveryTransportTermsFunctionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transportChargesPaumentMethodCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="termsOfDeliveryTransport"
+        eType="#//TermsOfDeliveryTransport" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TPLSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -446,7 +541,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VLISegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueListIdentification"
+        eType="#//ValueListIdentification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partyIdentificationDetails"
+        eType="#//PartyIdentificationDetail" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueListName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="designatedClassCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueListTypeCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productCharacteristic"
+        eType="#//ProductCharacteristic" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MSGSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageIdentifier" eType="#//MessageIndentifier"
@@ -544,8 +649,10 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PRISegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sub" eType="#//PriceInformation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="priceInformation" eType="#//PriceInformation"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subLineItemPriceChangeOperationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QTYSegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="quantityDetails" upperBound="-1"
@@ -624,11 +731,13 @@
         upperBound="-1" eType="#//ApplicationErrorDetail" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CNTSegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="control" eType="#//Control"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CTASegment" eSuperTypes="#//AbstractEdiSegment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contactFunctionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="departmentEmployeeDetails"
+        eType="#//DepartmentEmployeeDetail" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PCISegment" eSuperTypes="#//AbstractEdiSegment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -646,6 +755,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interchangeControlRef"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UNESegment" eSuperTypes="#//AbstractEdiSegment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="todo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractEdiFunction"/>
   <eClassifiers xsi:type="ecore:EClass" name="UNBHeader" eSuperTypes="#//AbstractEdiFunction">
@@ -822,6 +934,216 @@
   <eClassifiers xsi:type="ecore:EClass" name="InterchangerFunction" eSuperTypes="#//AbstractEdiFunction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interchange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interchange2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LocationIdentification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationNameCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AddressDetail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addressFormatCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addressComponentDescriptions"
+        unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AddressUsage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addressPurposeCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addressTypeCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addressStatusCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDetail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributeDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributeDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributeTypeDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributeTypeDescription"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BankOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bankOperationCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessFunction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="businessFunctionTypeCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="businessFunctionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="businessDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DepartmentEmployeeDetail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="departmentEmployeeNameCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="departmentEmployeeName"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentificationNumber">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectIdentifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectIdentificationCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionIdentification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hierarchyStructureLevelIdentifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sequencePositionIdentifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProductCharacteristic">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characteristicDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characteristicDescription1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characteristicDescription2"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NationalityDetail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationalityNameCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationalityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PercentageDetail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageTypeCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageBasisIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RateDetail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rateTypeCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unitPriceBasisRate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unitPriceBasisValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measurementUnitCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusCategory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusCategoryCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Status">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusReason">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusReasonDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statusReasonDescription"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueListIdentification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueListIdentifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectIdentificationCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TermsOfDeliveryTransport">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deliveryTransportTermsDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deliveryTransportTermsDescriptions"
+        unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuantityDifferenceInformation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantityVarianceValue"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantityTypeCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReasonForChange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeReasonDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeReasonDescriptions"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LanguageDetail">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="languageNameCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="languageName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InformationRequest">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestedInformationDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestedInformationDescription"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IndexIdentification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexCodeQualifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexTypeIdentifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IndexValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexValueRepresentationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Control">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlTotalTypeCodeQualifier"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlTotalValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measurementUnitCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasisType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="basisTypeDescriptionCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListIdentificationCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeListResponsibleAgencyCode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="basisTypeDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DateOnlyFunction" eSuperTypes="#//AbstractEdiFunction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date6" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

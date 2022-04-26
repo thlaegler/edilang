@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.TODSegment;
+import io.thlaegler.edifact.edilang.TermsOfDeliveryTransport;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TODSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TODSegmentImpl#getDeliveryTransportTermsFunctionCode <em>Delivery Transport Terms Function Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TODSegmentImpl#getTransportChargesPaumentMethodCode <em>Transport Charges Paument Method Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TODSegmentImpl#getTermsOfDeliveryTransport <em>Terms Of Delivery Transport</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +33,54 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getDeliveryTransportTermsFunctionCode() <em>Delivery Transport Terms Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getDeliveryTransportTermsFunctionCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getDeliveryTransportTermsFunctionCode() <em>Delivery Transport Terms Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getDeliveryTransportTermsFunctionCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String deliveryTransportTermsFunctionCode = DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getTransportChargesPaumentMethodCode() <em>Transport Charges Paument Method Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransportChargesPaumentMethodCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String TRANSPORT_CHARGES_PAUMENT_METHOD_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTransportChargesPaumentMethodCode() <em>Transport Charges Paument Method Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransportChargesPaumentMethodCode()
+   * @generated
+   * @ordered
+   */
+  protected String transportChargesPaumentMethodCode = TRANSPORT_CHARGES_PAUMENT_METHOD_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getTermsOfDeliveryTransport() <em>Terms Of Delivery Transport</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTermsOfDeliveryTransport()
+   * @generated
+   * @ordered
+   */
+  protected TermsOfDeliveryTransport termsOfDeliveryTransport;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +109,9 @@ public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getDeliveryTransportTermsFunctionCode()
   {
-    return todo;
+    return deliveryTransportTermsFunctionCode;
   }
 
   /**
@@ -85,12 +120,103 @@ public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setDeliveryTransportTermsFunctionCode(String newDeliveryTransportTermsFunctionCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldDeliveryTransportTermsFunctionCode = deliveryTransportTermsFunctionCode;
+    deliveryTransportTermsFunctionCode = newDeliveryTransportTermsFunctionCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TOD_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TOD_SEGMENT__DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE, oldDeliveryTransportTermsFunctionCode, deliveryTransportTermsFunctionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getTransportChargesPaumentMethodCode()
+  {
+    return transportChargesPaumentMethodCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTransportChargesPaumentMethodCode(String newTransportChargesPaumentMethodCode)
+  {
+    String oldTransportChargesPaumentMethodCode = transportChargesPaumentMethodCode;
+    transportChargesPaumentMethodCode = newTransportChargesPaumentMethodCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TOD_SEGMENT__TRANSPORT_CHARGES_PAUMENT_METHOD_CODE, oldTransportChargesPaumentMethodCode, transportChargesPaumentMethodCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TermsOfDeliveryTransport getTermsOfDeliveryTransport()
+  {
+    return termsOfDeliveryTransport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetTermsOfDeliveryTransport(TermsOfDeliveryTransport newTermsOfDeliveryTransport, NotificationChain msgs)
+  {
+    TermsOfDeliveryTransport oldTermsOfDeliveryTransport = termsOfDeliveryTransport;
+    termsOfDeliveryTransport = newTermsOfDeliveryTransport;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT, oldTermsOfDeliveryTransport, newTermsOfDeliveryTransport);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTermsOfDeliveryTransport(TermsOfDeliveryTransport newTermsOfDeliveryTransport)
+  {
+    if (newTermsOfDeliveryTransport != termsOfDeliveryTransport)
+    {
+      NotificationChain msgs = null;
+      if (termsOfDeliveryTransport != null)
+        msgs = ((InternalEObject)termsOfDeliveryTransport).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT, null, msgs);
+      if (newTermsOfDeliveryTransport != null)
+        msgs = ((InternalEObject)newTermsOfDeliveryTransport).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT, null, msgs);
+      msgs = basicSetTermsOfDeliveryTransport(newTermsOfDeliveryTransport, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT, newTermsOfDeliveryTransport, newTermsOfDeliveryTransport));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT:
+        return basicSetTermsOfDeliveryTransport(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +229,12 @@ public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TOD_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.TOD_SEGMENT__DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE:
+        return getDeliveryTransportTermsFunctionCode();
+      case EdilangPackage.TOD_SEGMENT__TRANSPORT_CHARGES_PAUMENT_METHOD_CODE:
+        return getTransportChargesPaumentMethodCode();
+      case EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT:
+        return getTermsOfDeliveryTransport();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +249,14 @@ public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TOD_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.TOD_SEGMENT__DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE:
+        setDeliveryTransportTermsFunctionCode((String)newValue);
+        return;
+      case EdilangPackage.TOD_SEGMENT__TRANSPORT_CHARGES_PAUMENT_METHOD_CODE:
+        setTransportChargesPaumentMethodCode((String)newValue);
+        return;
+      case EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT:
+        setTermsOfDeliveryTransport((TermsOfDeliveryTransport)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +272,14 @@ public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TOD_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.TOD_SEGMENT__DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE:
+        setDeliveryTransportTermsFunctionCode(DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.TOD_SEGMENT__TRANSPORT_CHARGES_PAUMENT_METHOD_CODE:
+        setTransportChargesPaumentMethodCode(TRANSPORT_CHARGES_PAUMENT_METHOD_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT:
+        setTermsOfDeliveryTransport((TermsOfDeliveryTransport)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +295,12 @@ public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TOD_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.TOD_SEGMENT__DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE:
+        return DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE_EDEFAULT == null ? deliveryTransportTermsFunctionCode != null : !DELIVERY_TRANSPORT_TERMS_FUNCTION_CODE_EDEFAULT.equals(deliveryTransportTermsFunctionCode);
+      case EdilangPackage.TOD_SEGMENT__TRANSPORT_CHARGES_PAUMENT_METHOD_CODE:
+        return TRANSPORT_CHARGES_PAUMENT_METHOD_CODE_EDEFAULT == null ? transportChargesPaumentMethodCode != null : !TRANSPORT_CHARGES_PAUMENT_METHOD_CODE_EDEFAULT.equals(transportChargesPaumentMethodCode);
+      case EdilangPackage.TOD_SEGMENT__TERMS_OF_DELIVERY_TRANSPORT:
+        return termsOfDeliveryTransport != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +316,10 @@ public class TODSegmentImpl extends AbstractEdiSegmentImpl implements TODSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (deliveryTransportTermsFunctionCode: ");
+    result.append(deliveryTransportTermsFunctionCode);
+    result.append(", transportChargesPaumentMethodCode: ");
+    result.append(transportChargesPaumentMethodCode);
     result.append(')');
     return result.toString();
   }

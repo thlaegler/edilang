@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.IRQSegment;
+import io.thlaegler.edifact.edilang.InformationRequest;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.IRQSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.IRQSegmentImpl#getInformationRequest <em>Information Request</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +31,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class IRQSegmentImpl extends AbstractEdiSegmentImpl implements IRQSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getInformationRequest() <em>Information Request</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getInformationRequest()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo()
-   * @generated
-   * @ordered
-   */
-  protected String todo = TODO_EDEFAULT;
+  protected InformationRequest informationRequest;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +67,26 @@ public class IRQSegmentImpl extends AbstractEdiSegmentImpl implements IRQSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public InformationRequest getInformationRequest()
   {
-    return todo;
+    return informationRequest;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetInformationRequest(InformationRequest newInformationRequest, NotificationChain msgs)
+  {
+    InformationRequest oldInformationRequest = informationRequest;
+    informationRequest = newInformationRequest;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST, oldInformationRequest, newInformationRequest);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +95,36 @@ public class IRQSegmentImpl extends AbstractEdiSegmentImpl implements IRQSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setInformationRequest(InformationRequest newInformationRequest)
   {
-    String oldTodo = todo;
-    todo = newTodo;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IRQ_SEGMENT__TODO, oldTodo, todo));
+    if (newInformationRequest != informationRequest)
+    {
+      NotificationChain msgs = null;
+      if (informationRequest != null)
+        msgs = ((InternalEObject)informationRequest).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST, null, msgs);
+      if (newInformationRequest != null)
+        msgs = ((InternalEObject)newInformationRequest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST, null, msgs);
+      msgs = basicSetInformationRequest(newInformationRequest, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST, newInformationRequest, newInformationRequest));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST:
+        return basicSetInformationRequest(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +137,8 @@ public class IRQSegmentImpl extends AbstractEdiSegmentImpl implements IRQSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IRQ_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST:
+        return getInformationRequest();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +153,8 @@ public class IRQSegmentImpl extends AbstractEdiSegmentImpl implements IRQSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IRQ_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST:
+        setInformationRequest((InformationRequest)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +170,8 @@ public class IRQSegmentImpl extends AbstractEdiSegmentImpl implements IRQSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IRQ_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST:
+        setInformationRequest((InformationRequest)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +187,10 @@ public class IRQSegmentImpl extends AbstractEdiSegmentImpl implements IRQSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IRQ_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.IRQ_SEGMENT__INFORMATION_REQUEST:
+        return informationRequest != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
-    result.append(')');
-    return result.toString();
   }
 
 } //IRQSegmentImpl

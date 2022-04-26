@@ -2,10 +2,13 @@
 
 Xtext DSL to edit, parse, and serialize EDIFACT messages.
 
-For all  EDIFACT segments see [https://service.unece.org/trade/untdid/d00a/trsd/trsdi1.htm](https://service.unece.org/trade/untdid/d00a/trsd/trsdi1.htm).
-
 Xtext language definition: [/edilang/src/io/thlaegler/edifact/Edilang.xtext](/edilang/src/io/thlaegler/edifact/Edilang.xtext)
 
+More info on EDIFACT:
+
+* [https://service.unece.org/trade/untdid/d00a/trsd/trsdi1.htm](https://service.unece.org/trade/untdid/d00a/trsd/trsdi1.htm).
+* [http://docs.oasis-open.org/ubl/UBL-IFTM-Mapping/v1.0/cn01/UBL-IFTM-Mapping-v1.0-cn01.html](http://docs.oasis-open.org/ubl/UBL-IFTM-Mapping/v1.0/cn01/UBL-IFTM-Mapping-v1.0-cn01.html)
+* [https://unece.org/fileadmin/DAM/trade/edifact/untdid/d422_s.htm](https://unece.org/fileadmin/DAM/trade/edifact/untdid/d422_s.htm)
 
 ## Usage
 

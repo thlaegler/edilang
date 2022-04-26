@@ -4,11 +4,15 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.BUSSegment;
+import io.thlaegler.edifact.edilang.BankOperation;
+import io.thlaegler.edifact.edilang.BusinessFunction;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.BUSSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BUSSegmentImpl#getBusinessFunction <em>Business Function</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BUSSegmentImpl#getGeographicAreaCode <em>Geographic Area Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BUSSegmentImpl#getFinancialTransactionTypeCode <em>Financial Transaction Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BUSSegmentImpl#getBankOperation <em>Bank Operation</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BUSSegmentImpl#getIntraCompanyPaymentIndicatorCode <em>Intra Company Payment Indicator Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +36,84 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getBusinessFunction() <em>Business Function</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getBusinessFunction()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected BusinessFunction businessFunction;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getGeographicAreaCode() <em>Geographic Area Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getGeographicAreaCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected static final String GEOGRAPHIC_AREA_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getGeographicAreaCode() <em>Geographic Area Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGeographicAreaCode()
+   * @generated
+   * @ordered
+   */
+  protected String geographicAreaCode = GEOGRAPHIC_AREA_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getFinancialTransactionTypeCode() <em>Financial Transaction Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFinancialTransactionTypeCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String FINANCIAL_TRANSACTION_TYPE_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getFinancialTransactionTypeCode() <em>Financial Transaction Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFinancialTransactionTypeCode()
+   * @generated
+   * @ordered
+   */
+  protected String financialTransactionTypeCode = FINANCIAL_TRANSACTION_TYPE_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getBankOperation() <em>Bank Operation</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBankOperation()
+   * @generated
+   * @ordered
+   */
+  protected BankOperation bankOperation;
+
+  /**
+   * The default value of the '{@link #getIntraCompanyPaymentIndicatorCode() <em>Intra Company Payment Indicator Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIntraCompanyPaymentIndicatorCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String INTRA_COMPANY_PAYMENT_INDICATOR_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getIntraCompanyPaymentIndicatorCode() <em>Intra Company Payment Indicator Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIntraCompanyPaymentIndicatorCode()
+   * @generated
+   * @ordered
+   */
+  protected String intraCompanyPaymentIndicatorCode = INTRA_COMPANY_PAYMENT_INDICATOR_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +142,26 @@ public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public BusinessFunction getBusinessFunction()
   {
-    return todo;
+    return businessFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBusinessFunction(BusinessFunction newBusinessFunction, NotificationChain msgs)
+  {
+    BusinessFunction oldBusinessFunction = businessFunction;
+    businessFunction = newBusinessFunction;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION, oldBusinessFunction, newBusinessFunction);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +170,163 @@ public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setBusinessFunction(BusinessFunction newBusinessFunction)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newBusinessFunction != businessFunction)
+    {
+      NotificationChain msgs = null;
+      if (businessFunction != null)
+        msgs = ((InternalEObject)businessFunction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION, null, msgs);
+      if (newBusinessFunction != null)
+        msgs = ((InternalEObject)newBusinessFunction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION, null, msgs);
+      msgs = basicSetBusinessFunction(newBusinessFunction, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION, newBusinessFunction, newBusinessFunction));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getGeographicAreaCode()
+  {
+    return geographicAreaCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setGeographicAreaCode(String newGeographicAreaCode)
+  {
+    String oldGeographicAreaCode = geographicAreaCode;
+    geographicAreaCode = newGeographicAreaCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__GEOGRAPHIC_AREA_CODE, oldGeographicAreaCode, geographicAreaCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getFinancialTransactionTypeCode()
+  {
+    return financialTransactionTypeCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setFinancialTransactionTypeCode(String newFinancialTransactionTypeCode)
+  {
+    String oldFinancialTransactionTypeCode = financialTransactionTypeCode;
+    financialTransactionTypeCode = newFinancialTransactionTypeCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__FINANCIAL_TRANSACTION_TYPE_CODE, oldFinancialTransactionTypeCode, financialTransactionTypeCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BankOperation getBankOperation()
+  {
+    return bankOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBankOperation(BankOperation newBankOperation, NotificationChain msgs)
+  {
+    BankOperation oldBankOperation = bankOperation;
+    bankOperation = newBankOperation;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__BANK_OPERATION, oldBankOperation, newBankOperation);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setBankOperation(BankOperation newBankOperation)
+  {
+    if (newBankOperation != bankOperation)
+    {
+      NotificationChain msgs = null;
+      if (bankOperation != null)
+        msgs = ((InternalEObject)bankOperation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BUS_SEGMENT__BANK_OPERATION, null, msgs);
+      if (newBankOperation != null)
+        msgs = ((InternalEObject)newBankOperation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BUS_SEGMENT__BANK_OPERATION, null, msgs);
+      msgs = basicSetBankOperation(newBankOperation, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__BANK_OPERATION, newBankOperation, newBankOperation));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getIntraCompanyPaymentIndicatorCode()
+  {
+    return intraCompanyPaymentIndicatorCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setIntraCompanyPaymentIndicatorCode(String newIntraCompanyPaymentIndicatorCode)
+  {
+    String oldIntraCompanyPaymentIndicatorCode = intraCompanyPaymentIndicatorCode;
+    intraCompanyPaymentIndicatorCode = newIntraCompanyPaymentIndicatorCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BUS_SEGMENT__INTRA_COMPANY_PAYMENT_INDICATOR_CODE, oldIntraCompanyPaymentIndicatorCode, intraCompanyPaymentIndicatorCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION:
+        return basicSetBusinessFunction(null, msgs);
+      case EdilangPackage.BUS_SEGMENT__BANK_OPERATION:
+        return basicSetBankOperation(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +339,16 @@ public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BUS_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION:
+        return getBusinessFunction();
+      case EdilangPackage.BUS_SEGMENT__GEOGRAPHIC_AREA_CODE:
+        return getGeographicAreaCode();
+      case EdilangPackage.BUS_SEGMENT__FINANCIAL_TRANSACTION_TYPE_CODE:
+        return getFinancialTransactionTypeCode();
+      case EdilangPackage.BUS_SEGMENT__BANK_OPERATION:
+        return getBankOperation();
+      case EdilangPackage.BUS_SEGMENT__INTRA_COMPANY_PAYMENT_INDICATOR_CODE:
+        return getIntraCompanyPaymentIndicatorCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +363,20 @@ public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BUS_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION:
+        setBusinessFunction((BusinessFunction)newValue);
+        return;
+      case EdilangPackage.BUS_SEGMENT__GEOGRAPHIC_AREA_CODE:
+        setGeographicAreaCode((String)newValue);
+        return;
+      case EdilangPackage.BUS_SEGMENT__FINANCIAL_TRANSACTION_TYPE_CODE:
+        setFinancialTransactionTypeCode((String)newValue);
+        return;
+      case EdilangPackage.BUS_SEGMENT__BANK_OPERATION:
+        setBankOperation((BankOperation)newValue);
+        return;
+      case EdilangPackage.BUS_SEGMENT__INTRA_COMPANY_PAYMENT_INDICATOR_CODE:
+        setIntraCompanyPaymentIndicatorCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +392,20 @@ public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BUS_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION:
+        setBusinessFunction((BusinessFunction)null);
+        return;
+      case EdilangPackage.BUS_SEGMENT__GEOGRAPHIC_AREA_CODE:
+        setGeographicAreaCode(GEOGRAPHIC_AREA_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.BUS_SEGMENT__FINANCIAL_TRANSACTION_TYPE_CODE:
+        setFinancialTransactionTypeCode(FINANCIAL_TRANSACTION_TYPE_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.BUS_SEGMENT__BANK_OPERATION:
+        setBankOperation((BankOperation)null);
+        return;
+      case EdilangPackage.BUS_SEGMENT__INTRA_COMPANY_PAYMENT_INDICATOR_CODE:
+        setIntraCompanyPaymentIndicatorCode(INTRA_COMPANY_PAYMENT_INDICATOR_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +421,16 @@ public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BUS_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.BUS_SEGMENT__BUSINESS_FUNCTION:
+        return businessFunction != null;
+      case EdilangPackage.BUS_SEGMENT__GEOGRAPHIC_AREA_CODE:
+        return GEOGRAPHIC_AREA_CODE_EDEFAULT == null ? geographicAreaCode != null : !GEOGRAPHIC_AREA_CODE_EDEFAULT.equals(geographicAreaCode);
+      case EdilangPackage.BUS_SEGMENT__FINANCIAL_TRANSACTION_TYPE_CODE:
+        return FINANCIAL_TRANSACTION_TYPE_CODE_EDEFAULT == null ? financialTransactionTypeCode != null : !FINANCIAL_TRANSACTION_TYPE_CODE_EDEFAULT.equals(financialTransactionTypeCode);
+      case EdilangPackage.BUS_SEGMENT__BANK_OPERATION:
+        return bankOperation != null;
+      case EdilangPackage.BUS_SEGMENT__INTRA_COMPANY_PAYMENT_INDICATOR_CODE:
+        return INTRA_COMPANY_PAYMENT_INDICATOR_CODE_EDEFAULT == null ? intraCompanyPaymentIndicatorCode != null : !INTRA_COMPANY_PAYMENT_INDICATOR_CODE_EDEFAULT.equals(intraCompanyPaymentIndicatorCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +446,12 @@ public class BUSSegmentImpl extends AbstractEdiSegmentImpl implements BUSSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (geographicAreaCode: ");
+    result.append(geographicAreaCode);
+    result.append(", financialTransactionTypeCode: ");
+    result.append(financialTransactionTypeCode);
+    result.append(", intraCompanyPaymentIndicatorCode: ");
+    result.append(intraCompanyPaymentIndicatorCode);
     result.append(')');
     return result.toString();
   }

@@ -5,10 +5,14 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.QVRSegment;
+import io.thlaegler.edifact.edilang.QuantityDifferenceInformation;
+import io.thlaegler.edifact.edilang.ReasonForChange;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.QVRSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.QVRSegmentImpl#getQuantityDifferenceInformation <em>Quantity Difference Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.QVRSegmentImpl#getDiscrepancyNatureIdentificationCode <em>Discrepancy Nature Identification Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.QVRSegmentImpl#getReasonForChange <em>Reason For Change</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +34,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getQuantityDifferenceInformation() <em>Quantity Difference Information</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getQuantityDifferenceInformation()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected QuantityDifferenceInformation quantityDifferenceInformation;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getDiscrepancyNatureIdentificationCode() <em>Discrepancy Nature Identification Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getDiscrepancyNatureIdentificationCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected static final String DISCREPANCY_NATURE_IDENTIFICATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDiscrepancyNatureIdentificationCode() <em>Discrepancy Nature Identification Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDiscrepancyNatureIdentificationCode()
+   * @generated
+   * @ordered
+   */
+  protected String discrepancyNatureIdentificationCode = DISCREPANCY_NATURE_IDENTIFICATION_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getReasonForChange() <em>Reason For Change</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReasonForChange()
+   * @generated
+   * @ordered
+   */
+  protected ReasonForChange reasonForChange;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +100,26 @@ public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public QuantityDifferenceInformation getQuantityDifferenceInformation()
   {
-    return todo;
+    return quantityDifferenceInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetQuantityDifferenceInformation(QuantityDifferenceInformation newQuantityDifferenceInformation, NotificationChain msgs)
+  {
+    QuantityDifferenceInformation oldQuantityDifferenceInformation = quantityDifferenceInformation;
+    quantityDifferenceInformation = newQuantityDifferenceInformation;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION, oldQuantityDifferenceInformation, newQuantityDifferenceInformation);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +128,113 @@ public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setQuantityDifferenceInformation(QuantityDifferenceInformation newQuantityDifferenceInformation)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newQuantityDifferenceInformation != quantityDifferenceInformation)
+    {
+      NotificationChain msgs = null;
+      if (quantityDifferenceInformation != null)
+        msgs = ((InternalEObject)quantityDifferenceInformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION, null, msgs);
+      if (newQuantityDifferenceInformation != null)
+        msgs = ((InternalEObject)newQuantityDifferenceInformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION, null, msgs);
+      msgs = basicSetQuantityDifferenceInformation(newQuantityDifferenceInformation, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION, newQuantityDifferenceInformation, newQuantityDifferenceInformation));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getDiscrepancyNatureIdentificationCode()
+  {
+    return discrepancyNatureIdentificationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDiscrepancyNatureIdentificationCode(String newDiscrepancyNatureIdentificationCode)
+  {
+    String oldDiscrepancyNatureIdentificationCode = discrepancyNatureIdentificationCode;
+    discrepancyNatureIdentificationCode = newDiscrepancyNatureIdentificationCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.QVR_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.QVR_SEGMENT__DISCREPANCY_NATURE_IDENTIFICATION_CODE, oldDiscrepancyNatureIdentificationCode, discrepancyNatureIdentificationCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ReasonForChange getReasonForChange()
+  {
+    return reasonForChange;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetReasonForChange(ReasonForChange newReasonForChange, NotificationChain msgs)
+  {
+    ReasonForChange oldReasonForChange = reasonForChange;
+    reasonForChange = newReasonForChange;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE, oldReasonForChange, newReasonForChange);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setReasonForChange(ReasonForChange newReasonForChange)
+  {
+    if (newReasonForChange != reasonForChange)
+    {
+      NotificationChain msgs = null;
+      if (reasonForChange != null)
+        msgs = ((InternalEObject)reasonForChange).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE, null, msgs);
+      if (newReasonForChange != null)
+        msgs = ((InternalEObject)newReasonForChange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE, null, msgs);
+      msgs = basicSetReasonForChange(newReasonForChange, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE, newReasonForChange, newReasonForChange));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION:
+        return basicSetQuantityDifferenceInformation(null, msgs);
+      case EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE:
+        return basicSetReasonForChange(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +247,12 @@ public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.QVR_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION:
+        return getQuantityDifferenceInformation();
+      case EdilangPackage.QVR_SEGMENT__DISCREPANCY_NATURE_IDENTIFICATION_CODE:
+        return getDiscrepancyNatureIdentificationCode();
+      case EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE:
+        return getReasonForChange();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +267,14 @@ public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.QVR_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION:
+        setQuantityDifferenceInformation((QuantityDifferenceInformation)newValue);
+        return;
+      case EdilangPackage.QVR_SEGMENT__DISCREPANCY_NATURE_IDENTIFICATION_CODE:
+        setDiscrepancyNatureIdentificationCode((String)newValue);
+        return;
+      case EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE:
+        setReasonForChange((ReasonForChange)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +290,14 @@ public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.QVR_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION:
+        setQuantityDifferenceInformation((QuantityDifferenceInformation)null);
+        return;
+      case EdilangPackage.QVR_SEGMENT__DISCREPANCY_NATURE_IDENTIFICATION_CODE:
+        setDiscrepancyNatureIdentificationCode(DISCREPANCY_NATURE_IDENTIFICATION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE:
+        setReasonForChange((ReasonForChange)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +313,12 @@ public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.QVR_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.QVR_SEGMENT__QUANTITY_DIFFERENCE_INFORMATION:
+        return quantityDifferenceInformation != null;
+      case EdilangPackage.QVR_SEGMENT__DISCREPANCY_NATURE_IDENTIFICATION_CODE:
+        return DISCREPANCY_NATURE_IDENTIFICATION_CODE_EDEFAULT == null ? discrepancyNatureIdentificationCode != null : !DISCREPANCY_NATURE_IDENTIFICATION_CODE_EDEFAULT.equals(discrepancyNatureIdentificationCode);
+      case EdilangPackage.QVR_SEGMENT__REASON_FOR_CHANGE:
+        return reasonForChange != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +334,8 @@ public class QVRSegmentImpl extends AbstractEdiSegmentImpl implements QVRSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (discrepancyNatureIdentificationCode: ");
+    result.append(discrepancyNatureIdentificationCode);
     result.append(')');
     return result.toString();
   }

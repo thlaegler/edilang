@@ -4,11 +4,15 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.ATTSegment;
+import io.thlaegler.edifact.edilang.AttributeDetail;
+import io.thlaegler.edifact.edilang.AttributeType;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ATTSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ATTSegmentImpl#getAttributeFunctionCodeQualifier <em>Attribute Function Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ATTSegmentImpl#getAttributeType <em>Attribute Type</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ATTSegmentImpl#getAttributeDetail <em>Attribute Detail</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +34,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getAttributeFunctionCodeQualifier() <em>Attribute Function Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAttributeFunctionCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String ATTRIBUTE_FUNCTION_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getAttributeFunctionCodeQualifier() <em>Attribute Function Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAttributeFunctionCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String attributeFunctionCodeQualifier = ATTRIBUTE_FUNCTION_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAttributeType()
+   * @generated
+   * @ordered
+   */
+  protected AttributeType attributeType;
+
+  /**
+   * The cached value of the '{@link #getAttributeDetail() <em>Attribute Detail</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAttributeDetail()
+   * @generated
+   * @ordered
+   */
+  protected AttributeDetail attributeDetail;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +100,9 @@ public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getAttributeFunctionCodeQualifier()
   {
-    return todo;
+    return attributeFunctionCodeQualifier;
   }
 
   /**
@@ -85,12 +111,130 @@ public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setAttributeFunctionCodeQualifier(String newAttributeFunctionCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldAttributeFunctionCodeQualifier = attributeFunctionCodeQualifier;
+    attributeFunctionCodeQualifier = newAttributeFunctionCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ATT_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ATT_SEGMENT__ATTRIBUTE_FUNCTION_CODE_QUALIFIER, oldAttributeFunctionCodeQualifier, attributeFunctionCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AttributeType getAttributeType()
+  {
+    return attributeType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAttributeType(AttributeType newAttributeType, NotificationChain msgs)
+  {
+    AttributeType oldAttributeType = attributeType;
+    attributeType = newAttributeType;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE, oldAttributeType, newAttributeType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAttributeType(AttributeType newAttributeType)
+  {
+    if (newAttributeType != attributeType)
+    {
+      NotificationChain msgs = null;
+      if (attributeType != null)
+        msgs = ((InternalEObject)attributeType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE, null, msgs);
+      if (newAttributeType != null)
+        msgs = ((InternalEObject)newAttributeType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE, null, msgs);
+      msgs = basicSetAttributeType(newAttributeType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE, newAttributeType, newAttributeType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AttributeDetail getAttributeDetail()
+  {
+    return attributeDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAttributeDetail(AttributeDetail newAttributeDetail, NotificationChain msgs)
+  {
+    AttributeDetail oldAttributeDetail = attributeDetail;
+    attributeDetail = newAttributeDetail;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL, oldAttributeDetail, newAttributeDetail);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAttributeDetail(AttributeDetail newAttributeDetail)
+  {
+    if (newAttributeDetail != attributeDetail)
+    {
+      NotificationChain msgs = null;
+      if (attributeDetail != null)
+        msgs = ((InternalEObject)attributeDetail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL, null, msgs);
+      if (newAttributeDetail != null)
+        msgs = ((InternalEObject)newAttributeDetail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL, null, msgs);
+      msgs = basicSetAttributeDetail(newAttributeDetail, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL, newAttributeDetail, newAttributeDetail));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE:
+        return basicSetAttributeType(null, msgs);
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL:
+        return basicSetAttributeDetail(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +247,12 @@ public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ATT_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_FUNCTION_CODE_QUALIFIER:
+        return getAttributeFunctionCodeQualifier();
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE:
+        return getAttributeType();
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL:
+        return getAttributeDetail();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +267,14 @@ public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ATT_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_FUNCTION_CODE_QUALIFIER:
+        setAttributeFunctionCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE:
+        setAttributeType((AttributeType)newValue);
+        return;
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL:
+        setAttributeDetail((AttributeDetail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +290,14 @@ public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ATT_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_FUNCTION_CODE_QUALIFIER:
+        setAttributeFunctionCodeQualifier(ATTRIBUTE_FUNCTION_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE:
+        setAttributeType((AttributeType)null);
+        return;
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL:
+        setAttributeDetail((AttributeDetail)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +313,12 @@ public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ATT_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_FUNCTION_CODE_QUALIFIER:
+        return ATTRIBUTE_FUNCTION_CODE_QUALIFIER_EDEFAULT == null ? attributeFunctionCodeQualifier != null : !ATTRIBUTE_FUNCTION_CODE_QUALIFIER_EDEFAULT.equals(attributeFunctionCodeQualifier);
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_TYPE:
+        return attributeType != null;
+      case EdilangPackage.ATT_SEGMENT__ATTRIBUTE_DETAIL:
+        return attributeDetail != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +334,8 @@ public class ATTSegmentImpl extends AbstractEdiSegmentImpl implements ATTSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (attributeFunctionCodeQualifier: ");
+    result.append(attributeFunctionCodeQualifier);
     result.append(')');
     return result.toString();
   }

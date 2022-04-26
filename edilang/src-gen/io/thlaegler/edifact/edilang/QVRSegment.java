@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.QVRSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.QVRSegment#getQuantityDifferenceInformation <em>Quantity Difference Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.QVRSegment#getDiscrepancyNatureIdentificationCode <em>Discrepancy Nature Identification Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.QVRSegment#getReasonForChange <em>Reason For Change</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getQVRSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface QVRSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Quantity Difference Information</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getQVRSegment_Todo()
+   * @return the value of the '<em>Quantity Difference Information</em>' containment reference.
+   * @see #setQuantityDifferenceInformation(QuantityDifferenceInformation)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getQVRSegment_QuantityDifferenceInformation()
+   * @model containment="true"
+   * @generated
+   */
+  QuantityDifferenceInformation getQuantityDifferenceInformation();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.QVRSegment#getQuantityDifferenceInformation <em>Quantity Difference Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Quantity Difference Information</em>' containment reference.
+   * @see #getQuantityDifferenceInformation()
+   * @generated
+   */
+  void setQuantityDifferenceInformation(QuantityDifferenceInformation value);
+
+  /**
+   * Returns the value of the '<em><b>Discrepancy Nature Identification Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Discrepancy Nature Identification Code</em>' attribute.
+   * @see #setDiscrepancyNatureIdentificationCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getQVRSegment_DiscrepancyNatureIdentificationCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getDiscrepancyNatureIdentificationCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.QVRSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.QVRSegment#getDiscrepancyNatureIdentificationCode <em>Discrepancy Nature Identification Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Discrepancy Nature Identification Code</em>' attribute.
+   * @see #getDiscrepancyNatureIdentificationCode()
    * @generated
    */
-  void setTodo(String value);
+  void setDiscrepancyNatureIdentificationCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Reason For Change</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Reason For Change</em>' containment reference.
+   * @see #setReasonForChange(ReasonForChange)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getQVRSegment_ReasonForChange()
+   * @model containment="true"
+   * @generated
+   */
+  ReasonForChange getReasonForChange();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.QVRSegment#getReasonForChange <em>Reason For Change</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Reason For Change</em>' containment reference.
+   * @see #getReasonForChange()
+   * @generated
+   */
+  void setReasonForChange(ReasonForChange value);
 
 } // QVRSegment

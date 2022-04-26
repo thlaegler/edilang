@@ -140,1487 +140,1514 @@ ruleAbstractEdiSegment returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getADRSegmentParserRuleCall_3());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNGSegmentParserRuleCall_3());
 		}
-		this_ADRSegment_3=ruleADRSegment
+		this_UNGSegment_3=ruleUNGSegment
 		{
-			$current = $this_ADRSegment_3.current;
+			$current = $this_UNGSegment_3.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAGRSegmentParserRuleCall_4());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getADRSegmentParserRuleCall_4());
 		}
-		this_AGRSegment_4=ruleAGRSegment
+		this_ADRSegment_4=ruleADRSegment
 		{
-			$current = $this_AGRSegment_4.current;
+			$current = $this_ADRSegment_4.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAJTSegmentParserRuleCall_5());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAGRSegmentParserRuleCall_5());
 		}
-		this_AJTSegment_5=ruleAJTSegment
+		this_AGRSegment_5=ruleAGRSegment
 		{
-			$current = $this_AJTSegment_5.current;
+			$current = $this_AGRSegment_5.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getALCSegmentParserRuleCall_6());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAJTSegmentParserRuleCall_6());
 		}
-		this_ALCSegment_6=ruleALCSegment
+		this_AJTSegment_6=ruleAJTSegment
 		{
-			$current = $this_ALCSegment_6.current;
+			$current = $this_AJTSegment_6.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getALISegmentParserRuleCall_7());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getALCSegmentParserRuleCall_7());
 		}
-		this_ALISegment_7=ruleALISegment
+		this_ALCSegment_7=ruleALCSegment
 		{
-			$current = $this_ALISegment_7.current;
+			$current = $this_ALCSegment_7.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAPPSegmentParserRuleCall_8());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getALISegmentParserRuleCall_8());
 		}
-		this_APPSegment_8=ruleAPPSegment
+		this_ALISegment_8=ruleALISegment
 		{
-			$current = $this_APPSegment_8.current;
+			$current = $this_ALISegment_8.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAPRSegmentParserRuleCall_9());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAPPSegmentParserRuleCall_9());
 		}
-		this_APRSegment_9=ruleAPRSegment
+		this_APPSegment_9=ruleAPPSegment
 		{
-			$current = $this_APRSegment_9.current;
+			$current = $this_APPSegment_9.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getARDSegmentParserRuleCall_10());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAPRSegmentParserRuleCall_10());
 		}
-		this_ARDSegment_10=ruleARDSegment
+		this_APRSegment_10=ruleAPRSegment
 		{
-			$current = $this_ARDSegment_10.current;
+			$current = $this_APRSegment_10.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getARRSegmentParserRuleCall_11());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getARDSegmentParserRuleCall_11());
 		}
-		this_ARRSegment_11=ruleARRSegment
+		this_ARDSegment_11=ruleARDSegment
 		{
-			$current = $this_ARRSegment_11.current;
+			$current = $this_ARDSegment_11.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getASISegmentParserRuleCall_12());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getARRSegmentParserRuleCall_12());
 		}
-		this_ASISegment_12=ruleASISegment
+		this_ARRSegment_12=ruleARRSegment
 		{
-			$current = $this_ASISegment_12.current;
+			$current = $this_ARRSegment_12.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getATTSegmentParserRuleCall_13());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getASISegmentParserRuleCall_13());
 		}
-		this_ATTSegment_13=ruleATTSegment
+		this_ASISegment_13=ruleASISegment
 		{
-			$current = $this_ATTSegment_13.current;
+			$current = $this_ASISegment_13.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAUTSegmentParserRuleCall_14());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getATTSegmentParserRuleCall_14());
 		}
-		this_AUTSegment_14=ruleAUTSegment
+		this_ATTSegment_14=ruleATTSegment
 		{
-			$current = $this_AUTSegment_14.current;
+			$current = $this_ATTSegment_14.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBASSegmentParserRuleCall_15());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getAUTSegmentParserRuleCall_15());
 		}
-		this_BASSegment_15=ruleBASSegment
+		this_AUTSegment_15=ruleAUTSegment
 		{
-			$current = $this_BASSegment_15.current;
+			$current = $this_AUTSegment_15.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBGMSegmentParserRuleCall_16());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBASSegmentParserRuleCall_16());
 		}
-		this_BGMSegment_16=ruleBGMSegment
+		this_BASSegment_16=ruleBASSegment
 		{
-			$current = $this_BGMSegment_16.current;
+			$current = $this_BASSegment_16.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBIISegmentParserRuleCall_17());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBGMSegmentParserRuleCall_17());
 		}
-		this_BIISegment_17=ruleBIISegment
+		this_BGMSegment_17=ruleBGMSegment
 		{
-			$current = $this_BIISegment_17.current;
+			$current = $this_BGMSegment_17.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBUSSegmentParserRuleCall_18());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBIISegmentParserRuleCall_18());
 		}
-		this_BUSSegment_18=ruleBUSSegment
+		this_BIISegment_18=ruleBIISegment
 		{
-			$current = $this_BUSSegment_18.current;
+			$current = $this_BIISegment_18.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCAVSegmentParserRuleCall_19());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getBUSSegmentParserRuleCall_19());
 		}
-		this_CAVSegment_19=ruleCAVSegment
+		this_BUSSegment_19=ruleBUSSegment
 		{
-			$current = $this_CAVSegment_19.current;
+			$current = $this_BUSSegment_19.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCCDSegmentParserRuleCall_20());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCAVSegmentParserRuleCall_20());
 		}
-		this_CCDSegment_20=ruleCCDSegment
+		this_CAVSegment_20=ruleCAVSegment
 		{
-			$current = $this_CCDSegment_20.current;
+			$current = $this_CAVSegment_20.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCCISegmentParserRuleCall_21());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCCDSegmentParserRuleCall_21());
 		}
-		this_CCISegment_21=ruleCCISegment
+		this_CCDSegment_21=ruleCCDSegment
 		{
-			$current = $this_CCISegment_21.current;
+			$current = $this_CCDSegment_21.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCDISegmentParserRuleCall_22());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCCISegmentParserRuleCall_22());
 		}
-		this_CDISegment_22=ruleCDISegment
+		this_CCISegment_22=ruleCCISegment
 		{
-			$current = $this_CDISegment_22.current;
+			$current = $this_CCISegment_22.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCDSSegmentParserRuleCall_23());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCDISegmentParserRuleCall_23());
 		}
-		this_CDSSegment_23=ruleCDSSegment
+		this_CDISegment_23=ruleCDISegment
 		{
-			$current = $this_CDSSegment_23.current;
+			$current = $this_CDISegment_23.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCDVSegmentParserRuleCall_24());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCDSSegmentParserRuleCall_24());
 		}
-		this_CDVSegment_24=ruleCDVSegment
+		this_CDSSegment_24=ruleCDSSegment
 		{
-			$current = $this_CDVSegment_24.current;
+			$current = $this_CDSSegment_24.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCEDSegmentParserRuleCall_25());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCDVSegmentParserRuleCall_25());
 		}
-		this_CEDSegment_25=ruleCEDSegment
+		this_CDVSegment_25=ruleCDVSegment
 		{
-			$current = $this_CEDSegment_25.current;
+			$current = $this_CDVSegment_25.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCINSegmentParserRuleCall_26());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCEDSegmentParserRuleCall_26());
 		}
-		this_CINSegment_26=ruleCINSegment
+		this_CEDSegment_26=ruleCEDSegment
 		{
-			$current = $this_CINSegment_26.current;
+			$current = $this_CEDSegment_26.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCLASegmentParserRuleCall_27());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCINSegmentParserRuleCall_27());
 		}
-		this_CLASegment_27=ruleCLASegment
+		this_CINSegment_27=ruleCINSegment
 		{
-			$current = $this_CLASegment_27.current;
+			$current = $this_CINSegment_27.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCLISegmentParserRuleCall_28());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCLASegmentParserRuleCall_28());
 		}
-		this_CLISegment_28=ruleCLISegment
+		this_CLASegment_28=ruleCLASegment
 		{
-			$current = $this_CLISegment_28.current;
+			$current = $this_CLASegment_28.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCMPSegmentParserRuleCall_29());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCLISegmentParserRuleCall_29());
 		}
-		this_CMPSegment_29=ruleCMPSegment
+		this_CLISegment_29=ruleCLISegment
 		{
-			$current = $this_CMPSegment_29.current;
+			$current = $this_CLISegment_29.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCNISegmentParserRuleCall_30());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCMPSegmentParserRuleCall_30());
 		}
-		this_CNISegment_30=ruleCNISegment
+		this_CMPSegment_30=ruleCMPSegment
 		{
-			$current = $this_CNISegment_30.current;
+			$current = $this_CMPSegment_30.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCNTSegmentParserRuleCall_31());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCNISegmentParserRuleCall_31());
 		}
-		this_CNTSegment_31=ruleCNTSegment
+		this_CNISegment_31=ruleCNISegment
 		{
-			$current = $this_CNTSegment_31.current;
+			$current = $this_CNISegment_31.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCODSegmentParserRuleCall_32());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCNTSegmentParserRuleCall_32());
 		}
-		this_CODSegment_32=ruleCODSegment
+		this_CNTSegment_32=ruleCNTSegment
 		{
-			$current = $this_CODSegment_32.current;
+			$current = $this_CNTSegment_32.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCOMSegmentParserRuleCall_33());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCODSegmentParserRuleCall_33());
 		}
-		this_COMSegment_33=ruleCOMSegment
+		this_CODSegment_33=ruleCODSegment
 		{
-			$current = $this_COMSegment_33.current;
+			$current = $this_CODSegment_33.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCOTSegmentParserRuleCall_34());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCOMSegmentParserRuleCall_34());
 		}
-		this_COTSegment_34=ruleCOTSegment
+		this_COMSegment_34=ruleCOMSegment
 		{
-			$current = $this_COTSegment_34.current;
+			$current = $this_COMSegment_34.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCPISegmentParserRuleCall_35());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCOTSegmentParserRuleCall_35());
 		}
-		this_CPISegment_35=ruleCPISegment
+		this_COTSegment_35=ruleCOTSegment
 		{
-			$current = $this_CPISegment_35.current;
+			$current = $this_COTSegment_35.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCPSSegmentParserRuleCall_36());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCPISegmentParserRuleCall_36());
 		}
-		this_CPSSegment_36=ruleCPSSegment
+		this_CPISegment_36=ruleCPISegment
 		{
-			$current = $this_CPSSegment_36.current;
+			$current = $this_CPISegment_36.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCPTSegmentParserRuleCall_37());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCPSSegmentParserRuleCall_37());
 		}
-		this_CPTSegment_37=ruleCPTSegment
+		this_CPSSegment_37=ruleCPSSegment
 		{
-			$current = $this_CPTSegment_37.current;
+			$current = $this_CPSSegment_37.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCSTSegmentParserRuleCall_38());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCPTSegmentParserRuleCall_38());
 		}
-		this_CSTSegment_38=ruleCSTSegment
+		this_CPTSegment_38=ruleCPTSegment
 		{
-			$current = $this_CSTSegment_38.current;
+			$current = $this_CPTSegment_38.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCTASegmentParserRuleCall_39());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCSTSegmentParserRuleCall_39());
 		}
-		this_CTASegment_39=ruleCTASegment
+		this_CSTSegment_39=ruleCSTSegment
 		{
-			$current = $this_CTASegment_39.current;
+			$current = $this_CSTSegment_39.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCUXSegmentParserRuleCall_40());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCTASegmentParserRuleCall_40());
 		}
-		this_CUXSegment_40=ruleCUXSegment
+		this_CTASegment_40=ruleCTASegment
 		{
-			$current = $this_CUXSegment_40.current;
+			$current = $this_CTASegment_40.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDAMSegmentParserRuleCall_41());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getCUXSegmentParserRuleCall_41());
 		}
-		this_DAMSegment_41=ruleDAMSegment
+		this_CUXSegment_41=ruleCUXSegment
 		{
-			$current = $this_DAMSegment_41.current;
+			$current = $this_CUXSegment_41.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDFNSegmentParserRuleCall_42());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDAMSegmentParserRuleCall_42());
 		}
-		this_DFNSegment_42=ruleDFNSegment
+		this_DAMSegment_42=ruleDAMSegment
 		{
-			$current = $this_DFNSegment_42.current;
+			$current = $this_DAMSegment_42.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDGSSegmentParserRuleCall_43());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDFNSegmentParserRuleCall_43());
 		}
-		this_DGSSegment_43=ruleDGSSegment
+		this_DFNSegment_43=ruleDFNSegment
 		{
-			$current = $this_DGSSegment_43.current;
+			$current = $this_DFNSegment_43.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDIISegmentParserRuleCall_44());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDGSSegmentParserRuleCall_44());
 		}
-		this_DIISegment_44=ruleDIISegment
+		this_DGSSegment_44=ruleDGSSegment
 		{
-			$current = $this_DIISegment_44.current;
+			$current = $this_DGSSegment_44.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDIMSegmentParserRuleCall_45());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDIISegmentParserRuleCall_45());
 		}
-		this_DIMSegment_45=ruleDIMSegment
+		this_DIISegment_45=ruleDIISegment
 		{
-			$current = $this_DIMSegment_45.current;
+			$current = $this_DIISegment_45.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDLISegmentParserRuleCall_46());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDIMSegmentParserRuleCall_46());
 		}
-		this_DLISegment_46=ruleDLISegment
+		this_DIMSegment_46=ruleDIMSegment
 		{
-			$current = $this_DLISegment_46.current;
+			$current = $this_DIMSegment_46.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDLMSegmentParserRuleCall_47());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDLISegmentParserRuleCall_47());
 		}
-		this_DLMSegment_47=ruleDLMSegment
+		this_DLISegment_47=ruleDLISegment
 		{
-			$current = $this_DLMSegment_47.current;
+			$current = $this_DLISegment_47.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDMSSegmentParserRuleCall_48());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDLMSegmentParserRuleCall_48());
 		}
-		this_DMSSegment_48=ruleDMSSegment
+		this_DLMSegment_48=ruleDLMSegment
 		{
-			$current = $this_DMSSegment_48.current;
+			$current = $this_DLMSegment_48.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDOCSegmentParserRuleCall_49());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDMSSegmentParserRuleCall_49());
 		}
-		this_DOCSegment_49=ruleDOCSegment
+		this_DMSSegment_49=ruleDMSSegment
 		{
-			$current = $this_DOCSegment_49.current;
+			$current = $this_DMSSegment_49.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDRDSegmentParserRuleCall_50());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDOCSegmentParserRuleCall_50());
 		}
-		this_DRDSegment_50=ruleDRDSegment
+		this_DOCSegment_50=ruleDOCSegment
 		{
-			$current = $this_DRDSegment_50.current;
+			$current = $this_DOCSegment_50.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDSGSegmentParserRuleCall_51());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDRDSegmentParserRuleCall_51());
 		}
-		this_DSGSegment_51=ruleDSGSegment
+		this_DRDSegment_51=ruleDRDSegment
 		{
-			$current = $this_DSGSegment_51.current;
+			$current = $this_DRDSegment_51.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDSISegmentParserRuleCall_52());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDSGSegmentParserRuleCall_52());
 		}
-		this_DSISegment_52=ruleDSISegment
+		this_DSGSegment_52=ruleDSGSegment
 		{
-			$current = $this_DSISegment_52.current;
+			$current = $this_DSGSegment_52.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDTMSegmentParserRuleCall_53());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDSISegmentParserRuleCall_53());
 		}
-		this_DTMSegment_53=ruleDTMSegment
+		this_DSISegment_53=ruleDSISegment
 		{
-			$current = $this_DTMSegment_53.current;
+			$current = $this_DSISegment_53.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEDTSegmentParserRuleCall_54());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getDTMSegmentParserRuleCall_54());
 		}
-		this_EDTSegment_54=ruleEDTSegment
+		this_DTMSegment_54=ruleDTMSegment
 		{
-			$current = $this_EDTSegment_54.current;
+			$current = $this_DTMSegment_54.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEFISegmentParserRuleCall_55());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEDTSegmentParserRuleCall_55());
 		}
-		this_EFISegment_55=ruleEFISegment
+		this_EDTSegment_55=ruleEDTSegment
 		{
-			$current = $this_EFISegment_55.current;
+			$current = $this_EDTSegment_55.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getELMSegmentParserRuleCall_56());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEFISegmentParserRuleCall_56());
 		}
-		this_ELMSegment_56=ruleELMSegment
+		this_EFISegment_56=ruleEFISegment
 		{
-			$current = $this_ELMSegment_56.current;
+			$current = $this_EFISegment_56.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getELUSegmentParserRuleCall_57());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getELMSegmentParserRuleCall_57());
 		}
-		this_ELUSegment_57=ruleELUSegment
+		this_ELMSegment_57=ruleELMSegment
 		{
-			$current = $this_ELUSegment_57.current;
+			$current = $this_ELMSegment_57.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getELVSegmentParserRuleCall_58());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getELUSegmentParserRuleCall_58());
 		}
-		this_ELVSegment_58=ruleELVSegment
+		this_ELUSegment_58=ruleELUSegment
 		{
-			$current = $this_ELVSegment_58.current;
+			$current = $this_ELUSegment_58.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEMPSegmentParserRuleCall_59());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getELVSegmentParserRuleCall_59());
 		}
-		this_EMPSegment_59=ruleEMPSegment
+		this_ELVSegment_59=ruleELVSegment
 		{
-			$current = $this_EMPSegment_59.current;
+			$current = $this_ELVSegment_59.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEQASegmentParserRuleCall_60());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEMPSegmentParserRuleCall_60());
 		}
-		this_EQASegment_60=ruleEQASegment
+		this_EMPSegment_60=ruleEMPSegment
 		{
-			$current = $this_EQASegment_60.current;
+			$current = $this_EMPSegment_60.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEQDSegmentParserRuleCall_61());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEQASegmentParserRuleCall_61());
 		}
-		this_EQDSegment_61=ruleEQDSegment
+		this_EQASegment_61=ruleEQASegment
 		{
-			$current = $this_EQDSegment_61.current;
+			$current = $this_EQASegment_61.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEQNSegmentParserRuleCall_62());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEQDSegmentParserRuleCall_62());
 		}
-		this_EQNSegment_62=ruleEQNSegment
+		this_EQDSegment_62=ruleEQDSegment
 		{
-			$current = $this_EQNSegment_62.current;
+			$current = $this_EQDSegment_62.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getERPSegmentParserRuleCall_63());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEQNSegmentParserRuleCall_63());
 		}
-		this_ERPSegment_63=ruleERPSegment
+		this_EQNSegment_63=ruleEQNSegment
 		{
-			$current = $this_ERPSegment_63.current;
+			$current = $this_EQNSegment_63.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getERCSegmentParserRuleCall_64());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getERPSegmentParserRuleCall_64());
 		}
-		this_ERCSegment_64=ruleERCSegment
+		this_ERPSegment_64=ruleERPSegment
 		{
-			$current = $this_ERCSegment_64.current;
+			$current = $this_ERPSegment_64.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEVESegmentParserRuleCall_65());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getERCSegmentParserRuleCall_65());
 		}
-		this_EVESegment_65=ruleEVESegment
+		this_ERCSegment_65=ruleERCSegment
 		{
-			$current = $this_EVESegment_65.current;
+			$current = $this_ERCSegment_65.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEVTSegmentParserRuleCall_66());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEVESegmentParserRuleCall_66());
 		}
-		this_EVTSegment_66=ruleEVTSegment
+		this_EVESegment_66=ruleEVESegment
 		{
-			$current = $this_EVTSegment_66.current;
+			$current = $this_EVESegment_66.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFCASegmentParserRuleCall_67());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getEVTSegmentParserRuleCall_67());
 		}
-		this_FCASegment_67=ruleFCASegment
+		this_EVTSegment_67=ruleEVTSegment
 		{
-			$current = $this_FCASegment_67.current;
+			$current = $this_EVTSegment_67.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFIISegmentParserRuleCall_68());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFCASegmentParserRuleCall_68());
 		}
-		this_FIISegment_68=ruleFIISegment
+		this_FCASegment_68=ruleFCASegment
 		{
-			$current = $this_FIISegment_68.current;
+			$current = $this_FCASegment_68.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFNSSegmentParserRuleCall_69());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFIISegmentParserRuleCall_69());
 		}
-		this_FNSSegment_69=ruleFNSSegment
+		this_FIISegment_69=ruleFIISegment
 		{
-			$current = $this_FNSSegment_69.current;
+			$current = $this_FIISegment_69.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFNTSegmentParserRuleCall_70());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFNSSegmentParserRuleCall_70());
 		}
-		this_FNTSegment_70=ruleFNTSegment
+		this_FNSSegment_70=ruleFNSSegment
 		{
-			$current = $this_FNTSegment_70.current;
+			$current = $this_FNSSegment_70.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFORSegmentParserRuleCall_71());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFNTSegmentParserRuleCall_71());
 		}
-		this_FORSegment_71=ruleFORSegment
+		this_FNTSegment_71=ruleFNTSegment
 		{
-			$current = $this_FORSegment_71.current;
+			$current = $this_FNTSegment_71.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFSQSegmentParserRuleCall_72());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFORSegmentParserRuleCall_72());
 		}
-		this_FSQSegment_72=ruleFSQSegment
+		this_FORSegment_72=ruleFORSegment
 		{
-			$current = $this_FSQSegment_72.current;
+			$current = $this_FORSegment_72.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFTXSegmentParserRuleCall_73());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFSQSegmentParserRuleCall_73());
 		}
-		this_FTXSegment_73=ruleFTXSegment
+		this_FSQSegment_73=ruleFSQSegment
 		{
-			$current = $this_FTXSegment_73.current;
+			$current = $this_FSQSegment_73.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGDSSegmentParserRuleCall_74());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getFTXSegmentParserRuleCall_74());
 		}
-		this_GDSSegment_74=ruleGDSSegment
+		this_FTXSegment_74=ruleFTXSegment
 		{
-			$current = $this_GDSSegment_74.current;
+			$current = $this_FTXSegment_74.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGEISegmentParserRuleCall_75());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGDSSegmentParserRuleCall_75());
 		}
-		this_GEISegment_75=ruleGEISegment
+		this_GDSSegment_75=ruleGDSSegment
 		{
-			$current = $this_GEISegment_75.current;
+			$current = $this_GDSSegment_75.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGIDSegmentParserRuleCall_76());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGEISegmentParserRuleCall_76());
 		}
-		this_GIDSegment_76=ruleGIDSegment
+		this_GEISegment_76=ruleGEISegment
 		{
-			$current = $this_GIDSegment_76.current;
+			$current = $this_GEISegment_76.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGINSegmentParserRuleCall_77());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGIDSegmentParserRuleCall_77());
 		}
-		this_GINSegment_77=ruleGINSegment
+		this_GIDSegment_77=ruleGIDSegment
 		{
-			$current = $this_GINSegment_77.current;
+			$current = $this_GIDSegment_77.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGIRSegmentParserRuleCall_78());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGINSegmentParserRuleCall_78());
 		}
-		this_GIRSegment_78=ruleGIRSegment
+		this_GINSegment_78=ruleGINSegment
 		{
-			$current = $this_GIRSegment_78.current;
+			$current = $this_GINSegment_78.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGISSegmentParserRuleCall_79());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGIRSegmentParserRuleCall_79());
 		}
-		this_GISSegment_79=ruleGISSegment
+		this_GIRSegment_79=ruleGIRSegment
 		{
-			$current = $this_GISSegment_79.current;
+			$current = $this_GIRSegment_79.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGORSegmentParserRuleCall_80());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGISSegmentParserRuleCall_80());
 		}
-		this_GORSegment_80=ruleGORSegment
+		this_GISSegment_80=ruleGISSegment
 		{
-			$current = $this_GORSegment_80.current;
+			$current = $this_GISSegment_80.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGRUSegmentParserRuleCall_81());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGORSegmentParserRuleCall_81());
 		}
-		this_GRUSegment_81=ruleGRUSegment
+		this_GORSegment_81=ruleGORSegment
 		{
-			$current = $this_GRUSegment_81.current;
+			$current = $this_GORSegment_81.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getHANSegmentParserRuleCall_82());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getGRUSegmentParserRuleCall_82());
 		}
-		this_HANSegment_82=ruleHANSegment
+		this_GRUSegment_82=ruleGRUSegment
 		{
-			$current = $this_HANSegment_82.current;
+			$current = $this_GRUSegment_82.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getHYNSegmentParserRuleCall_83());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getHANSegmentParserRuleCall_83());
 		}
-		this_HYNSegment_83=ruleHYNSegment
+		this_HANSegment_83=ruleHANSegment
 		{
-			$current = $this_HYNSegment_83.current;
+			$current = $this_HANSegment_83.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getICDSegmentParserRuleCall_84());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getHYNSegmentParserRuleCall_84());
 		}
-		this_ICDSegment_84=ruleICDSegment
+		this_HYNSegment_84=ruleHYNSegment
 		{
-			$current = $this_ICDSegment_84.current;
+			$current = $this_HYNSegment_84.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIDESegmentParserRuleCall_85());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getICDSegmentParserRuleCall_85());
 		}
-		this_IDESegment_85=ruleIDESegment
+		this_ICDSegment_85=ruleICDSegment
 		{
-			$current = $this_IDESegment_85.current;
+			$current = $this_ICDSegment_85.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIFDSegmentParserRuleCall_86());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIDESegmentParserRuleCall_86());
 		}
-		this_IFDSegment_86=ruleIFDSegment
+		this_IDESegment_86=ruleIDESegment
 		{
-			$current = $this_IFDSegment_86.current;
+			$current = $this_IDESegment_86.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIHCSegmentParserRuleCall_87());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIFDSegmentParserRuleCall_87());
 		}
-		this_IHCSegment_87=ruleIHCSegment
+		this_IFDSegment_87=ruleIFDSegment
 		{
-			$current = $this_IHCSegment_87.current;
+			$current = $this_IFDSegment_87.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIMDSegmentParserRuleCall_88());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIHCSegmentParserRuleCall_88());
 		}
-		this_IMDSegment_88=ruleIMDSegment
+		this_IHCSegment_88=ruleIHCSegment
 		{
-			$current = $this_IMDSegment_88.current;
+			$current = $this_IHCSegment_88.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getINDSegmentParserRuleCall_89());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIMDSegmentParserRuleCall_89());
 		}
-		this_INDSegment_89=ruleINDSegment
+		this_IMDSegment_89=ruleIMDSegment
 		{
-			$current = $this_INDSegment_89.current;
+			$current = $this_IMDSegment_89.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getINPSegmentParserRuleCall_90());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getINDSegmentParserRuleCall_90());
 		}
-		this_INPSegment_90=ruleINPSegment
+		this_INDSegment_90=ruleINDSegment
 		{
-			$current = $this_INPSegment_90.current;
+			$current = $this_INDSegment_90.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getINVSegmentParserRuleCall_91());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getINPSegmentParserRuleCall_91());
 		}
-		this_INVSegment_91=ruleINVSegment
+		this_INPSegment_91=ruleINPSegment
 		{
-			$current = $this_INVSegment_91.current;
+			$current = $this_INPSegment_91.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIRQSegmentParserRuleCall_92());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getINVSegmentParserRuleCall_92());
 		}
-		this_IRQSegment_92=ruleIRQSegment
+		this_INVSegment_92=ruleINVSegment
 		{
-			$current = $this_IRQSegment_92.current;
+			$current = $this_INVSegment_92.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getLANSegmentParserRuleCall_93());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getIRQSegmentParserRuleCall_93());
 		}
-		this_LANSegment_93=ruleLANSegment
+		this_IRQSegment_93=ruleIRQSegment
 		{
-			$current = $this_LANSegment_93.current;
+			$current = $this_IRQSegment_93.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getLINSegmentParserRuleCall_94());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getLANSegmentParserRuleCall_94());
 		}
-		this_LINSegment_94=ruleLINSegment
+		this_LANSegment_94=ruleLANSegment
 		{
-			$current = $this_LINSegment_94.current;
+			$current = $this_LANSegment_94.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getLOCSegmentParserRuleCall_95());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getLINSegmentParserRuleCall_95());
 		}
-		this_LOCSegment_95=ruleLOCSegment
+		this_LINSegment_95=ruleLINSegment
 		{
-			$current = $this_LOCSegment_95.current;
+			$current = $this_LINSegment_95.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMEASegmentParserRuleCall_96());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getLOCSegmentParserRuleCall_96());
 		}
-		this_MEASegment_96=ruleMEASegment
+		this_LOCSegment_96=ruleLOCSegment
 		{
-			$current = $this_MEASegment_96.current;
+			$current = $this_LOCSegment_96.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMEMSegmentParserRuleCall_97());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMEASegmentParserRuleCall_97());
 		}
-		this_MEMSegment_97=ruleMEMSegment
+		this_MEASegment_97=ruleMEASegment
 		{
-			$current = $this_MEMSegment_97.current;
+			$current = $this_MEASegment_97.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMKSSegmentParserRuleCall_98());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMEMSegmentParserRuleCall_98());
 		}
-		this_MKSSegment_98=ruleMKSSegment
+		this_MEMSegment_98=ruleMEMSegment
 		{
-			$current = $this_MKSSegment_98.current;
+			$current = $this_MEMSegment_98.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMOASegmentParserRuleCall_99());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMKSSegmentParserRuleCall_99());
 		}
-		this_MOASegment_99=ruleMOASegment
+		this_MKSSegment_99=ruleMKSSegment
 		{
-			$current = $this_MOASegment_99.current;
+			$current = $this_MKSSegment_99.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMSGSegmentParserRuleCall_100());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMOASegmentParserRuleCall_100());
 		}
-		this_MSGSegment_100=ruleMSGSegment
+		this_MOASegment_100=ruleMOASegment
 		{
-			$current = $this_MSGSegment_100.current;
+			$current = $this_MOASegment_100.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getNADSegmentParserRuleCall_101());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getMSGSegmentParserRuleCall_101());
 		}
-		this_NADSegment_101=ruleNADSegment
+		this_MSGSegment_101=ruleMSGSegment
 		{
-			$current = $this_NADSegment_101.current;
+			$current = $this_MSGSegment_101.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getNATSegmentParserRuleCall_102());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getNADSegmentParserRuleCall_102());
 		}
-		this_NATSegment_102=ruleNATSegment
+		this_NADSegment_102=ruleNADSegment
 		{
-			$current = $this_NATSegment_102.current;
+			$current = $this_NADSegment_102.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getODISegmentParserRuleCall_103());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getNATSegmentParserRuleCall_103());
 		}
-		this_ODISegment_103=ruleODISegment
+		this_NATSegment_103=ruleNATSegment
 		{
-			$current = $this_ODISegment_103.current;
+			$current = $this_NATSegment_103.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getORGSegmentParserRuleCall_104());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getODISegmentParserRuleCall_104());
 		}
-		this_ORGSegment_104=ruleORGSegment
+		this_ODISegment_104=ruleODISegment
 		{
-			$current = $this_ORGSegment_104.current;
+			$current = $this_ODISegment_104.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPACSegmentParserRuleCall_105());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getORGSegmentParserRuleCall_105());
 		}
-		this_PACSegment_105=rulePACSegment
+		this_ORGSegment_105=ruleORGSegment
 		{
-			$current = $this_PACSegment_105.current;
+			$current = $this_ORGSegment_105.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPAISegmentParserRuleCall_106());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPACSegmentParserRuleCall_106());
 		}
-		this_PAISegment_106=rulePAISegment
+		this_PACSegment_106=rulePACSegment
 		{
-			$current = $this_PAISegment_106.current;
+			$current = $this_PACSegment_106.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPASSegmentParserRuleCall_107());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPAISegmentParserRuleCall_107());
 		}
-		this_PASSegment_107=rulePASSegment
+		this_PAISegment_107=rulePAISegment
 		{
-			$current = $this_PASSegment_107.current;
+			$current = $this_PAISegment_107.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPATSegmentParserRuleCall_108());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPASSegmentParserRuleCall_108());
 		}
-		this_PATSegment_108=rulePATSegment
+		this_PASSegment_108=rulePASSegment
 		{
-			$current = $this_PATSegment_108.current;
+			$current = $this_PASSegment_108.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPCCSegmentParserRuleCall_109());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPATSegmentParserRuleCall_109());
 		}
-		this_PCCSegment_109=rulePCCSegment
+		this_PATSegment_109=rulePATSegment
 		{
-			$current = $this_PCCSegment_109.current;
+			$current = $this_PATSegment_109.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPCDSegmentParserRuleCall_110());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPCCSegmentParserRuleCall_110());
 		}
-		this_PCDSegment_110=rulePCDSegment
+		this_PCCSegment_110=rulePCCSegment
 		{
-			$current = $this_PCDSegment_110.current;
+			$current = $this_PCCSegment_110.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPCISegmentParserRuleCall_111());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPCDSegmentParserRuleCall_111());
 		}
-		this_PCISegment_111=rulePCISegment
+		this_PCDSegment_111=rulePCDSegment
 		{
-			$current = $this_PCISegment_111.current;
+			$current = $this_PCDSegment_111.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPDISegmentParserRuleCall_112());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPCISegmentParserRuleCall_112());
 		}
-		this_PDISegment_112=rulePDISegment
+		this_PCISegment_112=rulePCISegment
 		{
-			$current = $this_PDISegment_112.current;
+			$current = $this_PCISegment_112.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPERSegmentParserRuleCall_113());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPDISegmentParserRuleCall_113());
 		}
-		this_PERSegment_113=rulePERSegment
+		this_PDISegment_113=rulePDISegment
 		{
-			$current = $this_PERSegment_113.current;
+			$current = $this_PDISegment_113.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPGISegmentParserRuleCall_114());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPERSegmentParserRuleCall_114());
 		}
-		this_PGISegment_114=rulePGISegment
+		this_PERSegment_114=rulePERSegment
 		{
-			$current = $this_PGISegment_114.current;
+			$current = $this_PERSegment_114.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPIASegmentParserRuleCall_115());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPGISegmentParserRuleCall_115());
 		}
-		this_PIASegment_115=rulePIASegment
+		this_PGISegment_115=rulePGISegment
 		{
-			$current = $this_PIASegment_115.current;
+			$current = $this_PGISegment_115.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPNASegmentParserRuleCall_116());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPIASegmentParserRuleCall_116());
 		}
-		this_PNASegment_116=rulePNASegment
+		this_PIASegment_116=rulePIASegment
 		{
-			$current = $this_PNASegment_116.current;
+			$current = $this_PIASegment_116.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPOCSegmentParserRuleCall_117());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPNASegmentParserRuleCall_117());
 		}
-		this_POCSegment_117=rulePOCSegment
+		this_PNASegment_117=rulePNASegment
 		{
-			$current = $this_POCSegment_117.current;
+			$current = $this_PNASegment_117.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPRCSegmentParserRuleCall_118());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPOCSegmentParserRuleCall_118());
 		}
-		this_PRCSegment_118=rulePRCSegment
+		this_POCSegment_118=rulePOCSegment
 		{
-			$current = $this_PRCSegment_118.current;
+			$current = $this_POCSegment_118.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPRISegmentParserRuleCall_119());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPRCSegmentParserRuleCall_119());
 		}
-		this_PRISegment_119=rulePRISegment
+		this_PRCSegment_119=rulePRCSegment
 		{
-			$current = $this_PRISegment_119.current;
+			$current = $this_PRCSegment_119.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPRVSegmentParserRuleCall_120());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPRISegmentParserRuleCall_120());
 		}
-		this_PRVSegment_120=rulePRVSegment
+		this_PRISegment_120=rulePRISegment
 		{
-			$current = $this_PRVSegment_120.current;
+			$current = $this_PRISegment_120.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPSDSegmentParserRuleCall_121());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPRVSegmentParserRuleCall_121());
 		}
-		this_PSDSegment_121=rulePSDSegment
+		this_PRVSegment_121=rulePRVSegment
 		{
-			$current = $this_PSDSegment_121.current;
+			$current = $this_PRVSegment_121.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPTYSegmentParserRuleCall_122());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPSDSegmentParserRuleCall_122());
 		}
-		this_PTYSegment_122=rulePTYSegment
+		this_PSDSegment_122=rulePSDSegment
 		{
-			$current = $this_PTYSegment_122.current;
+			$current = $this_PSDSegment_122.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPYTSegmentParserRuleCall_123());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPTYSegmentParserRuleCall_123());
 		}
-		this_PYTSegment_123=rulePYTSegment
+		this_PTYSegment_123=rulePTYSegment
 		{
-			$current = $this_PYTSegment_123.current;
+			$current = $this_PTYSegment_123.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQRSSegmentParserRuleCall_124());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getPYTSegmentParserRuleCall_124());
 		}
-		this_QRSSegment_124=ruleQRSSegment
+		this_PYTSegment_124=rulePYTSegment
 		{
-			$current = $this_QRSSegment_124.current;
+			$current = $this_PYTSegment_124.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQTYSegmentParserRuleCall_125());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQRSSegmentParserRuleCall_125());
 		}
-		this_QTYSegment_125=ruleQTYSegment
+		this_QRSSegment_125=ruleQRSSegment
 		{
-			$current = $this_QTYSegment_125.current;
+			$current = $this_QRSSegment_125.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQUASegmentParserRuleCall_126());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQTYSegmentParserRuleCall_126());
 		}
-		this_QUASegment_126=ruleQUASegment
+		this_QTYSegment_126=ruleQTYSegment
 		{
-			$current = $this_QUASegment_126.current;
+			$current = $this_QTYSegment_126.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQVRSegmentParserRuleCall_127());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQUASegmentParserRuleCall_127());
 		}
-		this_QVRSegment_127=ruleQVRSegment
+		this_QUASegment_127=ruleQUASegment
 		{
-			$current = $this_QVRSegment_127.current;
+			$current = $this_QUASegment_127.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRCSSegmentParserRuleCall_128());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getQVRSegmentParserRuleCall_128());
 		}
-		this_RCSSegment_128=ruleRCSSegment
+		this_QVRSegment_128=ruleQVRSegment
 		{
-			$current = $this_RCSSegment_128.current;
+			$current = $this_QVRSegment_128.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRELSegmentParserRuleCall_129());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRCSSegmentParserRuleCall_129());
 		}
-		this_RELSegment_129=ruleRELSegment
+		this_RCSSegment_129=ruleRCSSegment
 		{
-			$current = $this_RELSegment_129.current;
+			$current = $this_RCSSegment_129.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRFFSegmentParserRuleCall_130());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRELSegmentParserRuleCall_130());
 		}
-		this_RFFSegment_130=ruleRFFSegment
+		this_RELSegment_130=ruleRELSegment
 		{
-			$current = $this_RFFSegment_130.current;
+			$current = $this_RELSegment_130.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRJLSegmentParserRuleCall_131());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRFFSegmentParserRuleCall_131());
 		}
-		this_RJLSegment_131=ruleRJLSegment
+		this_RFFSegment_131=ruleRFFSegment
 		{
-			$current = $this_RJLSegment_131.current;
+			$current = $this_RFFSegment_131.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRNGSegmentParserRuleCall_132());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRJLSegmentParserRuleCall_132());
 		}
-		this_RNGSegment_132=ruleRNGSegment
+		this_RJLSegment_132=ruleRJLSegment
 		{
-			$current = $this_RNGSegment_132.current;
+			$current = $this_RJLSegment_132.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRODSegmentParserRuleCall_133());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRNGSegmentParserRuleCall_133());
 		}
-		this_RODSegment_133=ruleRODSegment
+		this_RNGSegment_133=ruleRNGSegment
 		{
-			$current = $this_RODSegment_133.current;
+			$current = $this_RNGSegment_133.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRPISegmentParserRuleCall_134());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRODSegmentParserRuleCall_134());
 		}
-		this_RPISegment_134=ruleRPISegment
+		this_RODSegment_134=ruleRODSegment
 		{
-			$current = $this_RPISegment_134.current;
+			$current = $this_RODSegment_134.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRSLSegmentParserRuleCall_135());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRPISegmentParserRuleCall_135());
 		}
-		this_RSLSegment_135=ruleRSLSegment
+		this_RPISegment_135=ruleRPISegment
 		{
-			$current = $this_RSLSegment_135.current;
+			$current = $this_RPISegment_135.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRTESegmentParserRuleCall_136());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRSLSegmentParserRuleCall_136());
 		}
-		this_RTESegment_136=ruleRTESegment
+		this_RSLSegment_136=ruleRSLSegment
 		{
-			$current = $this_RTESegment_136.current;
+			$current = $this_RSLSegment_136.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSALSegmentParserRuleCall_137());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getRTESegmentParserRuleCall_137());
 		}
-		this_SALSegment_137=ruleSALSegment
+		this_RTESegment_137=ruleRTESegment
 		{
-			$current = $this_SALSegment_137.current;
+			$current = $this_RTESegment_137.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSCCSegmentParserRuleCall_138());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSALSegmentParserRuleCall_138());
 		}
-		this_SCCSegment_138=ruleSCCSegment
+		this_SALSegment_138=ruleSALSegment
 		{
-			$current = $this_SCCSegment_138.current;
+			$current = $this_SALSegment_138.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSCDSegmentParserRuleCall_139());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSCCSegmentParserRuleCall_139());
 		}
-		this_SCDSegment_139=ruleSCDSegment
+		this_SCCSegment_139=ruleSCCSegment
 		{
-			$current = $this_SCDSegment_139.current;
+			$current = $this_SCCSegment_139.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSEGSegmentParserRuleCall_140());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSCDSegmentParserRuleCall_140());
 		}
-		this_SEGSegment_140=ruleSEGSegment
+		this_SCDSegment_140=ruleSCDSegment
 		{
-			$current = $this_SEGSegment_140.current;
+			$current = $this_SCDSegment_140.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSELSegmentParserRuleCall_141());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSEGSegmentParserRuleCall_141());
 		}
-		this_SELSegment_141=ruleSELSegment
+		this_SEGSegment_141=ruleSEGSegment
 		{
-			$current = $this_SELSegment_141.current;
+			$current = $this_SEGSegment_141.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSEQSegmentParserRuleCall_142());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSELSegmentParserRuleCall_142());
 		}
-		this_SEQSegment_142=ruleSEQSegment
+		this_SELSegment_142=ruleSELSegment
 		{
-			$current = $this_SEQSegment_142.current;
+			$current = $this_SELSegment_142.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSFISegmentParserRuleCall_143());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSEQSegmentParserRuleCall_143());
 		}
-		this_SFISegment_143=ruleSFISegment
+		this_SEQSegment_143=ruleSEQSegment
 		{
-			$current = $this_SFISegment_143.current;
+			$current = $this_SEQSegment_143.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSGPSegmentParserRuleCall_144());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSFISegmentParserRuleCall_144());
 		}
-		this_SGPSegment_144=ruleSGPSegment
+		this_SFISegment_144=ruleSFISegment
 		{
-			$current = $this_SGPSegment_144.current;
+			$current = $this_SFISegment_144.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSGUSegmentParserRuleCall_145());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSGPSegmentParserRuleCall_145());
 		}
-		this_SGUSegment_145=ruleSGUSegment
+		this_SGPSegment_145=ruleSGPSegment
 		{
-			$current = $this_SGUSegment_145.current;
+			$current = $this_SGPSegment_145.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSPRSegmentParserRuleCall_146());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSGUSegmentParserRuleCall_146());
 		}
-		this_SPRSegment_146=ruleSPRSegment
+		this_SGUSegment_146=ruleSGUSegment
 		{
-			$current = $this_SPRSegment_146.current;
+			$current = $this_SGUSegment_146.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSPSSegmentParserRuleCall_147());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSPRSegmentParserRuleCall_147());
 		}
-		this_SPSSegment_147=ruleSPSSegment
+		this_SPRSegment_147=ruleSPRSegment
 		{
-			$current = $this_SPSSegment_147.current;
+			$current = $this_SPRSegment_147.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTASegmentParserRuleCall_148());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSPSSegmentParserRuleCall_148());
 		}
-		this_STASegment_148=ruleSTASegment
+		this_SPSSegment_148=ruleSPSSegment
 		{
-			$current = $this_STASegment_148.current;
+			$current = $this_SPSSegment_148.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTCSegmentParserRuleCall_149());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTASegmentParserRuleCall_149());
 		}
-		this_STCSegment_149=ruleSTCSegment
+		this_STASegment_149=ruleSTASegment
 		{
-			$current = $this_STCSegment_149.current;
+			$current = $this_STASegment_149.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTGSegmentParserRuleCall_150());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTCSegmentParserRuleCall_150());
 		}
-		this_STGSegment_150=ruleSTGSegment
+		this_STCSegment_150=ruleSTCSegment
 		{
-			$current = $this_STGSegment_150.current;
+			$current = $this_STCSegment_150.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTSSegmentParserRuleCall_151());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTGSegmentParserRuleCall_151());
 		}
-		this_STSSegment_151=ruleSTSSegment
+		this_STGSegment_151=ruleSTGSegment
 		{
-			$current = $this_STSSegment_151.current;
+			$current = $this_STGSegment_151.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTAXSegmentParserRuleCall_152());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTSSegmentParserRuleCall_152());
 		}
-		this_TAXSegment_152=ruleTAXSegment
+		this_STSSegment_152=ruleSTSSegment
 		{
-			$current = $this_TAXSegment_152.current;
+			$current = $this_STSSegment_152.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTCCSegmentParserRuleCall_153());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getSTXSegmentParserRuleCall_153());
 		}
-		this_TCCSegment_153=ruleTCCSegment
+		this_STXSegment_153=ruleSTXSegment
 		{
-			$current = $this_TCCSegment_153.current;
+			$current = $this_STXSegment_153.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTDTSegmentParserRuleCall_154());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTAXSegmentParserRuleCall_154());
 		}
-		this_TDTSegment_154=ruleTDTSegment
+		this_TAXSegment_154=ruleTAXSegment
 		{
-			$current = $this_TDTSegment_154.current;
+			$current = $this_TAXSegment_154.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTEMSegmentParserRuleCall_155());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTCCSegmentParserRuleCall_155());
 		}
-		this_TEMSegment_155=ruleTEMSegment
+		this_TCCSegment_155=ruleTCCSegment
 		{
-			$current = $this_TEMSegment_155.current;
+			$current = $this_TCCSegment_155.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTMDSegmentParserRuleCall_156());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTDTSegmentParserRuleCall_156());
 		}
-		this_TMDSegment_156=ruleTMDSegment
+		this_TDTSegment_156=ruleTDTSegment
 		{
-			$current = $this_TMDSegment_156.current;
+			$current = $this_TDTSegment_156.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTMPSegmentParserRuleCall_157());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTEMSegmentParserRuleCall_157());
 		}
-		this_TMPSegment_157=ruleTMPSegment
+		this_TEMSegment_157=ruleTEMSegment
 		{
-			$current = $this_TMPSegment_157.current;
+			$current = $this_TEMSegment_157.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTODSegmentParserRuleCall_158());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTMDSegmentParserRuleCall_158());
 		}
-		this_TODSegment_158=ruleTODSegment
+		this_TMDSegment_158=ruleTMDSegment
 		{
-			$current = $this_TODSegment_158.current;
+			$current = $this_TMDSegment_158.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTPLSegmentParserRuleCall_159());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTMPSegmentParserRuleCall_159());
 		}
-		this_TPLSegment_159=ruleTPLSegment
+		this_TMPSegment_159=ruleTMPSegment
 		{
-			$current = $this_TPLSegment_159.current;
+			$current = $this_TMPSegment_159.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTRUSegmentParserRuleCall_160());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTODSegmentParserRuleCall_160());
 		}
-		this_TRUSegment_160=ruleTRUSegment
+		this_TODSegment_160=ruleTODSegment
 		{
-			$current = $this_TRUSegment_160.current;
+			$current = $this_TODSegment_160.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTSRSegmentParserRuleCall_161());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTPLSegmentParserRuleCall_161());
 		}
-		this_TSRSegment_161=ruleTSRSegment
+		this_TPLSegment_161=ruleTPLSegment
 		{
-			$current = $this_TSRSegment_161.current;
+			$current = $this_TPLSegment_161.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTVLSegmentParserRuleCall_162());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTRUSegmentParserRuleCall_162());
 		}
-		this_TVLSegment_162=ruleTVLSegment
+		this_TRUSegment_162=ruleTRUSegment
 		{
-			$current = $this_TVLSegment_162.current;
+			$current = $this_TRUSegment_162.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUCISegmentParserRuleCall_163());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTSRSegmentParserRuleCall_163());
 		}
-		this_UCISegment_163=ruleUCISegment
+		this_TSRSegment_163=ruleTSRSegment
 		{
-			$current = $this_UCISegment_163.current;
+			$current = $this_TSRSegment_163.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getVLISegmentParserRuleCall_164());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getTVLSegmentParserRuleCall_164());
 		}
-		this_VLISegment_164=ruleVLISegment
+		this_TVLSegment_164=ruleTVLSegment
 		{
-			$current = $this_VLISegment_164.current;
+			$current = $this_TVLSegment_164.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNSSegmentParserRuleCall_165());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUCISegmentParserRuleCall_165());
 		}
-		this_UNSSegment_165=ruleUNSSegment
+		this_UCISegment_165=ruleUCISegment
 		{
-			$current = $this_UNSSegment_165.current;
+			$current = $this_UCISegment_165.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNZSegmentParserRuleCall_166());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getVLISegmentParserRuleCall_166());
 		}
-		this_UNZSegment_166=ruleUNZSegment
+		this_VLISegment_166=ruleVLISegment
 		{
-			$current = $this_UNZSegment_166.current;
+			$current = $this_VLISegment_166.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNTSegmentParserRuleCall_167());
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNSSegmentParserRuleCall_167());
 		}
-		this_UNTSegment_167=ruleUNTSegment
+		this_UNSSegment_167=ruleUNSSegment
 		{
-			$current = $this_UNTSegment_167.current;
+			$current = $this_UNSSegment_167.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNZSegmentParserRuleCall_168());
+		}
+		this_UNZSegment_168=ruleUNZSegment
+		{
+			$current = $this_UNZSegment_168.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNTSegmentParserRuleCall_169());
+		}
+		this_UNTSegment_169=ruleUNTSegment
+		{
+			$current = $this_UNTSegment_169.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getAbstractEdiSegmentAccess().getUNESegmentParserRuleCall_170());
+		}
+		this_UNESegment_170=ruleUNESegment
+		{
+			$current = $this_UNESegment_170.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -2046,6 +2073,225 @@ ruleUNHSegment returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleUNGSegment
+entryRuleUNGSegment returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getUNGSegmentRule()); }
+	iv_ruleUNGSegment=ruleUNGSegment
+	{ $current=$iv_ruleUNGSegment.current; }
+	EOF;
+
+// Rule UNGSegment
+ruleUNGSegment returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_segment_0_0='UNG'
+				{
+					newLeafNode(lv_segment_0_0, grammarAccess.getUNGSegmentAccess().getSegmentUNGKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getUNGSegmentRule());
+					}
+					setWithLastConsumed($current, "segment", lv_segment_0_0, "UNG");
+				}
+			)
+		)
+		this_PLUS_1=RULE_PLUS
+		{
+			newLeafNode(this_PLUS_1, grammarAccess.getUNGSegmentAccess().getPLUSTerminalRuleCall_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getUNGSegmentAccess().getAddressUsageAddressUsageParserRuleCall_2_0());
+				}
+				lv_addressUsage_2_0=ruleAddressUsage
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getUNGSegmentRule());
+					}
+					set(
+						$current,
+						"addressUsage",
+						lv_addressUsage_2_0,
+						"io.thlaegler.edifact.Edilang.AddressUsage");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		this_PLUS_3=RULE_PLUS
+		{
+			newLeafNode(this_PLUS_3, grammarAccess.getUNGSegmentAccess().getPLUSTerminalRuleCall_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getUNGSegmentAccess().getAddressDetailsAddressDetailParserRuleCall_4_0());
+				}
+				lv_addressDetails_4_0=ruleAddressDetail
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getUNGSegmentRule());
+					}
+					set(
+						$current,
+						"addressDetails",
+						lv_addressDetails_4_0,
+						"io.thlaegler.edifact.Edilang.AddressDetail");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			this_PLUS_5=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_5, grammarAccess.getUNGSegmentAccess().getPLUSTerminalRuleCall_5_0());
+			}
+			(
+				(
+					lv_cityName_6_0=RULE_ID
+					{
+						newLeafNode(lv_cityName_6_0, grammarAccess.getUNGSegmentAccess().getCityNameIDTerminalRuleCall_5_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getUNGSegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"cityName",
+							lv_cityName_6_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_PLUS_7=RULE_PLUS
+				{
+					newLeafNode(this_PLUS_7, grammarAccess.getUNGSegmentAccess().getPLUSTerminalRuleCall_5_2_0());
+				}
+				(
+					(
+						lv_postalIdentificationCode_8_0=RULE_ID
+						{
+							newLeafNode(lv_postalIdentificationCode_8_0, grammarAccess.getUNGSegmentAccess().getPostalIdentificationCodeIDTerminalRuleCall_5_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getUNGSegmentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"postalIdentificationCode",
+								lv_postalIdentificationCode_8_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_PLUS_9=RULE_PLUS
+					{
+						newLeafNode(this_PLUS_9, grammarAccess.getUNGSegmentAccess().getPLUSTerminalRuleCall_5_2_2_0());
+					}
+					(
+						(
+							lv_countryNameCode_10_0=RULE_ID
+							{
+								newLeafNode(lv_countryNameCode_10_0, grammarAccess.getUNGSegmentAccess().getCountryNameCodeIDTerminalRuleCall_5_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getUNGSegmentRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"countryNameCode",
+									lv_countryNameCode_10_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+					(
+						this_PLUS_11=RULE_PLUS
+						{
+							newLeafNode(this_PLUS_11, grammarAccess.getUNGSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_0());
+						}
+						(
+							(
+								{
+									newCompositeNode(grammarAccess.getUNGSegmentAccess().getCountrySubEntityDetailsCountrySubEntityDetailParserRuleCall_5_2_2_2_1_0());
+								}
+								lv_countrySubEntityDetails_12_0=ruleCountrySubEntityDetail
+								{
+									if ($current==null) {
+										$current = createModelElementForParent(grammarAccess.getUNGSegmentRule());
+									}
+									set(
+										$current,
+										"countrySubEntityDetails",
+										lv_countrySubEntityDetails_12_0,
+										"io.thlaegler.edifact.Edilang.CountrySubEntityDetail");
+									afterParserOrEnumRuleCall();
+								}
+							)
+						)
+						(
+							this_PLUS_13=RULE_PLUS
+							{
+								newLeafNode(this_PLUS_13, grammarAccess.getUNGSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getUNGSegmentAccess().getLocationIdentificationLocationIdentificationParserRuleCall_5_2_2_2_2_1_0());
+									}
+									lv_locationIdentification_14_0=ruleLocationIdentification
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getUNGSegmentRule());
+										}
+										set(
+											$current,
+											"locationIdentification",
+											lv_locationIdentification_14_0,
+											"io.thlaegler.edifact.Edilang.LocationIdentification");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+						)?
+					)?
+				)?
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_15_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_15_0, grammarAccess.getUNGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getUNGSegmentRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"lineEnd",
+						lv_lineEnd_15_0,
+						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
+				}
+			)
+		)
+	)
+;
+
 // Entry rule entryRuleADRSegment
 entryRuleADRSegment returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getADRSegmentRule()); }
@@ -2082,27 +2328,173 @@ ruleADRSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getADRSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getADRSegmentAccess().getAddressUsageAddressUsageParserRuleCall_2_0());
 				}
+				lv_addressUsage_2_0=ruleAddressUsage
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getADRSegmentRule());
+						$current = createModelElementForParent(grammarAccess.getADRSegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"addressUsage",
+						lv_addressUsage_2_0,
+						"io.thlaegler.edifact.Edilang.AddressUsage");
+					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
+		this_PLUS_3=RULE_PLUS
+		{
+			newLeafNode(this_PLUS_3, grammarAccess.getADRSegmentAccess().getPLUSTerminalRuleCall_3());
+		}
 		(
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getADRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newCompositeNode(grammarAccess.getADRSegmentAccess().getAddressDetailsAddressDetailParserRuleCall_4_0());
+				}
+				lv_addressDetails_4_0=ruleAddressDetail
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getADRSegmentRule());
+					}
+					set(
+						$current,
+						"addressDetails",
+						lv_addressDetails_4_0,
+						"io.thlaegler.edifact.Edilang.AddressDetail");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			this_PLUS_5=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_5, grammarAccess.getADRSegmentAccess().getPLUSTerminalRuleCall_5_0());
+			}
+			(
+				(
+					lv_cityName_6_0=RULE_ID
+					{
+						newLeafNode(lv_cityName_6_0, grammarAccess.getADRSegmentAccess().getCityNameIDTerminalRuleCall_5_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getADRSegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"cityName",
+							lv_cityName_6_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_PLUS_7=RULE_PLUS
+				{
+					newLeafNode(this_PLUS_7, grammarAccess.getADRSegmentAccess().getPLUSTerminalRuleCall_5_2_0());
+				}
+				(
+					(
+						lv_postalIdentificationCode_8_0=RULE_ID
+						{
+							newLeafNode(lv_postalIdentificationCode_8_0, grammarAccess.getADRSegmentAccess().getPostalIdentificationCodeIDTerminalRuleCall_5_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getADRSegmentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"postalIdentificationCode",
+								lv_postalIdentificationCode_8_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_PLUS_9=RULE_PLUS
+					{
+						newLeafNode(this_PLUS_9, grammarAccess.getADRSegmentAccess().getPLUSTerminalRuleCall_5_2_2_0());
+					}
+					(
+						(
+							lv_countryNameCode_10_0=RULE_ID
+							{
+								newLeafNode(lv_countryNameCode_10_0, grammarAccess.getADRSegmentAccess().getCountryNameCodeIDTerminalRuleCall_5_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getADRSegmentRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"countryNameCode",
+									lv_countryNameCode_10_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+					(
+						this_PLUS_11=RULE_PLUS
+						{
+							newLeafNode(this_PLUS_11, grammarAccess.getADRSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_0());
+						}
+						(
+							(
+								{
+									newCompositeNode(grammarAccess.getADRSegmentAccess().getCountrySubEntityDetailsCountrySubEntityDetailParserRuleCall_5_2_2_2_1_0());
+								}
+								lv_countrySubEntityDetails_12_0=ruleCountrySubEntityDetail
+								{
+									if ($current==null) {
+										$current = createModelElementForParent(grammarAccess.getADRSegmentRule());
+									}
+									set(
+										$current,
+										"countrySubEntityDetails",
+										lv_countrySubEntityDetails_12_0,
+										"io.thlaegler.edifact.Edilang.CountrySubEntityDetail");
+									afterParserOrEnumRuleCall();
+								}
+							)
+						)
+						(
+							this_PLUS_13=RULE_PLUS
+							{
+								newLeafNode(this_PLUS_13, grammarAccess.getADRSegmentAccess().getPLUSTerminalRuleCall_5_2_2_2_2_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getADRSegmentAccess().getLocationIdentificationLocationIdentificationParserRuleCall_5_2_2_2_2_1_0());
+									}
+									lv_locationIdentification_14_0=ruleLocationIdentification
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getADRSegmentRule());
+										}
+										set(
+											$current,
+											"locationIdentification",
+											lv_locationIdentification_14_0,
+											"io.thlaegler.edifact.Edilang.LocationIdentification");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+						)?
+					)?
+				)?
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_15_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_15_0, grammarAccess.getADRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -2111,7 +2503,7 @@ ruleADRSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_15_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -2374,9 +2766,9 @@ ruleALISegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_countryOfOriginNameCode_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getALISegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_countryOfOriginNameCode_2_0, grammarAccess.getALISegmentAccess().getCountryOfOriginNameCodeIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -2384,17 +2776,64 @@ ruleALISegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"countryOfOriginNameCode",
+						lv_countryOfOriginNameCode_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
-		)
+		)?
+		this_PLUS_3=RULE_PLUS
+		{
+			newLeafNode(this_PLUS_3, grammarAccess.getALISegmentAccess().getPLUSTerminalRuleCall_3());
+		}
 		(
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getALISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newCompositeNode(grammarAccess.getALISegmentAccess().getDutyRegimeTypeCodeAddressDetailParserRuleCall_4_0());
+				}
+				lv_dutyRegimeTypeCode_4_0=ruleAddressDetail
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getALISegmentRule());
+					}
+					set(
+						$current,
+						"dutyRegimeTypeCode",
+						lv_dutyRegimeTypeCode_4_0,
+						"io.thlaegler.edifact.Edilang.AddressDetail");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			this_PLUS_5=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_5, grammarAccess.getALISegmentAccess().getPLUSTerminalRuleCall_5_0());
+			}
+			(
+				(
+					lv_specialConditionCodes_6_0=RULE_ID
+					{
+						newLeafNode(lv_specialConditionCodes_6_0, grammarAccess.getALISegmentAccess().getSpecialConditionCodesIDTerminalRuleCall_5_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getALISegmentRule());
+						}
+						addWithLastConsumed(
+							$current,
+							"specialConditionCodes",
+							lv_specialConditionCodes_6_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)*
+		(
+			(
+				lv_lineEnd_7_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_7_0, grammarAccess.getALISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -2403,7 +2842,7 @@ ruleALISegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_7_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -2812,9 +3251,9 @@ ruleATTSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_attributeFunctionCodeQualifier_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getATTSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_attributeFunctionCodeQualifier_2_0, grammarAccess.getATTSegmentAccess().getAttributeFunctionCodeQualifierIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -2822,17 +3261,67 @@ ruleATTSegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"attributeFunctionCodeQualifier",
+						lv_attributeFunctionCodeQualifier_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getATTSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getATTSegmentAccess().getAttributeTypeAttributeTypeParserRuleCall_3_1_0());
+					}
+					lv_attributeType_4_0=ruleAttributeType
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getATTSegmentRule());
+						}
+						set(
+							$current,
+							"attributeType",
+							lv_attributeType_4_0,
+							"io.thlaegler.edifact.Edilang.AttributeType");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getATTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(this_PLUS_5, grammarAccess.getATTSegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getATTSegmentAccess().getAttributeDetailAttributeDetailParserRuleCall_3_2_1_0());
+						}
+						lv_attributeDetail_6_0=ruleAttributeDetail
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getATTSegmentRule());
+							}
+							set(
+								$current,
+								"attributeDetail",
+								lv_attributeDetail_6_0,
+								"io.thlaegler.edifact.Edilang.AttributeDetail");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_7_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_7_0, grammarAccess.getATTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -2841,7 +3330,7 @@ ruleATTSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_7_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -2958,9 +3447,9 @@ ruleBASSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_basisCodeQualifier_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getBASSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_basisCodeQualifier_2_0, grammarAccess.getBASSegmentAccess().getBasisCodeQualifierIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -2968,17 +3457,42 @@ ruleBASSegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"basisCodeQualifier",
+						lv_basisCodeQualifier_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getBASSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getBASSegmentAccess().getBasisTypeBasisTypeParserRuleCall_3_1_0());
+					}
+					lv_basisType_4_0=ruleBasisType
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBASSegmentRule());
+						}
+						set(
+							$current,
+							"basisType",
+							lv_basisType_4_0,
+							"io.thlaegler.edifact.Edilang.BasisType");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getBASSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getBASSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -2987,7 +3501,7 @@ ruleBASSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -3104,27 +3618,125 @@ ruleBUSSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getBUSSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getBUSSegmentAccess().getBusinessFunctionBusinessFunctionParserRuleCall_2_0());
 				}
+				lv_businessFunction_2_0=ruleBusinessFunction
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getBUSSegmentRule());
+						$current = createModelElementForParent(grammarAccess.getBUSSegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"businessFunction",
+						lv_businessFunction_2_0,
+						"io.thlaegler.edifact.Edilang.BusinessFunction");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getBUSSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					lv_geographicAreaCode_4_0=RULE_ID
+					{
+						newLeafNode(lv_geographicAreaCode_4_0, grammarAccess.getBUSSegmentAccess().getGeographicAreaCodeIDTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getBUSSegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"geographicAreaCode",
+							lv_geographicAreaCode_4_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getBUSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(this_PLUS_5, grammarAccess.getBUSSegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						lv_financialTransactionTypeCode_6_0=RULE_ID
+						{
+							newLeafNode(lv_financialTransactionTypeCode_6_0, grammarAccess.getBUSSegmentAccess().getFinancialTransactionTypeCodeIDTerminalRuleCall_3_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getBUSSegmentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"financialTransactionTypeCode",
+								lv_financialTransactionTypeCode_6_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_PLUS_7=RULE_PLUS
+					{
+						newLeafNode(this_PLUS_7, grammarAccess.getBUSSegmentAccess().getPLUSTerminalRuleCall_3_2_2_0());
+					}
+					(
+						(
+							{
+								newCompositeNode(grammarAccess.getBUSSegmentAccess().getBankOperationBankOperationParserRuleCall_3_2_2_1_0());
+							}
+							lv_bankOperation_8_0=ruleBankOperation
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getBUSSegmentRule());
+								}
+								set(
+									$current,
+									"bankOperation",
+									lv_bankOperation_8_0,
+									"io.thlaegler.edifact.Edilang.BankOperation");
+								afterParserOrEnumRuleCall();
+							}
+						)
+					)
+					(
+						this_PLUS_9=RULE_PLUS
+						{
+							newLeafNode(this_PLUS_9, grammarAccess.getBUSSegmentAccess().getPLUSTerminalRuleCall_3_2_2_2_0());
+						}
+						(
+							(
+								lv_intraCompanyPaymentIndicatorCode_10_0=RULE_ID
+								{
+									newLeafNode(lv_intraCompanyPaymentIndicatorCode_10_0, grammarAccess.getBUSSegmentAccess().getIntraCompanyPaymentIndicatorCodeIDTerminalRuleCall_3_2_2_2_1_0());
+								}
+								{
+									if ($current==null) {
+										$current = createModelElement(grammarAccess.getBUSSegmentRule());
+									}
+									setWithLastConsumed(
+										$current,
+										"intraCompanyPaymentIndicatorCode",
+										lv_intraCompanyPaymentIndicatorCode_10_0,
+										"io.thlaegler.edifact.Edilang.ID");
+								}
+							)
+						)
+					)?
+				)?
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_11_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_11_0, grammarAccess.getBUSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -3133,7 +3745,7 @@ ruleBUSSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_11_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -7557,9 +8169,9 @@ ruleIDESegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_objectTypeCodeQualifier_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getIDESegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_objectTypeCodeQualifier_2_0, grammarAccess.getIDESegmentAccess().getObjectTypeCodeQualifierIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -7567,17 +8179,165 @@ ruleIDESegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"objectTypeCodeQualifier",
+						lv_objectTypeCodeQualifier_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getIDESegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getIDESegmentAccess().getIdentificationNumberIdentificationNumberParserRuleCall_3_1_0());
+					}
+					lv_identificationNumber_4_0=ruleIdentificationNumber
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getIDESegmentRule());
+						}
+						set(
+							$current,
+							"identificationNumber",
+							lv_identificationNumber_4_0,
+							"io.thlaegler.edifact.Edilang.IdentificationNumber");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getIDESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(this_PLUS_5, grammarAccess.getIDESegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getIDESegmentAccess().getPartyIdentificationDetailsPartyIdentificationDetailParserRuleCall_3_2_1_0());
+						}
+						lv_partyIdentificationDetails_6_0=rulePartyIdentificationDetail
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getIDESegmentRule());
+							}
+							set(
+								$current,
+								"partyIdentificationDetails",
+								lv_partyIdentificationDetails_6_0,
+								"io.thlaegler.edifact.Edilang.PartyIdentificationDetail");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				(
+					this_PLUS_7=RULE_PLUS
+					{
+						newLeafNode(this_PLUS_7, grammarAccess.getIDESegmentAccess().getPLUSTerminalRuleCall_3_2_2_0());
+					}
+					(
+						(
+							lv_statusDescriptionCode_8_0=RULE_ID
+							{
+								newLeafNode(lv_statusDescriptionCode_8_0, grammarAccess.getIDESegmentAccess().getStatusDescriptionCodeIDTerminalRuleCall_3_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getIDESegmentRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"statusDescriptionCode",
+									lv_statusDescriptionCode_8_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+					(
+						this_PLUS_9=RULE_PLUS
+						{
+							newLeafNode(this_PLUS_9, grammarAccess.getIDESegmentAccess().getPLUSTerminalRuleCall_3_2_2_2_0());
+						}
+						(
+							(
+								lv_configurationLevelNumber_10_0=RULE_ID
+								{
+									newLeafNode(lv_configurationLevelNumber_10_0, grammarAccess.getIDESegmentAccess().getConfigurationLevelNumberIDTerminalRuleCall_3_2_2_2_1_0());
+								}
+								{
+									if ($current==null) {
+										$current = createModelElement(grammarAccess.getIDESegmentRule());
+									}
+									setWithLastConsumed(
+										$current,
+										"configurationLevelNumber",
+										lv_configurationLevelNumber_10_0,
+										"io.thlaegler.edifact.Edilang.ID");
+								}
+							)
+						)
+						(
+							this_PLUS_11=RULE_PLUS
+							{
+								newLeafNode(this_PLUS_11, grammarAccess.getIDESegmentAccess().getPLUSTerminalRuleCall_3_2_2_2_2_0());
+							}
+							(
+								(
+									{
+										newCompositeNode(grammarAccess.getIDESegmentAccess().getPositionIdentificationPositionIdentificationParserRuleCall_3_2_2_2_2_1_0());
+									}
+									lv_positionIdentification_12_0=rulePositionIdentification
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getIDESegmentRule());
+										}
+										set(
+											$current,
+											"positionIdentification",
+											lv_positionIdentification_12_0,
+											"io.thlaegler.edifact.Edilang.PositionIdentification");
+										afterParserOrEnumRuleCall();
+									}
+								)
+							)
+							(
+								this_PLUS_13=RULE_PLUS
+								{
+									newLeafNode(this_PLUS_13, grammarAccess.getIDESegmentAccess().getPLUSTerminalRuleCall_3_2_2_2_2_2_0());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getIDESegmentAccess().getProductCharacteristicProductCharacteristicParserRuleCall_3_2_2_2_2_2_1_0());
+										}
+										lv_productCharacteristic_14_0=ruleProductCharacteristic
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getIDESegmentRule());
+											}
+											set(
+												$current,
+												"productCharacteristic",
+												lv_productCharacteristic_14_0,
+												"io.thlaegler.edifact.Edilang.ProductCharacteristic");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)?
+						)?
+					)?
+				)?
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_15_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_15_0, grammarAccess.getIDESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -7586,7 +8346,7 @@ ruleIDESegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_15_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -7849,27 +8609,53 @@ ruleINDSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getINDSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getINDSegmentAccess().getIndexIdentificationIndexIdentificationParserRuleCall_2_0());
 				}
+				lv_indexIdentification_2_0=ruleIndexIdentification
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getINDSegmentRule());
+						$current = createModelElementForParent(grammarAccess.getINDSegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"indexIdentification",
+						lv_indexIdentification_2_0,
+						"io.thlaegler.edifact.Edilang.IndexIdentification");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getINDSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getINDSegmentAccess().getIndexValueIndexValueParserRuleCall_3_1_0());
+					}
+					lv_indexValue_4_0=ruleIndexValue
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getINDSegmentRule());
+						}
+						set(
+							$current,
+							"indexValue",
+							lv_indexValue_4_0,
+							"io.thlaegler.edifact.Edilang.IndexValue");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getINDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getINDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -7878,7 +8664,7 @@ ruleINDSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -8068,19 +8854,20 @@ ruleIRQSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getIRQSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getIRQSegmentAccess().getInformationRequestInformationRequestParserRuleCall_2_0());
 				}
+				lv_informationRequest_2_0=ruleInformationRequest
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getIRQSegmentRule());
+						$current = createModelElementForParent(grammarAccess.getIRQSegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"informationRequest",
+						lv_informationRequest_2_0,
+						"io.thlaegler.edifact.Edilang.InformationRequest");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -8141,9 +8928,9 @@ ruleLANSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_languageCodeQualifier_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getLANSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_languageCodeQualifier_2_0, grammarAccess.getLANSegmentAccess().getLanguageCodeQualifierIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -8151,17 +8938,42 @@ ruleLANSegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"languageCodeQualifier",
+						lv_languageCodeQualifier_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getLANSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getLANSegmentAccess().getLanguageDetailsLanguageDetailParserRuleCall_3_1_0());
+					}
+					lv_languageDetails_4_0=ruleLanguageDetail
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getLANSegmentRule());
+						}
+						set(
+							$current,
+							"languageDetails",
+							lv_languageDetails_4_0,
+							"io.thlaegler.edifact.Edilang.LanguageDetail");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getLANSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getLANSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -8170,7 +8982,7 @@ ruleLANSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -8506,9 +9318,9 @@ ruleNATSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_nationalityCodeQualifier_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getNATSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_nationalityCodeQualifier_2_0, grammarAccess.getNATSegmentAccess().getNationalityCodeQualifierIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -8516,17 +9328,42 @@ ruleNATSegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"nationalityCodeQualifier",
+						lv_nationalityCodeQualifier_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getNATSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getNATSegmentAccess().getNationalityDetailsNationalityDetailParserRuleCall_3_1_0());
+					}
+					lv_nationalityDetails_4_0=ruleNationalityDetail
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getNATSegmentRule());
+						}
+						set(
+							$current,
+							"nationalityDetails",
+							lv_nationalityDetails_4_0,
+							"io.thlaegler.edifact.Edilang.NationalityDetail");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getNATSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getNATSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -8535,7 +9372,7 @@ ruleNATSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -8871,27 +9708,52 @@ rulePCDSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getPCDSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPCDSegmentAccess().getPercentageDetailsPercentageDetailParserRuleCall_2_0());
 				}
+				lv_percentageDetails_2_0=rulePercentageDetail
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPCDSegmentRule());
+						$current = createModelElementForParent(grammarAccess.getPCDSegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"percentageDetails",
+						lv_percentageDetails_2_0,
+						"io.thlaegler.edifact.Edilang.PercentageDetail");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getPCDSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					lv_statusDescriptionCode_4_0=RULE_ID
+					{
+						newLeafNode(lv_statusDescriptionCode_4_0, grammarAccess.getPCDSegmentAccess().getStatusDescriptionCodeIDTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPCDSegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"statusDescriptionCode",
+							lv_statusDescriptionCode_4_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getPCDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getPCDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -8900,7 +9762,7 @@ rulePCDSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -9747,27 +10609,77 @@ ruleQVRSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getQVRSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getQVRSegmentAccess().getQuantityDifferenceInformationQuantityDifferenceInformationParserRuleCall_2_0());
 				}
+				lv_quantityDifferenceInformation_2_0=ruleQuantityDifferenceInformation
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getQVRSegmentRule());
+						$current = createModelElementForParent(grammarAccess.getQVRSegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"quantityDifferenceInformation",
+						lv_quantityDifferenceInformation_2_0,
+						"io.thlaegler.edifact.Edilang.QuantityDifferenceInformation");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getQVRSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					lv_discrepancyNatureIdentificationCode_4_0=RULE_ID
+					{
+						newLeafNode(lv_discrepancyNatureIdentificationCode_4_0, grammarAccess.getQVRSegmentAccess().getDiscrepancyNatureIdentificationCodeIDTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getQVRSegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"discrepancyNatureIdentificationCode",
+							lv_discrepancyNatureIdentificationCode_4_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getQVRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(this_PLUS_5, grammarAccess.getQVRSegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getQVRSegmentAccess().getReasonForChangeReasonForChangeParserRuleCall_3_2_1_0());
+						}
+						lv_reasonForChange_6_0=ruleReasonForChange
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getQVRSegmentRule());
+							}
+							set(
+								$current,
+								"reasonForChange",
+								lv_reasonForChange_6_0,
+								"io.thlaegler.edifact.Edilang.ReasonForChange");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)
+		)
+		(
+			(
+				lv_lineEnd_7_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_7_0, grammarAccess.getQVRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -9776,7 +10688,7 @@ ruleQVRSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_7_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -10258,27 +11170,52 @@ ruleRTESegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getRTESegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getRTESegmentAccess().getRateDetailsRateDetailParserRuleCall_2_0());
 				}
+				lv_rateDetails_2_0=ruleRateDetail
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRTESegmentRule());
+						$current = createModelElementForParent(grammarAccess.getRTESegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"rateDetails",
+						lv_rateDetails_2_0,
+						"io.thlaegler.edifact.Edilang.RateDetail");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getRTESegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					lv_statusDescriptionCode_4_0=RULE_ID
+					{
+						newLeafNode(lv_statusDescriptionCode_4_0, grammarAccess.getRTESegmentAccess().getStatusDescriptionCodeIDTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getRTESegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"statusDescriptionCode",
+							lv_statusDescriptionCode_4_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getRTESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getRTESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -10287,7 +11224,7 @@ ruleRTESegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -10550,9 +11487,9 @@ ruleSEGSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_segmentTagIdentifer_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getSEGSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_segmentTagIdentifer_2_0, grammarAccess.getSEGSegmentAccess().getSegmentTagIdentiferIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -10560,17 +11497,65 @@ ruleSEGSegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"segmentTagIdentifer",
+						lv_segmentTagIdentifer_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getSEGSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					lv_designatedClassCode_4_0=RULE_ID
+					{
+						newLeafNode(lv_designatedClassCode_4_0, grammarAccess.getSEGSegmentAccess().getDesignatedClassCodeIDTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getSEGSegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"designatedClassCode",
+							lv_designatedClassCode_4_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getSEGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(this_PLUS_5, grammarAccess.getSEGSegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						lv_maintenanceOperationCode_6_0=RULE_ID
+						{
+							newLeafNode(lv_maintenanceOperationCode_6_0, grammarAccess.getSEGSegmentAccess().getMaintenanceOperationCodeIDTerminalRuleCall_3_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getSEGSegmentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"maintenanceOperationCode",
+								lv_maintenanceOperationCode_6_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_7_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_7_0, grammarAccess.getSEGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -10579,7 +11564,7 @@ ruleSEGSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_7_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -11353,13 +12338,137 @@ ruleSTSSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getSTSSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getSTSSegmentAccess().getStatusCategoryStatusCategoryParserRuleCall_2_0());
+				}
+				lv_statusCategory_2_0=ruleStatusCategory
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getSTSSegmentRule());
+					}
+					set(
+						$current,
+						"statusCategory",
+						lv_statusCategory_2_0,
+						"io.thlaegler.edifact.Edilang.StatusCategory");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getSTSSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getSTSSegmentAccess().getStatusStatusParserRuleCall_3_1_0());
+					}
+					lv_status_4_0=ruleStatus
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getSTSSegmentRule());
+						}
+						set(
+							$current,
+							"status",
+							lv_status_4_0,
+							"io.thlaegler.edifact.Edilang.Status");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
+				{
+					newLeafNode(this_PLUS_5, grammarAccess.getSTSSegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getSTSSegmentAccess().getStatusReasonsStatusReasonParserRuleCall_3_2_1_0());
+						}
+						lv_statusReasons_6_0=ruleStatusReason
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getSTSSegmentRule());
+							}
+							add(
+								$current,
+								"statusReasons",
+								lv_statusReasons_6_0,
+								"io.thlaegler.edifact.Edilang.StatusReason");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+		)?
+		(
+			(
+				lv_lineEnd_7_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_7_0, grammarAccess.getSTSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getSTSSegmentRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"lineEnd",
+						lv_lineEnd_7_0,
+						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleSTXSegment
+entryRuleSTXSegment returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSTXSegmentRule()); }
+	iv_ruleSTXSegment=ruleSTXSegment
+	{ $current=$iv_ruleSTXSegment.current; }
+	EOF;
+
+// Rule STXSegment
+ruleSTXSegment returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_segment_0_0='STX'
+				{
+					newLeafNode(lv_segment_0_0, grammarAccess.getSTXSegmentAccess().getSegmentSTXKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSTXSegmentRule());
+					}
+					setWithLastConsumed($current, "segment", lv_segment_0_0, "STX");
+				}
+			)
+		)
+		this_PLUS_1=RULE_PLUS
+		{
+			newLeafNode(this_PLUS_1, grammarAccess.getSTXSegmentAccess().getPLUSTerminalRuleCall_1());
+		}
+		(
+			(
+				lv_todo_2_0=RULE_ID
+				{
+					newLeafNode(lv_todo_2_0, grammarAccess.getSTXSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSTXSegmentRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -11373,11 +12482,11 @@ ruleSTSSegment returns [EObject current=null]
 			(
 				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getSTSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_3_0, grammarAccess.getSTXSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getSTSSegmentRule());
+						$current = createModelElement(grammarAccess.getSTXSegmentRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -11791,9 +12900,9 @@ ruleTODSegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_deliveryTransportTermsFunctionCode_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getTODSegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_deliveryTransportTermsFunctionCode_2_0, grammarAccess.getTODSegmentAccess().getDeliveryTransportTermsFunctionCodeIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -11801,17 +12910,66 @@ ruleTODSegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"deliveryTransportTermsFunctionCode",
+						lv_deliveryTransportTermsFunctionCode_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getTODSegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					lv_transportChargesPaumentMethodCode_4_0=RULE_ID
+					{
+						newLeafNode(lv_transportChargesPaumentMethodCode_4_0, grammarAccess.getTODSegmentAccess().getTransportChargesPaumentMethodCodeIDTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTODSegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"transportChargesPaumentMethodCode",
+							lv_transportChargesPaumentMethodCode_4_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getTODSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(this_PLUS_5, grammarAccess.getTODSegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getTODSegmentAccess().getTermsOfDeliveryTransportTermsOfDeliveryTransportParserRuleCall_3_2_1_0());
+						}
+						lv_termsOfDeliveryTransport_6_0=ruleTermsOfDeliveryTransport
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getTODSegmentRule());
+							}
+							set(
+								$current,
+								"termsOfDeliveryTransport",
+								lv_termsOfDeliveryTransport_6_0,
+								"io.thlaegler.edifact.Edilang.TermsOfDeliveryTransport");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_7_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_7_0, grammarAccess.getTODSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -11820,7 +12978,7 @@ ruleTODSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_7_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -12083,27 +13241,174 @@ ruleVLISegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getVLISegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVLISegmentAccess().getValueListIdentificationValueListIdentificationParserRuleCall_2_0());
 				}
+				lv_valueListIdentification_2_0=ruleValueListIdentification
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVLISegmentRule());
+						$current = createModelElementForParent(grammarAccess.getVLISegmentRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
-						"todo",
-						lv_todo_2_0,
-						"io.thlaegler.edifact.Edilang.ID");
+						"valueListIdentification",
+						lv_valueListIdentification_2_0,
+						"io.thlaegler.edifact.Edilang.ValueListIdentification");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getVLISegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getVLISegmentAccess().getPartyIdentificationDetailsPartyIdentificationDetailParserRuleCall_3_1_0());
+					}
+					lv_partyIdentificationDetails_4_0=rulePartyIdentificationDetail
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVLISegmentRule());
+						}
+						set(
+							$current,
+							"partyIdentificationDetails",
+							lv_partyIdentificationDetails_4_0,
+							"io.thlaegler.edifact.Edilang.PartyIdentificationDetail");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				this_PLUS_5=RULE_PLUS
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getVLISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(this_PLUS_5, grammarAccess.getVLISegmentAccess().getPLUSTerminalRuleCall_3_2_0());
+				}
+				(
+					(
+						lv_statusDescriptionCode_6_0=RULE_ID
+						{
+							newLeafNode(lv_statusDescriptionCode_6_0, grammarAccess.getVLISegmentAccess().getStatusDescriptionCodeIDTerminalRuleCall_3_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getVLISegmentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"statusDescriptionCode",
+								lv_statusDescriptionCode_6_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_PLUS_7=RULE_PLUS
+					{
+						newLeafNode(this_PLUS_7, grammarAccess.getVLISegmentAccess().getPLUSTerminalRuleCall_3_2_2_0());
+					}
+					(
+						(
+							lv_valueListName_8_0=RULE_ID
+							{
+								newLeafNode(lv_valueListName_8_0, grammarAccess.getVLISegmentAccess().getValueListNameIDTerminalRuleCall_3_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getVLISegmentRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"valueListName",
+									lv_valueListName_8_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+					(
+						this_PLUS_9=RULE_PLUS
+						{
+							newLeafNode(this_PLUS_9, grammarAccess.getVLISegmentAccess().getPLUSTerminalRuleCall_3_2_2_2_0());
+						}
+						(
+							(
+								lv_designatedClassCode_10_0=RULE_ID
+								{
+									newLeafNode(lv_designatedClassCode_10_0, grammarAccess.getVLISegmentAccess().getDesignatedClassCodeIDTerminalRuleCall_3_2_2_2_1_0());
+								}
+								{
+									if ($current==null) {
+										$current = createModelElement(grammarAccess.getVLISegmentRule());
+									}
+									setWithLastConsumed(
+										$current,
+										"designatedClassCode",
+										lv_designatedClassCode_10_0,
+										"io.thlaegler.edifact.Edilang.ID");
+								}
+							)
+						)
+						(
+							this_PLUS_11=RULE_PLUS
+							{
+								newLeafNode(this_PLUS_11, grammarAccess.getVLISegmentAccess().getPLUSTerminalRuleCall_3_2_2_2_2_0());
+							}
+							(
+								(
+									lv_valueListTypeCode_12_0=RULE_ID
+									{
+										newLeafNode(lv_valueListTypeCode_12_0, grammarAccess.getVLISegmentAccess().getValueListTypeCodeIDTerminalRuleCall_3_2_2_2_2_1_0());
+									}
+									{
+										if ($current==null) {
+											$current = createModelElement(grammarAccess.getVLISegmentRule());
+										}
+										setWithLastConsumed(
+											$current,
+											"valueListTypeCode",
+											lv_valueListTypeCode_12_0,
+											"io.thlaegler.edifact.Edilang.ID");
+									}
+								)
+							)
+							(
+								this_PLUS_13=RULE_PLUS
+								{
+									newLeafNode(this_PLUS_13, grammarAccess.getVLISegmentAccess().getPLUSTerminalRuleCall_3_2_2_2_2_2_0());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getVLISegmentAccess().getProductCharacteristicProductCharacteristicParserRuleCall_3_2_2_2_2_2_1_0());
+										}
+										lv_productCharacteristic_14_0=ruleProductCharacteristic
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getVLISegmentRule());
+											}
+											set(
+												$current,
+												"productCharacteristic",
+												lv_productCharacteristic_14_0,
+												"io.thlaegler.edifact.Edilang.ProductCharacteristic");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+							)?
+						)?
+					)?
+				)?
+			)?
+		)?
+		(
+			(
+				lv_lineEnd_15_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_15_0, grammarAccess.getVLISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -12112,7 +13417,7 @@ ruleVLISegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_15_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -13873,27 +15178,51 @@ rulePRISegment returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPRISegmentAccess().getSubPriceInformationParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPRISegmentAccess().getPriceInformationPriceInformationParserRuleCall_2_0());
 				}
-				lv_sub_2_0=rulePriceInformation
+				lv_priceInformation_2_0=rulePriceInformation
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPRISegmentRule());
 					}
 					set(
 						$current,
-						"sub",
-						lv_sub_2_0,
+						"priceInformation",
+						lv_priceInformation_2_0,
 						"io.thlaegler.edifact.Edilang.PriceInformation");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getPRISegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					lv_subLineItemPriceChangeOperationCode_4_0=RULE_ID
+					{
+						newLeafNode(lv_subLineItemPriceChangeOperationCode_4_0, grammarAccess.getPRISegmentAccess().getSubLineItemPriceChangeOperationCodeIDTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPRISegmentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"subLineItemPriceChangeOperationCode",
+							lv_subLineItemPriceChangeOperationCode_4_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getPRISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getPRISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -13902,7 +15231,7 @@ rulePRISegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -15285,51 +16614,28 @@ ruleCNTSegment returns [EObject current=null]
 		}
 		(
 			(
-				(
-					lv_todo1_2_0=RULE_ID
-					{
-						newLeafNode(lv_todo1_2_0, grammarAccess.getCNTSegmentAccess().getTodo1IDTerminalRuleCall_2_0_0());
+				{
+					newCompositeNode(grammarAccess.getCNTSegmentAccess().getControlControlParserRuleCall_2_0());
+				}
+				lv_control_2_0=ruleControl
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getCNTSegmentRule());
 					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getCNTSegmentRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"todo1",
-							lv_todo1_2_0,
-							"io.thlaegler.edifact.Edilang.ID");
-					}
-				)
-			)?
-			this_COLON_3=RULE_COLON
-			{
-				newLeafNode(this_COLON_3, grammarAccess.getCNTSegmentAccess().getCOLONTerminalRuleCall_2_1());
-			}
-			(
-				(
-					lv_todo2_4_0=RULE_ID
-					{
-						newLeafNode(lv_todo2_4_0, grammarAccess.getCNTSegmentAccess().getTodo2IDTerminalRuleCall_2_2_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getCNTSegmentRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"todo2",
-							lv_todo2_4_0,
-							"io.thlaegler.edifact.Edilang.ID");
-					}
-				)
-			)?
-		)?
+					set(
+						$current,
+						"control",
+						lv_control_2_0,
+						"io.thlaegler.edifact.Edilang.Control");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 		(
 			(
-				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
+				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_5_0, grammarAccess.getCNTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_3_0, grammarAccess.getCNTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -15338,7 +16644,7 @@ ruleCNTSegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_5_0,
+						lv_lineEnd_3_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -15382,9 +16688,9 @@ ruleCTASegment returns [EObject current=null]
 		}
 		(
 			(
-				lv_todo_2_0=RULE_ID
+				lv_contactFunctionCode_2_0=RULE_ID
 				{
-					newLeafNode(lv_todo_2_0, grammarAccess.getCTASegmentAccess().getTodoIDTerminalRuleCall_2_0());
+					newLeafNode(lv_contactFunctionCode_2_0, grammarAccess.getCTASegmentAccess().getContactFunctionCodeIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -15392,17 +16698,42 @@ ruleCTASegment returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"todo",
-						lv_todo_2_0,
+						"contactFunctionCode",
+						lv_contactFunctionCode_2_0,
 						"io.thlaegler.edifact.Edilang.ID");
 				}
 			)
 		)?
 		(
+			this_PLUS_3=RULE_PLUS
+			{
+				newLeafNode(this_PLUS_3, grammarAccess.getCTASegmentAccess().getPLUSTerminalRuleCall_3_0());
+			}
 			(
-				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				(
+					{
+						newCompositeNode(grammarAccess.getCTASegmentAccess().getDepartmentEmployeeDetailsDepartmentEmployeeDetailParserRuleCall_3_1_0());
+					}
+					lv_departmentEmployeeDetails_4_0=ruleDepartmentEmployeeDetail
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getCTASegmentRule());
+						}
+						set(
+							$current,
+							"departmentEmployeeDetails",
+							lv_departmentEmployeeDetails_4_0,
+							"io.thlaegler.edifact.Edilang.DepartmentEmployeeDetail");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			(
+				lv_lineEnd_5_0=RULE_QUOTE_AND_NL
 				{
-					newLeafNode(lv_lineEnd_3_0, grammarAccess.getCTASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+					newLeafNode(lv_lineEnd_5_0, grammarAccess.getCTASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -15411,7 +16742,7 @@ ruleCTASegment returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"lineEnd",
-						lv_lineEnd_3_0,
+						lv_lineEnd_5_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -15748,6 +17079,79 @@ ruleUNZSegment returns [EObject current=null]
 						$current,
 						"lineEnd",
 						lv_lineEnd_5_0,
+						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleUNESegment
+entryRuleUNESegment returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getUNESegmentRule()); }
+	iv_ruleUNESegment=ruleUNESegment
+	{ $current=$iv_ruleUNESegment.current; }
+	EOF;
+
+// Rule UNESegment
+ruleUNESegment returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_segment_0_0='UNE'
+				{
+					newLeafNode(lv_segment_0_0, grammarAccess.getUNESegmentAccess().getSegmentUNEKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getUNESegmentRule());
+					}
+					setWithLastConsumed($current, "segment", lv_segment_0_0, "UNE");
+				}
+			)
+		)
+		this_PLUS_1=RULE_PLUS
+		{
+			newLeafNode(this_PLUS_1, grammarAccess.getUNESegmentAccess().getPLUSTerminalRuleCall_1());
+		}
+		(
+			(
+				lv_todo_2_0=RULE_ID
+				{
+					newLeafNode(lv_todo_2_0, grammarAccess.getUNESegmentAccess().getTodoIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getUNESegmentRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"todo",
+						lv_todo_2_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)?
+		(
+			(
+				lv_lineEnd_3_0=RULE_QUOTE_AND_NL
+				{
+					newLeafNode(lv_lineEnd_3_0, grammarAccess.getUNESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getUNESegmentRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"lineEnd",
+						lv_lineEnd_3_0,
 						"io.thlaegler.edifact.Edilang.QUOTE_AND_NL");
 				}
 			)
@@ -18420,6 +19824,2565 @@ ruleInterchangerFunction returns [EObject current=null]
 					}
 				)
 			)
+		)?
+	)
+;
+
+// Entry rule entryRuleLocationIdentification
+entryRuleLocationIdentification returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getLocationIdentificationRule()); }
+	iv_ruleLocationIdentification=ruleLocationIdentification
+	{ $current=$iv_ruleLocationIdentification.current; }
+	EOF;
+
+// Rule LocationIdentification
+ruleLocationIdentification returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_locationNameCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_locationNameCode_0_0, grammarAccess.getLocationIdentificationAccess().getLocationNameCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getLocationIdentificationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"locationNameCode",
+						lv_locationNameCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getLocationIdentificationAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getLocationIdentificationAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getLocationIdentificationRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getLocationIdentificationAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getLocationIdentificationAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getLocationIdentificationRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getLocationIdentificationAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_locationName_6_0=RULE_ID
+							{
+								newLeafNode(lv_locationName_6_0, grammarAccess.getLocationIdentificationAccess().getLocationNameIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getLocationIdentificationRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"locationName",
+									lv_locationName_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleAddressDetail
+entryRuleAddressDetail returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAddressDetailRule()); }
+	iv_ruleAddressDetail=ruleAddressDetail
+	{ $current=$iv_ruleAddressDetail.current; }
+	EOF;
+
+// Rule AddressDetail
+ruleAddressDetail returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_addressFormatCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_addressFormatCode_0_0, grammarAccess.getAddressDetailAccess().getAddressFormatCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAddressDetailRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"addressFormatCode",
+						lv_addressFormatCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getAddressDetailAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_addressComponentDescriptions_2_0=RULE_ID
+					{
+						newLeafNode(lv_addressComponentDescriptions_2_0, grammarAccess.getAddressDetailAccess().getAddressComponentDescriptionsIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAddressDetailRule());
+						}
+						addWithLastConsumed(
+							$current,
+							"addressComponentDescriptions",
+							lv_addressComponentDescriptions_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)*
+	)
+;
+
+// Entry rule entryRuleAddressUsage
+entryRuleAddressUsage returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAddressUsageRule()); }
+	iv_ruleAddressUsage=ruleAddressUsage
+	{ $current=$iv_ruleAddressUsage.current; }
+	EOF;
+
+// Rule AddressUsage
+ruleAddressUsage returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_addressPurposeCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_addressPurposeCode_0_0, grammarAccess.getAddressUsageAccess().getAddressPurposeCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAddressUsageRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"addressPurposeCode",
+						lv_addressPurposeCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getAddressUsageAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_addressTypeCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_addressTypeCode_2_0, grammarAccess.getAddressUsageAccess().getAddressTypeCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAddressUsageRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"addressTypeCode",
+							lv_addressTypeCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getAddressUsageAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_addressStatusCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_addressStatusCode_4_0, grammarAccess.getAddressUsageAccess().getAddressStatusCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAddressUsageRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"addressStatusCode",
+								lv_addressStatusCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleAttributeDetail
+entryRuleAttributeDetail returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAttributeDetailRule()); }
+	iv_ruleAttributeDetail=ruleAttributeDetail
+	{ $current=$iv_ruleAttributeDetail.current; }
+	EOF;
+
+// Rule AttributeDetail
+ruleAttributeDetail returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_attributeDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_attributeDescriptionCode_0_0, grammarAccess.getAttributeDetailAccess().getAttributeDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAttributeDetailRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"attributeDescriptionCode",
+						lv_attributeDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getAttributeDetailAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getAttributeDetailAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAttributeDetailRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getAttributeDetailAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getAttributeDetailAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAttributeDetailRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getAttributeDetailAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_attributeDescription_6_0=RULE_ID
+							{
+								newLeafNode(lv_attributeDescription_6_0, grammarAccess.getAttributeDetailAccess().getAttributeDescriptionIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getAttributeDetailRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"attributeDescription",
+									lv_attributeDescription_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleAttributeType
+entryRuleAttributeType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAttributeTypeRule()); }
+	iv_ruleAttributeType=ruleAttributeType
+	{ $current=$iv_ruleAttributeType.current; }
+	EOF;
+
+// Rule AttributeType
+ruleAttributeType returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_attributeTypeDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_attributeTypeDescriptionCode_0_0, grammarAccess.getAttributeTypeAccess().getAttributeTypeDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAttributeTypeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"attributeTypeDescriptionCode",
+						lv_attributeTypeDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getAttributeTypeAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getAttributeTypeAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAttributeTypeRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getAttributeTypeAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getAttributeTypeAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAttributeTypeRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getAttributeTypeAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_attributeTypeDescription_6_0=RULE_ID
+							{
+								newLeafNode(lv_attributeTypeDescription_6_0, grammarAccess.getAttributeTypeAccess().getAttributeTypeDescriptionIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getAttributeTypeRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"attributeTypeDescription",
+									lv_attributeTypeDescription_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleBankOperation
+entryRuleBankOperation returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBankOperationRule()); }
+	iv_ruleBankOperation=ruleBankOperation
+	{ $current=$iv_ruleBankOperation.current; }
+	EOF;
+
+// Rule BankOperation
+ruleBankOperation returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_bankOperationCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_bankOperationCode_0_0, grammarAccess.getBankOperationAccess().getBankOperationCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBankOperationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"bankOperationCode",
+						lv_bankOperationCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getBankOperationAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getBankOperationAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getBankOperationRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getBankOperationAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getBankOperationAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getBankOperationRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleBusinessFunction
+entryRuleBusinessFunction returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBusinessFunctionRule()); }
+	iv_ruleBusinessFunction=ruleBusinessFunction
+	{ $current=$iv_ruleBusinessFunction.current; }
+	EOF;
+
+// Rule BusinessFunction
+ruleBusinessFunction returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_businessFunctionTypeCodeQualifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_businessFunctionTypeCodeQualifier_0_0, grammarAccess.getBusinessFunctionAccess().getBusinessFunctionTypeCodeQualifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBusinessFunctionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"businessFunctionTypeCodeQualifier",
+						lv_businessFunctionTypeCodeQualifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getBusinessFunctionAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_businessFunctionCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_businessFunctionCode_2_0, grammarAccess.getBusinessFunctionAccess().getBusinessFunctionCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getBusinessFunctionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"businessFunctionCode",
+							lv_businessFunctionCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getBusinessFunctionAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListIdentificationCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListIdentificationCode_4_0, grammarAccess.getBusinessFunctionAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getBusinessFunctionRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListIdentificationCode",
+								lv_codeListIdentificationCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getBusinessFunctionAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_codeListResponsibleAgencyCode_6_0=RULE_ID
+							{
+								newLeafNode(lv_codeListResponsibleAgencyCode_6_0, grammarAccess.getBusinessFunctionAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getBusinessFunctionRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"codeListResponsibleAgencyCode",
+									lv_codeListResponsibleAgencyCode_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+					(
+						this_COLON_7=RULE_COLON
+						{
+							newLeafNode(this_COLON_7, grammarAccess.getBusinessFunctionAccess().getCOLONTerminalRuleCall_1_2_2_2_0());
+						}
+						(
+							(
+								lv_businessDescription_8_0=RULE_ID
+								{
+									newLeafNode(lv_businessDescription_8_0, grammarAccess.getBusinessFunctionAccess().getBusinessDescriptionIDTerminalRuleCall_1_2_2_2_1_0());
+								}
+								{
+									if ($current==null) {
+										$current = createModelElement(grammarAccess.getBusinessFunctionRule());
+									}
+									setWithLastConsumed(
+										$current,
+										"businessDescription",
+										lv_businessDescription_8_0,
+										"io.thlaegler.edifact.Edilang.ID");
+								}
+							)
+						)
+					)?
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleDepartmentEmployeeDetail
+entryRuleDepartmentEmployeeDetail returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDepartmentEmployeeDetailRule()); }
+	iv_ruleDepartmentEmployeeDetail=ruleDepartmentEmployeeDetail
+	{ $current=$iv_ruleDepartmentEmployeeDetail.current; }
+	EOF;
+
+// Rule DepartmentEmployeeDetail
+ruleDepartmentEmployeeDetail returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_departmentEmployeeNameCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_departmentEmployeeNameCode_0_0, grammarAccess.getDepartmentEmployeeDetailAccess().getDepartmentEmployeeNameCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDepartmentEmployeeDetailRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"departmentEmployeeNameCode",
+						lv_departmentEmployeeNameCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getDepartmentEmployeeDetailAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_departmentEmployeeName_2_0=RULE_ID
+					{
+						newLeafNode(lv_departmentEmployeeName_2_0, grammarAccess.getDepartmentEmployeeDetailAccess().getDepartmentEmployeeNameIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDepartmentEmployeeDetailRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"departmentEmployeeName",
+							lv_departmentEmployeeName_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleIdentificationNumber
+entryRuleIdentificationNumber returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIdentificationNumberRule()); }
+	iv_ruleIdentificationNumber=ruleIdentificationNumber
+	{ $current=$iv_ruleIdentificationNumber.current; }
+	EOF;
+
+// Rule IdentificationNumber
+ruleIdentificationNumber returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_objectIdentifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_objectIdentifier_0_0, grammarAccess.getIdentificationNumberAccess().getObjectIdentifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getIdentificationNumberRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"objectIdentifier",
+						lv_objectIdentifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getIdentificationNumberAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_objectIdentificationCodeQualifier_2_0=RULE_ID
+					{
+						newLeafNode(lv_objectIdentificationCodeQualifier_2_0, grammarAccess.getIdentificationNumberAccess().getObjectIdentificationCodeQualifierIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getIdentificationNumberRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"objectIdentificationCodeQualifier",
+							lv_objectIdentificationCodeQualifier_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getIdentificationNumberAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_statusDescriptionCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_statusDescriptionCode_4_0, grammarAccess.getIdentificationNumberAccess().getStatusDescriptionCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getIdentificationNumberRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"statusDescriptionCode",
+								lv_statusDescriptionCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRulePositionIdentification
+entryRulePositionIdentification returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPositionIdentificationRule()); }
+	iv_rulePositionIdentification=rulePositionIdentification
+	{ $current=$iv_rulePositionIdentification.current; }
+	EOF;
+
+// Rule PositionIdentification
+rulePositionIdentification returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_hierarchyStructureLevelIdentifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_hierarchyStructureLevelIdentifier_0_0, grammarAccess.getPositionIdentificationAccess().getHierarchyStructureLevelIdentifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getPositionIdentificationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"hierarchyStructureLevelIdentifier",
+						lv_hierarchyStructureLevelIdentifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getPositionIdentificationAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_sequencePositionIdentifier_2_0=RULE_ID
+					{
+						newLeafNode(lv_sequencePositionIdentifier_2_0, grammarAccess.getPositionIdentificationAccess().getSequencePositionIdentifierIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPositionIdentificationRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"sequencePositionIdentifier",
+							lv_sequencePositionIdentifier_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleProductCharacteristic
+entryRuleProductCharacteristic returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getProductCharacteristicRule()); }
+	iv_ruleProductCharacteristic=ruleProductCharacteristic
+	{ $current=$iv_ruleProductCharacteristic.current; }
+	EOF;
+
+// Rule ProductCharacteristic
+ruleProductCharacteristic returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_characteristicDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_characteristicDescriptionCode_0_0, grammarAccess.getProductCharacteristicAccess().getCharacteristicDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getProductCharacteristicRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"characteristicDescriptionCode",
+						lv_characteristicDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getProductCharacteristicAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getProductCharacteristicAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getProductCharacteristicRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getProductCharacteristicAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getProductCharacteristicAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getProductCharacteristicRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getProductCharacteristicAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_characteristicDescription1_6_0=RULE_ID
+							{
+								newLeafNode(lv_characteristicDescription1_6_0, grammarAccess.getProductCharacteristicAccess().getCharacteristicDescription1IDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getProductCharacteristicRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"characteristicDescription1",
+									lv_characteristicDescription1_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+					(
+						this_COLON_7=RULE_COLON
+						{
+							newLeafNode(this_COLON_7, grammarAccess.getProductCharacteristicAccess().getCOLONTerminalRuleCall_1_2_2_2_0());
+						}
+						(
+							(
+								lv_characteristicDescription2_8_0=RULE_ID
+								{
+									newLeafNode(lv_characteristicDescription2_8_0, grammarAccess.getProductCharacteristicAccess().getCharacteristicDescription2IDTerminalRuleCall_1_2_2_2_1_0());
+								}
+								{
+									if ($current==null) {
+										$current = createModelElement(grammarAccess.getProductCharacteristicRule());
+									}
+									setWithLastConsumed(
+										$current,
+										"characteristicDescription2",
+										lv_characteristicDescription2_8_0,
+										"io.thlaegler.edifact.Edilang.ID");
+								}
+							)
+						)
+					)?
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleNationalityDetail
+entryRuleNationalityDetail returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getNationalityDetailRule()); }
+	iv_ruleNationalityDetail=ruleNationalityDetail
+	{ $current=$iv_ruleNationalityDetail.current; }
+	EOF;
+
+// Rule NationalityDetail
+ruleNationalityDetail returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_nationalityNameCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_nationalityNameCode_0_0, grammarAccess.getNationalityDetailAccess().getNationalityNameCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getNationalityDetailRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"nationalityNameCode",
+						lv_nationalityNameCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getNationalityDetailAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getNationalityDetailAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getNationalityDetailRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getNationalityDetailAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getNationalityDetailAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getNationalityDetailRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getNationalityDetailAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_nationalityName_6_0=RULE_ID
+							{
+								newLeafNode(lv_nationalityName_6_0, grammarAccess.getNationalityDetailAccess().getNationalityNameIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getNationalityDetailRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"nationalityName",
+									lv_nationalityName_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRulePercentageDetail
+entryRulePercentageDetail returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPercentageDetailRule()); }
+	iv_rulePercentageDetail=rulePercentageDetail
+	{ $current=$iv_rulePercentageDetail.current; }
+	EOF;
+
+// Rule PercentageDetail
+rulePercentageDetail returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_percentageTypeCodeQualifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_percentageTypeCodeQualifier_0_0, grammarAccess.getPercentageDetailAccess().getPercentageTypeCodeQualifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getPercentageDetailRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"percentageTypeCodeQualifier",
+						lv_percentageTypeCodeQualifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getPercentageDetailAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_percentage_2_0=RULE_ID
+					{
+						newLeafNode(lv_percentage_2_0, grammarAccess.getPercentageDetailAccess().getPercentageIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPercentageDetailRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"percentage",
+							lv_percentage_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getPercentageDetailAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_percentageBasisIdentificationCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_percentageBasisIdentificationCode_4_0, grammarAccess.getPercentageDetailAccess().getPercentageBasisIdentificationCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getPercentageDetailRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"percentageBasisIdentificationCode",
+								lv_percentageBasisIdentificationCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getPercentageDetailAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_codeListIdentificationCode_6_0=RULE_ID
+							{
+								newLeafNode(lv_codeListIdentificationCode_6_0, grammarAccess.getPercentageDetailAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getPercentageDetailRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"codeListIdentificationCode",
+									lv_codeListIdentificationCode_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+					(
+						this_COLON_7=RULE_COLON
+						{
+							newLeafNode(this_COLON_7, grammarAccess.getPercentageDetailAccess().getCOLONTerminalRuleCall_1_2_2_2_0());
+						}
+						(
+							(
+								lv_codeListResponsibleAgencyCode_8_0=RULE_ID
+								{
+									newLeafNode(lv_codeListResponsibleAgencyCode_8_0, grammarAccess.getPercentageDetailAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_2_2_1_0());
+								}
+								{
+									if ($current==null) {
+										$current = createModelElement(grammarAccess.getPercentageDetailRule());
+									}
+									setWithLastConsumed(
+										$current,
+										"codeListResponsibleAgencyCode",
+										lv_codeListResponsibleAgencyCode_8_0,
+										"io.thlaegler.edifact.Edilang.ID");
+								}
+							)
+						)
+					)?
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleRateDetail
+entryRuleRateDetail returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRateDetailRule()); }
+	iv_ruleRateDetail=ruleRateDetail
+	{ $current=$iv_ruleRateDetail.current; }
+	EOF;
+
+// Rule RateDetail
+ruleRateDetail returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_rateTypeCodeQualifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_rateTypeCodeQualifier_0_0, grammarAccess.getRateDetailAccess().getRateTypeCodeQualifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRateDetailRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"rateTypeCodeQualifier",
+						lv_rateTypeCodeQualifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getRateDetailAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_unitPriceBasisRate_2_0=RULE_ID
+					{
+						newLeafNode(lv_unitPriceBasisRate_2_0, grammarAccess.getRateDetailAccess().getUnitPriceBasisRateIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getRateDetailRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"unitPriceBasisRate",
+							lv_unitPriceBasisRate_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getRateDetailAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_unitPriceBasisValue_4_0=RULE_ID
+						{
+							newLeafNode(lv_unitPriceBasisValue_4_0, grammarAccess.getRateDetailAccess().getUnitPriceBasisValueIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getRateDetailRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"unitPriceBasisValue",
+								lv_unitPriceBasisValue_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getRateDetailAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_measurementUnitCode_6_0=RULE_ID
+							{
+								newLeafNode(lv_measurementUnitCode_6_0, grammarAccess.getRateDetailAccess().getMeasurementUnitCodeIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getRateDetailRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"measurementUnitCode",
+									lv_measurementUnitCode_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleStatusCategory
+entryRuleStatusCategory returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStatusCategoryRule()); }
+	iv_ruleStatusCategory=ruleStatusCategory
+	{ $current=$iv_ruleStatusCategory.current; }
+	EOF;
+
+// Rule StatusCategory
+ruleStatusCategory returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_statusCategoryCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_statusCategoryCode_0_0, grammarAccess.getStatusCategoryAccess().getStatusCategoryCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getStatusCategoryRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"statusCategoryCode",
+						lv_statusCategoryCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getStatusCategoryAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getStatusCategoryAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getStatusCategoryRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getStatusCategoryAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getStatusCategoryAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getStatusCategoryRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleStatus
+entryRuleStatus returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStatusRule()); }
+	iv_ruleStatus=ruleStatus
+	{ $current=$iv_ruleStatus.current; }
+	EOF;
+
+// Rule Status
+ruleStatus returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_statusDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_statusDescriptionCode_0_0, grammarAccess.getStatusAccess().getStatusDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getStatusRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"statusDescriptionCode",
+						lv_statusDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getStatusAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getStatusAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getStatusRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getStatusAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getStatusAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getStatusRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getStatusAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_statusDescription_6_0=RULE_ID
+							{
+								newLeafNode(lv_statusDescription_6_0, grammarAccess.getStatusAccess().getStatusDescriptionIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getStatusRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"statusDescription",
+									lv_statusDescription_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleStatusReason
+entryRuleStatusReason returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStatusReasonRule()); }
+	iv_ruleStatusReason=ruleStatusReason
+	{ $current=$iv_ruleStatusReason.current; }
+	EOF;
+
+// Rule StatusReason
+ruleStatusReason returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_statusReasonDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_statusReasonDescriptionCode_0_0, grammarAccess.getStatusReasonAccess().getStatusReasonDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getStatusReasonRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"statusReasonDescriptionCode",
+						lv_statusReasonDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getStatusReasonAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getStatusReasonAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getStatusReasonRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getStatusReasonAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getStatusReasonAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getStatusReasonRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getStatusReasonAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_statusReasonDescription_6_0=RULE_ID
+							{
+								newLeafNode(lv_statusReasonDescription_6_0, grammarAccess.getStatusReasonAccess().getStatusReasonDescriptionIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getStatusReasonRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"statusReasonDescription",
+									lv_statusReasonDescription_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleValueListIdentification
+entryRuleValueListIdentification returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getValueListIdentificationRule()); }
+	iv_ruleValueListIdentification=ruleValueListIdentification
+	{ $current=$iv_ruleValueListIdentification.current; }
+	EOF;
+
+// Rule ValueListIdentification
+ruleValueListIdentification returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_valueListIdentifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_valueListIdentifier_0_0, grammarAccess.getValueListIdentificationAccess().getValueListIdentifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getValueListIdentificationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"valueListIdentifier",
+						lv_valueListIdentifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getValueListIdentificationAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_objectIdentificationCodeQualifier_2_0=RULE_ID
+					{
+						newLeafNode(lv_objectIdentificationCodeQualifier_2_0, grammarAccess.getValueListIdentificationAccess().getObjectIdentificationCodeQualifierIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getValueListIdentificationRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"objectIdentificationCodeQualifier",
+							lv_objectIdentificationCodeQualifier_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleTermsOfDeliveryTransport
+entryRuleTermsOfDeliveryTransport returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTermsOfDeliveryTransportRule()); }
+	iv_ruleTermsOfDeliveryTransport=ruleTermsOfDeliveryTransport
+	{ $current=$iv_ruleTermsOfDeliveryTransport.current; }
+	EOF;
+
+// Rule TermsOfDeliveryTransport
+ruleTermsOfDeliveryTransport returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_deliveryTransportTermsDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_deliveryTransportTermsDescriptionCode_0_0, grammarAccess.getTermsOfDeliveryTransportAccess().getDeliveryTransportTermsDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTermsOfDeliveryTransportRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"deliveryTransportTermsDescriptionCode",
+						lv_deliveryTransportTermsDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getTermsOfDeliveryTransportAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getTermsOfDeliveryTransportAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTermsOfDeliveryTransportRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getTermsOfDeliveryTransportAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getTermsOfDeliveryTransportAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getTermsOfDeliveryTransportRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getTermsOfDeliveryTransportAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_deliveryTransportTermsDescriptions_6_0=RULE_ID
+							{
+								newLeafNode(lv_deliveryTransportTermsDescriptions_6_0, grammarAccess.getTermsOfDeliveryTransportAccess().getDeliveryTransportTermsDescriptionsIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getTermsOfDeliveryTransportRule());
+								}
+								addWithLastConsumed(
+									$current,
+									"deliveryTransportTermsDescriptions",
+									lv_deliveryTransportTermsDescriptions_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)*
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleQuantityDifferenceInformation
+entryRuleQuantityDifferenceInformation returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getQuantityDifferenceInformationRule()); }
+	iv_ruleQuantityDifferenceInformation=ruleQuantityDifferenceInformation
+	{ $current=$iv_ruleQuantityDifferenceInformation.current; }
+	EOF;
+
+// Rule QuantityDifferenceInformation
+ruleQuantityDifferenceInformation returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_quantityVarianceValue_0_0=RULE_ID
+				{
+					newLeafNode(lv_quantityVarianceValue_0_0, grammarAccess.getQuantityDifferenceInformationAccess().getQuantityVarianceValueIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getQuantityDifferenceInformationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"quantityVarianceValue",
+						lv_quantityVarianceValue_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getQuantityDifferenceInformationAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_quantityTypeCodeQualifier_2_0=RULE_ID
+					{
+						newLeafNode(lv_quantityTypeCodeQualifier_2_0, grammarAccess.getQuantityDifferenceInformationAccess().getQuantityTypeCodeQualifierIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getQuantityDifferenceInformationRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"quantityTypeCodeQualifier",
+							lv_quantityTypeCodeQualifier_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleReasonForChange
+entryRuleReasonForChange returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getReasonForChangeRule()); }
+	iv_ruleReasonForChange=ruleReasonForChange
+	{ $current=$iv_ruleReasonForChange.current; }
+	EOF;
+
+// Rule ReasonForChange
+ruleReasonForChange returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_changeReasonDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_changeReasonDescriptionCode_0_0, grammarAccess.getReasonForChangeAccess().getChangeReasonDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getReasonForChangeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"changeReasonDescriptionCode",
+						lv_changeReasonDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getReasonForChangeAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getReasonForChangeAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getReasonForChangeRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getReasonForChangeAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getReasonForChangeAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getReasonForChangeRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getReasonForChangeAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_changeReasonDescriptions_6_0=RULE_ID
+							{
+								newLeafNode(lv_changeReasonDescriptions_6_0, grammarAccess.getReasonForChangeAccess().getChangeReasonDescriptionsIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getReasonForChangeRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"changeReasonDescriptions",
+									lv_changeReasonDescriptions_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleLanguageDetail
+entryRuleLanguageDetail returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getLanguageDetailRule()); }
+	iv_ruleLanguageDetail=ruleLanguageDetail
+	{ $current=$iv_ruleLanguageDetail.current; }
+	EOF;
+
+// Rule LanguageDetail
+ruleLanguageDetail returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_languageNameCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_languageNameCode_0_0, grammarAccess.getLanguageDetailAccess().getLanguageNameCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getLanguageDetailRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"languageNameCode",
+						lv_languageNameCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getLanguageDetailAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_languageName_2_0=RULE_ID
+					{
+						newLeafNode(lv_languageName_2_0, grammarAccess.getLanguageDetailAccess().getLanguageNameIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getLanguageDetailRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"languageName",
+							lv_languageName_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleInformationRequest
+entryRuleInformationRequest returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getInformationRequestRule()); }
+	iv_ruleInformationRequest=ruleInformationRequest
+	{ $current=$iv_ruleInformationRequest.current; }
+	EOF;
+
+// Rule InformationRequest
+ruleInformationRequest returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_requestedInformationDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_requestedInformationDescriptionCode_0_0, grammarAccess.getInformationRequestAccess().getRequestedInformationDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getInformationRequestRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"requestedInformationDescriptionCode",
+						lv_requestedInformationDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getInformationRequestAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getInformationRequestAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getInformationRequestRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getInformationRequestAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getInformationRequestAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getInformationRequestRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getInformationRequestAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_requestedInformationDescription_6_0=RULE_ID
+							{
+								newLeafNode(lv_requestedInformationDescription_6_0, grammarAccess.getInformationRequestAccess().getRequestedInformationDescriptionIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getInformationRequestRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"requestedInformationDescription",
+									lv_requestedInformationDescription_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleIndexIdentification
+entryRuleIndexIdentification returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIndexIdentificationRule()); }
+	iv_ruleIndexIdentification=ruleIndexIdentification
+	{ $current=$iv_ruleIndexIdentification.current; }
+	EOF;
+
+// Rule IndexIdentification
+ruleIndexIdentification returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_indexCodeQualifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_indexCodeQualifier_0_0, grammarAccess.getIndexIdentificationAccess().getIndexCodeQualifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getIndexIdentificationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"indexCodeQualifier",
+						lv_indexCodeQualifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getIndexIdentificationAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_indexTypeIdentifier_2_0=RULE_ID
+					{
+						newLeafNode(lv_indexTypeIdentifier_2_0, grammarAccess.getIndexIdentificationAccess().getIndexTypeIdentifierIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getIndexIdentificationRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"indexTypeIdentifier",
+							lv_indexTypeIdentifier_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getIndexIdentificationAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListIdentificationCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListIdentificationCode_4_0, grammarAccess.getIndexIdentificationAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getIndexIdentificationRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListIdentificationCode",
+								lv_codeListIdentificationCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getIndexIdentificationAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_codeListResponsibleAgencyCode_6_0=RULE_ID
+							{
+								newLeafNode(lv_codeListResponsibleAgencyCode_6_0, grammarAccess.getIndexIdentificationAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getIndexIdentificationRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"codeListResponsibleAgencyCode",
+									lv_codeListResponsibleAgencyCode_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleIndexValue
+entryRuleIndexValue returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIndexValueRule()); }
+	iv_ruleIndexValue=ruleIndexValue
+	{ $current=$iv_ruleIndexValue.current; }
+	EOF;
+
+// Rule IndexValue
+ruleIndexValue returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_indexValue_0_0=RULE_ID
+				{
+					newLeafNode(lv_indexValue_0_0, grammarAccess.getIndexValueAccess().getIndexValueIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getIndexValueRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"indexValue",
+						lv_indexValue_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getIndexValueAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_indexValueRepresentationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_indexValueRepresentationCode_2_0, grammarAccess.getIndexValueAccess().getIndexValueRepresentationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getIndexValueRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"indexValueRepresentationCode",
+							lv_indexValueRepresentationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleControl
+entryRuleControl returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getControlRule()); }
+	iv_ruleControl=ruleControl
+	{ $current=$iv_ruleControl.current; }
+	EOF;
+
+// Rule Control
+ruleControl returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_controlTotalTypeCodeQualifier_0_0=RULE_ID
+				{
+					newLeafNode(lv_controlTotalTypeCodeQualifier_0_0, grammarAccess.getControlAccess().getControlTotalTypeCodeQualifierIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getControlRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"controlTotalTypeCodeQualifier",
+						lv_controlTotalTypeCodeQualifier_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getControlAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_controlTotalValue_2_0=RULE_ID
+					{
+						newLeafNode(lv_controlTotalValue_2_0, grammarAccess.getControlAccess().getControlTotalValueIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getControlRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"controlTotalValue",
+							lv_controlTotalValue_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getControlAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_measurementUnitCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_measurementUnitCode_4_0, grammarAccess.getControlAccess().getMeasurementUnitCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getControlRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"measurementUnitCode",
+								lv_measurementUnitCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+			)?
+		)?
+	)
+;
+
+// Entry rule entryRuleBasisType
+entryRuleBasisType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBasisTypeRule()); }
+	iv_ruleBasisType=ruleBasisType
+	{ $current=$iv_ruleBasisType.current; }
+	EOF;
+
+// Rule BasisType
+ruleBasisType returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_basisTypeDescriptionCode_0_0=RULE_ID
+				{
+					newLeafNode(lv_basisTypeDescriptionCode_0_0, grammarAccess.getBasisTypeAccess().getBasisTypeDescriptionCodeIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBasisTypeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"basisTypeDescriptionCode",
+						lv_basisTypeDescriptionCode_0_0,
+						"io.thlaegler.edifact.Edilang.ID");
+				}
+			)
+		)
+		(
+			this_COLON_1=RULE_COLON
+			{
+				newLeafNode(this_COLON_1, grammarAccess.getBasisTypeAccess().getCOLONTerminalRuleCall_1_0());
+			}
+			(
+				(
+					lv_codeListIdentificationCode_2_0=RULE_ID
+					{
+						newLeafNode(lv_codeListIdentificationCode_2_0, grammarAccess.getBasisTypeAccess().getCodeListIdentificationCodeIDTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getBasisTypeRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"codeListIdentificationCode",
+							lv_codeListIdentificationCode_2_0,
+							"io.thlaegler.edifact.Edilang.ID");
+					}
+				)
+			)
+			(
+				this_COLON_3=RULE_COLON
+				{
+					newLeafNode(this_COLON_3, grammarAccess.getBasisTypeAccess().getCOLONTerminalRuleCall_1_2_0());
+				}
+				(
+					(
+						lv_codeListResponsibleAgencyCode_4_0=RULE_ID
+						{
+							newLeafNode(lv_codeListResponsibleAgencyCode_4_0, grammarAccess.getBasisTypeAccess().getCodeListResponsibleAgencyCodeIDTerminalRuleCall_1_2_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getBasisTypeRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"codeListResponsibleAgencyCode",
+								lv_codeListResponsibleAgencyCode_4_0,
+								"io.thlaegler.edifact.Edilang.ID");
+						}
+					)
+				)
+				(
+					this_COLON_5=RULE_COLON
+					{
+						newLeafNode(this_COLON_5, grammarAccess.getBasisTypeAccess().getCOLONTerminalRuleCall_1_2_2_0());
+					}
+					(
+						(
+							lv_basisTypeDescription_6_0=RULE_ID
+							{
+								newLeafNode(lv_basisTypeDescription_6_0, grammarAccess.getBasisTypeAccess().getBasisTypeDescriptionIDTerminalRuleCall_1_2_2_1_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getBasisTypeRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"basisTypeDescription",
+									lv_basisTypeDescription_6_0,
+									"io.thlaegler.edifact.Edilang.ID");
+							}
+						)
+					)
+				)?
+			)?
 		)?
 	)
 ;

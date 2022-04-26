@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.NATSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.NATSegment#getNationalityCodeQualifier <em>Nationality Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.NATSegment#getNationalityDetails <em>Nationality Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getNATSegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface NATSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Nationality Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getNATSegment_Todo()
+   * @return the value of the '<em>Nationality Code Qualifier</em>' attribute.
+   * @see #setNationalityCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getNATSegment_NationalityCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getNationalityCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.NATSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.NATSegment#getNationalityCodeQualifier <em>Nationality Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Nationality Code Qualifier</em>' attribute.
+   * @see #getNationalityCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setNationalityCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Nationality Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Nationality Details</em>' containment reference.
+   * @see #setNationalityDetails(NationalityDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getNATSegment_NationalityDetails()
+   * @model containment="true"
+   * @generated
+   */
+  NationalityDetail getNationalityDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.NATSegment#getNationalityDetails <em>Nationality Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Nationality Details</em>' containment reference.
+   * @see #getNationalityDetails()
+   * @generated
+   */
+  void setNationalityDetails(NationalityDetail value);
 
 } // NATSegment

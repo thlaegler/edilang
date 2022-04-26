@@ -4,11 +4,16 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.PartyIdentificationDetail;
+import io.thlaegler.edifact.edilang.ProductCharacteristic;
 import io.thlaegler.edifact.edilang.VLISegment;
+import io.thlaegler.edifact.edilang.ValueListIdentification;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +25,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getValueListIdentification <em>Value List Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getPartyIdentificationDetails <em>Party Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getStatusDescriptionCode <em>Status Description Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getValueListName <em>Value List Name</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getDesignatedClassCode <em>Designated Class Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getValueListTypeCode <em>Value List Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.VLISegmentImpl#getProductCharacteristic <em>Product Characteristic</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +39,114 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getValueListIdentification() <em>Value List Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getValueListIdentification()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected ValueListIdentification valueListIdentification;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getPartyIdentificationDetails() <em>Party Identification Details</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getPartyIdentificationDetails()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected PartyIdentificationDetail partyIdentificationDetails;
+
+  /**
+   * The default value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String STATUS_DESCRIPTION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected String statusDescriptionCode = STATUS_DESCRIPTION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getValueListName() <em>Value List Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValueListName()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALUE_LIST_NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValueListName() <em>Value List Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValueListName()
+   * @generated
+   * @ordered
+   */
+  protected String valueListName = VALUE_LIST_NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDesignatedClassCode() <em>Designated Class Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDesignatedClassCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String DESIGNATED_CLASS_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDesignatedClassCode() <em>Designated Class Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDesignatedClassCode()
+   * @generated
+   * @ordered
+   */
+  protected String designatedClassCode = DESIGNATED_CLASS_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getValueListTypeCode() <em>Value List Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValueListTypeCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALUE_LIST_TYPE_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValueListTypeCode() <em>Value List Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValueListTypeCode()
+   * @generated
+   * @ordered
+   */
+  protected String valueListTypeCode = VALUE_LIST_TYPE_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getProductCharacteristic() <em>Product Characteristic</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProductCharacteristic()
+   * @generated
+   * @ordered
+   */
+  protected ProductCharacteristic productCharacteristic;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +175,26 @@ public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public ValueListIdentification getValueListIdentification()
   {
-    return todo;
+    return valueListIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetValueListIdentification(ValueListIdentification newValueListIdentification, NotificationChain msgs)
+  {
+    ValueListIdentification oldValueListIdentification = valueListIdentification;
+    valueListIdentification = newValueListIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION, oldValueListIdentification, newValueListIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +203,240 @@ public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setValueListIdentification(ValueListIdentification newValueListIdentification)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newValueListIdentification != valueListIdentification)
+    {
+      NotificationChain msgs = null;
+      if (valueListIdentification != null)
+        msgs = ((InternalEObject)valueListIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION, null, msgs);
+      if (newValueListIdentification != null)
+        msgs = ((InternalEObject)newValueListIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION, null, msgs);
+      msgs = basicSetValueListIdentification(newValueListIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION, newValueListIdentification, newValueListIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PartyIdentificationDetail getPartyIdentificationDetails()
+  {
+    return partyIdentificationDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPartyIdentificationDetails(PartyIdentificationDetail newPartyIdentificationDetails, NotificationChain msgs)
+  {
+    PartyIdentificationDetail oldPartyIdentificationDetails = partyIdentificationDetails;
+    partyIdentificationDetails = newPartyIdentificationDetails;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__TODO, oldTodo, todo));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, oldPartyIdentificationDetails, newPartyIdentificationDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPartyIdentificationDetails(PartyIdentificationDetail newPartyIdentificationDetails)
+  {
+    if (newPartyIdentificationDetails != partyIdentificationDetails)
+    {
+      NotificationChain msgs = null;
+      if (partyIdentificationDetails != null)
+        msgs = ((InternalEObject)partyIdentificationDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, null, msgs);
+      if (newPartyIdentificationDetails != null)
+        msgs = ((InternalEObject)newPartyIdentificationDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, null, msgs);
+      msgs = basicSetPartyIdentificationDetails(newPartyIdentificationDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, newPartyIdentificationDetails, newPartyIdentificationDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getStatusDescriptionCode()
+  {
+    return statusDescriptionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setStatusDescriptionCode(String newStatusDescriptionCode)
+  {
+    String oldStatusDescriptionCode = statusDescriptionCode;
+    statusDescriptionCode = newStatusDescriptionCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__STATUS_DESCRIPTION_CODE, oldStatusDescriptionCode, statusDescriptionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getValueListName()
+  {
+    return valueListName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setValueListName(String newValueListName)
+  {
+    String oldValueListName = valueListName;
+    valueListName = newValueListName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__VALUE_LIST_NAME, oldValueListName, valueListName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getDesignatedClassCode()
+  {
+    return designatedClassCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDesignatedClassCode(String newDesignatedClassCode)
+  {
+    String oldDesignatedClassCode = designatedClassCode;
+    designatedClassCode = newDesignatedClassCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__DESIGNATED_CLASS_CODE, oldDesignatedClassCode, designatedClassCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getValueListTypeCode()
+  {
+    return valueListTypeCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setValueListTypeCode(String newValueListTypeCode)
+  {
+    String oldValueListTypeCode = valueListTypeCode;
+    valueListTypeCode = newValueListTypeCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__VALUE_LIST_TYPE_CODE, oldValueListTypeCode, valueListTypeCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ProductCharacteristic getProductCharacteristic()
+  {
+    return productCharacteristic;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProductCharacteristic(ProductCharacteristic newProductCharacteristic, NotificationChain msgs)
+  {
+    ProductCharacteristic oldProductCharacteristic = productCharacteristic;
+    productCharacteristic = newProductCharacteristic;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC, oldProductCharacteristic, newProductCharacteristic);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setProductCharacteristic(ProductCharacteristic newProductCharacteristic)
+  {
+    if (newProductCharacteristic != productCharacteristic)
+    {
+      NotificationChain msgs = null;
+      if (productCharacteristic != null)
+        msgs = ((InternalEObject)productCharacteristic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC, null, msgs);
+      if (newProductCharacteristic != null)
+        msgs = ((InternalEObject)newProductCharacteristic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC, null, msgs);
+      msgs = basicSetProductCharacteristic(newProductCharacteristic, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC, newProductCharacteristic, newProductCharacteristic));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION:
+        return basicSetValueListIdentification(null, msgs);
+      case EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return basicSetPartyIdentificationDetails(null, msgs);
+      case EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return basicSetProductCharacteristic(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +449,20 @@ public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.VLI_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION:
+        return getValueListIdentification();
+      case EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return getPartyIdentificationDetails();
+      case EdilangPackage.VLI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return getStatusDescriptionCode();
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_NAME:
+        return getValueListName();
+      case EdilangPackage.VLI_SEGMENT__DESIGNATED_CLASS_CODE:
+        return getDesignatedClassCode();
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_TYPE_CODE:
+        return getValueListTypeCode();
+      case EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return getProductCharacteristic();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +477,26 @@ public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.VLI_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION:
+        setValueListIdentification((ValueListIdentification)newValue);
+        return;
+      case EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        setPartyIdentificationDetails((PartyIdentificationDetail)newValue);
+        return;
+      case EdilangPackage.VLI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode((String)newValue);
+        return;
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_NAME:
+        setValueListName((String)newValue);
+        return;
+      case EdilangPackage.VLI_SEGMENT__DESIGNATED_CLASS_CODE:
+        setDesignatedClassCode((String)newValue);
+        return;
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_TYPE_CODE:
+        setValueListTypeCode((String)newValue);
+        return;
+      case EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        setProductCharacteristic((ProductCharacteristic)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +512,26 @@ public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.VLI_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION:
+        setValueListIdentification((ValueListIdentification)null);
+        return;
+      case EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        setPartyIdentificationDetails((PartyIdentificationDetail)null);
+        return;
+      case EdilangPackage.VLI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode(STATUS_DESCRIPTION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_NAME:
+        setValueListName(VALUE_LIST_NAME_EDEFAULT);
+        return;
+      case EdilangPackage.VLI_SEGMENT__DESIGNATED_CLASS_CODE:
+        setDesignatedClassCode(DESIGNATED_CLASS_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_TYPE_CODE:
+        setValueListTypeCode(VALUE_LIST_TYPE_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        setProductCharacteristic((ProductCharacteristic)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +547,20 @@ public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.VLI_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_IDENTIFICATION:
+        return valueListIdentification != null;
+      case EdilangPackage.VLI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return partyIdentificationDetails != null;
+      case EdilangPackage.VLI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return STATUS_DESCRIPTION_CODE_EDEFAULT == null ? statusDescriptionCode != null : !STATUS_DESCRIPTION_CODE_EDEFAULT.equals(statusDescriptionCode);
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_NAME:
+        return VALUE_LIST_NAME_EDEFAULT == null ? valueListName != null : !VALUE_LIST_NAME_EDEFAULT.equals(valueListName);
+      case EdilangPackage.VLI_SEGMENT__DESIGNATED_CLASS_CODE:
+        return DESIGNATED_CLASS_CODE_EDEFAULT == null ? designatedClassCode != null : !DESIGNATED_CLASS_CODE_EDEFAULT.equals(designatedClassCode);
+      case EdilangPackage.VLI_SEGMENT__VALUE_LIST_TYPE_CODE:
+        return VALUE_LIST_TYPE_CODE_EDEFAULT == null ? valueListTypeCode != null : !VALUE_LIST_TYPE_CODE_EDEFAULT.equals(valueListTypeCode);
+      case EdilangPackage.VLI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return productCharacteristic != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +576,14 @@ public class VLISegmentImpl extends AbstractEdiSegmentImpl implements VLISegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (statusDescriptionCode: ");
+    result.append(statusDescriptionCode);
+    result.append(", valueListName: ");
+    result.append(valueListName);
+    result.append(", designatedClassCode: ");
+    result.append(designatedClassCode);
+    result.append(", valueListTypeCode: ");
+    result.append(valueListTypeCode);
     result.append(')');
     return result.toString();
   }

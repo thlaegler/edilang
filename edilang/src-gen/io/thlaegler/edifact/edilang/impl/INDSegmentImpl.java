@@ -5,10 +5,14 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.INDSegment;
+import io.thlaegler.edifact.edilang.IndexIdentification;
+import io.thlaegler.edifact.edilang.IndexValue;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.INDSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.INDSegmentImpl#getIndexIdentification <em>Index Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.INDSegmentImpl#getIndexValue <em>Index Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +33,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class INDSegmentImpl extends AbstractEdiSegmentImpl implements INDSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getIndexIdentification() <em>Index Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getIndexIdentification()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected IndexIdentification indexIdentification;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getIndexValue() <em>Index Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getIndexValue()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected IndexValue indexValue;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +79,26 @@ public class INDSegmentImpl extends AbstractEdiSegmentImpl implements INDSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public IndexIdentification getIndexIdentification()
   {
-    return todo;
+    return indexIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIndexIdentification(IndexIdentification newIndexIdentification, NotificationChain msgs)
+  {
+    IndexIdentification oldIndexIdentification = indexIdentification;
+    indexIdentification = newIndexIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION, oldIndexIdentification, newIndexIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +107,88 @@ public class INDSegmentImpl extends AbstractEdiSegmentImpl implements INDSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setIndexIdentification(IndexIdentification newIndexIdentification)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newIndexIdentification != indexIdentification)
+    {
+      NotificationChain msgs = null;
+      if (indexIdentification != null)
+        msgs = ((InternalEObject)indexIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION, null, msgs);
+      if (newIndexIdentification != null)
+        msgs = ((InternalEObject)newIndexIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION, null, msgs);
+      msgs = basicSetIndexIdentification(newIndexIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION, newIndexIdentification, newIndexIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IndexValue getIndexValue()
+  {
+    return indexValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIndexValue(IndexValue newIndexValue, NotificationChain msgs)
+  {
+    IndexValue oldIndexValue = indexValue;
+    indexValue = newIndexValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IND_SEGMENT__TODO, oldTodo, todo));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.IND_SEGMENT__INDEX_VALUE, oldIndexValue, newIndexValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setIndexValue(IndexValue newIndexValue)
+  {
+    if (newIndexValue != indexValue)
+    {
+      NotificationChain msgs = null;
+      if (indexValue != null)
+        msgs = ((InternalEObject)indexValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IND_SEGMENT__INDEX_VALUE, null, msgs);
+      if (newIndexValue != null)
+        msgs = ((InternalEObject)newIndexValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.IND_SEGMENT__INDEX_VALUE, null, msgs);
+      msgs = basicSetIndexValue(newIndexValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.IND_SEGMENT__INDEX_VALUE, newIndexValue, newIndexValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION:
+        return basicSetIndexIdentification(null, msgs);
+      case EdilangPackage.IND_SEGMENT__INDEX_VALUE:
+        return basicSetIndexValue(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +201,10 @@ public class INDSegmentImpl extends AbstractEdiSegmentImpl implements INDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IND_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION:
+        return getIndexIdentification();
+      case EdilangPackage.IND_SEGMENT__INDEX_VALUE:
+        return getIndexValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +219,11 @@ public class INDSegmentImpl extends AbstractEdiSegmentImpl implements INDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IND_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION:
+        setIndexIdentification((IndexIdentification)newValue);
+        return;
+      case EdilangPackage.IND_SEGMENT__INDEX_VALUE:
+        setIndexValue((IndexValue)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +239,11 @@ public class INDSegmentImpl extends AbstractEdiSegmentImpl implements INDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IND_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION:
+        setIndexIdentification((IndexIdentification)null);
+        return;
+      case EdilangPackage.IND_SEGMENT__INDEX_VALUE:
+        setIndexValue((IndexValue)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +259,12 @@ public class INDSegmentImpl extends AbstractEdiSegmentImpl implements INDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.IND_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.IND_SEGMENT__INDEX_IDENTIFICATION:
+        return indexIdentification != null;
+      case EdilangPackage.IND_SEGMENT__INDEX_VALUE:
+        return indexValue != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
-    result.append(')');
-    return result.toString();
   }
 
 } //INDSegmentImpl

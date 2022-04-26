@@ -8,9 +8,10 @@ EdiModel:
 	segments+=AbstractEdiSegment*;
 
 AbstractEdiSegment:
-	UNASegment | // Header UNA
-	UNBSegment | // Header for trailer UNZ
-	UNHSegment | // Header for trailer UNT
+	UNASegment | // Service String advice header
+	UNBSegment | // Interchange Header with Interchange Trailer UNZ
+	UNHSegment | // Header with trailer UNT
+	UNGSegment | // Functional Group Header
 	
 	ADRSegment | // Address
 	AGRSegment | // Agreement identification
@@ -161,6 +162,7 @@ AbstractEdiSegment:
 	STCSegment | // Statistical concept
 	STGSegment | // Stages
 	STSSegment | // Status
+	STXSegment | // Start of Interchange
 	TAXSegment | // Duty/tax/fee details
 	TCCSegment | // Transport charge/rate calculations
 	TDTSegment | // Details of transport
@@ -175,9 +177,10 @@ AbstractEdiSegment:
 	UCISegment | // ?
 	VLISegment | // Value list identification
 
-	UNSSegment | // Trailer UNS
-	UNZSegment | // Trailer for header UNB
-	UNTSegment // Trailer for header UNH
+	UNSSegment | // Section Control Trailer UNS
+	UNZSegment | // Interchange Trailer for header UNB
+	UNTSegment | // Message Trailer
+	UNESegment // Functional Group Trailer
 ;
 
 
@@ -229,13 +232,62 @@ UNHSegment:
 	lineEnd=QUOTE_AND_NL
 ;
 
+UNGSegment:
+	segment="UNG"
+	PLUS
+	( addressUsage=AddressUsage )?
+	PLUS
+	( addressDetails=AddressDetail )?
+	(
+		PLUS
+		cityName=ID
+		(
+			PLUS
+			postalIdentificationCode=ID
+			(
+				PLUS
+				countryNameCode=ID
+				(
+					PLUS
+					countrySubEntityDetails=CountrySubEntityDetail
+					(
+						PLUS
+						locationIdentification=LocationIdentification
+					)?
+				)?
+			)?
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
 
 
-//TODO
 ADRSegment:
 	segment="ADR"
 	PLUS
-	todo=ID
+	( addressUsage=AddressUsage )?
+	PLUS
+	( addressDetails=AddressDetail )?
+	(
+		PLUS
+		cityName=ID
+		(
+			PLUS
+			postalIdentificationCode=ID
+			(
+				PLUS
+				countryNameCode=ID
+				(
+					PLUS
+					countrySubEntityDetails=CountrySubEntityDetail
+					(
+						PLUS
+						locationIdentification=LocationIdentification
+					)?
+				)?
+			)?
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -259,11 +311,16 @@ ALCSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 ALISegment:
 	segment="ALI"
 	PLUS
-	todo=ID
+	( countryOfOriginNameCode=ID )?
+	PLUS
+	( dutyRegimeTypeCode=AddressDetail )?
+	(
+		PLUS
+		specialConditionCodes+=ID
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -301,11 +358,18 @@ ASISegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 ATTSegment:
 	segment="ATT"
 	PLUS
-	todo=ID
+	attributeFunctionCodeQualifier=ID // 9017
+	(
+		PLUS
+		attributeType=AttributeType // C955
+		(
+			PLUS
+			attributeDetail=AttributeDetail // C956
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -315,11 +379,14 @@ AUTSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 BASSegment:
 	segment="BAS"
 	PLUS
-	todo=ID
+	basisCodeQualifier=ID // 9045
+	(
+		PLUS
+		basisType=BasisType // C974
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -329,11 +396,26 @@ BIISegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 BUSSegment:
 	segment="BUS"
 	PLUS
-	todo=ID
+	businessFunction=BusinessFunction // C521
+	(
+		PLUS
+		geographicAreaCode=ID // 3279
+		(
+			PLUS
+			financialTransactionTypeCode=ID // 4487
+			(
+				PLUS
+				bankOperation=BankOperation // C551
+				(
+					PLUS
+					intraCompanyPaymentIndicatorCode=ID // 4463
+				)?
+			)?
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -756,11 +838,34 @@ ICDSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 IDESegment:
 	segment="IDE"
 	PLUS
-	todo=ID
+	objectTypeCodeQualifier=ID
+	(
+		PLUS
+		identificationNumber=IdentificationNumber // C206
+		(
+			PLUS
+			partyIdentificationDetails=PartyIdentificationDetail // C082
+			(
+				PLUS
+				statusDescriptionCode=ID // 4405
+				(
+					PLUS
+					configurationLevelNumber=ID // 1222
+					(
+						PLUS
+						positionIdentification=PositionIdentification // C778
+						(
+							PLUS
+							productCharacteristic=ProductCharacteristic // C240
+						)?
+					)?
+				)?
+			)?
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -784,11 +889,14 @@ IMDSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 INDSegment:
 	segment="IND"
 	PLUS
-	todo=ID
+	indexIdentification=IndexIdentification // C545
+	(
+		PLUS
+		indexValue=IndexValue // C546
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -805,18 +913,20 @@ INVSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 IRQSegment:
 	segment="IRQ"
 	PLUS
-	todo=ID
+	informationRequest=InformationRequest // C333
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 LANSegment:
 	segment="LAN"
 	PLUS
-	todo=ID
+	languageCodeQualifier=ID // 3455
+	(
+		PLUS
+		languageDetails=LanguageDetail // C508
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -847,14 +957,17 @@ MKSSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 NATSegment:
 	segment="NAT"
 	PLUS
-	todo=ID
+	nationalityCodeQualifier=ID // 3493
+	(
+		PLUS
+		nationalityDetails=NationalityDetail // C042
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-
+// TODO
 PACSegment:
 	segment="PAC"
 	PLUS
@@ -882,11 +995,14 @@ PCCSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 PCDSegment:
 	segment="PCD"
 	PLUS
-	todo=ID
+	percentageDetails=PercentageDetail // C501
+	(
+		PLUS
+		statusDescriptionCode=ID
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -966,11 +1082,18 @@ QUASegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 QVRSegment:
 	segment="QVR"
 	PLUS
-	todo=ID
+	quantityDifferenceInformation=QuantityDifferenceInformation // C279
+	(
+		PLUS
+		discrepancyNatureIdentificationCode=ID // 4221
+		(
+			PLUS
+			reasonForChange=ReasonForChange // C960
+		)
+	)
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -1015,11 +1138,14 @@ RSLSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 RTESegment:
 	segment="RTE"
 	PLUS
-	todo=ID
+	rateDetails=RateDetail // C128
+	(
+		PLUS
+		statusDescriptionCode=ID // 4405
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -1043,11 +1169,18 @@ SCDSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 SEGSegment:
 	segment="SEG"
 	PLUS
-	todo=ID
+	segmentTagIdentifer=ID // 9166
+	(
+		PLUS
+		designatedClassCode=ID // 1507
+		(
+			PLUS
+			maintenanceOperationCode=ID // 4513
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -1120,9 +1253,23 @@ STGSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 STSSegment:
 	segment="STS"
+	PLUS
+	statusCategory=StatusCategory // C601
+	(
+		PLUS
+		status=Status // C555
+		(
+			PLUS
+			statusReasons+=StatusReason // C556
+		)*
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//TODO non-EDIFACT - TRANSCOMM
+STXSegment:
+	segment="STX"
 	PLUS
 	todo=ID
 	lineEnd=QUOTE_AND_NL
@@ -1162,11 +1309,18 @@ TMPSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 TODSegment:
 	segment="TOD"
 	PLUS
-	todo=ID
+	deliveryTransportTermsFunctionCode=ID // 4055
+	(
+		PLUS
+		transportChargesPaumentMethodCode=ID // 4215
+		(
+			PLUS
+			termsOfDeliveryTransport=TermsOfDeliveryTransport // C100
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -1190,15 +1344,36 @@ TSRSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 VLISegment:
 	segment="VLI"
 	PLUS
-	todo=ID
+	valueListIdentification=ValueListIdentification // C780
+	(
+		PLUS
+		partyIdentificationDetails=PartyIdentificationDetail // C082
+		(
+			PLUS
+			statusDescriptionCode=ID // 4405
+			(
+				PLUS
+				valueListName=ID // 1514
+				(
+					PLUS
+					designatedClassCode=ID // 1507
+					(
+						PLUS
+						valueListTypeCode=ID // 1505
+						(
+							PLUS
+							productCharacteristic=ProductCharacteristic // C240
+						)?
+					)?
+				)?
+			)?
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-
-
 //MSG+1:46'
 MSGSegment:
 	segment="MSG"
@@ -1416,7 +1591,11 @@ LINSegment:
 PRISegment:
 	segment="PRI"
 	PLUS
-	sub=PriceInformation
+	priceInformation=PriceInformation // C509
+	(
+		PLUS
+		subLineItemPriceChangeOperationCode=ID // 5213
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //QTY+12:54:PCE'
@@ -1586,21 +1765,20 @@ ERCSegment:
 CNTSegment:
 	segment="CNT"
 	PLUS
-	(
-		( todo1=ID )?
-		COLON
-		( todo2=ID )?
-	)?
+	control=Control // C270
 	lineEnd=QUOTE_AND_NL
 ;
-
 CTASegment:
 	segment="CTA"
 	PLUS
-	( todo=ID )?
+	( contactFunctionCode=ID )?
+	(
+		PLUS
+		departmentEmployeeDetails=DepartmentEmployeeDetail
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-
+// TODO
 PCISegment:
 	segment="PCI"
 	PLUS
@@ -1631,6 +1809,12 @@ UNZSegment:
 	( interchangeControlCount=ID )?
 	PLUS
 	( interchangeControlRef=ID )?
+	lineEnd=QUOTE_AND_NL
+;
+UNESegment:
+	segment="UNE"
+	PLUS
+	( todo=ID )?
 	lineEnd=QUOTE_AND_NL
 ;
 
@@ -1671,6 +1855,7 @@ UNBHeader:
 	COLON
 	( num1=ID )?
 ;
+// C509
 PriceInformation: // C509
 	priceCodeQualifier=ID // 5125
 	COLON
@@ -2002,6 +2187,374 @@ InterchangerFunction:
 	(
 		COLON
 		interchange2=ID
+	)?
+;
+// C517
+LocationIdentification:
+	locationNameCode=ID // 3225
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				locationName=ID // 3224
+			)?
+		)?
+	)?
+;
+// C090
+AddressDetail:
+	addressFormatCode=ID
+	(
+		COLON
+		addressComponentDescriptions+=ID
+	)*
+;
+// C817
+AddressUsage:
+	addressPurposeCode=ID
+	(
+		COLON
+		addressTypeCode=ID
+		(
+			COLON
+			addressStatusCode=ID
+		)?
+	)?
+;
+// C956
+AttributeDetail:
+	attributeDescriptionCode=ID // 9019
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				attributeDescription=ID // 9018
+			)?
+		)?
+	)?
+;
+// C955
+AttributeType:
+	attributeTypeDescriptionCode=ID // 9021
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				attributeTypeDescription=ID // 9020
+			)?
+		)?
+	)?
+;
+// C551
+BankOperation:
+	bankOperationCode=ID // 4383
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
+// C521
+BusinessFunction:
+	businessFunctionTypeCodeQualifier=ID // 4027
+	(
+		COLON
+		businessFunctionCode=ID // 4025
+		(
+			COLON
+			codeListIdentificationCode=ID // 1131
+			(
+				COLON
+				codeListResponsibleAgencyCode=ID // 3055
+				(
+					COLON
+					businessDescription=ID // 4022
+				)?
+			)?
+		)?
+	)?
+;
+// C056
+DepartmentEmployeeDetail:
+	departmentEmployeeNameCode=ID // 3413
+	(
+		COLON
+		departmentEmployeeName=ID // 3412
+	)?
+;
+// C206
+IdentificationNumber:
+	objectIdentifier=ID // 7402
+	(
+		COLON
+		objectIdentificationCodeQualifier=ID // 7405
+		(
+			COLON
+			statusDescriptionCode=ID // 4405
+		)?
+	)?
+;
+// C778
+PositionIdentification:
+	hierarchyStructureLevelIdentifier=ID // 7164
+	(
+		COLON
+		sequencePositionIdentifier=ID // 1050
+	)?
+;
+// C240
+ProductCharacteristic:
+	characteristicDescriptionCode=ID // 7037
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				characteristicDescription1=ID // 7036
+				(
+					COLON
+					characteristicDescription2=ID // 7036
+				)?
+			)?
+		)?
+	)?
+;
+// C042
+NationalityDetail:
+	nationalityNameCode=ID // 3293
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				nationalityName=ID // 3292
+			)?
+		)?
+	)?
+;
+// C501
+PercentageDetail:
+	percentageTypeCodeQualifier=ID // 5245
+	(
+		COLON
+		percentage=ID // 5482
+		(
+			COLON
+			percentageBasisIdentificationCode=ID // 5249
+			(
+				COLON
+				codeListIdentificationCode=ID // 1131
+				(
+					COLON
+					codeListResponsibleAgencyCode=ID // 3055
+				)?
+			)?
+		)?
+	)?
+;
+// C128
+RateDetail:
+	rateTypeCodeQualifier=ID // 5419
+	(
+		COLON
+		unitPriceBasisRate=ID // 5420
+		(
+			COLON
+			unitPriceBasisValue=ID // 5284
+			(
+				COLON
+				measurementUnitCode=ID // 6411
+			)?
+		)?
+	)?
+;
+// C601
+StatusCategory:
+	statusCategoryCode=ID // 9015
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
+// C555
+Status:
+	statusDescriptionCode=ID // 4405
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				statusDescription=ID // 4404
+			)?
+		)?
+	)?
+;
+// C556
+StatusReason:
+	statusReasonDescriptionCode=ID // 9013
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				statusReasonDescription=ID // 9012
+			)?
+		)?
+	)?
+;
+// C780
+ValueListIdentification:
+	valueListIdentifier=ID // 1518
+	(
+		COLON
+		objectIdentificationCodeQualifier=ID // 7405
+	)?
+;
+// C100
+TermsOfDeliveryTransport:
+	deliveryTransportTermsDescriptionCode=ID // 4053
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				deliveryTransportTermsDescriptions+=ID // 4052
+			)*
+		)?
+	)?
+;
+// C279
+QuantityDifferenceInformation:
+	quantityVarianceValue=ID // 6064
+	(
+		COLON
+		quantityTypeCodeQualifier=ID // 6063
+	)?
+;
+// C960
+ReasonForChange:
+	changeReasonDescriptionCode=ID // 4295
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				changeReasonDescriptions=ID // 4294
+			)?
+		)?
+	)?
+;
+// C508
+LanguageDetail:
+	languageNameCode=ID // 3453
+	(
+		COLON
+		languageName=ID // 3452
+	)?
+;
+// C333
+InformationRequest:
+	requestedInformationDescriptionCode=ID // 4511
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				requestedInformationDescription=ID // 4510
+			)?
+		)?
+	)?
+;
+// C545
+IndexIdentification:
+	indexCodeQualifier=ID // 5013
+	(
+		COLON
+		indexTypeIdentifier=ID // 5027
+		(
+			COLON
+			codeListIdentificationCode=ID // 1131
+			(
+				COLON
+				codeListResponsibleAgencyCode=ID // 3055
+			)?
+		)?
+	)?
+;
+// C546
+IndexValue:
+	indexValue=ID // 5030
+	(
+		COLON
+		indexValueRepresentationCode=ID // 5039
+	)?
+;
+// C270
+Control:
+	controlTotalTypeCodeQualifier=ID // 6069
+	(
+		COLON
+		controlTotalValue=ID // 6066
+		(
+			COLON
+			measurementUnitCode=ID // 6411
+		)?
+	)?
+;
+// C974
+BasisType:
+	basisTypeDescriptionCode=ID // 9047
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				basisTypeDescription=ID // 9046
+			)?
+		)?
 	)?
 ;
 DateOnlyFunction:

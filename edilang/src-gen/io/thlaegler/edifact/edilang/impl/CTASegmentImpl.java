@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CTASegment;
+import io.thlaegler.edifact.edilang.DepartmentEmployeeDetail;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CTASegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CTASegmentImpl#getContactFunctionCode <em>Contact Function Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CTASegmentImpl#getDepartmentEmployeeDetails <em>Department Employee Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getContactFunctionCode() <em>Contact Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getContactFunctionCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String CONTACT_FUNCTION_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getContactFunctionCode() <em>Contact Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getContactFunctionCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String contactFunctionCode = CONTACT_FUNCTION_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getDepartmentEmployeeDetails() <em>Department Employee Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDepartmentEmployeeDetails()
+   * @generated
+   * @ordered
+   */
+  protected DepartmentEmployeeDetail departmentEmployeeDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,9 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getContactFunctionCode()
   {
-    return todo;
+    return contactFunctionCode;
   }
 
   /**
@@ -85,12 +99,78 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setContactFunctionCode(String newContactFunctionCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldContactFunctionCode = contactFunctionCode;
+    contactFunctionCode = newContactFunctionCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CTA_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CTA_SEGMENT__CONTACT_FUNCTION_CODE, oldContactFunctionCode, contactFunctionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DepartmentEmployeeDetail getDepartmentEmployeeDetails()
+  {
+    return departmentEmployeeDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDepartmentEmployeeDetails(DepartmentEmployeeDetail newDepartmentEmployeeDetails, NotificationChain msgs)
+  {
+    DepartmentEmployeeDetail oldDepartmentEmployeeDetails = departmentEmployeeDetails;
+    departmentEmployeeDetails = newDepartmentEmployeeDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS, oldDepartmentEmployeeDetails, newDepartmentEmployeeDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDepartmentEmployeeDetails(DepartmentEmployeeDetail newDepartmentEmployeeDetails)
+  {
+    if (newDepartmentEmployeeDetails != departmentEmployeeDetails)
+    {
+      NotificationChain msgs = null;
+      if (departmentEmployeeDetails != null)
+        msgs = ((InternalEObject)departmentEmployeeDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS, null, msgs);
+      if (newDepartmentEmployeeDetails != null)
+        msgs = ((InternalEObject)newDepartmentEmployeeDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS, null, msgs);
+      msgs = basicSetDepartmentEmployeeDetails(newDepartmentEmployeeDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS, newDepartmentEmployeeDetails, newDepartmentEmployeeDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS:
+        return basicSetDepartmentEmployeeDetails(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CTA_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CTA_SEGMENT__CONTACT_FUNCTION_CODE:
+        return getContactFunctionCode();
+      case EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS:
+        return getDepartmentEmployeeDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CTA_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CTA_SEGMENT__CONTACT_FUNCTION_CODE:
+        setContactFunctionCode((String)newValue);
+        return;
+      case EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS:
+        setDepartmentEmployeeDetails((DepartmentEmployeeDetail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CTA_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CTA_SEGMENT__CONTACT_FUNCTION_CODE:
+        setContactFunctionCode(CONTACT_FUNCTION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS:
+        setDepartmentEmployeeDetails((DepartmentEmployeeDetail)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CTA_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CTA_SEGMENT__CONTACT_FUNCTION_CODE:
+        return CONTACT_FUNCTION_CODE_EDEFAULT == null ? contactFunctionCode != null : !CONTACT_FUNCTION_CODE_EDEFAULT.equals(contactFunctionCode);
+      case EdilangPackage.CTA_SEGMENT__DEPARTMENT_EMPLOYEE_DETAILS:
+        return departmentEmployeeDetails != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (contactFunctionCode: ");
+    result.append(contactFunctionCode);
     result.append(')');
     return result.toString();
   }

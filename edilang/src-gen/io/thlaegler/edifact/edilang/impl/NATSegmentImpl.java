@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.NATSegment;
+import io.thlaegler.edifact.edilang.NationalityDetail;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.NATSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.NATSegmentImpl#getNationalityCodeQualifier <em>Nationality Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.NATSegmentImpl#getNationalityDetails <em>Nationality Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getNationalityCodeQualifier() <em>Nationality Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getNationalityCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String NATIONALITY_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getNationalityCodeQualifier() <em>Nationality Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getNationalityCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String nationalityCodeQualifier = NATIONALITY_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getNationalityDetails() <em>Nationality Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNationalityDetails()
+   * @generated
+   * @ordered
+   */
+  protected NationalityDetail nationalityDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,9 @@ public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getNationalityCodeQualifier()
   {
-    return todo;
+    return nationalityCodeQualifier;
   }
 
   /**
@@ -85,12 +99,78 @@ public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setNationalityCodeQualifier(String newNationalityCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldNationalityCodeQualifier = nationalityCodeQualifier;
+    nationalityCodeQualifier = newNationalityCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.NAT_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.NAT_SEGMENT__NATIONALITY_CODE_QUALIFIER, oldNationalityCodeQualifier, nationalityCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NationalityDetail getNationalityDetails()
+  {
+    return nationalityDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetNationalityDetails(NationalityDetail newNationalityDetails, NotificationChain msgs)
+  {
+    NationalityDetail oldNationalityDetails = nationalityDetails;
+    nationalityDetails = newNationalityDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS, oldNationalityDetails, newNationalityDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setNationalityDetails(NationalityDetail newNationalityDetails)
+  {
+    if (newNationalityDetails != nationalityDetails)
+    {
+      NotificationChain msgs = null;
+      if (nationalityDetails != null)
+        msgs = ((InternalEObject)nationalityDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS, null, msgs);
+      if (newNationalityDetails != null)
+        msgs = ((InternalEObject)newNationalityDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS, null, msgs);
+      msgs = basicSetNationalityDetails(newNationalityDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS, newNationalityDetails, newNationalityDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS:
+        return basicSetNationalityDetails(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.NAT_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_CODE_QUALIFIER:
+        return getNationalityCodeQualifier();
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS:
+        return getNationalityDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.NAT_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_CODE_QUALIFIER:
+        setNationalityCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS:
+        setNationalityDetails((NationalityDetail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.NAT_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_CODE_QUALIFIER:
+        setNationalityCodeQualifier(NATIONALITY_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS:
+        setNationalityDetails((NationalityDetail)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.NAT_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_CODE_QUALIFIER:
+        return NATIONALITY_CODE_QUALIFIER_EDEFAULT == null ? nationalityCodeQualifier != null : !NATIONALITY_CODE_QUALIFIER_EDEFAULT.equals(nationalityCodeQualifier);
+      case EdilangPackage.NAT_SEGMENT__NATIONALITY_DETAILS:
+        return nationalityDetails != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class NATSegmentImpl extends AbstractEdiSegmentImpl implements NATSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (nationalityCodeQualifier: ");
+    result.append(nationalityCodeQualifier);
     result.append(')');
     return result.toString();
   }

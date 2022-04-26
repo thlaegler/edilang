@@ -3,6 +3,7 @@
  */
 package io.thlaegler.edifact.edilang;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.STSSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.STSSegment#getStatusCategory <em>Status Category</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.STSSegment#getStatus <em>Status</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.STSSegment#getStatusReasons <em>Status Reasons</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getSTSSegment()
@@ -23,25 +26,59 @@ package io.thlaegler.edifact.edilang;
 public interface STSSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Status Category</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getSTSSegment_Todo()
-   * @model
+   * @return the value of the '<em>Status Category</em>' containment reference.
+   * @see #setStatusCategory(StatusCategory)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getSTSSegment_StatusCategory()
+   * @model containment="true"
    * @generated
    */
-  String getTodo();
+  StatusCategory getStatusCategory();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.STSSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.STSSegment#getStatusCategory <em>Status Category</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Status Category</em>' containment reference.
+   * @see #getStatusCategory()
    * @generated
    */
-  void setTodo(String value);
+  void setStatusCategory(StatusCategory value);
+
+  /**
+   * Returns the value of the '<em><b>Status</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status</em>' containment reference.
+   * @see #setStatus(Status)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getSTSSegment_Status()
+   * @model containment="true"
+   * @generated
+   */
+  Status getStatus();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.STSSegment#getStatus <em>Status</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Status</em>' containment reference.
+   * @see #getStatus()
+   * @generated
+   */
+  void setStatus(Status value);
+
+  /**
+   * Returns the value of the '<em><b>Status Reasons</b></em>' containment reference list.
+   * The list contents are of type {@link io.thlaegler.edifact.edilang.StatusReason}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status Reasons</em>' containment reference list.
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getSTSSegment_StatusReasons()
+   * @model containment="true"
+   * @generated
+   */
+  EList<StatusReason> getStatusReasons();
 
 } // STSSegment

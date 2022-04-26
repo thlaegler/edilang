@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.RTESegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.RTESegment#getRateDetails <em>Rate Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.RTESegment#getStatusDescriptionCode <em>Status Description Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getRTESegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface RTESegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Rate Details</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getRTESegment_Todo()
+   * @return the value of the '<em>Rate Details</em>' containment reference.
+   * @see #setRateDetails(RateDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getRTESegment_RateDetails()
+   * @model containment="true"
+   * @generated
+   */
+  RateDetail getRateDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.RTESegment#getRateDetails <em>Rate Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Rate Details</em>' containment reference.
+   * @see #getRateDetails()
+   * @generated
+   */
+  void setRateDetails(RateDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Status Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status Description Code</em>' attribute.
+   * @see #setStatusDescriptionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getRTESegment_StatusDescriptionCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getStatusDescriptionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.RTESegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.RTESegment#getStatusDescriptionCode <em>Status Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Status Description Code</em>' attribute.
+   * @see #getStatusDescriptionCode()
    * @generated
    */
-  void setTodo(String value);
+  void setStatusDescriptionCode(String value);
 
 } // RTESegment

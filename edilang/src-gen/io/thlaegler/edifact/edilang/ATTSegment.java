@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ATTSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ATTSegment#getAttributeFunctionCodeQualifier <em>Attribute Function Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ATTSegment#getAttributeType <em>Attribute Type</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ATTSegment#getAttributeDetail <em>Attribute Detail</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getATTSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface ATTSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Attribute Function Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getATTSegment_Todo()
+   * @return the value of the '<em>Attribute Function Code Qualifier</em>' attribute.
+   * @see #setAttributeFunctionCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getATTSegment_AttributeFunctionCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getAttributeFunctionCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ATTSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ATTSegment#getAttributeFunctionCodeQualifier <em>Attribute Function Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Attribute Function Code Qualifier</em>' attribute.
+   * @see #getAttributeFunctionCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setAttributeFunctionCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Attribute Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Attribute Type</em>' containment reference.
+   * @see #setAttributeType(AttributeType)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getATTSegment_AttributeType()
+   * @model containment="true"
+   * @generated
+   */
+  AttributeType getAttributeType();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ATTSegment#getAttributeType <em>Attribute Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Attribute Type</em>' containment reference.
+   * @see #getAttributeType()
+   * @generated
+   */
+  void setAttributeType(AttributeType value);
+
+  /**
+   * Returns the value of the '<em><b>Attribute Detail</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Attribute Detail</em>' containment reference.
+   * @see #setAttributeDetail(AttributeDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getATTSegment_AttributeDetail()
+   * @model containment="true"
+   * @generated
+   */
+  AttributeDetail getAttributeDetail();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ATTSegment#getAttributeDetail <em>Attribute Detail</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Attribute Detail</em>' containment reference.
+   * @see #getAttributeDetail()
+   * @generated
+   */
+  void setAttributeDetail(AttributeDetail value);
 
 } // ATTSegment

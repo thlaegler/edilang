@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.PRISegmentImpl#getSub <em>Sub</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.PRISegmentImpl#getPriceInformation <em>Price Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.PRISegmentImpl#getSubLineItemPriceChangeOperationCode <em>Sub Line Item Price Change Operation Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
 {
   /**
-   * The cached value of the '{@link #getSub() <em>Sub</em>}' containment reference.
+   * The cached value of the '{@link #getPriceInformation() <em>Price Information</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSub()
+   * @see #getPriceInformation()
    * @generated
    * @ordered
    */
-  protected PriceInformation sub;
+  protected PriceInformation priceInformation;
+
+  /**
+   * The default value of the '{@link #getSubLineItemPriceChangeOperationCode() <em>Sub Line Item Price Change Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSubLineItemPriceChangeOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSubLineItemPriceChangeOperationCode() <em>Sub Line Item Price Change Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSubLineItemPriceChangeOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected String subLineItemPriceChangeOperationCode = SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,9 +88,9 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
    * @generated
    */
   @Override
-  public PriceInformation getSub()
+  public PriceInformation getPriceInformation()
   {
-    return sub;
+    return priceInformation;
   }
 
   /**
@@ -77,13 +98,13 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSub(PriceInformation newSub, NotificationChain msgs)
+  public NotificationChain basicSetPriceInformation(PriceInformation newPriceInformation, NotificationChain msgs)
   {
-    PriceInformation oldSub = sub;
-    sub = newSub;
+    PriceInformation oldPriceInformation = priceInformation;
+    priceInformation = newPriceInformation;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.PRI_SEGMENT__SUB, oldSub, newSub);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION, oldPriceInformation, newPriceInformation);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -95,20 +116,45 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
    * @generated
    */
   @Override
-  public void setSub(PriceInformation newSub)
+  public void setPriceInformation(PriceInformation newPriceInformation)
   {
-    if (newSub != sub)
+    if (newPriceInformation != priceInformation)
     {
       NotificationChain msgs = null;
-      if (sub != null)
-        msgs = ((InternalEObject)sub).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.PRI_SEGMENT__SUB, null, msgs);
-      if (newSub != null)
-        msgs = ((InternalEObject)newSub).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.PRI_SEGMENT__SUB, null, msgs);
-      msgs = basicSetSub(newSub, msgs);
+      if (priceInformation != null)
+        msgs = ((InternalEObject)priceInformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION, null, msgs);
+      if (newPriceInformation != null)
+        msgs = ((InternalEObject)newPriceInformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION, null, msgs);
+      msgs = basicSetPriceInformation(newPriceInformation, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.PRI_SEGMENT__SUB, newSub, newSub));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION, newPriceInformation, newPriceInformation));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getSubLineItemPriceChangeOperationCode()
+  {
+    return subLineItemPriceChangeOperationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSubLineItemPriceChangeOperationCode(String newSubLineItemPriceChangeOperationCode)
+  {
+    String oldSubLineItemPriceChangeOperationCode = subLineItemPriceChangeOperationCode;
+    subLineItemPriceChangeOperationCode = newSubLineItemPriceChangeOperationCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.PRI_SEGMENT__SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE, oldSubLineItemPriceChangeOperationCode, subLineItemPriceChangeOperationCode));
   }
 
   /**
@@ -121,8 +167,8 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PRI_SEGMENT__SUB:
-        return basicSetSub(null, msgs);
+      case EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION:
+        return basicSetPriceInformation(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -137,8 +183,10 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PRI_SEGMENT__SUB:
-        return getSub();
+      case EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION:
+        return getPriceInformation();
+      case EdilangPackage.PRI_SEGMENT__SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE:
+        return getSubLineItemPriceChangeOperationCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -153,8 +201,11 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PRI_SEGMENT__SUB:
-        setSub((PriceInformation)newValue);
+      case EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION:
+        setPriceInformation((PriceInformation)newValue);
+        return;
+      case EdilangPackage.PRI_SEGMENT__SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE:
+        setSubLineItemPriceChangeOperationCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,8 +221,11 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PRI_SEGMENT__SUB:
-        setSub((PriceInformation)null);
+      case EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION:
+        setPriceInformation((PriceInformation)null);
+        return;
+      case EdilangPackage.PRI_SEGMENT__SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE:
+        setSubLineItemPriceChangeOperationCode(SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -187,10 +241,29 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.PRI_SEGMENT__SUB:
-        return sub != null;
+      case EdilangPackage.PRI_SEGMENT__PRICE_INFORMATION:
+        return priceInformation != null;
+      case EdilangPackage.PRI_SEGMENT__SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE:
+        return SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE_EDEFAULT == null ? subLineItemPriceChangeOperationCode != null : !SUB_LINE_ITEM_PRICE_CHANGE_OPERATION_CODE_EDEFAULT.equals(subLineItemPriceChangeOperationCode);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (subLineItemPriceChangeOperationCode: ");
+    result.append(subLineItemPriceChangeOperationCode);
+    result.append(')');
+    return result.toString();
   }
 
 } //PRISegmentImpl

@@ -4,11 +4,17 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.ADRSegment;
+import io.thlaegler.edifact.edilang.AddressDetail;
+import io.thlaegler.edifact.edilang.AddressUsage;
+import io.thlaegler.edifact.edilang.CountrySubEntityDetail;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.LocationIdentification;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +26,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getAddressUsage <em>Address Usage</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getAddressDetails <em>Address Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getCityName <em>City Name</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getPostalIdentificationCode <em>Postal Identification Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getCountryNameCode <em>Country Name Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getCountrySubEntityDetails <em>Country Sub Entity Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ADRSegmentImpl#getLocationIdentification <em>Location Identification</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +40,104 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getAddressUsage() <em>Address Usage</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAddressUsage()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected AddressUsage addressUsage;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getAddressDetails() <em>Address Details</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAddressDetails()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected AddressDetail addressDetails;
+
+  /**
+   * The default value of the '{@link #getCityName() <em>City Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCityName()
+   * @generated
+   * @ordered
+   */
+  protected static final String CITY_NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCityName() <em>City Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCityName()
+   * @generated
+   * @ordered
+   */
+  protected String cityName = CITY_NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getPostalIdentificationCode() <em>Postal Identification Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPostalIdentificationCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String POSTAL_IDENTIFICATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getPostalIdentificationCode() <em>Postal Identification Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPostalIdentificationCode()
+   * @generated
+   * @ordered
+   */
+  protected String postalIdentificationCode = POSTAL_IDENTIFICATION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCountryNameCode() <em>Country Name Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCountryNameCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String COUNTRY_NAME_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCountryNameCode() <em>Country Name Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCountryNameCode()
+   * @generated
+   * @ordered
+   */
+  protected String countryNameCode = COUNTRY_NAME_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getCountrySubEntityDetails() <em>Country Sub Entity Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCountrySubEntityDetails()
+   * @generated
+   * @ordered
+   */
+  protected CountrySubEntityDetail countrySubEntityDetails;
+
+  /**
+   * The cached value of the '{@link #getLocationIdentification() <em>Location Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLocationIdentification()
+   * @generated
+   * @ordered
+   */
+  protected LocationIdentification locationIdentification;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +166,26 @@ public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public AddressUsage getAddressUsage()
   {
-    return todo;
+    return addressUsage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAddressUsage(AddressUsage newAddressUsage, NotificationChain msgs)
+  {
+    AddressUsage oldAddressUsage = addressUsage;
+    addressUsage = newAddressUsage;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE, oldAddressUsage, newAddressUsage);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +194,267 @@ public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setAddressUsage(AddressUsage newAddressUsage)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newAddressUsage != addressUsage)
+    {
+      NotificationChain msgs = null;
+      if (addressUsage != null)
+        msgs = ((InternalEObject)addressUsage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE, null, msgs);
+      if (newAddressUsage != null)
+        msgs = ((InternalEObject)newAddressUsage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE, null, msgs);
+      msgs = basicSetAddressUsage(newAddressUsage, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE, newAddressUsage, newAddressUsage));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AddressDetail getAddressDetails()
+  {
+    return addressDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAddressDetails(AddressDetail newAddressDetails, NotificationChain msgs)
+  {
+    AddressDetail oldAddressDetails = addressDetails;
+    addressDetails = newAddressDetails;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__TODO, oldTodo, todo));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS, oldAddressDetails, newAddressDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAddressDetails(AddressDetail newAddressDetails)
+  {
+    if (newAddressDetails != addressDetails)
+    {
+      NotificationChain msgs = null;
+      if (addressDetails != null)
+        msgs = ((InternalEObject)addressDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS, null, msgs);
+      if (newAddressDetails != null)
+        msgs = ((InternalEObject)newAddressDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS, null, msgs);
+      msgs = basicSetAddressDetails(newAddressDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS, newAddressDetails, newAddressDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCityName()
+  {
+    return cityName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCityName(String newCityName)
+  {
+    String oldCityName = cityName;
+    cityName = newCityName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__CITY_NAME, oldCityName, cityName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getPostalIdentificationCode()
+  {
+    return postalIdentificationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPostalIdentificationCode(String newPostalIdentificationCode)
+  {
+    String oldPostalIdentificationCode = postalIdentificationCode;
+    postalIdentificationCode = newPostalIdentificationCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__POSTAL_IDENTIFICATION_CODE, oldPostalIdentificationCode, postalIdentificationCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCountryNameCode()
+  {
+    return countryNameCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCountryNameCode(String newCountryNameCode)
+  {
+    String oldCountryNameCode = countryNameCode;
+    countryNameCode = newCountryNameCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__COUNTRY_NAME_CODE, oldCountryNameCode, countryNameCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CountrySubEntityDetail getCountrySubEntityDetails()
+  {
+    return countrySubEntityDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCountrySubEntityDetails(CountrySubEntityDetail newCountrySubEntityDetails, NotificationChain msgs)
+  {
+    CountrySubEntityDetail oldCountrySubEntityDetails = countrySubEntityDetails;
+    countrySubEntityDetails = newCountrySubEntityDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS, oldCountrySubEntityDetails, newCountrySubEntityDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCountrySubEntityDetails(CountrySubEntityDetail newCountrySubEntityDetails)
+  {
+    if (newCountrySubEntityDetails != countrySubEntityDetails)
+    {
+      NotificationChain msgs = null;
+      if (countrySubEntityDetails != null)
+        msgs = ((InternalEObject)countrySubEntityDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS, null, msgs);
+      if (newCountrySubEntityDetails != null)
+        msgs = ((InternalEObject)newCountrySubEntityDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS, null, msgs);
+      msgs = basicSetCountrySubEntityDetails(newCountrySubEntityDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS, newCountrySubEntityDetails, newCountrySubEntityDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public LocationIdentification getLocationIdentification()
+  {
+    return locationIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLocationIdentification(LocationIdentification newLocationIdentification, NotificationChain msgs)
+  {
+    LocationIdentification oldLocationIdentification = locationIdentification;
+    locationIdentification = newLocationIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION, oldLocationIdentification, newLocationIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLocationIdentification(LocationIdentification newLocationIdentification)
+  {
+    if (newLocationIdentification != locationIdentification)
+    {
+      NotificationChain msgs = null;
+      if (locationIdentification != null)
+        msgs = ((InternalEObject)locationIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION, null, msgs);
+      if (newLocationIdentification != null)
+        msgs = ((InternalEObject)newLocationIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION, null, msgs);
+      msgs = basicSetLocationIdentification(newLocationIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION, newLocationIdentification, newLocationIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE:
+        return basicSetAddressUsage(null, msgs);
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS:
+        return basicSetAddressDetails(null, msgs);
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS:
+        return basicSetCountrySubEntityDetails(null, msgs);
+      case EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION:
+        return basicSetLocationIdentification(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +467,20 @@ public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ADR_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE:
+        return getAddressUsage();
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS:
+        return getAddressDetails();
+      case EdilangPackage.ADR_SEGMENT__CITY_NAME:
+        return getCityName();
+      case EdilangPackage.ADR_SEGMENT__POSTAL_IDENTIFICATION_CODE:
+        return getPostalIdentificationCode();
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_NAME_CODE:
+        return getCountryNameCode();
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS:
+        return getCountrySubEntityDetails();
+      case EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION:
+        return getLocationIdentification();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +495,26 @@ public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ADR_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE:
+        setAddressUsage((AddressUsage)newValue);
+        return;
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS:
+        setAddressDetails((AddressDetail)newValue);
+        return;
+      case EdilangPackage.ADR_SEGMENT__CITY_NAME:
+        setCityName((String)newValue);
+        return;
+      case EdilangPackage.ADR_SEGMENT__POSTAL_IDENTIFICATION_CODE:
+        setPostalIdentificationCode((String)newValue);
+        return;
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_NAME_CODE:
+        setCountryNameCode((String)newValue);
+        return;
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS:
+        setCountrySubEntityDetails((CountrySubEntityDetail)newValue);
+        return;
+      case EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION:
+        setLocationIdentification((LocationIdentification)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +530,26 @@ public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ADR_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE:
+        setAddressUsage((AddressUsage)null);
+        return;
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS:
+        setAddressDetails((AddressDetail)null);
+        return;
+      case EdilangPackage.ADR_SEGMENT__CITY_NAME:
+        setCityName(CITY_NAME_EDEFAULT);
+        return;
+      case EdilangPackage.ADR_SEGMENT__POSTAL_IDENTIFICATION_CODE:
+        setPostalIdentificationCode(POSTAL_IDENTIFICATION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_NAME_CODE:
+        setCountryNameCode(COUNTRY_NAME_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS:
+        setCountrySubEntityDetails((CountrySubEntityDetail)null);
+        return;
+      case EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION:
+        setLocationIdentification((LocationIdentification)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +565,20 @@ public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ADR_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_USAGE:
+        return addressUsage != null;
+      case EdilangPackage.ADR_SEGMENT__ADDRESS_DETAILS:
+        return addressDetails != null;
+      case EdilangPackage.ADR_SEGMENT__CITY_NAME:
+        return CITY_NAME_EDEFAULT == null ? cityName != null : !CITY_NAME_EDEFAULT.equals(cityName);
+      case EdilangPackage.ADR_SEGMENT__POSTAL_IDENTIFICATION_CODE:
+        return POSTAL_IDENTIFICATION_CODE_EDEFAULT == null ? postalIdentificationCode != null : !POSTAL_IDENTIFICATION_CODE_EDEFAULT.equals(postalIdentificationCode);
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_NAME_CODE:
+        return COUNTRY_NAME_CODE_EDEFAULT == null ? countryNameCode != null : !COUNTRY_NAME_CODE_EDEFAULT.equals(countryNameCode);
+      case EdilangPackage.ADR_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS:
+        return countrySubEntityDetails != null;
+      case EdilangPackage.ADR_SEGMENT__LOCATION_IDENTIFICATION:
+        return locationIdentification != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +594,12 @@ public class ADRSegmentImpl extends AbstractEdiSegmentImpl implements ADRSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (cityName: ");
+    result.append(cityName);
+    result.append(", postalIdentificationCode: ");
+    result.append(postalIdentificationCode);
+    result.append(", countryNameCode: ");
+    result.append(countryNameCode);
     result.append(')');
     return result.toString();
   }

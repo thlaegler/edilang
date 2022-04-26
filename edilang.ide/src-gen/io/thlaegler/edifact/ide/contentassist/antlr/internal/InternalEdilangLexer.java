@@ -107,7 +107,10 @@ public class InternalEdilangLexer extends Lexer {
     public static final int T__102=102;
     public static final int T__94=94;
     public static final int T__101=101;
+    public static final int T__184=184;
+    public static final int T__183=183;
     public static final int T__90=90;
+    public static final int T__185=185;
     public static final int T__180=180;
     public static final int T__182=182;
     public static final int T__181=181;
@@ -295,10 +298,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:15:7: ( 'ADR' )
-            // InternalEdilang.g:15:9: 'ADR'
+            // InternalEdilang.g:15:7: ( 'UNG' )
+            // InternalEdilang.g:15:9: 'UNG'
             {
-            match("ADR"); 
+            match("UNG"); 
 
 
             }
@@ -316,10 +319,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:16:7: ( 'AGR' )
-            // InternalEdilang.g:16:9: 'AGR'
+            // InternalEdilang.g:16:7: ( 'ADR' )
+            // InternalEdilang.g:16:9: 'ADR'
             {
-            match("AGR"); 
+            match("ADR"); 
 
 
             }
@@ -337,10 +340,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:17:7: ( 'AJT' )
-            // InternalEdilang.g:17:9: 'AJT'
+            // InternalEdilang.g:17:7: ( 'AGR' )
+            // InternalEdilang.g:17:9: 'AGR'
             {
-            match("AJT"); 
+            match("AGR"); 
 
 
             }
@@ -358,10 +361,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:18:7: ( 'ALC' )
-            // InternalEdilang.g:18:9: 'ALC'
+            // InternalEdilang.g:18:7: ( 'AJT' )
+            // InternalEdilang.g:18:9: 'AJT'
             {
-            match("ALC"); 
+            match("AJT"); 
 
 
             }
@@ -379,10 +382,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:19:7: ( 'ALI' )
-            // InternalEdilang.g:19:9: 'ALI'
+            // InternalEdilang.g:19:7: ( 'ALC' )
+            // InternalEdilang.g:19:9: 'ALC'
             {
-            match("ALI"); 
+            match("ALC"); 
 
 
             }
@@ -400,10 +403,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:20:7: ( 'APP' )
-            // InternalEdilang.g:20:9: 'APP'
+            // InternalEdilang.g:20:7: ( 'ALI' )
+            // InternalEdilang.g:20:9: 'ALI'
             {
-            match("APP"); 
+            match("ALI"); 
 
 
             }
@@ -421,10 +424,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:21:7: ( 'APR' )
-            // InternalEdilang.g:21:9: 'APR'
+            // InternalEdilang.g:21:7: ( 'APP' )
+            // InternalEdilang.g:21:9: 'APP'
             {
-            match("APR"); 
+            match("APP"); 
 
 
             }
@@ -442,10 +445,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:22:7: ( 'ARD' )
-            // InternalEdilang.g:22:9: 'ARD'
+            // InternalEdilang.g:22:7: ( 'APR' )
+            // InternalEdilang.g:22:9: 'APR'
             {
-            match("ARD"); 
+            match("APR"); 
 
 
             }
@@ -463,10 +466,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:23:7: ( 'ARR' )
-            // InternalEdilang.g:23:9: 'ARR'
+            // InternalEdilang.g:23:7: ( 'ARD' )
+            // InternalEdilang.g:23:9: 'ARD'
             {
-            match("ARR"); 
+            match("ARD"); 
 
 
             }
@@ -484,10 +487,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:24:7: ( 'ASI' )
-            // InternalEdilang.g:24:9: 'ASI'
+            // InternalEdilang.g:24:7: ( 'ARR' )
+            // InternalEdilang.g:24:9: 'ARR'
             {
-            match("ASI"); 
+            match("ARR"); 
 
 
             }
@@ -505,10 +508,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:25:7: ( 'ATT' )
-            // InternalEdilang.g:25:9: 'ATT'
+            // InternalEdilang.g:25:7: ( 'ASI' )
+            // InternalEdilang.g:25:9: 'ASI'
             {
-            match("ATT"); 
+            match("ASI"); 
 
 
             }
@@ -526,10 +529,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:26:7: ( 'AUT' )
-            // InternalEdilang.g:26:9: 'AUT'
+            // InternalEdilang.g:26:7: ( 'ATT' )
+            // InternalEdilang.g:26:9: 'ATT'
             {
-            match("AUT"); 
+            match("ATT"); 
 
 
             }
@@ -547,10 +550,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:27:7: ( 'BAS' )
-            // InternalEdilang.g:27:9: 'BAS'
+            // InternalEdilang.g:27:7: ( 'AUT' )
+            // InternalEdilang.g:27:9: 'AUT'
             {
-            match("BAS"); 
+            match("AUT"); 
 
 
             }
@@ -568,10 +571,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:28:7: ( 'BII' )
-            // InternalEdilang.g:28:9: 'BII'
+            // InternalEdilang.g:28:7: ( 'BAS' )
+            // InternalEdilang.g:28:9: 'BAS'
             {
-            match("BII"); 
+            match("BAS"); 
 
 
             }
@@ -589,10 +592,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:29:7: ( 'BUS' )
-            // InternalEdilang.g:29:9: 'BUS'
+            // InternalEdilang.g:29:7: ( 'BII' )
+            // InternalEdilang.g:29:9: 'BII'
             {
-            match("BUS"); 
+            match("BII"); 
 
 
             }
@@ -610,10 +613,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:30:7: ( 'CAV' )
-            // InternalEdilang.g:30:9: 'CAV'
+            // InternalEdilang.g:30:7: ( 'BUS' )
+            // InternalEdilang.g:30:9: 'BUS'
             {
-            match("CAV"); 
+            match("BUS"); 
 
 
             }
@@ -631,10 +634,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:31:7: ( 'CCD' )
-            // InternalEdilang.g:31:9: 'CCD'
+            // InternalEdilang.g:31:7: ( 'CAV' )
+            // InternalEdilang.g:31:9: 'CAV'
             {
-            match("CCD"); 
+            match("CAV"); 
 
 
             }
@@ -652,10 +655,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:32:7: ( 'CCI' )
-            // InternalEdilang.g:32:9: 'CCI'
+            // InternalEdilang.g:32:7: ( 'CCD' )
+            // InternalEdilang.g:32:9: 'CCD'
             {
-            match("CCI"); 
+            match("CCD"); 
 
 
             }
@@ -673,10 +676,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:33:7: ( 'CDI' )
-            // InternalEdilang.g:33:9: 'CDI'
+            // InternalEdilang.g:33:7: ( 'CCI' )
+            // InternalEdilang.g:33:9: 'CCI'
             {
-            match("CDI"); 
+            match("CCI"); 
 
 
             }
@@ -694,10 +697,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:34:7: ( 'CDS' )
-            // InternalEdilang.g:34:9: 'CDS'
+            // InternalEdilang.g:34:7: ( 'CDI' )
+            // InternalEdilang.g:34:9: 'CDI'
             {
-            match("CDS"); 
+            match("CDI"); 
 
 
             }
@@ -715,10 +718,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:35:7: ( 'CDV' )
-            // InternalEdilang.g:35:9: 'CDV'
+            // InternalEdilang.g:35:7: ( 'CDS' )
+            // InternalEdilang.g:35:9: 'CDS'
             {
-            match("CDV"); 
+            match("CDS"); 
 
 
             }
@@ -736,10 +739,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:36:7: ( 'CED' )
-            // InternalEdilang.g:36:9: 'CED'
+            // InternalEdilang.g:36:7: ( 'CDV' )
+            // InternalEdilang.g:36:9: 'CDV'
             {
-            match("CED"); 
+            match("CDV"); 
 
 
             }
@@ -757,10 +760,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:37:7: ( 'CIN' )
-            // InternalEdilang.g:37:9: 'CIN'
+            // InternalEdilang.g:37:7: ( 'CED' )
+            // InternalEdilang.g:37:9: 'CED'
             {
-            match("CIN"); 
+            match("CED"); 
 
 
             }
@@ -778,10 +781,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:38:7: ( 'CLA' )
-            // InternalEdilang.g:38:9: 'CLA'
+            // InternalEdilang.g:38:7: ( 'CIN' )
+            // InternalEdilang.g:38:9: 'CIN'
             {
-            match("CLA"); 
+            match("CIN"); 
 
 
             }
@@ -799,10 +802,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:39:7: ( 'CLI' )
-            // InternalEdilang.g:39:9: 'CLI'
+            // InternalEdilang.g:39:7: ( 'CLA' )
+            // InternalEdilang.g:39:9: 'CLA'
             {
-            match("CLI"); 
+            match("CLA"); 
 
 
             }
@@ -820,10 +823,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:40:7: ( 'CMP' )
-            // InternalEdilang.g:40:9: 'CMP'
+            // InternalEdilang.g:40:7: ( 'CLI' )
+            // InternalEdilang.g:40:9: 'CLI'
             {
-            match("CMP"); 
+            match("CLI"); 
 
 
             }
@@ -841,10 +844,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:41:7: ( 'CNI' )
-            // InternalEdilang.g:41:9: 'CNI'
+            // InternalEdilang.g:41:7: ( 'CMP' )
+            // InternalEdilang.g:41:9: 'CMP'
             {
-            match("CNI"); 
+            match("CMP"); 
 
 
             }
@@ -862,10 +865,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:42:7: ( 'COD' )
-            // InternalEdilang.g:42:9: 'COD'
+            // InternalEdilang.g:42:7: ( 'CNI' )
+            // InternalEdilang.g:42:9: 'CNI'
             {
-            match("COD"); 
+            match("CNI"); 
 
 
             }
@@ -883,10 +886,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:43:7: ( 'COM' )
-            // InternalEdilang.g:43:9: 'COM'
+            // InternalEdilang.g:43:7: ( 'COD' )
+            // InternalEdilang.g:43:9: 'COD'
             {
-            match("COM"); 
+            match("COD"); 
 
 
             }
@@ -904,10 +907,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:44:7: ( 'COT' )
-            // InternalEdilang.g:44:9: 'COT'
+            // InternalEdilang.g:44:7: ( 'COM' )
+            // InternalEdilang.g:44:9: 'COM'
             {
-            match("COT"); 
+            match("COM"); 
 
 
             }
@@ -925,10 +928,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:45:7: ( 'CPI' )
-            // InternalEdilang.g:45:9: 'CPI'
+            // InternalEdilang.g:45:7: ( 'COT' )
+            // InternalEdilang.g:45:9: 'COT'
             {
-            match("CPI"); 
+            match("COT"); 
 
 
             }
@@ -946,10 +949,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:46:7: ( 'CPS' )
-            // InternalEdilang.g:46:9: 'CPS'
+            // InternalEdilang.g:46:7: ( 'CPI' )
+            // InternalEdilang.g:46:9: 'CPI'
             {
-            match("CPS"); 
+            match("CPI"); 
 
 
             }
@@ -967,10 +970,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47:7: ( 'CPT' )
-            // InternalEdilang.g:47:9: 'CPT'
+            // InternalEdilang.g:47:7: ( 'CPS' )
+            // InternalEdilang.g:47:9: 'CPS'
             {
-            match("CPT"); 
+            match("CPS"); 
 
 
             }
@@ -988,10 +991,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:48:7: ( 'CST' )
-            // InternalEdilang.g:48:9: 'CST'
+            // InternalEdilang.g:48:7: ( 'CPT' )
+            // InternalEdilang.g:48:9: 'CPT'
             {
-            match("CST"); 
+            match("CPT"); 
 
 
             }
@@ -1009,10 +1012,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:49:7: ( 'DAM' )
-            // InternalEdilang.g:49:9: 'DAM'
+            // InternalEdilang.g:49:7: ( 'CST' )
+            // InternalEdilang.g:49:9: 'CST'
             {
-            match("DAM"); 
+            match("CST"); 
 
 
             }
@@ -1030,10 +1033,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:50:7: ( 'DFN' )
-            // InternalEdilang.g:50:9: 'DFN'
+            // InternalEdilang.g:50:7: ( 'DAM' )
+            // InternalEdilang.g:50:9: 'DAM'
             {
-            match("DFN"); 
+            match("DAM"); 
 
 
             }
@@ -1051,10 +1054,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:51:7: ( 'DGS' )
-            // InternalEdilang.g:51:9: 'DGS'
+            // InternalEdilang.g:51:7: ( 'DFN' )
+            // InternalEdilang.g:51:9: 'DFN'
             {
-            match("DGS"); 
+            match("DFN"); 
 
 
             }
@@ -1072,10 +1075,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:52:7: ( 'DII' )
-            // InternalEdilang.g:52:9: 'DII'
+            // InternalEdilang.g:52:7: ( 'DGS' )
+            // InternalEdilang.g:52:9: 'DGS'
             {
-            match("DII"); 
+            match("DGS"); 
 
 
             }
@@ -1093,10 +1096,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:53:7: ( 'DIM' )
-            // InternalEdilang.g:53:9: 'DIM'
+            // InternalEdilang.g:53:7: ( 'DII' )
+            // InternalEdilang.g:53:9: 'DII'
             {
-            match("DIM"); 
+            match("DII"); 
 
 
             }
@@ -1114,10 +1117,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:54:7: ( 'DLI' )
-            // InternalEdilang.g:54:9: 'DLI'
+            // InternalEdilang.g:54:7: ( 'DIM' )
+            // InternalEdilang.g:54:9: 'DIM'
             {
-            match("DLI"); 
+            match("DIM"); 
 
 
             }
@@ -1135,10 +1138,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:55:7: ( 'DLM' )
-            // InternalEdilang.g:55:9: 'DLM'
+            // InternalEdilang.g:55:7: ( 'DLI' )
+            // InternalEdilang.g:55:9: 'DLI'
             {
-            match("DLM"); 
+            match("DLI"); 
 
 
             }
@@ -1156,10 +1159,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:56:7: ( 'DMS' )
-            // InternalEdilang.g:56:9: 'DMS'
+            // InternalEdilang.g:56:7: ( 'DLM' )
+            // InternalEdilang.g:56:9: 'DLM'
             {
-            match("DMS"); 
+            match("DLM"); 
 
 
             }
@@ -1177,10 +1180,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:57:7: ( 'DOC' )
-            // InternalEdilang.g:57:9: 'DOC'
+            // InternalEdilang.g:57:7: ( 'DMS' )
+            // InternalEdilang.g:57:9: 'DMS'
             {
-            match("DOC"); 
+            match("DMS"); 
 
 
             }
@@ -1198,10 +1201,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:58:7: ( 'DRD' )
-            // InternalEdilang.g:58:9: 'DRD'
+            // InternalEdilang.g:58:7: ( 'DOC' )
+            // InternalEdilang.g:58:9: 'DOC'
             {
-            match("DRD"); 
+            match("DOC"); 
 
 
             }
@@ -1219,10 +1222,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:59:7: ( 'DSG' )
-            // InternalEdilang.g:59:9: 'DSG'
+            // InternalEdilang.g:59:7: ( 'DRD' )
+            // InternalEdilang.g:59:9: 'DRD'
             {
-            match("DSG"); 
+            match("DRD"); 
 
 
             }
@@ -1240,10 +1243,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60:7: ( 'DSI' )
-            // InternalEdilang.g:60:9: 'DSI'
+            // InternalEdilang.g:60:7: ( 'DSG' )
+            // InternalEdilang.g:60:9: 'DSG'
             {
-            match("DSI"); 
+            match("DSG"); 
 
 
             }
@@ -1261,10 +1264,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:61:7: ( 'EDT' )
-            // InternalEdilang.g:61:9: 'EDT'
+            // InternalEdilang.g:61:7: ( 'DSI' )
+            // InternalEdilang.g:61:9: 'DSI'
             {
-            match("EDT"); 
+            match("DSI"); 
 
 
             }
@@ -1282,10 +1285,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:62:7: ( 'EFI' )
-            // InternalEdilang.g:62:9: 'EFI'
+            // InternalEdilang.g:62:7: ( 'EDT' )
+            // InternalEdilang.g:62:9: 'EDT'
             {
-            match("EFI"); 
+            match("EDT"); 
 
 
             }
@@ -1303,10 +1306,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:63:7: ( 'ELM' )
-            // InternalEdilang.g:63:9: 'ELM'
+            // InternalEdilang.g:63:7: ( 'EFI' )
+            // InternalEdilang.g:63:9: 'EFI'
             {
-            match("ELM"); 
+            match("EFI"); 
 
 
             }
@@ -1324,10 +1327,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:64:7: ( 'ELU' )
-            // InternalEdilang.g:64:9: 'ELU'
+            // InternalEdilang.g:64:7: ( 'ELM' )
+            // InternalEdilang.g:64:9: 'ELM'
             {
-            match("ELU"); 
+            match("ELM"); 
 
 
             }
@@ -1345,10 +1348,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:65:7: ( 'ELV' )
-            // InternalEdilang.g:65:9: 'ELV'
+            // InternalEdilang.g:65:7: ( 'ELU' )
+            // InternalEdilang.g:65:9: 'ELU'
             {
-            match("ELV"); 
+            match("ELU"); 
 
 
             }
@@ -1366,10 +1369,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:66:7: ( 'EMP' )
-            // InternalEdilang.g:66:9: 'EMP'
+            // InternalEdilang.g:66:7: ( 'ELV' )
+            // InternalEdilang.g:66:9: 'ELV'
             {
-            match("EMP"); 
+            match("ELV"); 
 
 
             }
@@ -1387,10 +1390,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:67:7: ( 'EQA' )
-            // InternalEdilang.g:67:9: 'EQA'
+            // InternalEdilang.g:67:7: ( 'EMP' )
+            // InternalEdilang.g:67:9: 'EMP'
             {
-            match("EQA"); 
+            match("EMP"); 
 
 
             }
@@ -1408,10 +1411,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:68:7: ( 'EQD' )
-            // InternalEdilang.g:68:9: 'EQD'
+            // InternalEdilang.g:68:7: ( 'EQA' )
+            // InternalEdilang.g:68:9: 'EQA'
             {
-            match("EQD"); 
+            match("EQA"); 
 
 
             }
@@ -1429,10 +1432,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:69:7: ( 'EQN' )
-            // InternalEdilang.g:69:9: 'EQN'
+            // InternalEdilang.g:69:7: ( 'EQD' )
+            // InternalEdilang.g:69:9: 'EQD'
             {
-            match("EQN"); 
+            match("EQD"); 
 
 
             }
@@ -1450,10 +1453,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:70:7: ( 'ERP' )
-            // InternalEdilang.g:70:9: 'ERP'
+            // InternalEdilang.g:70:7: ( 'EQN' )
+            // InternalEdilang.g:70:9: 'EQN'
             {
-            match("ERP"); 
+            match("EQN"); 
 
 
             }
@@ -1471,10 +1474,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71:7: ( 'EVE' )
-            // InternalEdilang.g:71:9: 'EVE'
+            // InternalEdilang.g:71:7: ( 'ERP' )
+            // InternalEdilang.g:71:9: 'ERP'
             {
-            match("EVE"); 
+            match("ERP"); 
 
 
             }
@@ -1492,10 +1495,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:72:7: ( 'EVT' )
-            // InternalEdilang.g:72:9: 'EVT'
+            // InternalEdilang.g:72:7: ( 'EVE' )
+            // InternalEdilang.g:72:9: 'EVE'
             {
-            match("EVT"); 
+            match("EVE"); 
 
 
             }
@@ -1513,10 +1516,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:73:7: ( 'FCA' )
-            // InternalEdilang.g:73:9: 'FCA'
+            // InternalEdilang.g:73:7: ( 'EVT' )
+            // InternalEdilang.g:73:9: 'EVT'
             {
-            match("FCA"); 
+            match("EVT"); 
 
 
             }
@@ -1534,10 +1537,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:74:7: ( 'FII' )
-            // InternalEdilang.g:74:9: 'FII'
+            // InternalEdilang.g:74:7: ( 'FCA' )
+            // InternalEdilang.g:74:9: 'FCA'
             {
-            match("FII"); 
+            match("FCA"); 
 
 
             }
@@ -1555,10 +1558,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:75:7: ( 'FNS' )
-            // InternalEdilang.g:75:9: 'FNS'
+            // InternalEdilang.g:75:7: ( 'FII' )
+            // InternalEdilang.g:75:9: 'FII'
             {
-            match("FNS"); 
+            match("FII"); 
 
 
             }
@@ -1576,10 +1579,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:76:7: ( 'FNT' )
-            // InternalEdilang.g:76:9: 'FNT'
+            // InternalEdilang.g:76:7: ( 'FNS' )
+            // InternalEdilang.g:76:9: 'FNS'
             {
-            match("FNT"); 
+            match("FNS"); 
 
 
             }
@@ -1597,10 +1600,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:77:7: ( 'FOR' )
-            // InternalEdilang.g:77:9: 'FOR'
+            // InternalEdilang.g:77:7: ( 'FNT' )
+            // InternalEdilang.g:77:9: 'FNT'
             {
-            match("FOR"); 
+            match("FNT"); 
 
 
             }
@@ -1618,10 +1621,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:78:7: ( 'FSQ' )
-            // InternalEdilang.g:78:9: 'FSQ'
+            // InternalEdilang.g:78:7: ( 'FOR' )
+            // InternalEdilang.g:78:9: 'FOR'
             {
-            match("FSQ"); 
+            match("FOR"); 
 
 
             }
@@ -1639,10 +1642,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:79:7: ( 'GDS' )
-            // InternalEdilang.g:79:9: 'GDS'
+            // InternalEdilang.g:79:7: ( 'FSQ' )
+            // InternalEdilang.g:79:9: 'FSQ'
             {
-            match("GDS"); 
+            match("FSQ"); 
 
 
             }
@@ -1660,10 +1663,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:80:7: ( 'GEI' )
-            // InternalEdilang.g:80:9: 'GEI'
+            // InternalEdilang.g:80:7: ( 'GDS' )
+            // InternalEdilang.g:80:9: 'GDS'
             {
-            match("GEI"); 
+            match("GDS"); 
 
 
             }
@@ -1681,10 +1684,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:81:7: ( 'GID' )
-            // InternalEdilang.g:81:9: 'GID'
+            // InternalEdilang.g:81:7: ( 'GEI' )
+            // InternalEdilang.g:81:9: 'GEI'
             {
-            match("GID"); 
+            match("GEI"); 
 
 
             }
@@ -1702,10 +1705,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:82:7: ( 'GIN' )
-            // InternalEdilang.g:82:9: 'GIN'
+            // InternalEdilang.g:82:7: ( 'GID' )
+            // InternalEdilang.g:82:9: 'GID'
             {
-            match("GIN"); 
+            match("GID"); 
 
 
             }
@@ -1723,10 +1726,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:83:7: ( 'GIR' )
-            // InternalEdilang.g:83:9: 'GIR'
+            // InternalEdilang.g:83:7: ( 'GIN' )
+            // InternalEdilang.g:83:9: 'GIN'
             {
-            match("GIR"); 
+            match("GIN"); 
 
 
             }
@@ -1744,10 +1747,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:84:7: ( 'GIS' )
-            // InternalEdilang.g:84:9: 'GIS'
+            // InternalEdilang.g:84:7: ( 'GIR' )
+            // InternalEdilang.g:84:9: 'GIR'
             {
-            match("GIS"); 
+            match("GIR"); 
 
 
             }
@@ -1765,10 +1768,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:85:7: ( 'GOR' )
-            // InternalEdilang.g:85:9: 'GOR'
+            // InternalEdilang.g:85:7: ( 'GIS' )
+            // InternalEdilang.g:85:9: 'GIS'
             {
-            match("GOR"); 
+            match("GIS"); 
 
 
             }
@@ -1786,10 +1789,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:86:7: ( 'GRU' )
-            // InternalEdilang.g:86:9: 'GRU'
+            // InternalEdilang.g:86:7: ( 'GOR' )
+            // InternalEdilang.g:86:9: 'GOR'
             {
-            match("GRU"); 
+            match("GOR"); 
 
 
             }
@@ -1807,10 +1810,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:87:7: ( 'HAN' )
-            // InternalEdilang.g:87:9: 'HAN'
+            // InternalEdilang.g:87:7: ( 'GRU' )
+            // InternalEdilang.g:87:9: 'GRU'
             {
-            match("HAN"); 
+            match("GRU"); 
 
 
             }
@@ -1828,10 +1831,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:88:7: ( 'HYN' )
-            // InternalEdilang.g:88:9: 'HYN'
+            // InternalEdilang.g:88:7: ( 'HAN' )
+            // InternalEdilang.g:88:9: 'HAN'
             {
-            match("HYN"); 
+            match("HAN"); 
 
 
             }
@@ -1849,10 +1852,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:89:7: ( 'ICD' )
-            // InternalEdilang.g:89:9: 'ICD'
+            // InternalEdilang.g:89:7: ( 'HYN' )
+            // InternalEdilang.g:89:9: 'HYN'
             {
-            match("ICD"); 
+            match("HYN"); 
 
 
             }
@@ -1870,10 +1873,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:90:7: ( 'IDE' )
-            // InternalEdilang.g:90:9: 'IDE'
+            // InternalEdilang.g:90:7: ( 'ICD' )
+            // InternalEdilang.g:90:9: 'ICD'
             {
-            match("IDE"); 
+            match("ICD"); 
 
 
             }
@@ -1891,10 +1894,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:91:7: ( 'IFD' )
-            // InternalEdilang.g:91:9: 'IFD'
+            // InternalEdilang.g:91:7: ( 'IDE' )
+            // InternalEdilang.g:91:9: 'IDE'
             {
-            match("IFD"); 
+            match("IDE"); 
 
 
             }
@@ -1912,10 +1915,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:92:7: ( 'IHC' )
-            // InternalEdilang.g:92:9: 'IHC'
+            // InternalEdilang.g:92:7: ( 'IFD' )
+            // InternalEdilang.g:92:9: 'IFD'
             {
-            match("IHC"); 
+            match("IFD"); 
 
 
             }
@@ -1933,10 +1936,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:93:7: ( 'IMD' )
-            // InternalEdilang.g:93:9: 'IMD'
+            // InternalEdilang.g:93:7: ( 'IHC' )
+            // InternalEdilang.g:93:9: 'IHC'
             {
-            match("IMD"); 
+            match("IHC"); 
 
 
             }
@@ -1954,10 +1957,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:94:7: ( 'IND' )
-            // InternalEdilang.g:94:9: 'IND'
+            // InternalEdilang.g:94:7: ( 'IMD' )
+            // InternalEdilang.g:94:9: 'IMD'
             {
-            match("IND"); 
+            match("IMD"); 
 
 
             }
@@ -1975,10 +1978,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:95:7: ( 'INP' )
-            // InternalEdilang.g:95:9: 'INP'
+            // InternalEdilang.g:95:7: ( 'IND' )
+            // InternalEdilang.g:95:9: 'IND'
             {
-            match("INP"); 
+            match("IND"); 
 
 
             }
@@ -1996,10 +1999,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__99;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:96:7: ( 'INV' )
-            // InternalEdilang.g:96:9: 'INV'
+            // InternalEdilang.g:96:7: ( 'INP' )
+            // InternalEdilang.g:96:9: 'INP'
             {
-            match("INV"); 
+            match("INP"); 
 
 
             }
@@ -2017,10 +2020,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__100;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:97:8: ( 'IRQ' )
-            // InternalEdilang.g:97:10: 'IRQ'
+            // InternalEdilang.g:97:8: ( 'INV' )
+            // InternalEdilang.g:97:10: 'INV'
             {
-            match("IRQ"); 
+            match("INV"); 
 
 
             }
@@ -2038,10 +2041,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__101;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:98:8: ( 'LAN' )
-            // InternalEdilang.g:98:10: 'LAN'
+            // InternalEdilang.g:98:8: ( 'IRQ' )
+            // InternalEdilang.g:98:10: 'IRQ'
             {
-            match("LAN"); 
+            match("IRQ"); 
 
 
             }
@@ -2059,10 +2062,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__102;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:99:8: ( 'LOC' )
-            // InternalEdilang.g:99:10: 'LOC'
+            // InternalEdilang.g:99:8: ( 'LAN' )
+            // InternalEdilang.g:99:10: 'LAN'
             {
-            match("LOC"); 
+            match("LAN"); 
 
 
             }
@@ -2080,10 +2083,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__103;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:100:8: ( 'MEA' )
-            // InternalEdilang.g:100:10: 'MEA'
+            // InternalEdilang.g:100:8: ( 'LOC' )
+            // InternalEdilang.g:100:10: 'LOC'
             {
-            match("MEA"); 
+            match("LOC"); 
 
 
             }
@@ -2101,10 +2104,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__104;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:101:8: ( 'MEM' )
-            // InternalEdilang.g:101:10: 'MEM'
+            // InternalEdilang.g:101:8: ( 'MEA' )
+            // InternalEdilang.g:101:10: 'MEA'
             {
-            match("MEM"); 
+            match("MEA"); 
 
 
             }
@@ -2122,10 +2125,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__105;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:102:8: ( 'MKS' )
-            // InternalEdilang.g:102:10: 'MKS'
+            // InternalEdilang.g:102:8: ( 'MEM' )
+            // InternalEdilang.g:102:10: 'MEM'
             {
-            match("MKS"); 
+            match("MEM"); 
 
 
             }
@@ -2143,10 +2146,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__106;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:103:8: ( 'NAT' )
-            // InternalEdilang.g:103:10: 'NAT'
+            // InternalEdilang.g:103:8: ( 'MKS' )
+            // InternalEdilang.g:103:10: 'MKS'
             {
-            match("NAT"); 
+            match("MKS"); 
 
 
             }
@@ -2164,10 +2167,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__107;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:104:8: ( 'PAC' )
-            // InternalEdilang.g:104:10: 'PAC'
+            // InternalEdilang.g:104:8: ( 'NAT' )
+            // InternalEdilang.g:104:10: 'NAT'
             {
-            match("PAC"); 
+            match("NAT"); 
 
 
             }
@@ -2185,10 +2188,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__108;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:105:8: ( 'PAI' )
-            // InternalEdilang.g:105:10: 'PAI'
+            // InternalEdilang.g:105:8: ( 'PAC' )
+            // InternalEdilang.g:105:10: 'PAC'
             {
-            match("PAI"); 
+            match("PAC"); 
 
 
             }
@@ -2206,10 +2209,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__109;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:106:8: ( 'PAS' )
-            // InternalEdilang.g:106:10: 'PAS'
+            // InternalEdilang.g:106:8: ( 'PAI' )
+            // InternalEdilang.g:106:10: 'PAI'
             {
-            match("PAS"); 
+            match("PAI"); 
 
 
             }
@@ -2227,10 +2230,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__110;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:107:8: ( 'PCC' )
-            // InternalEdilang.g:107:10: 'PCC'
+            // InternalEdilang.g:107:8: ( 'PAS' )
+            // InternalEdilang.g:107:10: 'PAS'
             {
-            match("PCC"); 
+            match("PAS"); 
 
 
             }
@@ -2248,10 +2251,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__111;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:108:8: ( 'PCD' )
-            // InternalEdilang.g:108:10: 'PCD'
+            // InternalEdilang.g:108:8: ( 'PCC' )
+            // InternalEdilang.g:108:10: 'PCC'
             {
-            match("PCD"); 
+            match("PCC"); 
 
 
             }
@@ -2269,10 +2272,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__112;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:109:8: ( 'PER' )
-            // InternalEdilang.g:109:10: 'PER'
+            // InternalEdilang.g:109:8: ( 'PCD' )
+            // InternalEdilang.g:109:10: 'PCD'
             {
-            match("PER"); 
+            match("PCD"); 
 
 
             }
@@ -2290,10 +2293,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__113;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:110:8: ( 'PGI' )
-            // InternalEdilang.g:110:10: 'PGI'
+            // InternalEdilang.g:110:8: ( 'PER' )
+            // InternalEdilang.g:110:10: 'PER'
             {
-            match("PGI"); 
+            match("PER"); 
 
 
             }
@@ -2311,10 +2314,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__114;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:111:8: ( 'PIA' )
-            // InternalEdilang.g:111:10: 'PIA'
+            // InternalEdilang.g:111:8: ( 'PGI' )
+            // InternalEdilang.g:111:10: 'PGI'
             {
-            match("PIA"); 
+            match("PGI"); 
 
 
             }
@@ -2332,10 +2335,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__115;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:112:8: ( 'PNA' )
-            // InternalEdilang.g:112:10: 'PNA'
+            // InternalEdilang.g:112:8: ( 'PIA' )
+            // InternalEdilang.g:112:10: 'PIA'
             {
-            match("PNA"); 
+            match("PIA"); 
 
 
             }
@@ -2353,10 +2356,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__116;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:113:8: ( 'PRC' )
-            // InternalEdilang.g:113:10: 'PRC'
+            // InternalEdilang.g:113:8: ( 'PNA' )
+            // InternalEdilang.g:113:10: 'PNA'
             {
-            match("PRC"); 
+            match("PNA"); 
 
 
             }
@@ -2374,10 +2377,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__117;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:114:8: ( 'PRV' )
-            // InternalEdilang.g:114:10: 'PRV'
+            // InternalEdilang.g:114:8: ( 'PRC' )
+            // InternalEdilang.g:114:10: 'PRC'
             {
-            match("PRV"); 
+            match("PRC"); 
 
 
             }
@@ -2395,10 +2398,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__118;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:115:8: ( 'PSD' )
-            // InternalEdilang.g:115:10: 'PSD'
+            // InternalEdilang.g:115:8: ( 'PRV' )
+            // InternalEdilang.g:115:10: 'PRV'
             {
-            match("PSD"); 
+            match("PRV"); 
 
 
             }
@@ -2416,10 +2419,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__119;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:116:8: ( 'PTY' )
-            // InternalEdilang.g:116:10: 'PTY'
+            // InternalEdilang.g:116:8: ( 'PSD' )
+            // InternalEdilang.g:116:10: 'PSD'
             {
-            match("PTY"); 
+            match("PSD"); 
 
 
             }
@@ -2437,10 +2440,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__120;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:117:8: ( 'PYT' )
-            // InternalEdilang.g:117:10: 'PYT'
+            // InternalEdilang.g:117:8: ( 'PTY' )
+            // InternalEdilang.g:117:10: 'PTY'
             {
-            match("PYT"); 
+            match("PTY"); 
 
 
             }
@@ -2458,10 +2461,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__121;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:118:8: ( 'QRS' )
-            // InternalEdilang.g:118:10: 'QRS'
+            // InternalEdilang.g:118:8: ( 'PYT' )
+            // InternalEdilang.g:118:10: 'PYT'
             {
-            match("QRS"); 
+            match("PYT"); 
 
 
             }
@@ -2479,10 +2482,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__122;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:119:8: ( 'QUA' )
-            // InternalEdilang.g:119:10: 'QUA'
+            // InternalEdilang.g:119:8: ( 'QRS' )
+            // InternalEdilang.g:119:10: 'QRS'
             {
-            match("QUA"); 
+            match("QRS"); 
 
 
             }
@@ -2500,10 +2503,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__123;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:120:8: ( 'QVR' )
-            // InternalEdilang.g:120:10: 'QVR'
+            // InternalEdilang.g:120:8: ( 'QUA' )
+            // InternalEdilang.g:120:10: 'QUA'
             {
-            match("QVR"); 
+            match("QUA"); 
 
 
             }
@@ -2521,10 +2524,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__124;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:121:8: ( 'RCS' )
-            // InternalEdilang.g:121:10: 'RCS'
+            // InternalEdilang.g:121:8: ( 'QVR' )
+            // InternalEdilang.g:121:10: 'QVR'
             {
-            match("RCS"); 
+            match("QVR"); 
 
 
             }
@@ -2542,10 +2545,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__125;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:122:8: ( 'REL' )
-            // InternalEdilang.g:122:10: 'REL'
+            // InternalEdilang.g:122:8: ( 'RCS' )
+            // InternalEdilang.g:122:10: 'RCS'
             {
-            match("REL"); 
+            match("RCS"); 
 
 
             }
@@ -2563,10 +2566,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__126;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:123:8: ( 'RJL' )
-            // InternalEdilang.g:123:10: 'RJL'
+            // InternalEdilang.g:123:8: ( 'REL' )
+            // InternalEdilang.g:123:10: 'REL'
             {
-            match("RJL"); 
+            match("REL"); 
 
 
             }
@@ -2584,10 +2587,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__127;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:124:8: ( 'RNG' )
-            // InternalEdilang.g:124:10: 'RNG'
+            // InternalEdilang.g:124:8: ( 'RJL' )
+            // InternalEdilang.g:124:10: 'RJL'
             {
-            match("RNG"); 
+            match("RJL"); 
 
 
             }
@@ -2605,10 +2608,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__128;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:125:8: ( 'ROD' )
-            // InternalEdilang.g:125:10: 'ROD'
+            // InternalEdilang.g:125:8: ( 'RNG' )
+            // InternalEdilang.g:125:10: 'RNG'
             {
-            match("ROD"); 
+            match("RNG"); 
 
 
             }
@@ -2626,10 +2629,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__129;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:126:8: ( 'RSL' )
-            // InternalEdilang.g:126:10: 'RSL'
+            // InternalEdilang.g:126:8: ( 'ROD' )
+            // InternalEdilang.g:126:10: 'ROD'
             {
-            match("RSL"); 
+            match("ROD"); 
 
 
             }
@@ -2647,10 +2650,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__130;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:127:8: ( 'RTE' )
-            // InternalEdilang.g:127:10: 'RTE'
+            // InternalEdilang.g:127:8: ( 'RSL' )
+            // InternalEdilang.g:127:10: 'RSL'
             {
-            match("RTE"); 
+            match("RSL"); 
 
 
             }
@@ -2668,10 +2671,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__131;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:128:8: ( 'SAL' )
-            // InternalEdilang.g:128:10: 'SAL'
+            // InternalEdilang.g:128:8: ( 'RTE' )
+            // InternalEdilang.g:128:10: 'RTE'
             {
-            match("SAL"); 
+            match("RTE"); 
 
 
             }
@@ -2689,10 +2692,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__132;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:129:8: ( 'SCC' )
-            // InternalEdilang.g:129:10: 'SCC'
+            // InternalEdilang.g:129:8: ( 'SAL' )
+            // InternalEdilang.g:129:10: 'SAL'
             {
-            match("SCC"); 
+            match("SAL"); 
 
 
             }
@@ -2710,10 +2713,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__133;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:130:8: ( 'SCD' )
-            // InternalEdilang.g:130:10: 'SCD'
+            // InternalEdilang.g:130:8: ( 'SCC' )
+            // InternalEdilang.g:130:10: 'SCC'
             {
-            match("SCD"); 
+            match("SCC"); 
 
 
             }
@@ -2731,10 +2734,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__134;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:131:8: ( 'SEG' )
-            // InternalEdilang.g:131:10: 'SEG'
+            // InternalEdilang.g:131:8: ( 'SCD' )
+            // InternalEdilang.g:131:10: 'SCD'
             {
-            match("SEG"); 
+            match("SCD"); 
 
 
             }
@@ -2752,10 +2755,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__135;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:132:8: ( 'SEL' )
-            // InternalEdilang.g:132:10: 'SEL'
+            // InternalEdilang.g:132:8: ( 'SEG' )
+            // InternalEdilang.g:132:10: 'SEG'
             {
-            match("SEL"); 
+            match("SEG"); 
 
 
             }
@@ -2773,10 +2776,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__136;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:133:8: ( 'SEQ' )
-            // InternalEdilang.g:133:10: 'SEQ'
+            // InternalEdilang.g:133:8: ( 'SEL' )
+            // InternalEdilang.g:133:10: 'SEL'
             {
-            match("SEQ"); 
+            match("SEL"); 
 
 
             }
@@ -2794,10 +2797,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__137;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:134:8: ( 'SFI' )
-            // InternalEdilang.g:134:10: 'SFI'
+            // InternalEdilang.g:134:8: ( 'SEQ' )
+            // InternalEdilang.g:134:10: 'SEQ'
             {
-            match("SFI"); 
+            match("SEQ"); 
 
 
             }
@@ -2815,10 +2818,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__138;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:135:8: ( 'SGP' )
-            // InternalEdilang.g:135:10: 'SGP'
+            // InternalEdilang.g:135:8: ( 'SFI' )
+            // InternalEdilang.g:135:10: 'SFI'
             {
-            match("SGP"); 
+            match("SFI"); 
 
 
             }
@@ -2836,10 +2839,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__139;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:136:8: ( 'SGU' )
-            // InternalEdilang.g:136:10: 'SGU'
+            // InternalEdilang.g:136:8: ( 'SGP' )
+            // InternalEdilang.g:136:10: 'SGP'
             {
-            match("SGU"); 
+            match("SGP"); 
 
 
             }
@@ -2857,10 +2860,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__140;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:137:8: ( 'SPR' )
-            // InternalEdilang.g:137:10: 'SPR'
+            // InternalEdilang.g:137:8: ( 'SGU' )
+            // InternalEdilang.g:137:10: 'SGU'
             {
-            match("SPR"); 
+            match("SGU"); 
 
 
             }
@@ -2878,10 +2881,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__141;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:138:8: ( 'SPS' )
-            // InternalEdilang.g:138:10: 'SPS'
+            // InternalEdilang.g:138:8: ( 'SPR' )
+            // InternalEdilang.g:138:10: 'SPR'
             {
-            match("SPS"); 
+            match("SPR"); 
 
 
             }
@@ -2899,10 +2902,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__142;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:139:8: ( 'STA' )
-            // InternalEdilang.g:139:10: 'STA'
+            // InternalEdilang.g:139:8: ( 'SPS' )
+            // InternalEdilang.g:139:10: 'SPS'
             {
-            match("STA"); 
+            match("SPS"); 
 
 
             }
@@ -2920,10 +2923,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__143;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:140:8: ( 'STC' )
-            // InternalEdilang.g:140:10: 'STC'
+            // InternalEdilang.g:140:8: ( 'STA' )
+            // InternalEdilang.g:140:10: 'STA'
             {
-            match("STC"); 
+            match("STA"); 
 
 
             }
@@ -2941,10 +2944,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__144;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:141:8: ( 'STG' )
-            // InternalEdilang.g:141:10: 'STG'
+            // InternalEdilang.g:141:8: ( 'STC' )
+            // InternalEdilang.g:141:10: 'STC'
             {
-            match("STG"); 
+            match("STC"); 
 
 
             }
@@ -2962,10 +2965,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__145;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:142:8: ( 'STS' )
-            // InternalEdilang.g:142:10: 'STS'
+            // InternalEdilang.g:142:8: ( 'STG' )
+            // InternalEdilang.g:142:10: 'STG'
             {
-            match("STS"); 
+            match("STG"); 
 
 
             }
@@ -2983,10 +2986,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__146;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:143:8: ( 'TCC' )
-            // InternalEdilang.g:143:10: 'TCC'
+            // InternalEdilang.g:143:8: ( 'STS' )
+            // InternalEdilang.g:143:10: 'STS'
             {
-            match("TCC"); 
+            match("STS"); 
 
 
             }
@@ -3004,10 +3007,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__147;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:144:8: ( 'TDT' )
-            // InternalEdilang.g:144:10: 'TDT'
+            // InternalEdilang.g:144:8: ( 'STX' )
+            // InternalEdilang.g:144:10: 'STX'
             {
-            match("TDT"); 
+            match("STX"); 
 
 
             }
@@ -3025,10 +3028,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__148;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:145:8: ( 'TEM' )
-            // InternalEdilang.g:145:10: 'TEM'
+            // InternalEdilang.g:145:8: ( 'TCC' )
+            // InternalEdilang.g:145:10: 'TCC'
             {
-            match("TEM"); 
+            match("TCC"); 
 
 
             }
@@ -3046,10 +3049,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__149;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:146:8: ( 'TMD' )
-            // InternalEdilang.g:146:10: 'TMD'
+            // InternalEdilang.g:146:8: ( 'TDT' )
+            // InternalEdilang.g:146:10: 'TDT'
             {
-            match("TMD"); 
+            match("TDT"); 
 
 
             }
@@ -3067,10 +3070,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__150;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:147:8: ( 'TMP' )
-            // InternalEdilang.g:147:10: 'TMP'
+            // InternalEdilang.g:147:8: ( 'TEM' )
+            // InternalEdilang.g:147:10: 'TEM'
             {
-            match("TMP"); 
+            match("TEM"); 
 
 
             }
@@ -3088,10 +3091,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__151;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:148:8: ( 'TOD' )
-            // InternalEdilang.g:148:10: 'TOD'
+            // InternalEdilang.g:148:8: ( 'TMD' )
+            // InternalEdilang.g:148:10: 'TMD'
             {
-            match("TOD"); 
+            match("TMD"); 
 
 
             }
@@ -3109,10 +3112,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__152;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:149:8: ( 'TPL' )
-            // InternalEdilang.g:149:10: 'TPL'
+            // InternalEdilang.g:149:8: ( 'TMP' )
+            // InternalEdilang.g:149:10: 'TMP'
             {
-            match("TPL"); 
+            match("TMP"); 
 
 
             }
@@ -3130,10 +3133,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__153;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:150:8: ( 'TRU' )
-            // InternalEdilang.g:150:10: 'TRU'
+            // InternalEdilang.g:150:8: ( 'TOD' )
+            // InternalEdilang.g:150:10: 'TOD'
             {
-            match("TRU"); 
+            match("TOD"); 
 
 
             }
@@ -3151,10 +3154,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__154;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:151:8: ( 'TSR' )
-            // InternalEdilang.g:151:10: 'TSR'
+            // InternalEdilang.g:151:8: ( 'TPL' )
+            // InternalEdilang.g:151:10: 'TPL'
             {
-            match("TSR"); 
+            match("TPL"); 
 
 
             }
@@ -3172,10 +3175,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__155;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:152:8: ( 'VLI' )
-            // InternalEdilang.g:152:10: 'VLI'
+            // InternalEdilang.g:152:8: ( 'TRU' )
+            // InternalEdilang.g:152:10: 'TRU'
             {
-            match("VLI"); 
+            match("TRU"); 
 
 
             }
@@ -3193,10 +3196,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__156;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:153:8: ( 'MSG' )
-            // InternalEdilang.g:153:10: 'MSG'
+            // InternalEdilang.g:153:8: ( 'TSR' )
+            // InternalEdilang.g:153:10: 'TSR'
             {
-            match("MSG"); 
+            match("TSR"); 
 
 
             }
@@ -3214,10 +3217,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__157;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:154:8: ( 'ORG' )
-            // InternalEdilang.g:154:10: 'ORG'
+            // InternalEdilang.g:154:8: ( 'VLI' )
+            // InternalEdilang.g:154:10: 'VLI'
             {
-            match("ORG"); 
+            match("VLI"); 
 
 
             }
@@ -3235,10 +3238,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__158;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:155:8: ( 'POC' )
-            // InternalEdilang.g:155:10: 'POC'
+            // InternalEdilang.g:155:8: ( 'MSG' )
+            // InternalEdilang.g:155:10: 'MSG'
             {
-            match("POC"); 
+            match("MSG"); 
 
 
             }
@@ -3256,10 +3259,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__159;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:156:8: ( 'ODI' )
-            // InternalEdilang.g:156:10: 'ODI'
+            // InternalEdilang.g:156:8: ( 'ORG' )
+            // InternalEdilang.g:156:10: 'ORG'
             {
-            match("ODI"); 
+            match("ORG"); 
 
 
             }
@@ -3277,10 +3280,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__160;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:157:8: ( 'UCI' )
-            // InternalEdilang.g:157:10: 'UCI'
+            // InternalEdilang.g:157:8: ( 'POC' )
+            // InternalEdilang.g:157:10: 'POC'
             {
-            match("UCI"); 
+            match("POC"); 
 
 
             }
@@ -3298,10 +3301,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__161;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:158:8: ( 'PDI' )
-            // InternalEdilang.g:158:10: 'PDI'
+            // InternalEdilang.g:158:8: ( 'ODI' )
+            // InternalEdilang.g:158:10: 'ODI'
             {
-            match("PDI"); 
+            match("ODI"); 
 
 
             }
@@ -3319,10 +3322,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__162;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:159:8: ( 'TVL' )
-            // InternalEdilang.g:159:10: 'TVL'
+            // InternalEdilang.g:159:8: ( 'UCI' )
+            // InternalEdilang.g:159:10: 'UCI'
             {
-            match("TVL"); 
+            match("UCI"); 
 
 
             }
@@ -3340,10 +3343,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__163;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:160:8: ( 'RPI' )
-            // InternalEdilang.g:160:10: 'RPI'
+            // InternalEdilang.g:160:8: ( 'PDI' )
+            // InternalEdilang.g:160:10: 'PDI'
             {
-            match("RPI"); 
+            match("PDI"); 
 
 
             }
@@ -3361,10 +3364,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__164;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:161:8: ( 'MOA' )
-            // InternalEdilang.g:161:10: 'MOA'
+            // InternalEdilang.g:161:8: ( 'TVL' )
+            // InternalEdilang.g:161:10: 'TVL'
             {
-            match("MOA"); 
+            match("TVL"); 
 
 
             }
@@ -3382,10 +3385,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__165;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:162:8: ( 'LIN' )
-            // InternalEdilang.g:162:10: 'LIN'
+            // InternalEdilang.g:162:8: ( 'RPI' )
+            // InternalEdilang.g:162:10: 'RPI'
             {
-            match("LIN"); 
+            match("RPI"); 
 
 
             }
@@ -3403,10 +3406,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__166;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:163:8: ( 'PRI' )
-            // InternalEdilang.g:163:10: 'PRI'
+            // InternalEdilang.g:163:8: ( 'MOA' )
+            // InternalEdilang.g:163:10: 'MOA'
             {
-            match("PRI"); 
+            match("MOA"); 
 
 
             }
@@ -3424,10 +3427,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__167;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:164:8: ( 'QTY' )
-            // InternalEdilang.g:164:10: 'QTY'
+            // InternalEdilang.g:164:8: ( 'LIN' )
+            // InternalEdilang.g:164:10: 'LIN'
             {
-            match("QTY"); 
+            match("LIN"); 
 
 
             }
@@ -3445,10 +3448,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__168;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:165:8: ( 'CUX' )
-            // InternalEdilang.g:165:10: 'CUX'
+            // InternalEdilang.g:165:8: ( 'PRI' )
+            // InternalEdilang.g:165:10: 'PRI'
             {
-            match("CUX"); 
+            match("PRI"); 
 
 
             }
@@ -3466,10 +3469,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__169;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:166:8: ( 'TAX' )
-            // InternalEdilang.g:166:10: 'TAX'
+            // InternalEdilang.g:166:8: ( 'QTY' )
+            // InternalEdilang.g:166:10: 'QTY'
             {
-            match("TAX"); 
+            match("QTY"); 
 
 
             }
@@ -3487,10 +3490,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__170;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:167:8: ( 'RFF' )
-            // InternalEdilang.g:167:10: 'RFF'
+            // InternalEdilang.g:167:8: ( 'CUX' )
+            // InternalEdilang.g:167:10: 'CUX'
             {
-            match("RFF"); 
+            match("CUX"); 
 
 
             }
@@ -3508,10 +3511,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__171;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:168:8: ( 'NAD' )
-            // InternalEdilang.g:168:10: 'NAD'
+            // InternalEdilang.g:168:8: ( 'TAX' )
+            // InternalEdilang.g:168:10: 'TAX'
             {
-            match("NAD"); 
+            match("TAX"); 
 
 
             }
@@ -3529,10 +3532,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__172;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:169:8: ( 'DTM' )
-            // InternalEdilang.g:169:10: 'DTM'
+            // InternalEdilang.g:169:8: ( 'RFF' )
+            // InternalEdilang.g:169:10: 'RFF'
             {
-            match("DTM"); 
+            match("RFF"); 
 
 
             }
@@ -3550,10 +3553,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__173;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:170:8: ( 'BGM' )
-            // InternalEdilang.g:170:10: 'BGM'
+            // InternalEdilang.g:170:8: ( 'NAD' )
+            // InternalEdilang.g:170:10: 'NAD'
             {
-            match("BGM"); 
+            match("NAD"); 
 
 
             }
@@ -3571,10 +3574,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__174;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:171:8: ( 'PAT' )
-            // InternalEdilang.g:171:10: 'PAT'
+            // InternalEdilang.g:171:8: ( 'DTM' )
+            // InternalEdilang.g:171:10: 'DTM'
             {
-            match("PAT"); 
+            match("DTM"); 
 
 
             }
@@ -3592,10 +3595,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__175;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:172:8: ( 'FTX' )
-            // InternalEdilang.g:172:10: 'FTX'
+            // InternalEdilang.g:172:8: ( 'BGM' )
+            // InternalEdilang.g:172:10: 'BGM'
             {
-            match("FTX"); 
+            match("BGM"); 
 
 
             }
@@ -3613,10 +3616,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__176;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:173:8: ( 'ERC' )
-            // InternalEdilang.g:173:10: 'ERC'
+            // InternalEdilang.g:173:8: ( 'PAT' )
+            // InternalEdilang.g:173:10: 'PAT'
             {
-            match("ERC"); 
+            match("PAT"); 
 
 
             }
@@ -3634,10 +3637,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__177;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:174:8: ( 'CNT' )
-            // InternalEdilang.g:174:10: 'CNT'
+            // InternalEdilang.g:174:8: ( 'FTX' )
+            // InternalEdilang.g:174:10: 'FTX'
             {
-            match("CNT"); 
+            match("FTX"); 
 
 
             }
@@ -3655,10 +3658,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__178;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:175:8: ( 'CTA' )
-            // InternalEdilang.g:175:10: 'CTA'
+            // InternalEdilang.g:175:8: ( 'ERC' )
+            // InternalEdilang.g:175:10: 'ERC'
             {
-            match("CTA"); 
+            match("ERC"); 
 
 
             }
@@ -3676,10 +3679,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__179;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:176:8: ( 'PCI' )
-            // InternalEdilang.g:176:10: 'PCI'
+            // InternalEdilang.g:176:8: ( 'CNT' )
+            // InternalEdilang.g:176:10: 'CNT'
             {
-            match("PCI"); 
+            match("CNT"); 
 
 
             }
@@ -3697,10 +3700,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__180;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:177:8: ( 'UNS' )
-            // InternalEdilang.g:177:10: 'UNS'
+            // InternalEdilang.g:177:8: ( 'CTA' )
+            // InternalEdilang.g:177:10: 'CTA'
             {
-            match("UNS"); 
+            match("CTA"); 
 
 
             }
@@ -3718,10 +3721,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__181;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:178:8: ( 'UNT' )
-            // InternalEdilang.g:178:10: 'UNT'
+            // InternalEdilang.g:178:8: ( 'PCI' )
+            // InternalEdilang.g:178:10: 'PCI'
             {
-            match("UNT"); 
+            match("PCI"); 
 
 
             }
@@ -3739,10 +3742,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__182;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:179:8: ( 'UNZ' )
-            // InternalEdilang.g:179:10: 'UNZ'
+            // InternalEdilang.g:179:8: ( 'UNS' )
+            // InternalEdilang.g:179:10: 'UNS'
             {
-            match("UNZ"); 
+            match("UNS"); 
 
 
             }
@@ -3755,13 +3758,76 @@ public class InternalEdilangLexer extends Lexer {
     }
     // $ANTLR end "T__182"
 
+    // $ANTLR start "T__183"
+    public final void mT__183() throws RecognitionException {
+        try {
+            int _type = T__183;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:180:8: ( 'UNT' )
+            // InternalEdilang.g:180:10: 'UNT'
+            {
+            match("UNT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__183"
+
+    // $ANTLR start "T__184"
+    public final void mT__184() throws RecognitionException {
+        try {
+            int _type = T__184;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:181:8: ( 'UNZ' )
+            // InternalEdilang.g:181:10: 'UNZ'
+            {
+            match("UNZ"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__184"
+
+    // $ANTLR start "T__185"
+    public final void mT__185() throws RecognitionException {
+        try {
+            int _type = T__185;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:182:8: ( 'UNE' )
+            // InternalEdilang.g:182:10: 'UNE'
+            {
+            match("UNE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__185"
+
     // $ANTLR start "RULE_QUOTE_AND_NL"
     public final void mRULE_QUOTE_AND_NL() throws RecognitionException {
         try {
             int _type = RULE_QUOTE_AND_NL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47282:19: ( ( '\\'' | '~' ) ( '\\n' )? )
-            // InternalEdilang.g:47282:21: ( '\\'' | '~' ) ( '\\n' )?
+            // InternalEdilang.g:60326:19: ( ( '\\'' | '~' ) ( '\\n' )? )
+            // InternalEdilang.g:60326:21: ( '\\'' | '~' ) ( '\\n' )?
             {
             if ( input.LA(1)=='\''||input.LA(1)=='~' ) {
                 input.consume();
@@ -3772,7 +3838,7 @@ public class InternalEdilangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalEdilang.g:47282:32: ( '\\n' )?
+            // InternalEdilang.g:60326:32: ( '\\n' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -3781,7 +3847,7 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalEdilang.g:47282:32: '\\n'
+                    // InternalEdilang.g:60326:32: '\\n'
                     {
                     match('\n'); 
 
@@ -3806,8 +3872,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47284:11: ( ( '+' | '*' ) )
-            // InternalEdilang.g:47284:13: ( '+' | '*' )
+            // InternalEdilang.g:60328:11: ( ( '+' | '*' ) )
+            // InternalEdilang.g:60328:13: ( '+' | '*' )
             {
             if ( (input.LA(1)>='*' && input.LA(1)<='+') ) {
                 input.consume();
@@ -3834,8 +3900,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47286:12: ( ':' )
-            // InternalEdilang.g:47286:14: ':'
+            // InternalEdilang.g:60330:12: ( ':' )
+            // InternalEdilang.g:60330:14: ':'
             {
             match(':'); 
 
@@ -3854,8 +3920,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47288:10: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
-            // InternalEdilang.g:47288:12: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            // InternalEdilang.g:60332:10: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalEdilang.g:60332:12: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
             {
             matchRange('0','9'); 
             matchRange('0','9'); 
@@ -3889,8 +3955,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47290:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )? )
-            // InternalEdilang.g:47290:11: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
+            // InternalEdilang.g:60334:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )? )
+            // InternalEdilang.g:60334:11: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -3901,7 +3967,7 @@ public class InternalEdilangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalEdilang.g:47290:40: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
+            // InternalEdilang.g:60334:40: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -3910,9 +3976,9 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalEdilang.g:47290:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )
+                    // InternalEdilang.g:60334:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )
                     {
-                    // InternalEdilang.g:47290:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )*
+                    // InternalEdilang.g:60334:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )*
                     loop2:
                     do {
                         int alt2=2;
@@ -3985,11 +4051,11 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47292:13: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // InternalEdilang.g:47292:15: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // InternalEdilang.g:60336:13: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // InternalEdilang.g:60336:15: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // InternalEdilang.g:47292:19: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+            // InternalEdilang.g:60336:19: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
             loop4:
             do {
                 int alt4=3;
@@ -4005,7 +4071,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalEdilang.g:47292:20: '\\\\' .
+            	    // InternalEdilang.g:60336:20: '\\\\' .
             	    {
             	    match('\\'); 
             	    matchAny(); 
@@ -4013,7 +4079,7 @@ public class InternalEdilangLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // InternalEdilang.g:47292:27: ~ ( ( '\\\\' | '\"' ) )
+            	    // InternalEdilang.g:60336:27: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4050,10 +4116,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47294:9: ( ( '\\t' | '\\r' | '\\n' )+ )
-            // InternalEdilang.g:47294:11: ( '\\t' | '\\r' | '\\n' )+
+            // InternalEdilang.g:60338:9: ( ( '\\t' | '\\r' | '\\n' )+ )
+            // InternalEdilang.g:60338:11: ( '\\t' | '\\r' | '\\n' )+
             {
-            // InternalEdilang.g:47294:11: ( '\\t' | '\\r' | '\\n' )+
+            // InternalEdilang.g:60338:11: ( '\\t' | '\\r' | '\\n' )+
             int cnt5=0;
             loop5:
             do {
@@ -4107,12 +4173,12 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47296:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalEdilang.g:47296:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalEdilang.g:60340:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalEdilang.g:60340:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalEdilang.g:47296:24: ( options {greedy=false; } : . )*
+            // InternalEdilang.g:60340:24: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
@@ -4137,7 +4203,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalEdilang.g:47296:52: .
+            	    // InternalEdilang.g:60340:52: .
             	    {
             	    matchAny(); 
 
@@ -4167,12 +4233,12 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47298:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalEdilang.g:47298:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalEdilang.g:60342:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalEdilang.g:60342:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalEdilang.g:47298:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalEdilang.g:60342:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop7:
             do {
                 int alt7=2;
@@ -4185,7 +4251,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalEdilang.g:47298:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalEdilang.g:60342:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4205,7 +4271,7 @@ public class InternalEdilangLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalEdilang.g:47298:40: ( ( '\\r' )? '\\n' )?
+            // InternalEdilang.g:60342:40: ( ( '\\r' )? '\\n' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -4214,9 +4280,9 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // InternalEdilang.g:47298:41: ( '\\r' )? '\\n'
+                    // InternalEdilang.g:60342:41: ( '\\r' )? '\\n'
                     {
-                    // InternalEdilang.g:47298:41: ( '\\r' )?
+                    // InternalEdilang.g:60342:41: ( '\\r' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -4225,7 +4291,7 @@ public class InternalEdilangLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // InternalEdilang.g:47298:41: '\\r'
+                            // InternalEdilang.g:60342:41: '\\r'
                             {
                             match('\r'); 
 
@@ -4257,8 +4323,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:47300:16: ( . )
-            // InternalEdilang.g:47300:18: .
+            // InternalEdilang.g:60344:16: ( . )
+            // InternalEdilang.g:60344:18: .
             {
             matchAny(); 
 
@@ -4273,8 +4339,8 @@ public class InternalEdilangLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalEdilang.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
-        int alt10=179;
+        // InternalEdilang.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | T__183 | T__184 | T__185 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
+        int alt10=182;
         alt10 = dfa10.predict(input);
         switch (alt10) {
             case 1 :
@@ -5461,70 +5527,91 @@ public class InternalEdilangLexer extends Lexer {
                 }
                 break;
             case 170 :
-                // InternalEdilang.g:1:1107: RULE_QUOTE_AND_NL
+                // InternalEdilang.g:1:1107: T__183
+                {
+                mT__183(); 
+
+                }
+                break;
+            case 171 :
+                // InternalEdilang.g:1:1114: T__184
+                {
+                mT__184(); 
+
+                }
+                break;
+            case 172 :
+                // InternalEdilang.g:1:1121: T__185
+                {
+                mT__185(); 
+
+                }
+                break;
+            case 173 :
+                // InternalEdilang.g:1:1128: RULE_QUOTE_AND_NL
                 {
                 mRULE_QUOTE_AND_NL(); 
 
                 }
                 break;
-            case 171 :
-                // InternalEdilang.g:1:1125: RULE_PLUS
+            case 174 :
+                // InternalEdilang.g:1:1146: RULE_PLUS
                 {
                 mRULE_PLUS(); 
 
                 }
                 break;
-            case 172 :
-                // InternalEdilang.g:1:1135: RULE_COLON
+            case 175 :
+                // InternalEdilang.g:1:1156: RULE_COLON
                 {
                 mRULE_COLON(); 
 
                 }
                 break;
-            case 173 :
-                // InternalEdilang.g:1:1146: RULE_INT
+            case 176 :
+                // InternalEdilang.g:1:1167: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 174 :
-                // InternalEdilang.g:1:1155: RULE_ID
+            case 177 :
+                // InternalEdilang.g:1:1176: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 175 :
-                // InternalEdilang.g:1:1163: RULE_STRING
+            case 178 :
+                // InternalEdilang.g:1:1184: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 176 :
-                // InternalEdilang.g:1:1175: RULE_WS
+            case 179 :
+                // InternalEdilang.g:1:1196: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 177 :
-                // InternalEdilang.g:1:1183: RULE_ML_COMMENT
+            case 180 :
+                // InternalEdilang.g:1:1204: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 178 :
-                // InternalEdilang.g:1:1199: RULE_SL_COMMENT
+            case 181 :
+                // InternalEdilang.g:1:1220: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 179 :
-                // InternalEdilang.g:1:1215: RULE_ANY_OTHER
+            case 182 :
+                // InternalEdilang.g:1:1236: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -5538,17 +5625,17 @@ public class InternalEdilangLexer extends Lexer {
 
     protected DFA10 dfa10 = new DFA10(this);
     static final String DFA10_eotS =
-        "\1\uffff\1\36\24\42\3\uffff\1\42\1\uffff\1\36\1\uffff\1\36\2\uffff\2\42\1\uffff\164\42\3\uffff\1\42\4\uffff\1\u0148\1\u0149\1\u014a\1\u014b\1\u014c\1\u014d\1\u014e\1\u014f\1\u0150\1\u0151\1\u0152\1\u0153\1\u0154\1\u0155\1\u0156\1\u0157\1\u0158\1\u0159\1\u015a\1\u015b\1\u015c\1\u015d\1\u015e\1\u015f\1\u0160\1\u0161\1\u0162\1\u0163\1\u0164\1\u0165\1\u0166\1\u0167\1\u0168\1\u0169\1\u016a\1\u016b\1\u016c\1\u016d\1\u016e\1\u016f\1\u0170\1\u0171\1\u0172\1\u0173\1\u0174\1\u0175\1\u0176\1\u0177\1\u0178\1\u0179\1\u017a\1\u017b\1\u017c\1\u017d\1\u017e\1\u017f\1\u0180\1\u0181\1\u0182\1\u0183\1\u0184\1\u0185\1\u0186\1\u0187\1\u0188\1\u0189\1\u018a\1\u018b\1\u018c\1\u018d\1\u018e\1\u018f\1\u0190\1\u0191\1\u0192\1\u0193\1\u0194\1\u0195\1\u0196\1\u0197\1\u0198\1\u0199\1\u019a\1\u019b\1\u019c\1\u019d\1\u019e\1\u019f\1\u01a0\1\u01a1\1\u01a2\1\u01a3\1\u01a4\1\u01a5\1\u01a6\1\u01a7\1\u01a8\1\u01a9\1\u01aa\1\u01ab\1\u01ac\1\u01ad\1\u01ae\1\u01af\1\u01b0\1\u01b1\1\u01b2\1\u01b3\1\u01b4\1\u01b5\1\u01b6\1\u01b7\1\u01b8\1\u01b9\1\u01ba\1\u01bb\1\u01bc\1\u01bd\1\u01be\1\u01bf\1\u01c0\1\u01c1\1\u01c2\1\u01c3\1\u01c4\1\u01c5\1\u01c6\1\u01c7\1\u01c8\1\u01c9\1\u01ca\1\u01cb\1\u01cc\1\u01cd\1\u01ce\1\u01cf\1\u01d0\1\u01d1\1\u01d2\1\u01d3\1\u01d4\1\u01d5\1\u01d6\1\u01d7\1\u01d8\1\u01d9\1\u01da\1\u01db\1\u01dc\1\u01dd\1\u01de\1\u01df\1\u01e0\1\u01e1\1\u01e2\1\u01e3\1\u01e4\1\u01e5\1\u01e6\1\u01e7\1\u01e8\1\u01e9\1\u01ea\1\u01eb\1\u01ec\1\u01ed\1\u01ee\1\u01ef\1\42\u00a8\uffff\14\42\1\u01fd\1\uffff";
+        "\1\uffff\1\36\24\42\3\uffff\1\42\1\uffff\1\36\1\uffff\1\36\2\uffff\2\42\1\uffff\164\42\3\uffff\1\42\4\uffff\1\u014b\1\u014c\1\u014d\1\u014e\1\u014f\1\u0150\1\u0151\1\u0152\1\u0153\1\u0154\1\u0155\1\u0156\1\u0157\1\u0158\1\u0159\1\u015a\1\u015b\1\u015c\1\u015d\1\u015e\1\u015f\1\u0160\1\u0161\1\u0162\1\u0163\1\u0164\1\u0165\1\u0166\1\u0167\1\u0168\1\u0169\1\u016a\1\u016b\1\u016c\1\u016d\1\u016e\1\u016f\1\u0170\1\u0171\1\u0172\1\u0173\1\u0174\1\u0175\1\u0176\1\u0177\1\u0178\1\u0179\1\u017a\1\u017b\1\u017c\1\u017d\1\u017e\1\u017f\1\u0180\1\u0181\1\u0182\1\u0183\1\u0184\1\u0185\1\u0186\1\u0187\1\u0188\1\u0189\1\u018a\1\u018b\1\u018c\1\u018d\1\u018e\1\u018f\1\u0190\1\u0191\1\u0192\1\u0193\1\u0194\1\u0195\1\u0196\1\u0197\1\u0198\1\u0199\1\u019a\1\u019b\1\u019c\1\u019d\1\u019e\1\u019f\1\u01a0\1\u01a1\1\u01a2\1\u01a3\1\u01a4\1\u01a5\1\u01a6\1\u01a7\1\u01a8\1\u01a9\1\u01aa\1\u01ab\1\u01ac\1\u01ad\1\u01ae\1\u01af\1\u01b0\1\u01b1\1\u01b2\1\u01b3\1\u01b4\1\u01b5\1\u01b6\1\u01b7\1\u01b8\1\u01b9\1\u01ba\1\u01bb\1\u01bc\1\u01bd\1\u01be\1\u01bf\1\u01c0\1\u01c1\1\u01c2\1\u01c3\1\u01c4\1\u01c5\1\u01c6\1\u01c7\1\u01c8\1\u01c9\1\u01ca\1\u01cb\1\u01cc\1\u01cd\1\u01ce\1\u01cf\1\u01d0\1\u01d1\1\u01d2\1\u01d3\1\u01d4\1\u01d5\1\u01d6\1\u01d7\1\u01d8\1\u01d9\1\u01da\1\u01db\1\u01dc\1\u01dd\1\u01de\1\u01df\1\u01e0\1\u01e1\1\u01e2\1\u01e3\1\u01e4\1\u01e5\1\u01e6\1\u01e7\1\u01e8\1\u01e9\1\u01ea\1\u01eb\1\u01ec\1\u01ed\1\u01ee\1\u01ef\1\u01f0\1\u01f1\1\u01f2\1\u01f3\1\u01f4\1\u01f5\1\42\u00ab\uffff\14\42\1\u0203\1\uffff";
     static final String DFA10_eofS =
-        "\u01fe\uffff";
+        "\u0204\uffff";
     static final String DFA10_minS =
-        "\1\0\1\77\1\103\1\104\3\101\1\104\1\103\1\104\1\101\1\103\1\101\1\105\2\101\1\122\1\103\2\101\1\114\1\104\3\uffff\1\60\1\uffff\1\0\1\uffff\1\52\2\uffff\1\101\1\111\1\uffff\2\122\1\124\1\103\1\120\1\104\1\111\2\124\1\123\1\111\1\123\1\115\1\126\1\104\1\111\1\104\1\116\1\101\1\120\1\111\1\104\1\111\1\124\1\130\1\101\1\115\1\116\1\123\2\111\1\123\1\103\1\104\1\107\1\115\1\124\1\111\1\115\1\120\1\101\1\103\1\105\1\101\1\111\1\123\1\122\1\121\1\130\1\123\1\111\1\104\1\122\1\125\2\116\1\104\1\105\1\104\1\103\2\104\1\121\1\116\1\103\1\116\1\101\1\123\1\107\1\101\1\104\2\103\1\122\1\111\2\101\1\103\1\104\1\131\1\124\1\103\1\111\1\123\1\101\1\122\1\131\1\123\2\114\1\107\1\104\1\114\1\105\1\111\1\106\1\114\1\103\1\107\1\111\1\120\1\122\1\101\1\103\1\124\1\115\2\104\1\114\1\125\1\122\1\114\1\130\1\111\1\107\1\111\3\uffff\1\60\4\uffff\u00a8\40\1\60\u00a8\uffff\14\60\1\40\1\uffff";
+        "\1\0\1\77\1\103\1\104\3\101\1\104\1\103\1\104\1\101\1\103\1\101\1\105\2\101\1\122\1\103\2\101\1\114\1\104\3\uffff\1\60\1\uffff\1\0\1\uffff\1\52\2\uffff\1\101\1\111\1\uffff\2\122\1\124\1\103\1\120\1\104\1\111\2\124\1\123\1\111\1\123\1\115\1\126\1\104\1\111\1\104\1\116\1\101\1\120\1\111\1\104\1\111\1\124\1\130\1\101\1\115\1\116\1\123\2\111\1\123\1\103\1\104\1\107\1\115\1\124\1\111\1\115\1\120\1\101\1\103\1\105\1\101\1\111\1\123\1\122\1\121\1\130\1\123\1\111\1\104\1\122\1\125\2\116\1\104\1\105\1\104\1\103\2\104\1\121\1\116\1\103\1\116\1\101\1\123\1\107\1\101\1\104\2\103\1\122\1\111\2\101\1\103\1\104\1\131\1\124\1\103\1\111\1\123\1\101\1\122\1\131\1\123\2\114\1\107\1\104\1\114\1\105\1\111\1\106\1\114\1\103\1\107\1\111\1\120\1\122\1\101\1\103\1\124\1\115\2\104\1\114\1\125\1\122\1\114\1\130\1\111\1\107\1\111\3\uffff\1\60\4\uffff\u00ab\40\1\60\u00ab\uffff\14\60\1\40\1\uffff";
     static final String DFA10_maxS =
-        "\1\uffff\1\77\1\116\3\125\1\124\1\126\1\124\1\122\1\131\1\122\1\117\1\123\1\101\1\131\1\126\2\124\1\126\1\114\1\122\3\uffff\1\71\1\uffff\1\uffff\1\uffff\1\57\2\uffff\1\132\1\111\1\uffff\2\122\1\124\1\111\2\122\1\111\2\124\1\123\1\111\1\123\1\115\1\126\1\111\1\126\1\104\1\116\1\111\1\120\4\124\1\130\1\101\1\115\1\116\1\123\2\115\1\123\1\103\1\104\1\111\1\115\1\124\1\111\1\126\1\120\1\116\1\120\1\124\1\101\1\111\1\124\1\122\1\121\1\130\1\123\1\111\1\123\1\122\1\125\2\116\1\104\1\105\1\104\1\103\1\104\1\126\1\121\1\116\1\103\1\116\1\115\1\123\1\107\1\101\2\124\1\111\1\122\1\111\2\101\1\126\1\104\1\131\1\124\1\103\1\111\1\123\1\101\1\122\1\131\1\123\2\114\1\107\1\104\1\114\1\105\1\111\1\106\1\114\1\104\1\121\1\111\1\125\2\123\1\103\1\124\1\115\1\120\1\104\1\114\1\125\1\122\1\114\1\130\1\111\1\107\1\111\3\uffff\1\71\4\uffff\u00a8\172\1\71\u00a8\uffff\14\71\1\172\1\uffff";
+        "\1\uffff\1\77\1\116\3\125\1\124\1\126\1\124\1\122\1\131\1\122\1\117\1\123\1\101\1\131\1\126\2\124\1\126\1\114\1\122\3\uffff\1\71\1\uffff\1\uffff\1\uffff\1\57\2\uffff\1\132\1\111\1\uffff\2\122\1\124\1\111\2\122\1\111\2\124\1\123\1\111\1\123\1\115\1\126\1\111\1\126\1\104\1\116\1\111\1\120\4\124\1\130\1\101\1\115\1\116\1\123\2\115\1\123\1\103\1\104\1\111\1\115\1\124\1\111\1\126\1\120\1\116\1\120\1\124\1\101\1\111\1\124\1\122\1\121\1\130\1\123\1\111\1\123\1\122\1\125\2\116\1\104\1\105\1\104\1\103\1\104\1\126\1\121\1\116\1\103\1\116\1\115\1\123\1\107\1\101\2\124\1\111\1\122\1\111\2\101\1\126\1\104\1\131\1\124\1\103\1\111\1\123\1\101\1\122\1\131\1\123\2\114\1\107\1\104\1\114\1\105\1\111\1\106\1\114\1\104\1\121\1\111\1\125\1\123\1\130\1\103\1\124\1\115\1\120\1\104\1\114\1\125\1\122\1\114\1\130\1\111\1\107\1\111\3\uffff\1\71\4\uffff\u00ab\172\1\71\u00ab\uffff\14\71\1\172\1\uffff";
     static final String DFA10_acceptS =
-        "\26\uffff\1\u00aa\1\u00ab\1\u00ac\1\uffff\1\u00ae\1\uffff\1\u00b0\1\uffff\1\u00b3\1\1\2\uffff\1\u00ae\164\uffff\1\u00aa\1\u00ab\1\u00ac\1\uffff\1\u00af\1\u00b0\1\u00b1\1\u00b2\u00a9\uffff\1\2\1\3\1\4\1\u00a7\1\u00a8\1\u00a9\1\u0093\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\u00a0\1\24\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\u00a4\1\40\1\41\1\42\1\43\1\44\1\45\1\46\1\u009b\1\u00a5\1\47\1\50\1\51\1\52\1\53\1\54\1\55\1\56\1\57\1\60\1\61\1\62\1\u009f\1\63\1\64\1\65\1\66\1\67\1\70\1\71\1\72\1\73\1\74\1\u00a3\1\75\1\76\1\77\1\100\1\101\1\102\1\103\1\104\1\u00a2\1\105\1\106\1\107\1\110\1\111\1\112\1\113\1\114\1\115\1\116\1\117\1\120\1\121\1\122\1\123\1\124\1\125\1\126\1\127\1\130\1\131\1\u0098\1\132\1\133\1\134\1\u008f\1\u0097\1\135\1\u009e\1\136\1\137\1\140\1\u00a1\1\141\1\142\1\u00a6\1\143\1\144\1\145\1\146\1\147\1\150\1\u0099\1\151\1\152\1\153\1\u0091\1\u0094\1\154\1\155\1\156\1\u009a\1\157\1\160\1\161\1\162\1\163\1\164\1\165\1\u0096\1\u009d\1\166\1\167\1\170\1\171\1\172\1\173\1\174\1\175\1\176\1\177\1\u0080\1\u0081\1\u0082\1\u0083\1\u0084\1\u0085\1\u0086\1\u0087\1\u0088\1\u0089\1\u008a\1\u008b\1\u008c\1\u008d\1\u0095\1\u009c\1\u008e\1\u0090\1\u0092\15\uffff\1\u00ad";
+        "\26\uffff\1\u00ad\1\u00ae\1\u00af\1\uffff\1\u00b1\1\uffff\1\u00b3\1\uffff\1\u00b6\1\1\2\uffff\1\u00b1\164\uffff\1\u00ad\1\u00ae\1\u00af\1\uffff\1\u00b2\1\u00b3\1\u00b4\1\u00b5\u00ac\uffff\1\2\1\3\1\4\1\5\1\u00a9\1\u00aa\1\u00ab\1\u00ac\1\u0095\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\u00a2\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\u00a6\1\41\1\42\1\43\1\44\1\45\1\46\1\47\1\u009d\1\u00a7\1\50\1\51\1\52\1\53\1\54\1\55\1\56\1\57\1\60\1\61\1\62\1\63\1\u00a1\1\64\1\65\1\66\1\67\1\70\1\71\1\72\1\73\1\74\1\75\1\u00a5\1\76\1\77\1\100\1\101\1\102\1\103\1\104\1\105\1\u00a4\1\106\1\107\1\110\1\111\1\112\1\113\1\114\1\115\1\116\1\117\1\120\1\121\1\122\1\123\1\124\1\125\1\126\1\127\1\130\1\131\1\132\1\u009a\1\133\1\134\1\135\1\u0091\1\u0099\1\136\1\u00a0\1\137\1\140\1\141\1\u00a3\1\142\1\143\1\u00a8\1\144\1\145\1\146\1\147\1\150\1\151\1\u009b\1\152\1\153\1\154\1\u0093\1\u0096\1\155\1\156\1\157\1\u009c\1\160\1\161\1\162\1\163\1\164\1\165\1\166\1\u0098\1\u009f\1\167\1\170\1\171\1\172\1\173\1\174\1\175\1\176\1\177\1\u0080\1\u0081\1\u0082\1\u0083\1\u0084\1\u0085\1\u0086\1\u0087\1\u0088\1\u0089\1\u008a\1\u008b\1\u008c\1\u008d\1\u008e\1\u008f\1\u0097\1\u009e\1\u0090\1\u0092\1\u0094\15\uffff\1\u00b0";
     static final String DFA10_specialS =
-        "\1\0\32\uffff\1\1\u01e2\uffff}>";
+        "\1\0\32\uffff\1\1\u01e8\uffff}>";
     static final String[] DFA10_transitionS = {
             "\11\36\2\34\2\36\1\34\24\36\1\33\4\36\1\26\2\36\2\27\2\36\1\1\1\35\12\31\1\30\6\36\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\2\32\1\14\1\15\1\16\1\25\1\17\1\20\1\21\1\22\1\23\1\2\1\24\4\32\6\36\32\32\3\36\1\26\uff81\36",
             "\1\37",
@@ -5582,63 +5669,61 @@ public class InternalEdilangLexer extends Lexer {
             "\1\u009d\4\uffff\1\u009e",
             "",
             "",
-            "\1\u009f\1\u00a0\5\uffff\1\u00a1\12\uffff\1\u00a2\1\u00a3\5\uffff\1\u00a4",
-            "\1\u00a5",
-            "",
-            "\1\u00a6",
+            "\1\u009f\1\u00a0\2\uffff\1\u00a6\1\uffff\1\u00a2\1\u00a1\12\uffff\1\u00a3\1\u00a4\5\uffff\1\u00a5",
             "\1\u00a7",
+            "",
             "\1\u00a8",
-            "\1\u00a9\5\uffff\1\u00aa",
-            "\1\u00ab\1\uffff\1\u00ac",
-            "\1\u00ad\15\uffff\1\u00ae",
-            "\1\u00af",
-            "\1\u00b0",
+            "\1\u00a9",
+            "\1\u00aa",
+            "\1\u00ab\5\uffff\1\u00ac",
+            "\1\u00ad\1\uffff\1\u00ae",
+            "\1\u00af\15\uffff\1\u00b0",
             "\1\u00b1",
             "\1\u00b2",
             "\1\u00b3",
             "\1\u00b4",
             "\1\u00b5",
             "\1\u00b6",
-            "\1\u00b7\4\uffff\1\u00b8",
-            "\1\u00b9\11\uffff\1\u00ba\2\uffff\1\u00bb",
-            "\1\u00bc",
-            "\1\u00bd",
-            "\1\u00be\7\uffff\1\u00bf",
-            "\1\u00c0",
-            "\1\u00c1\12\uffff\1\u00c2",
-            "\1\u00c3\10\uffff\1\u00c4\6\uffff\1\u00c5",
-            "\1\u00c6\11\uffff\1\u00c7\1\u00c8",
-            "\1\u00c9",
-            "\1\u00ca",
+            "\1\u00b7",
+            "\1\u00b8",
+            "\1\u00b9\4\uffff\1\u00ba",
+            "\1\u00bb\11\uffff\1\u00bc\2\uffff\1\u00bd",
+            "\1\u00be",
+            "\1\u00bf",
+            "\1\u00c0\7\uffff\1\u00c1",
+            "\1\u00c2",
+            "\1\u00c3\12\uffff\1\u00c4",
+            "\1\u00c5\10\uffff\1\u00c6\6\uffff\1\u00c7",
+            "\1\u00c8\11\uffff\1\u00c9\1\u00ca",
             "\1\u00cb",
             "\1\u00cc",
             "\1\u00cd",
             "\1\u00ce",
-            "\1\u00cf\3\uffff\1\u00d0",
+            "\1\u00cf",
+            "\1\u00d0",
             "\1\u00d1\3\uffff\1\u00d2",
-            "\1\u00d3",
-            "\1\u00d4",
+            "\1\u00d3\3\uffff\1\u00d4",
             "\1\u00d5",
-            "\1\u00d6\1\uffff\1\u00d7",
-            "\1\u00d8",
-            "\1\u00d9",
+            "\1\u00d6",
+            "\1\u00d7",
+            "\1\u00d8\1\uffff\1\u00d9",
             "\1\u00da",
-            "\1\u00db\7\uffff\1\u00dc\1\u00dd",
-            "\1\u00de",
-            "\1\u00df\2\uffff\1\u00e0\11\uffff\1\u00e1",
-            "\1\u00e3\14\uffff\1\u00e2",
-            "\1\u00e4\16\uffff\1\u00e5",
-            "\1\u00e6",
-            "\1\u00e7",
-            "\1\u00e8\1\u00e9",
-            "\1\u00ea",
-            "\1\u00eb",
+            "\1\u00db",
+            "\1\u00dc",
+            "\1\u00dd\7\uffff\1\u00de\1\u00df",
+            "\1\u00e0",
+            "\1\u00e1\2\uffff\1\u00e2\11\uffff\1\u00e3",
+            "\1\u00e5\14\uffff\1\u00e4",
+            "\1\u00e6\16\uffff\1\u00e7",
+            "\1\u00e8",
+            "\1\u00e9",
+            "\1\u00ea\1\u00eb",
             "\1\u00ec",
             "\1\u00ed",
             "\1\u00ee",
-            "\1\u00ef\11\uffff\1\u00f0\3\uffff\1\u00f1\1\u00f2",
-            "\1\u00f3",
-            "\1\u00f4",
+            "\1\u00ef",
+            "\1\u00f0",
+            "\1\u00f1\11\uffff\1\u00f2\3\uffff\1\u00f3\1\u00f4",
             "\1\u00f5",
             "\1\u00f6",
             "\1\u00f7",
@@ -5646,25 +5731,25 @@ public class InternalEdilangLexer extends Lexer {
             "\1\u00f9",
             "\1\u00fa",
             "\1\u00fb",
-            "\1\u00fc\13\uffff\1\u00fd\5\uffff\1\u00fe",
-            "\1\u00ff",
-            "\1\u0100",
+            "\1\u00fc",
+            "\1\u00fd",
+            "\1\u00fe\13\uffff\1\u00ff\5\uffff\1\u0100",
             "\1\u0101",
             "\1\u0102",
-            "\1\u0103\13\uffff\1\u0104",
-            "\1\u0105",
-            "\1\u0106",
+            "\1\u0103",
+            "\1\u0104",
+            "\1\u0105\13\uffff\1\u0106",
             "\1\u0107",
-            "\1\u0109\17\uffff\1\u0108",
-            "\1\u010a\5\uffff\1\u010b\11\uffff\1\u010c\1\u010d",
-            "\1\u010e\1\u010f\4\uffff\1\u0110",
-            "\1\u0111",
-            "\1\u0112",
+            "\1\u0108",
+            "\1\u0109",
+            "\1\u010b\17\uffff\1\u010a",
+            "\1\u010c\5\uffff\1\u010d\11\uffff\1\u010e\1\u010f",
+            "\1\u0110\1\u0111\4\uffff\1\u0112",
             "\1\u0113",
             "\1\u0114",
-            "\1\u0115\5\uffff\1\u0117\14\uffff\1\u0116",
-            "\1\u0118",
-            "\1\u0119",
+            "\1\u0115",
+            "\1\u0116",
+            "\1\u0117\5\uffff\1\u0119\14\uffff\1\u0118",
             "\1\u011a",
             "\1\u011b",
             "\1\u011c",
@@ -5682,29 +5767,31 @@ public class InternalEdilangLexer extends Lexer {
             "\1\u0128",
             "\1\u0129",
             "\1\u012a",
-            "\1\u012b\1\u012c",
-            "\1\u012d\4\uffff\1\u012e\4\uffff\1\u012f",
-            "\1\u0130",
-            "\1\u0131\4\uffff\1\u0132",
-            "\1\u0133\1\u0134",
-            "\1\u0135\1\uffff\1\u0136\3\uffff\1\u0137\13\uffff\1\u0138",
-            "\1\u0139",
-            "\1\u013a",
-            "\1\u013b",
-            "\1\u013c\13\uffff\1\u013d",
+            "\1\u012b",
+            "\1\u012c",
+            "\1\u012d\1\u012e",
+            "\1\u012f\4\uffff\1\u0130\4\uffff\1\u0131",
+            "\1\u0132",
+            "\1\u0133\4\uffff\1\u0134",
+            "\1\u0135\1\u0136",
+            "\1\u0137\1\uffff\1\u0138\3\uffff\1\u0139\13\uffff\1\u013a\4\uffff\1\u013b",
+            "\1\u013c",
+            "\1\u013d",
             "\1\u013e",
-            "\1\u013f",
-            "\1\u0140",
+            "\1\u013f\13\uffff\1\u0140",
             "\1\u0141",
             "\1\u0142",
             "\1\u0143",
             "\1\u0144",
             "\1\u0145",
             "\1\u0146",
+            "\1\u0147",
+            "\1\u0148",
+            "\1\u0149",
             "",
             "",
             "",
-            "\12\u0147",
+            "\12\u014a",
             "",
             "",
             "",
@@ -5877,187 +5964,193 @@ public class InternalEdilangLexer extends Lexer {
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\12\u01f0",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\12\u01f1",
-            "\12\u01f2",
-            "\12\u01f3",
-            "\12\u01f4",
-            "\12\u01f5",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\12\u01f6",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\12\u01f7",
             "\12\u01f8",
             "\12\u01f9",
             "\12\u01fa",
             "\12\u01fb",
             "\12\u01fc",
+            "\12\u01fd",
+            "\12\u01fe",
+            "\12\u01ff",
+            "\12\u0200",
+            "\12\u0201",
+            "\12\u0202",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             ""
     };
@@ -6092,7 +6185,7 @@ public class InternalEdilangLexer extends Lexer {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | T__183 | T__184 | T__185 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;

@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.TODSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TODSegment#getDeliveryTransportTermsFunctionCode <em>Delivery Transport Terms Function Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TODSegment#getTransportChargesPaumentMethodCode <em>Transport Charges Paument Method Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TODSegment#getTermsOfDeliveryTransport <em>Terms Of Delivery Transport</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getTODSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface TODSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Delivery Transport Terms Function Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTODSegment_Todo()
+   * @return the value of the '<em>Delivery Transport Terms Function Code</em>' attribute.
+   * @see #setDeliveryTransportTermsFunctionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTODSegment_DeliveryTransportTermsFunctionCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getDeliveryTransportTermsFunctionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TODSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TODSegment#getDeliveryTransportTermsFunctionCode <em>Delivery Transport Terms Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Delivery Transport Terms Function Code</em>' attribute.
+   * @see #getDeliveryTransportTermsFunctionCode()
    * @generated
    */
-  void setTodo(String value);
+  void setDeliveryTransportTermsFunctionCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Transport Charges Paument Method Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Transport Charges Paument Method Code</em>' attribute.
+   * @see #setTransportChargesPaumentMethodCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTODSegment_TransportChargesPaumentMethodCode()
+   * @model
+   * @generated
+   */
+  String getTransportChargesPaumentMethodCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TODSegment#getTransportChargesPaumentMethodCode <em>Transport Charges Paument Method Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Transport Charges Paument Method Code</em>' attribute.
+   * @see #getTransportChargesPaumentMethodCode()
+   * @generated
+   */
+  void setTransportChargesPaumentMethodCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Terms Of Delivery Transport</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Terms Of Delivery Transport</em>' containment reference.
+   * @see #setTermsOfDeliveryTransport(TermsOfDeliveryTransport)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTODSegment_TermsOfDeliveryTransport()
+   * @model containment="true"
+   * @generated
+   */
+  TermsOfDeliveryTransport getTermsOfDeliveryTransport();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TODSegment#getTermsOfDeliveryTransport <em>Terms Of Delivery Transport</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Terms Of Delivery Transport</em>' containment reference.
+   * @see #getTermsOfDeliveryTransport()
+   * @generated
+   */
+  void setTermsOfDeliveryTransport(TermsOfDeliveryTransport value);
 
 } // TODSegment

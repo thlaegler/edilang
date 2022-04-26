@@ -70,6 +70,7 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.UNA_SEGMENT: return createUNASegment();
       case EdilangPackage.UNB_SEGMENT: return createUNBSegment();
       case EdilangPackage.UNH_SEGMENT: return createUNHSegment();
+      case EdilangPackage.UNG_SEGMENT: return createUNGSegment();
       case EdilangPackage.ADR_SEGMENT: return createADRSegment();
       case EdilangPackage.AGR_SEGMENT: return createAGRSegment();
       case EdilangPackage.AJT_SEGMENT: return createAJTSegment();
@@ -198,6 +199,7 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.STC_SEGMENT: return createSTCSegment();
       case EdilangPackage.STG_SEGMENT: return createSTGSegment();
       case EdilangPackage.STS_SEGMENT: return createSTSSegment();
+      case EdilangPackage.STX_SEGMENT: return createSTXSegment();
       case EdilangPackage.TCC_SEGMENT: return createTCCSegment();
       case EdilangPackage.TDT_SEGMENT: return createTDTSegment();
       case EdilangPackage.TEM_SEGMENT: return createTEMSegment();
@@ -235,6 +237,7 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.UNS_SEGMENT: return createUNSSegment();
       case EdilangPackage.UNT_SEGMENT: return createUNTSegment();
       case EdilangPackage.UNZ_SEGMENT: return createUNZSegment();
+      case EdilangPackage.UNE_SEGMENT: return createUNESegment();
       case EdilangPackage.ABSTRACT_EDI_FUNCTION: return createAbstractEdiFunction();
       case EdilangPackage.UNB_HEADER: return createUNBHeader();
       case EdilangPackage.PRICE_INFORMATION: return createPriceInformation();
@@ -262,6 +265,33 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.ORIGINATOR_IDENTIFICATION_FUNCTION: return createOriginatorIdentificationFunction();
       case EdilangPackage.LOCATION_FUNCTION: return createLocationFunction();
       case EdilangPackage.INTERCHANGER_FUNCTION: return createInterchangerFunction();
+      case EdilangPackage.LOCATION_IDENTIFICATION: return createLocationIdentification();
+      case EdilangPackage.ADDRESS_DETAIL: return createAddressDetail();
+      case EdilangPackage.ADDRESS_USAGE: return createAddressUsage();
+      case EdilangPackage.ATTRIBUTE_DETAIL: return createAttributeDetail();
+      case EdilangPackage.ATTRIBUTE_TYPE: return createAttributeType();
+      case EdilangPackage.BANK_OPERATION: return createBankOperation();
+      case EdilangPackage.BUSINESS_FUNCTION: return createBusinessFunction();
+      case EdilangPackage.DEPARTMENT_EMPLOYEE_DETAIL: return createDepartmentEmployeeDetail();
+      case EdilangPackage.IDENTIFICATION_NUMBER: return createIdentificationNumber();
+      case EdilangPackage.POSITION_IDENTIFICATION: return createPositionIdentification();
+      case EdilangPackage.PRODUCT_CHARACTERISTIC: return createProductCharacteristic();
+      case EdilangPackage.NATIONALITY_DETAIL: return createNationalityDetail();
+      case EdilangPackage.PERCENTAGE_DETAIL: return createPercentageDetail();
+      case EdilangPackage.RATE_DETAIL: return createRateDetail();
+      case EdilangPackage.STATUS_CATEGORY: return createStatusCategory();
+      case EdilangPackage.STATUS: return createStatus();
+      case EdilangPackage.STATUS_REASON: return createStatusReason();
+      case EdilangPackage.VALUE_LIST_IDENTIFICATION: return createValueListIdentification();
+      case EdilangPackage.TERMS_OF_DELIVERY_TRANSPORT: return createTermsOfDeliveryTransport();
+      case EdilangPackage.QUANTITY_DIFFERENCE_INFORMATION: return createQuantityDifferenceInformation();
+      case EdilangPackage.REASON_FOR_CHANGE: return createReasonForChange();
+      case EdilangPackage.LANGUAGE_DETAIL: return createLanguageDetail();
+      case EdilangPackage.INFORMATION_REQUEST: return createInformationRequest();
+      case EdilangPackage.INDEX_IDENTIFICATION: return createIndexIdentification();
+      case EdilangPackage.INDEX_VALUE: return createIndexValue();
+      case EdilangPackage.CONTROL: return createControl();
+      case EdilangPackage.BASIS_TYPE: return createBasisType();
       case EdilangPackage.DATE_ONLY_FUNCTION: return createDateOnlyFunction();
       case EdilangPackage.DATE_AND_TIME_FUNCTION: return createDateAndTimeFunction();
       case EdilangPackage.DATE_TIME_PERIOD: return createDateTimePeriod();
@@ -328,6 +358,18 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
   {
     UNHSegmentImpl unhSegment = new UNHSegmentImpl();
     return unhSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public UNGSegment createUNGSegment()
+  {
+    UNGSegmentImpl ungSegment = new UNGSegmentImpl();
+    return ungSegment;
   }
 
   /**
@@ -1872,6 +1914,18 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
+  public STXSegment createSTXSegment()
+  {
+    STXSegmentImpl stxSegment = new STXSegmentImpl();
+    return stxSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public TCCSegment createTCCSegment()
   {
     TCCSegmentImpl tccSegment = new TCCSegmentImpl();
@@ -2316,6 +2370,18 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
+  public UNESegment createUNESegment()
+  {
+    UNESegmentImpl uneSegment = new UNESegmentImpl();
+    return uneSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public AbstractEdiFunction createAbstractEdiFunction()
   {
     AbstractEdiFunctionImpl abstractEdiFunction = new AbstractEdiFunctionImpl();
@@ -2632,6 +2698,330 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
   {
     InterchangerFunctionImpl interchangerFunction = new InterchangerFunctionImpl();
     return interchangerFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public LocationIdentification createLocationIdentification()
+  {
+    LocationIdentificationImpl locationIdentification = new LocationIdentificationImpl();
+    return locationIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AddressDetail createAddressDetail()
+  {
+    AddressDetailImpl addressDetail = new AddressDetailImpl();
+    return addressDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AddressUsage createAddressUsage()
+  {
+    AddressUsageImpl addressUsage = new AddressUsageImpl();
+    return addressUsage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AttributeDetail createAttributeDetail()
+  {
+    AttributeDetailImpl attributeDetail = new AttributeDetailImpl();
+    return attributeDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AttributeType createAttributeType()
+  {
+    AttributeTypeImpl attributeType = new AttributeTypeImpl();
+    return attributeType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BankOperation createBankOperation()
+  {
+    BankOperationImpl bankOperation = new BankOperationImpl();
+    return bankOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BusinessFunction createBusinessFunction()
+  {
+    BusinessFunctionImpl businessFunction = new BusinessFunctionImpl();
+    return businessFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DepartmentEmployeeDetail createDepartmentEmployeeDetail()
+  {
+    DepartmentEmployeeDetailImpl departmentEmployeeDetail = new DepartmentEmployeeDetailImpl();
+    return departmentEmployeeDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IdentificationNumber createIdentificationNumber()
+  {
+    IdentificationNumberImpl identificationNumber = new IdentificationNumberImpl();
+    return identificationNumber;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PositionIdentification createPositionIdentification()
+  {
+    PositionIdentificationImpl positionIdentification = new PositionIdentificationImpl();
+    return positionIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ProductCharacteristic createProductCharacteristic()
+  {
+    ProductCharacteristicImpl productCharacteristic = new ProductCharacteristicImpl();
+    return productCharacteristic;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NationalityDetail createNationalityDetail()
+  {
+    NationalityDetailImpl nationalityDetail = new NationalityDetailImpl();
+    return nationalityDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PercentageDetail createPercentageDetail()
+  {
+    PercentageDetailImpl percentageDetail = new PercentageDetailImpl();
+    return percentageDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RateDetail createRateDetail()
+  {
+    RateDetailImpl rateDetail = new RateDetailImpl();
+    return rateDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public StatusCategory createStatusCategory()
+  {
+    StatusCategoryImpl statusCategory = new StatusCategoryImpl();
+    return statusCategory;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Status createStatus()
+  {
+    StatusImpl status = new StatusImpl();
+    return status;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public StatusReason createStatusReason()
+  {
+    StatusReasonImpl statusReason = new StatusReasonImpl();
+    return statusReason;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ValueListIdentification createValueListIdentification()
+  {
+    ValueListIdentificationImpl valueListIdentification = new ValueListIdentificationImpl();
+    return valueListIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TermsOfDeliveryTransport createTermsOfDeliveryTransport()
+  {
+    TermsOfDeliveryTransportImpl termsOfDeliveryTransport = new TermsOfDeliveryTransportImpl();
+    return termsOfDeliveryTransport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public QuantityDifferenceInformation createQuantityDifferenceInformation()
+  {
+    QuantityDifferenceInformationImpl quantityDifferenceInformation = new QuantityDifferenceInformationImpl();
+    return quantityDifferenceInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ReasonForChange createReasonForChange()
+  {
+    ReasonForChangeImpl reasonForChange = new ReasonForChangeImpl();
+    return reasonForChange;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public LanguageDetail createLanguageDetail()
+  {
+    LanguageDetailImpl languageDetail = new LanguageDetailImpl();
+    return languageDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public InformationRequest createInformationRequest()
+  {
+    InformationRequestImpl informationRequest = new InformationRequestImpl();
+    return informationRequest;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IndexIdentification createIndexIdentification()
+  {
+    IndexIdentificationImpl indexIdentification = new IndexIdentificationImpl();
+    return indexIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IndexValue createIndexValue()
+  {
+    IndexValueImpl indexValue = new IndexValueImpl();
+    return indexValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Control createControl()
+  {
+    ControlImpl control = new ControlImpl();
+    return control;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BasisType createBasisType()
+  {
+    BasisTypeImpl basisType = new BasisTypeImpl();
+    return basisType;
   }
 
   /**

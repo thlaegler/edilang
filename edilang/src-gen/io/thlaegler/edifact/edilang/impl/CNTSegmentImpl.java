@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CNTSegment;
+import io.thlaegler.edifact.edilang.Control;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,8 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CNTSegmentImpl#getTodo1 <em>Todo1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CNTSegmentImpl#getTodo2 <em>Todo2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CNTSegmentImpl#getControl <em>Control</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +31,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
 {
   /**
-   * The default value of the '{@link #getTodo1() <em>Todo1</em>}' attribute.
+   * The cached value of the '{@link #getControl() <em>Control</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo1()
+   * @see #getControl()
    * @generated
    * @ordered
    */
-  protected static final String TODO1_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTodo1() <em>Todo1</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo1()
-   * @generated
-   * @ordered
-   */
-  protected String todo1 = TODO1_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getTodo2() <em>Todo2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo2()
-   * @generated
-   * @ordered
-   */
-  protected static final String TODO2_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTodo2() <em>Todo2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo2()
-   * @generated
-   * @ordered
-   */
-  protected String todo2 = TODO2_EDEFAULT;
+  protected Control control;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,9 +67,9 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
    * @generated
    */
   @Override
-  public String getTodo1()
+  public Control getControl()
   {
-    return todo1;
+    return control;
   }
 
   /**
@@ -105,13 +77,16 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setTodo1(String newTodo1)
+  public NotificationChain basicSetControl(Control newControl, NotificationChain msgs)
   {
-    String oldTodo1 = todo1;
-    todo1 = newTodo1;
+    Control oldControl = control;
+    control = newControl;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CNT_SEGMENT__TODO1, oldTodo1, todo1));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CNT_SEGMENT__CONTROL, oldControl, newControl);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -120,9 +95,20 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
    * @generated
    */
   @Override
-  public String getTodo2()
+  public void setControl(Control newControl)
   {
-    return todo2;
+    if (newControl != control)
+    {
+      NotificationChain msgs = null;
+      if (control != null)
+        msgs = ((InternalEObject)control).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CNT_SEGMENT__CONTROL, null, msgs);
+      if (newControl != null)
+        msgs = ((InternalEObject)newControl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CNT_SEGMENT__CONTROL, null, msgs);
+      msgs = basicSetControl(newControl, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CNT_SEGMENT__CONTROL, newControl, newControl));
   }
 
   /**
@@ -131,12 +117,14 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
    * @generated
    */
   @Override
-  public void setTodo2(String newTodo2)
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldTodo2 = todo2;
-    todo2 = newTodo2;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CNT_SEGMENT__TODO2, oldTodo2, todo2));
+    switch (featureID)
+    {
+      case EdilangPackage.CNT_SEGMENT__CONTROL:
+        return basicSetControl(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -149,10 +137,8 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CNT_SEGMENT__TODO1:
-        return getTodo1();
-      case EdilangPackage.CNT_SEGMENT__TODO2:
-        return getTodo2();
+      case EdilangPackage.CNT_SEGMENT__CONTROL:
+        return getControl();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,11 +153,8 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CNT_SEGMENT__TODO1:
-        setTodo1((String)newValue);
-        return;
-      case EdilangPackage.CNT_SEGMENT__TODO2:
-        setTodo2((String)newValue);
+      case EdilangPackage.CNT_SEGMENT__CONTROL:
+        setControl((Control)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,11 +170,8 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CNT_SEGMENT__TODO1:
-        setTodo1(TODO1_EDEFAULT);
-        return;
-      case EdilangPackage.CNT_SEGMENT__TODO2:
-        setTodo2(TODO2_EDEFAULT);
+      case EdilangPackage.CNT_SEGMENT__CONTROL:
+        setControl((Control)null);
         return;
     }
     super.eUnset(featureID);
@@ -207,31 +187,10 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CNT_SEGMENT__TODO1:
-        return TODO1_EDEFAULT == null ? todo1 != null : !TODO1_EDEFAULT.equals(todo1);
-      case EdilangPackage.CNT_SEGMENT__TODO2:
-        return TODO2_EDEFAULT == null ? todo2 != null : !TODO2_EDEFAULT.equals(todo2);
+      case EdilangPackage.CNT_SEGMENT__CONTROL:
+        return control != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo1: ");
-    result.append(todo1);
-    result.append(", todo2: ");
-    result.append(todo2);
-    result.append(')');
-    return result.toString();
   }
 
 } //CNTSegmentImpl

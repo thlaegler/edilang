@@ -13,7 +13,13 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getAddressUsage <em>Address Usage</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getAddressDetails <em>Address Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getCityName <em>City Name</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getPostalIdentificationCode <em>Postal Identification Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getCountryNameCode <em>Country Name Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getCountrySubEntityDetails <em>Country Sub Entity Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ADRSegment#getLocationIdentification <em>Location Identification</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment()
@@ -23,25 +29,157 @@ package io.thlaegler.edifact.edilang;
 public interface ADRSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Address Usage</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_Todo()
+   * @return the value of the '<em>Address Usage</em>' containment reference.
+   * @see #setAddressUsage(AddressUsage)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_AddressUsage()
+   * @model containment="true"
+   * @generated
+   */
+  AddressUsage getAddressUsage();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getAddressUsage <em>Address Usage</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Address Usage</em>' containment reference.
+   * @see #getAddressUsage()
+   * @generated
+   */
+  void setAddressUsage(AddressUsage value);
+
+  /**
+   * Returns the value of the '<em><b>Address Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Address Details</em>' containment reference.
+   * @see #setAddressDetails(AddressDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_AddressDetails()
+   * @model containment="true"
+   * @generated
+   */
+  AddressDetail getAddressDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getAddressDetails <em>Address Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Address Details</em>' containment reference.
+   * @see #getAddressDetails()
+   * @generated
+   */
+  void setAddressDetails(AddressDetail value);
+
+  /**
+   * Returns the value of the '<em><b>City Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>City Name</em>' attribute.
+   * @see #setCityName(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_CityName()
    * @model
    * @generated
    */
-  String getTodo();
+  String getCityName();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getCityName <em>City Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>City Name</em>' attribute.
+   * @see #getCityName()
    * @generated
    */
-  void setTodo(String value);
+  void setCityName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Postal Identification Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Postal Identification Code</em>' attribute.
+   * @see #setPostalIdentificationCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_PostalIdentificationCode()
+   * @model
+   * @generated
+   */
+  String getPostalIdentificationCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getPostalIdentificationCode <em>Postal Identification Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Postal Identification Code</em>' attribute.
+   * @see #getPostalIdentificationCode()
+   * @generated
+   */
+  void setPostalIdentificationCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Country Name Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Country Name Code</em>' attribute.
+   * @see #setCountryNameCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_CountryNameCode()
+   * @model
+   * @generated
+   */
+  String getCountryNameCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getCountryNameCode <em>Country Name Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Country Name Code</em>' attribute.
+   * @see #getCountryNameCode()
+   * @generated
+   */
+  void setCountryNameCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Country Sub Entity Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Country Sub Entity Details</em>' containment reference.
+   * @see #setCountrySubEntityDetails(CountrySubEntityDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_CountrySubEntityDetails()
+   * @model containment="true"
+   * @generated
+   */
+  CountrySubEntityDetail getCountrySubEntityDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getCountrySubEntityDetails <em>Country Sub Entity Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Country Sub Entity Details</em>' containment reference.
+   * @see #getCountrySubEntityDetails()
+   * @generated
+   */
+  void setCountrySubEntityDetails(CountrySubEntityDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Location Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Location Identification</em>' containment reference.
+   * @see #setLocationIdentification(LocationIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getADRSegment_LocationIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  LocationIdentification getLocationIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ADRSegment#getLocationIdentification <em>Location Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Location Identification</em>' containment reference.
+   * @see #getLocationIdentification()
+   * @generated
+   */
+  void setLocationIdentification(LocationIdentification value);
 
 } // ADRSegment

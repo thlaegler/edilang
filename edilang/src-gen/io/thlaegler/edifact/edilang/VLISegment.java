@@ -13,7 +13,13 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getValueListIdentification <em>Value List Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getPartyIdentificationDetails <em>Party Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getStatusDescriptionCode <em>Status Description Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getValueListName <em>Value List Name</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getDesignatedClassCode <em>Designated Class Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getValueListTypeCode <em>Value List Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.VLISegment#getProductCharacteristic <em>Product Characteristic</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment()
@@ -23,25 +29,157 @@ package io.thlaegler.edifact.edilang;
 public interface VLISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Value List Identification</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_Todo()
+   * @return the value of the '<em>Value List Identification</em>' containment reference.
+   * @see #setValueListIdentification(ValueListIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_ValueListIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  ValueListIdentification getValueListIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getValueListIdentification <em>Value List Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value List Identification</em>' containment reference.
+   * @see #getValueListIdentification()
+   * @generated
+   */
+  void setValueListIdentification(ValueListIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Party Identification Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Party Identification Details</em>' containment reference.
+   * @see #setPartyIdentificationDetails(PartyIdentificationDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_PartyIdentificationDetails()
+   * @model containment="true"
+   * @generated
+   */
+  PartyIdentificationDetail getPartyIdentificationDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getPartyIdentificationDetails <em>Party Identification Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Party Identification Details</em>' containment reference.
+   * @see #getPartyIdentificationDetails()
+   * @generated
+   */
+  void setPartyIdentificationDetails(PartyIdentificationDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Status Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status Description Code</em>' attribute.
+   * @see #setStatusDescriptionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_StatusDescriptionCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getStatusDescriptionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getStatusDescriptionCode <em>Status Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Status Description Code</em>' attribute.
+   * @see #getStatusDescriptionCode()
    * @generated
    */
-  void setTodo(String value);
+  void setStatusDescriptionCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Value List Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value List Name</em>' attribute.
+   * @see #setValueListName(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_ValueListName()
+   * @model
+   * @generated
+   */
+  String getValueListName();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getValueListName <em>Value List Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value List Name</em>' attribute.
+   * @see #getValueListName()
+   * @generated
+   */
+  void setValueListName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Designated Class Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Designated Class Code</em>' attribute.
+   * @see #setDesignatedClassCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_DesignatedClassCode()
+   * @model
+   * @generated
+   */
+  String getDesignatedClassCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getDesignatedClassCode <em>Designated Class Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Designated Class Code</em>' attribute.
+   * @see #getDesignatedClassCode()
+   * @generated
+   */
+  void setDesignatedClassCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Value List Type Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value List Type Code</em>' attribute.
+   * @see #setValueListTypeCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_ValueListTypeCode()
+   * @model
+   * @generated
+   */
+  String getValueListTypeCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getValueListTypeCode <em>Value List Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value List Type Code</em>' attribute.
+   * @see #getValueListTypeCode()
+   * @generated
+   */
+  void setValueListTypeCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Product Characteristic</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Product Characteristic</em>' containment reference.
+   * @see #setProductCharacteristic(ProductCharacteristic)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getVLISegment_ProductCharacteristic()
+   * @model containment="true"
+   * @generated
+   */
+  ProductCharacteristic getProductCharacteristic();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.VLISegment#getProductCharacteristic <em>Product Characteristic</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Product Characteristic</em>' containment reference.
+   * @see #getProductCharacteristic()
+   * @generated
+   */
+  void setProductCharacteristic(ProductCharacteristic value);
 
 } // VLISegment

@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CTASegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CTASegment#getContactFunctionCode <em>Contact Function Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CTASegment#getDepartmentEmployeeDetails <em>Department Employee Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCTASegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface CTASegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Contact Function Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCTASegment_Todo()
+   * @return the value of the '<em>Contact Function Code</em>' attribute.
+   * @see #setContactFunctionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCTASegment_ContactFunctionCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getContactFunctionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CTASegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CTASegment#getContactFunctionCode <em>Contact Function Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Contact Function Code</em>' attribute.
+   * @see #getContactFunctionCode()
    * @generated
    */
-  void setTodo(String value);
+  void setContactFunctionCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Department Employee Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Department Employee Details</em>' containment reference.
+   * @see #setDepartmentEmployeeDetails(DepartmentEmployeeDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCTASegment_DepartmentEmployeeDetails()
+   * @model containment="true"
+   * @generated
+   */
+  DepartmentEmployeeDetail getDepartmentEmployeeDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CTASegment#getDepartmentEmployeeDetails <em>Department Employee Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Department Employee Details</em>' containment reference.
+   * @see #getDepartmentEmployeeDetails()
+   * @generated
+   */
+  void setDepartmentEmployeeDetails(DepartmentEmployeeDetail value);
 
 } // CTASegment

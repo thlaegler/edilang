@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.PCDSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.PCDSegment#getPercentageDetails <em>Percentage Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.PCDSegment#getStatusDescriptionCode <em>Status Description Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCDSegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface PCDSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Percentage Details</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCDSegment_Todo()
+   * @return the value of the '<em>Percentage Details</em>' containment reference.
+   * @see #setPercentageDetails(PercentageDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCDSegment_PercentageDetails()
+   * @model containment="true"
+   * @generated
+   */
+  PercentageDetail getPercentageDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCDSegment#getPercentageDetails <em>Percentage Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Percentage Details</em>' containment reference.
+   * @see #getPercentageDetails()
+   * @generated
+   */
+  void setPercentageDetails(PercentageDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Status Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status Description Code</em>' attribute.
+   * @see #setStatusDescriptionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCDSegment_StatusDescriptionCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getStatusDescriptionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCDSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCDSegment#getStatusDescriptionCode <em>Status Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Status Description Code</em>' attribute.
+   * @see #getStatusDescriptionCode()
    * @generated
    */
-  void setTodo(String value);
+  void setStatusDescriptionCode(String value);
 
 } // PCDSegment

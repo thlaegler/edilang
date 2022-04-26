@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.LANSegment;
+import io.thlaegler.edifact.edilang.LanguageDetail;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.LANSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LANSegmentImpl#getLanguageCodeQualifier <em>Language Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.LANSegmentImpl#getLanguageDetails <em>Language Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getLanguageCodeQualifier() <em>Language Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getLanguageCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String LANGUAGE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getLanguageCodeQualifier() <em>Language Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getLanguageCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String languageCodeQualifier = LANGUAGE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getLanguageDetails() <em>Language Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLanguageDetails()
+   * @generated
+   * @ordered
+   */
+  protected LanguageDetail languageDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,9 @@ public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getLanguageCodeQualifier()
   {
-    return todo;
+    return languageCodeQualifier;
   }
 
   /**
@@ -85,12 +99,78 @@ public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setLanguageCodeQualifier(String newLanguageCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldLanguageCodeQualifier = languageCodeQualifier;
+    languageCodeQualifier = newLanguageCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LAN_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LAN_SEGMENT__LANGUAGE_CODE_QUALIFIER, oldLanguageCodeQualifier, languageCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public LanguageDetail getLanguageDetails()
+  {
+    return languageDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLanguageDetails(LanguageDetail newLanguageDetails, NotificationChain msgs)
+  {
+    LanguageDetail oldLanguageDetails = languageDetails;
+    languageDetails = newLanguageDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS, oldLanguageDetails, newLanguageDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLanguageDetails(LanguageDetail newLanguageDetails)
+  {
+    if (newLanguageDetails != languageDetails)
+    {
+      NotificationChain msgs = null;
+      if (languageDetails != null)
+        msgs = ((InternalEObject)languageDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS, null, msgs);
+      if (newLanguageDetails != null)
+        msgs = ((InternalEObject)newLanguageDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS, null, msgs);
+      msgs = basicSetLanguageDetails(newLanguageDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS, newLanguageDetails, newLanguageDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS:
+        return basicSetLanguageDetails(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LAN_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_CODE_QUALIFIER:
+        return getLanguageCodeQualifier();
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS:
+        return getLanguageDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LAN_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_CODE_QUALIFIER:
+        setLanguageCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS:
+        setLanguageDetails((LanguageDetail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LAN_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_CODE_QUALIFIER:
+        setLanguageCodeQualifier(LANGUAGE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS:
+        setLanguageDetails((LanguageDetail)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.LAN_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_CODE_QUALIFIER:
+        return LANGUAGE_CODE_QUALIFIER_EDEFAULT == null ? languageCodeQualifier != null : !LANGUAGE_CODE_QUALIFIER_EDEFAULT.equals(languageCodeQualifier);
+      case EdilangPackage.LAN_SEGMENT__LANGUAGE_DETAILS:
+        return languageDetails != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class LANSegmentImpl extends AbstractEdiSegmentImpl implements LANSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (languageCodeQualifier: ");
+    result.append(languageCodeQualifier);
     result.append(')');
     return result.toString();
   }

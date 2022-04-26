@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.LANSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LANSegment#getLanguageCodeQualifier <em>Language Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.LANSegment#getLanguageDetails <em>Language Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getLANSegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface LANSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Language Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLANSegment_Todo()
+   * @return the value of the '<em>Language Code Qualifier</em>' attribute.
+   * @see #setLanguageCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLANSegment_LanguageCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getLanguageCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LANSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LANSegment#getLanguageCodeQualifier <em>Language Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Language Code Qualifier</em>' attribute.
+   * @see #getLanguageCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setLanguageCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Language Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Language Details</em>' containment reference.
+   * @see #setLanguageDetails(LanguageDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getLANSegment_LanguageDetails()
+   * @model containment="true"
+   * @generated
+   */
+  LanguageDetail getLanguageDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.LANSegment#getLanguageDetails <em>Language Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Language Details</em>' containment reference.
+   * @see #getLanguageDetails()
+   * @generated
+   */
+  void setLanguageDetails(LanguageDetail value);
 
 } // LANSegment

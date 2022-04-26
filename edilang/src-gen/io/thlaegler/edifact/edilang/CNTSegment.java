@@ -13,8 +13,7 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CNTSegment#getTodo1 <em>Todo1</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.CNTSegment#getTodo2 <em>Todo2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CNTSegment#getControl <em>Control</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCNTSegment()
@@ -24,47 +23,25 @@ package io.thlaegler.edifact.edilang;
 public interface CNTSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo1</b></em>' attribute.
+   * Returns the value of the '<em><b>Control</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo1</em>' attribute.
-   * @see #setTodo1(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCNTSegment_Todo1()
-   * @model
+   * @return the value of the '<em>Control</em>' containment reference.
+   * @see #setControl(Control)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCNTSegment_Control()
+   * @model containment="true"
    * @generated
    */
-  String getTodo1();
+  Control getControl();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CNTSegment#getTodo1 <em>Todo1</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CNTSegment#getControl <em>Control</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo1</em>' attribute.
-   * @see #getTodo1()
+   * @param value the new value of the '<em>Control</em>' containment reference.
+   * @see #getControl()
    * @generated
    */
-  void setTodo1(String value);
-
-  /**
-   * Returns the value of the '<em><b>Todo2</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo2</em>' attribute.
-   * @see #setTodo2(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCNTSegment_Todo2()
-   * @model
-   * @generated
-   */
-  String getTodo2();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CNTSegment#getTodo2 <em>Todo2</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo2</em>' attribute.
-   * @see #getTodo2()
-   * @generated
-   */
-  void setTodo2(String value);
+  void setControl(Control value);
 
 } // CNTSegment

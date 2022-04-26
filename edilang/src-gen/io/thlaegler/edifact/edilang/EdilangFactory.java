@@ -69,6 +69,15 @@ public interface EdilangFactory extends EFactory
   UNHSegment createUNHSegment();
 
   /**
+   * Returns a new object of class '<em>UNG Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>UNG Segment</em>'.
+   * @generated
+   */
+  UNGSegment createUNGSegment();
+
+  /**
    * Returns a new object of class '<em>ADR Segment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1221,6 +1230,15 @@ public interface EdilangFactory extends EFactory
   STSSegment createSTSSegment();
 
   /**
+   * Returns a new object of class '<em>STX Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>STX Segment</em>'.
+   * @generated
+   */
+  STXSegment createSTXSegment();
+
+  /**
    * Returns a new object of class '<em>TCC Segment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1554,6 +1572,15 @@ public interface EdilangFactory extends EFactory
   UNZSegment createUNZSegment();
 
   /**
+   * Returns a new object of class '<em>UNE Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>UNE Segment</em>'.
+   * @generated
+   */
+  UNESegment createUNESegment();
+
+  /**
    * Returns a new object of class '<em>Abstract Edi Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1795,6 +1822,249 @@ public interface EdilangFactory extends EFactory
    * @generated
    */
   InterchangerFunction createInterchangerFunction();
+
+  /**
+   * Returns a new object of class '<em>Location Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Location Identification</em>'.
+   * @generated
+   */
+  LocationIdentification createLocationIdentification();
+
+  /**
+   * Returns a new object of class '<em>Address Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Address Detail</em>'.
+   * @generated
+   */
+  AddressDetail createAddressDetail();
+
+  /**
+   * Returns a new object of class '<em>Address Usage</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Address Usage</em>'.
+   * @generated
+   */
+  AddressUsage createAddressUsage();
+
+  /**
+   * Returns a new object of class '<em>Attribute Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Attribute Detail</em>'.
+   * @generated
+   */
+  AttributeDetail createAttributeDetail();
+
+  /**
+   * Returns a new object of class '<em>Attribute Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Attribute Type</em>'.
+   * @generated
+   */
+  AttributeType createAttributeType();
+
+  /**
+   * Returns a new object of class '<em>Bank Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bank Operation</em>'.
+   * @generated
+   */
+  BankOperation createBankOperation();
+
+  /**
+   * Returns a new object of class '<em>Business Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Business Function</em>'.
+   * @generated
+   */
+  BusinessFunction createBusinessFunction();
+
+  /**
+   * Returns a new object of class '<em>Department Employee Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Department Employee Detail</em>'.
+   * @generated
+   */
+  DepartmentEmployeeDetail createDepartmentEmployeeDetail();
+
+  /**
+   * Returns a new object of class '<em>Identification Number</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Identification Number</em>'.
+   * @generated
+   */
+  IdentificationNumber createIdentificationNumber();
+
+  /**
+   * Returns a new object of class '<em>Position Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Position Identification</em>'.
+   * @generated
+   */
+  PositionIdentification createPositionIdentification();
+
+  /**
+   * Returns a new object of class '<em>Product Characteristic</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Product Characteristic</em>'.
+   * @generated
+   */
+  ProductCharacteristic createProductCharacteristic();
+
+  /**
+   * Returns a new object of class '<em>Nationality Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Nationality Detail</em>'.
+   * @generated
+   */
+  NationalityDetail createNationalityDetail();
+
+  /**
+   * Returns a new object of class '<em>Percentage Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Percentage Detail</em>'.
+   * @generated
+   */
+  PercentageDetail createPercentageDetail();
+
+  /**
+   * Returns a new object of class '<em>Rate Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rate Detail</em>'.
+   * @generated
+   */
+  RateDetail createRateDetail();
+
+  /**
+   * Returns a new object of class '<em>Status Category</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status Category</em>'.
+   * @generated
+   */
+  StatusCategory createStatusCategory();
+
+  /**
+   * Returns a new object of class '<em>Status</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status</em>'.
+   * @generated
+   */
+  Status createStatus();
+
+  /**
+   * Returns a new object of class '<em>Status Reason</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status Reason</em>'.
+   * @generated
+   */
+  StatusReason createStatusReason();
+
+  /**
+   * Returns a new object of class '<em>Value List Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Value List Identification</em>'.
+   * @generated
+   */
+  ValueListIdentification createValueListIdentification();
+
+  /**
+   * Returns a new object of class '<em>Terms Of Delivery Transport</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Terms Of Delivery Transport</em>'.
+   * @generated
+   */
+  TermsOfDeliveryTransport createTermsOfDeliveryTransport();
+
+  /**
+   * Returns a new object of class '<em>Quantity Difference Information</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Quantity Difference Information</em>'.
+   * @generated
+   */
+  QuantityDifferenceInformation createQuantityDifferenceInformation();
+
+  /**
+   * Returns a new object of class '<em>Reason For Change</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Reason For Change</em>'.
+   * @generated
+   */
+  ReasonForChange createReasonForChange();
+
+  /**
+   * Returns a new object of class '<em>Language Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Language Detail</em>'.
+   * @generated
+   */
+  LanguageDetail createLanguageDetail();
+
+  /**
+   * Returns a new object of class '<em>Information Request</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Information Request</em>'.
+   * @generated
+   */
+  InformationRequest createInformationRequest();
+
+  /**
+   * Returns a new object of class '<em>Index Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Identification</em>'.
+   * @generated
+   */
+  IndexIdentification createIndexIdentification();
+
+  /**
+   * Returns a new object of class '<em>Index Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Value</em>'.
+   * @generated
+   */
+  IndexValue createIndexValue();
+
+  /**
+   * Returns a new object of class '<em>Control</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Control</em>'.
+   * @generated
+   */
+  Control createControl();
+
+  /**
+   * Returns a new object of class '<em>Basis Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Basis Type</em>'.
+   * @generated
+   */
+  BasisType createBasisType();
 
   /**
    * Returns a new object of class '<em>Date Only Function</em>'.

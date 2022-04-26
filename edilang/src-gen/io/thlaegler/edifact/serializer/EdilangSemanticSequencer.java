@@ -16,11 +16,18 @@ import io.thlaegler.edifact.edilang.ARRSegment;
 import io.thlaegler.edifact.edilang.ASISegment;
 import io.thlaegler.edifact.edilang.ATTSegment;
 import io.thlaegler.edifact.edilang.AUTSegment;
+import io.thlaegler.edifact.edilang.AddressDetail;
+import io.thlaegler.edifact.edilang.AddressUsage;
 import io.thlaegler.edifact.edilang.ApplicationErrorDetail;
+import io.thlaegler.edifact.edilang.AttributeDetail;
+import io.thlaegler.edifact.edilang.AttributeType;
 import io.thlaegler.edifact.edilang.BASSegment;
 import io.thlaegler.edifact.edilang.BGMSegment;
 import io.thlaegler.edifact.edilang.BIISegment;
 import io.thlaegler.edifact.edilang.BUSSegment;
+import io.thlaegler.edifact.edilang.BankOperation;
+import io.thlaegler.edifact.edilang.BasisType;
+import io.thlaegler.edifact.edilang.BusinessFunction;
 import io.thlaegler.edifact.edilang.CAVSegment;
 import io.thlaegler.edifact.edilang.CCDSegment;
 import io.thlaegler.edifact.edilang.CCISegment;
@@ -43,6 +50,7 @@ import io.thlaegler.edifact.edilang.CPTSegment;
 import io.thlaegler.edifact.edilang.CSTSegment;
 import io.thlaegler.edifact.edilang.CTASegment;
 import io.thlaegler.edifact.edilang.CUXSegment;
+import io.thlaegler.edifact.edilang.Control;
 import io.thlaegler.edifact.edilang.CountrySubEntityDetail;
 import io.thlaegler.edifact.edilang.CurrencyDetail;
 import io.thlaegler.edifact.edilang.DAMSegment;
@@ -61,6 +69,7 @@ import io.thlaegler.edifact.edilang.DTMSegment;
 import io.thlaegler.edifact.edilang.DateAndTimeFunction;
 import io.thlaegler.edifact.edilang.DateOnlyFunction;
 import io.thlaegler.edifact.edilang.DateTimePeriod;
+import io.thlaegler.edifact.edilang.DepartmentEmployeeDetail;
 import io.thlaegler.edifact.edilang.DocumentMessage;
 import io.thlaegler.edifact.edilang.DocumentMessageIdentification;
 import io.thlaegler.edifact.edilang.EDTSegment;
@@ -104,12 +113,18 @@ import io.thlaegler.edifact.edilang.INDSegment;
 import io.thlaegler.edifact.edilang.INPSegment;
 import io.thlaegler.edifact.edilang.INVSegment;
 import io.thlaegler.edifact.edilang.IRQSegment;
+import io.thlaegler.edifact.edilang.IdentificationNumber;
+import io.thlaegler.edifact.edilang.IndexIdentification;
+import io.thlaegler.edifact.edilang.IndexValue;
+import io.thlaegler.edifact.edilang.InformationRequest;
 import io.thlaegler.edifact.edilang.InterchangerFunction;
 import io.thlaegler.edifact.edilang.ItemNumberIdentification;
 import io.thlaegler.edifact.edilang.LANSegment;
 import io.thlaegler.edifact.edilang.LINSegment;
 import io.thlaegler.edifact.edilang.LOCSegment;
+import io.thlaegler.edifact.edilang.LanguageDetail;
 import io.thlaegler.edifact.edilang.LocationFunction;
+import io.thlaegler.edifact.edilang.LocationIdentification;
 import io.thlaegler.edifact.edilang.MEASegment;
 import io.thlaegler.edifact.edilang.MEMSegment;
 import io.thlaegler.edifact.edilang.MKSSegment;
@@ -120,6 +135,7 @@ import io.thlaegler.edifact.edilang.MessageIndentifier;
 import io.thlaegler.edifact.edilang.NADSegment;
 import io.thlaegler.edifact.edilang.NATSegment;
 import io.thlaegler.edifact.edilang.NameAndAddress;
+import io.thlaegler.edifact.edilang.NationalityDetail;
 import io.thlaegler.edifact.edilang.ODISegment;
 import io.thlaegler.edifact.edilang.ORGSegment;
 import io.thlaegler.edifact.edilang.OriginatorFunction;
@@ -145,13 +161,17 @@ import io.thlaegler.edifact.edilang.PTYSegment;
 import io.thlaegler.edifact.edilang.PYTSegment;
 import io.thlaegler.edifact.edilang.PartyIdentificationDetail;
 import io.thlaegler.edifact.edilang.PartyName;
+import io.thlaegler.edifact.edilang.PercentageDetail;
+import io.thlaegler.edifact.edilang.PositionIdentification;
 import io.thlaegler.edifact.edilang.PriceInformation;
+import io.thlaegler.edifact.edilang.ProductCharacteristic;
 import io.thlaegler.edifact.edilang.ProductFunction;
 import io.thlaegler.edifact.edilang.QRSSegment;
 import io.thlaegler.edifact.edilang.QTYSegment;
 import io.thlaegler.edifact.edilang.QUASegment;
 import io.thlaegler.edifact.edilang.QVRSegment;
 import io.thlaegler.edifact.edilang.QuantityDetail;
+import io.thlaegler.edifact.edilang.QuantityDifferenceInformation;
 import io.thlaegler.edifact.edilang.RCSSegment;
 import io.thlaegler.edifact.edilang.RELSegment;
 import io.thlaegler.edifact.edilang.RFFSegment;
@@ -161,6 +181,8 @@ import io.thlaegler.edifact.edilang.RODSegment;
 import io.thlaegler.edifact.edilang.RPISegment;
 import io.thlaegler.edifact.edilang.RSLSegment;
 import io.thlaegler.edifact.edilang.RTESegment;
+import io.thlaegler.edifact.edilang.RateDetail;
+import io.thlaegler.edifact.edilang.ReasonForChange;
 import io.thlaegler.edifact.edilang.Relationship;
 import io.thlaegler.edifact.edilang.SALSegment;
 import io.thlaegler.edifact.edilang.SCCSegment;
@@ -177,6 +199,10 @@ import io.thlaegler.edifact.edilang.STASegment;
 import io.thlaegler.edifact.edilang.STCSegment;
 import io.thlaegler.edifact.edilang.STGSegment;
 import io.thlaegler.edifact.edilang.STSSegment;
+import io.thlaegler.edifact.edilang.STXSegment;
+import io.thlaegler.edifact.edilang.Status;
+import io.thlaegler.edifact.edilang.StatusCategory;
+import io.thlaegler.edifact.edilang.StatusReason;
 import io.thlaegler.edifact.edilang.Street;
 import io.thlaegler.edifact.edilang.SublineInformation;
 import io.thlaegler.edifact.edilang.SystemDetailFunction;
@@ -194,15 +220,19 @@ import io.thlaegler.edifact.edilang.TVLSegment;
 import io.thlaegler.edifact.edilang.TaxAccountDetail;
 import io.thlaegler.edifact.edilang.TaxDetail;
 import io.thlaegler.edifact.edilang.TaxType;
+import io.thlaegler.edifact.edilang.TermsOfDeliveryTransport;
 import io.thlaegler.edifact.edilang.UCISegment;
 import io.thlaegler.edifact.edilang.UNASegment;
 import io.thlaegler.edifact.edilang.UNBHeader;
 import io.thlaegler.edifact.edilang.UNBSegment;
+import io.thlaegler.edifact.edilang.UNESegment;
+import io.thlaegler.edifact.edilang.UNGSegment;
 import io.thlaegler.edifact.edilang.UNHSegment;
 import io.thlaegler.edifact.edilang.UNSSegment;
 import io.thlaegler.edifact.edilang.UNTSegment;
 import io.thlaegler.edifact.edilang.UNZSegment;
 import io.thlaegler.edifact.edilang.VLISegment;
+import io.thlaegler.edifact.edilang.ValueListIdentification;
 import io.thlaegler.edifact.services.EdilangGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -265,8 +295,20 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.AUT_SEGMENT:
 				sequence_AUTSegment(context, (AUTSegment) semanticObject); 
 				return; 
+			case EdilangPackage.ADDRESS_DETAIL:
+				sequence_AddressDetail(context, (AddressDetail) semanticObject); 
+				return; 
+			case EdilangPackage.ADDRESS_USAGE:
+				sequence_AddressUsage(context, (AddressUsage) semanticObject); 
+				return; 
 			case EdilangPackage.APPLICATION_ERROR_DETAIL:
 				sequence_ApplicationErrorDetail(context, (ApplicationErrorDetail) semanticObject); 
+				return; 
+			case EdilangPackage.ATTRIBUTE_DETAIL:
+				sequence_AttributeDetail(context, (AttributeDetail) semanticObject); 
+				return; 
+			case EdilangPackage.ATTRIBUTE_TYPE:
+				sequence_AttributeType(context, (AttributeType) semanticObject); 
 				return; 
 			case EdilangPackage.BAS_SEGMENT:
 				sequence_BASSegment(context, (BASSegment) semanticObject); 
@@ -279,6 +321,15 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.BUS_SEGMENT:
 				sequence_BUSSegment(context, (BUSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.BANK_OPERATION:
+				sequence_BankOperation(context, (BankOperation) semanticObject); 
+				return; 
+			case EdilangPackage.BASIS_TYPE:
+				sequence_BasisType(context, (BasisType) semanticObject); 
+				return; 
+			case EdilangPackage.BUSINESS_FUNCTION:
+				sequence_BusinessFunction(context, (BusinessFunction) semanticObject); 
 				return; 
 			case EdilangPackage.CAV_SEGMENT:
 				sequence_CAVSegment(context, (CAVSegment) semanticObject); 
@@ -346,6 +397,9 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.CUX_SEGMENT:
 				sequence_CUXSegment(context, (CUXSegment) semanticObject); 
 				return; 
+			case EdilangPackage.CONTROL:
+				sequence_Control(context, (Control) semanticObject); 
+				return; 
 			case EdilangPackage.COUNTRY_SUB_ENTITY_DETAIL:
 				sequence_CountrySubEntityDetail(context, (CountrySubEntityDetail) semanticObject); 
 				return; 
@@ -399,6 +453,9 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.DATE_TIME_PERIOD:
 				sequence_DateTimePeriod(context, (DateTimePeriod) semanticObject); 
+				return; 
+			case EdilangPackage.DEPARTMENT_EMPLOYEE_DETAIL:
+				sequence_DepartmentEmployeeDetail(context, (DepartmentEmployeeDetail) semanticObject); 
 				return; 
 			case EdilangPackage.DOCUMENT_MESSAGE:
 				sequence_DocumentMessage(context, (DocumentMessage) semanticObject); 
@@ -526,6 +583,18 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.IRQ_SEGMENT:
 				sequence_IRQSegment(context, (IRQSegment) semanticObject); 
 				return; 
+			case EdilangPackage.IDENTIFICATION_NUMBER:
+				sequence_IdentificationNumber(context, (IdentificationNumber) semanticObject); 
+				return; 
+			case EdilangPackage.INDEX_IDENTIFICATION:
+				sequence_IndexIdentification(context, (IndexIdentification) semanticObject); 
+				return; 
+			case EdilangPackage.INDEX_VALUE:
+				sequence_IndexValue(context, (IndexValue) semanticObject); 
+				return; 
+			case EdilangPackage.INFORMATION_REQUEST:
+				sequence_InformationRequest(context, (InformationRequest) semanticObject); 
+				return; 
 			case EdilangPackage.INTERCHANGER_FUNCTION:
 				sequence_InterchangerFunction(context, (InterchangerFunction) semanticObject); 
 				return; 
@@ -541,8 +610,14 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.LOC_SEGMENT:
 				sequence_LOCSegment(context, (LOCSegment) semanticObject); 
 				return; 
+			case EdilangPackage.LANGUAGE_DETAIL:
+				sequence_LanguageDetail(context, (LanguageDetail) semanticObject); 
+				return; 
 			case EdilangPackage.LOCATION_FUNCTION:
 				sequence_LocationFunction(context, (LocationFunction) semanticObject); 
+				return; 
+			case EdilangPackage.LOCATION_IDENTIFICATION:
+				sequence_LocationIdentification(context, (LocationIdentification) semanticObject); 
 				return; 
 			case EdilangPackage.MEA_SEGMENT:
 				sequence_MEASegment(context, (MEASegment) semanticObject); 
@@ -573,6 +648,9 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.NAME_AND_ADDRESS:
 				sequence_NameAndAddress(context, (NameAndAddress) semanticObject); 
+				return; 
+			case EdilangPackage.NATIONALITY_DETAIL:
+				sequence_NationalityDetail(context, (NationalityDetail) semanticObject); 
 				return; 
 			case EdilangPackage.ODI_SEGMENT:
 				sequence_ODISegment(context, (ODISegment) semanticObject); 
@@ -649,8 +727,17 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.PARTY_NAME:
 				sequence_PartyName(context, (PartyName) semanticObject); 
 				return; 
+			case EdilangPackage.PERCENTAGE_DETAIL:
+				sequence_PercentageDetail(context, (PercentageDetail) semanticObject); 
+				return; 
+			case EdilangPackage.POSITION_IDENTIFICATION:
+				sequence_PositionIdentification(context, (PositionIdentification) semanticObject); 
+				return; 
 			case EdilangPackage.PRICE_INFORMATION:
 				sequence_PriceInformation(context, (PriceInformation) semanticObject); 
+				return; 
+			case EdilangPackage.PRODUCT_CHARACTERISTIC:
+				sequence_ProductCharacteristic(context, (ProductCharacteristic) semanticObject); 
 				return; 
 			case EdilangPackage.PRODUCT_FUNCTION:
 				sequence_ProductFunction(context, (ProductFunction) semanticObject); 
@@ -669,6 +756,9 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.QUANTITY_DETAIL:
 				sequence_QuantityDetail(context, (QuantityDetail) semanticObject); 
+				return; 
+			case EdilangPackage.QUANTITY_DIFFERENCE_INFORMATION:
+				sequence_QuantityDifferenceInformation(context, (QuantityDifferenceInformation) semanticObject); 
 				return; 
 			case EdilangPackage.RCS_SEGMENT:
 				sequence_RCSSegment(context, (RCSSegment) semanticObject); 
@@ -696,6 +786,12 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.RTE_SEGMENT:
 				sequence_RTESegment(context, (RTESegment) semanticObject); 
+				return; 
+			case EdilangPackage.RATE_DETAIL:
+				sequence_RateDetail(context, (RateDetail) semanticObject); 
+				return; 
+			case EdilangPackage.REASON_FOR_CHANGE:
+				sequence_ReasonForChange(context, (ReasonForChange) semanticObject); 
 				return; 
 			case EdilangPackage.RELATIONSHIP:
 				sequence_Relationship(context, (Relationship) semanticObject); 
@@ -744,6 +840,18 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.STS_SEGMENT:
 				sequence_STSSegment(context, (STSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.STX_SEGMENT:
+				sequence_STXSegment(context, (STXSegment) semanticObject); 
+				return; 
+			case EdilangPackage.STATUS:
+				sequence_Status(context, (Status) semanticObject); 
+				return; 
+			case EdilangPackage.STATUS_CATEGORY:
+				sequence_StatusCategory(context, (StatusCategory) semanticObject); 
+				return; 
+			case EdilangPackage.STATUS_REASON:
+				sequence_StatusReason(context, (StatusReason) semanticObject); 
 				return; 
 			case EdilangPackage.STREET:
 				sequence_Street(context, (Street) semanticObject); 
@@ -796,6 +904,9 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.TAX_TYPE:
 				sequence_TaxType(context, (TaxType) semanticObject); 
 				return; 
+			case EdilangPackage.TERMS_OF_DELIVERY_TRANSPORT:
+				sequence_TermsOfDeliveryTransport(context, (TermsOfDeliveryTransport) semanticObject); 
+				return; 
 			case EdilangPackage.UCI_SEGMENT:
 				sequence_UCISegment(context, (UCISegment) semanticObject); 
 				return; 
@@ -807,6 +918,12 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.UNB_SEGMENT:
 				sequence_UNBSegment(context, (UNBSegment) semanticObject); 
+				return; 
+			case EdilangPackage.UNE_SEGMENT:
+				sequence_UNESegment(context, (UNESegment) semanticObject); 
+				return; 
+			case EdilangPackage.UNG_SEGMENT:
+				sequence_UNGSegment(context, (UNGSegment) semanticObject); 
 				return; 
 			case EdilangPackage.UNH_SEGMENT:
 				sequence_UNHSegment(context, (UNHSegment) semanticObject); 
@@ -823,6 +940,9 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.VLI_SEGMENT:
 				sequence_VLISegment(context, (VLISegment) semanticObject); 
 				return; 
+			case EdilangPackage.VALUE_LIST_IDENTIFICATION:
+				sequence_ValueListIdentification(context, (ValueListIdentification) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -835,23 +955,23 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     ADRSegment returns ADRSegment
 	 *
 	 * Constraint:
-	 *     (segment='ADR' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (
+	 *         segment='ADR' 
+	 *         addressUsage=AddressUsage? 
+	 *         addressDetails=AddressDetail? 
+	 *         (
+	 *             cityName=ID 
+	 *             (
+	 *                 postalIdentificationCode=ID 
+	 *                 (countryNameCode=ID (countrySubEntityDetails=CountrySubEntityDetail locationIdentification=LocationIdentification?)?)?
+	 *             )?
+	 *         )? 
+	 *         lineEnd=QUOTE_AND_NL
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_ADRSegment(ISerializationContext context, ADRSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getADRSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getADRSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getADRSegmentAccess().getSegmentADRKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getADRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getADRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -943,23 +1063,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     ALISegment returns ALISegment
 	 *
 	 * Constraint:
-	 *     (segment='ALI' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='ALI' countryOfOriginNameCode=ID? dutyRegimeTypeCode=AddressDetail? specialConditionCodes+=ID* lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_ALISegment(ISerializationContext context, ALISegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getALISegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getALISegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getALISegmentAccess().getSegmentALIKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getALISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getALISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1105,23 +1213,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     ATTSegment returns ATTSegment
 	 *
 	 * Constraint:
-	 *     (segment='ATT' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='ATT' attributeFunctionCodeQualifier=ID (attributeType=AttributeType attributeDetail=AttributeDetail?)? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_ATTSegment(ISerializationContext context, ATTSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getATTSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getATTSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getATTSegmentAccess().getSegmentATTKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getATTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getATTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1155,6 +1251,34 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AddressDetail returns AddressDetail
+	 *
+	 * Constraint:
+	 *     (addressFormatCode=ID addressComponentDescriptions+=ID*)
+	 * </pre>
+	 */
+	protected void sequence_AddressDetail(ISerializationContext context, AddressDetail semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AddressUsage returns AddressUsage
+	 *
+	 * Constraint:
+	 *     (addressPurposeCode=ID (addressTypeCode=ID addressStatusCode=ID?)?)
+	 * </pre>
+	 */
+	protected void sequence_AddressUsage(ISerializationContext context, AddressUsage semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiFunction returns ApplicationErrorDetail
 	 *     ApplicationErrorDetail returns ApplicationErrorDetail
 	 *
@@ -1170,27 +1294,43 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AttributeDetail returns AttributeDetail
+	 *
+	 * Constraint:
+	 *     (attributeDescriptionCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID attributeDescription=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_AttributeDetail(ISerializationContext context, AttributeDetail semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AttributeType returns AttributeType
+	 *
+	 * Constraint:
+	 *     (attributeTypeDescriptionCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID attributeTypeDescription=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_AttributeType(ISerializationContext context, AttributeType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns BASSegment
 	 *     BASSegment returns BASSegment
 	 *
 	 * Constraint:
-	 *     (segment='BAS' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='BAS' basisCodeQualifier=ID basisType=BasisType? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_BASSegment(ISerializationContext context, BASSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getBASSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getBASSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBASSegmentAccess().getSegmentBASKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getBASSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getBASSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1250,23 +1390,61 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     BUSSegment returns BUSSegment
 	 *
 	 * Constraint:
-	 *     (segment='BUS' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (
+	 *         segment='BUS' 
+	 *         businessFunction=BusinessFunction 
+	 *         (geographicAreaCode=ID (financialTransactionTypeCode=ID (bankOperation=BankOperation intraCompanyPaymentIndicatorCode=ID?)?)?)? 
+	 *         lineEnd=QUOTE_AND_NL
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_BUSSegment(ISerializationContext context, BUSSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getBUSSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getBUSSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBUSSegmentAccess().getSegmentBUSKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getBUSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getBUSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     BankOperation returns BankOperation
+	 *
+	 * Constraint:
+	 *     (bankOperationCode=ID (codeListIdentificationCode=ID codeListResponsibleAgencyCode=ID?)?)
+	 * </pre>
+	 */
+	protected void sequence_BankOperation(ISerializationContext context, BankOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     BasisType returns BasisType
+	 *
+	 * Constraint:
+	 *     (basisTypeDescriptionCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID basisTypeDescription=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_BasisType(ISerializationContext context, BasisType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     BusinessFunction returns BusinessFunction
+	 *
+	 * Constraint:
+	 *     (
+	 *         businessFunctionTypeCodeQualifier=ID 
+	 *         (businessFunctionCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID businessDescription=ID?)?)?)?
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_BusinessFunction(ISerializationContext context, BusinessFunction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1601,11 +1779,23 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     CNTSegment returns CNTSegment
 	 *
 	 * Constraint:
-	 *     (segment='CNT' todo1=ID? todo2=ID? lineEnd=QUOTE_AND_NL)
+	 *     (segment='CNT' control=Control lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_CNTSegment(ISerializationContext context, CNTSegment semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCNTSegment_Control()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCNTSegment_Control()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCNTSegmentAccess().getSegmentCNTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCNTSegmentAccess().getControlControlParserRuleCall_2_0(), semanticObject.getControl());
+		feeder.accept(grammarAccess.getCNTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -1805,7 +1995,7 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     CTASegment returns CTASegment
 	 *
 	 * Constraint:
-	 *     (segment='CTA' todo=ID? lineEnd=QUOTE_AND_NL)
+	 *     (segment='CTA' contactFunctionCode=ID? departmentEmployeeDetails=DepartmentEmployeeDetail? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_CTASegment(ISerializationContext context, CTASegment semanticObject) {
@@ -1829,6 +2019,20 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_CUXSegment(ISerializationContext context, CUXSegment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Control returns Control
+	 *
+	 * Constraint:
+	 *     (controlTotalTypeCodeQualifier=ID (controlTotalValue=ID measurementUnitCode=ID?)?)
+	 * </pre>
+	 */
+	protected void sequence_Control(ISerializationContext context, Control semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -2258,6 +2462,20 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_DateTimePeriod(ISerializationContext context, DateTimePeriod semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DepartmentEmployeeDetail returns DepartmentEmployeeDetail
+	 *
+	 * Constraint:
+	 *     (departmentEmployeeNameCode=ID departmentEmployeeName=ID?)
+	 * </pre>
+	 */
+	protected void sequence_DepartmentEmployeeDetail(ISerializationContext context, DepartmentEmployeeDetail semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -3133,23 +3351,25 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     IDESegment returns IDESegment
 	 *
 	 * Constraint:
-	 *     (segment='IDE' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (
+	 *         segment='IDE' 
+	 *         objectTypeCodeQualifier=ID 
+	 *         (
+	 *             identificationNumber=IdentificationNumber 
+	 *             (
+	 *                 partyIdentificationDetails=PartyIdentificationDetail 
+	 *                 (
+	 *                     statusDescriptionCode=ID 
+	 *                     (configurationLevelNumber=ID (positionIdentification=PositionIdentification productCharacteristic=ProductCharacteristic?)?)?
+	 *                 )?
+	 *             )?
+	 *         )? 
+	 *         lineEnd=QUOTE_AND_NL
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_IDESegment(ISerializationContext context, IDESegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIDESegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIDESegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIDESegmentAccess().getSegmentIDEKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getIDESegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getIDESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3241,23 +3461,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     INDSegment returns INDSegment
 	 *
 	 * Constraint:
-	 *     (segment='IND' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='IND' indexIdentification=IndexIdentification indexValue=IndexValue? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_INDSegment(ISerializationContext context, INDSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getINDSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getINDSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getINDSegmentAccess().getSegmentINDKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getINDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getINDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3322,23 +3530,82 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     IRQSegment returns IRQSegment
 	 *
 	 * Constraint:
-	 *     (segment='IRQ' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='IRQ' informationRequest=InformationRequest lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_IRQSegment(ISerializationContext context, IRQSegment semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIRQSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIRQSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIRQSegment_InformationRequest()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIRQSegment_InformationRequest()));
 			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIRQSegmentAccess().getSegmentIRQKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getIRQSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getIRQSegmentAccess().getInformationRequestInformationRequestParserRuleCall_2_0(), semanticObject.getInformationRequest());
 		feeder.accept(grammarAccess.getIRQSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     IdentificationNumber returns IdentificationNumber
+	 *
+	 * Constraint:
+	 *     (objectIdentifier=ID (objectIdentificationCodeQualifier=ID statusDescriptionCode=ID?)?)
+	 * </pre>
+	 */
+	protected void sequence_IdentificationNumber(ISerializationContext context, IdentificationNumber semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     IndexIdentification returns IndexIdentification
+	 *
+	 * Constraint:
+	 *     (indexCodeQualifier=ID (indexTypeIdentifier=ID (codeListIdentificationCode=ID codeListResponsibleAgencyCode=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_IndexIdentification(ISerializationContext context, IndexIdentification semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     IndexValue returns IndexValue
+	 *
+	 * Constraint:
+	 *     (indexValue=ID indexValueRepresentationCode=ID?)
+	 * </pre>
+	 */
+	protected void sequence_IndexValue(ISerializationContext context, IndexValue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     InformationRequest returns InformationRequest
+	 *
+	 * Constraint:
+	 *     (
+	 *         requestedInformationDescriptionCode=ID 
+	 *         (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID requestedInformationDescription=ID?)?)?
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_InformationRequest(ISerializationContext context, InformationRequest semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3379,23 +3646,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     LANSegment returns LANSegment
 	 *
 	 * Constraint:
-	 *     (segment='LAN' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='LAN' languageCodeQualifier=ID languageDetails=LanguageDetail? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_LANSegment(ISerializationContext context, LANSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getLANSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getLANSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLANSegmentAccess().getSegmentLANKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getLANSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getLANSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3453,6 +3708,20 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     LanguageDetail returns LanguageDetail
+	 *
+	 * Constraint:
+	 *     (languageNameCode=ID languageName=ID?)
+	 * </pre>
+	 */
+	protected void sequence_LanguageDetail(ISerializationContext context, LanguageDetail semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiFunction returns LocationFunction
 	 *     LocationFunction returns LocationFunction
 	 *
@@ -3461,6 +3730,20 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_LocationFunction(ISerializationContext context, LocationFunction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     LocationIdentification returns LocationIdentification
+	 *
+	 * Constraint:
+	 *     (locationNameCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID locationName=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_LocationIdentification(ISerializationContext context, LocationIdentification semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -3659,23 +3942,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     NATSegment returns NATSegment
 	 *
 	 * Constraint:
-	 *     (segment='NAT' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='NAT' nationalityCodeQualifier=ID nationalityDetails=NationalityDetail? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_NATSegment(ISerializationContext context, NATSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getNATSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getNATSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNATSegmentAccess().getSegmentNATKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getNATSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getNATSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3690,6 +3961,20 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_NameAndAddress(ISerializationContext context, NameAndAddress semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     NationalityDetail returns NationalityDetail
+	 *
+	 * Constraint:
+	 *     (nationalityNameCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID nationalityName=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_NationalityDetail(ISerializationContext context, NationalityDetail semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -3907,23 +4192,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     PCDSegment returns PCDSegment
 	 *
 	 * Constraint:
-	 *     (segment='PCD' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='PCD' percentageDetails=PercentageDetail statusDescriptionCode=ID? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_PCDSegment(ISerializationContext context, PCDSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPCDSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPCDSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPCDSegmentAccess().getSegmentPCDKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getPCDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getPCDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -4114,23 +4387,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     PRISegment returns PRISegment
 	 *
 	 * Constraint:
-	 *     (segment='PRI' sub=PriceInformation lineEnd=QUOTE_AND_NL)
+	 *     (segment='PRI' priceInformation=PriceInformation subLineItemPriceChangeOperationCode=ID? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_PRISegment(ISerializationContext context, PRISegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPRISegment_Sub()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPRISegment_Sub()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPRISegmentAccess().getSegmentPRIKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getPRISegmentAccess().getSubPriceInformationParserRuleCall_2_0(), semanticObject.getSub());
-		feeder.accept(grammarAccess.getPRISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -4274,6 +4535,37 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     PercentageDetail returns PercentageDetail
+	 *
+	 * Constraint:
+	 *     (
+	 *         percentageTypeCodeQualifier=ID 
+	 *         (percentage=ID (percentageBasisIdentificationCode=ID (codeListIdentificationCode=ID codeListResponsibleAgencyCode=ID?)?)?)?
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_PercentageDetail(ISerializationContext context, PercentageDetail semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     PositionIdentification returns PositionIdentification
+	 *
+	 * Constraint:
+	 *     (hierarchyStructureLevelIdentifier=ID sequencePositionIdentifier=ID?)
+	 * </pre>
+	 */
+	protected void sequence_PositionIdentification(ISerializationContext context, PositionIdentification semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiFunction returns PriceInformation
 	 *     PriceInformation returns PriceInformation
 	 *
@@ -4289,6 +4581,23 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_PriceInformation(ISerializationContext context, PriceInformation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     ProductCharacteristic returns ProductCharacteristic
+	 *
+	 * Constraint:
+	 *     (
+	 *         characteristicDescriptionCode=ID 
+	 *         (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID (characteristicDescription1=ID characteristicDescription2=ID?)?)?)?
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_ProductCharacteristic(ISerializationContext context, ProductCharacteristic semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -4384,22 +4693,34 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     QVRSegment returns QVRSegment
 	 *
 	 * Constraint:
-	 *     (segment='QVR' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (
+	 *         segment='QVR' 
+	 *         quantityDifferenceInformation=QuantityDifferenceInformation 
+	 *         discrepancyNatureIdentificationCode=ID 
+	 *         reasonForChange=ReasonForChange 
+	 *         lineEnd=QUOTE_AND_NL
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_QVRSegment(ISerializationContext context, QVRSegment semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_QuantityDifferenceInformation()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_QuantityDifferenceInformation()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_DiscrepancyNatureIdentificationCode()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_DiscrepancyNatureIdentificationCode()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_ReasonForChange()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_ReasonForChange()));
 			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getQVRSegmentAccess().getSegmentQVRKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getQVRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getQVRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.accept(grammarAccess.getQVRSegmentAccess().getQuantityDifferenceInformationQuantityDifferenceInformationParserRuleCall_2_0(), semanticObject.getQuantityDifferenceInformation());
+		feeder.accept(grammarAccess.getQVRSegmentAccess().getDiscrepancyNatureIdentificationCodeIDTerminalRuleCall_3_1_0(), semanticObject.getDiscrepancyNatureIdentificationCode());
+		feeder.accept(grammarAccess.getQVRSegmentAccess().getReasonForChangeReasonForChangeParserRuleCall_3_2_1_0(), semanticObject.getReasonForChange());
+		feeder.accept(grammarAccess.getQVRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_4_0(), semanticObject.getLineEnd());
 		feeder.finish();
 	}
 	
@@ -4415,6 +4736,20 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_QuantityDetail(ISerializationContext context, QuantityDetail semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     QuantityDifferenceInformation returns QuantityDifferenceInformation
+	 *
+	 * Constraint:
+	 *     (quantityVarianceValue=ID quantityTypeCodeQualifier=ID?)
+	 * </pre>
+	 */
+	protected void sequence_QuantityDifferenceInformation(ISerializationContext context, QuantityDifferenceInformation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -4618,23 +4953,39 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     RTESegment returns RTESegment
 	 *
 	 * Constraint:
-	 *     (segment='RTE' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='RTE' rateDetails=RateDetail statusDescriptionCode=ID? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_RTESegment(ISerializationContext context, RTESegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRTESegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRTESegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRTESegmentAccess().getSegmentRTEKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getRTESegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getRTESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     RateDetail returns RateDetail
+	 *
+	 * Constraint:
+	 *     (rateTypeCodeQualifier=ID (unitPriceBasisRate=ID (unitPriceBasisValue=ID measurementUnitCode=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_RateDetail(ISerializationContext context, RateDetail semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     ReasonForChange returns ReasonForChange
+	 *
+	 * Constraint:
+	 *     (changeReasonDescriptionCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID changeReasonDescriptions=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_ReasonForChange(ISerializationContext context, ReasonForChange semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -4741,23 +5092,11 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     SEGSegment returns SEGSegment
 	 *
 	 * Constraint:
-	 *     (segment='SEG' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='SEG' segmentTagIdentifer=ID (designatedClassCode=ID maintenanceOperationCode=ID?)? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_SEGSegment(ISerializationContext context, SEGSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSEGSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSEGSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSEGSegmentAccess().getSegmentSEGKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getSEGSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getSEGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -5038,23 +5377,80 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     STSSegment returns STSSegment
 	 *
 	 * Constraint:
-	 *     (segment='STS' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (segment='STS' statusCategory=StatusCategory (status=Status statusReasons+=StatusReason*)? lineEnd=QUOTE_AND_NL)
 	 * </pre>
 	 */
 	protected void sequence_STSSegment(ISerializationContext context, STSSegment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns STXSegment
+	 *     STXSegment returns STXSegment
+	 *
+	 * Constraint:
+	 *     (segment='STX' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_STXSegment(ISerializationContext context, STXSegment semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSTSSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSTSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSTXSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSTXSegment_Todo()));
 			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSTSSegmentAccess().getSegmentSTSKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getSTSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getSTSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.accept(grammarAccess.getSTXSegmentAccess().getSegmentSTXKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSTXSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSTXSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     StatusCategory returns StatusCategory
+	 *
+	 * Constraint:
+	 *     (statusCategoryCode=ID (codeListIdentificationCode=ID codeListResponsibleAgencyCode=ID?)?)
+	 * </pre>
+	 */
+	protected void sequence_StatusCategory(ISerializationContext context, StatusCategory semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     StatusReason returns StatusReason
+	 *
+	 * Constraint:
+	 *     (statusReasonDescriptionCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID statusReasonDescription=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_StatusReason(ISerializationContext context, StatusReason semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Status returns Status
+	 *
+	 * Constraint:
+	 *     (statusDescriptionCode=ID (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID statusDescription=ID?)?)?)
+	 * </pre>
+	 */
+	protected void sequence_Status(ISerializationContext context, Status semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -5271,23 +5667,16 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     TODSegment returns TODSegment
 	 *
 	 * Constraint:
-	 *     (segment='TOD' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (
+	 *         segment='TOD' 
+	 *         deliveryTransportTermsFunctionCode=ID 
+	 *         (transportChargesPaumentMethodCode=ID termsOfDeliveryTransport=TermsOfDeliveryTransport?)? 
+	 *         lineEnd=QUOTE_AND_NL
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_TODSegment(ISerializationContext context, TODSegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTODSegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTODSegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTODSegmentAccess().getSegmentTODKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getTODSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getTODSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -5449,6 +5838,23 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     TermsOfDeliveryTransport returns TermsOfDeliveryTransport
+	 *
+	 * Constraint:
+	 *     (
+	 *         deliveryTransportTermsDescriptionCode=ID 
+	 *         (codeListIdentificationCode=ID (codeListResponsibleAgencyCode=ID deliveryTransportTermsDescriptions+=ID*)?)?
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_TermsOfDeliveryTransport(ISerializationContext context, TermsOfDeliveryTransport semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns UCISegment
 	 *     UCISegment returns UCISegment
 	 *
@@ -5538,6 +5944,48 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns UNESegment
+	 *     UNESegment returns UNESegment
+	 *
+	 * Constraint:
+	 *     (segment='UNE' todo=ID? lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_UNESegment(ISerializationContext context, UNESegment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns UNGSegment
+	 *     UNGSegment returns UNGSegment
+	 *
+	 * Constraint:
+	 *     (
+	 *         segment='UNG' 
+	 *         addressUsage=AddressUsage? 
+	 *         addressDetails=AddressDetail? 
+	 *         (
+	 *             cityName=ID 
+	 *             (
+	 *                 postalIdentificationCode=ID 
+	 *                 (countryNameCode=ID (countrySubEntityDetails=CountrySubEntityDetail locationIdentification=LocationIdentification?)?)?
+	 *             )?
+	 *         )? 
+	 *         lineEnd=QUOTE_AND_NL
+	 *     )
+	 * </pre>
+	 */
+	protected void sequence_UNGSegment(ISerializationContext context, UNGSegment semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns UNHSegment
 	 *     UNHSegment returns UNHSegment
 	 *
@@ -5614,23 +6062,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     VLISegment returns VLISegment
 	 *
 	 * Constraint:
-	 *     (segment='VLI' todo=ID lineEnd=QUOTE_AND_NL)
+	 *     (
+	 *         segment='VLI' 
+	 *         valueListIdentification=ValueListIdentification 
+	 *         (
+	 *             partyIdentificationDetails=PartyIdentificationDetail 
+	 *             (statusDescriptionCode=ID (valueListName=ID (designatedClassCode=ID (valueListTypeCode=ID productCharacteristic=ProductCharacteristic?)?)?)?)?
+	 *         )? 
+	 *         lineEnd=QUOTE_AND_NL
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_VLISegment(ISerializationContext context, VLISegment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getVLISegment_Todo()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getVLISegment_Todo()));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVLISegmentAccess().getSegmentVLIKeyword_0_0(), semanticObject.getSegment());
-		feeder.accept(grammarAccess.getVLISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
-		feeder.accept(grammarAccess.getVLISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     ValueListIdentification returns ValueListIdentification
+	 *
+	 * Constraint:
+	 *     (valueListIdentifier=ID objectIdentificationCodeQualifier=ID?)
+	 * </pre>
+	 */
+	protected void sequence_ValueListIdentification(ISerializationContext context, ValueListIdentification semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

@@ -13,7 +13,11 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.BUSSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BUSSegment#getBusinessFunction <em>Business Function</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BUSSegment#getGeographicAreaCode <em>Geographic Area Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BUSSegment#getFinancialTransactionTypeCode <em>Financial Transaction Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BUSSegment#getBankOperation <em>Bank Operation</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BUSSegment#getIntraCompanyPaymentIndicatorCode <em>Intra Company Payment Indicator Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getBUSSegment()
@@ -23,25 +27,113 @@ package io.thlaegler.edifact.edilang;
 public interface BUSSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Business Function</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBUSSegment_Todo()
+   * @return the value of the '<em>Business Function</em>' containment reference.
+   * @see #setBusinessFunction(BusinessFunction)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBUSSegment_BusinessFunction()
+   * @model containment="true"
+   * @generated
+   */
+  BusinessFunction getBusinessFunction();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BUSSegment#getBusinessFunction <em>Business Function</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Business Function</em>' containment reference.
+   * @see #getBusinessFunction()
+   * @generated
+   */
+  void setBusinessFunction(BusinessFunction value);
+
+  /**
+   * Returns the value of the '<em><b>Geographic Area Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Geographic Area Code</em>' attribute.
+   * @see #setGeographicAreaCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBUSSegment_GeographicAreaCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getGeographicAreaCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BUSSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BUSSegment#getGeographicAreaCode <em>Geographic Area Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Geographic Area Code</em>' attribute.
+   * @see #getGeographicAreaCode()
    * @generated
    */
-  void setTodo(String value);
+  void setGeographicAreaCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Financial Transaction Type Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Financial Transaction Type Code</em>' attribute.
+   * @see #setFinancialTransactionTypeCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBUSSegment_FinancialTransactionTypeCode()
+   * @model
+   * @generated
+   */
+  String getFinancialTransactionTypeCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BUSSegment#getFinancialTransactionTypeCode <em>Financial Transaction Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Financial Transaction Type Code</em>' attribute.
+   * @see #getFinancialTransactionTypeCode()
+   * @generated
+   */
+  void setFinancialTransactionTypeCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Bank Operation</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Bank Operation</em>' containment reference.
+   * @see #setBankOperation(BankOperation)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBUSSegment_BankOperation()
+   * @model containment="true"
+   * @generated
+   */
+  BankOperation getBankOperation();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BUSSegment#getBankOperation <em>Bank Operation</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Bank Operation</em>' containment reference.
+   * @see #getBankOperation()
+   * @generated
+   */
+  void setBankOperation(BankOperation value);
+
+  /**
+   * Returns the value of the '<em><b>Intra Company Payment Indicator Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Intra Company Payment Indicator Code</em>' attribute.
+   * @see #setIntraCompanyPaymentIndicatorCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBUSSegment_IntraCompanyPaymentIndicatorCode()
+   * @model
+   * @generated
+   */
+  String getIntraCompanyPaymentIndicatorCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BUSSegment#getIntraCompanyPaymentIndicatorCode <em>Intra Company Payment Indicator Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Intra Company Payment Indicator Code</em>' attribute.
+   * @see #getIntraCompanyPaymentIndicatorCode()
+   * @generated
+   */
+  void setIntraCompanyPaymentIndicatorCode(String value);
 
 } // BUSSegment

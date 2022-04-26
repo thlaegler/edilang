@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.BASSegment;
+import io.thlaegler.edifact.edilang.BasisType;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.BASSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BASSegmentImpl#getBasisCodeQualifier <em>Basis Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BASSegmentImpl#getBasisType <em>Basis Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getBasisCodeQualifier() <em>Basis Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getBasisCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String BASIS_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getBasisCodeQualifier() <em>Basis Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getBasisCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String basisCodeQualifier = BASIS_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getBasisType() <em>Basis Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBasisType()
+   * @generated
+   * @ordered
+   */
+  protected BasisType basisType;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,9 @@ public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getBasisCodeQualifier()
   {
-    return todo;
+    return basisCodeQualifier;
   }
 
   /**
@@ -85,12 +99,78 @@ public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setBasisCodeQualifier(String newBasisCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldBasisCodeQualifier = basisCodeQualifier;
+    basisCodeQualifier = newBasisCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BAS_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BAS_SEGMENT__BASIS_CODE_QUALIFIER, oldBasisCodeQualifier, basisCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BasisType getBasisType()
+  {
+    return basisType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBasisType(BasisType newBasisType, NotificationChain msgs)
+  {
+    BasisType oldBasisType = basisType;
+    basisType = newBasisType;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.BAS_SEGMENT__BASIS_TYPE, oldBasisType, newBasisType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setBasisType(BasisType newBasisType)
+  {
+    if (newBasisType != basisType)
+    {
+      NotificationChain msgs = null;
+      if (basisType != null)
+        msgs = ((InternalEObject)basisType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BAS_SEGMENT__BASIS_TYPE, null, msgs);
+      if (newBasisType != null)
+        msgs = ((InternalEObject)newBasisType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BAS_SEGMENT__BASIS_TYPE, null, msgs);
+      msgs = basicSetBasisType(newBasisType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BAS_SEGMENT__BASIS_TYPE, newBasisType, newBasisType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.BAS_SEGMENT__BASIS_TYPE:
+        return basicSetBasisType(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BAS_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.BAS_SEGMENT__BASIS_CODE_QUALIFIER:
+        return getBasisCodeQualifier();
+      case EdilangPackage.BAS_SEGMENT__BASIS_TYPE:
+        return getBasisType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BAS_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.BAS_SEGMENT__BASIS_CODE_QUALIFIER:
+        setBasisCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.BAS_SEGMENT__BASIS_TYPE:
+        setBasisType((BasisType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BAS_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.BAS_SEGMENT__BASIS_CODE_QUALIFIER:
+        setBasisCodeQualifier(BASIS_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.BAS_SEGMENT__BASIS_TYPE:
+        setBasisType((BasisType)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BAS_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.BAS_SEGMENT__BASIS_CODE_QUALIFIER:
+        return BASIS_CODE_QUALIFIER_EDEFAULT == null ? basisCodeQualifier != null : !BASIS_CODE_QUALIFIER_EDEFAULT.equals(basisCodeQualifier);
+      case EdilangPackage.BAS_SEGMENT__BASIS_TYPE:
+        return basisType != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class BASSegmentImpl extends AbstractEdiSegmentImpl implements BASSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (basisCodeQualifier: ");
+    result.append(basisCodeQualifier);
     result.append(')');
     return result.toString();
   }
