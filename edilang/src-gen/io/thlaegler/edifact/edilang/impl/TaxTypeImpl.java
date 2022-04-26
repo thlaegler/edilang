@@ -128,7 +128,7 @@ public class TaxTypeImpl extends AbstractEdiFunctionImpl implements TaxType
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.TAX_TYPE;
+    return EdilangPackage.eINSTANCE.getTaxType();
   }
 
   /**

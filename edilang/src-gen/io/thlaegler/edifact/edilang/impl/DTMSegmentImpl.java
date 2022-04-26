@@ -62,7 +62,7 @@ public class DTMSegmentImpl extends AbstractEdiSegmentImpl implements DTMSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.DTM_SEGMENT;
+    return EdilangPackage.eINSTANCE.getDTMSegment();
   }
 
   /**

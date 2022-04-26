@@ -191,7 +191,7 @@ public class MessageIndentifierImpl extends AbstractEdiFunctionImpl implements M
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.MESSAGE_INDENTIFIER;
+    return EdilangPackage.eINSTANCE.getMessageIndentifier();
   }
 
   /**

@@ -107,7 +107,7 @@ public class QuantityDetailImpl extends AbstractEdiFunctionImpl implements Quant
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.QUANTITY_DETAIL;
+    return EdilangPackage.eINSTANCE.getQuantityDetail();
   }
 
   /**

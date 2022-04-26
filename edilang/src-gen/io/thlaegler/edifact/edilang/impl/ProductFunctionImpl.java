@@ -86,7 +86,7 @@ public class ProductFunctionImpl extends AbstractEdiFunctionImpl implements Prod
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PRODUCT_FUNCTION;
+    return EdilangPackage.eINSTANCE.getProductFunction();
   }
 
   /**

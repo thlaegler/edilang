@@ -128,7 +128,7 @@ public class CurrencyDetailImpl extends AbstractEdiFunctionImpl implements Curre
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.CURRENCY_DETAIL;
+    return EdilangPackage.eINSTANCE.getCurrencyDetail();
   }
 
   /**

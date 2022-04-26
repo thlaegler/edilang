@@ -86,7 +86,7 @@ public class CNTSegmentImpl extends AbstractEdiSegmentImpl implements CNTSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.CNT_SEGMENT;
+    return EdilangPackage.eINSTANCE.getCNTSegment();
   }
 
   /**

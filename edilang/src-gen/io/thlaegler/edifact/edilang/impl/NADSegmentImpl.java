@@ -190,7 +190,7 @@ public class NADSegmentImpl extends AbstractEdiSegmentImpl implements NADSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.NAD_SEGMENT;
+    return EdilangPackage.eINSTANCE.getNADSegment();
   }
 
   /**

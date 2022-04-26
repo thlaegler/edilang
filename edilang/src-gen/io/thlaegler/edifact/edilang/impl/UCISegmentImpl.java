@@ -170,7 +170,7 @@ public class UCISegmentImpl extends AbstractEdiSegmentImpl implements UCISegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.UCI_SEGMENT;
+    return EdilangPackage.eINSTANCE.getUCISegment();
   }
 
   /**

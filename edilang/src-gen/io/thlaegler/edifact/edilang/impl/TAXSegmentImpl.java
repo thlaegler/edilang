@@ -187,7 +187,7 @@ public class TAXSegmentImpl extends AbstractEdiSegmentImpl implements TAXSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.TAX_SEGMENT;
+    return EdilangPackage.eINSTANCE.getTAXSegment();
   }
 
   /**

@@ -149,7 +149,7 @@ public class MOASegmentImpl extends AbstractEdiSegmentImpl implements MOASegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.MOA_SEGMENT;
+    return EdilangPackage.eINSTANCE.getMOASegment();
   }
 
   /**

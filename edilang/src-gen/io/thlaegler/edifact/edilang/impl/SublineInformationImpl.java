@@ -86,7 +86,7 @@ public class SublineInformationImpl extends AbstractEdiFunctionImpl implements S
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.SUBLINE_INFORMATION;
+    return EdilangPackage.eINSTANCE.getSublineInformation();
   }
 
   /**

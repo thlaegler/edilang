@@ -37,7 +37,7 @@ public class AbstractEdiFunctionImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ABSTRACT_EDI_FUNCTION;
+    return EdilangPackage.eINSTANCE.getAbstractEdiFunction();
   }
 
 } //AbstractEdiFunctionImpl

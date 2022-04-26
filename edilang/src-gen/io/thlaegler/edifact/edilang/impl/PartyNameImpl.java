@@ -57,7 +57,7 @@ public class PartyNameImpl extends AbstractEdiFunctionImpl implements PartyName
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PARTY_NAME;
+    return EdilangPackage.eINSTANCE.getPartyName();
   }
 
   /**

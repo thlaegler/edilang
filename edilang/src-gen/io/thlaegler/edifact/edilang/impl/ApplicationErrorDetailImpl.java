@@ -107,7 +107,7 @@ public class ApplicationErrorDetailImpl extends AbstractEdiFunctionImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.APPLICATION_ERROR_DETAIL;
+    return EdilangPackage.eINSTANCE.getApplicationErrorDetail();
   }
 
   /**

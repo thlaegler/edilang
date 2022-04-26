@@ -111,6 +111,1110 @@ public class EdilangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EdilangPackage.ADR_SEGMENT:
+      {
+        ADRSegment adrSegment = (ADRSegment)theEObject;
+        T result = caseADRSegment(adrSegment);
+        if (result == null) result = caseAbstractEdiSegment(adrSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.AGR_SEGMENT:
+      {
+        AGRSegment agrSegment = (AGRSegment)theEObject;
+        T result = caseAGRSegment(agrSegment);
+        if (result == null) result = caseAbstractEdiSegment(agrSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.AJT_SEGMENT:
+      {
+        AJTSegment ajtSegment = (AJTSegment)theEObject;
+        T result = caseAJTSegment(ajtSegment);
+        if (result == null) result = caseAbstractEdiSegment(ajtSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ALC_SEGMENT:
+      {
+        ALCSegment alcSegment = (ALCSegment)theEObject;
+        T result = caseALCSegment(alcSegment);
+        if (result == null) result = caseAbstractEdiSegment(alcSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ALI_SEGMENT:
+      {
+        ALISegment aliSegment = (ALISegment)theEObject;
+        T result = caseALISegment(aliSegment);
+        if (result == null) result = caseAbstractEdiSegment(aliSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.APP_SEGMENT:
+      {
+        APPSegment appSegment = (APPSegment)theEObject;
+        T result = caseAPPSegment(appSegment);
+        if (result == null) result = caseAbstractEdiSegment(appSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.APR_SEGMENT:
+      {
+        APRSegment aprSegment = (APRSegment)theEObject;
+        T result = caseAPRSegment(aprSegment);
+        if (result == null) result = caseAbstractEdiSegment(aprSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ARD_SEGMENT:
+      {
+        ARDSegment ardSegment = (ARDSegment)theEObject;
+        T result = caseARDSegment(ardSegment);
+        if (result == null) result = caseAbstractEdiSegment(ardSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ARR_SEGMENT:
+      {
+        ARRSegment arrSegment = (ARRSegment)theEObject;
+        T result = caseARRSegment(arrSegment);
+        if (result == null) result = caseAbstractEdiSegment(arrSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ASI_SEGMENT:
+      {
+        ASISegment asiSegment = (ASISegment)theEObject;
+        T result = caseASISegment(asiSegment);
+        if (result == null) result = caseAbstractEdiSegment(asiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ATT_SEGMENT:
+      {
+        ATTSegment attSegment = (ATTSegment)theEObject;
+        T result = caseATTSegment(attSegment);
+        if (result == null) result = caseAbstractEdiSegment(attSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.AUT_SEGMENT:
+      {
+        AUTSegment autSegment = (AUTSegment)theEObject;
+        T result = caseAUTSegment(autSegment);
+        if (result == null) result = caseAbstractEdiSegment(autSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.BAS_SEGMENT:
+      {
+        BASSegment basSegment = (BASSegment)theEObject;
+        T result = caseBASSegment(basSegment);
+        if (result == null) result = caseAbstractEdiSegment(basSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.BII_SEGMENT:
+      {
+        BIISegment biiSegment = (BIISegment)theEObject;
+        T result = caseBIISegment(biiSegment);
+        if (result == null) result = caseAbstractEdiSegment(biiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.BUS_SEGMENT:
+      {
+        BUSSegment busSegment = (BUSSegment)theEObject;
+        T result = caseBUSSegment(busSegment);
+        if (result == null) result = caseAbstractEdiSegment(busSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CAV_SEGMENT:
+      {
+        CAVSegment cavSegment = (CAVSegment)theEObject;
+        T result = caseCAVSegment(cavSegment);
+        if (result == null) result = caseAbstractEdiSegment(cavSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CCD_SEGMENT:
+      {
+        CCDSegment ccdSegment = (CCDSegment)theEObject;
+        T result = caseCCDSegment(ccdSegment);
+        if (result == null) result = caseAbstractEdiSegment(ccdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CCI_SEGMENT:
+      {
+        CCISegment cciSegment = (CCISegment)theEObject;
+        T result = caseCCISegment(cciSegment);
+        if (result == null) result = caseAbstractEdiSegment(cciSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CDI_SEGMENT:
+      {
+        CDISegment cdiSegment = (CDISegment)theEObject;
+        T result = caseCDISegment(cdiSegment);
+        if (result == null) result = caseAbstractEdiSegment(cdiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CDS_SEGMENT:
+      {
+        CDSSegment cdsSegment = (CDSSegment)theEObject;
+        T result = caseCDSSegment(cdsSegment);
+        if (result == null) result = caseAbstractEdiSegment(cdsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CDV_SEGMENT:
+      {
+        CDVSegment cdvSegment = (CDVSegment)theEObject;
+        T result = caseCDVSegment(cdvSegment);
+        if (result == null) result = caseAbstractEdiSegment(cdvSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CED_SEGMENT:
+      {
+        CEDSegment cedSegment = (CEDSegment)theEObject;
+        T result = caseCEDSegment(cedSegment);
+        if (result == null) result = caseAbstractEdiSegment(cedSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CIN_SEGMENT:
+      {
+        CINSegment cinSegment = (CINSegment)theEObject;
+        T result = caseCINSegment(cinSegment);
+        if (result == null) result = caseAbstractEdiSegment(cinSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CLA_SEGMENT:
+      {
+        CLASegment claSegment = (CLASegment)theEObject;
+        T result = caseCLASegment(claSegment);
+        if (result == null) result = caseAbstractEdiSegment(claSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CLI_SEGMENT:
+      {
+        CLISegment cliSegment = (CLISegment)theEObject;
+        T result = caseCLISegment(cliSegment);
+        if (result == null) result = caseAbstractEdiSegment(cliSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CMP_SEGMENT:
+      {
+        CMPSegment cmpSegment = (CMPSegment)theEObject;
+        T result = caseCMPSegment(cmpSegment);
+        if (result == null) result = caseAbstractEdiSegment(cmpSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CNI_SEGMENT:
+      {
+        CNISegment cniSegment = (CNISegment)theEObject;
+        T result = caseCNISegment(cniSegment);
+        if (result == null) result = caseAbstractEdiSegment(cniSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.COD_SEGMENT:
+      {
+        CODSegment codSegment = (CODSegment)theEObject;
+        T result = caseCODSegment(codSegment);
+        if (result == null) result = caseAbstractEdiSegment(codSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.COM_SEGMENT:
+      {
+        COMSegment comSegment = (COMSegment)theEObject;
+        T result = caseCOMSegment(comSegment);
+        if (result == null) result = caseAbstractEdiSegment(comSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.COT_SEGMENT:
+      {
+        COTSegment cotSegment = (COTSegment)theEObject;
+        T result = caseCOTSegment(cotSegment);
+        if (result == null) result = caseAbstractEdiSegment(cotSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CPI_SEGMENT:
+      {
+        CPISegment cpiSegment = (CPISegment)theEObject;
+        T result = caseCPISegment(cpiSegment);
+        if (result == null) result = caseAbstractEdiSegment(cpiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CPS_SEGMENT:
+      {
+        CPSSegment cpsSegment = (CPSSegment)theEObject;
+        T result = caseCPSSegment(cpsSegment);
+        if (result == null) result = caseAbstractEdiSegment(cpsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CPT_SEGMENT:
+      {
+        CPTSegment cptSegment = (CPTSegment)theEObject;
+        T result = caseCPTSegment(cptSegment);
+        if (result == null) result = caseAbstractEdiSegment(cptSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.CST_SEGMENT:
+      {
+        CSTSegment cstSegment = (CSTSegment)theEObject;
+        T result = caseCSTSegment(cstSegment);
+        if (result == null) result = caseAbstractEdiSegment(cstSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DAM_SEGMENT:
+      {
+        DAMSegment damSegment = (DAMSegment)theEObject;
+        T result = caseDAMSegment(damSegment);
+        if (result == null) result = caseAbstractEdiSegment(damSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DFN_SEGMENT:
+      {
+        DFNSegment dfnSegment = (DFNSegment)theEObject;
+        T result = caseDFNSegment(dfnSegment);
+        if (result == null) result = caseAbstractEdiSegment(dfnSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DGS_SEGMENT:
+      {
+        DGSSegment dgsSegment = (DGSSegment)theEObject;
+        T result = caseDGSSegment(dgsSegment);
+        if (result == null) result = caseAbstractEdiSegment(dgsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DII_SEGMENT:
+      {
+        DIISegment diiSegment = (DIISegment)theEObject;
+        T result = caseDIISegment(diiSegment);
+        if (result == null) result = caseAbstractEdiSegment(diiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DIM_SEGMENT:
+      {
+        DIMSegment dimSegment = (DIMSegment)theEObject;
+        T result = caseDIMSegment(dimSegment);
+        if (result == null) result = caseAbstractEdiSegment(dimSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DLI_SEGMENT:
+      {
+        DLISegment dliSegment = (DLISegment)theEObject;
+        T result = caseDLISegment(dliSegment);
+        if (result == null) result = caseAbstractEdiSegment(dliSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DLM_SEGMENT:
+      {
+        DLMSegment dlmSegment = (DLMSegment)theEObject;
+        T result = caseDLMSegment(dlmSegment);
+        if (result == null) result = caseAbstractEdiSegment(dlmSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DMS_SEGMENT:
+      {
+        DMSSegment dmsSegment = (DMSSegment)theEObject;
+        T result = caseDMSSegment(dmsSegment);
+        if (result == null) result = caseAbstractEdiSegment(dmsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DOC_SEGMENT:
+      {
+        DOCSegment docSegment = (DOCSegment)theEObject;
+        T result = caseDOCSegment(docSegment);
+        if (result == null) result = caseAbstractEdiSegment(docSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DRD_SEGMENT:
+      {
+        DRDSegment drdSegment = (DRDSegment)theEObject;
+        T result = caseDRDSegment(drdSegment);
+        if (result == null) result = caseAbstractEdiSegment(drdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DSG_SEGMENT:
+      {
+        DSGSegment dsgSegment = (DSGSegment)theEObject;
+        T result = caseDSGSegment(dsgSegment);
+        if (result == null) result = caseAbstractEdiSegment(dsgSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.DSI_SEGMENT:
+      {
+        DSISegment dsiSegment = (DSISegment)theEObject;
+        T result = caseDSISegment(dsiSegment);
+        if (result == null) result = caseAbstractEdiSegment(dsiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EDT_SEGMENT:
+      {
+        EDTSegment edtSegment = (EDTSegment)theEObject;
+        T result = caseEDTSegment(edtSegment);
+        if (result == null) result = caseAbstractEdiSegment(edtSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EFI_SEGMENT:
+      {
+        EFISegment efiSegment = (EFISegment)theEObject;
+        T result = caseEFISegment(efiSegment);
+        if (result == null) result = caseAbstractEdiSegment(efiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ELM_SEGMENT:
+      {
+        ELMSegment elmSegment = (ELMSegment)theEObject;
+        T result = caseELMSegment(elmSegment);
+        if (result == null) result = caseAbstractEdiSegment(elmSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ELU_SEGMENT:
+      {
+        ELUSegment eluSegment = (ELUSegment)theEObject;
+        T result = caseELUSegment(eluSegment);
+        if (result == null) result = caseAbstractEdiSegment(eluSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ELV_SEGMENT:
+      {
+        ELVSegment elvSegment = (ELVSegment)theEObject;
+        T result = caseELVSegment(elvSegment);
+        if (result == null) result = caseAbstractEdiSegment(elvSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EMP_SEGMENT:
+      {
+        EMPSegment empSegment = (EMPSegment)theEObject;
+        T result = caseEMPSegment(empSegment);
+        if (result == null) result = caseAbstractEdiSegment(empSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EQA_SEGMENT:
+      {
+        EQASegment eqaSegment = (EQASegment)theEObject;
+        T result = caseEQASegment(eqaSegment);
+        if (result == null) result = caseAbstractEdiSegment(eqaSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EQD_SEGMENT:
+      {
+        EQDSegment eqdSegment = (EQDSegment)theEObject;
+        T result = caseEQDSegment(eqdSegment);
+        if (result == null) result = caseAbstractEdiSegment(eqdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EQN_SEGMENT:
+      {
+        EQNSegment eqnSegment = (EQNSegment)theEObject;
+        T result = caseEQNSegment(eqnSegment);
+        if (result == null) result = caseAbstractEdiSegment(eqnSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ERP_SEGMENT:
+      {
+        ERPSegment erpSegment = (ERPSegment)theEObject;
+        T result = caseERPSegment(erpSegment);
+        if (result == null) result = caseAbstractEdiSegment(erpSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EVE_SEGMENT:
+      {
+        EVESegment eveSegment = (EVESegment)theEObject;
+        T result = caseEVESegment(eveSegment);
+        if (result == null) result = caseAbstractEdiSegment(eveSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.EVT_SEGMENT:
+      {
+        EVTSegment evtSegment = (EVTSegment)theEObject;
+        T result = caseEVTSegment(evtSegment);
+        if (result == null) result = caseAbstractEdiSegment(evtSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.FCA_SEGMENT:
+      {
+        FCASegment fcaSegment = (FCASegment)theEObject;
+        T result = caseFCASegment(fcaSegment);
+        if (result == null) result = caseAbstractEdiSegment(fcaSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.FII_SEGMENT:
+      {
+        FIISegment fiiSegment = (FIISegment)theEObject;
+        T result = caseFIISegment(fiiSegment);
+        if (result == null) result = caseAbstractEdiSegment(fiiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.FNS_SEGMENT:
+      {
+        FNSSegment fnsSegment = (FNSSegment)theEObject;
+        T result = caseFNSSegment(fnsSegment);
+        if (result == null) result = caseAbstractEdiSegment(fnsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.FNT_SEGMENT:
+      {
+        FNTSegment fntSegment = (FNTSegment)theEObject;
+        T result = caseFNTSegment(fntSegment);
+        if (result == null) result = caseAbstractEdiSegment(fntSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.FOR_SEGMENT:
+      {
+        FORSegment forSegment = (FORSegment)theEObject;
+        T result = caseFORSegment(forSegment);
+        if (result == null) result = caseAbstractEdiSegment(forSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.FSQ_SEGMENT:
+      {
+        FSQSegment fsqSegment = (FSQSegment)theEObject;
+        T result = caseFSQSegment(fsqSegment);
+        if (result == null) result = caseAbstractEdiSegment(fsqSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GDS_SEGMENT:
+      {
+        GDSSegment gdsSegment = (GDSSegment)theEObject;
+        T result = caseGDSSegment(gdsSegment);
+        if (result == null) result = caseAbstractEdiSegment(gdsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GEI_SEGMENT:
+      {
+        GEISegment geiSegment = (GEISegment)theEObject;
+        T result = caseGEISegment(geiSegment);
+        if (result == null) result = caseAbstractEdiSegment(geiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GID_SEGMENT:
+      {
+        GIDSegment gidSegment = (GIDSegment)theEObject;
+        T result = caseGIDSegment(gidSegment);
+        if (result == null) result = caseAbstractEdiSegment(gidSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GIN_SEGMENT:
+      {
+        GINSegment ginSegment = (GINSegment)theEObject;
+        T result = caseGINSegment(ginSegment);
+        if (result == null) result = caseAbstractEdiSegment(ginSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GIR_SEGMENT:
+      {
+        GIRSegment girSegment = (GIRSegment)theEObject;
+        T result = caseGIRSegment(girSegment);
+        if (result == null) result = caseAbstractEdiSegment(girSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GIS_SEGMENT:
+      {
+        GISSegment gisSegment = (GISSegment)theEObject;
+        T result = caseGISSegment(gisSegment);
+        if (result == null) result = caseAbstractEdiSegment(gisSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GOR_SEGMENT:
+      {
+        GORSegment gorSegment = (GORSegment)theEObject;
+        T result = caseGORSegment(gorSegment);
+        if (result == null) result = caseAbstractEdiSegment(gorSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.GRU_SEGMENT:
+      {
+        GRUSegment gruSegment = (GRUSegment)theEObject;
+        T result = caseGRUSegment(gruSegment);
+        if (result == null) result = caseAbstractEdiSegment(gruSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.HAN_SEGMENT:
+      {
+        HANSegment hanSegment = (HANSegment)theEObject;
+        T result = caseHANSegment(hanSegment);
+        if (result == null) result = caseAbstractEdiSegment(hanSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.HYN_SEGMENT:
+      {
+        HYNSegment hynSegment = (HYNSegment)theEObject;
+        T result = caseHYNSegment(hynSegment);
+        if (result == null) result = caseAbstractEdiSegment(hynSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ICD_SEGMENT:
+      {
+        ICDSegment icdSegment = (ICDSegment)theEObject;
+        T result = caseICDSegment(icdSegment);
+        if (result == null) result = caseAbstractEdiSegment(icdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.IDE_SEGMENT:
+      {
+        IDESegment ideSegment = (IDESegment)theEObject;
+        T result = caseIDESegment(ideSegment);
+        if (result == null) result = caseAbstractEdiSegment(ideSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.IFD_SEGMENT:
+      {
+        IFDSegment ifdSegment = (IFDSegment)theEObject;
+        T result = caseIFDSegment(ifdSegment);
+        if (result == null) result = caseAbstractEdiSegment(ifdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.IHC_SEGMENT:
+      {
+        IHCSegment ihcSegment = (IHCSegment)theEObject;
+        T result = caseIHCSegment(ihcSegment);
+        if (result == null) result = caseAbstractEdiSegment(ihcSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.IMD_SEGMENT:
+      {
+        IMDSegment imdSegment = (IMDSegment)theEObject;
+        T result = caseIMDSegment(imdSegment);
+        if (result == null) result = caseAbstractEdiSegment(imdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.IND_SEGMENT:
+      {
+        INDSegment indSegment = (INDSegment)theEObject;
+        T result = caseINDSegment(indSegment);
+        if (result == null) result = caseAbstractEdiSegment(indSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.INP_SEGMENT:
+      {
+        INPSegment inpSegment = (INPSegment)theEObject;
+        T result = caseINPSegment(inpSegment);
+        if (result == null) result = caseAbstractEdiSegment(inpSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.INV_SEGMENT:
+      {
+        INVSegment invSegment = (INVSegment)theEObject;
+        T result = caseINVSegment(invSegment);
+        if (result == null) result = caseAbstractEdiSegment(invSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.IRQ_SEGMENT:
+      {
+        IRQSegment irqSegment = (IRQSegment)theEObject;
+        T result = caseIRQSegment(irqSegment);
+        if (result == null) result = caseAbstractEdiSegment(irqSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.LAN_SEGMENT:
+      {
+        LANSegment lanSegment = (LANSegment)theEObject;
+        T result = caseLANSegment(lanSegment);
+        if (result == null) result = caseAbstractEdiSegment(lanSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.LOC_SEGMENT:
+      {
+        LOCSegment locSegment = (LOCSegment)theEObject;
+        T result = caseLOCSegment(locSegment);
+        if (result == null) result = caseAbstractEdiSegment(locSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.MEA_SEGMENT:
+      {
+        MEASegment meaSegment = (MEASegment)theEObject;
+        T result = caseMEASegment(meaSegment);
+        if (result == null) result = caseAbstractEdiSegment(meaSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.MEM_SEGMENT:
+      {
+        MEMSegment memSegment = (MEMSegment)theEObject;
+        T result = caseMEMSegment(memSegment);
+        if (result == null) result = caseAbstractEdiSegment(memSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.MKS_SEGMENT:
+      {
+        MKSSegment mksSegment = (MKSSegment)theEObject;
+        T result = caseMKSSegment(mksSegment);
+        if (result == null) result = caseAbstractEdiSegment(mksSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.NAT_SEGMENT:
+      {
+        NATSegment natSegment = (NATSegment)theEObject;
+        T result = caseNATSegment(natSegment);
+        if (result == null) result = caseAbstractEdiSegment(natSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PAC_SEGMENT:
+      {
+        PACSegment pacSegment = (PACSegment)theEObject;
+        T result = casePACSegment(pacSegment);
+        if (result == null) result = caseAbstractEdiSegment(pacSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PAI_SEGMENT:
+      {
+        PAISegment paiSegment = (PAISegment)theEObject;
+        T result = casePAISegment(paiSegment);
+        if (result == null) result = caseAbstractEdiSegment(paiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PAS_SEGMENT:
+      {
+        PASSegment pasSegment = (PASSegment)theEObject;
+        T result = casePASSegment(pasSegment);
+        if (result == null) result = caseAbstractEdiSegment(pasSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PCC_SEGMENT:
+      {
+        PCCSegment pccSegment = (PCCSegment)theEObject;
+        T result = casePCCSegment(pccSegment);
+        if (result == null) result = caseAbstractEdiSegment(pccSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PCD_SEGMENT:
+      {
+        PCDSegment pcdSegment = (PCDSegment)theEObject;
+        T result = casePCDSegment(pcdSegment);
+        if (result == null) result = caseAbstractEdiSegment(pcdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PER_SEGMENT:
+      {
+        PERSegment perSegment = (PERSegment)theEObject;
+        T result = casePERSegment(perSegment);
+        if (result == null) result = caseAbstractEdiSegment(perSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PGI_SEGMENT:
+      {
+        PGISegment pgiSegment = (PGISegment)theEObject;
+        T result = casePGISegment(pgiSegment);
+        if (result == null) result = caseAbstractEdiSegment(pgiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PIA_SEGMENT:
+      {
+        PIASegment piaSegment = (PIASegment)theEObject;
+        T result = casePIASegment(piaSegment);
+        if (result == null) result = caseAbstractEdiSegment(piaSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PNA_SEGMENT:
+      {
+        PNASegment pnaSegment = (PNASegment)theEObject;
+        T result = casePNASegment(pnaSegment);
+        if (result == null) result = caseAbstractEdiSegment(pnaSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PRC_SEGMENT:
+      {
+        PRCSegment prcSegment = (PRCSegment)theEObject;
+        T result = casePRCSegment(prcSegment);
+        if (result == null) result = caseAbstractEdiSegment(prcSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PRV_SEGMENT:
+      {
+        PRVSegment prvSegment = (PRVSegment)theEObject;
+        T result = casePRVSegment(prvSegment);
+        if (result == null) result = caseAbstractEdiSegment(prvSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PSD_SEGMENT:
+      {
+        PSDSegment psdSegment = (PSDSegment)theEObject;
+        T result = casePSDSegment(psdSegment);
+        if (result == null) result = caseAbstractEdiSegment(psdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PTY_SEGMENT:
+      {
+        PTYSegment ptySegment = (PTYSegment)theEObject;
+        T result = casePTYSegment(ptySegment);
+        if (result == null) result = caseAbstractEdiSegment(ptySegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.PYT_SEGMENT:
+      {
+        PYTSegment pytSegment = (PYTSegment)theEObject;
+        T result = casePYTSegment(pytSegment);
+        if (result == null) result = caseAbstractEdiSegment(pytSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.QRS_SEGMENT:
+      {
+        QRSSegment qrsSegment = (QRSSegment)theEObject;
+        T result = caseQRSSegment(qrsSegment);
+        if (result == null) result = caseAbstractEdiSegment(qrsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.QUA_SEGMENT:
+      {
+        QUASegment quaSegment = (QUASegment)theEObject;
+        T result = caseQUASegment(quaSegment);
+        if (result == null) result = caseAbstractEdiSegment(quaSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.QVR_SEGMENT:
+      {
+        QVRSegment qvrSegment = (QVRSegment)theEObject;
+        T result = caseQVRSegment(qvrSegment);
+        if (result == null) result = caseAbstractEdiSegment(qvrSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.RCS_SEGMENT:
+      {
+        RCSSegment rcsSegment = (RCSSegment)theEObject;
+        T result = caseRCSSegment(rcsSegment);
+        if (result == null) result = caseAbstractEdiSegment(rcsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.REL_SEGMENT:
+      {
+        RELSegment relSegment = (RELSegment)theEObject;
+        T result = caseRELSegment(relSegment);
+        if (result == null) result = caseAbstractEdiSegment(relSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.RJL_SEGMENT:
+      {
+        RJLSegment rjlSegment = (RJLSegment)theEObject;
+        T result = caseRJLSegment(rjlSegment);
+        if (result == null) result = caseAbstractEdiSegment(rjlSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.RNG_SEGMENT:
+      {
+        RNGSegment rngSegment = (RNGSegment)theEObject;
+        T result = caseRNGSegment(rngSegment);
+        if (result == null) result = caseAbstractEdiSegment(rngSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.ROD_SEGMENT:
+      {
+        RODSegment rodSegment = (RODSegment)theEObject;
+        T result = caseRODSegment(rodSegment);
+        if (result == null) result = caseAbstractEdiSegment(rodSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.RSL_SEGMENT:
+      {
+        RSLSegment rslSegment = (RSLSegment)theEObject;
+        T result = caseRSLSegment(rslSegment);
+        if (result == null) result = caseAbstractEdiSegment(rslSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.RTE_SEGMENT:
+      {
+        RTESegment rteSegment = (RTESegment)theEObject;
+        T result = caseRTESegment(rteSegment);
+        if (result == null) result = caseAbstractEdiSegment(rteSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SAL_SEGMENT:
+      {
+        SALSegment salSegment = (SALSegment)theEObject;
+        T result = caseSALSegment(salSegment);
+        if (result == null) result = caseAbstractEdiSegment(salSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SCC_SEGMENT:
+      {
+        SCCSegment sccSegment = (SCCSegment)theEObject;
+        T result = caseSCCSegment(sccSegment);
+        if (result == null) result = caseAbstractEdiSegment(sccSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SCD_SEGMENT:
+      {
+        SCDSegment scdSegment = (SCDSegment)theEObject;
+        T result = caseSCDSegment(scdSegment);
+        if (result == null) result = caseAbstractEdiSegment(scdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SEG_SEGMENT:
+      {
+        SEGSegment segSegment = (SEGSegment)theEObject;
+        T result = caseSEGSegment(segSegment);
+        if (result == null) result = caseAbstractEdiSegment(segSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SEL_SEGMENT:
+      {
+        SELSegment selSegment = (SELSegment)theEObject;
+        T result = caseSELSegment(selSegment);
+        if (result == null) result = caseAbstractEdiSegment(selSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SEQ_SEGMENT:
+      {
+        SEQSegment seqSegment = (SEQSegment)theEObject;
+        T result = caseSEQSegment(seqSegment);
+        if (result == null) result = caseAbstractEdiSegment(seqSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SFI_SEGMENT:
+      {
+        SFISegment sfiSegment = (SFISegment)theEObject;
+        T result = caseSFISegment(sfiSegment);
+        if (result == null) result = caseAbstractEdiSegment(sfiSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SGP_SEGMENT:
+      {
+        SGPSegment sgpSegment = (SGPSegment)theEObject;
+        T result = caseSGPSegment(sgpSegment);
+        if (result == null) result = caseAbstractEdiSegment(sgpSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SGU_SEGMENT:
+      {
+        SGUSegment sguSegment = (SGUSegment)theEObject;
+        T result = caseSGUSegment(sguSegment);
+        if (result == null) result = caseAbstractEdiSegment(sguSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SPR_SEGMENT:
+      {
+        SPRSegment sprSegment = (SPRSegment)theEObject;
+        T result = caseSPRSegment(sprSegment);
+        if (result == null) result = caseAbstractEdiSegment(sprSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.SPS_SEGMENT:
+      {
+        SPSSegment spsSegment = (SPSSegment)theEObject;
+        T result = caseSPSSegment(spsSegment);
+        if (result == null) result = caseAbstractEdiSegment(spsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.STA_SEGMENT:
+      {
+        STASegment staSegment = (STASegment)theEObject;
+        T result = caseSTASegment(staSegment);
+        if (result == null) result = caseAbstractEdiSegment(staSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.STC_SEGMENT:
+      {
+        STCSegment stcSegment = (STCSegment)theEObject;
+        T result = caseSTCSegment(stcSegment);
+        if (result == null) result = caseAbstractEdiSegment(stcSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.STG_SEGMENT:
+      {
+        STGSegment stgSegment = (STGSegment)theEObject;
+        T result = caseSTGSegment(stgSegment);
+        if (result == null) result = caseAbstractEdiSegment(stgSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.STS_SEGMENT:
+      {
+        STSSegment stsSegment = (STSSegment)theEObject;
+        T result = caseSTSSegment(stsSegment);
+        if (result == null) result = caseAbstractEdiSegment(stsSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TCC_SEGMENT:
+      {
+        TCCSegment tccSegment = (TCCSegment)theEObject;
+        T result = caseTCCSegment(tccSegment);
+        if (result == null) result = caseAbstractEdiSegment(tccSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TDT_SEGMENT:
+      {
+        TDTSegment tdtSegment = (TDTSegment)theEObject;
+        T result = caseTDTSegment(tdtSegment);
+        if (result == null) result = caseAbstractEdiSegment(tdtSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TEM_SEGMENT:
+      {
+        TEMSegment temSegment = (TEMSegment)theEObject;
+        T result = caseTEMSegment(temSegment);
+        if (result == null) result = caseAbstractEdiSegment(temSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TMD_SEGMENT:
+      {
+        TMDSegment tmdSegment = (TMDSegment)theEObject;
+        T result = caseTMDSegment(tmdSegment);
+        if (result == null) result = caseAbstractEdiSegment(tmdSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TMP_SEGMENT:
+      {
+        TMPSegment tmpSegment = (TMPSegment)theEObject;
+        T result = caseTMPSegment(tmpSegment);
+        if (result == null) result = caseAbstractEdiSegment(tmpSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TOD_SEGMENT:
+      {
+        TODSegment todSegment = (TODSegment)theEObject;
+        T result = caseTODSegment(todSegment);
+        if (result == null) result = caseAbstractEdiSegment(todSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TPL_SEGMENT:
+      {
+        TPLSegment tplSegment = (TPLSegment)theEObject;
+        T result = caseTPLSegment(tplSegment);
+        if (result == null) result = caseAbstractEdiSegment(tplSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TRU_SEGMENT:
+      {
+        TRUSegment truSegment = (TRUSegment)theEObject;
+        T result = caseTRUSegment(truSegment);
+        if (result == null) result = caseAbstractEdiSegment(truSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.TSR_SEGMENT:
+      {
+        TSRSegment tsrSegment = (TSRSegment)theEObject;
+        T result = caseTSRSegment(tsrSegment);
+        if (result == null) result = caseAbstractEdiSegment(tsrSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EdilangPackage.VLI_SEGMENT:
+      {
+        VLISegment vliSegment = (VLISegment)theEObject;
+        T result = caseVLISegment(vliSegment);
+        if (result == null) result = caseAbstractEdiSegment(vliSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EdilangPackage.MSG_SEGMENT:
       {
         MSGSegment msgSegment = (MSGSegment)theEObject;
@@ -645,6 +1749,2214 @@ public class EdilangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseUNHSegment(UNHSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ADR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ADR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseADRSegment(ADRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>AGR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>AGR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAGRSegment(AGRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>AJT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>AJT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAJTSegment(AJTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ALC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ALC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseALCSegment(ALCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ALI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ALI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseALISegment(ALISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>APP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>APP Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAPPSegment(APPSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>APR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>APR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAPRSegment(APRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ARD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ARD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseARDSegment(ARDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ARR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ARR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseARRSegment(ARRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ASI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ASI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseASISegment(ASISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ATT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ATT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseATTSegment(ATTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>AUT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>AUT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAUTSegment(AUTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>BAS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>BAS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBASSegment(BASSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>BII Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>BII Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBIISegment(BIISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>BUS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>BUS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBUSSegment(BUSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CAV Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CAV Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCAVSegment(CAVSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CCD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CCD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCCDSegment(CCDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CCI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CCI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCCISegment(CCISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CDI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CDI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCDISegment(CDISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CDS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CDS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCDSSegment(CDSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CDV Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CDV Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCDVSegment(CDVSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CED Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CED Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCEDSegment(CEDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CIN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CIN Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCINSegment(CINSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CLA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CLA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCLASegment(CLASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CLI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CLI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCLISegment(CLISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CMP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CMP Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCMPSegment(CMPSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CNI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CNI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCNISegment(CNISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>COD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>COD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCODSegment(CODSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>COM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>COM Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCOMSegment(COMSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>COT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>COT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCOTSegment(COTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CPI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CPI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCPISegment(CPISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CPS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CPS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCPSSegment(CPSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CPT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CPT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCPTSegment(CPTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CST Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CST Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCSTSegment(CSTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DAM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DAM Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDAMSegment(DAMSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DFN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DFN Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDFNSegment(DFNSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DGS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DGS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDGSSegment(DGSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DII Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DII Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDIISegment(DIISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DIM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DIM Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDIMSegment(DIMSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DLI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DLI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDLISegment(DLISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DLM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DLM Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDLMSegment(DLMSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DMS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DMS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDMSSegment(DMSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DOC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DOC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDOCSegment(DOCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DRD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DRD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDRDSegment(DRDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DSG Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DSG Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDSGSegment(DSGSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DSI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DSI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDSISegment(DSISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EDT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EDT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEDTSegment(EDTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EFI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EFI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEFISegment(EFISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ELM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ELM Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseELMSegment(ELMSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ELU Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ELU Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseELUSegment(ELUSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ELV Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ELV Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseELVSegment(ELVSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EMP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EMP Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEMPSegment(EMPSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EQA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EQA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEQASegment(EQASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EQD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EQD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEQDSegment(EQDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EQN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EQN Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEQNSegment(EQNSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ERP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ERP Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseERPSegment(ERPSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EVE Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EVE Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEVESegment(EVESegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EVT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EVT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEVTSegment(EVTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>FCA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>FCA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFCASegment(FCASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>FII Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>FII Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFIISegment(FIISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>FNS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>FNS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFNSSegment(FNSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>FNT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>FNT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFNTSegment(FNTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>FOR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>FOR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFORSegment(FORSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>FSQ Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>FSQ Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFSQSegment(FSQSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GDS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GDS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGDSSegment(GDSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GEI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GEI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGEISegment(GEISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GID Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GID Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGIDSegment(GIDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GIN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GIN Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGINSegment(GINSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GIR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GIR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGIRSegment(GIRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GIS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GIS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGISSegment(GISSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GOR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GOR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGORSegment(GORSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>GRU Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>GRU Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGRUSegment(GRUSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>HAN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>HAN Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHANSegment(HANSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>HYN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>HYN Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHYNSegment(HYNSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ICD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ICD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseICDSegment(ICDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>IDE Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>IDE Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIDESegment(IDESegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>IFD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>IFD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIFDSegment(IFDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>IHC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>IHC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIHCSegment(IHCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>IMD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>IMD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIMDSegment(IMDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>IND Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>IND Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseINDSegment(INDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>INP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>INP Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseINPSegment(INPSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>INV Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>INV Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseINVSegment(INVSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>IRQ Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>IRQ Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIRQSegment(IRQSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>LAN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>LAN Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLANSegment(LANSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>LOC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>LOC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLOCSegment(LOCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MEA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MEA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMEASegment(MEASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MEM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MEM Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMEMSegment(MEMSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MKS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MKS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMKSSegment(MKSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>NAT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>NAT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNATSegment(NATSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PAC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PAC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePACSegment(PACSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PAI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PAI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePAISegment(PAISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PAS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PAS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePASSegment(PASSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PCC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PCC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePCCSegment(PCCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PCD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PCD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePCDSegment(PCDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PER Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PER Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePERSegment(PERSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PGI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PGI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePGISegment(PGISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PIA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PIA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePIASegment(PIASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PNA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PNA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePNASegment(PNASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PRC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PRC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePRCSegment(PRCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PRV Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PRV Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePRVSegment(PRVSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PSD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PSD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePSDSegment(PSDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PTY Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PTY Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePTYSegment(PTYSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PYT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PYT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePYTSegment(PYTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>QRS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>QRS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQRSSegment(QRSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>QUA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>QUA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQUASegment(QUASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>QVR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>QVR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQVRSegment(QVRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>RCS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RCS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRCSSegment(RCSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>REL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>REL Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRELSegment(RELSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>RJL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RJL Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRJLSegment(RJLSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>RNG Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RNG Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRNGSegment(RNGSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ROD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ROD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRODSegment(RODSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>RSL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RSL Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRSLSegment(RSLSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>RTE Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RTE Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRTESegment(RTESegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SAL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SAL Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSALSegment(SALSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SCC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SCC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSCCSegment(SCCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SCD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SCD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSCDSegment(SCDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SEG Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SEG Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSEGSegment(SEGSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SEL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SEL Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSELSegment(SELSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SEQ Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SEQ Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSEQSegment(SEQSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SFI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SFI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSFISegment(SFISegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SGP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SGP Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSGPSegment(SGPSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SGU Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SGU Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSGUSegment(SGUSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SPR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SPR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSPRSegment(SPRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SPS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SPS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSPSSegment(SPSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>STA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>STA Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSTASegment(STASegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>STC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>STC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSTCSegment(STCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>STG Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>STG Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSTGSegment(STGSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>STS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>STS Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSTSSegment(STSSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TCC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TCC Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTCCSegment(TCCSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TDT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TDT Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTDTSegment(TDTSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TEM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TEM Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTEMSegment(TEMSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TMD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TMD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTMDSegment(TMDSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TMP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TMP Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTMPSegment(TMPSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TOD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TOD Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTODSegment(TODSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TPL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TPL Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTPLSegment(TPLSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TRU Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TRU Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTRUSegment(TRUSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>TSR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>TSR Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTSRSegment(TSRSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>VLI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>VLI Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVLISegment(VLISegment object)
   {
     return null;
   }

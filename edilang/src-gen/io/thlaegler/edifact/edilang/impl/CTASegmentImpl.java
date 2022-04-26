@@ -65,7 +65,7 @@ public class CTASegmentImpl extends AbstractEdiSegmentImpl implements CTASegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.CTA_SEGMENT;
+    return EdilangPackage.eINSTANCE.getCTASegment();
   }
 
   /**

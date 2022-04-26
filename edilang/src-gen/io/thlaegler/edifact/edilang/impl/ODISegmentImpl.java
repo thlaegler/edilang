@@ -86,7 +86,7 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ODI_SEGMENT;
+    return EdilangPackage.eINSTANCE.getODISegment();
   }
 
   /**

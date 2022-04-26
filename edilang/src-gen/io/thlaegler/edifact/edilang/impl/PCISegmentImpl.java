@@ -65,7 +65,7 @@ public class PCISegmentImpl extends AbstractEdiSegmentImpl implements PCISegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PCI_SEGMENT;
+    return EdilangPackage.eINSTANCE.getPCISegment();
   }
 
   /**

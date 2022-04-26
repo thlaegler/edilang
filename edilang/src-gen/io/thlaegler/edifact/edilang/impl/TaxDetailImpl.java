@@ -191,7 +191,7 @@ public class TaxDetailImpl extends AbstractEdiFunctionImpl implements TaxDetail
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.TAX_DETAIL;
+    return EdilangPackage.eINSTANCE.getTaxDetail();
   }
 
   /**

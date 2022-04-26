@@ -266,7 +266,7 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.TVL_SEGMENT;
+    return EdilangPackage.eINSTANCE.getTVLSegment();
   }
 
   /**

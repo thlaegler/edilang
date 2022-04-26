@@ -4,55 +4,192 @@
 package io.thlaegler.edifact.serializer;
 
 import com.google.inject.Inject;
+import io.thlaegler.edifact.edilang.ADRSegment;
+import io.thlaegler.edifact.edilang.AGRSegment;
+import io.thlaegler.edifact.edilang.AJTSegment;
+import io.thlaegler.edifact.edilang.ALCSegment;
+import io.thlaegler.edifact.edilang.ALISegment;
+import io.thlaegler.edifact.edilang.APPSegment;
+import io.thlaegler.edifact.edilang.APRSegment;
+import io.thlaegler.edifact.edilang.ARDSegment;
+import io.thlaegler.edifact.edilang.ARRSegment;
+import io.thlaegler.edifact.edilang.ASISegment;
+import io.thlaegler.edifact.edilang.ATTSegment;
+import io.thlaegler.edifact.edilang.AUTSegment;
 import io.thlaegler.edifact.edilang.ApplicationErrorDetail;
+import io.thlaegler.edifact.edilang.BASSegment;
 import io.thlaegler.edifact.edilang.BGMSegment;
+import io.thlaegler.edifact.edilang.BIISegment;
+import io.thlaegler.edifact.edilang.BUSSegment;
+import io.thlaegler.edifact.edilang.CAVSegment;
+import io.thlaegler.edifact.edilang.CCDSegment;
+import io.thlaegler.edifact.edilang.CCISegment;
+import io.thlaegler.edifact.edilang.CDISegment;
+import io.thlaegler.edifact.edilang.CDSSegment;
+import io.thlaegler.edifact.edilang.CDVSegment;
+import io.thlaegler.edifact.edilang.CEDSegment;
+import io.thlaegler.edifact.edilang.CINSegment;
+import io.thlaegler.edifact.edilang.CLASegment;
+import io.thlaegler.edifact.edilang.CLISegment;
+import io.thlaegler.edifact.edilang.CMPSegment;
+import io.thlaegler.edifact.edilang.CNISegment;
 import io.thlaegler.edifact.edilang.CNTSegment;
+import io.thlaegler.edifact.edilang.CODSegment;
+import io.thlaegler.edifact.edilang.COMSegment;
+import io.thlaegler.edifact.edilang.COTSegment;
+import io.thlaegler.edifact.edilang.CPISegment;
+import io.thlaegler.edifact.edilang.CPSSegment;
+import io.thlaegler.edifact.edilang.CPTSegment;
+import io.thlaegler.edifact.edilang.CSTSegment;
 import io.thlaegler.edifact.edilang.CTASegment;
 import io.thlaegler.edifact.edilang.CUXSegment;
 import io.thlaegler.edifact.edilang.CountrySubEntityDetail;
 import io.thlaegler.edifact.edilang.CurrencyDetail;
+import io.thlaegler.edifact.edilang.DAMSegment;
+import io.thlaegler.edifact.edilang.DFNSegment;
+import io.thlaegler.edifact.edilang.DGSSegment;
+import io.thlaegler.edifact.edilang.DIISegment;
+import io.thlaegler.edifact.edilang.DIMSegment;
+import io.thlaegler.edifact.edilang.DLISegment;
+import io.thlaegler.edifact.edilang.DLMSegment;
+import io.thlaegler.edifact.edilang.DMSSegment;
+import io.thlaegler.edifact.edilang.DOCSegment;
+import io.thlaegler.edifact.edilang.DRDSegment;
+import io.thlaegler.edifact.edilang.DSGSegment;
+import io.thlaegler.edifact.edilang.DSISegment;
 import io.thlaegler.edifact.edilang.DTMSegment;
 import io.thlaegler.edifact.edilang.DateAndTimeFunction;
 import io.thlaegler.edifact.edilang.DateOnlyFunction;
 import io.thlaegler.edifact.edilang.DateTimePeriod;
 import io.thlaegler.edifact.edilang.DocumentMessage;
 import io.thlaegler.edifact.edilang.DocumentMessageIdentification;
+import io.thlaegler.edifact.edilang.EDTSegment;
+import io.thlaegler.edifact.edilang.EFISegment;
+import io.thlaegler.edifact.edilang.ELMSegment;
+import io.thlaegler.edifact.edilang.ELUSegment;
+import io.thlaegler.edifact.edilang.ELVSegment;
+import io.thlaegler.edifact.edilang.EMPSegment;
+import io.thlaegler.edifact.edilang.EQASegment;
+import io.thlaegler.edifact.edilang.EQDSegment;
+import io.thlaegler.edifact.edilang.EQNSegment;
 import io.thlaegler.edifact.edilang.ERCSegment;
+import io.thlaegler.edifact.edilang.ERPSegment;
+import io.thlaegler.edifact.edilang.EVESegment;
+import io.thlaegler.edifact.edilang.EVTSegment;
 import io.thlaegler.edifact.edilang.EdiModel;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.FCASegment;
+import io.thlaegler.edifact.edilang.FIISegment;
+import io.thlaegler.edifact.edilang.FNSSegment;
+import io.thlaegler.edifact.edilang.FNTSegment;
+import io.thlaegler.edifact.edilang.FORSegment;
+import io.thlaegler.edifact.edilang.FSQSegment;
 import io.thlaegler.edifact.edilang.FTXSegment;
+import io.thlaegler.edifact.edilang.GDSSegment;
+import io.thlaegler.edifact.edilang.GEISegment;
+import io.thlaegler.edifact.edilang.GIDSegment;
+import io.thlaegler.edifact.edilang.GINSegment;
+import io.thlaegler.edifact.edilang.GIRSegment;
+import io.thlaegler.edifact.edilang.GISSegment;
+import io.thlaegler.edifact.edilang.GORSegment;
+import io.thlaegler.edifact.edilang.GRUSegment;
+import io.thlaegler.edifact.edilang.HANSegment;
+import io.thlaegler.edifact.edilang.HYNSegment;
+import io.thlaegler.edifact.edilang.ICDSegment;
+import io.thlaegler.edifact.edilang.IDESegment;
+import io.thlaegler.edifact.edilang.IFDSegment;
+import io.thlaegler.edifact.edilang.IHCSegment;
+import io.thlaegler.edifact.edilang.IMDSegment;
+import io.thlaegler.edifact.edilang.INDSegment;
+import io.thlaegler.edifact.edilang.INPSegment;
+import io.thlaegler.edifact.edilang.INVSegment;
+import io.thlaegler.edifact.edilang.IRQSegment;
 import io.thlaegler.edifact.edilang.InterchangerFunction;
 import io.thlaegler.edifact.edilang.ItemNumberIdentification;
+import io.thlaegler.edifact.edilang.LANSegment;
 import io.thlaegler.edifact.edilang.LINSegment;
+import io.thlaegler.edifact.edilang.LOCSegment;
 import io.thlaegler.edifact.edilang.LocationFunction;
+import io.thlaegler.edifact.edilang.MEASegment;
+import io.thlaegler.edifact.edilang.MEMSegment;
+import io.thlaegler.edifact.edilang.MKSSegment;
 import io.thlaegler.edifact.edilang.MOASegment;
 import io.thlaegler.edifact.edilang.MSGSegment;
 import io.thlaegler.edifact.edilang.MessageBodyFunction;
 import io.thlaegler.edifact.edilang.MessageIndentifier;
 import io.thlaegler.edifact.edilang.NADSegment;
+import io.thlaegler.edifact.edilang.NATSegment;
 import io.thlaegler.edifact.edilang.NameAndAddress;
 import io.thlaegler.edifact.edilang.ODISegment;
 import io.thlaegler.edifact.edilang.ORGSegment;
 import io.thlaegler.edifact.edilang.OriginatorFunction;
 import io.thlaegler.edifact.edilang.OriginatorIdentificationFunction;
+import io.thlaegler.edifact.edilang.PACSegment;
+import io.thlaegler.edifact.edilang.PAISegment;
+import io.thlaegler.edifact.edilang.PASSegment;
 import io.thlaegler.edifact.edilang.PATSegment;
+import io.thlaegler.edifact.edilang.PCCSegment;
+import io.thlaegler.edifact.edilang.PCDSegment;
 import io.thlaegler.edifact.edilang.PCISegment;
 import io.thlaegler.edifact.edilang.PDISegment;
+import io.thlaegler.edifact.edilang.PERSegment;
+import io.thlaegler.edifact.edilang.PGISegment;
+import io.thlaegler.edifact.edilang.PIASegment;
+import io.thlaegler.edifact.edilang.PNASegment;
 import io.thlaegler.edifact.edilang.POCSegment;
+import io.thlaegler.edifact.edilang.PRCSegment;
 import io.thlaegler.edifact.edilang.PRISegment;
+import io.thlaegler.edifact.edilang.PRVSegment;
+import io.thlaegler.edifact.edilang.PSDSegment;
+import io.thlaegler.edifact.edilang.PTYSegment;
+import io.thlaegler.edifact.edilang.PYTSegment;
 import io.thlaegler.edifact.edilang.PartyIdentificationDetail;
 import io.thlaegler.edifact.edilang.PartyName;
 import io.thlaegler.edifact.edilang.PriceInformation;
 import io.thlaegler.edifact.edilang.ProductFunction;
+import io.thlaegler.edifact.edilang.QRSSegment;
 import io.thlaegler.edifact.edilang.QTYSegment;
+import io.thlaegler.edifact.edilang.QUASegment;
+import io.thlaegler.edifact.edilang.QVRSegment;
 import io.thlaegler.edifact.edilang.QuantityDetail;
+import io.thlaegler.edifact.edilang.RCSSegment;
+import io.thlaegler.edifact.edilang.RELSegment;
 import io.thlaegler.edifact.edilang.RFFSegment;
+import io.thlaegler.edifact.edilang.RJLSegment;
+import io.thlaegler.edifact.edilang.RNGSegment;
+import io.thlaegler.edifact.edilang.RODSegment;
 import io.thlaegler.edifact.edilang.RPISegment;
+import io.thlaegler.edifact.edilang.RSLSegment;
+import io.thlaegler.edifact.edilang.RTESegment;
 import io.thlaegler.edifact.edilang.Relationship;
+import io.thlaegler.edifact.edilang.SALSegment;
+import io.thlaegler.edifact.edilang.SCCSegment;
+import io.thlaegler.edifact.edilang.SCDSegment;
+import io.thlaegler.edifact.edilang.SEGSegment;
+import io.thlaegler.edifact.edilang.SELSegment;
+import io.thlaegler.edifact.edilang.SEQSegment;
+import io.thlaegler.edifact.edilang.SFISegment;
+import io.thlaegler.edifact.edilang.SGPSegment;
+import io.thlaegler.edifact.edilang.SGUSegment;
+import io.thlaegler.edifact.edilang.SPRSegment;
+import io.thlaegler.edifact.edilang.SPSSegment;
+import io.thlaegler.edifact.edilang.STASegment;
+import io.thlaegler.edifact.edilang.STCSegment;
+import io.thlaegler.edifact.edilang.STGSegment;
+import io.thlaegler.edifact.edilang.STSSegment;
 import io.thlaegler.edifact.edilang.Street;
 import io.thlaegler.edifact.edilang.SublineInformation;
 import io.thlaegler.edifact.edilang.SystemDetailFunction;
 import io.thlaegler.edifact.edilang.TAXSegment;
+import io.thlaegler.edifact.edilang.TCCSegment;
+import io.thlaegler.edifact.edilang.TDTSegment;
+import io.thlaegler.edifact.edilang.TEMSegment;
+import io.thlaegler.edifact.edilang.TMDSegment;
+import io.thlaegler.edifact.edilang.TMPSegment;
+import io.thlaegler.edifact.edilang.TODSegment;
+import io.thlaegler.edifact.edilang.TPLSegment;
+import io.thlaegler.edifact.edilang.TRUSegment;
+import io.thlaegler.edifact.edilang.TSRSegment;
 import io.thlaegler.edifact.edilang.TVLSegment;
 import io.thlaegler.edifact.edilang.TaxAccountDetail;
 import io.thlaegler.edifact.edilang.TaxDetail;
@@ -65,6 +202,7 @@ import io.thlaegler.edifact.edilang.UNHSegment;
 import io.thlaegler.edifact.edilang.UNSSegment;
 import io.thlaegler.edifact.edilang.UNTSegment;
 import io.thlaegler.edifact.edilang.UNZSegment;
+import io.thlaegler.edifact.edilang.VLISegment;
 import io.thlaegler.edifact.services.EdilangGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -91,14 +229,116 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == EdilangPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case EdilangPackage.ADR_SEGMENT:
+				sequence_ADRSegment(context, (ADRSegment) semanticObject); 
+				return; 
+			case EdilangPackage.AGR_SEGMENT:
+				sequence_AGRSegment(context, (AGRSegment) semanticObject); 
+				return; 
+			case EdilangPackage.AJT_SEGMENT:
+				sequence_AJTSegment(context, (AJTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ALC_SEGMENT:
+				sequence_ALCSegment(context, (ALCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ALI_SEGMENT:
+				sequence_ALISegment(context, (ALISegment) semanticObject); 
+				return; 
+			case EdilangPackage.APP_SEGMENT:
+				sequence_APPSegment(context, (APPSegment) semanticObject); 
+				return; 
+			case EdilangPackage.APR_SEGMENT:
+				sequence_APRSegment(context, (APRSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ARD_SEGMENT:
+				sequence_ARDSegment(context, (ARDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ARR_SEGMENT:
+				sequence_ARRSegment(context, (ARRSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ASI_SEGMENT:
+				sequence_ASISegment(context, (ASISegment) semanticObject); 
+				return; 
+			case EdilangPackage.ATT_SEGMENT:
+				sequence_ATTSegment(context, (ATTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.AUT_SEGMENT:
+				sequence_AUTSegment(context, (AUTSegment) semanticObject); 
+				return; 
 			case EdilangPackage.APPLICATION_ERROR_DETAIL:
 				sequence_ApplicationErrorDetail(context, (ApplicationErrorDetail) semanticObject); 
+				return; 
+			case EdilangPackage.BAS_SEGMENT:
+				sequence_BASSegment(context, (BASSegment) semanticObject); 
 				return; 
 			case EdilangPackage.BGM_SEGMENT:
 				sequence_BGMSegment(context, (BGMSegment) semanticObject); 
 				return; 
+			case EdilangPackage.BII_SEGMENT:
+				sequence_BIISegment(context, (BIISegment) semanticObject); 
+				return; 
+			case EdilangPackage.BUS_SEGMENT:
+				sequence_BUSSegment(context, (BUSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CAV_SEGMENT:
+				sequence_CAVSegment(context, (CAVSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CCD_SEGMENT:
+				sequence_CCDSegment(context, (CCDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CCI_SEGMENT:
+				sequence_CCISegment(context, (CCISegment) semanticObject); 
+				return; 
+			case EdilangPackage.CDI_SEGMENT:
+				sequence_CDISegment(context, (CDISegment) semanticObject); 
+				return; 
+			case EdilangPackage.CDS_SEGMENT:
+				sequence_CDSSegment(context, (CDSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CDV_SEGMENT:
+				sequence_CDVSegment(context, (CDVSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CED_SEGMENT:
+				sequence_CEDSegment(context, (CEDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CIN_SEGMENT:
+				sequence_CINSegment(context, (CINSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CLA_SEGMENT:
+				sequence_CLASegment(context, (CLASegment) semanticObject); 
+				return; 
+			case EdilangPackage.CLI_SEGMENT:
+				sequence_CLISegment(context, (CLISegment) semanticObject); 
+				return; 
+			case EdilangPackage.CMP_SEGMENT:
+				sequence_CMPSegment(context, (CMPSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CNI_SEGMENT:
+				sequence_CNISegment(context, (CNISegment) semanticObject); 
+				return; 
 			case EdilangPackage.CNT_SEGMENT:
 				sequence_CNTSegment(context, (CNTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.COD_SEGMENT:
+				sequence_CODSegment(context, (CODSegment) semanticObject); 
+				return; 
+			case EdilangPackage.COM_SEGMENT:
+				sequence_COMSegment(context, (COMSegment) semanticObject); 
+				return; 
+			case EdilangPackage.COT_SEGMENT:
+				sequence_COTSegment(context, (COTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CPI_SEGMENT:
+				sequence_CPISegment(context, (CPISegment) semanticObject); 
+				return; 
+			case EdilangPackage.CPS_SEGMENT:
+				sequence_CPSSegment(context, (CPSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CPT_SEGMENT:
+				sequence_CPTSegment(context, (CPTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.CST_SEGMENT:
+				sequence_CSTSegment(context, (CSTSegment) semanticObject); 
 				return; 
 			case EdilangPackage.CTA_SEGMENT:
 				sequence_CTASegment(context, (CTASegment) semanticObject); 
@@ -111,6 +351,42 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.CURRENCY_DETAIL:
 				sequence_CurrencyDetail(context, (CurrencyDetail) semanticObject); 
+				return; 
+			case EdilangPackage.DAM_SEGMENT:
+				sequence_DAMSegment(context, (DAMSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DFN_SEGMENT:
+				sequence_DFNSegment(context, (DFNSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DGS_SEGMENT:
+				sequence_DGSSegment(context, (DGSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DII_SEGMENT:
+				sequence_DIISegment(context, (DIISegment) semanticObject); 
+				return; 
+			case EdilangPackage.DIM_SEGMENT:
+				sequence_DIMSegment(context, (DIMSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DLI_SEGMENT:
+				sequence_DLISegment(context, (DLISegment) semanticObject); 
+				return; 
+			case EdilangPackage.DLM_SEGMENT:
+				sequence_DLMSegment(context, (DLMSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DMS_SEGMENT:
+				sequence_DMSSegment(context, (DMSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DOC_SEGMENT:
+				sequence_DOCSegment(context, (DOCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DRD_SEGMENT:
+				sequence_DRDSegment(context, (DRDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DSG_SEGMENT:
+				sequence_DSGSegment(context, (DSGSegment) semanticObject); 
+				return; 
+			case EdilangPackage.DSI_SEGMENT:
+				sequence_DSISegment(context, (DSISegment) semanticObject); 
 				return; 
 			case EdilangPackage.DTM_SEGMENT:
 				sequence_DTMSegment(context, (DTMSegment) semanticObject); 
@@ -130,14 +406,125 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.DOCUMENT_MESSAGE_IDENTIFICATION:
 				sequence_DocumentMessageIdentification(context, (DocumentMessageIdentification) semanticObject); 
 				return; 
+			case EdilangPackage.EDT_SEGMENT:
+				sequence_EDTSegment(context, (EDTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.EFI_SEGMENT:
+				sequence_EFISegment(context, (EFISegment) semanticObject); 
+				return; 
+			case EdilangPackage.ELM_SEGMENT:
+				sequence_ELMSegment(context, (ELMSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ELU_SEGMENT:
+				sequence_ELUSegment(context, (ELUSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ELV_SEGMENT:
+				sequence_ELVSegment(context, (ELVSegment) semanticObject); 
+				return; 
+			case EdilangPackage.EMP_SEGMENT:
+				sequence_EMPSegment(context, (EMPSegment) semanticObject); 
+				return; 
+			case EdilangPackage.EQA_SEGMENT:
+				sequence_EQASegment(context, (EQASegment) semanticObject); 
+				return; 
+			case EdilangPackage.EQD_SEGMENT:
+				sequence_EQDSegment(context, (EQDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.EQN_SEGMENT:
+				sequence_EQNSegment(context, (EQNSegment) semanticObject); 
+				return; 
 			case EdilangPackage.ERC_SEGMENT:
 				sequence_ERCSegment(context, (ERCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ERP_SEGMENT:
+				sequence_ERPSegment(context, (ERPSegment) semanticObject); 
+				return; 
+			case EdilangPackage.EVE_SEGMENT:
+				sequence_EVESegment(context, (EVESegment) semanticObject); 
+				return; 
+			case EdilangPackage.EVT_SEGMENT:
+				sequence_EVTSegment(context, (EVTSegment) semanticObject); 
 				return; 
 			case EdilangPackage.EDI_MODEL:
 				sequence_EdiModel(context, (EdiModel) semanticObject); 
 				return; 
+			case EdilangPackage.FCA_SEGMENT:
+				sequence_FCASegment(context, (FCASegment) semanticObject); 
+				return; 
+			case EdilangPackage.FII_SEGMENT:
+				sequence_FIISegment(context, (FIISegment) semanticObject); 
+				return; 
+			case EdilangPackage.FNS_SEGMENT:
+				sequence_FNSSegment(context, (FNSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.FNT_SEGMENT:
+				sequence_FNTSegment(context, (FNTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.FOR_SEGMENT:
+				sequence_FORSegment(context, (FORSegment) semanticObject); 
+				return; 
+			case EdilangPackage.FSQ_SEGMENT:
+				sequence_FSQSegment(context, (FSQSegment) semanticObject); 
+				return; 
 			case EdilangPackage.FTX_SEGMENT:
 				sequence_FTXSegment(context, (FTXSegment) semanticObject); 
+				return; 
+			case EdilangPackage.GDS_SEGMENT:
+				sequence_GDSSegment(context, (GDSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.GEI_SEGMENT:
+				sequence_GEISegment(context, (GEISegment) semanticObject); 
+				return; 
+			case EdilangPackage.GID_SEGMENT:
+				sequence_GIDSegment(context, (GIDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.GIN_SEGMENT:
+				sequence_GINSegment(context, (GINSegment) semanticObject); 
+				return; 
+			case EdilangPackage.GIR_SEGMENT:
+				sequence_GIRSegment(context, (GIRSegment) semanticObject); 
+				return; 
+			case EdilangPackage.GIS_SEGMENT:
+				sequence_GISSegment(context, (GISSegment) semanticObject); 
+				return; 
+			case EdilangPackage.GOR_SEGMENT:
+				sequence_GORSegment(context, (GORSegment) semanticObject); 
+				return; 
+			case EdilangPackage.GRU_SEGMENT:
+				sequence_GRUSegment(context, (GRUSegment) semanticObject); 
+				return; 
+			case EdilangPackage.HAN_SEGMENT:
+				sequence_HANSegment(context, (HANSegment) semanticObject); 
+				return; 
+			case EdilangPackage.HYN_SEGMENT:
+				sequence_HYNSegment(context, (HYNSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ICD_SEGMENT:
+				sequence_ICDSegment(context, (ICDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.IDE_SEGMENT:
+				sequence_IDESegment(context, (IDESegment) semanticObject); 
+				return; 
+			case EdilangPackage.IFD_SEGMENT:
+				sequence_IFDSegment(context, (IFDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.IHC_SEGMENT:
+				sequence_IHCSegment(context, (IHCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.IMD_SEGMENT:
+				sequence_IMDSegment(context, (IMDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.IND_SEGMENT:
+				sequence_INDSegment(context, (INDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.INP_SEGMENT:
+				sequence_INPSegment(context, (INPSegment) semanticObject); 
+				return; 
+			case EdilangPackage.INV_SEGMENT:
+				sequence_INVSegment(context, (INVSegment) semanticObject); 
+				return; 
+			case EdilangPackage.IRQ_SEGMENT:
+				sequence_IRQSegment(context, (IRQSegment) semanticObject); 
 				return; 
 			case EdilangPackage.INTERCHANGER_FUNCTION:
 				sequence_InterchangerFunction(context, (InterchangerFunction) semanticObject); 
@@ -145,11 +532,26 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.ITEM_NUMBER_IDENTIFICATION:
 				sequence_ItemNumberIdentification(context, (ItemNumberIdentification) semanticObject); 
 				return; 
+			case EdilangPackage.LAN_SEGMENT:
+				sequence_LANSegment(context, (LANSegment) semanticObject); 
+				return; 
 			case EdilangPackage.LIN_SEGMENT:
 				sequence_LINSegment(context, (LINSegment) semanticObject); 
 				return; 
+			case EdilangPackage.LOC_SEGMENT:
+				sequence_LOCSegment(context, (LOCSegment) semanticObject); 
+				return; 
 			case EdilangPackage.LOCATION_FUNCTION:
 				sequence_LocationFunction(context, (LocationFunction) semanticObject); 
+				return; 
+			case EdilangPackage.MEA_SEGMENT:
+				sequence_MEASegment(context, (MEASegment) semanticObject); 
+				return; 
+			case EdilangPackage.MEM_SEGMENT:
+				sequence_MEMSegment(context, (MEMSegment) semanticObject); 
+				return; 
+			case EdilangPackage.MKS_SEGMENT:
+				sequence_MKSSegment(context, (MKSSegment) semanticObject); 
 				return; 
 			case EdilangPackage.MOA_SEGMENT:
 				sequence_MOASegment(context, (MOASegment) semanticObject); 
@@ -166,6 +568,9 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.NAD_SEGMENT:
 				sequence_NADSegment(context, (NADSegment) semanticObject); 
 				return; 
+			case EdilangPackage.NAT_SEGMENT:
+				sequence_NATSegment(context, (NATSegment) semanticObject); 
+				return; 
 			case EdilangPackage.NAME_AND_ADDRESS:
 				sequence_NameAndAddress(context, (NameAndAddress) semanticObject); 
 				return; 
@@ -181,8 +586,23 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.ORIGINATOR_IDENTIFICATION_FUNCTION:
 				sequence_OriginatorIdentificationFunction(context, (OriginatorIdentificationFunction) semanticObject); 
 				return; 
+			case EdilangPackage.PAC_SEGMENT:
+				sequence_PACSegment(context, (PACSegment) semanticObject); 
+				return; 
+			case EdilangPackage.PAI_SEGMENT:
+				sequence_PAISegment(context, (PAISegment) semanticObject); 
+				return; 
+			case EdilangPackage.PAS_SEGMENT:
+				sequence_PASSegment(context, (PASSegment) semanticObject); 
+				return; 
 			case EdilangPackage.PAT_SEGMENT:
 				sequence_PATSegment(context, (PATSegment) semanticObject); 
+				return; 
+			case EdilangPackage.PCC_SEGMENT:
+				sequence_PCCSegment(context, (PCCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.PCD_SEGMENT:
+				sequence_PCDSegment(context, (PCDSegment) semanticObject); 
 				return; 
 			case EdilangPackage.PCI_SEGMENT:
 				sequence_PCISegment(context, (PCISegment) semanticObject); 
@@ -190,11 +610,38 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.PDI_SEGMENT:
 				sequence_PDISegment(context, (PDISegment) semanticObject); 
 				return; 
+			case EdilangPackage.PER_SEGMENT:
+				sequence_PERSegment(context, (PERSegment) semanticObject); 
+				return; 
+			case EdilangPackage.PGI_SEGMENT:
+				sequence_PGISegment(context, (PGISegment) semanticObject); 
+				return; 
+			case EdilangPackage.PIA_SEGMENT:
+				sequence_PIASegment(context, (PIASegment) semanticObject); 
+				return; 
+			case EdilangPackage.PNA_SEGMENT:
+				sequence_PNASegment(context, (PNASegment) semanticObject); 
+				return; 
 			case EdilangPackage.POC_SEGMENT:
 				sequence_POCSegment(context, (POCSegment) semanticObject); 
 				return; 
+			case EdilangPackage.PRC_SEGMENT:
+				sequence_PRCSegment(context, (PRCSegment) semanticObject); 
+				return; 
 			case EdilangPackage.PRI_SEGMENT:
 				sequence_PRISegment(context, (PRISegment) semanticObject); 
+				return; 
+			case EdilangPackage.PRV_SEGMENT:
+				sequence_PRVSegment(context, (PRVSegment) semanticObject); 
+				return; 
+			case EdilangPackage.PSD_SEGMENT:
+				sequence_PSDSegment(context, (PSDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.PTY_SEGMENT:
+				sequence_PTYSegment(context, (PTYSegment) semanticObject); 
+				return; 
+			case EdilangPackage.PYT_SEGMENT:
+				sequence_PYTSegment(context, (PYTSegment) semanticObject); 
 				return; 
 			case EdilangPackage.PARTY_IDENTIFICATION_DETAIL:
 				sequence_PartyIdentificationDetail(context, (PartyIdentificationDetail) semanticObject); 
@@ -208,20 +655,95 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.PRODUCT_FUNCTION:
 				sequence_ProductFunction(context, (ProductFunction) semanticObject); 
 				return; 
+			case EdilangPackage.QRS_SEGMENT:
+				sequence_QRSSegment(context, (QRSSegment) semanticObject); 
+				return; 
 			case EdilangPackage.QTY_SEGMENT:
 				sequence_QTYSegment(context, (QTYSegment) semanticObject); 
+				return; 
+			case EdilangPackage.QUA_SEGMENT:
+				sequence_QUASegment(context, (QUASegment) semanticObject); 
+				return; 
+			case EdilangPackage.QVR_SEGMENT:
+				sequence_QVRSegment(context, (QVRSegment) semanticObject); 
 				return; 
 			case EdilangPackage.QUANTITY_DETAIL:
 				sequence_QuantityDetail(context, (QuantityDetail) semanticObject); 
 				return; 
+			case EdilangPackage.RCS_SEGMENT:
+				sequence_RCSSegment(context, (RCSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.REL_SEGMENT:
+				sequence_RELSegment(context, (RELSegment) semanticObject); 
+				return; 
 			case EdilangPackage.RFF_SEGMENT:
 				sequence_RFFSegment(context, (RFFSegment) semanticObject); 
+				return; 
+			case EdilangPackage.RJL_SEGMENT:
+				sequence_RJLSegment(context, (RJLSegment) semanticObject); 
+				return; 
+			case EdilangPackage.RNG_SEGMENT:
+				sequence_RNGSegment(context, (RNGSegment) semanticObject); 
+				return; 
+			case EdilangPackage.ROD_SEGMENT:
+				sequence_RODSegment(context, (RODSegment) semanticObject); 
 				return; 
 			case EdilangPackage.RPI_SEGMENT:
 				sequence_RPISegment(context, (RPISegment) semanticObject); 
 				return; 
+			case EdilangPackage.RSL_SEGMENT:
+				sequence_RSLSegment(context, (RSLSegment) semanticObject); 
+				return; 
+			case EdilangPackage.RTE_SEGMENT:
+				sequence_RTESegment(context, (RTESegment) semanticObject); 
+				return; 
 			case EdilangPackage.RELATIONSHIP:
 				sequence_Relationship(context, (Relationship) semanticObject); 
+				return; 
+			case EdilangPackage.SAL_SEGMENT:
+				sequence_SALSegment(context, (SALSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SCC_SEGMENT:
+				sequence_SCCSegment(context, (SCCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SCD_SEGMENT:
+				sequence_SCDSegment(context, (SCDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SEG_SEGMENT:
+				sequence_SEGSegment(context, (SEGSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SEL_SEGMENT:
+				sequence_SELSegment(context, (SELSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SEQ_SEGMENT:
+				sequence_SEQSegment(context, (SEQSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SFI_SEGMENT:
+				sequence_SFISegment(context, (SFISegment) semanticObject); 
+				return; 
+			case EdilangPackage.SGP_SEGMENT:
+				sequence_SGPSegment(context, (SGPSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SGU_SEGMENT:
+				sequence_SGUSegment(context, (SGUSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SPR_SEGMENT:
+				sequence_SPRSegment(context, (SPRSegment) semanticObject); 
+				return; 
+			case EdilangPackage.SPS_SEGMENT:
+				sequence_SPSSegment(context, (SPSSegment) semanticObject); 
+				return; 
+			case EdilangPackage.STA_SEGMENT:
+				sequence_STASegment(context, (STASegment) semanticObject); 
+				return; 
+			case EdilangPackage.STC_SEGMENT:
+				sequence_STCSegment(context, (STCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.STG_SEGMENT:
+				sequence_STGSegment(context, (STGSegment) semanticObject); 
+				return; 
+			case EdilangPackage.STS_SEGMENT:
+				sequence_STSSegment(context, (STSSegment) semanticObject); 
 				return; 
 			case EdilangPackage.STREET:
 				sequence_Street(context, (Street) semanticObject); 
@@ -234,6 +756,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case EdilangPackage.TAX_SEGMENT:
 				sequence_TAXSegment(context, (TAXSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TCC_SEGMENT:
+				sequence_TCCSegment(context, (TCCSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TDT_SEGMENT:
+				sequence_TDTSegment(context, (TDTSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TEM_SEGMENT:
+				sequence_TEMSegment(context, (TEMSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TMD_SEGMENT:
+				sequence_TMDSegment(context, (TMDSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TMP_SEGMENT:
+				sequence_TMPSegment(context, (TMPSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TOD_SEGMENT:
+				sequence_TODSegment(context, (TODSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TPL_SEGMENT:
+				sequence_TPLSegment(context, (TPLSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TRU_SEGMENT:
+				sequence_TRUSegment(context, (TRUSegment) semanticObject); 
+				return; 
+			case EdilangPackage.TSR_SEGMENT:
+				sequence_TSRSegment(context, (TSRSegment) semanticObject); 
 				return; 
 			case EdilangPackage.TVL_SEGMENT:
 				sequence_TVLSegment(context, (TVLSegment) semanticObject); 
@@ -271,10 +820,337 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case EdilangPackage.UNZ_SEGMENT:
 				sequence_UNZSegment(context, (UNZSegment) semanticObject); 
 				return; 
+			case EdilangPackage.VLI_SEGMENT:
+				sequence_VLISegment(context, (VLISegment) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ADRSegment
+	 *     ADRSegment returns ADRSegment
+	 *
+	 * Constraint:
+	 *     (segment='ADR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ADRSegment(ISerializationContext context, ADRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getADRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getADRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getADRSegmentAccess().getSegmentADRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getADRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getADRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns AGRSegment
+	 *     AGRSegment returns AGRSegment
+	 *
+	 * Constraint:
+	 *     (segment='AGR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_AGRSegment(ISerializationContext context, AGRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAGRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAGRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAGRSegmentAccess().getSegmentAGRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getAGRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getAGRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns AJTSegment
+	 *     AJTSegment returns AJTSegment
+	 *
+	 * Constraint:
+	 *     (segment='AJT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_AJTSegment(ISerializationContext context, AJTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAJTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAJTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAJTSegmentAccess().getSegmentAJTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getAJTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getAJTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ALCSegment
+	 *     ALCSegment returns ALCSegment
+	 *
+	 * Constraint:
+	 *     (segment='ALC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ALCSegment(ISerializationContext context, ALCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getALCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getALCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getALCSegmentAccess().getSegmentALCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getALCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getALCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ALISegment
+	 *     ALISegment returns ALISegment
+	 *
+	 * Constraint:
+	 *     (segment='ALI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ALISegment(ISerializationContext context, ALISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getALISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getALISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getALISegmentAccess().getSegmentALIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getALISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getALISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns APPSegment
+	 *     APPSegment returns APPSegment
+	 *
+	 * Constraint:
+	 *     (segment='APP' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_APPSegment(ISerializationContext context, APPSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAPPSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAPPSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAPPSegmentAccess().getSegmentAPPKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getAPPSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getAPPSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns APRSegment
+	 *     APRSegment returns APRSegment
+	 *
+	 * Constraint:
+	 *     (segment='APR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_APRSegment(ISerializationContext context, APRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAPRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAPRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAPRSegmentAccess().getSegmentAPRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getAPRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getAPRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ARDSegment
+	 *     ARDSegment returns ARDSegment
+	 *
+	 * Constraint:
+	 *     (segment='ARD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ARDSegment(ISerializationContext context, ARDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getARDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getARDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getARDSegmentAccess().getSegmentARDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getARDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getARDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ARRSegment
+	 *     ARRSegment returns ARRSegment
+	 *
+	 * Constraint:
+	 *     (segment='ARR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ARRSegment(ISerializationContext context, ARRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getARRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getARRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getARRSegmentAccess().getSegmentARRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getARRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getARRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ASISegment
+	 *     ASISegment returns ASISegment
+	 *
+	 * Constraint:
+	 *     (segment='ASI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ASISegment(ISerializationContext context, ASISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getASISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getASISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getASISegmentAccess().getSegmentASIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getASISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getASISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ATTSegment
+	 *     ATTSegment returns ATTSegment
+	 *
+	 * Constraint:
+	 *     (segment='ATT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ATTSegment(ISerializationContext context, ATTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getATTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getATTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getATTSegmentAccess().getSegmentATTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getATTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getATTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns AUTSegment
+	 *     AUTSegment returns AUTSegment
+	 *
+	 * Constraint:
+	 *     (segment='AUT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_AUTSegment(ISerializationContext context, AUTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAUTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAUTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAUTSegmentAccess().getSegmentAUTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getAUTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getAUTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * <pre>
@@ -288,6 +1164,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_ApplicationErrorDetail(ISerializationContext context, ApplicationErrorDetail semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns BASSegment
+	 *     BASSegment returns BASSegment
+	 *
+	 * Constraint:
+	 *     (segment='BAS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_BASSegment(ISerializationContext context, BASSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getBASSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getBASSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBASSegmentAccess().getSegmentBASKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getBASSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getBASSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -316,6 +1219,384 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns BIISegment
+	 *     BIISegment returns BIISegment
+	 *
+	 * Constraint:
+	 *     (segment='BII' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_BIISegment(ISerializationContext context, BIISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getBIISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getBIISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBIISegmentAccess().getSegmentBIIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getBIISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getBIISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns BUSSegment
+	 *     BUSSegment returns BUSSegment
+	 *
+	 * Constraint:
+	 *     (segment='BUS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_BUSSegment(ISerializationContext context, BUSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getBUSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getBUSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBUSSegmentAccess().getSegmentBUSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getBUSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getBUSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CAVSegment
+	 *     CAVSegment returns CAVSegment
+	 *
+	 * Constraint:
+	 *     (segment='CAV' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CAVSegment(ISerializationContext context, CAVSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCAVSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCAVSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCAVSegmentAccess().getSegmentCAVKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCAVSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCAVSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CCDSegment
+	 *     CCDSegment returns CCDSegment
+	 *
+	 * Constraint:
+	 *     (segment='CCD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CCDSegment(ISerializationContext context, CCDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCCDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCCDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCCDSegmentAccess().getSegmentCCDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCCDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCCDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CCISegment
+	 *     CCISegment returns CCISegment
+	 *
+	 * Constraint:
+	 *     (segment='CCI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CCISegment(ISerializationContext context, CCISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCCISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCCISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCCISegmentAccess().getSegmentCCIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCCISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCCISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CDISegment
+	 *     CDISegment returns CDISegment
+	 *
+	 * Constraint:
+	 *     (segment='CDI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CDISegment(ISerializationContext context, CDISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCDISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCDISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCDISegmentAccess().getSegmentCDIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCDISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCDISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CDSSegment
+	 *     CDSSegment returns CDSSegment
+	 *
+	 * Constraint:
+	 *     (segment='CDS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CDSSegment(ISerializationContext context, CDSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCDSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCDSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCDSSegmentAccess().getSegmentCDSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCDSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCDSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CDVSegment
+	 *     CDVSegment returns CDVSegment
+	 *
+	 * Constraint:
+	 *     (segment='CDV' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CDVSegment(ISerializationContext context, CDVSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCDVSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCDVSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCDVSegmentAccess().getSegmentCDVKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCDVSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCDVSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CEDSegment
+	 *     CEDSegment returns CEDSegment
+	 *
+	 * Constraint:
+	 *     (segment='CED' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CEDSegment(ISerializationContext context, CEDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCEDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCEDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCEDSegmentAccess().getSegmentCEDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCEDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCEDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CINSegment
+	 *     CINSegment returns CINSegment
+	 *
+	 * Constraint:
+	 *     (segment='CIN' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CINSegment(ISerializationContext context, CINSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCINSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCINSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCINSegmentAccess().getSegmentCINKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCINSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCINSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CLASegment
+	 *     CLASegment returns CLASegment
+	 *
+	 * Constraint:
+	 *     (segment='CLA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CLASegment(ISerializationContext context, CLASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCLASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCLASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCLASegmentAccess().getSegmentCLAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCLASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCLASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CLISegment
+	 *     CLISegment returns CLISegment
+	 *
+	 * Constraint:
+	 *     (segment='CLI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CLISegment(ISerializationContext context, CLISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCLISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCLISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCLISegmentAccess().getSegmentCLIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCLISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCLISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CMPSegment
+	 *     CMPSegment returns CMPSegment
+	 *
+	 * Constraint:
+	 *     (segment='CMP' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CMPSegment(ISerializationContext context, CMPSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCMPSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCMPSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCMPSegmentAccess().getSegmentCMPKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCMPSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCMPSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CNISegment
+	 *     CNISegment returns CNISegment
+	 *
+	 * Constraint:
+	 *     (segment='CNI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CNISegment(ISerializationContext context, CNISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCNISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCNISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCNISegmentAccess().getSegmentCNIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCNISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCNISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns CNTSegment
 	 *     CNTSegment returns CNTSegment
 	 *
@@ -325,6 +1606,195 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_CNTSegment(ISerializationContext context, CNTSegment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CODSegment
+	 *     CODSegment returns CODSegment
+	 *
+	 * Constraint:
+	 *     (segment='COD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CODSegment(ISerializationContext context, CODSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCODSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCODSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCODSegmentAccess().getSegmentCODKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCODSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCODSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns COMSegment
+	 *     COMSegment returns COMSegment
+	 *
+	 * Constraint:
+	 *     (segment='COM' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_COMSegment(ISerializationContext context, COMSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCOMSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCOMSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCOMSegmentAccess().getSegmentCOMKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCOMSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCOMSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns COTSegment
+	 *     COTSegment returns COTSegment
+	 *
+	 * Constraint:
+	 *     (segment='COT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_COTSegment(ISerializationContext context, COTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCOTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCOTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCOTSegmentAccess().getSegmentCOTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCOTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCOTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CPISegment
+	 *     CPISegment returns CPISegment
+	 *
+	 * Constraint:
+	 *     (segment='CPI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CPISegment(ISerializationContext context, CPISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCPISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCPISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCPISegmentAccess().getSegmentCPIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCPISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCPISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CPSSegment
+	 *     CPSSegment returns CPSSegment
+	 *
+	 * Constraint:
+	 *     (segment='CPS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CPSSegment(ISerializationContext context, CPSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCPSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCPSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCPSSegmentAccess().getSegmentCPSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCPSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCPSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CPTSegment
+	 *     CPTSegment returns CPTSegment
+	 *
+	 * Constraint:
+	 *     (segment='CPT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CPTSegment(ISerializationContext context, CPTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCPTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCPTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCPTSegmentAccess().getSegmentCPTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCPTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCPTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns CSTSegment
+	 *     CSTSegment returns CSTSegment
+	 *
+	 * Constraint:
+	 *     (segment='CST' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_CSTSegment(ISerializationContext context, CSTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getCSTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getCSTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCSTSegmentAccess().getSegmentCSTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getCSTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getCSTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -396,6 +1866,330 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns DAMSegment
+	 *     DAMSegment returns DAMSegment
+	 *
+	 * Constraint:
+	 *     (segment='DAM' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DAMSegment(ISerializationContext context, DAMSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDAMSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDAMSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDAMSegmentAccess().getSegmentDAMKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDAMSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDAMSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DFNSegment
+	 *     DFNSegment returns DFNSegment
+	 *
+	 * Constraint:
+	 *     (segment='DFN' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DFNSegment(ISerializationContext context, DFNSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDFNSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDFNSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDFNSegmentAccess().getSegmentDFNKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDFNSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDFNSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DGSSegment
+	 *     DGSSegment returns DGSSegment
+	 *
+	 * Constraint:
+	 *     (segment='DGS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DGSSegment(ISerializationContext context, DGSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDGSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDGSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDGSSegmentAccess().getSegmentDGSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDGSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDGSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DIISegment
+	 *     DIISegment returns DIISegment
+	 *
+	 * Constraint:
+	 *     (segment='DII' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DIISegment(ISerializationContext context, DIISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDIISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDIISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDIISegmentAccess().getSegmentDIIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDIISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDIISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DIMSegment
+	 *     DIMSegment returns DIMSegment
+	 *
+	 * Constraint:
+	 *     (segment='DIM' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DIMSegment(ISerializationContext context, DIMSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDIMSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDIMSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDIMSegmentAccess().getSegmentDIMKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDIMSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDIMSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DLISegment
+	 *     DLISegment returns DLISegment
+	 *
+	 * Constraint:
+	 *     (segment='DLI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DLISegment(ISerializationContext context, DLISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDLISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDLISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDLISegmentAccess().getSegmentDLIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDLISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDLISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DLMSegment
+	 *     DLMSegment returns DLMSegment
+	 *
+	 * Constraint:
+	 *     (segment='DLM' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DLMSegment(ISerializationContext context, DLMSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDLMSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDLMSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDLMSegmentAccess().getSegmentDLMKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDLMSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDLMSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DMSSegment
+	 *     DMSSegment returns DMSSegment
+	 *
+	 * Constraint:
+	 *     (segment='DMS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DMSSegment(ISerializationContext context, DMSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDMSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDMSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDMSSegmentAccess().getSegmentDMSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDMSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDMSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DOCSegment
+	 *     DOCSegment returns DOCSegment
+	 *
+	 * Constraint:
+	 *     (segment='DOC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DOCSegment(ISerializationContext context, DOCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDOCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDOCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDOCSegmentAccess().getSegmentDOCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDOCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDOCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DRDSegment
+	 *     DRDSegment returns DRDSegment
+	 *
+	 * Constraint:
+	 *     (segment='DRD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DRDSegment(ISerializationContext context, DRDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDRDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDRDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDRDSegmentAccess().getSegmentDRDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDRDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDRDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DSGSegment
+	 *     DSGSegment returns DSGSegment
+	 *
+	 * Constraint:
+	 *     (segment='DSG' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DSGSegment(ISerializationContext context, DSGSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDSGSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDSGSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDSGSegmentAccess().getSegmentDSGKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDSGSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDSGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns DSISegment
+	 *     DSISegment returns DSISegment
+	 *
+	 * Constraint:
+	 *     (segment='DSI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_DSISegment(ISerializationContext context, DSISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDSISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDSISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDSISegmentAccess().getSegmentDSIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getDSISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getDSISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns DTMSegment
 	 *     DTMSegment returns DTMSegment
 	 *
@@ -420,10 +2214,10 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_DateAndTimeFunction(ISerializationContext context, DateAndTimeFunction semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.DATE_AND_TIME_FUNCTION__DATE6) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.DATE_AND_TIME_FUNCTION__DATE6));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.DATE_AND_TIME_FUNCTION__TIME4) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.DATE_AND_TIME_FUNCTION__TIME4));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDateAndTimeFunction_Date6()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDateAndTimeFunction_Date6()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDateAndTimeFunction_Time4()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDateAndTimeFunction_Time4()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDateAndTimeFunctionAccess().getDate6IDTerminalRuleCall_0_0(), semanticObject.getDate6());
@@ -444,8 +2238,8 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_DateOnlyFunction(ISerializationContext context, DateOnlyFunction semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.DATE_ONLY_FUNCTION__DATE6) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.DATE_ONLY_FUNCTION__DATE6));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getDateOnlyFunction_Date6()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getDateOnlyFunction_Date6()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDateOnlyFunctionAccess().getDate6IDTerminalRuleCall_0(), semanticObject.getDate6());
@@ -501,6 +2295,249 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns EDTSegment
+	 *     EDTSegment returns EDTSegment
+	 *
+	 * Constraint:
+	 *     (segment='EDT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EDTSegment(ISerializationContext context, EDTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEDTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEDTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEDTSegmentAccess().getSegmentEDTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEDTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEDTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns EFISegment
+	 *     EFISegment returns EFISegment
+	 *
+	 * Constraint:
+	 *     (segment='EFI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EFISegment(ISerializationContext context, EFISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEFISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEFISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEFISegmentAccess().getSegmentEFIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEFISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEFISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ELMSegment
+	 *     ELMSegment returns ELMSegment
+	 *
+	 * Constraint:
+	 *     (segment='ELM' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ELMSegment(ISerializationContext context, ELMSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getELMSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getELMSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getELMSegmentAccess().getSegmentELMKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getELMSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getELMSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ELUSegment
+	 *     ELUSegment returns ELUSegment
+	 *
+	 * Constraint:
+	 *     (segment='ELU' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ELUSegment(ISerializationContext context, ELUSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getELUSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getELUSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getELUSegmentAccess().getSegmentELUKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getELUSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getELUSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ELVSegment
+	 *     ELVSegment returns ELVSegment
+	 *
+	 * Constraint:
+	 *     (segment='ELV' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ELVSegment(ISerializationContext context, ELVSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getELVSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getELVSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getELVSegmentAccess().getSegmentELVKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getELVSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getELVSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns EMPSegment
+	 *     EMPSegment returns EMPSegment
+	 *
+	 * Constraint:
+	 *     (segment='EMP' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EMPSegment(ISerializationContext context, EMPSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEMPSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEMPSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEMPSegmentAccess().getSegmentEMPKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEMPSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEMPSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns EQASegment
+	 *     EQASegment returns EQASegment
+	 *
+	 * Constraint:
+	 *     (segment='EQA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EQASegment(ISerializationContext context, EQASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEQASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEQASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEQASegmentAccess().getSegmentEQAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEQASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEQASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns EQDSegment
+	 *     EQDSegment returns EQDSegment
+	 *
+	 * Constraint:
+	 *     (segment='EQD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EQDSegment(ISerializationContext context, EQDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEQDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEQDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEQDSegmentAccess().getSegmentEQDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEQDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEQDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns EQNSegment
+	 *     EQNSegment returns EQNSegment
+	 *
+	 * Constraint:
+	 *     (segment='EQN' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EQNSegment(ISerializationContext context, EQNSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEQNSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEQNSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEQNSegmentAccess().getSegmentEQNKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEQNSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEQNSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns ERCSegment
 	 *     ERCSegment returns ERCSegment
 	 *
@@ -516,6 +2553,87 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns ERPSegment
+	 *     ERPSegment returns ERPSegment
+	 *
+	 * Constraint:
+	 *     (segment='ERP' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ERPSegment(ISerializationContext context, ERPSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getERPSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getERPSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getERPSegmentAccess().getSegmentERPKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getERPSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getERPSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns EVESegment
+	 *     EVESegment returns EVESegment
+	 *
+	 * Constraint:
+	 *     (segment='EVE' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EVESegment(ISerializationContext context, EVESegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEVESegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEVESegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEVESegmentAccess().getSegmentEVEKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEVESegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEVESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns EVTSegment
+	 *     EVTSegment returns EVTSegment
+	 *
+	 * Constraint:
+	 *     (segment='EVT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_EVTSegment(ISerializationContext context, EVTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getEVTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getEVTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEVTSegmentAccess().getSegmentEVTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getEVTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getEVTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     EdiModel returns EdiModel
 	 *
 	 * Constraint:
@@ -524,6 +2642,168 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_EdiModel(ISerializationContext context, EdiModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns FCASegment
+	 *     FCASegment returns FCASegment
+	 *
+	 * Constraint:
+	 *     (segment='FCA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_FCASegment(ISerializationContext context, FCASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getFCASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getFCASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFCASegmentAccess().getSegmentFCAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getFCASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getFCASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns FIISegment
+	 *     FIISegment returns FIISegment
+	 *
+	 * Constraint:
+	 *     (segment='FII' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_FIISegment(ISerializationContext context, FIISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getFIISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getFIISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFIISegmentAccess().getSegmentFIIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getFIISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getFIISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns FNSSegment
+	 *     FNSSegment returns FNSSegment
+	 *
+	 * Constraint:
+	 *     (segment='FNS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_FNSSegment(ISerializationContext context, FNSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getFNSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getFNSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFNSSegmentAccess().getSegmentFNSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getFNSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getFNSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns FNTSegment
+	 *     FNTSegment returns FNTSegment
+	 *
+	 * Constraint:
+	 *     (segment='FNT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_FNTSegment(ISerializationContext context, FNTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getFNTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getFNTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFNTSegmentAccess().getSegmentFNTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getFNTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getFNTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns FORSegment
+	 *     FORSegment returns FORSegment
+	 *
+	 * Constraint:
+	 *     (segment='FOR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_FORSegment(ISerializationContext context, FORSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getFORSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getFORSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFORSegmentAccess().getSegmentFORKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getFORSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getFORSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns FSQSegment
+	 *     FSQSegment returns FSQSegment
+	 *
+	 * Constraint:
+	 *     (segment='FSQ' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_FSQSegment(ISerializationContext context, FSQSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getFSQSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getFSQSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFSQSegmentAccess().getSegmentFSQKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getFSQSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getFSQSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -546,6 +2826,519 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_FTXSegment(ISerializationContext context, FTXSegment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GDSSegment
+	 *     GDSSegment returns GDSSegment
+	 *
+	 * Constraint:
+	 *     (segment='GDS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GDSSegment(ISerializationContext context, GDSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGDSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGDSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGDSSegmentAccess().getSegmentGDSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGDSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGDSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GEISegment
+	 *     GEISegment returns GEISegment
+	 *
+	 * Constraint:
+	 *     (segment='GEI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GEISegment(ISerializationContext context, GEISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGEISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGEISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGEISegmentAccess().getSegmentGEIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGEISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGEISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GIDSegment
+	 *     GIDSegment returns GIDSegment
+	 *
+	 * Constraint:
+	 *     (segment='GID' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GIDSegment(ISerializationContext context, GIDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGIDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGIDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGIDSegmentAccess().getSegmentGIDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGIDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGIDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GINSegment
+	 *     GINSegment returns GINSegment
+	 *
+	 * Constraint:
+	 *     (segment='GIN' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GINSegment(ISerializationContext context, GINSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGINSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGINSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGINSegmentAccess().getSegmentGINKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGINSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGINSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GIRSegment
+	 *     GIRSegment returns GIRSegment
+	 *
+	 * Constraint:
+	 *     (segment='GIR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GIRSegment(ISerializationContext context, GIRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGIRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGIRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGIRSegmentAccess().getSegmentGIRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGIRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGIRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GISSegment
+	 *     GISSegment returns GISSegment
+	 *
+	 * Constraint:
+	 *     (segment='GIS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GISSegment(ISerializationContext context, GISSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGISSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGISSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGISSegmentAccess().getSegmentGISKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGISSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGISSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GORSegment
+	 *     GORSegment returns GORSegment
+	 *
+	 * Constraint:
+	 *     (segment='GOR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GORSegment(ISerializationContext context, GORSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGORSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGORSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGORSegmentAccess().getSegmentGORKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGORSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGORSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns GRUSegment
+	 *     GRUSegment returns GRUSegment
+	 *
+	 * Constraint:
+	 *     (segment='GRU' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_GRUSegment(ISerializationContext context, GRUSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getGRUSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getGRUSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGRUSegmentAccess().getSegmentGRUKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getGRUSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getGRUSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns HANSegment
+	 *     HANSegment returns HANSegment
+	 *
+	 * Constraint:
+	 *     (segment='HAN' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_HANSegment(ISerializationContext context, HANSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getHANSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getHANSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getHANSegmentAccess().getSegmentHANKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getHANSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getHANSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns HYNSegment
+	 *     HYNSegment returns HYNSegment
+	 *
+	 * Constraint:
+	 *     (segment='HYN' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_HYNSegment(ISerializationContext context, HYNSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getHYNSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getHYNSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getHYNSegmentAccess().getSegmentHYNKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getHYNSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getHYNSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns ICDSegment
+	 *     ICDSegment returns ICDSegment
+	 *
+	 * Constraint:
+	 *     (segment='ICD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_ICDSegment(ISerializationContext context, ICDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getICDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getICDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getICDSegmentAccess().getSegmentICDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getICDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getICDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns IDESegment
+	 *     IDESegment returns IDESegment
+	 *
+	 * Constraint:
+	 *     (segment='IDE' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_IDESegment(ISerializationContext context, IDESegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIDESegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIDESegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIDESegmentAccess().getSegmentIDEKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getIDESegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getIDESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns IFDSegment
+	 *     IFDSegment returns IFDSegment
+	 *
+	 * Constraint:
+	 *     (segment='IFD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_IFDSegment(ISerializationContext context, IFDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIFDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIFDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIFDSegmentAccess().getSegmentIFDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getIFDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getIFDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns IHCSegment
+	 *     IHCSegment returns IHCSegment
+	 *
+	 * Constraint:
+	 *     (segment='IHC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_IHCSegment(ISerializationContext context, IHCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIHCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIHCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIHCSegmentAccess().getSegmentIHCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getIHCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getIHCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns IMDSegment
+	 *     IMDSegment returns IMDSegment
+	 *
+	 * Constraint:
+	 *     (segment='IMD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_IMDSegment(ISerializationContext context, IMDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIMDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIMDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIMDSegmentAccess().getSegmentIMDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getIMDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getIMDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns INDSegment
+	 *     INDSegment returns INDSegment
+	 *
+	 * Constraint:
+	 *     (segment='IND' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_INDSegment(ISerializationContext context, INDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getINDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getINDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getINDSegmentAccess().getSegmentINDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getINDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getINDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns INPSegment
+	 *     INPSegment returns INPSegment
+	 *
+	 * Constraint:
+	 *     (segment='INP' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_INPSegment(ISerializationContext context, INPSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getINPSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getINPSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getINPSegmentAccess().getSegmentINPKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getINPSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getINPSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns INVSegment
+	 *     INVSegment returns INVSegment
+	 *
+	 * Constraint:
+	 *     (segment='INV' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_INVSegment(ISerializationContext context, INVSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getINVSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getINVSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getINVSegmentAccess().getSegmentINVKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getINVSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getINVSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns IRQSegment
+	 *     IRQSegment returns IRQSegment
+	 *
+	 * Constraint:
+	 *     (segment='IRQ' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_IRQSegment(ISerializationContext context, IRQSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getIRQSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getIRQSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIRQSegmentAccess().getSegmentIRQKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getIRQSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getIRQSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -582,6 +3375,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns LANSegment
+	 *     LANSegment returns LANSegment
+	 *
+	 * Constraint:
+	 *     (segment='LAN' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_LANSegment(ISerializationContext context, LANSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getLANSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getLANSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLANSegmentAccess().getSegmentLANKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getLANSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getLANSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns LINSegment
 	 *     LINSegment returns LINSegment
 	 *
@@ -606,6 +3426,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns LOCSegment
+	 *     LOCSegment returns LOCSegment
+	 *
+	 * Constraint:
+	 *     (segment='LOC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_LOCSegment(ISerializationContext context, LOCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getLOCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getLOCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLOCSegmentAccess().getSegmentLOCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getLOCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getLOCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiFunction returns LocationFunction
 	 *     LocationFunction returns LocationFunction
 	 *
@@ -615,6 +3462,87 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_LocationFunction(ISerializationContext context, LocationFunction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns MEASegment
+	 *     MEASegment returns MEASegment
+	 *
+	 * Constraint:
+	 *     (segment='MEA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_MEASegment(ISerializationContext context, MEASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getMEASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getMEASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMEASegmentAccess().getSegmentMEAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getMEASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getMEASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns MEMSegment
+	 *     MEMSegment returns MEMSegment
+	 *
+	 * Constraint:
+	 *     (segment='MEM' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_MEMSegment(ISerializationContext context, MEMSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getMEMSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getMEMSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMEMSegmentAccess().getSegmentMEMKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getMEMSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getMEMSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns MKSSegment
+	 *     MKSSegment returns MKSSegment
+	 *
+	 * Constraint:
+	 *     (segment='MKS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_MKSSegment(ISerializationContext context, MKSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getMKSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getMKSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMKSSegmentAccess().getSegmentMKSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getMKSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getMKSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -727,6 +3655,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns NATSegment
+	 *     NATSegment returns NATSegment
+	 *
+	 * Constraint:
+	 *     (segment='NAT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_NATSegment(ISerializationContext context, NATSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getNATSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getNATSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNATSegmentAccess().getSegmentNATKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getNATSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getNATSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiFunction returns NameAndAddress
 	 *     NameAndAddress returns NameAndAddress
 	 *
@@ -813,6 +3768,87 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns PACSegment
+	 *     PACSegment returns PACSegment
+	 *
+	 * Constraint:
+	 *     (segment='PAC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PACSegment(ISerializationContext context, PACSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPACSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPACSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPACSegmentAccess().getSegmentPACKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPACSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPACSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PAISegment
+	 *     PAISegment returns PAISegment
+	 *
+	 * Constraint:
+	 *     (segment='PAI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PAISegment(ISerializationContext context, PAISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPAISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPAISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPAISegmentAccess().getSegmentPAIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPAISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPAISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PASSegment
+	 *     PASSegment returns PASSegment
+	 *
+	 * Constraint:
+	 *     (segment='PAS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PASSegment(ISerializationContext context, PASSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPASSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPASSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPASSegmentAccess().getSegmentPASKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPASSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPASSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns PATSegment
 	 *     PATSegment returns PATSegment
 	 *
@@ -822,17 +3858,71 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_PATSegment(ISerializationContext context, PATSegment semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.PAT_SEGMENT__SEGMENT_COUNT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.PAT_SEGMENT__SEGMENT_COUNT));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPATSegment_SegmentCount()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPATSegment_SegmentCount()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getPATSegmentAccess().getSegmentPATKeyword_0_0(), semanticObject.getSegment());
 		feeder.accept(grammarAccess.getPATSegmentAccess().getSegmentCountIDTerminalRuleCall_2_0(), semanticObject.getSegmentCount());
 		feeder.accept(grammarAccess.getPATSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PCCSegment
+	 *     PCCSegment returns PCCSegment
+	 *
+	 * Constraint:
+	 *     (segment='PCC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PCCSegment(ISerializationContext context, PCCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPCCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPCCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPCCSegmentAccess().getSegmentPCCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPCCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPCCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PCDSegment
+	 *     PCDSegment returns PCDSegment
+	 *
+	 * Constraint:
+	 *     (segment='PCD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PCDSegment(ISerializationContext context, PCDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPCDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPCDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPCDSegmentAccess().getSegmentPCDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPCDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPCDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
 		feeder.finish();
 	}
 	
@@ -870,6 +3960,114 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns PERSegment
+	 *     PERSegment returns PERSegment
+	 *
+	 * Constraint:
+	 *     (segment='PER' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PERSegment(ISerializationContext context, PERSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPERSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPERSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPERSegmentAccess().getSegmentPERKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPERSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPERSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PGISegment
+	 *     PGISegment returns PGISegment
+	 *
+	 * Constraint:
+	 *     (segment='PGI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PGISegment(ISerializationContext context, PGISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPGISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPGISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPGISegmentAccess().getSegmentPGIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPGISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPGISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PIASegment
+	 *     PIASegment returns PIASegment
+	 *
+	 * Constraint:
+	 *     (segment='PIA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PIASegment(ISerializationContext context, PIASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPIASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPIASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPIASegmentAccess().getSegmentPIAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPIASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPIASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PNASegment
+	 *     PNASegment returns PNASegment
+	 *
+	 * Constraint:
+	 *     (segment='PNA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PNASegment(ISerializationContext context, PNASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPNASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPNASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPNASegmentAccess().getSegmentPNAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPNASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPNASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns POCSegment
 	 *     POCSegment returns POCSegment
 	 *
@@ -885,6 +4083,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns PRCSegment
+	 *     PRCSegment returns PRCSegment
+	 *
+	 * Constraint:
+	 *     (segment='PRC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PRCSegment(ISerializationContext context, PRCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPRCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPRCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPRCSegmentAccess().getSegmentPRCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPRCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPRCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns PRISegment
 	 *     PRISegment returns PRISegment
 	 *
@@ -894,17 +4119,125 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_PRISegment(ISerializationContext context, PRISegment semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.PRI_SEGMENT__SUB) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.PRI_SEGMENT__SUB));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPRISegment_Sub()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPRISegment_Sub()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getPRISegmentAccess().getSegmentPRIKeyword_0_0(), semanticObject.getSegment());
 		feeder.accept(grammarAccess.getPRISegmentAccess().getSubPriceInformationParserRuleCall_2_0(), semanticObject.getSub());
 		feeder.accept(grammarAccess.getPRISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PRVSegment
+	 *     PRVSegment returns PRVSegment
+	 *
+	 * Constraint:
+	 *     (segment='PRV' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PRVSegment(ISerializationContext context, PRVSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPRVSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPRVSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPRVSegmentAccess().getSegmentPRVKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPRVSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPRVSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PSDSegment
+	 *     PSDSegment returns PSDSegment
+	 *
+	 * Constraint:
+	 *     (segment='PSD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PSDSegment(ISerializationContext context, PSDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPSDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPSDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPSDSegmentAccess().getSegmentPSDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPSDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPSDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PTYSegment
+	 *     PTYSegment returns PTYSegment
+	 *
+	 * Constraint:
+	 *     (segment='PTY' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PTYSegment(ISerializationContext context, PTYSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPTYSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPTYSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPTYSegmentAccess().getSegmentPTYKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPTYSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPTYSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns PYTSegment
+	 *     PYTSegment returns PYTSegment
+	 *
+	 * Constraint:
+	 *     (segment='PYT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_PYTSegment(ISerializationContext context, PYTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getPYTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getPYTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPYTSegmentAccess().getSegmentPYTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getPYTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getPYTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
 		feeder.finish();
 	}
 	
@@ -978,6 +4311,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns QRSSegment
+	 *     QRSSegment returns QRSSegment
+	 *
+	 * Constraint:
+	 *     (segment='QRS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_QRSSegment(ISerializationContext context, QRSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getQRSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getQRSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getQRSSegmentAccess().getSegmentQRSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getQRSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getQRSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns QTYSegment
 	 *     QTYSegment returns QTYSegment
 	 *
@@ -987,6 +4347,60 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_QTYSegment(ISerializationContext context, QTYSegment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns QUASegment
+	 *     QUASegment returns QUASegment
+	 *
+	 * Constraint:
+	 *     (segment='QUA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_QUASegment(ISerializationContext context, QUASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getQUASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getQUASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getQUASegmentAccess().getSegmentQUAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getQUASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getQUASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns QVRSegment
+	 *     QVRSegment returns QVRSegment
+	 *
+	 * Constraint:
+	 *     (segment='QVR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_QVRSegment(ISerializationContext context, QVRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getQVRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getQVRSegmentAccess().getSegmentQVRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getQVRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getQVRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -1008,6 +4422,60 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns RCSSegment
+	 *     RCSSegment returns RCSSegment
+	 *
+	 * Constraint:
+	 *     (segment='RCS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_RCSSegment(ISerializationContext context, RCSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRCSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRCSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRCSSegmentAccess().getSegmentRCSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getRCSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getRCSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns RELSegment
+	 *     RELSegment returns RELSegment
+	 *
+	 * Constraint:
+	 *     (segment='REL' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_RELSegment(ISerializationContext context, RELSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRELSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRELSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRELSegmentAccess().getSegmentRELKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getRELSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getRELSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiSegment returns RFFSegment
 	 *     RFFSegment returns RFFSegment
 	 *
@@ -1017,6 +4485,87 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_RFFSegment(ISerializationContext context, RFFSegment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns RJLSegment
+	 *     RJLSegment returns RJLSegment
+	 *
+	 * Constraint:
+	 *     (segment='RJL' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_RJLSegment(ISerializationContext context, RJLSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRJLSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRJLSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRJLSegmentAccess().getSegmentRJLKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getRJLSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getRJLSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns RNGSegment
+	 *     RNGSegment returns RNGSegment
+	 *
+	 * Constraint:
+	 *     (segment='RNG' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_RNGSegment(ISerializationContext context, RNGSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRNGSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRNGSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRNGSegmentAccess().getSegmentRNGKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getRNGSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getRNGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns RODSegment
+	 *     RODSegment returns RODSegment
+	 *
+	 * Constraint:
+	 *     (segment='ROD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_RODSegment(ISerializationContext context, RODSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRODSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRODSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRODSegmentAccess().getSegmentRODKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getRODSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getRODSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -1038,6 +4587,60 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractEdiSegment returns RSLSegment
+	 *     RSLSegment returns RSLSegment
+	 *
+	 * Constraint:
+	 *     (segment='RSL' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_RSLSegment(ISerializationContext context, RSLSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRSLSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRSLSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRSLSegmentAccess().getSegmentRSLKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getRSLSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getRSLSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns RTESegment
+	 *     RTESegment returns RTESegment
+	 *
+	 * Constraint:
+	 *     (segment='RTE' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_RTESegment(ISerializationContext context, RTESegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getRTESegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getRTESegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRTESegmentAccess().getSegmentRTEKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getRTESegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getRTESegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     AbstractEdiFunction returns Relationship
 	 *     Relationship returns Relationship
 	 *
@@ -1047,6 +4650,411 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_Relationship(ISerializationContext context, Relationship semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SALSegment
+	 *     SALSegment returns SALSegment
+	 *
+	 * Constraint:
+	 *     (segment='SAL' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SALSegment(ISerializationContext context, SALSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSALSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSALSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSALSegmentAccess().getSegmentSALKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSALSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSALSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SCCSegment
+	 *     SCCSegment returns SCCSegment
+	 *
+	 * Constraint:
+	 *     (segment='SCC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SCCSegment(ISerializationContext context, SCCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSCCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSCCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSCCSegmentAccess().getSegmentSCCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSCCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSCCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SCDSegment
+	 *     SCDSegment returns SCDSegment
+	 *
+	 * Constraint:
+	 *     (segment='SCD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SCDSegment(ISerializationContext context, SCDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSCDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSCDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSCDSegmentAccess().getSegmentSCDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSCDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSCDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SEGSegment
+	 *     SEGSegment returns SEGSegment
+	 *
+	 * Constraint:
+	 *     (segment='SEG' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SEGSegment(ISerializationContext context, SEGSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSEGSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSEGSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSEGSegmentAccess().getSegmentSEGKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSEGSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSEGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SELSegment
+	 *     SELSegment returns SELSegment
+	 *
+	 * Constraint:
+	 *     (segment='SEL' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SELSegment(ISerializationContext context, SELSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSELSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSELSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSELSegmentAccess().getSegmentSELKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSELSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSELSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SEQSegment
+	 *     SEQSegment returns SEQSegment
+	 *
+	 * Constraint:
+	 *     (segment='SEQ' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SEQSegment(ISerializationContext context, SEQSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSEQSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSEQSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSEQSegmentAccess().getSegmentSEQKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSEQSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSEQSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SFISegment
+	 *     SFISegment returns SFISegment
+	 *
+	 * Constraint:
+	 *     (segment='SFI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SFISegment(ISerializationContext context, SFISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSFISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSFISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSFISegmentAccess().getSegmentSFIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSFISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSFISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SGPSegment
+	 *     SGPSegment returns SGPSegment
+	 *
+	 * Constraint:
+	 *     (segment='SGP' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SGPSegment(ISerializationContext context, SGPSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSGPSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSGPSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSGPSegmentAccess().getSegmentSGPKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSGPSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSGPSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SGUSegment
+	 *     SGUSegment returns SGUSegment
+	 *
+	 * Constraint:
+	 *     (segment='SGU' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SGUSegment(ISerializationContext context, SGUSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSGUSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSGUSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSGUSegmentAccess().getSegmentSGUKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSGUSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSGUSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SPRSegment
+	 *     SPRSegment returns SPRSegment
+	 *
+	 * Constraint:
+	 *     (segment='SPR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SPRSegment(ISerializationContext context, SPRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSPRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSPRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSPRSegmentAccess().getSegmentSPRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSPRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSPRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns SPSSegment
+	 *     SPSSegment returns SPSSegment
+	 *
+	 * Constraint:
+	 *     (segment='SPS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_SPSSegment(ISerializationContext context, SPSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSPSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSPSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSPSSegmentAccess().getSegmentSPSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSPSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSPSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns STASegment
+	 *     STASegment returns STASegment
+	 *
+	 * Constraint:
+	 *     (segment='STA' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_STASegment(ISerializationContext context, STASegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSTASegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSTASegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSTASegmentAccess().getSegmentSTAKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSTASegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSTASegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns STCSegment
+	 *     STCSegment returns STCSegment
+	 *
+	 * Constraint:
+	 *     (segment='STC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_STCSegment(ISerializationContext context, STCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSTCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSTCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSTCSegmentAccess().getSegmentSTCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSTCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSTCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns STGSegment
+	 *     STGSegment returns STGSegment
+	 *
+	 * Constraint:
+	 *     (segment='STG' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_STGSegment(ISerializationContext context, STGSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSTGSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSTGSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSTGSegmentAccess().getSegmentSTGKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSTGSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSTGSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns STSSegment
+	 *     STSSegment returns STSSegment
+	 *
+	 * Constraint:
+	 *     (segment='STS' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_STSSegment(ISerializationContext context, STSSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getSTSSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getSTSSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSTSSegmentAccess().getSegmentSTSKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getSTSSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getSTSSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -1118,6 +5126,249 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_TAXSegment(ISerializationContext context, TAXSegment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TCCSegment
+	 *     TCCSegment returns TCCSegment
+	 *
+	 * Constraint:
+	 *     (segment='TCC' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TCCSegment(ISerializationContext context, TCCSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTCCSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTCCSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTCCSegmentAccess().getSegmentTCCKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTCCSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTCCSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TDTSegment
+	 *     TDTSegment returns TDTSegment
+	 *
+	 * Constraint:
+	 *     (segment='TDT' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TDTSegment(ISerializationContext context, TDTSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTDTSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTDTSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTDTSegmentAccess().getSegmentTDTKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTDTSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTDTSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TEMSegment
+	 *     TEMSegment returns TEMSegment
+	 *
+	 * Constraint:
+	 *     (segment='TEM' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TEMSegment(ISerializationContext context, TEMSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTEMSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTEMSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTEMSegmentAccess().getSegmentTEMKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTEMSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTEMSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TMDSegment
+	 *     TMDSegment returns TMDSegment
+	 *
+	 * Constraint:
+	 *     (segment='TMD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TMDSegment(ISerializationContext context, TMDSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTMDSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTMDSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTMDSegmentAccess().getSegmentTMDKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTMDSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTMDSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TMPSegment
+	 *     TMPSegment returns TMPSegment
+	 *
+	 * Constraint:
+	 *     (segment='TMP' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TMPSegment(ISerializationContext context, TMPSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTMPSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTMPSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTMPSegmentAccess().getSegmentTMPKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTMPSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTMPSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TODSegment
+	 *     TODSegment returns TODSegment
+	 *
+	 * Constraint:
+	 *     (segment='TOD' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TODSegment(ISerializationContext context, TODSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTODSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTODSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTODSegmentAccess().getSegmentTODKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTODSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTODSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TPLSegment
+	 *     TPLSegment returns TPLSegment
+	 *
+	 * Constraint:
+	 *     (segment='TPL' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TPLSegment(ISerializationContext context, TPLSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTPLSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTPLSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTPLSegmentAccess().getSegmentTPLKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTPLSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTPLSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TRUSegment
+	 *     TRUSegment returns TRUSegment
+	 *
+	 * Constraint:
+	 *     (segment='TRU' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TRUSegment(ISerializationContext context, TRUSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTRUSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTRUSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTRUSegmentAccess().getSegmentTRUKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTRUSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTRUSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns TSRSegment
+	 *     TSRSegment returns TSRSegment
+	 *
+	 * Constraint:
+	 *     (segment='TSR' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_TSRSegment(ISerializationContext context, TSRSegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getTSRSegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getTSRSegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTSRSegmentAccess().getSegmentTSRKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getTSRSegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getTSRSegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	
@@ -1231,10 +5482,10 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_UNASegment(ISerializationContext context, UNASegment semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getUNASegmentAccess().getSegmentUNAKeyword_0_0(), semanticObject.getSegment());
@@ -1311,12 +5562,12 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_UNSSegment(ISerializationContext context, UNSSegment semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__SEGMENT));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.UNS_SEGMENT__SEGMENT_COUNT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.UNS_SEGMENT__SEGMENT_COUNT));
-			if (transientValues.isValueTransient(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT__LINE_END));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getUNSSegment_SegmentCount()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getUNSSegment_SegmentCount()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getUNSSegmentAccess().getSegmentUNSKeyword_0_0(), semanticObject.getSegment());
@@ -1353,6 +5604,33 @@ public class EdilangSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 */
 	protected void sequence_UNZSegment(ISerializationContext context, UNZSegment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractEdiSegment returns VLISegment
+	 *     VLISegment returns VLISegment
+	 *
+	 * Constraint:
+	 *     (segment='VLI' todo=ID lineEnd=QUOTE_AND_NL)
+	 * </pre>
+	 */
+	protected void sequence_VLISegment(ISerializationContext context, VLISegment semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_Segment()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getVLISegment_Todo()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getVLISegment_Todo()));
+			if (transientValues.isValueTransient(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EdilangPackage.eINSTANCE.getAbstractEdiSegment_LineEnd()));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVLISegmentAccess().getSegmentVLIKeyword_0_0(), semanticObject.getSegment());
+		feeder.accept(grammarAccess.getVLISegmentAccess().getTodoIDTerminalRuleCall_2_0(), semanticObject.getTodo());
+		feeder.accept(grammarAccess.getVLISegmentAccess().getLineEndQUOTE_AND_NLTerminalRuleCall_3_0(), semanticObject.getLineEnd());
+		feeder.finish();
 	}
 	
 	

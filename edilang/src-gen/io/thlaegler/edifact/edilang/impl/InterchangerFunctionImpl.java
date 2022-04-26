@@ -86,7 +86,7 @@ public class InterchangerFunctionImpl extends AbstractEdiFunctionImpl implements
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.INTERCHANGER_FUNCTION;
+    return EdilangPackage.eINSTANCE.getInterchangerFunction();
   }
 
   /**

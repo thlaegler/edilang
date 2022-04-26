@@ -87,7 +87,7 @@ public class AbstractEdiSegmentImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ABSTRACT_EDI_SEGMENT;
+    return EdilangPackage.eINSTANCE.getAbstractEdiSegment();
   }
 
   /**

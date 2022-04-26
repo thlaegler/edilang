@@ -100,7 +100,7 @@ public class UNHSegmentImpl extends AbstractEdiSegmentImpl implements UNHSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.UNH_SEGMENT;
+    return EdilangPackage.eINSTANCE.getUNHSegment();
   }
 
   /**

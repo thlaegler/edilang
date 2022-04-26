@@ -184,7 +184,7 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.UNB_SEGMENT;
+    return EdilangPackage.eINSTANCE.getUNBSegment();
   }
 
   /**

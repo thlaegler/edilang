@@ -111,7 +111,7 @@ public class CUXSegmentImpl extends AbstractEdiSegmentImpl implements CUXSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.CUX_SEGMENT;
+    return EdilangPackage.eINSTANCE.getCUXSegment();
   }
 
   /**

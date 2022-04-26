@@ -128,7 +128,7 @@ public class RelationshipImpl extends AbstractEdiFunctionImpl implements Relatio
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.RELATIONSHIP;
+    return EdilangPackage.eINSTANCE.getRelationship();
   }
 
   /**

@@ -108,7 +108,7 @@ public class PartyIdentificationDetailImpl extends MinimalEObjectImpl.Container 
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PARTY_IDENTIFICATION_DETAIL;
+    return EdilangPackage.eINSTANCE.getPartyIdentificationDetail();
   }
 
   /**

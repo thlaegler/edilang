@@ -107,7 +107,7 @@ public class DocumentMessageIdentificationImpl extends AbstractEdiFunctionImpl i
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.DOCUMENT_MESSAGE_IDENTIFICATION;
+    return EdilangPackage.eINSTANCE.getDocumentMessageIdentification();
   }
 
   /**

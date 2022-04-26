@@ -107,7 +107,7 @@ public class POCSegmentImpl extends AbstractEdiSegmentImpl implements POCSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.POC_SEGMENT;
+    return EdilangPackage.eINSTANCE.getPOCSegment();
   }
 
   /**

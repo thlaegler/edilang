@@ -107,7 +107,7 @@ public class OriginatorIdentificationFunctionImpl extends AbstractEdiFunctionImp
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ORIGINATOR_IDENTIFICATION_FUNCTION;
+    return EdilangPackage.eINSTANCE.getOriginatorIdentificationFunction();
   }
 
   /**

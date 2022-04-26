@@ -107,7 +107,7 @@ public class TaxAccountDetailImpl extends AbstractEdiFunctionImpl implements Tax
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.TAX_ACCOUNT_DETAIL;
+    return EdilangPackage.eINSTANCE.getTaxAccountDetail();
   }
 
   /**

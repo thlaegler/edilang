@@ -57,7 +57,7 @@ public class StreetImpl extends AbstractEdiFunctionImpl implements Street
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.STREET;
+    return EdilangPackage.eINSTANCE.getStreet();
   }
 
   /**

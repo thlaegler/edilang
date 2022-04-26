@@ -101,6 +101,696 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
         return createUNHSegmentAdapter();
       }
       @Override
+      public Adapter caseADRSegment(ADRSegment object)
+      {
+        return createADRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseAGRSegment(AGRSegment object)
+      {
+        return createAGRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseAJTSegment(AJTSegment object)
+      {
+        return createAJTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseALCSegment(ALCSegment object)
+      {
+        return createALCSegmentAdapter();
+      }
+      @Override
+      public Adapter caseALISegment(ALISegment object)
+      {
+        return createALISegmentAdapter();
+      }
+      @Override
+      public Adapter caseAPPSegment(APPSegment object)
+      {
+        return createAPPSegmentAdapter();
+      }
+      @Override
+      public Adapter caseAPRSegment(APRSegment object)
+      {
+        return createAPRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseARDSegment(ARDSegment object)
+      {
+        return createARDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseARRSegment(ARRSegment object)
+      {
+        return createARRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseASISegment(ASISegment object)
+      {
+        return createASISegmentAdapter();
+      }
+      @Override
+      public Adapter caseATTSegment(ATTSegment object)
+      {
+        return createATTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseAUTSegment(AUTSegment object)
+      {
+        return createAUTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseBASSegment(BASSegment object)
+      {
+        return createBASSegmentAdapter();
+      }
+      @Override
+      public Adapter caseBIISegment(BIISegment object)
+      {
+        return createBIISegmentAdapter();
+      }
+      @Override
+      public Adapter caseBUSSegment(BUSSegment object)
+      {
+        return createBUSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCAVSegment(CAVSegment object)
+      {
+        return createCAVSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCCDSegment(CCDSegment object)
+      {
+        return createCCDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCCISegment(CCISegment object)
+      {
+        return createCCISegmentAdapter();
+      }
+      @Override
+      public Adapter caseCDISegment(CDISegment object)
+      {
+        return createCDISegmentAdapter();
+      }
+      @Override
+      public Adapter caseCDSSegment(CDSSegment object)
+      {
+        return createCDSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCDVSegment(CDVSegment object)
+      {
+        return createCDVSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCEDSegment(CEDSegment object)
+      {
+        return createCEDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCINSegment(CINSegment object)
+      {
+        return createCINSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCLASegment(CLASegment object)
+      {
+        return createCLASegmentAdapter();
+      }
+      @Override
+      public Adapter caseCLISegment(CLISegment object)
+      {
+        return createCLISegmentAdapter();
+      }
+      @Override
+      public Adapter caseCMPSegment(CMPSegment object)
+      {
+        return createCMPSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCNISegment(CNISegment object)
+      {
+        return createCNISegmentAdapter();
+      }
+      @Override
+      public Adapter caseCODSegment(CODSegment object)
+      {
+        return createCODSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCOMSegment(COMSegment object)
+      {
+        return createCOMSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCOTSegment(COTSegment object)
+      {
+        return createCOTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCPISegment(CPISegment object)
+      {
+        return createCPISegmentAdapter();
+      }
+      @Override
+      public Adapter caseCPSSegment(CPSSegment object)
+      {
+        return createCPSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCPTSegment(CPTSegment object)
+      {
+        return createCPTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseCSTSegment(CSTSegment object)
+      {
+        return createCSTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDAMSegment(DAMSegment object)
+      {
+        return createDAMSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDFNSegment(DFNSegment object)
+      {
+        return createDFNSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDGSSegment(DGSSegment object)
+      {
+        return createDGSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDIISegment(DIISegment object)
+      {
+        return createDIISegmentAdapter();
+      }
+      @Override
+      public Adapter caseDIMSegment(DIMSegment object)
+      {
+        return createDIMSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDLISegment(DLISegment object)
+      {
+        return createDLISegmentAdapter();
+      }
+      @Override
+      public Adapter caseDLMSegment(DLMSegment object)
+      {
+        return createDLMSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDMSSegment(DMSSegment object)
+      {
+        return createDMSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDOCSegment(DOCSegment object)
+      {
+        return createDOCSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDRDSegment(DRDSegment object)
+      {
+        return createDRDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDSGSegment(DSGSegment object)
+      {
+        return createDSGSegmentAdapter();
+      }
+      @Override
+      public Adapter caseDSISegment(DSISegment object)
+      {
+        return createDSISegmentAdapter();
+      }
+      @Override
+      public Adapter caseEDTSegment(EDTSegment object)
+      {
+        return createEDTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseEFISegment(EFISegment object)
+      {
+        return createEFISegmentAdapter();
+      }
+      @Override
+      public Adapter caseELMSegment(ELMSegment object)
+      {
+        return createELMSegmentAdapter();
+      }
+      @Override
+      public Adapter caseELUSegment(ELUSegment object)
+      {
+        return createELUSegmentAdapter();
+      }
+      @Override
+      public Adapter caseELVSegment(ELVSegment object)
+      {
+        return createELVSegmentAdapter();
+      }
+      @Override
+      public Adapter caseEMPSegment(EMPSegment object)
+      {
+        return createEMPSegmentAdapter();
+      }
+      @Override
+      public Adapter caseEQASegment(EQASegment object)
+      {
+        return createEQASegmentAdapter();
+      }
+      @Override
+      public Adapter caseEQDSegment(EQDSegment object)
+      {
+        return createEQDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseEQNSegment(EQNSegment object)
+      {
+        return createEQNSegmentAdapter();
+      }
+      @Override
+      public Adapter caseERPSegment(ERPSegment object)
+      {
+        return createERPSegmentAdapter();
+      }
+      @Override
+      public Adapter caseEVESegment(EVESegment object)
+      {
+        return createEVESegmentAdapter();
+      }
+      @Override
+      public Adapter caseEVTSegment(EVTSegment object)
+      {
+        return createEVTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseFCASegment(FCASegment object)
+      {
+        return createFCASegmentAdapter();
+      }
+      @Override
+      public Adapter caseFIISegment(FIISegment object)
+      {
+        return createFIISegmentAdapter();
+      }
+      @Override
+      public Adapter caseFNSSegment(FNSSegment object)
+      {
+        return createFNSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseFNTSegment(FNTSegment object)
+      {
+        return createFNTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseFORSegment(FORSegment object)
+      {
+        return createFORSegmentAdapter();
+      }
+      @Override
+      public Adapter caseFSQSegment(FSQSegment object)
+      {
+        return createFSQSegmentAdapter();
+      }
+      @Override
+      public Adapter caseGDSSegment(GDSSegment object)
+      {
+        return createGDSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseGEISegment(GEISegment object)
+      {
+        return createGEISegmentAdapter();
+      }
+      @Override
+      public Adapter caseGIDSegment(GIDSegment object)
+      {
+        return createGIDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseGINSegment(GINSegment object)
+      {
+        return createGINSegmentAdapter();
+      }
+      @Override
+      public Adapter caseGIRSegment(GIRSegment object)
+      {
+        return createGIRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseGISSegment(GISSegment object)
+      {
+        return createGISSegmentAdapter();
+      }
+      @Override
+      public Adapter caseGORSegment(GORSegment object)
+      {
+        return createGORSegmentAdapter();
+      }
+      @Override
+      public Adapter caseGRUSegment(GRUSegment object)
+      {
+        return createGRUSegmentAdapter();
+      }
+      @Override
+      public Adapter caseHANSegment(HANSegment object)
+      {
+        return createHANSegmentAdapter();
+      }
+      @Override
+      public Adapter caseHYNSegment(HYNSegment object)
+      {
+        return createHYNSegmentAdapter();
+      }
+      @Override
+      public Adapter caseICDSegment(ICDSegment object)
+      {
+        return createICDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseIDESegment(IDESegment object)
+      {
+        return createIDESegmentAdapter();
+      }
+      @Override
+      public Adapter caseIFDSegment(IFDSegment object)
+      {
+        return createIFDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseIHCSegment(IHCSegment object)
+      {
+        return createIHCSegmentAdapter();
+      }
+      @Override
+      public Adapter caseIMDSegment(IMDSegment object)
+      {
+        return createIMDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseINDSegment(INDSegment object)
+      {
+        return createINDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseINPSegment(INPSegment object)
+      {
+        return createINPSegmentAdapter();
+      }
+      @Override
+      public Adapter caseINVSegment(INVSegment object)
+      {
+        return createINVSegmentAdapter();
+      }
+      @Override
+      public Adapter caseIRQSegment(IRQSegment object)
+      {
+        return createIRQSegmentAdapter();
+      }
+      @Override
+      public Adapter caseLANSegment(LANSegment object)
+      {
+        return createLANSegmentAdapter();
+      }
+      @Override
+      public Adapter caseLOCSegment(LOCSegment object)
+      {
+        return createLOCSegmentAdapter();
+      }
+      @Override
+      public Adapter caseMEASegment(MEASegment object)
+      {
+        return createMEASegmentAdapter();
+      }
+      @Override
+      public Adapter caseMEMSegment(MEMSegment object)
+      {
+        return createMEMSegmentAdapter();
+      }
+      @Override
+      public Adapter caseMKSSegment(MKSSegment object)
+      {
+        return createMKSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseNATSegment(NATSegment object)
+      {
+        return createNATSegmentAdapter();
+      }
+      @Override
+      public Adapter casePACSegment(PACSegment object)
+      {
+        return createPACSegmentAdapter();
+      }
+      @Override
+      public Adapter casePAISegment(PAISegment object)
+      {
+        return createPAISegmentAdapter();
+      }
+      @Override
+      public Adapter casePASSegment(PASSegment object)
+      {
+        return createPASSegmentAdapter();
+      }
+      @Override
+      public Adapter casePCCSegment(PCCSegment object)
+      {
+        return createPCCSegmentAdapter();
+      }
+      @Override
+      public Adapter casePCDSegment(PCDSegment object)
+      {
+        return createPCDSegmentAdapter();
+      }
+      @Override
+      public Adapter casePERSegment(PERSegment object)
+      {
+        return createPERSegmentAdapter();
+      }
+      @Override
+      public Adapter casePGISegment(PGISegment object)
+      {
+        return createPGISegmentAdapter();
+      }
+      @Override
+      public Adapter casePIASegment(PIASegment object)
+      {
+        return createPIASegmentAdapter();
+      }
+      @Override
+      public Adapter casePNASegment(PNASegment object)
+      {
+        return createPNASegmentAdapter();
+      }
+      @Override
+      public Adapter casePRCSegment(PRCSegment object)
+      {
+        return createPRCSegmentAdapter();
+      }
+      @Override
+      public Adapter casePRVSegment(PRVSegment object)
+      {
+        return createPRVSegmentAdapter();
+      }
+      @Override
+      public Adapter casePSDSegment(PSDSegment object)
+      {
+        return createPSDSegmentAdapter();
+      }
+      @Override
+      public Adapter casePTYSegment(PTYSegment object)
+      {
+        return createPTYSegmentAdapter();
+      }
+      @Override
+      public Adapter casePYTSegment(PYTSegment object)
+      {
+        return createPYTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseQRSSegment(QRSSegment object)
+      {
+        return createQRSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseQUASegment(QUASegment object)
+      {
+        return createQUASegmentAdapter();
+      }
+      @Override
+      public Adapter caseQVRSegment(QVRSegment object)
+      {
+        return createQVRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseRCSSegment(RCSSegment object)
+      {
+        return createRCSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseRELSegment(RELSegment object)
+      {
+        return createRELSegmentAdapter();
+      }
+      @Override
+      public Adapter caseRJLSegment(RJLSegment object)
+      {
+        return createRJLSegmentAdapter();
+      }
+      @Override
+      public Adapter caseRNGSegment(RNGSegment object)
+      {
+        return createRNGSegmentAdapter();
+      }
+      @Override
+      public Adapter caseRODSegment(RODSegment object)
+      {
+        return createRODSegmentAdapter();
+      }
+      @Override
+      public Adapter caseRSLSegment(RSLSegment object)
+      {
+        return createRSLSegmentAdapter();
+      }
+      @Override
+      public Adapter caseRTESegment(RTESegment object)
+      {
+        return createRTESegmentAdapter();
+      }
+      @Override
+      public Adapter caseSALSegment(SALSegment object)
+      {
+        return createSALSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSCCSegment(SCCSegment object)
+      {
+        return createSCCSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSCDSegment(SCDSegment object)
+      {
+        return createSCDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSEGSegment(SEGSegment object)
+      {
+        return createSEGSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSELSegment(SELSegment object)
+      {
+        return createSELSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSEQSegment(SEQSegment object)
+      {
+        return createSEQSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSFISegment(SFISegment object)
+      {
+        return createSFISegmentAdapter();
+      }
+      @Override
+      public Adapter caseSGPSegment(SGPSegment object)
+      {
+        return createSGPSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSGUSegment(SGUSegment object)
+      {
+        return createSGUSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSPRSegment(SPRSegment object)
+      {
+        return createSPRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSPSSegment(SPSSegment object)
+      {
+        return createSPSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSTASegment(STASegment object)
+      {
+        return createSTASegmentAdapter();
+      }
+      @Override
+      public Adapter caseSTCSegment(STCSegment object)
+      {
+        return createSTCSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSTGSegment(STGSegment object)
+      {
+        return createSTGSegmentAdapter();
+      }
+      @Override
+      public Adapter caseSTSSegment(STSSegment object)
+      {
+        return createSTSSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTCCSegment(TCCSegment object)
+      {
+        return createTCCSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTDTSegment(TDTSegment object)
+      {
+        return createTDTSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTEMSegment(TEMSegment object)
+      {
+        return createTEMSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTMDSegment(TMDSegment object)
+      {
+        return createTMDSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTMPSegment(TMPSegment object)
+      {
+        return createTMPSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTODSegment(TODSegment object)
+      {
+        return createTODSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTPLSegment(TPLSegment object)
+      {
+        return createTPLSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTRUSegment(TRUSegment object)
+      {
+        return createTRUSegmentAdapter();
+      }
+      @Override
+      public Adapter caseTSRSegment(TSRSegment object)
+      {
+        return createTSRSegmentAdapter();
+      }
+      @Override
+      public Adapter caseVLISegment(VLISegment object)
+      {
+        return createVLISegmentAdapter();
+      }
+      @Override
       public Adapter caseMSGSegment(MSGSegment object)
       {
         return createMSGSegmentAdapter();
@@ -478,6 +1168,2076 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUNHSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ADRSegment <em>ADR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ADRSegment
+   * @generated
+   */
+  public Adapter createADRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.AGRSegment <em>AGR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.AGRSegment
+   * @generated
+   */
+  public Adapter createAGRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.AJTSegment <em>AJT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.AJTSegment
+   * @generated
+   */
+  public Adapter createAJTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ALCSegment <em>ALC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ALCSegment
+   * @generated
+   */
+  public Adapter createALCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ALISegment <em>ALI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ALISegment
+   * @generated
+   */
+  public Adapter createALISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.APPSegment <em>APP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.APPSegment
+   * @generated
+   */
+  public Adapter createAPPSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.APRSegment <em>APR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.APRSegment
+   * @generated
+   */
+  public Adapter createAPRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ARDSegment <em>ARD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ARDSegment
+   * @generated
+   */
+  public Adapter createARDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ARRSegment <em>ARR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ARRSegment
+   * @generated
+   */
+  public Adapter createARRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ASISegment <em>ASI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ASISegment
+   * @generated
+   */
+  public Adapter createASISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ATTSegment <em>ATT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ATTSegment
+   * @generated
+   */
+  public Adapter createATTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.AUTSegment <em>AUT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.AUTSegment
+   * @generated
+   */
+  public Adapter createAUTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.BASSegment <em>BAS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.BASSegment
+   * @generated
+   */
+  public Adapter createBASSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.BIISegment <em>BII Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.BIISegment
+   * @generated
+   */
+  public Adapter createBIISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.BUSSegment <em>BUS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.BUSSegment
+   * @generated
+   */
+  public Adapter createBUSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CAVSegment <em>CAV Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CAVSegment
+   * @generated
+   */
+  public Adapter createCAVSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CCDSegment <em>CCD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CCDSegment
+   * @generated
+   */
+  public Adapter createCCDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CCISegment <em>CCI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CCISegment
+   * @generated
+   */
+  public Adapter createCCISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CDISegment <em>CDI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CDISegment
+   * @generated
+   */
+  public Adapter createCDISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CDSSegment <em>CDS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CDSSegment
+   * @generated
+   */
+  public Adapter createCDSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CDVSegment <em>CDV Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CDVSegment
+   * @generated
+   */
+  public Adapter createCDVSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CEDSegment <em>CED Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CEDSegment
+   * @generated
+   */
+  public Adapter createCEDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CINSegment <em>CIN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CINSegment
+   * @generated
+   */
+  public Adapter createCINSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CLASegment <em>CLA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CLASegment
+   * @generated
+   */
+  public Adapter createCLASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CLISegment <em>CLI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CLISegment
+   * @generated
+   */
+  public Adapter createCLISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CMPSegment <em>CMP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CMPSegment
+   * @generated
+   */
+  public Adapter createCMPSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CNISegment <em>CNI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CNISegment
+   * @generated
+   */
+  public Adapter createCNISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CODSegment <em>COD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CODSegment
+   * @generated
+   */
+  public Adapter createCODSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.COMSegment <em>COM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.COMSegment
+   * @generated
+   */
+  public Adapter createCOMSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.COTSegment <em>COT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.COTSegment
+   * @generated
+   */
+  public Adapter createCOTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CPISegment <em>CPI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CPISegment
+   * @generated
+   */
+  public Adapter createCPISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CPSSegment <em>CPS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CPSSegment
+   * @generated
+   */
+  public Adapter createCPSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CPTSegment <em>CPT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CPTSegment
+   * @generated
+   */
+  public Adapter createCPTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CSTSegment <em>CST Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CSTSegment
+   * @generated
+   */
+  public Adapter createCSTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DAMSegment <em>DAM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DAMSegment
+   * @generated
+   */
+  public Adapter createDAMSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DFNSegment <em>DFN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DFNSegment
+   * @generated
+   */
+  public Adapter createDFNSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DGSSegment <em>DGS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DGSSegment
+   * @generated
+   */
+  public Adapter createDGSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DIISegment <em>DII Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DIISegment
+   * @generated
+   */
+  public Adapter createDIISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DIMSegment <em>DIM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DIMSegment
+   * @generated
+   */
+  public Adapter createDIMSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DLISegment <em>DLI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DLISegment
+   * @generated
+   */
+  public Adapter createDLISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DLMSegment <em>DLM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DLMSegment
+   * @generated
+   */
+  public Adapter createDLMSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DMSSegment <em>DMS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DMSSegment
+   * @generated
+   */
+  public Adapter createDMSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DOCSegment <em>DOC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DOCSegment
+   * @generated
+   */
+  public Adapter createDOCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DRDSegment <em>DRD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DRDSegment
+   * @generated
+   */
+  public Adapter createDRDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DSGSegment <em>DSG Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DSGSegment
+   * @generated
+   */
+  public Adapter createDSGSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.DSISegment <em>DSI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.DSISegment
+   * @generated
+   */
+  public Adapter createDSISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EDTSegment <em>EDT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EDTSegment
+   * @generated
+   */
+  public Adapter createEDTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EFISegment <em>EFI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EFISegment
+   * @generated
+   */
+  public Adapter createEFISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ELMSegment <em>ELM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ELMSegment
+   * @generated
+   */
+  public Adapter createELMSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ELUSegment <em>ELU Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ELUSegment
+   * @generated
+   */
+  public Adapter createELUSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ELVSegment <em>ELV Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ELVSegment
+   * @generated
+   */
+  public Adapter createELVSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EMPSegment <em>EMP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EMPSegment
+   * @generated
+   */
+  public Adapter createEMPSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EQASegment <em>EQA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EQASegment
+   * @generated
+   */
+  public Adapter createEQASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EQDSegment <em>EQD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EQDSegment
+   * @generated
+   */
+  public Adapter createEQDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EQNSegment <em>EQN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EQNSegment
+   * @generated
+   */
+  public Adapter createEQNSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ERPSegment <em>ERP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ERPSegment
+   * @generated
+   */
+  public Adapter createERPSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EVESegment <em>EVE Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EVESegment
+   * @generated
+   */
+  public Adapter createEVESegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.EVTSegment <em>EVT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.EVTSegment
+   * @generated
+   */
+  public Adapter createEVTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.FCASegment <em>FCA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.FCASegment
+   * @generated
+   */
+  public Adapter createFCASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.FIISegment <em>FII Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.FIISegment
+   * @generated
+   */
+  public Adapter createFIISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.FNSSegment <em>FNS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.FNSSegment
+   * @generated
+   */
+  public Adapter createFNSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.FNTSegment <em>FNT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.FNTSegment
+   * @generated
+   */
+  public Adapter createFNTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.FORSegment <em>FOR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.FORSegment
+   * @generated
+   */
+  public Adapter createFORSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.FSQSegment <em>FSQ Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.FSQSegment
+   * @generated
+   */
+  public Adapter createFSQSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GDSSegment <em>GDS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GDSSegment
+   * @generated
+   */
+  public Adapter createGDSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GEISegment <em>GEI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GEISegment
+   * @generated
+   */
+  public Adapter createGEISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GIDSegment <em>GID Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GIDSegment
+   * @generated
+   */
+  public Adapter createGIDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GINSegment <em>GIN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GINSegment
+   * @generated
+   */
+  public Adapter createGINSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GIRSegment <em>GIR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GIRSegment
+   * @generated
+   */
+  public Adapter createGIRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GISSegment <em>GIS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GISSegment
+   * @generated
+   */
+  public Adapter createGISSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GORSegment <em>GOR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GORSegment
+   * @generated
+   */
+  public Adapter createGORSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GRUSegment <em>GRU Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GRUSegment
+   * @generated
+   */
+  public Adapter createGRUSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.HANSegment <em>HAN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.HANSegment
+   * @generated
+   */
+  public Adapter createHANSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.HYNSegment <em>HYN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.HYNSegment
+   * @generated
+   */
+  public Adapter createHYNSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ICDSegment <em>ICD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ICDSegment
+   * @generated
+   */
+  public Adapter createICDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.IDESegment <em>IDE Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.IDESegment
+   * @generated
+   */
+  public Adapter createIDESegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.IFDSegment <em>IFD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.IFDSegment
+   * @generated
+   */
+  public Adapter createIFDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.IHCSegment <em>IHC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.IHCSegment
+   * @generated
+   */
+  public Adapter createIHCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.IMDSegment <em>IMD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.IMDSegment
+   * @generated
+   */
+  public Adapter createIMDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.INDSegment <em>IND Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.INDSegment
+   * @generated
+   */
+  public Adapter createINDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.INPSegment <em>INP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.INPSegment
+   * @generated
+   */
+  public Adapter createINPSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.INVSegment <em>INV Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.INVSegment
+   * @generated
+   */
+  public Adapter createINVSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.IRQSegment <em>IRQ Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.IRQSegment
+   * @generated
+   */
+  public Adapter createIRQSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.LANSegment <em>LAN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.LANSegment
+   * @generated
+   */
+  public Adapter createLANSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.LOCSegment <em>LOC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.LOCSegment
+   * @generated
+   */
+  public Adapter createLOCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MEASegment <em>MEA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.MEASegment
+   * @generated
+   */
+  public Adapter createMEASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MEMSegment <em>MEM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.MEMSegment
+   * @generated
+   */
+  public Adapter createMEMSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MKSSegment <em>MKS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.MKSSegment
+   * @generated
+   */
+  public Adapter createMKSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.NATSegment <em>NAT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.NATSegment
+   * @generated
+   */
+  public Adapter createNATSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PACSegment <em>PAC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PACSegment
+   * @generated
+   */
+  public Adapter createPACSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PAISegment <em>PAI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PAISegment
+   * @generated
+   */
+  public Adapter createPAISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PASSegment <em>PAS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PASSegment
+   * @generated
+   */
+  public Adapter createPASSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PCCSegment <em>PCC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PCCSegment
+   * @generated
+   */
+  public Adapter createPCCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PCDSegment <em>PCD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PCDSegment
+   * @generated
+   */
+  public Adapter createPCDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PERSegment <em>PER Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PERSegment
+   * @generated
+   */
+  public Adapter createPERSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PGISegment <em>PGI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PGISegment
+   * @generated
+   */
+  public Adapter createPGISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PIASegment <em>PIA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PIASegment
+   * @generated
+   */
+  public Adapter createPIASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PNASegment <em>PNA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PNASegment
+   * @generated
+   */
+  public Adapter createPNASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PRCSegment <em>PRC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PRCSegment
+   * @generated
+   */
+  public Adapter createPRCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PRVSegment <em>PRV Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PRVSegment
+   * @generated
+   */
+  public Adapter createPRVSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PSDSegment <em>PSD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PSDSegment
+   * @generated
+   */
+  public Adapter createPSDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PTYSegment <em>PTY Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PTYSegment
+   * @generated
+   */
+  public Adapter createPTYSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PYTSegment <em>PYT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PYTSegment
+   * @generated
+   */
+  public Adapter createPYTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.QRSSegment <em>QRS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.QRSSegment
+   * @generated
+   */
+  public Adapter createQRSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.QUASegment <em>QUA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.QUASegment
+   * @generated
+   */
+  public Adapter createQUASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.QVRSegment <em>QVR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.QVRSegment
+   * @generated
+   */
+  public Adapter createQVRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.RCSSegment <em>RCS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.RCSSegment
+   * @generated
+   */
+  public Adapter createRCSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.RELSegment <em>REL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.RELSegment
+   * @generated
+   */
+  public Adapter createRELSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.RJLSegment <em>RJL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.RJLSegment
+   * @generated
+   */
+  public Adapter createRJLSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.RNGSegment <em>RNG Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.RNGSegment
+   * @generated
+   */
+  public Adapter createRNGSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.RODSegment <em>ROD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.RODSegment
+   * @generated
+   */
+  public Adapter createRODSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.RSLSegment <em>RSL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.RSLSegment
+   * @generated
+   */
+  public Adapter createRSLSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.RTESegment <em>RTE Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.RTESegment
+   * @generated
+   */
+  public Adapter createRTESegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SALSegment <em>SAL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SALSegment
+   * @generated
+   */
+  public Adapter createSALSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SCCSegment <em>SCC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SCCSegment
+   * @generated
+   */
+  public Adapter createSCCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SCDSegment <em>SCD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SCDSegment
+   * @generated
+   */
+  public Adapter createSCDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SEGSegment <em>SEG Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SEGSegment
+   * @generated
+   */
+  public Adapter createSEGSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SELSegment <em>SEL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SELSegment
+   * @generated
+   */
+  public Adapter createSELSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SEQSegment <em>SEQ Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SEQSegment
+   * @generated
+   */
+  public Adapter createSEQSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SFISegment <em>SFI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SFISegment
+   * @generated
+   */
+  public Adapter createSFISegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SGPSegment <em>SGP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SGPSegment
+   * @generated
+   */
+  public Adapter createSGPSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SGUSegment <em>SGU Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SGUSegment
+   * @generated
+   */
+  public Adapter createSGUSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SPRSegment <em>SPR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SPRSegment
+   * @generated
+   */
+  public Adapter createSPRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SPSSegment <em>SPS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SPSSegment
+   * @generated
+   */
+  public Adapter createSPSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.STASegment <em>STA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.STASegment
+   * @generated
+   */
+  public Adapter createSTASegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.STCSegment <em>STC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.STCSegment
+   * @generated
+   */
+  public Adapter createSTCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.STGSegment <em>STG Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.STGSegment
+   * @generated
+   */
+  public Adapter createSTGSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.STSSegment <em>STS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.STSSegment
+   * @generated
+   */
+  public Adapter createSTSSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TCCSegment <em>TCC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TCCSegment
+   * @generated
+   */
+  public Adapter createTCCSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TDTSegment <em>TDT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TDTSegment
+   * @generated
+   */
+  public Adapter createTDTSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TEMSegment <em>TEM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TEMSegment
+   * @generated
+   */
+  public Adapter createTEMSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TMDSegment <em>TMD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TMDSegment
+   * @generated
+   */
+  public Adapter createTMDSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TMPSegment <em>TMP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TMPSegment
+   * @generated
+   */
+  public Adapter createTMPSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TODSegment <em>TOD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TODSegment
+   * @generated
+   */
+  public Adapter createTODSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TPLSegment <em>TPL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TPLSegment
+   * @generated
+   */
+  public Adapter createTPLSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TRUSegment <em>TRU Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TRUSegment
+   * @generated
+   */
+  public Adapter createTRUSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TSRSegment <em>TSR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TSRSegment
+   * @generated
+   */
+  public Adapter createTSRSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.VLISegment <em>VLI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.VLISegment
+   * @generated
+   */
+  public Adapter createVLISegmentAdapter()
   {
     return null;
   }

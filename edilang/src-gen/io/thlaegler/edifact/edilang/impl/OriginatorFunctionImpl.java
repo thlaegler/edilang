@@ -107,7 +107,7 @@ public class OriginatorFunctionImpl extends AbstractEdiFunctionImpl implements O
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ORIGINATOR_FUNCTION;
+    return EdilangPackage.eINSTANCE.getOriginatorFunction();
   }
 
   /**

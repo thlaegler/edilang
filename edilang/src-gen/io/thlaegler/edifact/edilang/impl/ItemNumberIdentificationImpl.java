@@ -128,7 +128,7 @@ public class ItemNumberIdentificationImpl extends AbstractEdiFunctionImpl implem
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ITEM_NUMBER_IDENTIFICATION;
+    return EdilangPackage.eINSTANCE.getItemNumberIdentification();
   }
 
   /**

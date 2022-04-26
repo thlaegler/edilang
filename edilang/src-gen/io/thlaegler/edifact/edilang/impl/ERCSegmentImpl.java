@@ -62,7 +62,7 @@ public class ERCSegmentImpl extends AbstractEdiSegmentImpl implements ERCSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ERC_SEGMENT;
+    return EdilangPackage.eINSTANCE.getERCSegment();
   }
 
   /**

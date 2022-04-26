@@ -107,7 +107,7 @@ public class SystemDetailFunctionImpl extends AbstractEdiFunctionImpl implements
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.SYSTEM_DETAIL_FUNCTION;
+    return EdilangPackage.eINSTANCE.getSystemDetailFunction();
   }
 
   /**

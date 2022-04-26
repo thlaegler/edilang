@@ -189,7 +189,7 @@ public class ORGSegmentImpl extends AbstractEdiSegmentImpl implements ORGSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.ORG_SEGMENT;
+    return EdilangPackage.eINSTANCE.getORGSegment();
   }
 
   /**

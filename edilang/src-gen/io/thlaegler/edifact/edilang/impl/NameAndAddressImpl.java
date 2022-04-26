@@ -57,7 +57,7 @@ public class NameAndAddressImpl extends AbstractEdiFunctionImpl implements NameA
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.NAME_AND_ADDRESS;
+    return EdilangPackage.eINSTANCE.getNameAndAddress();
   }
 
   /**

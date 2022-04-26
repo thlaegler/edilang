@@ -128,7 +128,7 @@ public class DocumentMessageImpl extends AbstractEdiFunctionImpl implements Docu
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.DOCUMENT_MESSAGE;
+    return EdilangPackage.eINSTANCE.getDocumentMessage();
   }
 
   /**

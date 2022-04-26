@@ -154,7 +154,7 @@ public class LINSegmentImpl extends AbstractEdiSegmentImpl implements LINSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.LIN_SEGMENT;
+    return EdilangPackage.eINSTANCE.getLINSegment();
   }
 
   /**

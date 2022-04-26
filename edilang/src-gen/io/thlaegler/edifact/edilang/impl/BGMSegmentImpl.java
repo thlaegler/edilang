@@ -112,7 +112,7 @@ public class BGMSegmentImpl extends AbstractEdiSegmentImpl implements BGMSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.BGM_SEGMENT;
+    return EdilangPackage.eINSTANCE.getBGMSegment();
   }
 
   /**

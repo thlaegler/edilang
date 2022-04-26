@@ -64,7 +64,7 @@ public class EdiModelImpl extends MinimalEObjectImpl.Container implements EdiMod
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.EDI_MODEL;
+    return EdilangPackage.eINSTANCE.getEdiModel();
   }
 
   /**

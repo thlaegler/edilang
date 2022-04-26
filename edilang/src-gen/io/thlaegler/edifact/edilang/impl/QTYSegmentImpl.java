@@ -62,7 +62,7 @@ public class QTYSegmentImpl extends AbstractEdiSegmentImpl implements QTYSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.QTY_SEGMENT;
+    return EdilangPackage.eINSTANCE.getQTYSegment();
   }
 
   /**

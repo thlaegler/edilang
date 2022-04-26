@@ -86,7 +86,7 @@ public class UNBHeaderImpl extends AbstractEdiFunctionImpl implements UNBHeader
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.UNB_HEADER;
+    return EdilangPackage.eINSTANCE.getUNBHeader();
   }
 
   /**

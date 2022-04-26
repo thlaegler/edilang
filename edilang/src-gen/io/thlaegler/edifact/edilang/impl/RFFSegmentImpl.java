@@ -86,7 +86,7 @@ public class RFFSegmentImpl extends AbstractEdiSegmentImpl implements RFFSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.RFF_SEGMENT;
+    return EdilangPackage.eINSTANCE.getRFFSegment();
   }
 
   /**

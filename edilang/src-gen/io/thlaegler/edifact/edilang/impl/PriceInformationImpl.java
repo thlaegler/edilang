@@ -170,7 +170,7 @@ public class PriceInformationImpl extends AbstractEdiFunctionImpl implements Pri
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PRICE_INFORMATION;
+    return EdilangPackage.eINSTANCE.getPriceInformation();
   }
 
   /**

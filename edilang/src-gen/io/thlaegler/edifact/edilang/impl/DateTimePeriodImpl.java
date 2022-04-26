@@ -107,7 +107,7 @@ public class DateTimePeriodImpl extends AbstractEdiFunctionImpl implements DateT
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.DATE_TIME_PERIOD;
+    return EdilangPackage.eINSTANCE.getDateTimePeriod();
   }
 
   /**

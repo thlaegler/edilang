@@ -58,7 +58,7 @@ public class PRISegmentImpl extends AbstractEdiSegmentImpl implements PRISegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PRI_SEGMENT;
+    return EdilangPackage.eINSTANCE.getPRISegment();
   }
 
   /**

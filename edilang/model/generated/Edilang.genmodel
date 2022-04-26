@@ -5,7 +5,7 @@
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="8.0"
     copyrightFields="false" runtimeVersion="2.20">
   <genPackages prefix="Edilang" basePackage="io.thlaegler.edifact" disposableProviderFactory="true"
-      fileExtensions="edi" ecorePackage="Edilang.ecore#/">
+      loadInitialization="true" literalsInterface="false" fileExtensions="edi" ecorePackage="Edilang.ecore#/">
     <genClasses ecoreClass="Edilang.ecore#//EdiModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//EdiModel/segments"/>
     </genClasses>
@@ -28,6 +28,420 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//UNHSegment/messageReferenceNumber"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//UNHSegment/message"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//UNHSegment/commonAccessReference"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ADRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ADRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//AGRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AGRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//AJTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AJTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ALCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ALISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//APPSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//APPSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//APRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//APRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ARDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ARDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ARRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ARRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ASISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ASISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ATTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ATTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//AUTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AUTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//BASSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BASSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//BIISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BIISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//BUSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BUSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CAVSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CAVSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CCDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CCISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CDISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CDSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CDVSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDVSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CEDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CEDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CINSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CINSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CLASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CLASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CLISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CLISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CMPSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CMPSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CNISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CNISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CODSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CODSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//COMSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//COMSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//COTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//COTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CPISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CPISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CPSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CPSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CPTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CPTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CSTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CSTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DAMSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DAMSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DFNSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DFNSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DGSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DGSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DIISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DIISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DIMSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DIMSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DLISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DLISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DLMSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DLMSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DMSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DMSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DOCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DOCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DRDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DRDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DSGSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DSGSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//DSISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DSISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EDTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EDTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EFISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EFISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ELMSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ELMSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ELUSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ELUSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ELVSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ELVSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EMPSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EMPSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EQASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EQASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EQDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EQDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EQNSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EQNSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ERPSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ERPSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EVESegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EVESegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//EVTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//EVTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//FCASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//FCASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//FIISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//FIISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//FNSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//FNSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//FNTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//FNTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//FORSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//FORSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//FSQSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//FSQSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GDSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GDSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GEISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GEISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GIDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GIDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GINSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GINSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GIRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GIRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GISSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GISSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GORSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GORSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GRUSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GRUSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//HANSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//HANSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//HYNSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//HYNSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ICDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ICDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//IDESegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//IDESegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//IFDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//IFDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//IHCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//IHCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//IMDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//IMDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//INDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//INDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//INPSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//INPSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//INVSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//INVSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//IRQSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//IRQSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//LANSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//LANSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//LOCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//LOCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//MEASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MEASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//MEMSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MEMSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//MKSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MKSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//NATSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//NATSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PACSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PACSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PAISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PAISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PASSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PASSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PCCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PCCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PCDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PCDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PERSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PERSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PGISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PGISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PIASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PIASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PNASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PNASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PRCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PRCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PRVSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PRVSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PSDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PSDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PTYSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PTYSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PYTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PYTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//QRSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//QRSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//QUASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//QUASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//QVRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//QVRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//RCSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//RCSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//RELSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//RELSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//RJLSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//RJLSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//RNGSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//RNGSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//RODSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//RODSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//RSLSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//RSLSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//RTESegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//RTESegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SALSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SALSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SCCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SCCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SCDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SCDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SEGSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SEGSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SELSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SELSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SEQSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SEQSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SFISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SFISegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SGPSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SGPSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SGUSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SGUSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SPRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SPRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SPSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SPSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//STASegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//STASegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//STCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//STCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//STGSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//STGSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//STSSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//STSSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TCCSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TCCSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TDTSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TDTSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TEMSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TEMSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TMDSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TMDSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TMPSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TMPSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TODSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TODSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TPLSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TPLSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TRUSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TRUSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TSRSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TSRSegment/todo"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//VLISegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//VLISegment/todo"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//MSGSegment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//MSGSegment/messageIdentifier"/>

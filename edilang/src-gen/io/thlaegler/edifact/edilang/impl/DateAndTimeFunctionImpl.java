@@ -86,7 +86,7 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.DATE_AND_TIME_FUNCTION;
+    return EdilangPackage.eINSTANCE.getDateAndTimeFunction();
   }
 
   /**

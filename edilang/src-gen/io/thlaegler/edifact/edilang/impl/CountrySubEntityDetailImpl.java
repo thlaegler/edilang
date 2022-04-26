@@ -90,7 +90,7 @@ public class CountrySubEntityDetailImpl extends AbstractEdiFunctionImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.COUNTRY_SUB_ENTITY_DETAIL;
+    return EdilangPackage.eINSTANCE.getCountrySubEntityDetail();
   }
 
   /**

@@ -86,7 +86,7 @@ public class LocationFunctionImpl extends AbstractEdiFunctionImpl implements Loc
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.LOCATION_FUNCTION;
+    return EdilangPackage.eINSTANCE.getLocationFunction();
   }
 
   /**

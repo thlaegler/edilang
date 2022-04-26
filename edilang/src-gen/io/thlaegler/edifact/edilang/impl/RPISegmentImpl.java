@@ -86,7 +86,7 @@ public class RPISegmentImpl extends AbstractEdiSegmentImpl implements RPISegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.RPI_SEGMENT;
+    return EdilangPackage.eINSTANCE.getRPISegment();
   }
 
   /**

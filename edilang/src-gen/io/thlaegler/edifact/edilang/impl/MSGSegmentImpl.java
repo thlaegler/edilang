@@ -112,7 +112,7 @@ public class MSGSegmentImpl extends AbstractEdiSegmentImpl implements MSGSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.MSG_SEGMENT;
+    return EdilangPackage.eINSTANCE.getMSGSegment();
   }
 
   /**

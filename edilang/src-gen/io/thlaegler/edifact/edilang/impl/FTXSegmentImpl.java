@@ -128,7 +128,7 @@ public class FTXSegmentImpl extends AbstractEdiSegmentImpl implements FTXSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.FTX_SEGMENT;
+    return EdilangPackage.eINSTANCE.getFTXSegment();
   }
 
   /**

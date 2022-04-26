@@ -44,630 +44,1184 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final RuleCall cUNASegmentParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cUNBSegmentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cUNHSegmentParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cMSGSegmentParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cORGSegmentParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cPOCSegmentParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cODISegmentParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cUCISegmentParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cPDISegmentParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cRPISegmentParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cTVLSegmentParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cBGMSegmentParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cDTMSegmentParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cNADSegmentParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cRFFSegmentParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cCUXSegmentParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cTAXSegmentParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cLINSegmentParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cQTYSegmentParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cMOASegmentParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
-		private final RuleCall cPRISegmentParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
-		private final RuleCall cPATSegmentParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
-		private final RuleCall cPCISegmentParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
-		private final RuleCall cCTASegmentParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cCNTSegmentParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cFTXSegmentParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
-		private final RuleCall cERCSegmentParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
-		private final RuleCall cUNSSegmentParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
-		private final RuleCall cUNZSegmentParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
-		private final RuleCall cUNTSegmentParserRuleCall_29 = (RuleCall)cAlternatives.eContents().get(29);
+		private final RuleCall cADRSegmentParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cAGRSegmentParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cAJTSegmentParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cALCSegmentParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cALISegmentParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cAPPSegmentParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cAPRSegmentParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cARDSegmentParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cARRSegmentParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cASISegmentParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cATTSegmentParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cAUTSegmentParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cBASSegmentParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cBGMSegmentParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cBIISegmentParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cBUSSegmentParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cCAVSegmentParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cCCDSegmentParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cCCISegmentParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cCDISegmentParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cCDSSegmentParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cCDVSegmentParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cCEDSegmentParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cCINSegmentParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cCLASegmentParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
+		private final RuleCall cCLISegmentParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
+		private final RuleCall cCMPSegmentParserRuleCall_29 = (RuleCall)cAlternatives.eContents().get(29);
+		private final RuleCall cCNISegmentParserRuleCall_30 = (RuleCall)cAlternatives.eContents().get(30);
+		private final RuleCall cCNTSegmentParserRuleCall_31 = (RuleCall)cAlternatives.eContents().get(31);
+		private final RuleCall cCODSegmentParserRuleCall_32 = (RuleCall)cAlternatives.eContents().get(32);
+		private final RuleCall cCOMSegmentParserRuleCall_33 = (RuleCall)cAlternatives.eContents().get(33);
+		private final RuleCall cCOTSegmentParserRuleCall_34 = (RuleCall)cAlternatives.eContents().get(34);
+		private final RuleCall cCPISegmentParserRuleCall_35 = (RuleCall)cAlternatives.eContents().get(35);
+		private final RuleCall cCPSSegmentParserRuleCall_36 = (RuleCall)cAlternatives.eContents().get(36);
+		private final RuleCall cCPTSegmentParserRuleCall_37 = (RuleCall)cAlternatives.eContents().get(37);
+		private final RuleCall cCSTSegmentParserRuleCall_38 = (RuleCall)cAlternatives.eContents().get(38);
+		private final RuleCall cCTASegmentParserRuleCall_39 = (RuleCall)cAlternatives.eContents().get(39);
+		private final RuleCall cCUXSegmentParserRuleCall_40 = (RuleCall)cAlternatives.eContents().get(40);
+		private final RuleCall cDAMSegmentParserRuleCall_41 = (RuleCall)cAlternatives.eContents().get(41);
+		private final RuleCall cDFNSegmentParserRuleCall_42 = (RuleCall)cAlternatives.eContents().get(42);
+		private final RuleCall cDGSSegmentParserRuleCall_43 = (RuleCall)cAlternatives.eContents().get(43);
+		private final RuleCall cDIISegmentParserRuleCall_44 = (RuleCall)cAlternatives.eContents().get(44);
+		private final RuleCall cDIMSegmentParserRuleCall_45 = (RuleCall)cAlternatives.eContents().get(45);
+		private final RuleCall cDLISegmentParserRuleCall_46 = (RuleCall)cAlternatives.eContents().get(46);
+		private final RuleCall cDLMSegmentParserRuleCall_47 = (RuleCall)cAlternatives.eContents().get(47);
+		private final RuleCall cDMSSegmentParserRuleCall_48 = (RuleCall)cAlternatives.eContents().get(48);
+		private final RuleCall cDOCSegmentParserRuleCall_49 = (RuleCall)cAlternatives.eContents().get(49);
+		private final RuleCall cDRDSegmentParserRuleCall_50 = (RuleCall)cAlternatives.eContents().get(50);
+		private final RuleCall cDSGSegmentParserRuleCall_51 = (RuleCall)cAlternatives.eContents().get(51);
+		private final RuleCall cDSISegmentParserRuleCall_52 = (RuleCall)cAlternatives.eContents().get(52);
+		private final RuleCall cDTMSegmentParserRuleCall_53 = (RuleCall)cAlternatives.eContents().get(53);
+		private final RuleCall cEDTSegmentParserRuleCall_54 = (RuleCall)cAlternatives.eContents().get(54);
+		private final RuleCall cEFISegmentParserRuleCall_55 = (RuleCall)cAlternatives.eContents().get(55);
+		private final RuleCall cELMSegmentParserRuleCall_56 = (RuleCall)cAlternatives.eContents().get(56);
+		private final RuleCall cELUSegmentParserRuleCall_57 = (RuleCall)cAlternatives.eContents().get(57);
+		private final RuleCall cELVSegmentParserRuleCall_58 = (RuleCall)cAlternatives.eContents().get(58);
+		private final RuleCall cEMPSegmentParserRuleCall_59 = (RuleCall)cAlternatives.eContents().get(59);
+		private final RuleCall cEQASegmentParserRuleCall_60 = (RuleCall)cAlternatives.eContents().get(60);
+		private final RuleCall cEQDSegmentParserRuleCall_61 = (RuleCall)cAlternatives.eContents().get(61);
+		private final RuleCall cEQNSegmentParserRuleCall_62 = (RuleCall)cAlternatives.eContents().get(62);
+		private final RuleCall cERPSegmentParserRuleCall_63 = (RuleCall)cAlternatives.eContents().get(63);
+		private final RuleCall cERCSegmentParserRuleCall_64 = (RuleCall)cAlternatives.eContents().get(64);
+		private final RuleCall cEVESegmentParserRuleCall_65 = (RuleCall)cAlternatives.eContents().get(65);
+		private final RuleCall cEVTSegmentParserRuleCall_66 = (RuleCall)cAlternatives.eContents().get(66);
+		private final RuleCall cFCASegmentParserRuleCall_67 = (RuleCall)cAlternatives.eContents().get(67);
+		private final RuleCall cFIISegmentParserRuleCall_68 = (RuleCall)cAlternatives.eContents().get(68);
+		private final RuleCall cFNSSegmentParserRuleCall_69 = (RuleCall)cAlternatives.eContents().get(69);
+		private final RuleCall cFNTSegmentParserRuleCall_70 = (RuleCall)cAlternatives.eContents().get(70);
+		private final RuleCall cFORSegmentParserRuleCall_71 = (RuleCall)cAlternatives.eContents().get(71);
+		private final RuleCall cFSQSegmentParserRuleCall_72 = (RuleCall)cAlternatives.eContents().get(72);
+		private final RuleCall cFTXSegmentParserRuleCall_73 = (RuleCall)cAlternatives.eContents().get(73);
+		private final RuleCall cGDSSegmentParserRuleCall_74 = (RuleCall)cAlternatives.eContents().get(74);
+		private final RuleCall cGEISegmentParserRuleCall_75 = (RuleCall)cAlternatives.eContents().get(75);
+		private final RuleCall cGIDSegmentParserRuleCall_76 = (RuleCall)cAlternatives.eContents().get(76);
+		private final RuleCall cGINSegmentParserRuleCall_77 = (RuleCall)cAlternatives.eContents().get(77);
+		private final RuleCall cGIRSegmentParserRuleCall_78 = (RuleCall)cAlternatives.eContents().get(78);
+		private final RuleCall cGISSegmentParserRuleCall_79 = (RuleCall)cAlternatives.eContents().get(79);
+		private final RuleCall cGORSegmentParserRuleCall_80 = (RuleCall)cAlternatives.eContents().get(80);
+		private final RuleCall cGRUSegmentParserRuleCall_81 = (RuleCall)cAlternatives.eContents().get(81);
+		private final RuleCall cHANSegmentParserRuleCall_82 = (RuleCall)cAlternatives.eContents().get(82);
+		private final RuleCall cHYNSegmentParserRuleCall_83 = (RuleCall)cAlternatives.eContents().get(83);
+		private final RuleCall cICDSegmentParserRuleCall_84 = (RuleCall)cAlternatives.eContents().get(84);
+		private final RuleCall cIDESegmentParserRuleCall_85 = (RuleCall)cAlternatives.eContents().get(85);
+		private final RuleCall cIFDSegmentParserRuleCall_86 = (RuleCall)cAlternatives.eContents().get(86);
+		private final RuleCall cIHCSegmentParserRuleCall_87 = (RuleCall)cAlternatives.eContents().get(87);
+		private final RuleCall cIMDSegmentParserRuleCall_88 = (RuleCall)cAlternatives.eContents().get(88);
+		private final RuleCall cINDSegmentParserRuleCall_89 = (RuleCall)cAlternatives.eContents().get(89);
+		private final RuleCall cINPSegmentParserRuleCall_90 = (RuleCall)cAlternatives.eContents().get(90);
+		private final RuleCall cINVSegmentParserRuleCall_91 = (RuleCall)cAlternatives.eContents().get(91);
+		private final RuleCall cIRQSegmentParserRuleCall_92 = (RuleCall)cAlternatives.eContents().get(92);
+		private final RuleCall cLANSegmentParserRuleCall_93 = (RuleCall)cAlternatives.eContents().get(93);
+		private final RuleCall cLINSegmentParserRuleCall_94 = (RuleCall)cAlternatives.eContents().get(94);
+		private final RuleCall cLOCSegmentParserRuleCall_95 = (RuleCall)cAlternatives.eContents().get(95);
+		private final RuleCall cMEASegmentParserRuleCall_96 = (RuleCall)cAlternatives.eContents().get(96);
+		private final RuleCall cMEMSegmentParserRuleCall_97 = (RuleCall)cAlternatives.eContents().get(97);
+		private final RuleCall cMKSSegmentParserRuleCall_98 = (RuleCall)cAlternatives.eContents().get(98);
+		private final RuleCall cMOASegmentParserRuleCall_99 = (RuleCall)cAlternatives.eContents().get(99);
+		private final RuleCall cMSGSegmentParserRuleCall_100 = (RuleCall)cAlternatives.eContents().get(100);
+		private final RuleCall cNADSegmentParserRuleCall_101 = (RuleCall)cAlternatives.eContents().get(101);
+		private final RuleCall cNATSegmentParserRuleCall_102 = (RuleCall)cAlternatives.eContents().get(102);
+		private final RuleCall cODISegmentParserRuleCall_103 = (RuleCall)cAlternatives.eContents().get(103);
+		private final RuleCall cORGSegmentParserRuleCall_104 = (RuleCall)cAlternatives.eContents().get(104);
+		private final RuleCall cPACSegmentParserRuleCall_105 = (RuleCall)cAlternatives.eContents().get(105);
+		private final RuleCall cPAISegmentParserRuleCall_106 = (RuleCall)cAlternatives.eContents().get(106);
+		private final RuleCall cPASSegmentParserRuleCall_107 = (RuleCall)cAlternatives.eContents().get(107);
+		private final RuleCall cPATSegmentParserRuleCall_108 = (RuleCall)cAlternatives.eContents().get(108);
+		private final RuleCall cPCCSegmentParserRuleCall_109 = (RuleCall)cAlternatives.eContents().get(109);
+		private final RuleCall cPCDSegmentParserRuleCall_110 = (RuleCall)cAlternatives.eContents().get(110);
+		private final RuleCall cPCISegmentParserRuleCall_111 = (RuleCall)cAlternatives.eContents().get(111);
+		private final RuleCall cPDISegmentParserRuleCall_112 = (RuleCall)cAlternatives.eContents().get(112);
+		private final RuleCall cPERSegmentParserRuleCall_113 = (RuleCall)cAlternatives.eContents().get(113);
+		private final RuleCall cPGISegmentParserRuleCall_114 = (RuleCall)cAlternatives.eContents().get(114);
+		private final RuleCall cPIASegmentParserRuleCall_115 = (RuleCall)cAlternatives.eContents().get(115);
+		private final RuleCall cPNASegmentParserRuleCall_116 = (RuleCall)cAlternatives.eContents().get(116);
+		private final RuleCall cPOCSegmentParserRuleCall_117 = (RuleCall)cAlternatives.eContents().get(117);
+		private final RuleCall cPRCSegmentParserRuleCall_118 = (RuleCall)cAlternatives.eContents().get(118);
+		private final RuleCall cPRISegmentParserRuleCall_119 = (RuleCall)cAlternatives.eContents().get(119);
+		private final RuleCall cPRVSegmentParserRuleCall_120 = (RuleCall)cAlternatives.eContents().get(120);
+		private final RuleCall cPSDSegmentParserRuleCall_121 = (RuleCall)cAlternatives.eContents().get(121);
+		private final RuleCall cPTYSegmentParserRuleCall_122 = (RuleCall)cAlternatives.eContents().get(122);
+		private final RuleCall cPYTSegmentParserRuleCall_123 = (RuleCall)cAlternatives.eContents().get(123);
+		private final RuleCall cQRSSegmentParserRuleCall_124 = (RuleCall)cAlternatives.eContents().get(124);
+		private final RuleCall cQTYSegmentParserRuleCall_125 = (RuleCall)cAlternatives.eContents().get(125);
+		private final RuleCall cQUASegmentParserRuleCall_126 = (RuleCall)cAlternatives.eContents().get(126);
+		private final RuleCall cQVRSegmentParserRuleCall_127 = (RuleCall)cAlternatives.eContents().get(127);
+		private final RuleCall cRCSSegmentParserRuleCall_128 = (RuleCall)cAlternatives.eContents().get(128);
+		private final RuleCall cRELSegmentParserRuleCall_129 = (RuleCall)cAlternatives.eContents().get(129);
+		private final RuleCall cRFFSegmentParserRuleCall_130 = (RuleCall)cAlternatives.eContents().get(130);
+		private final RuleCall cRJLSegmentParserRuleCall_131 = (RuleCall)cAlternatives.eContents().get(131);
+		private final RuleCall cRNGSegmentParserRuleCall_132 = (RuleCall)cAlternatives.eContents().get(132);
+		private final RuleCall cRODSegmentParserRuleCall_133 = (RuleCall)cAlternatives.eContents().get(133);
+		private final RuleCall cRPISegmentParserRuleCall_134 = (RuleCall)cAlternatives.eContents().get(134);
+		private final RuleCall cRSLSegmentParserRuleCall_135 = (RuleCall)cAlternatives.eContents().get(135);
+		private final RuleCall cRTESegmentParserRuleCall_136 = (RuleCall)cAlternatives.eContents().get(136);
+		private final RuleCall cSALSegmentParserRuleCall_137 = (RuleCall)cAlternatives.eContents().get(137);
+		private final RuleCall cSCCSegmentParserRuleCall_138 = (RuleCall)cAlternatives.eContents().get(138);
+		private final RuleCall cSCDSegmentParserRuleCall_139 = (RuleCall)cAlternatives.eContents().get(139);
+		private final RuleCall cSEGSegmentParserRuleCall_140 = (RuleCall)cAlternatives.eContents().get(140);
+		private final RuleCall cSELSegmentParserRuleCall_141 = (RuleCall)cAlternatives.eContents().get(141);
+		private final RuleCall cSEQSegmentParserRuleCall_142 = (RuleCall)cAlternatives.eContents().get(142);
+		private final RuleCall cSFISegmentParserRuleCall_143 = (RuleCall)cAlternatives.eContents().get(143);
+		private final RuleCall cSGPSegmentParserRuleCall_144 = (RuleCall)cAlternatives.eContents().get(144);
+		private final RuleCall cSGUSegmentParserRuleCall_145 = (RuleCall)cAlternatives.eContents().get(145);
+		private final RuleCall cSPRSegmentParserRuleCall_146 = (RuleCall)cAlternatives.eContents().get(146);
+		private final RuleCall cSPSSegmentParserRuleCall_147 = (RuleCall)cAlternatives.eContents().get(147);
+		private final RuleCall cSTASegmentParserRuleCall_148 = (RuleCall)cAlternatives.eContents().get(148);
+		private final RuleCall cSTCSegmentParserRuleCall_149 = (RuleCall)cAlternatives.eContents().get(149);
+		private final RuleCall cSTGSegmentParserRuleCall_150 = (RuleCall)cAlternatives.eContents().get(150);
+		private final RuleCall cSTSSegmentParserRuleCall_151 = (RuleCall)cAlternatives.eContents().get(151);
+		private final RuleCall cTAXSegmentParserRuleCall_152 = (RuleCall)cAlternatives.eContents().get(152);
+		private final RuleCall cTCCSegmentParserRuleCall_153 = (RuleCall)cAlternatives.eContents().get(153);
+		private final RuleCall cTDTSegmentParserRuleCall_154 = (RuleCall)cAlternatives.eContents().get(154);
+		private final RuleCall cTEMSegmentParserRuleCall_155 = (RuleCall)cAlternatives.eContents().get(155);
+		private final RuleCall cTMDSegmentParserRuleCall_156 = (RuleCall)cAlternatives.eContents().get(156);
+		private final RuleCall cTMPSegmentParserRuleCall_157 = (RuleCall)cAlternatives.eContents().get(157);
+		private final RuleCall cTODSegmentParserRuleCall_158 = (RuleCall)cAlternatives.eContents().get(158);
+		private final RuleCall cTPLSegmentParserRuleCall_159 = (RuleCall)cAlternatives.eContents().get(159);
+		private final RuleCall cTRUSegmentParserRuleCall_160 = (RuleCall)cAlternatives.eContents().get(160);
+		private final RuleCall cTSRSegmentParserRuleCall_161 = (RuleCall)cAlternatives.eContents().get(161);
+		private final RuleCall cTVLSegmentParserRuleCall_162 = (RuleCall)cAlternatives.eContents().get(162);
+		private final RuleCall cUCISegmentParserRuleCall_163 = (RuleCall)cAlternatives.eContents().get(163);
+		private final RuleCall cVLISegmentParserRuleCall_164 = (RuleCall)cAlternatives.eContents().get(164);
+		private final RuleCall cUNSSegmentParserRuleCall_165 = (RuleCall)cAlternatives.eContents().get(165);
+		private final RuleCall cUNZSegmentParserRuleCall_166 = (RuleCall)cAlternatives.eContents().get(166);
+		private final RuleCall cUNTSegmentParserRuleCall_167 = (RuleCall)cAlternatives.eContents().get(167);
 		
 		//AbstractEdiSegment:
-		//    UNASegment |
-		//    UNBSegment | // header for trailer UNZ
-		//    UNHSegment | // header for trailer UNT
-		//    MSGSegment | // Message type identification
-		//    ORGSegment | // Organisation
-		//    POCSegment | // Purpose of conveyance call
-		//    ODISegment | // Origin/destination
-		//    UCISegment | // ?
-		//    PDISegment | // Person demographic information
-		//    RPISegment | // ?
-		//    TVLSegment | // Travel itinerary
+		//    UNASegment | // Header UNA
+		//    UNBSegment | // Header for trailer UNZ
+		//    UNHSegment | // Header for trailer UNT
+		//    ADRSegment | // Address
+		//    AGRSegment | // Agreement identification
+		//    AJTSegment | // Adjustment details
+		//    ALCSegment | // Allowance or charge
+		//    ALISegment | // Additional information
+		//    APPSegment | // Applicability
+		//    APRSegment | // Additional price information
+		//    ARDSegment | // Monetary amount function
+		//    ARRSegment | // Array information
+		//    ASISegment | // Array structure identification
+		//    ATTSegment | // Attribute
+		//    AUTSegment | // Authentication result
+		//    BASSegment | // Basis
 		//    BGMSegment | // Beginning of message
-		//    DTMSegment | // Date/time/period
-		//    NADSegment | // Name and address
-		//    RFFSegment | // Reference
-		//    CUXSegment | // Currencies
-		//    TAXSegment | // Duty/tax/fee details
-		//    LINSegment | // Line item
-		//    QTYSegment | // Quantity
-		//    MOASegment | // Monetary amount
-		//    PRISegment | // Price details
-		//    PATSegment | // Payment terms basis
-		//    PCISegment | // Package identification
-		//    CTASegment | // Contact information
+		//    BIISegment | // Structure identification
+		//    BUSSegment | // Business function
+		//    CAVSegment | // Characteristic value
+		//    CCDSegment | // Credit cover details
+		//    CCISegment | // Characteristic/class id
+		//    CDISegment | // Physical or logical state
+		//    CDSSegment | // Code set identification
+		//    CDVSegment | // Code value definition
+		//    CEDSegment | // Computer environment details
+		//    CINSegment | // Clinical information
+		//    CLASegment | // Clause identification
+		//    CLISegment | // Clinical intervention
+		//    CMPSegment | // Composite data element identification
+		//    CNISegment | // Consignment information
 		//    CNTSegment | // Control total
-		//    FTXSegment | // Free text
+		//    CODSegment | // Component details
+		//    COMSegment | // Communication contact
+		//    COTSegment | // Contribution details
+		//    CPISegment | // Charge payment instructions
+		//    CPSSegment | // Consignment packing sequence
+		//    CPTSegment | // Account identification
+		//    CSTSegment | // Customs status of goods
+		//    CTASegment | // Contact information
+		//    CUXSegment | // Currencies
+		//    DAMSegment | // Damage
+		//    DFNSegment | // Definition function
+		//    DGSSegment | // Dangerous goods
+		//    DIISegment | // Directory identification
+		//    DIMSegment | // Dimensions
+		//    DLISegment | // Document line identification
+		//    DLMSegment | // Delivery limitations
+		//    DMSSegment | // Document/message summary
+		//    DOCSegment | // Document/message details
+		//    DRDSegment | // Data representation details
+		//    DSGSegment | // Dosage administration
+		//    DSISegment | // Data set identification
+		//    DTMSegment | // Date/time/period
+		//    EDTSegment | // Editing details
+		//    EFISegment | // External file link identification
+		//    ELMSegment | // Simple data element details
+		//    ELUSegment | // Data element usage details
+		//    ELVSegment | // Element value definition
+		//    EMPSegment | // Employment details
+		//    EQASegment | // Attached equipment
+		//    EQDSegment | // Equipment details
+		//    EQNSegment | // Number of units
+		//    ERPSegment | // Error point details
 		//    ERCSegment | // Application error information
-		////    ADR  Address
-		////    AGR  Agreement identification
-		////    AJT  Adjustment details
-		////    ALC  Allowance or charge
-		////    ALI  Additional information
-		////+   APP  Applicability
-		////    APR  Additional price information
-		////    ARD  Monetary amount function
-		////    ARR  Array information
-		////    ASI  Array structure identification
-		////    ATT  Attribute
-		////    AUT  Authentication result
-		////+   BAS  Basis
-		////    BII  Structure identification
-		////    BUS  Business function
-		////    CAV  Characteristic value
-		////    CCD  Credit cover details
-		////    CCI  Characteristic/class id
-		////    CDI  Physical or logical state
-		////    CDS  Code set identification
-		////    CDV  Code value definition
-		////    CED  Computer environment details
-		////    CIN  Clinical information
-		////+   CLA  Clause identification
-		////    CLI  Clinical intervention
-		////    CMP  Composite data element identification
-		////    CNI  Consignment information
-		////    COD  Component details
-		////    COM  Communication contact
-		////    COT  Contribution details
-		////    CPI  Charge payment instructions
-		////    CPS  Consignment packing sequence
-		////    CPT  Account identification
-		////    CST  Customs status of goods
-		////    DAM  Damage
-		////    DFN  Definition function
-		////    DGS  Dangerous goods
-		////    DII  Directory identification
-		////    DIM  Dimensions
-		////    DLI  Document line identification
-		////    DLM  Delivery limitations
-		////    DMS  Document/message summary
-		////    DOC  Document/message details
-		////    DRD  Data representation details
-		////    DSG  Dosage administration
-		////    DSI  Data set identification
-		////    EDT  Editing details
-		////    EFI  External file link identification
-		////    ELM  Simple data element details
-		////    ELU  Data element usage details
-		////    ELV  Element value definition
-		////    EMP  Employment details
-		////    EQA  Attached equipment
-		////    EQD  Equipment details
-		////    EQN  Number of units
-		////    ERP  Error point details
-		////*   EVE  Event
-		////X   EVT  Event
-		////    FCA  Financial charges allocation
-		////    FII  Financial institution information
-		////    FNS  Footnote set
-		////    FNT  Footnote
-		////    FOR  Formula
-		////    FSQ  Formula sequence
-		////    GDS  Nature of cargo
-		////    GEI  Processing information
-		////    GID  Goods item details
-		////    GIN  Goods identity number
-		////    GIR  Related identification numbers
-		////X   GIS  General indicator
-		////    GOR  Governmental requirements
-		////    GRU  Segment group usage details
-		////    HAN  Handling instructions
-		////    HYN  Hierarchy information
-		////    ICD  Insurance cover description
-		////    IDE  Identity
-		////*   IFD  Information detail
-		////    IHC  Person characteristic
-		////    IMD  Item description
-		////    IND  Index details
-		////    INP  Parties and instruction
-		////    INV  Inventory management related details
-		////    IRQ  Information required
-		////    LAN  Language
-		////    LOC  Place/location identification
-		////    MEA  Measurements
-		////    MEM  Membership details
-		////    MKS  Market/sales channel information
-		////    NAT  Nationality
-		////    PAC  Package
-		////    PAI  Payment instructions
-		////    PAS  Attendance
-		////    PCC  Premium calculation component details
-		////*   PCD  Percentage details
-		////+   PER  Period related details
-		////    PGI  Product group information
-		////    PIA  Additional product id
-		////    PNA  Party identification
-		////    PRC  Process identification
-		////+   PRV  Proviso details
-		////    PSD  Physical sample description
-		////    PTY  Priority
-		////    PYT  Payment terms
-		////    QRS  Query and response
-		////    QUA  Qualification
-		////    QVR  Quantity variances
-		////    RCS  Requirements and conditions
-		////    REL  Relationship
-		////    RJL  Accounting journal identification
-		////    RNG  Range details
-		////    ROD  Risk object type
-		////    RSL  Result
-		////*   RTE  Rate details
-		////    SAL  Remuneration type identification
-		////    SCC  Scheduling conditions
-		////    SCD  Structure component definition
-		////    SEG  Segment identification
-		////    SEL  Seal number
-		////    SEQ  Sequence details
-		////    SFI  Safety information
-		////    SGP  Split goods placement
-		////    SGU  Segment usage details
-		////    SPR  Organisation classification details
-		////    SPS  Sampling parameters for summary statistics
-		////    STA  Statistics
-		////    STC  Statistical concept
-		////    STG  Stages
-		////    STS  Status
-		////    TCC  Transport charge/rate calculations
-		////    TDT  Details of transport
-		////    TEM  Test method
-		////    TMD  Transport movement details
-		////    TMP  Temperature
-		////    TOD  Terms of delivery or transport
-		////    TPL  Transport placement
-		////    TRU  Technical rules
-		////    TSR  Transport service requirements
-		////    VLI  Value list identification
-		//    UNSSegment |
-		//    UNZSegment | // trailer for header UNB
-		//    UNTSegment // trailer for header UNH
+		//    EVESegment | // Event
+		//    EVTSegment | // Event
+		//    FCASegment | // Financial charges allocation
+		//    FIISegment | // Financial institution information
+		//    FNSSegment | // Footnote set
+		//    FNTSegment | // Footnote
+		//    FORSegment | // Formula
+		//    FSQSegment | // Formula sequence
+		//    FTXSegment | // Free text
+		//    GDSSegment | // Nature of cargo
+		//    GEISegment | // Processing information
+		//    GIDSegment | // Goods item details
+		//    GINSegment | // Goods identity number
+		//    GIRSegment | // Related identification numbers
+		//    GISSegment | // General indicator
+		//    GORSegment | // Governmental requirements
+		//    GRUSegment | // Segment group usage details
+		//    HANSegment | // Handling instructions
+		//    HYNSegment | // Hierarchy information
+		//    ICDSegment | // Insurance cover description
+		//    IDESegment | // Identity
+		//    IFDSegment | // Information detail
+		//    IHCSegment | // Person characteristic
+		//    IMDSegment | // Item description
+		//    INDSegment | // Index details
+		//    INPSegment | // Parties and instruction
+		//    INVSegment | // Inventory management related details
+		//    IRQSegment | // Information required
+		//    LANSegment | // Language
+		//    LINSegment | // Line item
+		//    LOCSegment | // Place/location identification
+		//    MEASegment | // Measurements
+		//    MEMSegment | // Membership details
+		//    MKSSegment | // Market/sales channel information
+		//    MOASegment | // Monetary amount
+		//    MSGSegment | // Message type identification
+		//    NADSegment | // Name and address
+		//    NATSegment | // Nationality
+		//    ODISegment | // Origin/destination
+		//    ORGSegment | // Organisation
+		//    PACSegment | // Package
+		//    PAISegment | // Payment instructions
+		//    PASSegment | // Attendance
+		//    PATSegment | // Payment terms basis
+		//    PCCSegment | // Premium calculation component details
+		//    PCDSegment | // Percentage details
+		//    PCISegment | // Package identification
+		//    PDISegment | // Person demographic information
+		//    PERSegment | // Period related details
+		//    PGISegment | // Product group information
+		//    PIASegment | // Additional product id
+		//    PNASegment | // Party identification
+		//    POCSegment | // Purpose of conveyance call
+		//    PRCSegment | // Process identification
+		//    PRISegment | // Price details
+		//    PRVSegment | // Proviso details
+		//    PSDSegment | // Physical sample description
+		//    PTYSegment | // Priority
+		//    PYTSegment | // Payment terms
+		//    QRSSegment | // Query and response
+		//    QTYSegment | // Quantity
+		//    QUASegment | // Qualification
+		//    QVRSegment | // Quantity variances
+		//    RCSSegment | // Requirements and conditions
+		//    RELSegment | // Relationship
+		//    RFFSegment | // Reference
+		//    RJLSegment | // Accounting journal identification
+		//    RNGSegment | // Range details
+		//    RODSegment | // Risk object type
+		//    RPISegment | // ?
+		//    RSLSegment | // Result
+		//    RTESegment | // Rate details
+		//    SALSegment | // Remuneration type identification
+		//    SCCSegment | // Scheduling conditions
+		//    SCDSegment | // Structure component definition
+		//    SEGSegment | // Segment identification
+		//    SELSegment | // Seal number
+		//    SEQSegment | // Sequence details
+		//    SFISegment | // Safety information
+		//    SGPSegment | // Split goods placement
+		//    SGUSegment | // Segment usage details
+		//    SPRSegment | // Organisation classification details
+		//    SPSSegment | // Sampling parameters for summary statistics
+		//    STASegment | // Statistics
+		//    STCSegment | // Statistical concept
+		//    STGSegment | // Stages
+		//    STSSegment | // Status
+		//    TAXSegment | // Duty/tax/fee details
+		//    TCCSegment | // Transport charge/rate calculations
+		//    TDTSegment | // Details of transport
+		//    TEMSegment | // Test method
+		//    TMDSegment | // Transport movement details
+		//    TMPSegment | // Temperature
+		//    TODSegment | // Terms of delivery or transport
+		//    TPLSegment | // Transport placement
+		//    TRUSegment | // Technical rules
+		//    TSRSegment | // Transport service requirements
+		//    TVLSegment | // Travel itinerary
+		//    UCISegment | // ?
+		//    VLISegment | // Value list identification
+		//    UNSSegment | // Trailer UNS
+		//    UNZSegment | // Trailer for header UNB
+		//    UNTSegment // Trailer for header UNH
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//    UNASegment |
-		//    UNBSegment | // header for trailer UNZ
-		//    UNHSegment | // header for trailer UNT
-		//    MSGSegment | // Message type identification
-		//    ORGSegment | // Organisation
-		//    POCSegment | // Purpose of conveyance call
-		//    ODISegment | // Origin/destination
-		//    UCISegment | // ?
-		//    PDISegment | // Person demographic information
-		//    RPISegment | // ?
-		//    TVLSegment | // Travel itinerary
-		//    BGMSegment | // Beginning of message
-		//    DTMSegment | // Date/time/period
-		//    NADSegment | // Name and address
-		//    RFFSegment | // Reference
-		//    CUXSegment | // Currencies
-		//    TAXSegment | // Duty/tax/fee details
-		//    LINSegment | // Line item
-		//    QTYSegment | // Quantity
-		//    MOASegment | // Monetary amount
-		//    PRISegment | // Price details
-		//    PATSegment | // Payment terms basis
-		//    PCISegment | // Package identification
-		//    CTASegment | // Contact information
-		//    CNTSegment | // Control total
-		//    FTXSegment | // Free text
-		//    ERCSegment | // Application error information
-		////    ADR  Address
-		////    AGR  Agreement identification
-		////    AJT  Adjustment details
-		////    ALC  Allowance or charge
-		////    ALI  Additional information
-		////+   APP  Applicability
-		////    APR  Additional price information
-		////    ARD  Monetary amount function
-		////    ARR  Array information
-		////    ASI  Array structure identification
-		////    ATT  Attribute
-		////    AUT  Authentication result
-		////+   BAS  Basis
-		////    BII  Structure identification
-		////    BUS  Business function
-		////    CAV  Characteristic value
-		////    CCD  Credit cover details
-		////    CCI  Characteristic/class id
-		////    CDI  Physical or logical state
-		////    CDS  Code set identification
-		////    CDV  Code value definition
-		////    CED  Computer environment details
-		////    CIN  Clinical information
-		////+   CLA  Clause identification
-		////    CLI  Clinical intervention
-		////    CMP  Composite data element identification
-		////    CNI  Consignment information
-		////    COD  Component details
-		////    COM  Communication contact
-		////    COT  Contribution details
-		////    CPI  Charge payment instructions
-		////    CPS  Consignment packing sequence
-		////    CPT  Account identification
-		////    CST  Customs status of goods
-		////    DAM  Damage
-		////    DFN  Definition function
-		////    DGS  Dangerous goods
-		////    DII  Directory identification
-		////    DIM  Dimensions
-		////    DLI  Document line identification
-		////    DLM  Delivery limitations
-		////    DMS  Document/message summary
-		////    DOC  Document/message details
-		////    DRD  Data representation details
-		////    DSG  Dosage administration
-		////    DSI  Data set identification
-		////    EDT  Editing details
-		////    EFI  External file link identification
-		////    ELM  Simple data element details
-		////    ELU  Data element usage details
-		////    ELV  Element value definition
-		////    EMP  Employment details
-		////    EQA  Attached equipment
-		////    EQD  Equipment details
-		////    EQN  Number of units
-		////    ERP  Error point details
-		////*   EVE  Event
-		////X   EVT  Event
-		////    FCA  Financial charges allocation
-		////    FII  Financial institution information
-		////    FNS  Footnote set
-		////    FNT  Footnote
-		////    FOR  Formula
-		////    FSQ  Formula sequence
-		////    GDS  Nature of cargo
-		////    GEI  Processing information
-		////    GID  Goods item details
-		////    GIN  Goods identity number
-		////    GIR  Related identification numbers
-		////X   GIS  General indicator
-		////    GOR  Governmental requirements
-		////    GRU  Segment group usage details
-		////    HAN  Handling instructions
-		////    HYN  Hierarchy information
-		////    ICD  Insurance cover description
-		////    IDE  Identity
-		////*   IFD  Information detail
-		////    IHC  Person characteristic
-		////    IMD  Item description
-		////    IND  Index details
-		////    INP  Parties and instruction
-		////    INV  Inventory management related details
-		////    IRQ  Information required
-		////    LAN  Language
-		////    LOC  Place/location identification
-		////    MEA  Measurements
-		////    MEM  Membership details
-		////    MKS  Market/sales channel information
-		////    NAT  Nationality
-		////    PAC  Package
-		////    PAI  Payment instructions
-		////    PAS  Attendance
-		////    PCC  Premium calculation component details
-		////*   PCD  Percentage details
-		////+   PER  Period related details
-		////    PGI  Product group information
-		////    PIA  Additional product id
-		////    PNA  Party identification
-		////    PRC  Process identification
-		////+   PRV  Proviso details
-		////    PSD  Physical sample description
-		////    PTY  Priority
-		////    PYT  Payment terms
-		////    QRS  Query and response
-		////    QUA  Qualification
-		////    QVR  Quantity variances
-		////    RCS  Requirements and conditions
-		////    REL  Relationship
-		////    RJL  Accounting journal identification
-		////    RNG  Range details
-		////    ROD  Risk object type
-		////    RSL  Result
-		////*   RTE  Rate details
-		////    SAL  Remuneration type identification
-		////    SCC  Scheduling conditions
-		////    SCD  Structure component definition
-		////    SEG  Segment identification
-		////    SEL  Seal number
-		////    SEQ  Sequence details
-		////    SFI  Safety information
-		////    SGP  Split goods placement
-		////    SGU  Segment usage details
-		////    SPR  Organisation classification details
-		////    SPS  Sampling parameters for summary statistics
-		////    STA  Statistics
-		////    STC  Statistical concept
-		////    STG  Stages
-		////    STS  Status
-		////    TCC  Transport charge/rate calculations
-		////    TDT  Details of transport
-		////    TEM  Test method
-		////    TMD  Transport movement details
-		////    TMP  Temperature
-		////    TOD  Terms of delivery or transport
-		////    TPL  Transport placement
-		////    TRU  Technical rules
-		////    TSR  Transport service requirements
-		////    VLI  Value list identification
-		//    UNSSegment |
-		//    UNZSegment | // trailer for header UNB
-		//    UNTSegment
+		//UNASegment | // Header UNA
+		//UNBSegment | // Header for trailer UNZ
+		//UNHSegment | // Header for trailer UNT
+		//ADRSegment | // Address
+		//AGRSegment | // Agreement identification
+		//AJTSegment | // Adjustment details
+		//ALCSegment | // Allowance or charge
+		//ALISegment | // Additional information
+		//APPSegment | // Applicability
+		//APRSegment | // Additional price information
+		//ARDSegment | // Monetary amount function
+		//ARRSegment | // Array information
+		//ASISegment | // Array structure identification
+		//ATTSegment | // Attribute
+		//AUTSegment | // Authentication result
+		//BASSegment | // Basis
+		//BGMSegment | // Beginning of message
+		//BIISegment | // Structure identification
+		//BUSSegment | // Business function
+		//CAVSegment | // Characteristic value
+		//CCDSegment | // Credit cover details
+		//CCISegment | // Characteristic/class id
+		//CDISegment | // Physical or logical state
+		//CDSSegment | // Code set identification
+		//CDVSegment | // Code value definition
+		//CEDSegment | // Computer environment details
+		//CINSegment | // Clinical information
+		//CLASegment | // Clause identification
+		//CLISegment | // Clinical intervention
+		//CMPSegment | // Composite data element identification
+		//CNISegment | // Consignment information
+		//CNTSegment | // Control total
+		//CODSegment | // Component details
+		//COMSegment | // Communication contact
+		//COTSegment | // Contribution details
+		//CPISegment | // Charge payment instructions
+		//CPSSegment | // Consignment packing sequence
+		//CPTSegment | // Account identification
+		//CSTSegment | // Customs status of goods
+		//CTASegment | // Contact information
+		//CUXSegment | // Currencies
+		//DAMSegment | // Damage
+		//DFNSegment | // Definition function
+		//DGSSegment | // Dangerous goods
+		//DIISegment | // Directory identification
+		//DIMSegment | // Dimensions
+		//DLISegment | // Document line identification
+		//DLMSegment | // Delivery limitations
+		//DMSSegment | // Document/message summary
+		//DOCSegment | // Document/message details
+		//DRDSegment | // Data representation details
+		//DSGSegment | // Dosage administration
+		//DSISegment | // Data set identification
+		//DTMSegment | // Date/time/period
+		//EDTSegment | // Editing details
+		//EFISegment | // External file link identification
+		//ELMSegment | // Simple data element details
+		//ELUSegment | // Data element usage details
+		//ELVSegment | // Element value definition
+		//EMPSegment | // Employment details
+		//EQASegment | // Attached equipment
+		//EQDSegment | // Equipment details
+		//EQNSegment | // Number of units
+		//ERPSegment | // Error point details
+		//ERCSegment | // Application error information
+		//EVESegment | // Event
+		//EVTSegment | // Event
+		//FCASegment | // Financial charges allocation
+		//FIISegment | // Financial institution information
+		//FNSSegment | // Footnote set
+		//FNTSegment | // Footnote
+		//FORSegment | // Formula
+		//FSQSegment | // Formula sequence
+		//FTXSegment | // Free text
+		//GDSSegment | // Nature of cargo
+		//GEISegment | // Processing information
+		//GIDSegment | // Goods item details
+		//GINSegment | // Goods identity number
+		//GIRSegment | // Related identification numbers
+		//GISSegment | // General indicator
+		//GORSegment | // Governmental requirements
+		//GRUSegment | // Segment group usage details
+		//HANSegment | // Handling instructions
+		//HYNSegment | // Hierarchy information
+		//ICDSegment | // Insurance cover description
+		//IDESegment | // Identity
+		//IFDSegment | // Information detail
+		//IHCSegment | // Person characteristic
+		//IMDSegment | // Item description
+		//INDSegment | // Index details
+		//INPSegment | // Parties and instruction
+		//INVSegment | // Inventory management related details
+		//IRQSegment | // Information required
+		//LANSegment | // Language
+		//LINSegment | // Line item
+		//LOCSegment | // Place/location identification
+		//MEASegment | // Measurements
+		//MEMSegment | // Membership details
+		//MKSSegment | // Market/sales channel information
+		//MOASegment | // Monetary amount
+		//MSGSegment | // Message type identification
+		//NADSegment | // Name and address
+		//NATSegment | // Nationality
+		//ODISegment | // Origin/destination
+		//ORGSegment | // Organisation
+		//PACSegment | // Package
+		//PAISegment | // Payment instructions
+		//PASSegment | // Attendance
+		//PATSegment | // Payment terms basis
+		//PCCSegment | // Premium calculation component details
+		//PCDSegment | // Percentage details
+		//PCISegment | // Package identification
+		//PDISegment | // Person demographic information
+		//PERSegment | // Period related details
+		//PGISegment | // Product group information
+		//PIASegment | // Additional product id
+		//PNASegment | // Party identification
+		//POCSegment | // Purpose of conveyance call
+		//PRCSegment | // Process identification
+		//PRISegment | // Price details
+		//PRVSegment | // Proviso details
+		//PSDSegment | // Physical sample description
+		//PTYSegment | // Priority
+		//PYTSegment | // Payment terms
+		//QRSSegment | // Query and response
+		//QTYSegment | // Quantity
+		//QUASegment | // Qualification
+		//QVRSegment | // Quantity variances
+		//RCSSegment | // Requirements and conditions
+		//RELSegment | // Relationship
+		//RFFSegment | // Reference
+		//RJLSegment | // Accounting journal identification
+		//RNGSegment | // Range details
+		//RODSegment | // Risk object type
+		//RPISegment | // ?
+		//RSLSegment | // Result
+		//RTESegment | // Rate details
+		//SALSegment | // Remuneration type identification
+		//SCCSegment | // Scheduling conditions
+		//SCDSegment | // Structure component definition
+		//SEGSegment | // Segment identification
+		//SELSegment | // Seal number
+		//SEQSegment | // Sequence details
+		//SFISegment | // Safety information
+		//SGPSegment | // Split goods placement
+		//SGUSegment | // Segment usage details
+		//SPRSegment | // Organisation classification details
+		//SPSSegment | // Sampling parameters for summary statistics
+		//STASegment | // Statistics
+		//STCSegment | // Statistical concept
+		//STGSegment | // Stages
+		//STSSegment | // Status
+		//TAXSegment | // Duty/tax/fee details
+		//TCCSegment | // Transport charge/rate calculations
+		//TDTSegment | // Details of transport
+		//TEMSegment | // Test method
+		//TMDSegment | // Transport movement details
+		//TMPSegment | // Temperature
+		//TODSegment | // Terms of delivery or transport
+		//TPLSegment | // Transport placement
+		//TRUSegment | // Technical rules
+		//TSRSegment | // Transport service requirements
+		//TVLSegment | // Travel itinerary
+		//UCISegment | // ?
+		//VLISegment | // Value list identification
+		//UNSSegment | // Trailer UNS
+		//UNZSegment | // Trailer for header UNB
+		//UNTSegment
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//UNASegment
 		public RuleCall getUNASegmentParserRuleCall_0() { return cUNASegmentParserRuleCall_0; }
 		
-		//UNBSegment
+		//// Header UNA
+		//   UNBSegment
 		public RuleCall getUNBSegmentParserRuleCall_1() { return cUNBSegmentParserRuleCall_1; }
 		
-		//// header for trailer UNZ
+		//// Header for trailer UNZ
 		//   UNHSegment
 		public RuleCall getUNHSegmentParserRuleCall_2() { return cUNHSegmentParserRuleCall_2; }
 		
-		//// header for trailer UNT
-		//   MSGSegment
-		public RuleCall getMSGSegmentParserRuleCall_3() { return cMSGSegmentParserRuleCall_3; }
+		//// Header for trailer UNT
+		//   ADRSegment
+		public RuleCall getADRSegmentParserRuleCall_3() { return cADRSegmentParserRuleCall_3; }
 		
-		//// Message type identification
-		//   ORGSegment
-		public RuleCall getORGSegmentParserRuleCall_4() { return cORGSegmentParserRuleCall_4; }
+		//// Address
+		//   AGRSegment
+		public RuleCall getAGRSegmentParserRuleCall_4() { return cAGRSegmentParserRuleCall_4; }
 		
-		//// Organisation
-		//   POCSegment
-		public RuleCall getPOCSegmentParserRuleCall_5() { return cPOCSegmentParserRuleCall_5; }
+		//// Agreement identification
+		//   AJTSegment
+		public RuleCall getAJTSegmentParserRuleCall_5() { return cAJTSegmentParserRuleCall_5; }
 		
-		//// Purpose of conveyance call
-		//   ODISegment
-		public RuleCall getODISegmentParserRuleCall_6() { return cODISegmentParserRuleCall_6; }
+		//// Adjustment details
+		//   ALCSegment
+		public RuleCall getALCSegmentParserRuleCall_6() { return cALCSegmentParserRuleCall_6; }
 		
-		//// Origin/destination
-		//   UCISegment
-		public RuleCall getUCISegmentParserRuleCall_7() { return cUCISegmentParserRuleCall_7; }
+		//// Allowance or charge
+		//   ALISegment
+		public RuleCall getALISegmentParserRuleCall_7() { return cALISegmentParserRuleCall_7; }
 		
-		//// ?
-		//   PDISegment
-		public RuleCall getPDISegmentParserRuleCall_8() { return cPDISegmentParserRuleCall_8; }
+		//// Additional information
+		//   APPSegment
+		public RuleCall getAPPSegmentParserRuleCall_8() { return cAPPSegmentParserRuleCall_8; }
 		
-		//// Person demographic information
-		//   RPISegment
-		public RuleCall getRPISegmentParserRuleCall_9() { return cRPISegmentParserRuleCall_9; }
+		//// Applicability
+		//   APRSegment
+		public RuleCall getAPRSegmentParserRuleCall_9() { return cAPRSegmentParserRuleCall_9; }
 		
-		//// ?
-		//   TVLSegment
-		public RuleCall getTVLSegmentParserRuleCall_10() { return cTVLSegmentParserRuleCall_10; }
+		//// Additional price information
+		//   ARDSegment
+		public RuleCall getARDSegmentParserRuleCall_10() { return cARDSegmentParserRuleCall_10; }
 		
-		//// Travel itinerary
+		//// Monetary amount function
+		//   ARRSegment
+		public RuleCall getARRSegmentParserRuleCall_11() { return cARRSegmentParserRuleCall_11; }
+		
+		//// Array information
+		//   ASISegment
+		public RuleCall getASISegmentParserRuleCall_12() { return cASISegmentParserRuleCall_12; }
+		
+		//// Array structure identification
+		//   ATTSegment
+		public RuleCall getATTSegmentParserRuleCall_13() { return cATTSegmentParserRuleCall_13; }
+		
+		//// Attribute
+		//   AUTSegment
+		public RuleCall getAUTSegmentParserRuleCall_14() { return cAUTSegmentParserRuleCall_14; }
+		
+		//// Authentication result
+		//   BASSegment
+		public RuleCall getBASSegmentParserRuleCall_15() { return cBASSegmentParserRuleCall_15; }
+		
+		//// Basis
 		//   BGMSegment
-		public RuleCall getBGMSegmentParserRuleCall_11() { return cBGMSegmentParserRuleCall_11; }
+		public RuleCall getBGMSegmentParserRuleCall_16() { return cBGMSegmentParserRuleCall_16; }
 		
 		//// Beginning of message
-		//   DTMSegment
-		public RuleCall getDTMSegmentParserRuleCall_12() { return cDTMSegmentParserRuleCall_12; }
+		//   BIISegment
+		public RuleCall getBIISegmentParserRuleCall_17() { return cBIISegmentParserRuleCall_17; }
 		
-		//// Date/time/period
-		//   NADSegment
-		public RuleCall getNADSegmentParserRuleCall_13() { return cNADSegmentParserRuleCall_13; }
+		//// Structure identification
+		//   BUSSegment
+		public RuleCall getBUSSegmentParserRuleCall_18() { return cBUSSegmentParserRuleCall_18; }
 		
-		//// Name and address
-		//   RFFSegment
-		public RuleCall getRFFSegmentParserRuleCall_14() { return cRFFSegmentParserRuleCall_14; }
+		//// Business function
+		//   CAVSegment
+		public RuleCall getCAVSegmentParserRuleCall_19() { return cCAVSegmentParserRuleCall_19; }
 		
-		//// Reference
-		//   CUXSegment
-		public RuleCall getCUXSegmentParserRuleCall_15() { return cCUXSegmentParserRuleCall_15; }
+		//// Characteristic value
+		//   CCDSegment
+		public RuleCall getCCDSegmentParserRuleCall_20() { return cCCDSegmentParserRuleCall_20; }
 		
-		//// Currencies
-		//   TAXSegment
-		public RuleCall getTAXSegmentParserRuleCall_16() { return cTAXSegmentParserRuleCall_16; }
+		//// Credit cover details
+		//   CCISegment
+		public RuleCall getCCISegmentParserRuleCall_21() { return cCCISegmentParserRuleCall_21; }
 		
-		//// Duty/tax/fee details
-		//   LINSegment
-		public RuleCall getLINSegmentParserRuleCall_17() { return cLINSegmentParserRuleCall_17; }
+		//// Characteristic/class id
+		//   CDISegment
+		public RuleCall getCDISegmentParserRuleCall_22() { return cCDISegmentParserRuleCall_22; }
 		
-		//// Line item
-		//   QTYSegment
-		public RuleCall getQTYSegmentParserRuleCall_18() { return cQTYSegmentParserRuleCall_18; }
+		//// Physical or logical state
+		//   CDSSegment
+		public RuleCall getCDSSegmentParserRuleCall_23() { return cCDSSegmentParserRuleCall_23; }
 		
-		//// Quantity
-		//   MOASegment
-		public RuleCall getMOASegmentParserRuleCall_19() { return cMOASegmentParserRuleCall_19; }
+		//// Code set identification
+		//   CDVSegment
+		public RuleCall getCDVSegmentParserRuleCall_24() { return cCDVSegmentParserRuleCall_24; }
 		
-		//// Monetary amount
-		//   PRISegment
-		public RuleCall getPRISegmentParserRuleCall_20() { return cPRISegmentParserRuleCall_20; }
+		//// Code value definition
+		//   CEDSegment
+		public RuleCall getCEDSegmentParserRuleCall_25() { return cCEDSegmentParserRuleCall_25; }
 		
-		//// Price details
-		//   PATSegment
-		public RuleCall getPATSegmentParserRuleCall_21() { return cPATSegmentParserRuleCall_21; }
+		//// Computer environment details
+		//   CINSegment
+		public RuleCall getCINSegmentParserRuleCall_26() { return cCINSegmentParserRuleCall_26; }
 		
-		//// Payment terms basis
-		//   PCISegment
-		public RuleCall getPCISegmentParserRuleCall_22() { return cPCISegmentParserRuleCall_22; }
+		//// Clinical information
+		//   CLASegment
+		public RuleCall getCLASegmentParserRuleCall_27() { return cCLASegmentParserRuleCall_27; }
 		
-		//// Package identification
-		//   CTASegment
-		public RuleCall getCTASegmentParserRuleCall_23() { return cCTASegmentParserRuleCall_23; }
+		//// Clause identification
+		//   CLISegment
+		public RuleCall getCLISegmentParserRuleCall_28() { return cCLISegmentParserRuleCall_28; }
 		
-		//// Contact information
+		//// Clinical intervention
+		//   CMPSegment
+		public RuleCall getCMPSegmentParserRuleCall_29() { return cCMPSegmentParserRuleCall_29; }
+		
+		//// Composite data element identification
+		//   CNISegment
+		public RuleCall getCNISegmentParserRuleCall_30() { return cCNISegmentParserRuleCall_30; }
+		
+		//// Consignment information
 		//   CNTSegment
-		public RuleCall getCNTSegmentParserRuleCall_24() { return cCNTSegmentParserRuleCall_24; }
+		public RuleCall getCNTSegmentParserRuleCall_31() { return cCNTSegmentParserRuleCall_31; }
 		
 		//// Control total
+		//   CODSegment
+		public RuleCall getCODSegmentParserRuleCall_32() { return cCODSegmentParserRuleCall_32; }
+		
+		//// Component details
+		//   COMSegment
+		public RuleCall getCOMSegmentParserRuleCall_33() { return cCOMSegmentParserRuleCall_33; }
+		
+		//// Communication contact
+		//   COTSegment
+		public RuleCall getCOTSegmentParserRuleCall_34() { return cCOTSegmentParserRuleCall_34; }
+		
+		//// Contribution details
+		//   CPISegment
+		public RuleCall getCPISegmentParserRuleCall_35() { return cCPISegmentParserRuleCall_35; }
+		
+		//// Charge payment instructions
+		//   CPSSegment
+		public RuleCall getCPSSegmentParserRuleCall_36() { return cCPSSegmentParserRuleCall_36; }
+		
+		//// Consignment packing sequence
+		//   CPTSegment
+		public RuleCall getCPTSegmentParserRuleCall_37() { return cCPTSegmentParserRuleCall_37; }
+		
+		//// Account identification
+		//   CSTSegment
+		public RuleCall getCSTSegmentParserRuleCall_38() { return cCSTSegmentParserRuleCall_38; }
+		
+		//// Customs status of goods
+		//   CTASegment
+		public RuleCall getCTASegmentParserRuleCall_39() { return cCTASegmentParserRuleCall_39; }
+		
+		//// Contact information
+		//   CUXSegment
+		public RuleCall getCUXSegmentParserRuleCall_40() { return cCUXSegmentParserRuleCall_40; }
+		
+		//// Currencies
+		//   DAMSegment
+		public RuleCall getDAMSegmentParserRuleCall_41() { return cDAMSegmentParserRuleCall_41; }
+		
+		//// Damage
+		//   DFNSegment
+		public RuleCall getDFNSegmentParserRuleCall_42() { return cDFNSegmentParserRuleCall_42; }
+		
+		//// Definition function
+		//   DGSSegment
+		public RuleCall getDGSSegmentParserRuleCall_43() { return cDGSSegmentParserRuleCall_43; }
+		
+		//// Dangerous goods
+		//   DIISegment
+		public RuleCall getDIISegmentParserRuleCall_44() { return cDIISegmentParserRuleCall_44; }
+		
+		//// Directory identification
+		//   DIMSegment
+		public RuleCall getDIMSegmentParserRuleCall_45() { return cDIMSegmentParserRuleCall_45; }
+		
+		//// Dimensions
+		//   DLISegment
+		public RuleCall getDLISegmentParserRuleCall_46() { return cDLISegmentParserRuleCall_46; }
+		
+		//// Document line identification
+		//   DLMSegment
+		public RuleCall getDLMSegmentParserRuleCall_47() { return cDLMSegmentParserRuleCall_47; }
+		
+		//// Delivery limitations
+		//   DMSSegment
+		public RuleCall getDMSSegmentParserRuleCall_48() { return cDMSSegmentParserRuleCall_48; }
+		
+		//// Document/message summary
+		//   DOCSegment
+		public RuleCall getDOCSegmentParserRuleCall_49() { return cDOCSegmentParserRuleCall_49; }
+		
+		//// Document/message details
+		//   DRDSegment
+		public RuleCall getDRDSegmentParserRuleCall_50() { return cDRDSegmentParserRuleCall_50; }
+		
+		//// Data representation details
+		//   DSGSegment
+		public RuleCall getDSGSegmentParserRuleCall_51() { return cDSGSegmentParserRuleCall_51; }
+		
+		//// Dosage administration
+		//   DSISegment
+		public RuleCall getDSISegmentParserRuleCall_52() { return cDSISegmentParserRuleCall_52; }
+		
+		//// Data set identification
+		//   DTMSegment
+		public RuleCall getDTMSegmentParserRuleCall_53() { return cDTMSegmentParserRuleCall_53; }
+		
+		//// Date/time/period
+		//   EDTSegment
+		public RuleCall getEDTSegmentParserRuleCall_54() { return cEDTSegmentParserRuleCall_54; }
+		
+		//// Editing details
+		//   EFISegment
+		public RuleCall getEFISegmentParserRuleCall_55() { return cEFISegmentParserRuleCall_55; }
+		
+		//// External file link identification
+		//   ELMSegment
+		public RuleCall getELMSegmentParserRuleCall_56() { return cELMSegmentParserRuleCall_56; }
+		
+		//// Simple data element details
+		//   ELUSegment
+		public RuleCall getELUSegmentParserRuleCall_57() { return cELUSegmentParserRuleCall_57; }
+		
+		//// Data element usage details
+		//   ELVSegment
+		public RuleCall getELVSegmentParserRuleCall_58() { return cELVSegmentParserRuleCall_58; }
+		
+		//// Element value definition
+		//   EMPSegment
+		public RuleCall getEMPSegmentParserRuleCall_59() { return cEMPSegmentParserRuleCall_59; }
+		
+		//// Employment details
+		//   EQASegment
+		public RuleCall getEQASegmentParserRuleCall_60() { return cEQASegmentParserRuleCall_60; }
+		
+		//// Attached equipment
+		//   EQDSegment
+		public RuleCall getEQDSegmentParserRuleCall_61() { return cEQDSegmentParserRuleCall_61; }
+		
+		//// Equipment details
+		//   EQNSegment
+		public RuleCall getEQNSegmentParserRuleCall_62() { return cEQNSegmentParserRuleCall_62; }
+		
+		//// Number of units
+		//   ERPSegment
+		public RuleCall getERPSegmentParserRuleCall_63() { return cERPSegmentParserRuleCall_63; }
+		
+		//// Error point details
+		//   ERCSegment
+		public RuleCall getERCSegmentParserRuleCall_64() { return cERCSegmentParserRuleCall_64; }
+		
+		//// Application error information
+		//   EVESegment
+		public RuleCall getEVESegmentParserRuleCall_65() { return cEVESegmentParserRuleCall_65; }
+		
+		//// Event
+		//   EVTSegment
+		public RuleCall getEVTSegmentParserRuleCall_66() { return cEVTSegmentParserRuleCall_66; }
+		
+		//// Event
+		//   FCASegment
+		public RuleCall getFCASegmentParserRuleCall_67() { return cFCASegmentParserRuleCall_67; }
+		
+		//// Financial charges allocation
+		//   FIISegment
+		public RuleCall getFIISegmentParserRuleCall_68() { return cFIISegmentParserRuleCall_68; }
+		
+		//// Financial institution information
+		//   FNSSegment
+		public RuleCall getFNSSegmentParserRuleCall_69() { return cFNSSegmentParserRuleCall_69; }
+		
+		//// Footnote set
+		//   FNTSegment
+		public RuleCall getFNTSegmentParserRuleCall_70() { return cFNTSegmentParserRuleCall_70; }
+		
+		//// Footnote
+		//   FORSegment
+		public RuleCall getFORSegmentParserRuleCall_71() { return cFORSegmentParserRuleCall_71; }
+		
+		//// Formula
+		//   FSQSegment
+		public RuleCall getFSQSegmentParserRuleCall_72() { return cFSQSegmentParserRuleCall_72; }
+		
+		//// Formula sequence
 		//   FTXSegment
-		public RuleCall getFTXSegmentParserRuleCall_25() { return cFTXSegmentParserRuleCall_25; }
+		public RuleCall getFTXSegmentParserRuleCall_73() { return cFTXSegmentParserRuleCall_73; }
 		
 		//// Free text
-		//   ERCSegment
-		public RuleCall getERCSegmentParserRuleCall_26() { return cERCSegmentParserRuleCall_26; }
+		//   GDSSegment
+		public RuleCall getGDSSegmentParserRuleCall_74() { return cGDSSegmentParserRuleCall_74; }
 		
-		// // Application error information
-		////    ADR  Address
-		////    AGR  Agreement identification
-		////    AJT  Adjustment details
-		////    ALC  Allowance or charge
-		////    ALI  Additional information
-		////+   APP  Applicability
-		////    APR  Additional price information
-		////    ARD  Monetary amount function
-		////    ARR  Array information
-		////    ASI  Array structure identification
-		////    ATT  Attribute
-		////    AUT  Authentication result
-		////+   BAS  Basis
-		////    BII  Structure identification
-		////    BUS  Business function
-		////    CAV  Characteristic value
-		////    CCD  Credit cover details
-		////    CCI  Characteristic/class id
-		////    CDI  Physical or logical state
-		////    CDS  Code set identification
-		////    CDV  Code value definition
-		////    CED  Computer environment details
-		////    CIN  Clinical information
-		////+   CLA  Clause identification
-		////    CLI  Clinical intervention
-		////    CMP  Composite data element identification
-		////    CNI  Consignment information
-		////    COD  Component details
-		////    COM  Communication contact
-		////    COT  Contribution details
-		////    CPI  Charge payment instructions
-		////    CPS  Consignment packing sequence
-		////    CPT  Account identification
-		////    CST  Customs status of goods
-		////    DAM  Damage
-		////    DFN  Definition function
-		////    DGS  Dangerous goods
-		////    DII  Directory identification
-		////    DIM  Dimensions
-		////    DLI  Document line identification
-		////    DLM  Delivery limitations
-		////    DMS  Document/message summary
-		////    DOC  Document/message details
-		////    DRD  Data representation details
-		////    DSG  Dosage administration
-		////    DSI  Data set identification
-		////    EDT  Editing details
-		////    EFI  External file link identification
-		////    ELM  Simple data element details
-		////    ELU  Data element usage details
-		////    ELV  Element value definition
-		////    EMP  Employment details
-		////    EQA  Attached equipment
-		////    EQD  Equipment details
-		////    EQN  Number of units
-		////    ERP  Error point details
-		////*   EVE  Event
-		////X   EVT  Event
-		////    FCA  Financial charges allocation
-		////    FII  Financial institution information
-		////    FNS  Footnote set
-		////    FNT  Footnote
-		////    FOR  Formula
-		////    FSQ  Formula sequence
-		////    GDS  Nature of cargo
-		////    GEI  Processing information
-		////    GID  Goods item details
-		////    GIN  Goods identity number
-		////    GIR  Related identification numbers
-		////X   GIS  General indicator
-		////    GOR  Governmental requirements
-		////    GRU  Segment group usage details
-		////    HAN  Handling instructions
-		////    HYN  Hierarchy information
-		////    ICD  Insurance cover description
-		////    IDE  Identity
-		////*   IFD  Information detail
-		////    IHC  Person characteristic
-		////    IMD  Item description
-		////    IND  Index details
-		////    INP  Parties and instruction
-		////    INV  Inventory management related details
-		////    IRQ  Information required
-		////    LAN  Language
-		////    LOC  Place/location identification
-		////    MEA  Measurements
-		////    MEM  Membership details
-		////    MKS  Market/sales channel information
-		////    NAT  Nationality
-		////    PAC  Package
-		////    PAI  Payment instructions
-		////    PAS  Attendance
-		////    PCC  Premium calculation component details
-		////*   PCD  Percentage details
-		////+   PER  Period related details
-		////    PGI  Product group information
-		////    PIA  Additional product id
-		////    PNA  Party identification
-		////    PRC  Process identification
-		////+   PRV  Proviso details
-		////    PSD  Physical sample description
-		////    PTY  Priority
-		////    PYT  Payment terms
-		////    QRS  Query and response
-		////    QUA  Qualification
-		////    QVR  Quantity variances
-		////    RCS  Requirements and conditions
-		////    REL  Relationship
-		////    RJL  Accounting journal identification
-		////    RNG  Range details
-		////    ROD  Risk object type
-		////    RSL  Result
-		////*   RTE  Rate details
-		////    SAL  Remuneration type identification
-		////    SCC  Scheduling conditions
-		////    SCD  Structure component definition
-		////    SEG  Segment identification
-		////    SEL  Seal number
-		////    SEQ  Sequence details
-		////    SFI  Safety information
-		////    SGP  Split goods placement
-		////    SGU  Segment usage details
-		////    SPR  Organisation classification details
-		////    SPS  Sampling parameters for summary statistics
-		////    STA  Statistics
-		////    STC  Statistical concept
-		////    STG  Stages
-		////    STS  Status
-		////    TCC  Transport charge/rate calculations
-		////    TDT  Details of transport
-		////    TEM  Test method
-		////    TMD  Transport movement details
-		////    TMP  Temperature
-		////    TOD  Terms of delivery or transport
-		////    TPL  Transport placement
-		////    TRU  Technical rules
-		////    TSR  Transport service requirements
-		////    VLI  Value list identification
-		//    UNSSegment
-		public RuleCall getUNSSegmentParserRuleCall_27() { return cUNSSegmentParserRuleCall_27; }
+		//// Nature of cargo
+		//   GEISegment
+		public RuleCall getGEISegmentParserRuleCall_75() { return cGEISegmentParserRuleCall_75; }
 		
-		//UNZSegment
-		public RuleCall getUNZSegmentParserRuleCall_28() { return cUNZSegmentParserRuleCall_28; }
+		//// Processing information
+		//   GIDSegment
+		public RuleCall getGIDSegmentParserRuleCall_76() { return cGIDSegmentParserRuleCall_76; }
 		
-		//// trailer for header UNB
+		//// Goods item details
+		//   GINSegment
+		public RuleCall getGINSegmentParserRuleCall_77() { return cGINSegmentParserRuleCall_77; }
+		
+		//// Goods identity number
+		//   GIRSegment
+		public RuleCall getGIRSegmentParserRuleCall_78() { return cGIRSegmentParserRuleCall_78; }
+		
+		//// Related identification numbers
+		//   GISSegment
+		public RuleCall getGISSegmentParserRuleCall_79() { return cGISSegmentParserRuleCall_79; }
+		
+		//// General indicator
+		//   GORSegment
+		public RuleCall getGORSegmentParserRuleCall_80() { return cGORSegmentParserRuleCall_80; }
+		
+		//// Governmental requirements
+		//   GRUSegment
+		public RuleCall getGRUSegmentParserRuleCall_81() { return cGRUSegmentParserRuleCall_81; }
+		
+		//// Segment group usage details
+		//   HANSegment
+		public RuleCall getHANSegmentParserRuleCall_82() { return cHANSegmentParserRuleCall_82; }
+		
+		//// Handling instructions
+		//   HYNSegment
+		public RuleCall getHYNSegmentParserRuleCall_83() { return cHYNSegmentParserRuleCall_83; }
+		
+		//// Hierarchy information
+		//   ICDSegment
+		public RuleCall getICDSegmentParserRuleCall_84() { return cICDSegmentParserRuleCall_84; }
+		
+		//// Insurance cover description
+		//   IDESegment
+		public RuleCall getIDESegmentParserRuleCall_85() { return cIDESegmentParserRuleCall_85; }
+		
+		//// Identity
+		//   IFDSegment
+		public RuleCall getIFDSegmentParserRuleCall_86() { return cIFDSegmentParserRuleCall_86; }
+		
+		//// Information detail
+		//   IHCSegment
+		public RuleCall getIHCSegmentParserRuleCall_87() { return cIHCSegmentParserRuleCall_87; }
+		
+		//// Person characteristic
+		//   IMDSegment
+		public RuleCall getIMDSegmentParserRuleCall_88() { return cIMDSegmentParserRuleCall_88; }
+		
+		//// Item description
+		//   INDSegment
+		public RuleCall getINDSegmentParserRuleCall_89() { return cINDSegmentParserRuleCall_89; }
+		
+		//// Index details
+		//   INPSegment
+		public RuleCall getINPSegmentParserRuleCall_90() { return cINPSegmentParserRuleCall_90; }
+		
+		//// Parties and instruction
+		//   INVSegment
+		public RuleCall getINVSegmentParserRuleCall_91() { return cINVSegmentParserRuleCall_91; }
+		
+		//// Inventory management related details
+		//   IRQSegment
+		public RuleCall getIRQSegmentParserRuleCall_92() { return cIRQSegmentParserRuleCall_92; }
+		
+		//// Information required
+		//   LANSegment
+		public RuleCall getLANSegmentParserRuleCall_93() { return cLANSegmentParserRuleCall_93; }
+		
+		//// Language
+		//   LINSegment
+		public RuleCall getLINSegmentParserRuleCall_94() { return cLINSegmentParserRuleCall_94; }
+		
+		//// Line item
+		//   LOCSegment
+		public RuleCall getLOCSegmentParserRuleCall_95() { return cLOCSegmentParserRuleCall_95; }
+		
+		//// Place/location identification
+		//   MEASegment
+		public RuleCall getMEASegmentParserRuleCall_96() { return cMEASegmentParserRuleCall_96; }
+		
+		//// Measurements
+		//   MEMSegment
+		public RuleCall getMEMSegmentParserRuleCall_97() { return cMEMSegmentParserRuleCall_97; }
+		
+		//// Membership details
+		//   MKSSegment
+		public RuleCall getMKSSegmentParserRuleCall_98() { return cMKSSegmentParserRuleCall_98; }
+		
+		//// Market/sales channel information
+		//   MOASegment
+		public RuleCall getMOASegmentParserRuleCall_99() { return cMOASegmentParserRuleCall_99; }
+		
+		//// Monetary amount
+		//   MSGSegment
+		public RuleCall getMSGSegmentParserRuleCall_100() { return cMSGSegmentParserRuleCall_100; }
+		
+		//// Message type identification
+		//   NADSegment
+		public RuleCall getNADSegmentParserRuleCall_101() { return cNADSegmentParserRuleCall_101; }
+		
+		//// Name and address
+		//   NATSegment
+		public RuleCall getNATSegmentParserRuleCall_102() { return cNATSegmentParserRuleCall_102; }
+		
+		//// Nationality
+		//   ODISegment
+		public RuleCall getODISegmentParserRuleCall_103() { return cODISegmentParserRuleCall_103; }
+		
+		//// Origin/destination
+		//   ORGSegment
+		public RuleCall getORGSegmentParserRuleCall_104() { return cORGSegmentParserRuleCall_104; }
+		
+		//// Organisation
+		//   PACSegment
+		public RuleCall getPACSegmentParserRuleCall_105() { return cPACSegmentParserRuleCall_105; }
+		
+		//// Package
+		//   PAISegment
+		public RuleCall getPAISegmentParserRuleCall_106() { return cPAISegmentParserRuleCall_106; }
+		
+		//// Payment instructions
+		//   PASSegment
+		public RuleCall getPASSegmentParserRuleCall_107() { return cPASSegmentParserRuleCall_107; }
+		
+		//// Attendance
+		//   PATSegment
+		public RuleCall getPATSegmentParserRuleCall_108() { return cPATSegmentParserRuleCall_108; }
+		
+		//// Payment terms basis
+		//   PCCSegment
+		public RuleCall getPCCSegmentParserRuleCall_109() { return cPCCSegmentParserRuleCall_109; }
+		
+		//// Premium calculation component details
+		//   PCDSegment
+		public RuleCall getPCDSegmentParserRuleCall_110() { return cPCDSegmentParserRuleCall_110; }
+		
+		//// Percentage details
+		//   PCISegment
+		public RuleCall getPCISegmentParserRuleCall_111() { return cPCISegmentParserRuleCall_111; }
+		
+		//// Package identification
+		//   PDISegment
+		public RuleCall getPDISegmentParserRuleCall_112() { return cPDISegmentParserRuleCall_112; }
+		
+		//// Person demographic information
+		//   PERSegment
+		public RuleCall getPERSegmentParserRuleCall_113() { return cPERSegmentParserRuleCall_113; }
+		
+		//// Period related details
+		//   PGISegment
+		public RuleCall getPGISegmentParserRuleCall_114() { return cPGISegmentParserRuleCall_114; }
+		
+		//// Product group information
+		//   PIASegment
+		public RuleCall getPIASegmentParserRuleCall_115() { return cPIASegmentParserRuleCall_115; }
+		
+		//// Additional product id
+		//   PNASegment
+		public RuleCall getPNASegmentParserRuleCall_116() { return cPNASegmentParserRuleCall_116; }
+		
+		//// Party identification
+		//   POCSegment
+		public RuleCall getPOCSegmentParserRuleCall_117() { return cPOCSegmentParserRuleCall_117; }
+		
+		//// Purpose of conveyance call
+		//   PRCSegment
+		public RuleCall getPRCSegmentParserRuleCall_118() { return cPRCSegmentParserRuleCall_118; }
+		
+		//// Process identification
+		//   PRISegment
+		public RuleCall getPRISegmentParserRuleCall_119() { return cPRISegmentParserRuleCall_119; }
+		
+		//// Price details
+		//   PRVSegment
+		public RuleCall getPRVSegmentParserRuleCall_120() { return cPRVSegmentParserRuleCall_120; }
+		
+		//// Proviso details
+		//   PSDSegment
+		public RuleCall getPSDSegmentParserRuleCall_121() { return cPSDSegmentParserRuleCall_121; }
+		
+		//// Physical sample description
+		//   PTYSegment
+		public RuleCall getPTYSegmentParserRuleCall_122() { return cPTYSegmentParserRuleCall_122; }
+		
+		//// Priority
+		//   PYTSegment
+		public RuleCall getPYTSegmentParserRuleCall_123() { return cPYTSegmentParserRuleCall_123; }
+		
+		//// Payment terms
+		//   QRSSegment
+		public RuleCall getQRSSegmentParserRuleCall_124() { return cQRSSegmentParserRuleCall_124; }
+		
+		//// Query and response
+		//   QTYSegment
+		public RuleCall getQTYSegmentParserRuleCall_125() { return cQTYSegmentParserRuleCall_125; }
+		
+		//// Quantity
+		//   QUASegment
+		public RuleCall getQUASegmentParserRuleCall_126() { return cQUASegmentParserRuleCall_126; }
+		
+		//// Qualification
+		//   QVRSegment
+		public RuleCall getQVRSegmentParserRuleCall_127() { return cQVRSegmentParserRuleCall_127; }
+		
+		//// Quantity variances
+		//   RCSSegment
+		public RuleCall getRCSSegmentParserRuleCall_128() { return cRCSSegmentParserRuleCall_128; }
+		
+		//// Requirements and conditions
+		//   RELSegment
+		public RuleCall getRELSegmentParserRuleCall_129() { return cRELSegmentParserRuleCall_129; }
+		
+		//// Relationship
+		//   RFFSegment
+		public RuleCall getRFFSegmentParserRuleCall_130() { return cRFFSegmentParserRuleCall_130; }
+		
+		//// Reference
+		//   RJLSegment
+		public RuleCall getRJLSegmentParserRuleCall_131() { return cRJLSegmentParserRuleCall_131; }
+		
+		//// Accounting journal identification
+		//   RNGSegment
+		public RuleCall getRNGSegmentParserRuleCall_132() { return cRNGSegmentParserRuleCall_132; }
+		
+		//// Range details
+		//   RODSegment
+		public RuleCall getRODSegmentParserRuleCall_133() { return cRODSegmentParserRuleCall_133; }
+		
+		//// Risk object type
+		//   RPISegment
+		public RuleCall getRPISegmentParserRuleCall_134() { return cRPISegmentParserRuleCall_134; }
+		
+		//// ?
+		//   RSLSegment
+		public RuleCall getRSLSegmentParserRuleCall_135() { return cRSLSegmentParserRuleCall_135; }
+		
+		//// Result
+		//   RTESegment
+		public RuleCall getRTESegmentParserRuleCall_136() { return cRTESegmentParserRuleCall_136; }
+		
+		//// Rate details
+		//   SALSegment
+		public RuleCall getSALSegmentParserRuleCall_137() { return cSALSegmentParserRuleCall_137; }
+		
+		//// Remuneration type identification
+		//   SCCSegment
+		public RuleCall getSCCSegmentParserRuleCall_138() { return cSCCSegmentParserRuleCall_138; }
+		
+		//// Scheduling conditions
+		//   SCDSegment
+		public RuleCall getSCDSegmentParserRuleCall_139() { return cSCDSegmentParserRuleCall_139; }
+		
+		//// Structure component definition
+		//   SEGSegment
+		public RuleCall getSEGSegmentParserRuleCall_140() { return cSEGSegmentParserRuleCall_140; }
+		
+		//// Segment identification
+		//   SELSegment
+		public RuleCall getSELSegmentParserRuleCall_141() { return cSELSegmentParserRuleCall_141; }
+		
+		//// Seal number
+		//   SEQSegment
+		public RuleCall getSEQSegmentParserRuleCall_142() { return cSEQSegmentParserRuleCall_142; }
+		
+		//// Sequence details
+		//   SFISegment
+		public RuleCall getSFISegmentParserRuleCall_143() { return cSFISegmentParserRuleCall_143; }
+		
+		//// Safety information
+		//   SGPSegment
+		public RuleCall getSGPSegmentParserRuleCall_144() { return cSGPSegmentParserRuleCall_144; }
+		
+		//// Split goods placement
+		//   SGUSegment
+		public RuleCall getSGUSegmentParserRuleCall_145() { return cSGUSegmentParserRuleCall_145; }
+		
+		//// Segment usage details
+		//   SPRSegment
+		public RuleCall getSPRSegmentParserRuleCall_146() { return cSPRSegmentParserRuleCall_146; }
+		
+		//// Organisation classification details
+		//   SPSSegment
+		public RuleCall getSPSSegmentParserRuleCall_147() { return cSPSSegmentParserRuleCall_147; }
+		
+		//// Sampling parameters for summary statistics
+		//   STASegment
+		public RuleCall getSTASegmentParserRuleCall_148() { return cSTASegmentParserRuleCall_148; }
+		
+		//// Statistics
+		//   STCSegment
+		public RuleCall getSTCSegmentParserRuleCall_149() { return cSTCSegmentParserRuleCall_149; }
+		
+		//// Statistical concept
+		//   STGSegment
+		public RuleCall getSTGSegmentParserRuleCall_150() { return cSTGSegmentParserRuleCall_150; }
+		
+		//// Stages
+		//   STSSegment
+		public RuleCall getSTSSegmentParserRuleCall_151() { return cSTSSegmentParserRuleCall_151; }
+		
+		//// Status
+		//   TAXSegment
+		public RuleCall getTAXSegmentParserRuleCall_152() { return cTAXSegmentParserRuleCall_152; }
+		
+		//// Duty/tax/fee details
+		//   TCCSegment
+		public RuleCall getTCCSegmentParserRuleCall_153() { return cTCCSegmentParserRuleCall_153; }
+		
+		//// Transport charge/rate calculations
+		//   TDTSegment
+		public RuleCall getTDTSegmentParserRuleCall_154() { return cTDTSegmentParserRuleCall_154; }
+		
+		//// Details of transport
+		//   TEMSegment
+		public RuleCall getTEMSegmentParserRuleCall_155() { return cTEMSegmentParserRuleCall_155; }
+		
+		//// Test method
+		//   TMDSegment
+		public RuleCall getTMDSegmentParserRuleCall_156() { return cTMDSegmentParserRuleCall_156; }
+		
+		//// Transport movement details
+		//   TMPSegment
+		public RuleCall getTMPSegmentParserRuleCall_157() { return cTMPSegmentParserRuleCall_157; }
+		
+		//// Temperature
+		//   TODSegment
+		public RuleCall getTODSegmentParserRuleCall_158() { return cTODSegmentParserRuleCall_158; }
+		
+		//// Terms of delivery or transport
+		//   TPLSegment
+		public RuleCall getTPLSegmentParserRuleCall_159() { return cTPLSegmentParserRuleCall_159; }
+		
+		//// Transport placement
+		//   TRUSegment
+		public RuleCall getTRUSegmentParserRuleCall_160() { return cTRUSegmentParserRuleCall_160; }
+		
+		//// Technical rules
+		//   TSRSegment
+		public RuleCall getTSRSegmentParserRuleCall_161() { return cTSRSegmentParserRuleCall_161; }
+		
+		//// Transport service requirements
+		//   TVLSegment
+		public RuleCall getTVLSegmentParserRuleCall_162() { return cTVLSegmentParserRuleCall_162; }
+		
+		//// Travel itinerary
+		//   UCISegment
+		public RuleCall getUCISegmentParserRuleCall_163() { return cUCISegmentParserRuleCall_163; }
+		
+		//// ?
+		//   VLISegment
+		public RuleCall getVLISegmentParserRuleCall_164() { return cVLISegmentParserRuleCall_164; }
+		
+		//// Value list identification
+		//   UNSSegment
+		public RuleCall getUNSSegmentParserRuleCall_165() { return cUNSSegmentParserRuleCall_165; }
+		
+		//// Trailer UNS
+		//   UNZSegment
+		public RuleCall getUNZSegmentParserRuleCall_166() { return cUNZSegmentParserRuleCall_166; }
+		
+		//// Trailer for header UNB
 		//   UNTSegment
-		public RuleCall getUNTSegmentParserRuleCall_29() { return cUNTSegmentParserRuleCall_29; }
+		public RuleCall getUNTSegmentParserRuleCall_167() { return cUNTSegmentParserRuleCall_167; }
 	}
 	public class UNASegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.UNASegment");
@@ -1010,6 +1564,6489 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//QUOTE_AND_NL
 		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_6_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_6_0; }
+	}
+	public class ADRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ADRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentADRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ADRSegment:
+		//    segment="ADR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ADR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ADR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ADR"
+		public Keyword getSegmentADRKeyword_0_0() { return cSegmentADRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class AGRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.AGRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentAGRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//AGRSegment:
+		//    segment="AGR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="AGR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="AGR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"AGR"
+		public Keyword getSegmentAGRKeyword_0_0() { return cSegmentAGRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class AJTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.AJTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentAJTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//AJTSegment:
+		//    segment="AJT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="AJT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="AJT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"AJT"
+		public Keyword getSegmentAJTKeyword_0_0() { return cSegmentAJTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ALCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ALCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentALCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ALCSegment:
+		//    segment="ALC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ALC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ALC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ALC"
+		public Keyword getSegmentALCKeyword_0_0() { return cSegmentALCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ALISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ALISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentALIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ALISegment:
+		//    segment="ALI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ALI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ALI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ALI"
+		public Keyword getSegmentALIKeyword_0_0() { return cSegmentALIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class APPSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.APPSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentAPPKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//APPSegment:
+		//    segment="APP"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="APP"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="APP"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"APP"
+		public Keyword getSegmentAPPKeyword_0_0() { return cSegmentAPPKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class APRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.APRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentAPRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//APRSegment:
+		//    segment="APR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="APR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="APR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"APR"
+		public Keyword getSegmentAPRKeyword_0_0() { return cSegmentAPRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ARDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ARDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentARDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ARDSegment:
+		//    segment="ARD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ARD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ARD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ARD"
+		public Keyword getSegmentARDKeyword_0_0() { return cSegmentARDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ARRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ARRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentARRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ARRSegment:
+		//    segment="ARR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ARR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ARR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ARR"
+		public Keyword getSegmentARRKeyword_0_0() { return cSegmentARRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ASISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ASISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentASIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ASISegment:
+		//    segment="ASI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ASI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ASI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ASI"
+		public Keyword getSegmentASIKeyword_0_0() { return cSegmentASIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ATTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ATTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentATTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ATTSegment:
+		//    segment="ATT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ATT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ATT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ATT"
+		public Keyword getSegmentATTKeyword_0_0() { return cSegmentATTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class AUTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.AUTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentAUTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//AUTSegment:
+		//    segment="AUT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="AUT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="AUT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"AUT"
+		public Keyword getSegmentAUTKeyword_0_0() { return cSegmentAUTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class BASSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.BASSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentBASKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//BASSegment:
+		//    segment="BAS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="BAS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="BAS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"BAS"
+		public Keyword getSegmentBASKeyword_0_0() { return cSegmentBASKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class BIISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.BIISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentBIIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//BIISegment:
+		//    segment="BII"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="BII"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="BII"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"BII"
+		public Keyword getSegmentBIIKeyword_0_0() { return cSegmentBIIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class BUSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.BUSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentBUSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//BUSSegment:
+		//    segment="BUS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="BUS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="BUS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"BUS"
+		public Keyword getSegmentBUSKeyword_0_0() { return cSegmentBUSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CAVSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CAVSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCAVKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CAVSegment:
+		//    segment="CAV"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CAV"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CAV"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CAV"
+		public Keyword getSegmentCAVKeyword_0_0() { return cSegmentCAVKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CCDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CCDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCCDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CCDSegment:
+		//    segment="CCD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CCD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CCD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CCD"
+		public Keyword getSegmentCCDKeyword_0_0() { return cSegmentCCDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CCISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CCISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCCIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CCISegment:
+		//    segment="CCI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CCI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CCI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CCI"
+		public Keyword getSegmentCCIKeyword_0_0() { return cSegmentCCIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CDISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CDISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCDIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CDISegment:
+		//    segment="CDI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CDI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CDI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CDI"
+		public Keyword getSegmentCDIKeyword_0_0() { return cSegmentCDIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CDSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CDSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCDSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CDSSegment:
+		//    segment="CDS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CDS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CDS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CDS"
+		public Keyword getSegmentCDSKeyword_0_0() { return cSegmentCDSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CDVSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CDVSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCDVKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CDVSegment:
+		//    segment="CDV"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CDV"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CDV"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CDV"
+		public Keyword getSegmentCDVKeyword_0_0() { return cSegmentCDVKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CEDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CEDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCEDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CEDSegment:
+		//    segment="CED"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CED"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CED"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CED"
+		public Keyword getSegmentCEDKeyword_0_0() { return cSegmentCEDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CINSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CINSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCINKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CINSegment:
+		//    segment="CIN"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CIN"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CIN"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CIN"
+		public Keyword getSegmentCINKeyword_0_0() { return cSegmentCINKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CLASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CLASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCLAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		//CLASegment:
+		//    segment="CLA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CLA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CLA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CLA"
+		public Keyword getSegmentCLAKeyword_0_0() { return cSegmentCLAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CLISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CLISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCLIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CLISegment:
+		//    segment="CLI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CLI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CLI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CLI"
+		public Keyword getSegmentCLIKeyword_0_0() { return cSegmentCLIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CMPSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CMPSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCMPKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CMPSegment:
+		//    segment="CMP"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CMP"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CMP"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CMP"
+		public Keyword getSegmentCMPKeyword_0_0() { return cSegmentCMPKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CNISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CNISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCNIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CNISegment:
+		//    segment="CNI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CNI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CNI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CNI"
+		public Keyword getSegmentCNIKeyword_0_0() { return cSegmentCNIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CODSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CODSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCODKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CODSegment:
+		//    segment="COD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="COD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="COD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"COD"
+		public Keyword getSegmentCODKeyword_0_0() { return cSegmentCODKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class COMSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.COMSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCOMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//COMSegment:
+		//    segment="COM"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="COM"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="COM"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"COM"
+		public Keyword getSegmentCOMKeyword_0_0() { return cSegmentCOMKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class COTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.COTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCOTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//COTSegment:
+		//    segment="COT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="COT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="COT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"COT"
+		public Keyword getSegmentCOTKeyword_0_0() { return cSegmentCOTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CPISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CPISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCPIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CPISegment:
+		//    segment="CPI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CPI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CPI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CPI"
+		public Keyword getSegmentCPIKeyword_0_0() { return cSegmentCPIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CPSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CPSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCPSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CPSSegment:
+		//    segment="CPS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CPS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CPS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CPS"
+		public Keyword getSegmentCPSKeyword_0_0() { return cSegmentCPSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CPTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CPTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCPTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CPTSegment:
+		//    segment="CPT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CPT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CPT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CPT"
+		public Keyword getSegmentCPTKeyword_0_0() { return cSegmentCPTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class CSTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.CSTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentCSTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//CSTSegment:
+		//    segment="CST"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="CST"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="CST"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"CST"
+		public Keyword getSegmentCSTKeyword_0_0() { return cSegmentCSTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DAMSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DAMSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDAMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DAMSegment:
+		//    segment="DAM"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DAM"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DAM"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DAM"
+		public Keyword getSegmentDAMKeyword_0_0() { return cSegmentDAMKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DFNSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DFNSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDFNKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DFNSegment:
+		//    segment="DFN"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DFN"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DFN"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DFN"
+		public Keyword getSegmentDFNKeyword_0_0() { return cSegmentDFNKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DGSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DGSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDGSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DGSSegment:
+		//    segment="DGS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DGS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DGS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DGS"
+		public Keyword getSegmentDGSKeyword_0_0() { return cSegmentDGSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DIISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DIISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDIIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DIISegment:
+		//    segment="DII"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DII"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DII"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DII"
+		public Keyword getSegmentDIIKeyword_0_0() { return cSegmentDIIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DIMSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DIMSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDIMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DIMSegment:
+		//    segment="DIM"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DIM"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DIM"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DIM"
+		public Keyword getSegmentDIMKeyword_0_0() { return cSegmentDIMKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DLISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DLISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDLIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DLISegment:
+		//    segment="DLI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DLI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DLI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DLI"
+		public Keyword getSegmentDLIKeyword_0_0() { return cSegmentDLIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DLMSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DLMSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDLMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DLMSegment:
+		//    segment="DLM"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DLM"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DLM"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DLM"
+		public Keyword getSegmentDLMKeyword_0_0() { return cSegmentDLMKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DMSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DMSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDMSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DMSSegment:
+		//    segment="DMS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DMS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DMS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DMS"
+		public Keyword getSegmentDMSKeyword_0_0() { return cSegmentDMSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DOCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DOCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDOCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DOCSegment:
+		//    segment="DOC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DOC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DOC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DOC"
+		public Keyword getSegmentDOCKeyword_0_0() { return cSegmentDOCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DRDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DRDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDRDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DRDSegment:
+		//    segment="DRD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DRD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DRD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DRD"
+		public Keyword getSegmentDRDKeyword_0_0() { return cSegmentDRDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DSGSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DSGSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDSGKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DSGSegment:
+		//    segment="DSG"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DSG"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DSG"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DSG"
+		public Keyword getSegmentDSGKeyword_0_0() { return cSegmentDSGKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class DSISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.DSISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentDSIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//DSISegment:
+		//    segment="DSI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="DSI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="DSI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"DSI"
+		public Keyword getSegmentDSIKeyword_0_0() { return cSegmentDSIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EDTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EDTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEDTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//EDTSegment:
+		//    segment="EDT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EDT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EDT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EDT"
+		public Keyword getSegmentEDTKeyword_0_0() { return cSegmentEDTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EFISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EFISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEFIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//EFISegment:
+		//    segment="EFI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EFI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EFI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EFI"
+		public Keyword getSegmentEFIKeyword_0_0() { return cSegmentEFIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ELMSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ELMSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentELMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ELMSegment:
+		//    segment="ELM"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ELM"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ELM"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ELM"
+		public Keyword getSegmentELMKeyword_0_0() { return cSegmentELMKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ELUSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ELUSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentELUKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ELUSegment:
+		//    segment="ELU"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ELU"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ELU"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ELU"
+		public Keyword getSegmentELUKeyword_0_0() { return cSegmentELUKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ELVSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ELVSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentELVKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ELVSegment:
+		//    segment="ELV"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ELV"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ELV"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ELV"
+		public Keyword getSegmentELVKeyword_0_0() { return cSegmentELVKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EMPSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EMPSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEMPKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//EMPSegment:
+		//    segment="EMP"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EMP"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EMP"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EMP"
+		public Keyword getSegmentEMPKeyword_0_0() { return cSegmentEMPKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EQASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EQASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEQAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//EQASegment:
+		//    segment="EQA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EQA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EQA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EQA"
+		public Keyword getSegmentEQAKeyword_0_0() { return cSegmentEQAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EQDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EQDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEQDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//EQDSegment:
+		//    segment="EQD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EQD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EQD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EQD"
+		public Keyword getSegmentEQDKeyword_0_0() { return cSegmentEQDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EQNSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EQNSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEQNKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		//EQNSegment:
+		//    segment="EQN"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EQN"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EQN"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EQN"
+		public Keyword getSegmentEQNKeyword_0_0() { return cSegmentEQNKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ERPSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ERPSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentERPKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ERPSegment:
+		//    segment="ERP"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ERP"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ERP"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ERP"
+		public Keyword getSegmentERPKeyword_0_0() { return cSegmentERPKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EVESegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EVESegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEVEKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//EVESegment:
+		//    segment="EVE"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EVE"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EVE"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EVE"
+		public Keyword getSegmentEVEKeyword_0_0() { return cSegmentEVEKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class EVTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.EVTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentEVTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//EVTSegment:
+		//    segment="EVT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="EVT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="EVT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"EVT"
+		public Keyword getSegmentEVTKeyword_0_0() { return cSegmentEVTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class FCASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.FCASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentFCAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//FCASegment:
+		//    segment="FCA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="FCA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="FCA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"FCA"
+		public Keyword getSegmentFCAKeyword_0_0() { return cSegmentFCAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class FIISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.FIISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentFIIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//FIISegment:
+		//    segment="FII"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="FII"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="FII"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"FII"
+		public Keyword getSegmentFIIKeyword_0_0() { return cSegmentFIIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class FNSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.FNSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentFNSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//FNSSegment:
+		//    segment="FNS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="FNS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="FNS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"FNS"
+		public Keyword getSegmentFNSKeyword_0_0() { return cSegmentFNSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class FNTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.FNTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentFNTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//FNTSegment:
+		//    segment="FNT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="FNT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="FNT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"FNT"
+		public Keyword getSegmentFNTKeyword_0_0() { return cSegmentFNTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class FORSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.FORSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentFORKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//FORSegment:
+		//    segment="FOR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="FOR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="FOR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"FOR"
+		public Keyword getSegmentFORKeyword_0_0() { return cSegmentFORKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class FSQSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.FSQSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentFSQKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//FSQSegment:
+		//    segment="FSQ"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="FSQ"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="FSQ"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"FSQ"
+		public Keyword getSegmentFSQKeyword_0_0() { return cSegmentFSQKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GDSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GDSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGDSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GDSSegment:
+		//    segment="GDS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GDS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GDS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GDS"
+		public Keyword getSegmentGDSKeyword_0_0() { return cSegmentGDSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GEISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GEISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGEIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GEISegment:
+		//    segment="GEI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GEI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GEI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GEI"
+		public Keyword getSegmentGEIKeyword_0_0() { return cSegmentGEIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GIDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GIDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGIDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GIDSegment:
+		//    segment="GID"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GID"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GID"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GID"
+		public Keyword getSegmentGIDKeyword_0_0() { return cSegmentGIDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GINSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GINSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGINKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GINSegment:
+		//    segment="GIN"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GIN"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GIN"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GIN"
+		public Keyword getSegmentGINKeyword_0_0() { return cSegmentGINKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GIRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GIRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGIRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GIRSegment:
+		//    segment="GIR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GIR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GIR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GIR"
+		public Keyword getSegmentGIRKeyword_0_0() { return cSegmentGIRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GISSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GISSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGISKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GISSegment:
+		//    segment="GIS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GIS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GIS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GIS"
+		public Keyword getSegmentGISKeyword_0_0() { return cSegmentGISKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GORSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GORSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGORKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GORSegment:
+		//    segment="GOR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GOR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GOR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GOR"
+		public Keyword getSegmentGORKeyword_0_0() { return cSegmentGORKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class GRUSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.GRUSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentGRUKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//GRUSegment:
+		//    segment="GRU"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="GRU"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="GRU"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"GRU"
+		public Keyword getSegmentGRUKeyword_0_0() { return cSegmentGRUKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class HANSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.HANSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentHANKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//HANSegment:
+		//    segment="HAN"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="HAN"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="HAN"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"HAN"
+		public Keyword getSegmentHANKeyword_0_0() { return cSegmentHANKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class HYNSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.HYNSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentHYNKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//HYNSegment:
+		//    segment="HYN"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="HYN"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="HYN"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"HYN"
+		public Keyword getSegmentHYNKeyword_0_0() { return cSegmentHYNKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class ICDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.ICDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentICDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//ICDSegment:
+		//    segment="ICD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ICD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ICD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ICD"
+		public Keyword getSegmentICDKeyword_0_0() { return cSegmentICDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class IDESegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.IDESegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentIDEKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//IDESegment:
+		//    segment="IDE"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="IDE"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="IDE"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"IDE"
+		public Keyword getSegmentIDEKeyword_0_0() { return cSegmentIDEKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class IFDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.IFDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentIFDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//IFDSegment:
+		//    segment="IFD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="IFD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="IFD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"IFD"
+		public Keyword getSegmentIFDKeyword_0_0() { return cSegmentIFDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class IHCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.IHCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentIHCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//IHCSegment:
+		//    segment="IHC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="IHC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="IHC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"IHC"
+		public Keyword getSegmentIHCKeyword_0_0() { return cSegmentIHCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class IMDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.IMDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentIMDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//IMDSegment:
+		//    segment="IMD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="IMD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="IMD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"IMD"
+		public Keyword getSegmentIMDKeyword_0_0() { return cSegmentIMDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class INDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.INDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentINDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//INDSegment:
+		//    segment="IND"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="IND"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="IND"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"IND"
+		public Keyword getSegmentINDKeyword_0_0() { return cSegmentINDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class INPSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.INPSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentINPKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//INPSegment:
+		//    segment="INP"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="INP"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="INP"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"INP"
+		public Keyword getSegmentINPKeyword_0_0() { return cSegmentINPKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class INVSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.INVSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentINVKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//INVSegment:
+		//    segment="INV"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="INV"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="INV"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"INV"
+		public Keyword getSegmentINVKeyword_0_0() { return cSegmentINVKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class IRQSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.IRQSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentIRQKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//IRQSegment:
+		//    segment="IRQ"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="IRQ"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="IRQ"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"IRQ"
+		public Keyword getSegmentIRQKeyword_0_0() { return cSegmentIRQKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class LANSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.LANSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentLANKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//LANSegment:
+		//    segment="LAN"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="LAN"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="LAN"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"LAN"
+		public Keyword getSegmentLANKeyword_0_0() { return cSegmentLANKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class LOCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.LOCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentLOCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//LOCSegment:
+		//    segment="LOC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="LOC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="LOC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"LOC"
+		public Keyword getSegmentLOCKeyword_0_0() { return cSegmentLOCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class MEASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.MEASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentMEAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//MEASegment:
+		//    segment="MEA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="MEA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="MEA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"MEA"
+		public Keyword getSegmentMEAKeyword_0_0() { return cSegmentMEAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class MEMSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.MEMSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentMEMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//MEMSegment:
+		//    segment="MEM"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="MEM"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="MEM"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"MEM"
+		public Keyword getSegmentMEMKeyword_0_0() { return cSegmentMEMKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class MKSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.MKSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentMKSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//MKSSegment:
+		//    segment="MKS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="MKS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="MKS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"MKS"
+		public Keyword getSegmentMKSKeyword_0_0() { return cSegmentMKSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class NATSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.NATSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentNATKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//NATSegment:
+		//    segment="NAT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="NAT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="NAT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"NAT"
+		public Keyword getSegmentNATKeyword_0_0() { return cSegmentNATKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PACSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PACSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPACKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		//PACSegment:
+		//    segment="PAC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PAC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PAC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PAC"
+		public Keyword getSegmentPACKeyword_0_0() { return cSegmentPACKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PAISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PAISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPAIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PAISegment:
+		//    segment="PAI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PAI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PAI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PAI"
+		public Keyword getSegmentPAIKeyword_0_0() { return cSegmentPAIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PASSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PASSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPASKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PASSegment:
+		//    segment="PAS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PAS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PAS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PAS"
+		public Keyword getSegmentPASKeyword_0_0() { return cSegmentPASKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PCCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PCCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPCCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PCCSegment:
+		//    segment="PCC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PCC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PCC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PCC"
+		public Keyword getSegmentPCCKeyword_0_0() { return cSegmentPCCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PCDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PCDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPCDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PCDSegment:
+		//    segment="PCD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PCD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PCD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PCD"
+		public Keyword getSegmentPCDKeyword_0_0() { return cSegmentPCDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PERSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PERSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPERKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PERSegment:
+		//    segment="PER"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PER"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PER"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PER"
+		public Keyword getSegmentPERKeyword_0_0() { return cSegmentPERKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PGISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PGISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPGIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PGISegment:
+		//    segment="PGI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PGI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PGI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PGI"
+		public Keyword getSegmentPGIKeyword_0_0() { return cSegmentPGIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PIASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PIASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPIAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PIASegment:
+		//    segment="PIA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PIA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PIA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PIA"
+		public Keyword getSegmentPIAKeyword_0_0() { return cSegmentPIAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PNASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PNASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPNAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PNASegment:
+		//    segment="PNA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PNA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PNA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PNA"
+		public Keyword getSegmentPNAKeyword_0_0() { return cSegmentPNAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PRCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PRCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPRCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PRCSegment:
+		//    segment="PRC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PRC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PRC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PRC"
+		public Keyword getSegmentPRCKeyword_0_0() { return cSegmentPRCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PRVSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PRVSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPRVKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PRVSegment:
+		//    segment="PRV"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PRV"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PRV"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PRV"
+		public Keyword getSegmentPRVKeyword_0_0() { return cSegmentPRVKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PSDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PSDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPSDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PSDSegment:
+		//    segment="PSD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PSD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PSD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PSD"
+		public Keyword getSegmentPSDKeyword_0_0() { return cSegmentPSDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PTYSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PTYSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPTYKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PTYSegment:
+		//    segment="PTY"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PTY"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PTY"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PTY"
+		public Keyword getSegmentPTYKeyword_0_0() { return cSegmentPTYKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class PYTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.PYTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentPYTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//PYTSegment:
+		//    segment="PYT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="PYT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="PYT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"PYT"
+		public Keyword getSegmentPYTKeyword_0_0() { return cSegmentPYTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class QRSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.QRSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentQRSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//QRSSegment:
+		//    segment="QRS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="QRS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="QRS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"QRS"
+		public Keyword getSegmentQRSKeyword_0_0() { return cSegmentQRSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class QUASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.QUASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentQUAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//QUASegment:
+		//    segment="QUA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="QUA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="QUA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"QUA"
+		public Keyword getSegmentQUAKeyword_0_0() { return cSegmentQUAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class QVRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.QVRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentQVRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//QVRSegment:
+		//    segment="QVR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="QVR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="QVR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"QVR"
+		public Keyword getSegmentQVRKeyword_0_0() { return cSegmentQVRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class RCSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.RCSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentRCSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//RCSSegment:
+		//    segment="RCS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="RCS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="RCS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"RCS"
+		public Keyword getSegmentRCSKeyword_0_0() { return cSegmentRCSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class RELSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.RELSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentRELKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//RELSegment:
+		//    segment="REL"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="REL"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="REL"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"REL"
+		public Keyword getSegmentRELKeyword_0_0() { return cSegmentRELKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class RJLSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.RJLSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentRJLKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//RJLSegment:
+		//    segment="RJL"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="RJL"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="RJL"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"RJL"
+		public Keyword getSegmentRJLKeyword_0_0() { return cSegmentRJLKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class RNGSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.RNGSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentRNGKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//RNGSegment:
+		//    segment="RNG"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="RNG"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="RNG"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"RNG"
+		public Keyword getSegmentRNGKeyword_0_0() { return cSegmentRNGKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class RODSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.RODSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentRODKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//RODSegment:
+		//    segment="ROD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="ROD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="ROD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"ROD"
+		public Keyword getSegmentRODKeyword_0_0() { return cSegmentRODKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class RSLSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.RSLSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentRSLKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//RSLSegment:
+		//    segment="RSL"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="RSL"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="RSL"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"RSL"
+		public Keyword getSegmentRSLKeyword_0_0() { return cSegmentRSLKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class RTESegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.RTESegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentRTEKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//RTESegment:
+		//    segment="RTE"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="RTE"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="RTE"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"RTE"
+		public Keyword getSegmentRTEKeyword_0_0() { return cSegmentRTEKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SALSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SALSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSALKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SALSegment:
+		//    segment="SAL"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SAL"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SAL"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SAL"
+		public Keyword getSegmentSALKeyword_0_0() { return cSegmentSALKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SCCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SCCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSCCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SCCSegment:
+		//    segment="SCC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SCC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SCC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SCC"
+		public Keyword getSegmentSCCKeyword_0_0() { return cSegmentSCCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SCDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SCDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSCDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SCDSegment:
+		//    segment="SCD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SCD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SCD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SCD"
+		public Keyword getSegmentSCDKeyword_0_0() { return cSegmentSCDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SEGSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SEGSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSEGKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SEGSegment:
+		//    segment="SEG"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SEG"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SEG"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SEG"
+		public Keyword getSegmentSEGKeyword_0_0() { return cSegmentSEGKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SELSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SELSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSELKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SELSegment:
+		//    segment="SEL"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SEL"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SEL"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SEL"
+		public Keyword getSegmentSELKeyword_0_0() { return cSegmentSELKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SEQSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SEQSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSEQKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SEQSegment:
+		//    segment="SEQ"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SEQ"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SEQ"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SEQ"
+		public Keyword getSegmentSEQKeyword_0_0() { return cSegmentSEQKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SFISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SFISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSFIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SFISegment:
+		//    segment="SFI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SFI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SFI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SFI"
+		public Keyword getSegmentSFIKeyword_0_0() { return cSegmentSFIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SGPSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SGPSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSGPKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SGPSegment:
+		//    segment="SGP"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SGP"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SGP"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SGP"
+		public Keyword getSegmentSGPKeyword_0_0() { return cSegmentSGPKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SGUSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SGUSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSGUKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SGUSegment:
+		//    segment="SGU"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SGU"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SGU"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SGU"
+		public Keyword getSegmentSGUKeyword_0_0() { return cSegmentSGUKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SPRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SPRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSPRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SPRSegment:
+		//    segment="SPR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SPR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SPR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SPR"
+		public Keyword getSegmentSPRKeyword_0_0() { return cSegmentSPRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class SPSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.SPSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSPSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//SPSSegment:
+		//    segment="SPS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="SPS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="SPS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"SPS"
+		public Keyword getSegmentSPSKeyword_0_0() { return cSegmentSPSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class STASegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.STASegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSTAKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//STASegment:
+		//    segment="STA"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="STA"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="STA"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"STA"
+		public Keyword getSegmentSTAKeyword_0_0() { return cSegmentSTAKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class STCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.STCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSTCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//STCSegment:
+		//    segment="STC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="STC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="STC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"STC"
+		public Keyword getSegmentSTCKeyword_0_0() { return cSegmentSTCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class STGSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.STGSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSTGKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//STGSegment:
+		//    segment="STG"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="STG"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="STG"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"STG"
+		public Keyword getSegmentSTGKeyword_0_0() { return cSegmentSTGKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class STSSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.STSSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentSTSKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//STSSegment:
+		//    segment="STS"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="STS"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="STS"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"STS"
+		public Keyword getSegmentSTSKeyword_0_0() { return cSegmentSTSKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TCCSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TCCSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTCCKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TCCSegment:
+		//    segment="TCC"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TCC"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TCC"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TCC"
+		public Keyword getSegmentTCCKeyword_0_0() { return cSegmentTCCKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TDTSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TDTSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTDTKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TDTSegment:
+		//    segment="TDT"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TDT"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TDT"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TDT"
+		public Keyword getSegmentTDTKeyword_0_0() { return cSegmentTDTKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TEMSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TEMSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTEMKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TEMSegment:
+		//    segment="TEM"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TEM"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TEM"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TEM"
+		public Keyword getSegmentTEMKeyword_0_0() { return cSegmentTEMKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TMDSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TMDSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTMDKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TMDSegment:
+		//    segment="TMD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TMD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TMD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TMD"
+		public Keyword getSegmentTMDKeyword_0_0() { return cSegmentTMDKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TMPSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TMPSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTMPKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TMPSegment:
+		//    segment="TMP"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TMP"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TMP"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TMP"
+		public Keyword getSegmentTMPKeyword_0_0() { return cSegmentTMPKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TODSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TODSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTODKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TODSegment:
+		//    segment="TOD"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TOD"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TOD"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TOD"
+		public Keyword getSegmentTODKeyword_0_0() { return cSegmentTODKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TPLSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TPLSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTPLKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TPLSegment:
+		//    segment="TPL"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TPL"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TPL"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TPL"
+		public Keyword getSegmentTPLKeyword_0_0() { return cSegmentTPLKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TRUSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TRUSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTRUKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TRUSegment:
+		//    segment="TRU"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TRU"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TRU"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TRU"
+		public Keyword getSegmentTRUKeyword_0_0() { return cSegmentTRUKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class TSRSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.TSRSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentTSRKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//TSRSegment:
+		//    segment="TSR"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="TSR"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="TSR"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"TSR"
+		public Keyword getSegmentTSRKeyword_0_0() { return cSegmentTSRKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
+	}
+	public class VLISegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.VLISegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cSegmentAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cSegmentVLIKeyword_0_0 = (Keyword)cSegmentAssignment_0.eContents().get(0);
+		private final RuleCall cPLUSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cTodoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTodoIDTerminalRuleCall_2_0 = (RuleCall)cTodoAssignment_2.eContents().get(0);
+		private final Assignment cLineEndAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLineEndQUOTE_AND_NLTerminalRuleCall_3_0 = (RuleCall)cLineEndAssignment_3.eContents().get(0);
+		
+		////TODO
+		//VLISegment:
+		//    segment="VLI"
+		//    PLUS
+		//    todo=ID
+		//    lineEnd=QUOTE_AND_NL
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//segment="VLI"
+		//PLUS
+		//todo=ID
+		//lineEnd=QUOTE_AND_NL
+		public Group getGroup() { return cGroup; }
+		
+		//segment="VLI"
+		public Assignment getSegmentAssignment_0() { return cSegmentAssignment_0; }
+		
+		//"VLI"
+		public Keyword getSegmentVLIKeyword_0_0() { return cSegmentVLIKeyword_0_0; }
+		
+		//PLUS
+		public RuleCall getPLUSTerminalRuleCall_1() { return cPLUSTerminalRuleCall_1; }
+		
+		//todo=ID
+		public Assignment getTodoAssignment_2() { return cTodoAssignment_2; }
+		
+		//ID
+		public RuleCall getTodoIDTerminalRuleCall_2_0() { return cTodoIDTerminalRuleCall_2_0; }
+		
+		//lineEnd=QUOTE_AND_NL
+		public Assignment getLineEndAssignment_3() { return cLineEndAssignment_3; }
+		
+		//QUOTE_AND_NL
+		public RuleCall getLineEndQUOTE_AND_NLTerminalRuleCall_3_0() { return cLineEndQUOTE_AND_NLTerminalRuleCall_3_0; }
 	}
 	public class MSGSegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.thlaegler.edifact.Edilang.MSGSegment");
@@ -7222,6 +14259,144 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	private final UNASegmentElements pUNASegment;
 	private final UNBSegmentElements pUNBSegment;
 	private final UNHSegmentElements pUNHSegment;
+	private final ADRSegmentElements pADRSegment;
+	private final AGRSegmentElements pAGRSegment;
+	private final AJTSegmentElements pAJTSegment;
+	private final ALCSegmentElements pALCSegment;
+	private final ALISegmentElements pALISegment;
+	private final APPSegmentElements pAPPSegment;
+	private final APRSegmentElements pAPRSegment;
+	private final ARDSegmentElements pARDSegment;
+	private final ARRSegmentElements pARRSegment;
+	private final ASISegmentElements pASISegment;
+	private final ATTSegmentElements pATTSegment;
+	private final AUTSegmentElements pAUTSegment;
+	private final BASSegmentElements pBASSegment;
+	private final BIISegmentElements pBIISegment;
+	private final BUSSegmentElements pBUSSegment;
+	private final CAVSegmentElements pCAVSegment;
+	private final CCDSegmentElements pCCDSegment;
+	private final CCISegmentElements pCCISegment;
+	private final CDISegmentElements pCDISegment;
+	private final CDSSegmentElements pCDSSegment;
+	private final CDVSegmentElements pCDVSegment;
+	private final CEDSegmentElements pCEDSegment;
+	private final CINSegmentElements pCINSegment;
+	private final CLASegmentElements pCLASegment;
+	private final CLISegmentElements pCLISegment;
+	private final CMPSegmentElements pCMPSegment;
+	private final CNISegmentElements pCNISegment;
+	private final CODSegmentElements pCODSegment;
+	private final COMSegmentElements pCOMSegment;
+	private final COTSegmentElements pCOTSegment;
+	private final CPISegmentElements pCPISegment;
+	private final CPSSegmentElements pCPSSegment;
+	private final CPTSegmentElements pCPTSegment;
+	private final CSTSegmentElements pCSTSegment;
+	private final DAMSegmentElements pDAMSegment;
+	private final DFNSegmentElements pDFNSegment;
+	private final DGSSegmentElements pDGSSegment;
+	private final DIISegmentElements pDIISegment;
+	private final DIMSegmentElements pDIMSegment;
+	private final DLISegmentElements pDLISegment;
+	private final DLMSegmentElements pDLMSegment;
+	private final DMSSegmentElements pDMSSegment;
+	private final DOCSegmentElements pDOCSegment;
+	private final DRDSegmentElements pDRDSegment;
+	private final DSGSegmentElements pDSGSegment;
+	private final DSISegmentElements pDSISegment;
+	private final EDTSegmentElements pEDTSegment;
+	private final EFISegmentElements pEFISegment;
+	private final ELMSegmentElements pELMSegment;
+	private final ELUSegmentElements pELUSegment;
+	private final ELVSegmentElements pELVSegment;
+	private final EMPSegmentElements pEMPSegment;
+	private final EQASegmentElements pEQASegment;
+	private final EQDSegmentElements pEQDSegment;
+	private final EQNSegmentElements pEQNSegment;
+	private final ERPSegmentElements pERPSegment;
+	private final EVESegmentElements pEVESegment;
+	private final EVTSegmentElements pEVTSegment;
+	private final FCASegmentElements pFCASegment;
+	private final FIISegmentElements pFIISegment;
+	private final FNSSegmentElements pFNSSegment;
+	private final FNTSegmentElements pFNTSegment;
+	private final FORSegmentElements pFORSegment;
+	private final FSQSegmentElements pFSQSegment;
+	private final GDSSegmentElements pGDSSegment;
+	private final GEISegmentElements pGEISegment;
+	private final GIDSegmentElements pGIDSegment;
+	private final GINSegmentElements pGINSegment;
+	private final GIRSegmentElements pGIRSegment;
+	private final GISSegmentElements pGISSegment;
+	private final GORSegmentElements pGORSegment;
+	private final GRUSegmentElements pGRUSegment;
+	private final HANSegmentElements pHANSegment;
+	private final HYNSegmentElements pHYNSegment;
+	private final ICDSegmentElements pICDSegment;
+	private final IDESegmentElements pIDESegment;
+	private final IFDSegmentElements pIFDSegment;
+	private final IHCSegmentElements pIHCSegment;
+	private final IMDSegmentElements pIMDSegment;
+	private final INDSegmentElements pINDSegment;
+	private final INPSegmentElements pINPSegment;
+	private final INVSegmentElements pINVSegment;
+	private final IRQSegmentElements pIRQSegment;
+	private final LANSegmentElements pLANSegment;
+	private final LOCSegmentElements pLOCSegment;
+	private final MEASegmentElements pMEASegment;
+	private final MEMSegmentElements pMEMSegment;
+	private final MKSSegmentElements pMKSSegment;
+	private final NATSegmentElements pNATSegment;
+	private final PACSegmentElements pPACSegment;
+	private final PAISegmentElements pPAISegment;
+	private final PASSegmentElements pPASSegment;
+	private final PCCSegmentElements pPCCSegment;
+	private final PCDSegmentElements pPCDSegment;
+	private final PERSegmentElements pPERSegment;
+	private final PGISegmentElements pPGISegment;
+	private final PIASegmentElements pPIASegment;
+	private final PNASegmentElements pPNASegment;
+	private final PRCSegmentElements pPRCSegment;
+	private final PRVSegmentElements pPRVSegment;
+	private final PSDSegmentElements pPSDSegment;
+	private final PTYSegmentElements pPTYSegment;
+	private final PYTSegmentElements pPYTSegment;
+	private final QRSSegmentElements pQRSSegment;
+	private final QUASegmentElements pQUASegment;
+	private final QVRSegmentElements pQVRSegment;
+	private final RCSSegmentElements pRCSSegment;
+	private final RELSegmentElements pRELSegment;
+	private final RJLSegmentElements pRJLSegment;
+	private final RNGSegmentElements pRNGSegment;
+	private final RODSegmentElements pRODSegment;
+	private final RSLSegmentElements pRSLSegment;
+	private final RTESegmentElements pRTESegment;
+	private final SALSegmentElements pSALSegment;
+	private final SCCSegmentElements pSCCSegment;
+	private final SCDSegmentElements pSCDSegment;
+	private final SEGSegmentElements pSEGSegment;
+	private final SELSegmentElements pSELSegment;
+	private final SEQSegmentElements pSEQSegment;
+	private final SFISegmentElements pSFISegment;
+	private final SGPSegmentElements pSGPSegment;
+	private final SGUSegmentElements pSGUSegment;
+	private final SPRSegmentElements pSPRSegment;
+	private final SPSSegmentElements pSPSSegment;
+	private final STASegmentElements pSTASegment;
+	private final STCSegmentElements pSTCSegment;
+	private final STGSegmentElements pSTGSegment;
+	private final STSSegmentElements pSTSSegment;
+	private final TCCSegmentElements pTCCSegment;
+	private final TDTSegmentElements pTDTSegment;
+	private final TEMSegmentElements pTEMSegment;
+	private final TMDSegmentElements pTMDSegment;
+	private final TMPSegmentElements pTMPSegment;
+	private final TODSegmentElements pTODSegment;
+	private final TPLSegmentElements pTPLSegment;
+	private final TRUSegmentElements pTRUSegment;
+	private final TSRSegmentElements pTSRSegment;
+	private final VLISegmentElements pVLISegment;
 	private final MSGSegmentElements pMSGSegment;
 	private final ORGSegmentElements pORGSegment;
 	private final POCSegmentElements pPOCSegment;
@@ -7301,6 +14476,144 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		this.pUNASegment = new UNASegmentElements();
 		this.pUNBSegment = new UNBSegmentElements();
 		this.pUNHSegment = new UNHSegmentElements();
+		this.pADRSegment = new ADRSegmentElements();
+		this.pAGRSegment = new AGRSegmentElements();
+		this.pAJTSegment = new AJTSegmentElements();
+		this.pALCSegment = new ALCSegmentElements();
+		this.pALISegment = new ALISegmentElements();
+		this.pAPPSegment = new APPSegmentElements();
+		this.pAPRSegment = new APRSegmentElements();
+		this.pARDSegment = new ARDSegmentElements();
+		this.pARRSegment = new ARRSegmentElements();
+		this.pASISegment = new ASISegmentElements();
+		this.pATTSegment = new ATTSegmentElements();
+		this.pAUTSegment = new AUTSegmentElements();
+		this.pBASSegment = new BASSegmentElements();
+		this.pBIISegment = new BIISegmentElements();
+		this.pBUSSegment = new BUSSegmentElements();
+		this.pCAVSegment = new CAVSegmentElements();
+		this.pCCDSegment = new CCDSegmentElements();
+		this.pCCISegment = new CCISegmentElements();
+		this.pCDISegment = new CDISegmentElements();
+		this.pCDSSegment = new CDSSegmentElements();
+		this.pCDVSegment = new CDVSegmentElements();
+		this.pCEDSegment = new CEDSegmentElements();
+		this.pCINSegment = new CINSegmentElements();
+		this.pCLASegment = new CLASegmentElements();
+		this.pCLISegment = new CLISegmentElements();
+		this.pCMPSegment = new CMPSegmentElements();
+		this.pCNISegment = new CNISegmentElements();
+		this.pCODSegment = new CODSegmentElements();
+		this.pCOMSegment = new COMSegmentElements();
+		this.pCOTSegment = new COTSegmentElements();
+		this.pCPISegment = new CPISegmentElements();
+		this.pCPSSegment = new CPSSegmentElements();
+		this.pCPTSegment = new CPTSegmentElements();
+		this.pCSTSegment = new CSTSegmentElements();
+		this.pDAMSegment = new DAMSegmentElements();
+		this.pDFNSegment = new DFNSegmentElements();
+		this.pDGSSegment = new DGSSegmentElements();
+		this.pDIISegment = new DIISegmentElements();
+		this.pDIMSegment = new DIMSegmentElements();
+		this.pDLISegment = new DLISegmentElements();
+		this.pDLMSegment = new DLMSegmentElements();
+		this.pDMSSegment = new DMSSegmentElements();
+		this.pDOCSegment = new DOCSegmentElements();
+		this.pDRDSegment = new DRDSegmentElements();
+		this.pDSGSegment = new DSGSegmentElements();
+		this.pDSISegment = new DSISegmentElements();
+		this.pEDTSegment = new EDTSegmentElements();
+		this.pEFISegment = new EFISegmentElements();
+		this.pELMSegment = new ELMSegmentElements();
+		this.pELUSegment = new ELUSegmentElements();
+		this.pELVSegment = new ELVSegmentElements();
+		this.pEMPSegment = new EMPSegmentElements();
+		this.pEQASegment = new EQASegmentElements();
+		this.pEQDSegment = new EQDSegmentElements();
+		this.pEQNSegment = new EQNSegmentElements();
+		this.pERPSegment = new ERPSegmentElements();
+		this.pEVESegment = new EVESegmentElements();
+		this.pEVTSegment = new EVTSegmentElements();
+		this.pFCASegment = new FCASegmentElements();
+		this.pFIISegment = new FIISegmentElements();
+		this.pFNSSegment = new FNSSegmentElements();
+		this.pFNTSegment = new FNTSegmentElements();
+		this.pFORSegment = new FORSegmentElements();
+		this.pFSQSegment = new FSQSegmentElements();
+		this.pGDSSegment = new GDSSegmentElements();
+		this.pGEISegment = new GEISegmentElements();
+		this.pGIDSegment = new GIDSegmentElements();
+		this.pGINSegment = new GINSegmentElements();
+		this.pGIRSegment = new GIRSegmentElements();
+		this.pGISSegment = new GISSegmentElements();
+		this.pGORSegment = new GORSegmentElements();
+		this.pGRUSegment = new GRUSegmentElements();
+		this.pHANSegment = new HANSegmentElements();
+		this.pHYNSegment = new HYNSegmentElements();
+		this.pICDSegment = new ICDSegmentElements();
+		this.pIDESegment = new IDESegmentElements();
+		this.pIFDSegment = new IFDSegmentElements();
+		this.pIHCSegment = new IHCSegmentElements();
+		this.pIMDSegment = new IMDSegmentElements();
+		this.pINDSegment = new INDSegmentElements();
+		this.pINPSegment = new INPSegmentElements();
+		this.pINVSegment = new INVSegmentElements();
+		this.pIRQSegment = new IRQSegmentElements();
+		this.pLANSegment = new LANSegmentElements();
+		this.pLOCSegment = new LOCSegmentElements();
+		this.pMEASegment = new MEASegmentElements();
+		this.pMEMSegment = new MEMSegmentElements();
+		this.pMKSSegment = new MKSSegmentElements();
+		this.pNATSegment = new NATSegmentElements();
+		this.pPACSegment = new PACSegmentElements();
+		this.pPAISegment = new PAISegmentElements();
+		this.pPASSegment = new PASSegmentElements();
+		this.pPCCSegment = new PCCSegmentElements();
+		this.pPCDSegment = new PCDSegmentElements();
+		this.pPERSegment = new PERSegmentElements();
+		this.pPGISegment = new PGISegmentElements();
+		this.pPIASegment = new PIASegmentElements();
+		this.pPNASegment = new PNASegmentElements();
+		this.pPRCSegment = new PRCSegmentElements();
+		this.pPRVSegment = new PRVSegmentElements();
+		this.pPSDSegment = new PSDSegmentElements();
+		this.pPTYSegment = new PTYSegmentElements();
+		this.pPYTSegment = new PYTSegmentElements();
+		this.pQRSSegment = new QRSSegmentElements();
+		this.pQUASegment = new QUASegmentElements();
+		this.pQVRSegment = new QVRSegmentElements();
+		this.pRCSSegment = new RCSSegmentElements();
+		this.pRELSegment = new RELSegmentElements();
+		this.pRJLSegment = new RJLSegmentElements();
+		this.pRNGSegment = new RNGSegmentElements();
+		this.pRODSegment = new RODSegmentElements();
+		this.pRSLSegment = new RSLSegmentElements();
+		this.pRTESegment = new RTESegmentElements();
+		this.pSALSegment = new SALSegmentElements();
+		this.pSCCSegment = new SCCSegmentElements();
+		this.pSCDSegment = new SCDSegmentElements();
+		this.pSEGSegment = new SEGSegmentElements();
+		this.pSELSegment = new SELSegmentElements();
+		this.pSEQSegment = new SEQSegmentElements();
+		this.pSFISegment = new SFISegmentElements();
+		this.pSGPSegment = new SGPSegmentElements();
+		this.pSGUSegment = new SGUSegmentElements();
+		this.pSPRSegment = new SPRSegmentElements();
+		this.pSPSSegment = new SPSSegmentElements();
+		this.pSTASegment = new STASegmentElements();
+		this.pSTCSegment = new STCSegmentElements();
+		this.pSTGSegment = new STGSegmentElements();
+		this.pSTSSegment = new STSSegmentElements();
+		this.pTCCSegment = new TCCSegmentElements();
+		this.pTDTSegment = new TDTSegmentElements();
+		this.pTEMSegment = new TEMSegmentElements();
+		this.pTMDSegment = new TMDSegmentElements();
+		this.pTMPSegment = new TMPSegmentElements();
+		this.pTODSegment = new TODSegmentElements();
+		this.pTPLSegment = new TPLSegmentElements();
+		this.pTRUSegment = new TRUSegmentElements();
+		this.pTSRSegment = new TSRSegmentElements();
+		this.pVLISegment = new VLISegmentElements();
 		this.pMSGSegment = new MSGSegmentElements();
 		this.pORGSegment = new ORGSegmentElements();
 		this.pPOCSegment = new POCSegmentElements();
@@ -7405,174 +14718,174 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	
 	//AbstractEdiSegment:
-	//    UNASegment |
-	//    UNBSegment | // header for trailer UNZ
-	//    UNHSegment | // header for trailer UNT
-	//    MSGSegment | // Message type identification
-	//    ORGSegment | // Organisation
-	//    POCSegment | // Purpose of conveyance call
-	//    ODISegment | // Origin/destination
-	//    UCISegment | // ?
-	//    PDISegment | // Person demographic information
-	//    RPISegment | // ?
-	//    TVLSegment | // Travel itinerary
+	//    UNASegment | // Header UNA
+	//    UNBSegment | // Header for trailer UNZ
+	//    UNHSegment | // Header for trailer UNT
+	//    ADRSegment | // Address
+	//    AGRSegment | // Agreement identification
+	//    AJTSegment | // Adjustment details
+	//    ALCSegment | // Allowance or charge
+	//    ALISegment | // Additional information
+	//    APPSegment | // Applicability
+	//    APRSegment | // Additional price information
+	//    ARDSegment | // Monetary amount function
+	//    ARRSegment | // Array information
+	//    ASISegment | // Array structure identification
+	//    ATTSegment | // Attribute
+	//    AUTSegment | // Authentication result
+	//    BASSegment | // Basis
 	//    BGMSegment | // Beginning of message
-	//    DTMSegment | // Date/time/period
-	//    NADSegment | // Name and address
-	//    RFFSegment | // Reference
-	//    CUXSegment | // Currencies
-	//    TAXSegment | // Duty/tax/fee details
-	//    LINSegment | // Line item
-	//    QTYSegment | // Quantity
-	//    MOASegment | // Monetary amount
-	//    PRISegment | // Price details
-	//    PATSegment | // Payment terms basis
-	//    PCISegment | // Package identification
-	//    CTASegment | // Contact information
+	//    BIISegment | // Structure identification
+	//    BUSSegment | // Business function
+	//    CAVSegment | // Characteristic value
+	//    CCDSegment | // Credit cover details
+	//    CCISegment | // Characteristic/class id
+	//    CDISegment | // Physical or logical state
+	//    CDSSegment | // Code set identification
+	//    CDVSegment | // Code value definition
+	//    CEDSegment | // Computer environment details
+	//    CINSegment | // Clinical information
+	//    CLASegment | // Clause identification
+	//    CLISegment | // Clinical intervention
+	//    CMPSegment | // Composite data element identification
+	//    CNISegment | // Consignment information
 	//    CNTSegment | // Control total
-	//    FTXSegment | // Free text
+	//    CODSegment | // Component details
+	//    COMSegment | // Communication contact
+	//    COTSegment | // Contribution details
+	//    CPISegment | // Charge payment instructions
+	//    CPSSegment | // Consignment packing sequence
+	//    CPTSegment | // Account identification
+	//    CSTSegment | // Customs status of goods
+	//    CTASegment | // Contact information
+	//    CUXSegment | // Currencies
+	//    DAMSegment | // Damage
+	//    DFNSegment | // Definition function
+	//    DGSSegment | // Dangerous goods
+	//    DIISegment | // Directory identification
+	//    DIMSegment | // Dimensions
+	//    DLISegment | // Document line identification
+	//    DLMSegment | // Delivery limitations
+	//    DMSSegment | // Document/message summary
+	//    DOCSegment | // Document/message details
+	//    DRDSegment | // Data representation details
+	//    DSGSegment | // Dosage administration
+	//    DSISegment | // Data set identification
+	//    DTMSegment | // Date/time/period
+	//    EDTSegment | // Editing details
+	//    EFISegment | // External file link identification
+	//    ELMSegment | // Simple data element details
+	//    ELUSegment | // Data element usage details
+	//    ELVSegment | // Element value definition
+	//    EMPSegment | // Employment details
+	//    EQASegment | // Attached equipment
+	//    EQDSegment | // Equipment details
+	//    EQNSegment | // Number of units
+	//    ERPSegment | // Error point details
 	//    ERCSegment | // Application error information
-	////    ADR  Address
-	////    AGR  Agreement identification
-	////    AJT  Adjustment details
-	////    ALC  Allowance or charge
-	////    ALI  Additional information
-	////+   APP  Applicability
-	////    APR  Additional price information
-	////    ARD  Monetary amount function
-	////    ARR  Array information
-	////    ASI  Array structure identification
-	////    ATT  Attribute
-	////    AUT  Authentication result
-	////+   BAS  Basis
-	////    BII  Structure identification
-	////    BUS  Business function
-	////    CAV  Characteristic value
-	////    CCD  Credit cover details
-	////    CCI  Characteristic/class id
-	////    CDI  Physical or logical state
-	////    CDS  Code set identification
-	////    CDV  Code value definition
-	////    CED  Computer environment details
-	////    CIN  Clinical information
-	////+   CLA  Clause identification
-	////    CLI  Clinical intervention
-	////    CMP  Composite data element identification
-	////    CNI  Consignment information
-	////    COD  Component details
-	////    COM  Communication contact
-	////    COT  Contribution details
-	////    CPI  Charge payment instructions
-	////    CPS  Consignment packing sequence
-	////    CPT  Account identification
-	////    CST  Customs status of goods
-	////    DAM  Damage
-	////    DFN  Definition function
-	////    DGS  Dangerous goods
-	////    DII  Directory identification
-	////    DIM  Dimensions
-	////    DLI  Document line identification
-	////    DLM  Delivery limitations
-	////    DMS  Document/message summary
-	////    DOC  Document/message details
-	////    DRD  Data representation details
-	////    DSG  Dosage administration
-	////    DSI  Data set identification
-	////    EDT  Editing details
-	////    EFI  External file link identification
-	////    ELM  Simple data element details
-	////    ELU  Data element usage details
-	////    ELV  Element value definition
-	////    EMP  Employment details
-	////    EQA  Attached equipment
-	////    EQD  Equipment details
-	////    EQN  Number of units
-	////    ERP  Error point details
-	////*   EVE  Event
-	////X   EVT  Event
-	////    FCA  Financial charges allocation
-	////    FII  Financial institution information
-	////    FNS  Footnote set
-	////    FNT  Footnote
-	////    FOR  Formula
-	////    FSQ  Formula sequence
-	////    GDS  Nature of cargo
-	////    GEI  Processing information
-	////    GID  Goods item details
-	////    GIN  Goods identity number
-	////    GIR  Related identification numbers
-	////X   GIS  General indicator
-	////    GOR  Governmental requirements
-	////    GRU  Segment group usage details
-	////    HAN  Handling instructions
-	////    HYN  Hierarchy information
-	////    ICD  Insurance cover description
-	////    IDE  Identity
-	////*   IFD  Information detail
-	////    IHC  Person characteristic
-	////    IMD  Item description
-	////    IND  Index details
-	////    INP  Parties and instruction
-	////    INV  Inventory management related details
-	////    IRQ  Information required
-	////    LAN  Language
-	////    LOC  Place/location identification
-	////    MEA  Measurements
-	////    MEM  Membership details
-	////    MKS  Market/sales channel information
-	////    NAT  Nationality
-	////    PAC  Package
-	////    PAI  Payment instructions
-	////    PAS  Attendance
-	////    PCC  Premium calculation component details
-	////*   PCD  Percentage details
-	////+   PER  Period related details
-	////    PGI  Product group information
-	////    PIA  Additional product id
-	////    PNA  Party identification
-	////    PRC  Process identification
-	////+   PRV  Proviso details
-	////    PSD  Physical sample description
-	////    PTY  Priority
-	////    PYT  Payment terms
-	////    QRS  Query and response
-	////    QUA  Qualification
-	////    QVR  Quantity variances
-	////    RCS  Requirements and conditions
-	////    REL  Relationship
-	////    RJL  Accounting journal identification
-	////    RNG  Range details
-	////    ROD  Risk object type
-	////    RSL  Result
-	////*   RTE  Rate details
-	////    SAL  Remuneration type identification
-	////    SCC  Scheduling conditions
-	////    SCD  Structure component definition
-	////    SEG  Segment identification
-	////    SEL  Seal number
-	////    SEQ  Sequence details
-	////    SFI  Safety information
-	////    SGP  Split goods placement
-	////    SGU  Segment usage details
-	////    SPR  Organisation classification details
-	////    SPS  Sampling parameters for summary statistics
-	////    STA  Statistics
-	////    STC  Statistical concept
-	////    STG  Stages
-	////    STS  Status
-	////    TCC  Transport charge/rate calculations
-	////    TDT  Details of transport
-	////    TEM  Test method
-	////    TMD  Transport movement details
-	////    TMP  Temperature
-	////    TOD  Terms of delivery or transport
-	////    TPL  Transport placement
-	////    TRU  Technical rules
-	////    TSR  Transport service requirements
-	////    VLI  Value list identification
-	//    UNSSegment |
-	//    UNZSegment | // trailer for header UNB
-	//    UNTSegment // trailer for header UNH
+	//    EVESegment | // Event
+	//    EVTSegment | // Event
+	//    FCASegment | // Financial charges allocation
+	//    FIISegment | // Financial institution information
+	//    FNSSegment | // Footnote set
+	//    FNTSegment | // Footnote
+	//    FORSegment | // Formula
+	//    FSQSegment | // Formula sequence
+	//    FTXSegment | // Free text
+	//    GDSSegment | // Nature of cargo
+	//    GEISegment | // Processing information
+	//    GIDSegment | // Goods item details
+	//    GINSegment | // Goods identity number
+	//    GIRSegment | // Related identification numbers
+	//    GISSegment | // General indicator
+	//    GORSegment | // Governmental requirements
+	//    GRUSegment | // Segment group usage details
+	//    HANSegment | // Handling instructions
+	//    HYNSegment | // Hierarchy information
+	//    ICDSegment | // Insurance cover description
+	//    IDESegment | // Identity
+	//    IFDSegment | // Information detail
+	//    IHCSegment | // Person characteristic
+	//    IMDSegment | // Item description
+	//    INDSegment | // Index details
+	//    INPSegment | // Parties and instruction
+	//    INVSegment | // Inventory management related details
+	//    IRQSegment | // Information required
+	//    LANSegment | // Language
+	//    LINSegment | // Line item
+	//    LOCSegment | // Place/location identification
+	//    MEASegment | // Measurements
+	//    MEMSegment | // Membership details
+	//    MKSSegment | // Market/sales channel information
+	//    MOASegment | // Monetary amount
+	//    MSGSegment | // Message type identification
+	//    NADSegment | // Name and address
+	//    NATSegment | // Nationality
+	//    ODISegment | // Origin/destination
+	//    ORGSegment | // Organisation
+	//    PACSegment | // Package
+	//    PAISegment | // Payment instructions
+	//    PASSegment | // Attendance
+	//    PATSegment | // Payment terms basis
+	//    PCCSegment | // Premium calculation component details
+	//    PCDSegment | // Percentage details
+	//    PCISegment | // Package identification
+	//    PDISegment | // Person demographic information
+	//    PERSegment | // Period related details
+	//    PGISegment | // Product group information
+	//    PIASegment | // Additional product id
+	//    PNASegment | // Party identification
+	//    POCSegment | // Purpose of conveyance call
+	//    PRCSegment | // Process identification
+	//    PRISegment | // Price details
+	//    PRVSegment | // Proviso details
+	//    PSDSegment | // Physical sample description
+	//    PTYSegment | // Priority
+	//    PYTSegment | // Payment terms
+	//    QRSSegment | // Query and response
+	//    QTYSegment | // Quantity
+	//    QUASegment | // Qualification
+	//    QVRSegment | // Quantity variances
+	//    RCSSegment | // Requirements and conditions
+	//    RELSegment | // Relationship
+	//    RFFSegment | // Reference
+	//    RJLSegment | // Accounting journal identification
+	//    RNGSegment | // Range details
+	//    RODSegment | // Risk object type
+	//    RPISegment | // ?
+	//    RSLSegment | // Result
+	//    RTESegment | // Rate details
+	//    SALSegment | // Remuneration type identification
+	//    SCCSegment | // Scheduling conditions
+	//    SCDSegment | // Structure component definition
+	//    SEGSegment | // Segment identification
+	//    SELSegment | // Seal number
+	//    SEQSegment | // Sequence details
+	//    SFISegment | // Safety information
+	//    SGPSegment | // Split goods placement
+	//    SGUSegment | // Segment usage details
+	//    SPRSegment | // Organisation classification details
+	//    SPSSegment | // Sampling parameters for summary statistics
+	//    STASegment | // Statistics
+	//    STCSegment | // Statistical concept
+	//    STGSegment | // Stages
+	//    STSSegment | // Status
+	//    TAXSegment | // Duty/tax/fee details
+	//    TCCSegment | // Transport charge/rate calculations
+	//    TDTSegment | // Details of transport
+	//    TEMSegment | // Test method
+	//    TMDSegment | // Transport movement details
+	//    TMPSegment | // Temperature
+	//    TODSegment | // Terms of delivery or transport
+	//    TPLSegment | // Transport placement
+	//    TRUSegment | // Technical rules
+	//    TSRSegment | // Transport service requirements
+	//    TVLSegment | // Travel itinerary
+	//    UCISegment | // ?
+	//    VLISegment | // Value list identification
+	//    UNSSegment | // Trailer UNS
+	//    UNZSegment | // Trailer for header UNB
+	//    UNTSegment // Trailer for header UNH
 	//;
 	public AbstractEdiSegmentElements getAbstractEdiSegmentAccess() {
 		return pAbstractEdiSegment;
@@ -7651,6 +14964,2073 @@ public class EdilangGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getUNHSegmentRule() {
 		return getUNHSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ADRSegment:
+	//    segment="ADR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ADRSegmentElements getADRSegmentAccess() {
+		return pADRSegment;
+	}
+	
+	public ParserRule getADRSegmentRule() {
+		return getADRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//AGRSegment:
+	//    segment="AGR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public AGRSegmentElements getAGRSegmentAccess() {
+		return pAGRSegment;
+	}
+	
+	public ParserRule getAGRSegmentRule() {
+		return getAGRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//AJTSegment:
+	//    segment="AJT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public AJTSegmentElements getAJTSegmentAccess() {
+		return pAJTSegment;
+	}
+	
+	public ParserRule getAJTSegmentRule() {
+		return getAJTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ALCSegment:
+	//    segment="ALC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ALCSegmentElements getALCSegmentAccess() {
+		return pALCSegment;
+	}
+	
+	public ParserRule getALCSegmentRule() {
+		return getALCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ALISegment:
+	//    segment="ALI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ALISegmentElements getALISegmentAccess() {
+		return pALISegment;
+	}
+	
+	public ParserRule getALISegmentRule() {
+		return getALISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//APPSegment:
+	//    segment="APP"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public APPSegmentElements getAPPSegmentAccess() {
+		return pAPPSegment;
+	}
+	
+	public ParserRule getAPPSegmentRule() {
+		return getAPPSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//APRSegment:
+	//    segment="APR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public APRSegmentElements getAPRSegmentAccess() {
+		return pAPRSegment;
+	}
+	
+	public ParserRule getAPRSegmentRule() {
+		return getAPRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ARDSegment:
+	//    segment="ARD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ARDSegmentElements getARDSegmentAccess() {
+		return pARDSegment;
+	}
+	
+	public ParserRule getARDSegmentRule() {
+		return getARDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ARRSegment:
+	//    segment="ARR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ARRSegmentElements getARRSegmentAccess() {
+		return pARRSegment;
+	}
+	
+	public ParserRule getARRSegmentRule() {
+		return getARRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ASISegment:
+	//    segment="ASI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ASISegmentElements getASISegmentAccess() {
+		return pASISegment;
+	}
+	
+	public ParserRule getASISegmentRule() {
+		return getASISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ATTSegment:
+	//    segment="ATT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ATTSegmentElements getATTSegmentAccess() {
+		return pATTSegment;
+	}
+	
+	public ParserRule getATTSegmentRule() {
+		return getATTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//AUTSegment:
+	//    segment="AUT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public AUTSegmentElements getAUTSegmentAccess() {
+		return pAUTSegment;
+	}
+	
+	public ParserRule getAUTSegmentRule() {
+		return getAUTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//BASSegment:
+	//    segment="BAS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public BASSegmentElements getBASSegmentAccess() {
+		return pBASSegment;
+	}
+	
+	public ParserRule getBASSegmentRule() {
+		return getBASSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//BIISegment:
+	//    segment="BII"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public BIISegmentElements getBIISegmentAccess() {
+		return pBIISegment;
+	}
+	
+	public ParserRule getBIISegmentRule() {
+		return getBIISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//BUSSegment:
+	//    segment="BUS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public BUSSegmentElements getBUSSegmentAccess() {
+		return pBUSSegment;
+	}
+	
+	public ParserRule getBUSSegmentRule() {
+		return getBUSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CAVSegment:
+	//    segment="CAV"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CAVSegmentElements getCAVSegmentAccess() {
+		return pCAVSegment;
+	}
+	
+	public ParserRule getCAVSegmentRule() {
+		return getCAVSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CCDSegment:
+	//    segment="CCD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CCDSegmentElements getCCDSegmentAccess() {
+		return pCCDSegment;
+	}
+	
+	public ParserRule getCCDSegmentRule() {
+		return getCCDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CCISegment:
+	//    segment="CCI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CCISegmentElements getCCISegmentAccess() {
+		return pCCISegment;
+	}
+	
+	public ParserRule getCCISegmentRule() {
+		return getCCISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CDISegment:
+	//    segment="CDI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CDISegmentElements getCDISegmentAccess() {
+		return pCDISegment;
+	}
+	
+	public ParserRule getCDISegmentRule() {
+		return getCDISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CDSSegment:
+	//    segment="CDS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CDSSegmentElements getCDSSegmentAccess() {
+		return pCDSSegment;
+	}
+	
+	public ParserRule getCDSSegmentRule() {
+		return getCDSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CDVSegment:
+	//    segment="CDV"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CDVSegmentElements getCDVSegmentAccess() {
+		return pCDVSegment;
+	}
+	
+	public ParserRule getCDVSegmentRule() {
+		return getCDVSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CEDSegment:
+	//    segment="CED"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CEDSegmentElements getCEDSegmentAccess() {
+		return pCEDSegment;
+	}
+	
+	public ParserRule getCEDSegmentRule() {
+		return getCEDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CINSegment:
+	//    segment="CIN"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CINSegmentElements getCINSegmentAccess() {
+		return pCINSegment;
+	}
+	
+	public ParserRule getCINSegmentRule() {
+		return getCINSegmentAccess().getRule();
+	}
+	
+	//CLASegment:
+	//    segment="CLA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CLASegmentElements getCLASegmentAccess() {
+		return pCLASegment;
+	}
+	
+	public ParserRule getCLASegmentRule() {
+		return getCLASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CLISegment:
+	//    segment="CLI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CLISegmentElements getCLISegmentAccess() {
+		return pCLISegment;
+	}
+	
+	public ParserRule getCLISegmentRule() {
+		return getCLISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CMPSegment:
+	//    segment="CMP"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CMPSegmentElements getCMPSegmentAccess() {
+		return pCMPSegment;
+	}
+	
+	public ParserRule getCMPSegmentRule() {
+		return getCMPSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CNISegment:
+	//    segment="CNI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CNISegmentElements getCNISegmentAccess() {
+		return pCNISegment;
+	}
+	
+	public ParserRule getCNISegmentRule() {
+		return getCNISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CODSegment:
+	//    segment="COD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CODSegmentElements getCODSegmentAccess() {
+		return pCODSegment;
+	}
+	
+	public ParserRule getCODSegmentRule() {
+		return getCODSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//COMSegment:
+	//    segment="COM"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public COMSegmentElements getCOMSegmentAccess() {
+		return pCOMSegment;
+	}
+	
+	public ParserRule getCOMSegmentRule() {
+		return getCOMSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//COTSegment:
+	//    segment="COT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public COTSegmentElements getCOTSegmentAccess() {
+		return pCOTSegment;
+	}
+	
+	public ParserRule getCOTSegmentRule() {
+		return getCOTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CPISegment:
+	//    segment="CPI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CPISegmentElements getCPISegmentAccess() {
+		return pCPISegment;
+	}
+	
+	public ParserRule getCPISegmentRule() {
+		return getCPISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CPSSegment:
+	//    segment="CPS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CPSSegmentElements getCPSSegmentAccess() {
+		return pCPSSegment;
+	}
+	
+	public ParserRule getCPSSegmentRule() {
+		return getCPSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CPTSegment:
+	//    segment="CPT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CPTSegmentElements getCPTSegmentAccess() {
+		return pCPTSegment;
+	}
+	
+	public ParserRule getCPTSegmentRule() {
+		return getCPTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//CSTSegment:
+	//    segment="CST"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public CSTSegmentElements getCSTSegmentAccess() {
+		return pCSTSegment;
+	}
+	
+	public ParserRule getCSTSegmentRule() {
+		return getCSTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DAMSegment:
+	//    segment="DAM"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DAMSegmentElements getDAMSegmentAccess() {
+		return pDAMSegment;
+	}
+	
+	public ParserRule getDAMSegmentRule() {
+		return getDAMSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DFNSegment:
+	//    segment="DFN"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DFNSegmentElements getDFNSegmentAccess() {
+		return pDFNSegment;
+	}
+	
+	public ParserRule getDFNSegmentRule() {
+		return getDFNSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DGSSegment:
+	//    segment="DGS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DGSSegmentElements getDGSSegmentAccess() {
+		return pDGSSegment;
+	}
+	
+	public ParserRule getDGSSegmentRule() {
+		return getDGSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DIISegment:
+	//    segment="DII"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DIISegmentElements getDIISegmentAccess() {
+		return pDIISegment;
+	}
+	
+	public ParserRule getDIISegmentRule() {
+		return getDIISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DIMSegment:
+	//    segment="DIM"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DIMSegmentElements getDIMSegmentAccess() {
+		return pDIMSegment;
+	}
+	
+	public ParserRule getDIMSegmentRule() {
+		return getDIMSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DLISegment:
+	//    segment="DLI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DLISegmentElements getDLISegmentAccess() {
+		return pDLISegment;
+	}
+	
+	public ParserRule getDLISegmentRule() {
+		return getDLISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DLMSegment:
+	//    segment="DLM"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DLMSegmentElements getDLMSegmentAccess() {
+		return pDLMSegment;
+	}
+	
+	public ParserRule getDLMSegmentRule() {
+		return getDLMSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DMSSegment:
+	//    segment="DMS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DMSSegmentElements getDMSSegmentAccess() {
+		return pDMSSegment;
+	}
+	
+	public ParserRule getDMSSegmentRule() {
+		return getDMSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DOCSegment:
+	//    segment="DOC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DOCSegmentElements getDOCSegmentAccess() {
+		return pDOCSegment;
+	}
+	
+	public ParserRule getDOCSegmentRule() {
+		return getDOCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DRDSegment:
+	//    segment="DRD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DRDSegmentElements getDRDSegmentAccess() {
+		return pDRDSegment;
+	}
+	
+	public ParserRule getDRDSegmentRule() {
+		return getDRDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DSGSegment:
+	//    segment="DSG"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DSGSegmentElements getDSGSegmentAccess() {
+		return pDSGSegment;
+	}
+	
+	public ParserRule getDSGSegmentRule() {
+		return getDSGSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//DSISegment:
+	//    segment="DSI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public DSISegmentElements getDSISegmentAccess() {
+		return pDSISegment;
+	}
+	
+	public ParserRule getDSISegmentRule() {
+		return getDSISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//EDTSegment:
+	//    segment="EDT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EDTSegmentElements getEDTSegmentAccess() {
+		return pEDTSegment;
+	}
+	
+	public ParserRule getEDTSegmentRule() {
+		return getEDTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//EFISegment:
+	//    segment="EFI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EFISegmentElements getEFISegmentAccess() {
+		return pEFISegment;
+	}
+	
+	public ParserRule getEFISegmentRule() {
+		return getEFISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ELMSegment:
+	//    segment="ELM"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ELMSegmentElements getELMSegmentAccess() {
+		return pELMSegment;
+	}
+	
+	public ParserRule getELMSegmentRule() {
+		return getELMSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ELUSegment:
+	//    segment="ELU"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ELUSegmentElements getELUSegmentAccess() {
+		return pELUSegment;
+	}
+	
+	public ParserRule getELUSegmentRule() {
+		return getELUSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ELVSegment:
+	//    segment="ELV"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ELVSegmentElements getELVSegmentAccess() {
+		return pELVSegment;
+	}
+	
+	public ParserRule getELVSegmentRule() {
+		return getELVSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//EMPSegment:
+	//    segment="EMP"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EMPSegmentElements getEMPSegmentAccess() {
+		return pEMPSegment;
+	}
+	
+	public ParserRule getEMPSegmentRule() {
+		return getEMPSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//EQASegment:
+	//    segment="EQA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EQASegmentElements getEQASegmentAccess() {
+		return pEQASegment;
+	}
+	
+	public ParserRule getEQASegmentRule() {
+		return getEQASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//EQDSegment:
+	//    segment="EQD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EQDSegmentElements getEQDSegmentAccess() {
+		return pEQDSegment;
+	}
+	
+	public ParserRule getEQDSegmentRule() {
+		return getEQDSegmentAccess().getRule();
+	}
+	
+	//EQNSegment:
+	//    segment="EQN"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EQNSegmentElements getEQNSegmentAccess() {
+		return pEQNSegment;
+	}
+	
+	public ParserRule getEQNSegmentRule() {
+		return getEQNSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ERPSegment:
+	//    segment="ERP"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ERPSegmentElements getERPSegmentAccess() {
+		return pERPSegment;
+	}
+	
+	public ParserRule getERPSegmentRule() {
+		return getERPSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//EVESegment:
+	//    segment="EVE"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EVESegmentElements getEVESegmentAccess() {
+		return pEVESegment;
+	}
+	
+	public ParserRule getEVESegmentRule() {
+		return getEVESegmentAccess().getRule();
+	}
+	
+	////TODO
+	//EVTSegment:
+	//    segment="EVT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public EVTSegmentElements getEVTSegmentAccess() {
+		return pEVTSegment;
+	}
+	
+	public ParserRule getEVTSegmentRule() {
+		return getEVTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//FCASegment:
+	//    segment="FCA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public FCASegmentElements getFCASegmentAccess() {
+		return pFCASegment;
+	}
+	
+	public ParserRule getFCASegmentRule() {
+		return getFCASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//FIISegment:
+	//    segment="FII"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public FIISegmentElements getFIISegmentAccess() {
+		return pFIISegment;
+	}
+	
+	public ParserRule getFIISegmentRule() {
+		return getFIISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//FNSSegment:
+	//    segment="FNS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public FNSSegmentElements getFNSSegmentAccess() {
+		return pFNSSegment;
+	}
+	
+	public ParserRule getFNSSegmentRule() {
+		return getFNSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//FNTSegment:
+	//    segment="FNT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public FNTSegmentElements getFNTSegmentAccess() {
+		return pFNTSegment;
+	}
+	
+	public ParserRule getFNTSegmentRule() {
+		return getFNTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//FORSegment:
+	//    segment="FOR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public FORSegmentElements getFORSegmentAccess() {
+		return pFORSegment;
+	}
+	
+	public ParserRule getFORSegmentRule() {
+		return getFORSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//FSQSegment:
+	//    segment="FSQ"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public FSQSegmentElements getFSQSegmentAccess() {
+		return pFSQSegment;
+	}
+	
+	public ParserRule getFSQSegmentRule() {
+		return getFSQSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GDSSegment:
+	//    segment="GDS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GDSSegmentElements getGDSSegmentAccess() {
+		return pGDSSegment;
+	}
+	
+	public ParserRule getGDSSegmentRule() {
+		return getGDSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GEISegment:
+	//    segment="GEI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GEISegmentElements getGEISegmentAccess() {
+		return pGEISegment;
+	}
+	
+	public ParserRule getGEISegmentRule() {
+		return getGEISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GIDSegment:
+	//    segment="GID"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GIDSegmentElements getGIDSegmentAccess() {
+		return pGIDSegment;
+	}
+	
+	public ParserRule getGIDSegmentRule() {
+		return getGIDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GINSegment:
+	//    segment="GIN"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GINSegmentElements getGINSegmentAccess() {
+		return pGINSegment;
+	}
+	
+	public ParserRule getGINSegmentRule() {
+		return getGINSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GIRSegment:
+	//    segment="GIR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GIRSegmentElements getGIRSegmentAccess() {
+		return pGIRSegment;
+	}
+	
+	public ParserRule getGIRSegmentRule() {
+		return getGIRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GISSegment:
+	//    segment="GIS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GISSegmentElements getGISSegmentAccess() {
+		return pGISSegment;
+	}
+	
+	public ParserRule getGISSegmentRule() {
+		return getGISSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GORSegment:
+	//    segment="GOR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GORSegmentElements getGORSegmentAccess() {
+		return pGORSegment;
+	}
+	
+	public ParserRule getGORSegmentRule() {
+		return getGORSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//GRUSegment:
+	//    segment="GRU"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public GRUSegmentElements getGRUSegmentAccess() {
+		return pGRUSegment;
+	}
+	
+	public ParserRule getGRUSegmentRule() {
+		return getGRUSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//HANSegment:
+	//    segment="HAN"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public HANSegmentElements getHANSegmentAccess() {
+		return pHANSegment;
+	}
+	
+	public ParserRule getHANSegmentRule() {
+		return getHANSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//HYNSegment:
+	//    segment="HYN"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public HYNSegmentElements getHYNSegmentAccess() {
+		return pHYNSegment;
+	}
+	
+	public ParserRule getHYNSegmentRule() {
+		return getHYNSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//ICDSegment:
+	//    segment="ICD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public ICDSegmentElements getICDSegmentAccess() {
+		return pICDSegment;
+	}
+	
+	public ParserRule getICDSegmentRule() {
+		return getICDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//IDESegment:
+	//    segment="IDE"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public IDESegmentElements getIDESegmentAccess() {
+		return pIDESegment;
+	}
+	
+	public ParserRule getIDESegmentRule() {
+		return getIDESegmentAccess().getRule();
+	}
+	
+	////TODO
+	//IFDSegment:
+	//    segment="IFD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public IFDSegmentElements getIFDSegmentAccess() {
+		return pIFDSegment;
+	}
+	
+	public ParserRule getIFDSegmentRule() {
+		return getIFDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//IHCSegment:
+	//    segment="IHC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public IHCSegmentElements getIHCSegmentAccess() {
+		return pIHCSegment;
+	}
+	
+	public ParserRule getIHCSegmentRule() {
+		return getIHCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//IMDSegment:
+	//    segment="IMD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public IMDSegmentElements getIMDSegmentAccess() {
+		return pIMDSegment;
+	}
+	
+	public ParserRule getIMDSegmentRule() {
+		return getIMDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//INDSegment:
+	//    segment="IND"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public INDSegmentElements getINDSegmentAccess() {
+		return pINDSegment;
+	}
+	
+	public ParserRule getINDSegmentRule() {
+		return getINDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//INPSegment:
+	//    segment="INP"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public INPSegmentElements getINPSegmentAccess() {
+		return pINPSegment;
+	}
+	
+	public ParserRule getINPSegmentRule() {
+		return getINPSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//INVSegment:
+	//    segment="INV"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public INVSegmentElements getINVSegmentAccess() {
+		return pINVSegment;
+	}
+	
+	public ParserRule getINVSegmentRule() {
+		return getINVSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//IRQSegment:
+	//    segment="IRQ"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public IRQSegmentElements getIRQSegmentAccess() {
+		return pIRQSegment;
+	}
+	
+	public ParserRule getIRQSegmentRule() {
+		return getIRQSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//LANSegment:
+	//    segment="LAN"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public LANSegmentElements getLANSegmentAccess() {
+		return pLANSegment;
+	}
+	
+	public ParserRule getLANSegmentRule() {
+		return getLANSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//LOCSegment:
+	//    segment="LOC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public LOCSegmentElements getLOCSegmentAccess() {
+		return pLOCSegment;
+	}
+	
+	public ParserRule getLOCSegmentRule() {
+		return getLOCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//MEASegment:
+	//    segment="MEA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public MEASegmentElements getMEASegmentAccess() {
+		return pMEASegment;
+	}
+	
+	public ParserRule getMEASegmentRule() {
+		return getMEASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//MEMSegment:
+	//    segment="MEM"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public MEMSegmentElements getMEMSegmentAccess() {
+		return pMEMSegment;
+	}
+	
+	public ParserRule getMEMSegmentRule() {
+		return getMEMSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//MKSSegment:
+	//    segment="MKS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public MKSSegmentElements getMKSSegmentAccess() {
+		return pMKSSegment;
+	}
+	
+	public ParserRule getMKSSegmentRule() {
+		return getMKSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//NATSegment:
+	//    segment="NAT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public NATSegmentElements getNATSegmentAccess() {
+		return pNATSegment;
+	}
+	
+	public ParserRule getNATSegmentRule() {
+		return getNATSegmentAccess().getRule();
+	}
+	
+	//PACSegment:
+	//    segment="PAC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PACSegmentElements getPACSegmentAccess() {
+		return pPACSegment;
+	}
+	
+	public ParserRule getPACSegmentRule() {
+		return getPACSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PAISegment:
+	//    segment="PAI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PAISegmentElements getPAISegmentAccess() {
+		return pPAISegment;
+	}
+	
+	public ParserRule getPAISegmentRule() {
+		return getPAISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PASSegment:
+	//    segment="PAS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PASSegmentElements getPASSegmentAccess() {
+		return pPASSegment;
+	}
+	
+	public ParserRule getPASSegmentRule() {
+		return getPASSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PCCSegment:
+	//    segment="PCC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PCCSegmentElements getPCCSegmentAccess() {
+		return pPCCSegment;
+	}
+	
+	public ParserRule getPCCSegmentRule() {
+		return getPCCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PCDSegment:
+	//    segment="PCD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PCDSegmentElements getPCDSegmentAccess() {
+		return pPCDSegment;
+	}
+	
+	public ParserRule getPCDSegmentRule() {
+		return getPCDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PERSegment:
+	//    segment="PER"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PERSegmentElements getPERSegmentAccess() {
+		return pPERSegment;
+	}
+	
+	public ParserRule getPERSegmentRule() {
+		return getPERSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PGISegment:
+	//    segment="PGI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PGISegmentElements getPGISegmentAccess() {
+		return pPGISegment;
+	}
+	
+	public ParserRule getPGISegmentRule() {
+		return getPGISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PIASegment:
+	//    segment="PIA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PIASegmentElements getPIASegmentAccess() {
+		return pPIASegment;
+	}
+	
+	public ParserRule getPIASegmentRule() {
+		return getPIASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PNASegment:
+	//    segment="PNA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PNASegmentElements getPNASegmentAccess() {
+		return pPNASegment;
+	}
+	
+	public ParserRule getPNASegmentRule() {
+		return getPNASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PRCSegment:
+	//    segment="PRC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PRCSegmentElements getPRCSegmentAccess() {
+		return pPRCSegment;
+	}
+	
+	public ParserRule getPRCSegmentRule() {
+		return getPRCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PRVSegment:
+	//    segment="PRV"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PRVSegmentElements getPRVSegmentAccess() {
+		return pPRVSegment;
+	}
+	
+	public ParserRule getPRVSegmentRule() {
+		return getPRVSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PSDSegment:
+	//    segment="PSD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PSDSegmentElements getPSDSegmentAccess() {
+		return pPSDSegment;
+	}
+	
+	public ParserRule getPSDSegmentRule() {
+		return getPSDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PTYSegment:
+	//    segment="PTY"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PTYSegmentElements getPTYSegmentAccess() {
+		return pPTYSegment;
+	}
+	
+	public ParserRule getPTYSegmentRule() {
+		return getPTYSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//PYTSegment:
+	//    segment="PYT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public PYTSegmentElements getPYTSegmentAccess() {
+		return pPYTSegment;
+	}
+	
+	public ParserRule getPYTSegmentRule() {
+		return getPYTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//QRSSegment:
+	//    segment="QRS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public QRSSegmentElements getQRSSegmentAccess() {
+		return pQRSSegment;
+	}
+	
+	public ParserRule getQRSSegmentRule() {
+		return getQRSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//QUASegment:
+	//    segment="QUA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public QUASegmentElements getQUASegmentAccess() {
+		return pQUASegment;
+	}
+	
+	public ParserRule getQUASegmentRule() {
+		return getQUASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//QVRSegment:
+	//    segment="QVR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public QVRSegmentElements getQVRSegmentAccess() {
+		return pQVRSegment;
+	}
+	
+	public ParserRule getQVRSegmentRule() {
+		return getQVRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//RCSSegment:
+	//    segment="RCS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public RCSSegmentElements getRCSSegmentAccess() {
+		return pRCSSegment;
+	}
+	
+	public ParserRule getRCSSegmentRule() {
+		return getRCSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//RELSegment:
+	//    segment="REL"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public RELSegmentElements getRELSegmentAccess() {
+		return pRELSegment;
+	}
+	
+	public ParserRule getRELSegmentRule() {
+		return getRELSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//RJLSegment:
+	//    segment="RJL"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public RJLSegmentElements getRJLSegmentAccess() {
+		return pRJLSegment;
+	}
+	
+	public ParserRule getRJLSegmentRule() {
+		return getRJLSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//RNGSegment:
+	//    segment="RNG"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public RNGSegmentElements getRNGSegmentAccess() {
+		return pRNGSegment;
+	}
+	
+	public ParserRule getRNGSegmentRule() {
+		return getRNGSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//RODSegment:
+	//    segment="ROD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public RODSegmentElements getRODSegmentAccess() {
+		return pRODSegment;
+	}
+	
+	public ParserRule getRODSegmentRule() {
+		return getRODSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//RSLSegment:
+	//    segment="RSL"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public RSLSegmentElements getRSLSegmentAccess() {
+		return pRSLSegment;
+	}
+	
+	public ParserRule getRSLSegmentRule() {
+		return getRSLSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//RTESegment:
+	//    segment="RTE"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public RTESegmentElements getRTESegmentAccess() {
+		return pRTESegment;
+	}
+	
+	public ParserRule getRTESegmentRule() {
+		return getRTESegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SALSegment:
+	//    segment="SAL"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SALSegmentElements getSALSegmentAccess() {
+		return pSALSegment;
+	}
+	
+	public ParserRule getSALSegmentRule() {
+		return getSALSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SCCSegment:
+	//    segment="SCC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SCCSegmentElements getSCCSegmentAccess() {
+		return pSCCSegment;
+	}
+	
+	public ParserRule getSCCSegmentRule() {
+		return getSCCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SCDSegment:
+	//    segment="SCD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SCDSegmentElements getSCDSegmentAccess() {
+		return pSCDSegment;
+	}
+	
+	public ParserRule getSCDSegmentRule() {
+		return getSCDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SEGSegment:
+	//    segment="SEG"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SEGSegmentElements getSEGSegmentAccess() {
+		return pSEGSegment;
+	}
+	
+	public ParserRule getSEGSegmentRule() {
+		return getSEGSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SELSegment:
+	//    segment="SEL"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SELSegmentElements getSELSegmentAccess() {
+		return pSELSegment;
+	}
+	
+	public ParserRule getSELSegmentRule() {
+		return getSELSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SEQSegment:
+	//    segment="SEQ"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SEQSegmentElements getSEQSegmentAccess() {
+		return pSEQSegment;
+	}
+	
+	public ParserRule getSEQSegmentRule() {
+		return getSEQSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SFISegment:
+	//    segment="SFI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SFISegmentElements getSFISegmentAccess() {
+		return pSFISegment;
+	}
+	
+	public ParserRule getSFISegmentRule() {
+		return getSFISegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SGPSegment:
+	//    segment="SGP"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SGPSegmentElements getSGPSegmentAccess() {
+		return pSGPSegment;
+	}
+	
+	public ParserRule getSGPSegmentRule() {
+		return getSGPSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SGUSegment:
+	//    segment="SGU"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SGUSegmentElements getSGUSegmentAccess() {
+		return pSGUSegment;
+	}
+	
+	public ParserRule getSGUSegmentRule() {
+		return getSGUSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SPRSegment:
+	//    segment="SPR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SPRSegmentElements getSPRSegmentAccess() {
+		return pSPRSegment;
+	}
+	
+	public ParserRule getSPRSegmentRule() {
+		return getSPRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//SPSSegment:
+	//    segment="SPS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public SPSSegmentElements getSPSSegmentAccess() {
+		return pSPSSegment;
+	}
+	
+	public ParserRule getSPSSegmentRule() {
+		return getSPSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//STASegment:
+	//    segment="STA"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public STASegmentElements getSTASegmentAccess() {
+		return pSTASegment;
+	}
+	
+	public ParserRule getSTASegmentRule() {
+		return getSTASegmentAccess().getRule();
+	}
+	
+	////TODO
+	//STCSegment:
+	//    segment="STC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public STCSegmentElements getSTCSegmentAccess() {
+		return pSTCSegment;
+	}
+	
+	public ParserRule getSTCSegmentRule() {
+		return getSTCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//STGSegment:
+	//    segment="STG"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public STGSegmentElements getSTGSegmentAccess() {
+		return pSTGSegment;
+	}
+	
+	public ParserRule getSTGSegmentRule() {
+		return getSTGSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//STSSegment:
+	//    segment="STS"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public STSSegmentElements getSTSSegmentAccess() {
+		return pSTSSegment;
+	}
+	
+	public ParserRule getSTSSegmentRule() {
+		return getSTSSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TCCSegment:
+	//    segment="TCC"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TCCSegmentElements getTCCSegmentAccess() {
+		return pTCCSegment;
+	}
+	
+	public ParserRule getTCCSegmentRule() {
+		return getTCCSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TDTSegment:
+	//    segment="TDT"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TDTSegmentElements getTDTSegmentAccess() {
+		return pTDTSegment;
+	}
+	
+	public ParserRule getTDTSegmentRule() {
+		return getTDTSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TEMSegment:
+	//    segment="TEM"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TEMSegmentElements getTEMSegmentAccess() {
+		return pTEMSegment;
+	}
+	
+	public ParserRule getTEMSegmentRule() {
+		return getTEMSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TMDSegment:
+	//    segment="TMD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TMDSegmentElements getTMDSegmentAccess() {
+		return pTMDSegment;
+	}
+	
+	public ParserRule getTMDSegmentRule() {
+		return getTMDSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TMPSegment:
+	//    segment="TMP"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TMPSegmentElements getTMPSegmentAccess() {
+		return pTMPSegment;
+	}
+	
+	public ParserRule getTMPSegmentRule() {
+		return getTMPSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TODSegment:
+	//    segment="TOD"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TODSegmentElements getTODSegmentAccess() {
+		return pTODSegment;
+	}
+	
+	public ParserRule getTODSegmentRule() {
+		return getTODSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TPLSegment:
+	//    segment="TPL"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TPLSegmentElements getTPLSegmentAccess() {
+		return pTPLSegment;
+	}
+	
+	public ParserRule getTPLSegmentRule() {
+		return getTPLSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TRUSegment:
+	//    segment="TRU"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TRUSegmentElements getTRUSegmentAccess() {
+		return pTRUSegment;
+	}
+	
+	public ParserRule getTRUSegmentRule() {
+		return getTRUSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//TSRSegment:
+	//    segment="TSR"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public TSRSegmentElements getTSRSegmentAccess() {
+		return pTSRSegment;
+	}
+	
+	public ParserRule getTSRSegmentRule() {
+		return getTSRSegmentAccess().getRule();
+	}
+	
+	////TODO
+	//VLISegment:
+	//    segment="VLI"
+	//    PLUS
+	//    todo=ID
+	//    lineEnd=QUOTE_AND_NL
+	//;
+	public VLISegmentElements getVLISegmentAccess() {
+		return pVLISegment;
+	}
+	
+	public ParserRule getVLISegmentRule() {
+		return getVLISegmentAccess().getRule();
 	}
 	
 	////MSG+1:46'

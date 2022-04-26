@@ -149,7 +149,7 @@ public class MessageBodyFunctionImpl extends AbstractEdiFunctionImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.MESSAGE_BODY_FUNCTION;
+    return EdilangPackage.eINSTANCE.getMessageBodyFunction();
   }
 
   /**

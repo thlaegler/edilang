@@ -86,7 +86,7 @@ public class PDISegmentImpl extends AbstractEdiSegmentImpl implements PDISegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PDI_SEGMENT;
+    return EdilangPackage.eINSTANCE.getPDISegment();
   }
 
   /**

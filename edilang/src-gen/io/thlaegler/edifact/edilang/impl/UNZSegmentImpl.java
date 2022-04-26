@@ -86,7 +86,7 @@ public class UNZSegmentImpl extends AbstractEdiSegmentImpl implements UNZSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.UNZ_SEGMENT;
+    return EdilangPackage.eINSTANCE.getUNZSegment();
   }
 
   /**

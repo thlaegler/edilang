@@ -3,77 +3,27 @@
  */
 package io.thlaegler.edifact.edilang.impl;
 
-import io.thlaegler.edifact.edilang.AbstractEdiFunction;
-import io.thlaegler.edifact.edilang.AbstractEdiSegment;
-import io.thlaegler.edifact.edilang.ApplicationErrorDetail;
-import io.thlaegler.edifact.edilang.BGMSegment;
-import io.thlaegler.edifact.edilang.CNTSegment;
-import io.thlaegler.edifact.edilang.CTASegment;
-import io.thlaegler.edifact.edilang.CUXSegment;
-import io.thlaegler.edifact.edilang.CountrySubEntityDetail;
-import io.thlaegler.edifact.edilang.CurrencyDetail;
-import io.thlaegler.edifact.edilang.DTMSegment;
-import io.thlaegler.edifact.edilang.DateAndTimeFunction;
-import io.thlaegler.edifact.edilang.DateOnlyFunction;
-import io.thlaegler.edifact.edilang.DateTimePeriod;
-import io.thlaegler.edifact.edilang.DocumentMessage;
-import io.thlaegler.edifact.edilang.DocumentMessageIdentification;
-import io.thlaegler.edifact.edilang.ERCSegment;
-import io.thlaegler.edifact.edilang.EdiModel;
 import io.thlaegler.edifact.edilang.EdilangFactory;
 import io.thlaegler.edifact.edilang.EdilangPackage;
-import io.thlaegler.edifact.edilang.FTXSegment;
-import io.thlaegler.edifact.edilang.InterchangerFunction;
-import io.thlaegler.edifact.edilang.ItemNumberIdentification;
-import io.thlaegler.edifact.edilang.LINSegment;
-import io.thlaegler.edifact.edilang.LocationFunction;
-import io.thlaegler.edifact.edilang.MOASegment;
-import io.thlaegler.edifact.edilang.MSGSegment;
-import io.thlaegler.edifact.edilang.MessageBodyFunction;
-import io.thlaegler.edifact.edilang.MessageIndentifier;
-import io.thlaegler.edifact.edilang.NADSegment;
-import io.thlaegler.edifact.edilang.NameAndAddress;
-import io.thlaegler.edifact.edilang.ODISegment;
-import io.thlaegler.edifact.edilang.ORGSegment;
-import io.thlaegler.edifact.edilang.OriginatorFunction;
-import io.thlaegler.edifact.edilang.OriginatorIdentificationFunction;
-import io.thlaegler.edifact.edilang.PATSegment;
-import io.thlaegler.edifact.edilang.PCISegment;
-import io.thlaegler.edifact.edilang.PDISegment;
-import io.thlaegler.edifact.edilang.POCSegment;
-import io.thlaegler.edifact.edilang.PRISegment;
-import io.thlaegler.edifact.edilang.PartyIdentificationDetail;
-import io.thlaegler.edifact.edilang.PartyName;
-import io.thlaegler.edifact.edilang.PriceInformation;
-import io.thlaegler.edifact.edilang.ProductFunction;
-import io.thlaegler.edifact.edilang.QTYSegment;
-import io.thlaegler.edifact.edilang.QuantityDetail;
-import io.thlaegler.edifact.edilang.RFFSegment;
-import io.thlaegler.edifact.edilang.RPISegment;
-import io.thlaegler.edifact.edilang.Relationship;
-import io.thlaegler.edifact.edilang.Street;
-import io.thlaegler.edifact.edilang.SublineInformation;
-import io.thlaegler.edifact.edilang.SystemDetailFunction;
-import io.thlaegler.edifact.edilang.TAXSegment;
-import io.thlaegler.edifact.edilang.TVLSegment;
-import io.thlaegler.edifact.edilang.TaxAccountDetail;
-import io.thlaegler.edifact.edilang.TaxDetail;
-import io.thlaegler.edifact.edilang.TaxType;
-import io.thlaegler.edifact.edilang.UCISegment;
-import io.thlaegler.edifact.edilang.UNASegment;
-import io.thlaegler.edifact.edilang.UNBHeader;
-import io.thlaegler.edifact.edilang.UNBSegment;
-import io.thlaegler.edifact.edilang.UNHSegment;
-import io.thlaegler.edifact.edilang.UNSSegment;
-import io.thlaegler.edifact.edilang.UNTSegment;
-import io.thlaegler.edifact.edilang.UNZSegment;
+
+import java.io.IOException;
+
+import java.net.URL;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.WrappedException;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.resource.Resource;
+
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,6 +33,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  */
 public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
 {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected String packageFilename = "edilang.loadinitialization_ecore";
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -117,6 +74,972 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   private EClass unhSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass adrSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass agrSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ajtSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass alcSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aliSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass appSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aprSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ardSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass arrSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass asiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass attSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass autSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass basSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass biiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass busSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cavSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ccdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cciSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cdiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cdsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cdvSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cedSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cinSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass claSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cliSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cmpSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cniSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass codSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass comSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cotSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cpiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cpsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cptSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cstSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass damSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dfnSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dgsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass diiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dimSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dliSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dlmSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dmsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass docSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass drdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dsgSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dsiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass edtSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass efiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass elmSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass eluSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass elvSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass empSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass eqaSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass eqdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass eqnSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass erpSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass eveSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass evtSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fcaSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fiiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fnsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fntSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass forSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fsqSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gdsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass geiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gidSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ginSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass girSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gisSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gorSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gruSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass hanSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass hynSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass icdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ideSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ifdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ihcSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass imdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inpSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass invSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass irqSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lanSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass locSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass meaSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass memSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mksSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass natSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pacSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass paiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pasSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pccSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pcdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass perSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pgiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass piaSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pnaSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass prcSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass prvSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass psdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ptySegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pytSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qrsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass quaSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qvrSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rcsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass relSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rjlSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rngSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rodSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rslSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rteSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass salSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sccSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass scdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass segSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass selSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass seqSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sfiSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sgpSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sguSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sprSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass spsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass staSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stcSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stgSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stsSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tccSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tdtSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass temSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tmdSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tmpSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass todSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tplSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass truSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tsrSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass vliSegmentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -552,8 +1475,6 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #eNS_URI
-   * @see #createPackageContents()
-   * @see #initializePackageContents()
    * @generated
    */
   public static EdilangPackage init()
@@ -566,11 +1487,11 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
 
     isInited = true;
 
-    // Create package meta-data objects
-    theEdilangPackage.createPackageContents();
+    // Load packages
+    theEdilangPackage.loadPackage();
 
-    // Initialize created meta-data
-    theEdilangPackage.initializePackageContents();
+    // Fix loaded packages
+    theEdilangPackage.fixPackageContents();
 
     // Mark meta-data to indicate it can't be changed
     theEdilangPackage.freeze();
@@ -588,6 +1509,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getEdiModel()
   {
+    if (ediModelEClass == null)
+    {
+      ediModelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(0);
+    }
     return ediModelEClass;
   }
 
@@ -599,7 +1524,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getEdiModel_Segments()
   {
-    return (EReference)ediModelEClass.getEStructuralFeatures().get(0);
+        return (EReference)getEdiModel().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -610,6 +1535,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getAbstractEdiSegment()
   {
+    if (abstractEdiSegmentEClass == null)
+    {
+      abstractEdiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(1);
+    }
     return abstractEdiSegmentEClass;
   }
 
@@ -621,7 +1550,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getAbstractEdiSegment_Segment()
   {
-    return (EAttribute)abstractEdiSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getAbstractEdiSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -632,7 +1561,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getAbstractEdiSegment_LineEnd()
   {
-    return (EAttribute)abstractEdiSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getAbstractEdiSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -643,6 +1572,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUNASegment()
   {
+    if (unaSegmentEClass == null)
+    {
+      unaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(2);
+    }
     return unaSegmentEClass;
   }
 
@@ -654,6 +1587,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUNBSegment()
   {
+    if (unbSegmentEClass == null)
+    {
+      unbSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(3);
+    }
     return unbSegmentEClass;
   }
 
@@ -665,7 +1602,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNBSegment_Header()
   {
-    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getUNBSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -676,7 +1613,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNBSegment_InterchangeSender()
   {
-    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getUNBSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -687,7 +1624,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNBSegment_InterchangeRecipient()
   {
-    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(2);
+        return (EReference)getUNBSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -698,7 +1635,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNBSegment_DateAndTime()
   {
-    return (EReference)unbSegmentEClass.getEStructuralFeatures().get(3);
+        return (EReference)getUNBSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -709,7 +1646,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_InterchangeControlSenderRef()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getUNBSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -720,7 +1657,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_InterchangeControlRecipientRef()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getUNBSegment().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -731,7 +1668,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_Fse()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)getUNBSegment().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -742,7 +1679,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBSegment_AssiciationCode()
   {
-    return (EAttribute)unbSegmentEClass.getEStructuralFeatures().get(7);
+        return (EAttribute)getUNBSegment().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -753,6 +1690,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUNHSegment()
   {
+    if (unhSegmentEClass == null)
+    {
+      unhSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(4);
+    }
     return unhSegmentEClass;
   }
 
@@ -764,7 +1705,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNHSegment_MessageReferenceNumber()
   {
-    return (EAttribute)unhSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getUNHSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -775,7 +1716,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getUNHSegment_Message()
   {
-    return (EReference)unhSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getUNHSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -786,7 +1727,3595 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNHSegment_CommonAccessReference()
   {
-    return (EAttribute)unhSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getUNHSegment().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getADRSegment()
+  {
+    if (adrSegmentEClass == null)
+    {
+      adrSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(5);
+    }
+    return adrSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getADRSegment_Todo()
+  {
+        return (EAttribute)getADRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAGRSegment()
+  {
+    if (agrSegmentEClass == null)
+    {
+      agrSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(6);
+    }
+    return agrSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAGRSegment_Todo()
+  {
+        return (EAttribute)getAGRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAJTSegment()
+  {
+    if (ajtSegmentEClass == null)
+    {
+      ajtSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(7);
+    }
+    return ajtSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAJTSegment_Todo()
+  {
+        return (EAttribute)getAJTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getALCSegment()
+  {
+    if (alcSegmentEClass == null)
+    {
+      alcSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(8);
+    }
+    return alcSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getALCSegment_Todo()
+  {
+        return (EAttribute)getALCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getALISegment()
+  {
+    if (aliSegmentEClass == null)
+    {
+      aliSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(9);
+    }
+    return aliSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getALISegment_Todo()
+  {
+        return (EAttribute)getALISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAPPSegment()
+  {
+    if (appSegmentEClass == null)
+    {
+      appSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(10);
+    }
+    return appSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAPPSegment_Todo()
+  {
+        return (EAttribute)getAPPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAPRSegment()
+  {
+    if (aprSegmentEClass == null)
+    {
+      aprSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(11);
+    }
+    return aprSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAPRSegment_Todo()
+  {
+        return (EAttribute)getAPRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getARDSegment()
+  {
+    if (ardSegmentEClass == null)
+    {
+      ardSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(12);
+    }
+    return ardSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getARDSegment_Todo()
+  {
+        return (EAttribute)getARDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getARRSegment()
+  {
+    if (arrSegmentEClass == null)
+    {
+      arrSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(13);
+    }
+    return arrSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getARRSegment_Todo()
+  {
+        return (EAttribute)getARRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getASISegment()
+  {
+    if (asiSegmentEClass == null)
+    {
+      asiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(14);
+    }
+    return asiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getASISegment_Todo()
+  {
+        return (EAttribute)getASISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getATTSegment()
+  {
+    if (attSegmentEClass == null)
+    {
+      attSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(15);
+    }
+    return attSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getATTSegment_Todo()
+  {
+        return (EAttribute)getATTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAUTSegment()
+  {
+    if (autSegmentEClass == null)
+    {
+      autSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(16);
+    }
+    return autSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAUTSegment_Todo()
+  {
+        return (EAttribute)getAUTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getBASSegment()
+  {
+    if (basSegmentEClass == null)
+    {
+      basSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(17);
+    }
+    return basSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBASSegment_Todo()
+  {
+        return (EAttribute)getBASSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getBIISegment()
+  {
+    if (biiSegmentEClass == null)
+    {
+      biiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(18);
+    }
+    return biiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBIISegment_Todo()
+  {
+        return (EAttribute)getBIISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getBUSSegment()
+  {
+    if (busSegmentEClass == null)
+    {
+      busSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(19);
+    }
+    return busSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBUSSegment_Todo()
+  {
+        return (EAttribute)getBUSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCAVSegment()
+  {
+    if (cavSegmentEClass == null)
+    {
+      cavSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(20);
+    }
+    return cavSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCAVSegment_Todo()
+  {
+        return (EAttribute)getCAVSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCCDSegment()
+  {
+    if (ccdSegmentEClass == null)
+    {
+      ccdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(21);
+    }
+    return ccdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCCDSegment_Todo()
+  {
+        return (EAttribute)getCCDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCCISegment()
+  {
+    if (cciSegmentEClass == null)
+    {
+      cciSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(22);
+    }
+    return cciSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCCISegment_Todo()
+  {
+        return (EAttribute)getCCISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCDISegment()
+  {
+    if (cdiSegmentEClass == null)
+    {
+      cdiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(23);
+    }
+    return cdiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDISegment_Todo()
+  {
+        return (EAttribute)getCDISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCDSSegment()
+  {
+    if (cdsSegmentEClass == null)
+    {
+      cdsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(24);
+    }
+    return cdsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDSSegment_Todo()
+  {
+        return (EAttribute)getCDSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCDVSegment()
+  {
+    if (cdvSegmentEClass == null)
+    {
+      cdvSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(25);
+    }
+    return cdvSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDVSegment_Todo()
+  {
+        return (EAttribute)getCDVSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCEDSegment()
+  {
+    if (cedSegmentEClass == null)
+    {
+      cedSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(26);
+    }
+    return cedSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCEDSegment_Todo()
+  {
+        return (EAttribute)getCEDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCINSegment()
+  {
+    if (cinSegmentEClass == null)
+    {
+      cinSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(27);
+    }
+    return cinSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCINSegment_Todo()
+  {
+        return (EAttribute)getCINSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCLASegment()
+  {
+    if (claSegmentEClass == null)
+    {
+      claSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(28);
+    }
+    return claSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCLASegment_Todo()
+  {
+        return (EAttribute)getCLASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCLISegment()
+  {
+    if (cliSegmentEClass == null)
+    {
+      cliSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(29);
+    }
+    return cliSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCLISegment_Todo()
+  {
+        return (EAttribute)getCLISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCMPSegment()
+  {
+    if (cmpSegmentEClass == null)
+    {
+      cmpSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(30);
+    }
+    return cmpSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCMPSegment_Todo()
+  {
+        return (EAttribute)getCMPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCNISegment()
+  {
+    if (cniSegmentEClass == null)
+    {
+      cniSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(31);
+    }
+    return cniSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCNISegment_Todo()
+  {
+        return (EAttribute)getCNISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCODSegment()
+  {
+    if (codSegmentEClass == null)
+    {
+      codSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(32);
+    }
+    return codSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCODSegment_Todo()
+  {
+        return (EAttribute)getCODSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCOMSegment()
+  {
+    if (comSegmentEClass == null)
+    {
+      comSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(33);
+    }
+    return comSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCOMSegment_Todo()
+  {
+        return (EAttribute)getCOMSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCOTSegment()
+  {
+    if (cotSegmentEClass == null)
+    {
+      cotSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(34);
+    }
+    return cotSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCOTSegment_Todo()
+  {
+        return (EAttribute)getCOTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCPISegment()
+  {
+    if (cpiSegmentEClass == null)
+    {
+      cpiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(35);
+    }
+    return cpiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCPISegment_Todo()
+  {
+        return (EAttribute)getCPISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCPSSegment()
+  {
+    if (cpsSegmentEClass == null)
+    {
+      cpsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(36);
+    }
+    return cpsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCPSSegment_Todo()
+  {
+        return (EAttribute)getCPSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCPTSegment()
+  {
+    if (cptSegmentEClass == null)
+    {
+      cptSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(37);
+    }
+    return cptSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCPTSegment_Todo()
+  {
+        return (EAttribute)getCPTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCSTSegment()
+  {
+    if (cstSegmentEClass == null)
+    {
+      cstSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(38);
+    }
+    return cstSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCSTSegment_Todo()
+  {
+        return (EAttribute)getCSTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDAMSegment()
+  {
+    if (damSegmentEClass == null)
+    {
+      damSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(39);
+    }
+    return damSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDAMSegment_Todo()
+  {
+        return (EAttribute)getDAMSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDFNSegment()
+  {
+    if (dfnSegmentEClass == null)
+    {
+      dfnSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(40);
+    }
+    return dfnSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDFNSegment_Todo()
+  {
+        return (EAttribute)getDFNSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDGSSegment()
+  {
+    if (dgsSegmentEClass == null)
+    {
+      dgsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(41);
+    }
+    return dgsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDGSSegment_Todo()
+  {
+        return (EAttribute)getDGSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDIISegment()
+  {
+    if (diiSegmentEClass == null)
+    {
+      diiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(42);
+    }
+    return diiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDIISegment_Todo()
+  {
+        return (EAttribute)getDIISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDIMSegment()
+  {
+    if (dimSegmentEClass == null)
+    {
+      dimSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(43);
+    }
+    return dimSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDIMSegment_Todo()
+  {
+        return (EAttribute)getDIMSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDLISegment()
+  {
+    if (dliSegmentEClass == null)
+    {
+      dliSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(44);
+    }
+    return dliSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDLISegment_Todo()
+  {
+        return (EAttribute)getDLISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDLMSegment()
+  {
+    if (dlmSegmentEClass == null)
+    {
+      dlmSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(45);
+    }
+    return dlmSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDLMSegment_Todo()
+  {
+        return (EAttribute)getDLMSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDMSSegment()
+  {
+    if (dmsSegmentEClass == null)
+    {
+      dmsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(46);
+    }
+    return dmsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDMSSegment_Todo()
+  {
+        return (EAttribute)getDMSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDOCSegment()
+  {
+    if (docSegmentEClass == null)
+    {
+      docSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(47);
+    }
+    return docSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDOCSegment_Todo()
+  {
+        return (EAttribute)getDOCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDRDSegment()
+  {
+    if (drdSegmentEClass == null)
+    {
+      drdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(48);
+    }
+    return drdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDRDSegment_Todo()
+  {
+        return (EAttribute)getDRDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDSGSegment()
+  {
+    if (dsgSegmentEClass == null)
+    {
+      dsgSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(49);
+    }
+    return dsgSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDSGSegment_Todo()
+  {
+        return (EAttribute)getDSGSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDSISegment()
+  {
+    if (dsiSegmentEClass == null)
+    {
+      dsiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(50);
+    }
+    return dsiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDSISegment_Todo()
+  {
+        return (EAttribute)getDSISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEDTSegment()
+  {
+    if (edtSegmentEClass == null)
+    {
+      edtSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(51);
+    }
+    return edtSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEDTSegment_Todo()
+  {
+        return (EAttribute)getEDTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEFISegment()
+  {
+    if (efiSegmentEClass == null)
+    {
+      efiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(52);
+    }
+    return efiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEFISegment_Todo()
+  {
+        return (EAttribute)getEFISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getELMSegment()
+  {
+    if (elmSegmentEClass == null)
+    {
+      elmSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(53);
+    }
+    return elmSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getELMSegment_Todo()
+  {
+        return (EAttribute)getELMSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getELUSegment()
+  {
+    if (eluSegmentEClass == null)
+    {
+      eluSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(54);
+    }
+    return eluSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getELUSegment_Todo()
+  {
+        return (EAttribute)getELUSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getELVSegment()
+  {
+    if (elvSegmentEClass == null)
+    {
+      elvSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(55);
+    }
+    return elvSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getELVSegment_Todo()
+  {
+        return (EAttribute)getELVSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEMPSegment()
+  {
+    if (empSegmentEClass == null)
+    {
+      empSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(56);
+    }
+    return empSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEMPSegment_Todo()
+  {
+        return (EAttribute)getEMPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEQASegment()
+  {
+    if (eqaSegmentEClass == null)
+    {
+      eqaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(57);
+    }
+    return eqaSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEQASegment_Todo()
+  {
+        return (EAttribute)getEQASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEQDSegment()
+  {
+    if (eqdSegmentEClass == null)
+    {
+      eqdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(58);
+    }
+    return eqdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEQDSegment_Todo()
+  {
+        return (EAttribute)getEQDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEQNSegment()
+  {
+    if (eqnSegmentEClass == null)
+    {
+      eqnSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(59);
+    }
+    return eqnSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEQNSegment_Todo()
+  {
+        return (EAttribute)getEQNSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getERPSegment()
+  {
+    if (erpSegmentEClass == null)
+    {
+      erpSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(60);
+    }
+    return erpSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getERPSegment_Todo()
+  {
+        return (EAttribute)getERPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEVESegment()
+  {
+    if (eveSegmentEClass == null)
+    {
+      eveSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(61);
+    }
+    return eveSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEVESegment_Todo()
+  {
+        return (EAttribute)getEVESegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEVTSegment()
+  {
+    if (evtSegmentEClass == null)
+    {
+      evtSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(62);
+    }
+    return evtSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEVTSegment_Todo()
+  {
+        return (EAttribute)getEVTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFCASegment()
+  {
+    if (fcaSegmentEClass == null)
+    {
+      fcaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(63);
+    }
+    return fcaSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFCASegment_Todo()
+  {
+        return (EAttribute)getFCASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFIISegment()
+  {
+    if (fiiSegmentEClass == null)
+    {
+      fiiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(64);
+    }
+    return fiiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFIISegment_Todo()
+  {
+        return (EAttribute)getFIISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFNSSegment()
+  {
+    if (fnsSegmentEClass == null)
+    {
+      fnsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(65);
+    }
+    return fnsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFNSSegment_Todo()
+  {
+        return (EAttribute)getFNSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFNTSegment()
+  {
+    if (fntSegmentEClass == null)
+    {
+      fntSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(66);
+    }
+    return fntSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFNTSegment_Todo()
+  {
+        return (EAttribute)getFNTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFORSegment()
+  {
+    if (forSegmentEClass == null)
+    {
+      forSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(67);
+    }
+    return forSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFORSegment_Todo()
+  {
+        return (EAttribute)getFORSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFSQSegment()
+  {
+    if (fsqSegmentEClass == null)
+    {
+      fsqSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(68);
+    }
+    return fsqSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFSQSegment_Todo()
+  {
+        return (EAttribute)getFSQSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGDSSegment()
+  {
+    if (gdsSegmentEClass == null)
+    {
+      gdsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(69);
+    }
+    return gdsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGDSSegment_Todo()
+  {
+        return (EAttribute)getGDSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGEISegment()
+  {
+    if (geiSegmentEClass == null)
+    {
+      geiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(70);
+    }
+    return geiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGEISegment_Todo()
+  {
+        return (EAttribute)getGEISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGIDSegment()
+  {
+    if (gidSegmentEClass == null)
+    {
+      gidSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(71);
+    }
+    return gidSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGIDSegment_Todo()
+  {
+        return (EAttribute)getGIDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGINSegment()
+  {
+    if (ginSegmentEClass == null)
+    {
+      ginSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(72);
+    }
+    return ginSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGINSegment_Todo()
+  {
+        return (EAttribute)getGINSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGIRSegment()
+  {
+    if (girSegmentEClass == null)
+    {
+      girSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(73);
+    }
+    return girSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGIRSegment_Todo()
+  {
+        return (EAttribute)getGIRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGISSegment()
+  {
+    if (gisSegmentEClass == null)
+    {
+      gisSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(74);
+    }
+    return gisSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGISSegment_Todo()
+  {
+        return (EAttribute)getGISSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGORSegment()
+  {
+    if (gorSegmentEClass == null)
+    {
+      gorSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(75);
+    }
+    return gorSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGORSegment_Todo()
+  {
+        return (EAttribute)getGORSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGRUSegment()
+  {
+    if (gruSegmentEClass == null)
+    {
+      gruSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(76);
+    }
+    return gruSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGRUSegment_Todo()
+  {
+        return (EAttribute)getGRUSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getHANSegment()
+  {
+    if (hanSegmentEClass == null)
+    {
+      hanSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(77);
+    }
+    return hanSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getHANSegment_Todo()
+  {
+        return (EAttribute)getHANSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getHYNSegment()
+  {
+    if (hynSegmentEClass == null)
+    {
+      hynSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(78);
+    }
+    return hynSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getHYNSegment_Todo()
+  {
+        return (EAttribute)getHYNSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getICDSegment()
+  {
+    if (icdSegmentEClass == null)
+    {
+      icdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(79);
+    }
+    return icdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getICDSegment_Todo()
+  {
+        return (EAttribute)getICDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getIDESegment()
+  {
+    if (ideSegmentEClass == null)
+    {
+      ideSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(80);
+    }
+    return ideSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getIDESegment_Todo()
+  {
+        return (EAttribute)getIDESegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getIFDSegment()
+  {
+    if (ifdSegmentEClass == null)
+    {
+      ifdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(81);
+    }
+    return ifdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getIFDSegment_Todo()
+  {
+        return (EAttribute)getIFDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getIHCSegment()
+  {
+    if (ihcSegmentEClass == null)
+    {
+      ihcSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(82);
+    }
+    return ihcSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getIHCSegment_Todo()
+  {
+        return (EAttribute)getIHCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getIMDSegment()
+  {
+    if (imdSegmentEClass == null)
+    {
+      imdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(83);
+    }
+    return imdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getIMDSegment_Todo()
+  {
+        return (EAttribute)getIMDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getINDSegment()
+  {
+    if (indSegmentEClass == null)
+    {
+      indSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(84);
+    }
+    return indSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getINDSegment_Todo()
+  {
+        return (EAttribute)getINDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getINPSegment()
+  {
+    if (inpSegmentEClass == null)
+    {
+      inpSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(85);
+    }
+    return inpSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getINPSegment_Todo()
+  {
+        return (EAttribute)getINPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getINVSegment()
+  {
+    if (invSegmentEClass == null)
+    {
+      invSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(86);
+    }
+    return invSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getINVSegment_Todo()
+  {
+        return (EAttribute)getINVSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getIRQSegment()
+  {
+    if (irqSegmentEClass == null)
+    {
+      irqSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(87);
+    }
+    return irqSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getIRQSegment_Todo()
+  {
+        return (EAttribute)getIRQSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getLANSegment()
+  {
+    if (lanSegmentEClass == null)
+    {
+      lanSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(88);
+    }
+    return lanSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLANSegment_Todo()
+  {
+        return (EAttribute)getLANSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getLOCSegment()
+  {
+    if (locSegmentEClass == null)
+    {
+      locSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(89);
+    }
+    return locSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLOCSegment_Todo()
+  {
+        return (EAttribute)getLOCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMEASegment()
+  {
+    if (meaSegmentEClass == null)
+    {
+      meaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(90);
+    }
+    return meaSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMEASegment_Todo()
+  {
+        return (EAttribute)getMEASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMEMSegment()
+  {
+    if (memSegmentEClass == null)
+    {
+      memSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(91);
+    }
+    return memSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMEMSegment_Todo()
+  {
+        return (EAttribute)getMEMSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMKSSegment()
+  {
+    if (mksSegmentEClass == null)
+    {
+      mksSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(92);
+    }
+    return mksSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMKSSegment_Todo()
+  {
+        return (EAttribute)getMKSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getNATSegment()
+  {
+    if (natSegmentEClass == null)
+    {
+      natSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(93);
+    }
+    return natSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getNATSegment_Todo()
+  {
+        return (EAttribute)getNATSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPACSegment()
+  {
+    if (pacSegmentEClass == null)
+    {
+      pacSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(94);
+    }
+    return pacSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPACSegment_Todo()
+  {
+        return (EAttribute)getPACSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPAISegment()
+  {
+    if (paiSegmentEClass == null)
+    {
+      paiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(95);
+    }
+    return paiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPAISegment_Todo()
+  {
+        return (EAttribute)getPAISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPASSegment()
+  {
+    if (pasSegmentEClass == null)
+    {
+      pasSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(96);
+    }
+    return pasSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPASSegment_Todo()
+  {
+        return (EAttribute)getPASSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPCCSegment()
+  {
+    if (pccSegmentEClass == null)
+    {
+      pccSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(97);
+    }
+    return pccSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPCCSegment_Todo()
+  {
+        return (EAttribute)getPCCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPCDSegment()
+  {
+    if (pcdSegmentEClass == null)
+    {
+      pcdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(98);
+    }
+    return pcdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPCDSegment_Todo()
+  {
+        return (EAttribute)getPCDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPERSegment()
+  {
+    if (perSegmentEClass == null)
+    {
+      perSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(99);
+    }
+    return perSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPERSegment_Todo()
+  {
+        return (EAttribute)getPERSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPGISegment()
+  {
+    if (pgiSegmentEClass == null)
+    {
+      pgiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(100);
+    }
+    return pgiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPGISegment_Todo()
+  {
+        return (EAttribute)getPGISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPIASegment()
+  {
+    if (piaSegmentEClass == null)
+    {
+      piaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(101);
+    }
+    return piaSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPIASegment_Todo()
+  {
+        return (EAttribute)getPIASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPNASegment()
+  {
+    if (pnaSegmentEClass == null)
+    {
+      pnaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(102);
+    }
+    return pnaSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPNASegment_Todo()
+  {
+        return (EAttribute)getPNASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPRCSegment()
+  {
+    if (prcSegmentEClass == null)
+    {
+      prcSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(103);
+    }
+    return prcSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPRCSegment_Todo()
+  {
+        return (EAttribute)getPRCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPRVSegment()
+  {
+    if (prvSegmentEClass == null)
+    {
+      prvSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(104);
+    }
+    return prvSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPRVSegment_Todo()
+  {
+        return (EAttribute)getPRVSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPSDSegment()
+  {
+    if (psdSegmentEClass == null)
+    {
+      psdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(105);
+    }
+    return psdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPSDSegment_Todo()
+  {
+        return (EAttribute)getPSDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPTYSegment()
+  {
+    if (ptySegmentEClass == null)
+    {
+      ptySegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(106);
+    }
+    return ptySegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPTYSegment_Todo()
+  {
+        return (EAttribute)getPTYSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPYTSegment()
+  {
+    if (pytSegmentEClass == null)
+    {
+      pytSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(107);
+    }
+    return pytSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPYTSegment_Todo()
+  {
+        return (EAttribute)getPYTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getQRSSegment()
+  {
+    if (qrsSegmentEClass == null)
+    {
+      qrsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(108);
+    }
+    return qrsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getQRSSegment_Todo()
+  {
+        return (EAttribute)getQRSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getQUASegment()
+  {
+    if (quaSegmentEClass == null)
+    {
+      quaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(109);
+    }
+    return quaSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getQUASegment_Todo()
+  {
+        return (EAttribute)getQUASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getQVRSegment()
+  {
+    if (qvrSegmentEClass == null)
+    {
+      qvrSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(110);
+    }
+    return qvrSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getQVRSegment_Todo()
+  {
+        return (EAttribute)getQVRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRCSSegment()
+  {
+    if (rcsSegmentEClass == null)
+    {
+      rcsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(111);
+    }
+    return rcsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRCSSegment_Todo()
+  {
+        return (EAttribute)getRCSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRELSegment()
+  {
+    if (relSegmentEClass == null)
+    {
+      relSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(112);
+    }
+    return relSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRELSegment_Todo()
+  {
+        return (EAttribute)getRELSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRJLSegment()
+  {
+    if (rjlSegmentEClass == null)
+    {
+      rjlSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(113);
+    }
+    return rjlSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRJLSegment_Todo()
+  {
+        return (EAttribute)getRJLSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRNGSegment()
+  {
+    if (rngSegmentEClass == null)
+    {
+      rngSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(114);
+    }
+    return rngSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRNGSegment_Todo()
+  {
+        return (EAttribute)getRNGSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRODSegment()
+  {
+    if (rodSegmentEClass == null)
+    {
+      rodSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(115);
+    }
+    return rodSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRODSegment_Todo()
+  {
+        return (EAttribute)getRODSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRSLSegment()
+  {
+    if (rslSegmentEClass == null)
+    {
+      rslSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(116);
+    }
+    return rslSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRSLSegment_Todo()
+  {
+        return (EAttribute)getRSLSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRTESegment()
+  {
+    if (rteSegmentEClass == null)
+    {
+      rteSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(117);
+    }
+    return rteSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRTESegment_Todo()
+  {
+        return (EAttribute)getRTESegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSALSegment()
+  {
+    if (salSegmentEClass == null)
+    {
+      salSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(118);
+    }
+    return salSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSALSegment_Todo()
+  {
+        return (EAttribute)getSALSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSCCSegment()
+  {
+    if (sccSegmentEClass == null)
+    {
+      sccSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(119);
+    }
+    return sccSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSCCSegment_Todo()
+  {
+        return (EAttribute)getSCCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSCDSegment()
+  {
+    if (scdSegmentEClass == null)
+    {
+      scdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(120);
+    }
+    return scdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSCDSegment_Todo()
+  {
+        return (EAttribute)getSCDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSEGSegment()
+  {
+    if (segSegmentEClass == null)
+    {
+      segSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(121);
+    }
+    return segSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSEGSegment_Todo()
+  {
+        return (EAttribute)getSEGSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSELSegment()
+  {
+    if (selSegmentEClass == null)
+    {
+      selSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(122);
+    }
+    return selSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSELSegment_Todo()
+  {
+        return (EAttribute)getSELSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSEQSegment()
+  {
+    if (seqSegmentEClass == null)
+    {
+      seqSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(123);
+    }
+    return seqSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSEQSegment_Todo()
+  {
+        return (EAttribute)getSEQSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSFISegment()
+  {
+    if (sfiSegmentEClass == null)
+    {
+      sfiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(124);
+    }
+    return sfiSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSFISegment_Todo()
+  {
+        return (EAttribute)getSFISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSGPSegment()
+  {
+    if (sgpSegmentEClass == null)
+    {
+      sgpSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(125);
+    }
+    return sgpSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSGPSegment_Todo()
+  {
+        return (EAttribute)getSGPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSGUSegment()
+  {
+    if (sguSegmentEClass == null)
+    {
+      sguSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(126);
+    }
+    return sguSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSGUSegment_Todo()
+  {
+        return (EAttribute)getSGUSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSPRSegment()
+  {
+    if (sprSegmentEClass == null)
+    {
+      sprSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(127);
+    }
+    return sprSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSPRSegment_Todo()
+  {
+        return (EAttribute)getSPRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSPSSegment()
+  {
+    if (spsSegmentEClass == null)
+    {
+      spsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(128);
+    }
+    return spsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSPSSegment_Todo()
+  {
+        return (EAttribute)getSPSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSTASegment()
+  {
+    if (staSegmentEClass == null)
+    {
+      staSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(129);
+    }
+    return staSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSTASegment_Todo()
+  {
+        return (EAttribute)getSTASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSTCSegment()
+  {
+    if (stcSegmentEClass == null)
+    {
+      stcSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(130);
+    }
+    return stcSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSTCSegment_Todo()
+  {
+        return (EAttribute)getSTCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSTGSegment()
+  {
+    if (stgSegmentEClass == null)
+    {
+      stgSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(131);
+    }
+    return stgSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSTGSegment_Todo()
+  {
+        return (EAttribute)getSTGSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSTSSegment()
+  {
+    if (stsSegmentEClass == null)
+    {
+      stsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(132);
+    }
+    return stsSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSTSSegment_Todo()
+  {
+        return (EAttribute)getSTSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTCCSegment()
+  {
+    if (tccSegmentEClass == null)
+    {
+      tccSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(133);
+    }
+    return tccSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTCCSegment_Todo()
+  {
+        return (EAttribute)getTCCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTDTSegment()
+  {
+    if (tdtSegmentEClass == null)
+    {
+      tdtSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(134);
+    }
+    return tdtSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTDTSegment_Todo()
+  {
+        return (EAttribute)getTDTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTEMSegment()
+  {
+    if (temSegmentEClass == null)
+    {
+      temSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(135);
+    }
+    return temSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTEMSegment_Todo()
+  {
+        return (EAttribute)getTEMSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTMDSegment()
+  {
+    if (tmdSegmentEClass == null)
+    {
+      tmdSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(136);
+    }
+    return tmdSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTMDSegment_Todo()
+  {
+        return (EAttribute)getTMDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTMPSegment()
+  {
+    if (tmpSegmentEClass == null)
+    {
+      tmpSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(137);
+    }
+    return tmpSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTMPSegment_Todo()
+  {
+        return (EAttribute)getTMPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTODSegment()
+  {
+    if (todSegmentEClass == null)
+    {
+      todSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(138);
+    }
+    return todSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTODSegment_Todo()
+  {
+        return (EAttribute)getTODSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTPLSegment()
+  {
+    if (tplSegmentEClass == null)
+    {
+      tplSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(139);
+    }
+    return tplSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTPLSegment_Todo()
+  {
+        return (EAttribute)getTPLSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTRUSegment()
+  {
+    if (truSegmentEClass == null)
+    {
+      truSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(140);
+    }
+    return truSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTRUSegment_Todo()
+  {
+        return (EAttribute)getTRUSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTSRSegment()
+  {
+    if (tsrSegmentEClass == null)
+    {
+      tsrSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(141);
+    }
+    return tsrSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTSRSegment_Todo()
+  {
+        return (EAttribute)getTSRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getVLISegment()
+  {
+    if (vliSegmentEClass == null)
+    {
+      vliSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(142);
+    }
+    return vliSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getVLISegment_Todo()
+  {
+        return (EAttribute)getVLISegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -797,6 +5326,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getMSGSegment()
   {
+    if (msgSegmentEClass == null)
+    {
+      msgSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(143);
+    }
     return msgSegmentEClass;
   }
 
@@ -808,7 +5341,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getMSGSegment_MessageIdentifier()
   {
-    return (EReference)msgSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getMSGSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -819,7 +5352,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMSGSegment_DesignatedClassCode()
   {
-    return (EAttribute)msgSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getMSGSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -830,7 +5363,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMSGSegment_MaintenanceOperationCode()
   {
-    return (EAttribute)msgSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getMSGSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -841,7 +5374,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getMSGSegment_Relationship()
   {
-    return (EReference)msgSegmentEClass.getEStructuralFeatures().get(3);
+        return (EReference)getMSGSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -852,6 +5385,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getORGSegment()
   {
+    if (orgSegmentEClass == null)
+    {
+      orgSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(144);
+    }
     return orgSegmentEClass;
   }
 
@@ -863,7 +5400,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getORGSegment_SystemDetail1()
   {
-    return (EReference)orgSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getORGSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -874,7 +5411,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getORGSegment_OriginatorIdentification()
   {
-    return (EReference)orgSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getORGSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -885,7 +5422,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getORGSegment_Location()
   {
-    return (EReference)orgSegmentEClass.getEStructuralFeatures().get(2);
+        return (EReference)getORGSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -896,7 +5433,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getORGSegment_SystemDetail2()
   {
-    return (EReference)orgSegmentEClass.getEStructuralFeatures().get(3);
+        return (EReference)getORGSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -907,7 +5444,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getORGSegment_OriginatorTypeCode()
   {
-    return (EAttribute)orgSegmentEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getORGSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -918,7 +5455,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getORGSegment_Originator()
   {
-    return (EReference)orgSegmentEClass.getEStructuralFeatures().get(5);
+        return (EReference)getORGSegment().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -929,7 +5466,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getORGSegment_OriginatorsAuthorityRequestCode()
   {
-    return (EAttribute)orgSegmentEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)getORGSegment().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -940,7 +5477,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getORGSegment_CommunicationNumber()
   {
-    return (EAttribute)orgSegmentEClass.getEStructuralFeatures().get(7);
+        return (EAttribute)getORGSegment().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -951,7 +5488,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getORGSegment_PartyIdIdentification()
   {
-    return (EAttribute)orgSegmentEClass.getEStructuralFeatures().get(8);
+        return (EAttribute)getORGSegment().getEStructuralFeatures().get(8);
   }
 
   /**
@@ -962,6 +5499,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPOCSegment()
   {
+    if (pocSegmentEClass == null)
+    {
+      pocSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(145);
+    }
     return pocSegmentEClass;
   }
 
@@ -973,7 +5514,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPOCSegment_Location()
   {
-    return (EAttribute)pocSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getPOCSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -984,7 +5525,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPOCSegment_DepartureDate()
   {
-    return (EAttribute)pocSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getPOCSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -995,7 +5536,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPOCSegment_DepartureTime()
   {
-    return (EAttribute)pocSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getPOCSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1006,6 +5547,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getODISegment()
   {
+    if (odiSegmentEClass == null)
+    {
+      odiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(146);
+    }
     return odiSegmentEClass;
   }
 
@@ -1017,7 +5562,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getODISegment_Origin()
   {
-    return (EAttribute)odiSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getODISegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1028,7 +5573,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getODISegment_Destination()
   {
-    return (EAttribute)odiSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getODISegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1039,6 +5584,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUCISegment()
   {
+    if (uciSegmentEClass == null)
+    {
+      uciSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(147);
+    }
     return uciSegmentEClass;
   }
 
@@ -1050,7 +5599,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUCISegment_InterchangeControlReference()
   {
-    return (EAttribute)uciSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getUCISegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1061,7 +5610,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUCISegment_InterchangeSender()
   {
-    return (EAttribute)uciSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getUCISegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1072,7 +5621,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUCISegment_InterchangeRecipient()
   {
-    return (EAttribute)uciSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getUCISegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1083,7 +5632,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUCISegment_Action()
   {
-    return (EAttribute)uciSegmentEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getUCISegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1094,7 +5643,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUCISegment_SyntaxErrorCode()
   {
-    return (EAttribute)uciSegmentEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getUCISegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1105,7 +5654,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUCISegment_SegmentTagCode()
   {
-    return (EAttribute)uciSegmentEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getUCISegment().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1116,6 +5665,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPDISegment()
   {
+    if (pdiSegmentEClass == null)
+    {
+      pdiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(148);
+    }
     return pdiSegmentEClass;
   }
 
@@ -1127,7 +5680,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPDISegment_ProductDetailsQualifier()
   {
-    return (EAttribute)pdiSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getPDISegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1138,7 +5691,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getPDISegment_Products()
   {
-    return (EReference)pdiSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getPDISegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1149,6 +5702,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getTVLSegment()
   {
+    if (tvlSegmentEClass == null)
+    {
+      tvlSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(149);
+    }
     return tvlSegmentEClass;
   }
 
@@ -1160,7 +5717,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getTVLSegment_DateAndTime()
   {
-    return (EReference)tvlSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getTVLSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1171,7 +5728,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_OriginCode()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1182,7 +5739,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_DestinationCode()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1193,7 +5750,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_CarrierId()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1204,7 +5761,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_ProductId()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1215,7 +5772,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_CharacteristicId()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1226,7 +5783,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_ProductIdCharacteristic()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1237,7 +5794,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_DescriptionIds()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(7);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1248,7 +5805,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_ProductType()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(8);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(8);
   }
 
   /**
@@ -1259,7 +5816,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_LineItemNumber()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(9);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(9);
   }
 
   /**
@@ -1270,7 +5827,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTVLSegment_ProcessingIndicatorCode()
   {
-    return (EAttribute)tvlSegmentEClass.getEStructuralFeatures().get(10);
+        return (EAttribute)getTVLSegment().getEStructuralFeatures().get(10);
   }
 
   /**
@@ -1281,6 +5838,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getRPISegment()
   {
+    if (rpiSegmentEClass == null)
+    {
+      rpiSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(150);
+    }
     return rpiSegmentEClass;
   }
 
@@ -1292,7 +5853,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRPISegment_NumberOfPax()
   {
-    return (EAttribute)rpiSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getRPISegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1303,7 +5864,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRPISegment_Status()
   {
-    return (EAttribute)rpiSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getRPISegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1314,6 +5875,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getMOASegment()
   {
+    if (moaSegmentEClass == null)
+    {
+      moaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(151);
+    }
     return moaSegmentEClass;
   }
 
@@ -1325,7 +5890,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMOASegment_MonetaryAmountTypeCodeQualifier()
   {
-    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getMOASegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1336,7 +5901,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMOASegment_MonetaryAmount()
   {
-    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getMOASegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1347,7 +5912,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMOASegment_CurrencyIdentificationCode()
   {
-    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getMOASegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1358,7 +5923,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMOASegment_CurrencyTypeCodeQualifier()
   {
-    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getMOASegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1369,7 +5934,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMOASegment_StatusDescriptionCode()
   {
-    return (EAttribute)moaSegmentEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getMOASegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1380,6 +5945,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getLINSegment()
   {
+    if (linSegmentEClass == null)
+    {
+      linSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(152);
+    }
     return linSegmentEClass;
   }
 
@@ -1391,7 +5960,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getLINSegment_LineItemIdentifier()
   {
-    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getLINSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1402,7 +5971,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getLINSegment_ActionRequest()
   {
-    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getLINSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1413,7 +5982,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getLINSegment_ItemNumberIdentification()
   {
-    return (EReference)linSegmentEClass.getEStructuralFeatures().get(2);
+        return (EReference)getLINSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1424,7 +5993,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getLINSegment_SublineInformation()
   {
-    return (EReference)linSegmentEClass.getEStructuralFeatures().get(3);
+        return (EReference)getLINSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1435,7 +6004,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getLINSegment_ConfigurationLevelNumber()
   {
-    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getLINSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1446,7 +6015,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getLINSegment_ConfigurationOperationCode()
   {
-    return (EAttribute)linSegmentEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getLINSegment().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1457,6 +6026,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPRISegment()
   {
+    if (priSegmentEClass == null)
+    {
+      priSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(153);
+    }
     return priSegmentEClass;
   }
 
@@ -1468,7 +6041,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getPRISegment_Sub()
   {
-    return (EReference)priSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getPRISegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1479,6 +6052,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getQTYSegment()
   {
+    if (qtySegmentEClass == null)
+    {
+      qtySegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(154);
+    }
     return qtySegmentEClass;
   }
 
@@ -1490,7 +6067,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getQTYSegment_QuantityDetails()
   {
-    return (EReference)qtySegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getQTYSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1501,6 +6078,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getCUXSegment()
   {
+    if (cuxSegmentEClass == null)
+    {
+      cuxSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(155);
+    }
     return cuxSegmentEClass;
   }
 
@@ -1512,7 +6093,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getCUXSegment_CurrencyDetails1()
   {
-    return (EReference)cuxSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getCUXSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1523,7 +6104,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getCUXSegment_CurrencyDetails2()
   {
-    return (EReference)cuxSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getCUXSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1534,7 +6115,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCUXSegment_CurrencyExchangeRate()
   {
-    return (EAttribute)cuxSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getCUXSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1545,7 +6126,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCUXSegment_ExchangeRateCurrencyMarketIdentifier()
   {
-    return (EAttribute)cuxSegmentEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getCUXSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1556,6 +6137,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getTAXSegment()
   {
+    if (taxSegmentEClass == null)
+    {
+      taxSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(156);
+    }
     return taxSegmentEClass;
   }
 
@@ -1567,7 +6152,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTAXSegment_TaxFunctionCodeQualifier()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getTAXSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1578,7 +6163,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getTAXSegment_TaxType()
   {
-    return (EReference)taxSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getTAXSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1589,7 +6174,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getTAXSegment_TaxAccountDetail()
   {
-    return (EReference)taxSegmentEClass.getEStructuralFeatures().get(2);
+        return (EReference)getTAXSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1600,7 +6185,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTAXSegment_TaxAssessmentBasicValue()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getTAXSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1611,7 +6196,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getTAXSegment_TaxDetail()
   {
-    return (EReference)taxSegmentEClass.getEStructuralFeatures().get(4);
+        return (EReference)getTAXSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1622,7 +6207,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTAXSegment_TaxCategoryCode()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getTAXSegment().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1633,7 +6218,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTAXSegment_PartyTaxIdentifier()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)getTAXSegment().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1644,7 +6229,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTAXSegment_CalculationSequenceCode()
   {
-    return (EAttribute)taxSegmentEClass.getEStructuralFeatures().get(7);
+        return (EAttribute)getTAXSegment().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1655,6 +6240,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getRFFSegment()
   {
+    if (rffSegmentEClass == null)
+    {
+      rffSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(157);
+    }
     return rffSegmentEClass;
   }
 
@@ -1666,7 +6255,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRFFSegment_Rff1()
   {
-    return (EAttribute)rffSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getRFFSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1677,7 +6266,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRFFSegment_Rff2()
   {
-    return (EAttribute)rffSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getRFFSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1688,6 +6277,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getNADSegment()
   {
+    if (nadSegmentEClass == null)
+    {
+      nadSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(158);
+    }
     return nadSegmentEClass;
   }
 
@@ -1699,7 +6292,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getNADSegment_PartyFunctionCodeQualifier()
   {
-    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getNADSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1710,7 +6303,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getNADSegment_PartyIdentificationDetails()
   {
-    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getNADSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1721,7 +6314,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getNADSegment_NameAndAddress()
   {
-    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(2);
+        return (EReference)getNADSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1732,7 +6325,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getNADSegment_PartyName()
   {
-    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(3);
+        return (EReference)getNADSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1743,7 +6336,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getNADSegment_Street()
   {
-    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(4);
+        return (EReference)getNADSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1754,7 +6347,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getNADSegment_CityName()
   {
-    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getNADSegment().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1765,7 +6358,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getNADSegment_CountrySubEntityDetails()
   {
-    return (EReference)nadSegmentEClass.getEStructuralFeatures().get(6);
+        return (EReference)getNADSegment().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1776,7 +6369,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getNADSegment_PostalIdentificationCode()
   {
-    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(7);
+        return (EAttribute)getNADSegment().getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1787,7 +6380,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getNADSegment_CountryNameCode()
   {
-    return (EAttribute)nadSegmentEClass.getEStructuralFeatures().get(8);
+        return (EAttribute)getNADSegment().getEStructuralFeatures().get(8);
   }
 
   /**
@@ -1798,6 +6391,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getDTMSegment()
   {
+    if (dtmSegmentEClass == null)
+    {
+      dtmSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(159);
+    }
     return dtmSegmentEClass;
   }
 
@@ -1809,7 +6406,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getDTMSegment_DateTimePeriods()
   {
-    return (EReference)dtmSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getDTMSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1820,6 +6417,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getBGMSegment()
   {
+    if (bgmSegmentEClass == null)
+    {
+      bgmSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(160);
+    }
     return bgmSegmentEClass;
   }
 
@@ -1831,7 +6432,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getBGMSegment_DocumentMessageName()
   {
-    return (EReference)bgmSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getBGMSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1842,7 +6443,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getBGMSegment_DocumentMessageIdentification()
   {
-    return (EReference)bgmSegmentEClass.getEStructuralFeatures().get(1);
+        return (EReference)getBGMSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1853,7 +6454,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getBGMSegment_MessageFunctionCode()
   {
-    return (EAttribute)bgmSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getBGMSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1864,7 +6465,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getBGMSegment_ResponseTypeCode()
   {
-    return (EAttribute)bgmSegmentEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getBGMSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1875,6 +6476,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPATSegment()
   {
+    if (patSegmentEClass == null)
+    {
+      patSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(161);
+    }
     return patSegmentEClass;
   }
 
@@ -1886,7 +6491,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPATSegment_SegmentCount()
   {
-    return (EAttribute)patSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getPATSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1897,6 +6502,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getFTXSegment()
   {
+    if (ftxSegmentEClass == null)
+    {
+      ftxSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(162);
+    }
     return ftxSegmentEClass;
   }
 
@@ -1908,7 +6517,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getFTXSegment_Todo1()
   {
-    return (EAttribute)ftxSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getFTXSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1919,7 +6528,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getFTXSegment_Todo2()
   {
-    return (EAttribute)ftxSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getFTXSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1930,7 +6539,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getFTXSegment_Todo3()
   {
-    return (EAttribute)ftxSegmentEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getFTXSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1941,7 +6550,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getFTXSegment_Todo4()
   {
-    return (EAttribute)ftxSegmentEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getFTXSegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1952,6 +6561,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getERCSegment()
   {
+    if (ercSegmentEClass == null)
+    {
+      ercSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(163);
+    }
     return ercSegmentEClass;
   }
 
@@ -1963,7 +6576,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EReference getERCSegment_ApplicationErrorDetails()
   {
-    return (EReference)ercSegmentEClass.getEStructuralFeatures().get(0);
+        return (EReference)getERCSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1974,6 +6587,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getCNTSegment()
   {
+    if (cntSegmentEClass == null)
+    {
+      cntSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(164);
+    }
     return cntSegmentEClass;
   }
 
@@ -1985,7 +6602,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCNTSegment_Todo1()
   {
-    return (EAttribute)cntSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getCNTSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1996,7 +6613,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCNTSegment_Todo2()
   {
-    return (EAttribute)cntSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getCNTSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2007,6 +6624,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getCTASegment()
   {
+    if (ctaSegmentEClass == null)
+    {
+      ctaSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(165);
+    }
     return ctaSegmentEClass;
   }
 
@@ -2018,7 +6639,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCTASegment_Todo()
   {
-    return (EAttribute)ctaSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getCTASegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2029,6 +6650,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPCISegment()
   {
+    if (pciSegmentEClass == null)
+    {
+      pciSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(166);
+    }
     return pciSegmentEClass;
   }
 
@@ -2040,7 +6665,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPCISegment_Todo()
   {
-    return (EAttribute)pciSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getPCISegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2051,6 +6676,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUNSSegment()
   {
+    if (unsSegmentEClass == null)
+    {
+      unsSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(167);
+    }
     return unsSegmentEClass;
   }
 
@@ -2062,7 +6691,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNSSegment_SegmentCount()
   {
-    return (EAttribute)unsSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getUNSSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2073,6 +6702,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUNTSegment()
   {
+    if (untSegmentEClass == null)
+    {
+      untSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(168);
+    }
     return untSegmentEClass;
   }
 
@@ -2084,7 +6717,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNTSegment_SegmentCount()
   {
-    return (EAttribute)untSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getUNTSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2095,7 +6728,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNTSegment_MessageReferenceNumber()
   {
-    return (EAttribute)untSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getUNTSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2106,6 +6739,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUNZSegment()
   {
+    if (unzSegmentEClass == null)
+    {
+      unzSegmentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(169);
+    }
     return unzSegmentEClass;
   }
 
@@ -2117,7 +6754,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNZSegment_InterchangeControlCount()
   {
-    return (EAttribute)unzSegmentEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getUNZSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2128,7 +6765,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNZSegment_InterchangeControlRef()
   {
-    return (EAttribute)unzSegmentEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getUNZSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2139,6 +6776,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getAbstractEdiFunction()
   {
+    if (abstractEdiFunctionEClass == null)
+    {
+      abstractEdiFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(170);
+    }
     return abstractEdiFunctionEClass;
   }
 
@@ -2150,6 +6791,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getUNBHeader()
   {
+    if (unbHeaderEClass == null)
+    {
+      unbHeaderEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(171);
+    }
     return unbHeaderEClass;
   }
 
@@ -2161,7 +6806,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBHeader_Syntax()
   {
-    return (EAttribute)unbHeaderEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getUNBHeader().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2172,7 +6817,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getUNBHeader_Num1()
   {
-    return (EAttribute)unbHeaderEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getUNBHeader().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2183,6 +6828,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPriceInformation()
   {
+    if (priceInformationEClass == null)
+    {
+      priceInformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(172);
+    }
     return priceInformationEClass;
   }
 
@@ -2194,7 +6843,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPriceInformation_PriceCodeQualifier()
   {
-    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getPriceInformation().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2205,7 +6854,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPriceInformation_PriceAmount()
   {
-    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getPriceInformation().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2216,7 +6865,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPriceInformation_PriceTypeCode()
   {
-    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getPriceInformation().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2227,7 +6876,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPriceInformation_PriceSpecificationCode()
   {
-    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getPriceInformation().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2238,7 +6887,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPriceInformation_UnitPriceBasisValue()
   {
-    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getPriceInformation().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2249,7 +6898,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPriceInformation_MeasurementUnitCode()
   {
-    return (EAttribute)priceInformationEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getPriceInformation().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -2260,6 +6909,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getMessageBodyFunction()
   {
+    if (messageBodyFunctionEClass == null)
+    {
+      messageBodyFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(173);
+    }
     return messageBodyFunctionEClass;
   }
 
@@ -2271,7 +6924,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageBodyFunction_Type()
   {
-    return (EAttribute)messageBodyFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getMessageBodyFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2282,7 +6935,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageBodyFunction_Version()
   {
-    return (EAttribute)messageBodyFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getMessageBodyFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2293,7 +6946,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageBodyFunction_Release()
   {
-    return (EAttribute)messageBodyFunctionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getMessageBodyFunction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2304,7 +6957,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageBodyFunction_ControllingAgency()
   {
-    return (EAttribute)messageBodyFunctionEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getMessageBodyFunction().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2315,7 +6968,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageBodyFunction_More()
   {
-    return (EAttribute)messageBodyFunctionEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getMessageBodyFunction().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2326,6 +6979,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getMessageIndentifier()
   {
+    if (messageIndentifierEClass == null)
+    {
+      messageIndentifierEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(174);
+    }
     return messageIndentifierEClass;
   }
 
@@ -2337,7 +6994,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageIndentifier_MessageTypeCode()
   {
-    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getMessageIndentifier().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2348,7 +7005,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageIndentifier_VersionIdentifier()
   {
-    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getMessageIndentifier().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2359,7 +7016,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageIndentifier_ReleaseIdentifier()
   {
-    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getMessageIndentifier().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2370,7 +7027,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageIndentifier_ControllingAgencyIdentifier()
   {
-    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getMessageIndentifier().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2381,7 +7038,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageIndentifier_MessageImplementationIdentificationCode()
   {
-    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getMessageIndentifier().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2392,7 +7049,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageIndentifier_RevisionIdentifier()
   {
-    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getMessageIndentifier().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -2403,7 +7060,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getMessageIndentifier_DocumentStatusCode()
   {
-    return (EAttribute)messageIndentifierEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)getMessageIndentifier().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -2414,6 +7071,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getRelationship()
   {
+    if (relationshipEClass == null)
+    {
+      relationshipEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(175);
+    }
     return relationshipEClass;
   }
 
@@ -2425,7 +7086,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRelationship_RelationshipDescriptionCode()
   {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getRelationship().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2436,7 +7097,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRelationship_CodeListIdentificationCode()
   {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getRelationship().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2447,7 +7108,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRelationship_CodeListResponsibleAgency()
   {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getRelationship().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2458,7 +7119,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getRelationship_RelationshipDescription()
   {
-    return (EAttribute)relationshipEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getRelationship().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2469,6 +7130,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getProductFunction()
   {
+    if (productFunctionEClass == null)
+    {
+      productFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(176);
+    }
     return productFunctionEClass;
   }
 
@@ -2480,7 +7145,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getProductFunction_BookingClass()
   {
-    return (EAttribute)productFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getProductFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2491,7 +7156,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getProductFunction_Avail()
   {
-    return (EAttribute)productFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getProductFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2502,6 +7167,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getItemNumberIdentification()
   {
+    if (itemNumberIdentificationEClass == null)
+    {
+      itemNumberIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(177);
+    }
     return itemNumberIdentificationEClass;
   }
 
@@ -2513,7 +7182,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getItemNumberIdentification_ItemIdentifier()
   {
-    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getItemNumberIdentification().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2524,7 +7193,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getItemNumberIdentification_ItemTypeIdentificationCode()
   {
-    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getItemNumberIdentification().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2535,7 +7204,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getItemNumberIdentification_CodeListIdentificationCode()
   {
-    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getItemNumberIdentification().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2546,7 +7215,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getItemNumberIdentification_CodeListResponsibleAgencyCode()
   {
-    return (EAttribute)itemNumberIdentificationEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getItemNumberIdentification().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2557,6 +7226,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getSublineInformation()
   {
+    if (sublineInformationEClass == null)
+    {
+      sublineInformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(178);
+    }
     return sublineInformationEClass;
   }
 
@@ -2568,7 +7241,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getSublineInformation_SublineIndicatorCode()
   {
-    return (EAttribute)sublineInformationEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getSublineInformation().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2579,7 +7252,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getSublineInformation_LineItemIdentifier()
   {
-    return (EAttribute)sublineInformationEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getSublineInformation().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2590,6 +7263,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getQuantityDetail()
   {
+    if (quantityDetailEClass == null)
+    {
+      quantityDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(179);
+    }
     return quantityDetailEClass;
   }
 
@@ -2601,7 +7278,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getQuantityDetail_QuantityTypeCodeQualifier()
   {
-    return (EAttribute)quantityDetailEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getQuantityDetail().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2612,7 +7289,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getQuantityDetail_Quantity()
   {
-    return (EAttribute)quantityDetailEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getQuantityDetail().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2623,7 +7300,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getQuantityDetail_MeasurementUnitCode()
   {
-    return (EAttribute)quantityDetailEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getQuantityDetail().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2634,6 +7311,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getStreet()
   {
+    if (streetEClass == null)
+    {
+      streetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(180);
+    }
     return streetEClass;
   }
 
@@ -2645,7 +7326,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getStreet_StreetAndNumber()
   {
-    return (EAttribute)streetEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getStreet().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2656,6 +7337,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getCountrySubEntityDetail()
   {
+    if (countrySubEntityDetailEClass == null)
+    {
+      countrySubEntityDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(181);
+    }
     return countrySubEntityDetailEClass;
   }
 
@@ -2667,7 +7352,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCountrySubEntityDetail_CountrySubEntityNameCode()
   {
-    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getCountrySubEntityDetail().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2678,7 +7363,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCountrySubEntityDetail_CodeListIdentificationCode()
   {
-    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getCountrySubEntityDetail().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2689,7 +7374,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCountrySubEntityDetail_CodeListResponsibleAgencyCode()
   {
-    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getCountrySubEntityDetail().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2700,7 +7385,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCountrySubEntityDetail_CountrySubEntityName()
   {
-    return (EAttribute)countrySubEntityDetailEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getCountrySubEntityDetail().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2711,6 +7396,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPartyName()
   {
+    if (partyNameEClass == null)
+    {
+      partyNameEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(182);
+    }
     return partyNameEClass;
   }
 
@@ -2722,7 +7411,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPartyName_PartyName()
   {
-    return (EAttribute)partyNameEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getPartyName().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2733,6 +7422,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getNameAndAddress()
   {
+    if (nameAndAddressEClass == null)
+    {
+      nameAndAddressEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(183);
+    }
     return nameAndAddressEClass;
   }
 
@@ -2744,7 +7437,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getNameAndAddress_NameAndAddress()
   {
-    return (EAttribute)nameAndAddressEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getNameAndAddress().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2755,6 +7448,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getPartyIdentificationDetail()
   {
+    if (partyIdentificationDetailEClass == null)
+    {
+      partyIdentificationDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(184);
+    }
     return partyIdentificationDetailEClass;
   }
 
@@ -2766,7 +7463,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPartyIdentificationDetail_PartyIdentifier()
   {
-    return (EAttribute)partyIdentificationDetailEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getPartyIdentificationDetail().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2777,7 +7474,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPartyIdentificationDetail_CodeListIdentificationCode()
   {
-    return (EAttribute)partyIdentificationDetailEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getPartyIdentificationDetail().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2788,7 +7485,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getPartyIdentificationDetail_CodeListResponsibleAgencyCode()
   {
-    return (EAttribute)partyIdentificationDetailEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getPartyIdentificationDetail().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2799,6 +7496,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getApplicationErrorDetail()
   {
+    if (applicationErrorDetailEClass == null)
+    {
+      applicationErrorDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(185);
+    }
     return applicationErrorDetailEClass;
   }
 
@@ -2810,7 +7511,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getApplicationErrorDetail_ApplictionErrorCode()
   {
-    return (EAttribute)applicationErrorDetailEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getApplicationErrorDetail().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2821,7 +7522,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getApplicationErrorDetail_CodeListIdentificationCode()
   {
-    return (EAttribute)applicationErrorDetailEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getApplicationErrorDetail().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2832,7 +7533,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getApplicationErrorDetail_CodeListResponsibleAgencyCode()
   {
-    return (EAttribute)applicationErrorDetailEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getApplicationErrorDetail().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2843,6 +7544,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getSystemDetailFunction()
   {
+    if (systemDetailFunctionEClass == null)
+    {
+      systemDetailFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(186);
+    }
     return systemDetailFunctionEClass;
   }
 
@@ -2854,7 +7559,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getSystemDetailFunction_CompanyIdentification()
   {
-    return (EAttribute)systemDetailFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getSystemDetailFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2865,7 +7570,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getSystemDetailFunction_LocationCode()
   {
-    return (EAttribute)systemDetailFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getSystemDetailFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2876,7 +7581,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getSystemDetailFunction_LocationName()
   {
-    return (EAttribute)systemDetailFunctionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getSystemDetailFunction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2887,6 +7592,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getTaxDetail()
   {
+    if (taxDetailEClass == null)
+    {
+      taxDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(187);
+    }
     return taxDetailEClass;
   }
 
@@ -2898,7 +7607,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxDetail_TaxRateDescriptionCode()
   {
-    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getTaxDetail().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2909,7 +7618,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxDetail_CodeListIdentificationCode1()
   {
-    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getTaxDetail().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2920,7 +7629,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxDetail_CodeListResponsibleAgencyCode1()
   {
-    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getTaxDetail().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2931,7 +7640,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxDetail_TaxRateDescription()
   {
-    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getTaxDetail().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2942,7 +7651,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxDetail_TaxRateBasisCode()
   {
-    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(4);
+        return (EAttribute)getTaxDetail().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2953,7 +7662,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxDetail_CodeListIdentificationCode2()
   {
-    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(5);
+        return (EAttribute)getTaxDetail().getEStructuralFeatures().get(5);
   }
 
   /**
@@ -2964,7 +7673,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxDetail_CodeListResponsibleAgencyCode2()
   {
-    return (EAttribute)taxDetailEClass.getEStructuralFeatures().get(6);
+        return (EAttribute)getTaxDetail().getEStructuralFeatures().get(6);
   }
 
   /**
@@ -2975,6 +7684,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getTaxAccountDetail()
   {
+    if (taxAccountDetailEClass == null)
+    {
+      taxAccountDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(188);
+    }
     return taxAccountDetailEClass;
   }
 
@@ -2986,7 +7699,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxAccountDetail_TaxAccountCode()
   {
-    return (EAttribute)taxAccountDetailEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getTaxAccountDetail().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2997,7 +7710,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxAccountDetail_CodeListIdentificationCode()
   {
-    return (EAttribute)taxAccountDetailEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getTaxAccountDetail().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3008,7 +7721,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxAccountDetail_CodeListResponsibleAgencyCode()
   {
-    return (EAttribute)taxAccountDetailEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getTaxAccountDetail().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3019,6 +7732,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getTaxType()
   {
+    if (taxTypeEClass == null)
+    {
+      taxTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(189);
+    }
     return taxTypeEClass;
   }
 
@@ -3030,7 +7747,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxType_TaxTypeNameCode()
   {
-    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getTaxType().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3041,7 +7758,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxType_CodeListIdentificationCode()
   {
-    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getTaxType().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3052,7 +7769,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxType_CodeListResponsibleAgencyCode()
   {
-    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getTaxType().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3063,7 +7780,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getTaxType_TaxTypeName()
   {
-    return (EAttribute)taxTypeEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getTaxType().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3074,6 +7791,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getCurrencyDetail()
   {
+    if (currencyDetailEClass == null)
+    {
+      currencyDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(190);
+    }
     return currencyDetailEClass;
   }
 
@@ -3085,7 +7806,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCurrencyDetail_CurrencyUsageCodeQualifier()
   {
-    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getCurrencyDetail().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3096,7 +7817,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCurrencyDetail_CurrencyIdentificationCode()
   {
-    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getCurrencyDetail().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3107,7 +7828,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCurrencyDetail_CurrencyTypeCodeQualifier()
   {
-    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getCurrencyDetail().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3118,7 +7839,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getCurrencyDetail_CurrencyRateValue()
   {
-    return (EAttribute)currencyDetailEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getCurrencyDetail().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3129,6 +7850,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getDocumentMessageIdentification()
   {
+    if (documentMessageIdentificationEClass == null)
+    {
+      documentMessageIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(191);
+    }
     return documentMessageIdentificationEClass;
   }
 
@@ -3140,7 +7865,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDocumentMessageIdentification_DocumentIdentifier()
   {
-    return (EAttribute)documentMessageIdentificationEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getDocumentMessageIdentification().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3151,7 +7876,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDocumentMessageIdentification_VersionIdentifier()
   {
-    return (EAttribute)documentMessageIdentificationEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getDocumentMessageIdentification().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3162,7 +7887,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDocumentMessageIdentification_RevisionIdentifier()
   {
-    return (EAttribute)documentMessageIdentificationEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getDocumentMessageIdentification().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3173,6 +7898,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getDocumentMessage()
   {
+    if (documentMessageEClass == null)
+    {
+      documentMessageEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(192);
+    }
     return documentMessageEClass;
   }
 
@@ -3184,7 +7913,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDocumentMessage_DocumentNameCode()
   {
-    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getDocumentMessage().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3195,7 +7924,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDocumentMessage_CodeListIdentificationCode()
   {
-    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getDocumentMessage().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3206,7 +7935,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDocumentMessage_CodeListResponsibleAgencyCode()
   {
-    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getDocumentMessage().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3217,7 +7946,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDocumentMessage_DocumentName()
   {
-    return (EAttribute)documentMessageEClass.getEStructuralFeatures().get(3);
+        return (EAttribute)getDocumentMessage().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3228,6 +7957,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getOriginatorFunction()
   {
+    if (originatorFunctionEClass == null)
+    {
+      originatorFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(193);
+    }
     return originatorFunctionEClass;
   }
 
@@ -3239,7 +7972,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getOriginatorFunction_CountryCode()
   {
-    return (EAttribute)originatorFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getOriginatorFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3250,7 +7983,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getOriginatorFunction_CurrencyCode()
   {
-    return (EAttribute)originatorFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getOriginatorFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3261,7 +7994,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getOriginatorFunction_LanguageCode()
   {
-    return (EAttribute)originatorFunctionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getOriginatorFunction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3272,6 +8005,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getOriginatorIdentificationFunction()
   {
+    if (originatorIdentificationFunctionEClass == null)
+    {
+      originatorIdentificationFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(194);
+    }
     return originatorIdentificationFunctionEClass;
   }
 
@@ -3283,7 +8020,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getOriginatorIdentificationFunction_TravelAgentId()
   {
-    return (EAttribute)originatorIdentificationFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getOriginatorIdentificationFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3294,7 +8031,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getOriginatorIdentificationFunction_InHouseId1()
   {
-    return (EAttribute)originatorIdentificationFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getOriginatorIdentificationFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3305,7 +8042,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getOriginatorIdentificationFunction_InHouseId2()
   {
-    return (EAttribute)originatorIdentificationFunctionEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getOriginatorIdentificationFunction().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3316,6 +8053,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getLocationFunction()
   {
+    if (locationFunctionEClass == null)
+    {
+      locationFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(195);
+    }
     return locationFunctionEClass;
   }
 
@@ -3327,7 +8068,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getLocationFunction_LocationId()
   {
-    return (EAttribute)locationFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getLocationFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3338,7 +8079,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getLocationFunction_LocationName()
   {
-    return (EAttribute)locationFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getLocationFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3349,6 +8090,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getInterchangerFunction()
   {
+    if (interchangerFunctionEClass == null)
+    {
+      interchangerFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(196);
+    }
     return interchangerFunctionEClass;
   }
 
@@ -3360,7 +8105,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getInterchangerFunction_Interchange()
   {
-    return (EAttribute)interchangerFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getInterchangerFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3371,7 +8116,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getInterchangerFunction_Interchange2()
   {
-    return (EAttribute)interchangerFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getInterchangerFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3382,6 +8127,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getDateOnlyFunction()
   {
+    if (dateOnlyFunctionEClass == null)
+    {
+      dateOnlyFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(197);
+    }
     return dateOnlyFunctionEClass;
   }
 
@@ -3393,7 +8142,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDateOnlyFunction_Date6()
   {
-    return (EAttribute)dateOnlyFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getDateOnlyFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3404,6 +8153,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getDateAndTimeFunction()
   {
+    if (dateAndTimeFunctionEClass == null)
+    {
+      dateAndTimeFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(198);
+    }
     return dateAndTimeFunctionEClass;
   }
 
@@ -3415,7 +8168,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDateAndTimeFunction_Date6()
   {
-    return (EAttribute)dateAndTimeFunctionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getDateAndTimeFunction().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3426,7 +8179,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDateAndTimeFunction_Time4()
   {
-    return (EAttribute)dateAndTimeFunctionEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getDateAndTimeFunction().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3437,6 +8190,10 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EClass getDateTimePeriod()
   {
+    if (dateTimePeriodEClass == null)
+    {
+      dateTimePeriodEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(199);
+    }
     return dateTimePeriodEClass;
   }
 
@@ -3448,7 +8205,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDateTimePeriod_DateTimePeriodFunctionCodeQualifier()
   {
-    return (EAttribute)dateTimePeriodEClass.getEStructuralFeatures().get(0);
+        return (EAttribute)getDateTimePeriod().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3459,7 +8216,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDateTimePeriod_DateTimePeriodValue()
   {
-    return (EAttribute)dateTimePeriodEClass.getEStructuralFeatures().get(1);
+        return (EAttribute)getDateTimePeriod().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3470,7 +8227,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   @Override
   public EAttribute getDateTimePeriod_DateTimePeriodFormatCode()
   {
-    return (EAttribute)dateTimePeriodEClass.getEStructuralFeatures().get(2);
+        return (EAttribute)getDateTimePeriod().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3489,763 +8246,73 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private boolean isCreated = false;
+  private boolean isLoaded = false;
 
   /**
-   * Creates the meta-model objects for the package.  This method is
-   * guarded to have no affect on any invocation but its first.
+   * Laods the package and any sub-packages from their serialized form.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public void createPackageContents()
+  public void loadPackage()
   {
-    if (isCreated) return;
-    isCreated = true;
+    if (isLoaded) return;
+    isLoaded = true;
 
-    // Create classes and their features
-    ediModelEClass = createEClass(EDI_MODEL);
-    createEReference(ediModelEClass, EDI_MODEL__SEGMENTS);
+    URL url = getClass().getResource(packageFilename);
+    if (url == null)
+    {
+      throw new RuntimeException("Missing serialized package: " + packageFilename);
+    }
+    URI uri = URI.createURI(url.toString());
+    Resource resource = new EcoreResourceFactoryImpl().createResource(uri);
+    try
+    {
+      resource.load(null);
+    }
+    catch (IOException exception)
+    {
+      throw new WrappedException(exception);
+    }
+    initializeFromLoadedEPackage(this, (EPackage)resource.getContents().get(0));
+    createResource(eNS_URI);
+  }
 
-    abstractEdiSegmentEClass = createEClass(ABSTRACT_EDI_SEGMENT);
-    createEAttribute(abstractEdiSegmentEClass, ABSTRACT_EDI_SEGMENT__SEGMENT);
-    createEAttribute(abstractEdiSegmentEClass, ABSTRACT_EDI_SEGMENT__LINE_END);
 
-    unaSegmentEClass = createEClass(UNA_SEGMENT);
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private boolean isFixed = false;
 
-    unbSegmentEClass = createEClass(UNB_SEGMENT);
-    createEReference(unbSegmentEClass, UNB_SEGMENT__HEADER);
-    createEReference(unbSegmentEClass, UNB_SEGMENT__INTERCHANGE_SENDER);
-    createEReference(unbSegmentEClass, UNB_SEGMENT__INTERCHANGE_RECIPIENT);
-    createEReference(unbSegmentEClass, UNB_SEGMENT__DATE_AND_TIME);
-    createEAttribute(unbSegmentEClass, UNB_SEGMENT__INTERCHANGE_CONTROL_SENDER_REF);
-    createEAttribute(unbSegmentEClass, UNB_SEGMENT__INTERCHANGE_CONTROL_RECIPIENT_REF);
-    createEAttribute(unbSegmentEClass, UNB_SEGMENT__FSE);
-    createEAttribute(unbSegmentEClass, UNB_SEGMENT__ASSICIATION_CODE);
-
-    unhSegmentEClass = createEClass(UNH_SEGMENT);
-    createEAttribute(unhSegmentEClass, UNH_SEGMENT__MESSAGE_REFERENCE_NUMBER);
-    createEReference(unhSegmentEClass, UNH_SEGMENT__MESSAGE);
-    createEAttribute(unhSegmentEClass, UNH_SEGMENT__COMMON_ACCESS_REFERENCE);
-
-    msgSegmentEClass = createEClass(MSG_SEGMENT);
-    createEReference(msgSegmentEClass, MSG_SEGMENT__MESSAGE_IDENTIFIER);
-    createEAttribute(msgSegmentEClass, MSG_SEGMENT__DESIGNATED_CLASS_CODE);
-    createEAttribute(msgSegmentEClass, MSG_SEGMENT__MAINTENANCE_OPERATION_CODE);
-    createEReference(msgSegmentEClass, MSG_SEGMENT__RELATIONSHIP);
-
-    orgSegmentEClass = createEClass(ORG_SEGMENT);
-    createEReference(orgSegmentEClass, ORG_SEGMENT__SYSTEM_DETAIL1);
-    createEReference(orgSegmentEClass, ORG_SEGMENT__ORIGINATOR_IDENTIFICATION);
-    createEReference(orgSegmentEClass, ORG_SEGMENT__LOCATION);
-    createEReference(orgSegmentEClass, ORG_SEGMENT__SYSTEM_DETAIL2);
-    createEAttribute(orgSegmentEClass, ORG_SEGMENT__ORIGINATOR_TYPE_CODE);
-    createEReference(orgSegmentEClass, ORG_SEGMENT__ORIGINATOR);
-    createEAttribute(orgSegmentEClass, ORG_SEGMENT__ORIGINATORS_AUTHORITY_REQUEST_CODE);
-    createEAttribute(orgSegmentEClass, ORG_SEGMENT__COMMUNICATION_NUMBER);
-    createEAttribute(orgSegmentEClass, ORG_SEGMENT__PARTY_ID_IDENTIFICATION);
-
-    pocSegmentEClass = createEClass(POC_SEGMENT);
-    createEAttribute(pocSegmentEClass, POC_SEGMENT__LOCATION);
-    createEAttribute(pocSegmentEClass, POC_SEGMENT__DEPARTURE_DATE);
-    createEAttribute(pocSegmentEClass, POC_SEGMENT__DEPARTURE_TIME);
-
-    odiSegmentEClass = createEClass(ODI_SEGMENT);
-    createEAttribute(odiSegmentEClass, ODI_SEGMENT__ORIGIN);
-    createEAttribute(odiSegmentEClass, ODI_SEGMENT__DESTINATION);
-
-    uciSegmentEClass = createEClass(UCI_SEGMENT);
-    createEAttribute(uciSegmentEClass, UCI_SEGMENT__INTERCHANGE_CONTROL_REFERENCE);
-    createEAttribute(uciSegmentEClass, UCI_SEGMENT__INTERCHANGE_SENDER);
-    createEAttribute(uciSegmentEClass, UCI_SEGMENT__INTERCHANGE_RECIPIENT);
-    createEAttribute(uciSegmentEClass, UCI_SEGMENT__ACTION);
-    createEAttribute(uciSegmentEClass, UCI_SEGMENT__SYNTAX_ERROR_CODE);
-    createEAttribute(uciSegmentEClass, UCI_SEGMENT__SEGMENT_TAG_CODE);
-
-    pdiSegmentEClass = createEClass(PDI_SEGMENT);
-    createEAttribute(pdiSegmentEClass, PDI_SEGMENT__PRODUCT_DETAILS_QUALIFIER);
-    createEReference(pdiSegmentEClass, PDI_SEGMENT__PRODUCTS);
-
-    tvlSegmentEClass = createEClass(TVL_SEGMENT);
-    createEReference(tvlSegmentEClass, TVL_SEGMENT__DATE_AND_TIME);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__ORIGIN_CODE);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__DESTINATION_CODE);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__CARRIER_ID);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__PRODUCT_ID);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__CHARACTERISTIC_ID);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__PRODUCT_ID_CHARACTERISTIC);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__DESCRIPTION_IDS);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__PRODUCT_TYPE);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__LINE_ITEM_NUMBER);
-    createEAttribute(tvlSegmentEClass, TVL_SEGMENT__PROCESSING_INDICATOR_CODE);
-
-    rpiSegmentEClass = createEClass(RPI_SEGMENT);
-    createEAttribute(rpiSegmentEClass, RPI_SEGMENT__NUMBER_OF_PAX);
-    createEAttribute(rpiSegmentEClass, RPI_SEGMENT__STATUS);
-
-    moaSegmentEClass = createEClass(MOA_SEGMENT);
-    createEAttribute(moaSegmentEClass, MOA_SEGMENT__MONETARY_AMOUNT_TYPE_CODE_QUALIFIER);
-    createEAttribute(moaSegmentEClass, MOA_SEGMENT__MONETARY_AMOUNT);
-    createEAttribute(moaSegmentEClass, MOA_SEGMENT__CURRENCY_IDENTIFICATION_CODE);
-    createEAttribute(moaSegmentEClass, MOA_SEGMENT__CURRENCY_TYPE_CODE_QUALIFIER);
-    createEAttribute(moaSegmentEClass, MOA_SEGMENT__STATUS_DESCRIPTION_CODE);
-
-    linSegmentEClass = createEClass(LIN_SEGMENT);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__LINE_ITEM_IDENTIFIER);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__ACTION_REQUEST);
-    createEReference(linSegmentEClass, LIN_SEGMENT__ITEM_NUMBER_IDENTIFICATION);
-    createEReference(linSegmentEClass, LIN_SEGMENT__SUBLINE_INFORMATION);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__CONFIGURATION_LEVEL_NUMBER);
-    createEAttribute(linSegmentEClass, LIN_SEGMENT__CONFIGURATION_OPERATION_CODE);
-
-    priSegmentEClass = createEClass(PRI_SEGMENT);
-    createEReference(priSegmentEClass, PRI_SEGMENT__SUB);
-
-    qtySegmentEClass = createEClass(QTY_SEGMENT);
-    createEReference(qtySegmentEClass, QTY_SEGMENT__QUANTITY_DETAILS);
-
-    cuxSegmentEClass = createEClass(CUX_SEGMENT);
-    createEReference(cuxSegmentEClass, CUX_SEGMENT__CURRENCY_DETAILS1);
-    createEReference(cuxSegmentEClass, CUX_SEGMENT__CURRENCY_DETAILS2);
-    createEAttribute(cuxSegmentEClass, CUX_SEGMENT__CURRENCY_EXCHANGE_RATE);
-    createEAttribute(cuxSegmentEClass, CUX_SEGMENT__EXCHANGE_RATE_CURRENCY_MARKET_IDENTIFIER);
-
-    taxSegmentEClass = createEClass(TAX_SEGMENT);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TAX_FUNCTION_CODE_QUALIFIER);
-    createEReference(taxSegmentEClass, TAX_SEGMENT__TAX_TYPE);
-    createEReference(taxSegmentEClass, TAX_SEGMENT__TAX_ACCOUNT_DETAIL);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TAX_ASSESSMENT_BASIC_VALUE);
-    createEReference(taxSegmentEClass, TAX_SEGMENT__TAX_DETAIL);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__TAX_CATEGORY_CODE);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__PARTY_TAX_IDENTIFIER);
-    createEAttribute(taxSegmentEClass, TAX_SEGMENT__CALCULATION_SEQUENCE_CODE);
-
-    rffSegmentEClass = createEClass(RFF_SEGMENT);
-    createEAttribute(rffSegmentEClass, RFF_SEGMENT__RFF1);
-    createEAttribute(rffSegmentEClass, RFF_SEGMENT__RFF2);
-
-    nadSegmentEClass = createEClass(NAD_SEGMENT);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__PARTY_FUNCTION_CODE_QUALIFIER);
-    createEReference(nadSegmentEClass, NAD_SEGMENT__PARTY_IDENTIFICATION_DETAILS);
-    createEReference(nadSegmentEClass, NAD_SEGMENT__NAME_AND_ADDRESS);
-    createEReference(nadSegmentEClass, NAD_SEGMENT__PARTY_NAME);
-    createEReference(nadSegmentEClass, NAD_SEGMENT__STREET);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__CITY_NAME);
-    createEReference(nadSegmentEClass, NAD_SEGMENT__COUNTRY_SUB_ENTITY_DETAILS);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__POSTAL_IDENTIFICATION_CODE);
-    createEAttribute(nadSegmentEClass, NAD_SEGMENT__COUNTRY_NAME_CODE);
-
-    dtmSegmentEClass = createEClass(DTM_SEGMENT);
-    createEReference(dtmSegmentEClass, DTM_SEGMENT__DATE_TIME_PERIODS);
-
-    bgmSegmentEClass = createEClass(BGM_SEGMENT);
-    createEReference(bgmSegmentEClass, BGM_SEGMENT__DOCUMENT_MESSAGE_NAME);
-    createEReference(bgmSegmentEClass, BGM_SEGMENT__DOCUMENT_MESSAGE_IDENTIFICATION);
-    createEAttribute(bgmSegmentEClass, BGM_SEGMENT__MESSAGE_FUNCTION_CODE);
-    createEAttribute(bgmSegmentEClass, BGM_SEGMENT__RESPONSE_TYPE_CODE);
-
-    patSegmentEClass = createEClass(PAT_SEGMENT);
-    createEAttribute(patSegmentEClass, PAT_SEGMENT__SEGMENT_COUNT);
-
-    ftxSegmentEClass = createEClass(FTX_SEGMENT);
-    createEAttribute(ftxSegmentEClass, FTX_SEGMENT__TODO1);
-    createEAttribute(ftxSegmentEClass, FTX_SEGMENT__TODO2);
-    createEAttribute(ftxSegmentEClass, FTX_SEGMENT__TODO3);
-    createEAttribute(ftxSegmentEClass, FTX_SEGMENT__TODO4);
-
-    ercSegmentEClass = createEClass(ERC_SEGMENT);
-    createEReference(ercSegmentEClass, ERC_SEGMENT__APPLICATION_ERROR_DETAILS);
-
-    cntSegmentEClass = createEClass(CNT_SEGMENT);
-    createEAttribute(cntSegmentEClass, CNT_SEGMENT__TODO1);
-    createEAttribute(cntSegmentEClass, CNT_SEGMENT__TODO2);
-
-    ctaSegmentEClass = createEClass(CTA_SEGMENT);
-    createEAttribute(ctaSegmentEClass, CTA_SEGMENT__TODO);
-
-    pciSegmentEClass = createEClass(PCI_SEGMENT);
-    createEAttribute(pciSegmentEClass, PCI_SEGMENT__TODO);
-
-    unsSegmentEClass = createEClass(UNS_SEGMENT);
-    createEAttribute(unsSegmentEClass, UNS_SEGMENT__SEGMENT_COUNT);
-
-    untSegmentEClass = createEClass(UNT_SEGMENT);
-    createEAttribute(untSegmentEClass, UNT_SEGMENT__SEGMENT_COUNT);
-    createEAttribute(untSegmentEClass, UNT_SEGMENT__MESSAGE_REFERENCE_NUMBER);
-
-    unzSegmentEClass = createEClass(UNZ_SEGMENT);
-    createEAttribute(unzSegmentEClass, UNZ_SEGMENT__INTERCHANGE_CONTROL_COUNT);
-    createEAttribute(unzSegmentEClass, UNZ_SEGMENT__INTERCHANGE_CONTROL_REF);
-
-    abstractEdiFunctionEClass = createEClass(ABSTRACT_EDI_FUNCTION);
-
-    unbHeaderEClass = createEClass(UNB_HEADER);
-    createEAttribute(unbHeaderEClass, UNB_HEADER__SYNTAX);
-    createEAttribute(unbHeaderEClass, UNB_HEADER__NUM1);
-
-    priceInformationEClass = createEClass(PRICE_INFORMATION);
-    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_CODE_QUALIFIER);
-    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_AMOUNT);
-    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_TYPE_CODE);
-    createEAttribute(priceInformationEClass, PRICE_INFORMATION__PRICE_SPECIFICATION_CODE);
-    createEAttribute(priceInformationEClass, PRICE_INFORMATION__UNIT_PRICE_BASIS_VALUE);
-    createEAttribute(priceInformationEClass, PRICE_INFORMATION__MEASUREMENT_UNIT_CODE);
-
-    messageBodyFunctionEClass = createEClass(MESSAGE_BODY_FUNCTION);
-    createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__TYPE);
-    createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__VERSION);
-    createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__RELEASE);
-    createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__CONTROLLING_AGENCY);
-    createEAttribute(messageBodyFunctionEClass, MESSAGE_BODY_FUNCTION__MORE);
-
-    messageIndentifierEClass = createEClass(MESSAGE_INDENTIFIER);
-    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__MESSAGE_TYPE_CODE);
-    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__VERSION_IDENTIFIER);
-    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__RELEASE_IDENTIFIER);
-    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__CONTROLLING_AGENCY_IDENTIFIER);
-    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__MESSAGE_IMPLEMENTATION_IDENTIFICATION_CODE);
-    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__REVISION_IDENTIFIER);
-    createEAttribute(messageIndentifierEClass, MESSAGE_INDENTIFIER__DOCUMENT_STATUS_CODE);
-
-    relationshipEClass = createEClass(RELATIONSHIP);
-    createEAttribute(relationshipEClass, RELATIONSHIP__RELATIONSHIP_DESCRIPTION_CODE);
-    createEAttribute(relationshipEClass, RELATIONSHIP__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(relationshipEClass, RELATIONSHIP__CODE_LIST_RESPONSIBLE_AGENCY);
-    createEAttribute(relationshipEClass, RELATIONSHIP__RELATIONSHIP_DESCRIPTION);
-
-    productFunctionEClass = createEClass(PRODUCT_FUNCTION);
-    createEAttribute(productFunctionEClass, PRODUCT_FUNCTION__BOOKING_CLASS);
-    createEAttribute(productFunctionEClass, PRODUCT_FUNCTION__AVAIL);
-
-    itemNumberIdentificationEClass = createEClass(ITEM_NUMBER_IDENTIFICATION);
-    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__ITEM_IDENTIFIER);
-    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__ITEM_TYPE_IDENTIFICATION_CODE);
-    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(itemNumberIdentificationEClass, ITEM_NUMBER_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
-
-    sublineInformationEClass = createEClass(SUBLINE_INFORMATION);
-    createEAttribute(sublineInformationEClass, SUBLINE_INFORMATION__SUBLINE_INDICATOR_CODE);
-    createEAttribute(sublineInformationEClass, SUBLINE_INFORMATION__LINE_ITEM_IDENTIFIER);
-
-    quantityDetailEClass = createEClass(QUANTITY_DETAIL);
-    createEAttribute(quantityDetailEClass, QUANTITY_DETAIL__QUANTITY_TYPE_CODE_QUALIFIER);
-    createEAttribute(quantityDetailEClass, QUANTITY_DETAIL__QUANTITY);
-    createEAttribute(quantityDetailEClass, QUANTITY_DETAIL__MEASUREMENT_UNIT_CODE);
-
-    streetEClass = createEClass(STREET);
-    createEAttribute(streetEClass, STREET__STREET_AND_NUMBER);
-
-    countrySubEntityDetailEClass = createEClass(COUNTRY_SUB_ENTITY_DETAIL);
-    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__COUNTRY_SUB_ENTITY_NAME_CODE);
-    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
-    createEAttribute(countrySubEntityDetailEClass, COUNTRY_SUB_ENTITY_DETAIL__COUNTRY_SUB_ENTITY_NAME);
-
-    partyNameEClass = createEClass(PARTY_NAME);
-    createEAttribute(partyNameEClass, PARTY_NAME__PARTY_NAME);
-
-    nameAndAddressEClass = createEClass(NAME_AND_ADDRESS);
-    createEAttribute(nameAndAddressEClass, NAME_AND_ADDRESS__NAME_AND_ADDRESS);
-
-    partyIdentificationDetailEClass = createEClass(PARTY_IDENTIFICATION_DETAIL);
-    createEAttribute(partyIdentificationDetailEClass, PARTY_IDENTIFICATION_DETAIL__PARTY_IDENTIFIER);
-    createEAttribute(partyIdentificationDetailEClass, PARTY_IDENTIFICATION_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(partyIdentificationDetailEClass, PARTY_IDENTIFICATION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
-
-    applicationErrorDetailEClass = createEClass(APPLICATION_ERROR_DETAIL);
-    createEAttribute(applicationErrorDetailEClass, APPLICATION_ERROR_DETAIL__APPLICTION_ERROR_CODE);
-    createEAttribute(applicationErrorDetailEClass, APPLICATION_ERROR_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(applicationErrorDetailEClass, APPLICATION_ERROR_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
-
-    systemDetailFunctionEClass = createEClass(SYSTEM_DETAIL_FUNCTION);
-    createEAttribute(systemDetailFunctionEClass, SYSTEM_DETAIL_FUNCTION__COMPANY_IDENTIFICATION);
-    createEAttribute(systemDetailFunctionEClass, SYSTEM_DETAIL_FUNCTION__LOCATION_CODE);
-    createEAttribute(systemDetailFunctionEClass, SYSTEM_DETAIL_FUNCTION__LOCATION_NAME);
-
-    taxDetailEClass = createEClass(TAX_DETAIL);
-    createEAttribute(taxDetailEClass, TAX_DETAIL__TAX_RATE_DESCRIPTION_CODE);
-    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_IDENTIFICATION_CODE1);
-    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE1);
-    createEAttribute(taxDetailEClass, TAX_DETAIL__TAX_RATE_DESCRIPTION);
-    createEAttribute(taxDetailEClass, TAX_DETAIL__TAX_RATE_BASIS_CODE);
-    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_IDENTIFICATION_CODE2);
-    createEAttribute(taxDetailEClass, TAX_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE2);
-
-    taxAccountDetailEClass = createEClass(TAX_ACCOUNT_DETAIL);
-    createEAttribute(taxAccountDetailEClass, TAX_ACCOUNT_DETAIL__TAX_ACCOUNT_CODE);
-    createEAttribute(taxAccountDetailEClass, TAX_ACCOUNT_DETAIL__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(taxAccountDetailEClass, TAX_ACCOUNT_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
-
-    taxTypeEClass = createEClass(TAX_TYPE);
-    createEAttribute(taxTypeEClass, TAX_TYPE__TAX_TYPE_NAME_CODE);
-    createEAttribute(taxTypeEClass, TAX_TYPE__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(taxTypeEClass, TAX_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
-    createEAttribute(taxTypeEClass, TAX_TYPE__TAX_TYPE_NAME);
-
-    currencyDetailEClass = createEClass(CURRENCY_DETAIL);
-    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_USAGE_CODE_QUALIFIER);
-    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_IDENTIFICATION_CODE);
-    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_TYPE_CODE_QUALIFIER);
-    createEAttribute(currencyDetailEClass, CURRENCY_DETAIL__CURRENCY_RATE_VALUE);
-
-    documentMessageIdentificationEClass = createEClass(DOCUMENT_MESSAGE_IDENTIFICATION);
-    createEAttribute(documentMessageIdentificationEClass, DOCUMENT_MESSAGE_IDENTIFICATION__DOCUMENT_IDENTIFIER);
-    createEAttribute(documentMessageIdentificationEClass, DOCUMENT_MESSAGE_IDENTIFICATION__VERSION_IDENTIFIER);
-    createEAttribute(documentMessageIdentificationEClass, DOCUMENT_MESSAGE_IDENTIFICATION__REVISION_IDENTIFIER);
-
-    documentMessageEClass = createEClass(DOCUMENT_MESSAGE);
-    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__DOCUMENT_NAME_CODE);
-    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__CODE_LIST_IDENTIFICATION_CODE);
-    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__CODE_LIST_RESPONSIBLE_AGENCY_CODE);
-    createEAttribute(documentMessageEClass, DOCUMENT_MESSAGE__DOCUMENT_NAME);
-
-    originatorFunctionEClass = createEClass(ORIGINATOR_FUNCTION);
-    createEAttribute(originatorFunctionEClass, ORIGINATOR_FUNCTION__COUNTRY_CODE);
-    createEAttribute(originatorFunctionEClass, ORIGINATOR_FUNCTION__CURRENCY_CODE);
-    createEAttribute(originatorFunctionEClass, ORIGINATOR_FUNCTION__LANGUAGE_CODE);
-
-    originatorIdentificationFunctionEClass = createEClass(ORIGINATOR_IDENTIFICATION_FUNCTION);
-    createEAttribute(originatorIdentificationFunctionEClass, ORIGINATOR_IDENTIFICATION_FUNCTION__TRAVEL_AGENT_ID);
-    createEAttribute(originatorIdentificationFunctionEClass, ORIGINATOR_IDENTIFICATION_FUNCTION__IN_HOUSE_ID1);
-    createEAttribute(originatorIdentificationFunctionEClass, ORIGINATOR_IDENTIFICATION_FUNCTION__IN_HOUSE_ID2);
-
-    locationFunctionEClass = createEClass(LOCATION_FUNCTION);
-    createEAttribute(locationFunctionEClass, LOCATION_FUNCTION__LOCATION_ID);
-    createEAttribute(locationFunctionEClass, LOCATION_FUNCTION__LOCATION_NAME);
-
-    interchangerFunctionEClass = createEClass(INTERCHANGER_FUNCTION);
-    createEAttribute(interchangerFunctionEClass, INTERCHANGER_FUNCTION__INTERCHANGE);
-    createEAttribute(interchangerFunctionEClass, INTERCHANGER_FUNCTION__INTERCHANGE2);
-
-    dateOnlyFunctionEClass = createEClass(DATE_ONLY_FUNCTION);
-    createEAttribute(dateOnlyFunctionEClass, DATE_ONLY_FUNCTION__DATE6);
-
-    dateAndTimeFunctionEClass = createEClass(DATE_AND_TIME_FUNCTION);
-    createEAttribute(dateAndTimeFunctionEClass, DATE_AND_TIME_FUNCTION__DATE6);
-    createEAttribute(dateAndTimeFunctionEClass, DATE_AND_TIME_FUNCTION__TIME4);
-
-    dateTimePeriodEClass = createEClass(DATE_TIME_PERIOD);
-    createEAttribute(dateTimePeriodEClass, DATE_TIME_PERIOD__DATE_TIME_PERIOD_FUNCTION_CODE_QUALIFIER);
-    createEAttribute(dateTimePeriodEClass, DATE_TIME_PERIOD__DATE_TIME_PERIOD_VALUE);
-    createEAttribute(dateTimePeriodEClass, DATE_TIME_PERIOD__DATE_TIME_PERIOD_FORMAT_CODE);
+  /**
+   * Fixes up the loaded package, to make it appear as if it had been programmatically built.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void fixPackageContents()
+  {
+    if (isFixed) return;
+    isFixed = true;
+    fixEClassifiers();
   }
 
   /**
+   * Sets the instance class on the given classifier.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private boolean isInitialized = false;
-
-  /**
-   * Complete the initialization of the package and its meta-model.  This
-   * method is guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void initializePackageContents()
+  @Override
+  protected void fixInstanceClass(EClassifier eClassifier)
   {
-    if (isInitialized) return;
-    isInitialized = true;
-
-    // Initialize package
-    setName(eNAME);
-    setNsPrefix(eNS_PREFIX);
-    setNsURI(eNS_URI);
-
-    // Create type parameters
-
-    // Set bounds for type parameters
-
-    // Add supertypes to classes
-    unaSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    unbSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    unhSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    msgSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    orgSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    pocSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    odiSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    uciSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    pdiSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    tvlSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    rpiSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    moaSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    linSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    priSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    qtySegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    cuxSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    taxSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    rffSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    nadSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    dtmSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    bgmSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    patSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    ftxSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    ercSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    cntSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    ctaSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    pciSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    unsSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    untSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    unzSegmentEClass.getESuperTypes().add(this.getAbstractEdiSegment());
-    unbHeaderEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    priceInformationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    messageBodyFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    messageIndentifierEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    relationshipEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    productFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    itemNumberIdentificationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    sublineInformationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    quantityDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    streetEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    countrySubEntityDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    partyNameEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    nameAndAddressEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    applicationErrorDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    systemDetailFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    taxDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    taxAccountDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    taxTypeEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    currencyDetailEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    documentMessageIdentificationEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    documentMessageEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    originatorFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    originatorIdentificationFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    locationFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    interchangerFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    dateOnlyFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    dateAndTimeFunctionEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-    dateTimePeriodEClass.getESuperTypes().add(this.getAbstractEdiFunction());
-
-    // Initialize classes and features; add operations and parameters
-    initEClass(ediModelEClass, EdiModel.class, "EdiModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEdiModel_Segments(), this.getAbstractEdiSegment(), null, "segments", null, 0, -1, EdiModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(abstractEdiSegmentEClass, AbstractEdiSegment.class, "AbstractEdiSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAbstractEdiSegment_Segment(), ecorePackage.getEString(), "segment", null, 0, 1, AbstractEdiSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAbstractEdiSegment_LineEnd(), ecorePackage.getEString(), "lineEnd", null, 0, 1, AbstractEdiSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(unaSegmentEClass, UNASegment.class, "UNASegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(unbSegmentEClass, UNBSegment.class, "UNBSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getUNBSegment_Header(), this.getUNBHeader(), null, "header", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUNBSegment_InterchangeSender(), this.getInterchangerFunction(), null, "interchangeSender", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUNBSegment_InterchangeRecipient(), this.getInterchangerFunction(), null, "interchangeRecipient", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUNBSegment_DateAndTime(), this.getDateAndTimeFunction(), null, "dateAndTime", null, 0, -1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNBSegment_InterchangeControlSenderRef(), ecorePackage.getEString(), "interchangeControlSenderRef", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNBSegment_InterchangeControlRecipientRef(), ecorePackage.getEString(), "interchangeControlRecipientRef", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNBSegment_Fse(), ecorePackage.getEString(), "fse", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNBSegment_AssiciationCode(), ecorePackage.getEString(), "assiciationCode", null, 0, 1, UNBSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(unhSegmentEClass, UNHSegment.class, "UNHSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUNHSegment_MessageReferenceNumber(), ecorePackage.getEString(), "messageReferenceNumber", null, 0, 1, UNHSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUNHSegment_Message(), this.getMessageBodyFunction(), null, "message", null, 0, 1, UNHSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNHSegment_CommonAccessReference(), ecorePackage.getEString(), "commonAccessReference", null, 0, 1, UNHSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(msgSegmentEClass, MSGSegment.class, "MSGSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMSGSegment_MessageIdentifier(), this.getMessageIndentifier(), null, "messageIdentifier", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMSGSegment_DesignatedClassCode(), ecorePackage.getEString(), "designatedClassCode", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMSGSegment_MaintenanceOperationCode(), ecorePackage.getEString(), "maintenanceOperationCode", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMSGSegment_Relationship(), this.getRelationship(), null, "relationship", null, 0, 1, MSGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(orgSegmentEClass, ORGSegment.class, "ORGSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getORGSegment_SystemDetail1(), this.getSystemDetailFunction(), null, "systemDetail1", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getORGSegment_OriginatorIdentification(), this.getOriginatorIdentificationFunction(), null, "originatorIdentification", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getORGSegment_Location(), this.getLocationFunction(), null, "location", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getORGSegment_SystemDetail2(), this.getSystemDetailFunction(), null, "systemDetail2", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getORGSegment_OriginatorTypeCode(), ecorePackage.getEString(), "originatorTypeCode", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getORGSegment_Originator(), this.getOriginatorFunction(), null, "originator", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getORGSegment_OriginatorsAuthorityRequestCode(), ecorePackage.getEString(), "originatorsAuthorityRequestCode", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getORGSegment_CommunicationNumber(), ecorePackage.getEString(), "communicationNumber", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getORGSegment_PartyIdIdentification(), ecorePackage.getEString(), "partyIdIdentification", null, 0, 1, ORGSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(pocSegmentEClass, POCSegment.class, "POCSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPOCSegment_Location(), ecorePackage.getEString(), "location", null, 0, 1, POCSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPOCSegment_DepartureDate(), ecorePackage.getEString(), "departureDate", null, 0, 1, POCSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPOCSegment_DepartureTime(), ecorePackage.getEString(), "departureTime", null, 0, 1, POCSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(odiSegmentEClass, ODISegment.class, "ODISegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getODISegment_Origin(), ecorePackage.getEString(), "origin", null, 0, 1, ODISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getODISegment_Destination(), ecorePackage.getEString(), "destination", null, 0, 1, ODISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(uciSegmentEClass, UCISegment.class, "UCISegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUCISegment_InterchangeControlReference(), ecorePackage.getEString(), "interchangeControlReference", null, 0, 1, UCISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUCISegment_InterchangeSender(), ecorePackage.getEString(), "interchangeSender", null, 0, 1, UCISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUCISegment_InterchangeRecipient(), ecorePackage.getEString(), "interchangeRecipient", null, 0, 1, UCISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUCISegment_Action(), ecorePackage.getEString(), "action", null, 0, 1, UCISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUCISegment_SyntaxErrorCode(), ecorePackage.getEString(), "syntaxErrorCode", null, 0, 1, UCISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUCISegment_SegmentTagCode(), ecorePackage.getEString(), "segmentTagCode", null, 0, 1, UCISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(pdiSegmentEClass, PDISegment.class, "PDISegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPDISegment_ProductDetailsQualifier(), ecorePackage.getEString(), "productDetailsQualifier", null, 0, 1, PDISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPDISegment_Products(), this.getProductFunction(), null, "products", null, 0, -1, PDISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(tvlSegmentEClass, TVLSegment.class, "TVLSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTVLSegment_DateAndTime(), this.getAbstractEdiFunction(), null, "dateAndTime", null, 0, -1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_OriginCode(), ecorePackage.getEString(), "originCode", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_DestinationCode(), ecorePackage.getEString(), "destinationCode", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_CarrierId(), ecorePackage.getEString(), "carrierId", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_ProductId(), ecorePackage.getEString(), "productId", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_CharacteristicId(), ecorePackage.getEString(), "characteristicId", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_ProductIdCharacteristic(), ecorePackage.getEString(), "productIdCharacteristic", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_DescriptionIds(), ecorePackage.getEString(), "descriptionIds", null, 0, -1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_ProductType(), ecorePackage.getEString(), "productType", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_LineItemNumber(), ecorePackage.getEString(), "lineItemNumber", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVLSegment_ProcessingIndicatorCode(), ecorePackage.getEString(), "processingIndicatorCode", null, 0, 1, TVLSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(rpiSegmentEClass, RPISegment.class, "RPISegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRPISegment_NumberOfPax(), ecorePackage.getEString(), "numberOfPax", null, 0, 1, RPISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRPISegment_Status(), ecorePackage.getEString(), "status", null, 0, 1, RPISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(moaSegmentEClass, MOASegment.class, "MOASegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMOASegment_MonetaryAmountTypeCodeQualifier(), ecorePackage.getEString(), "monetaryAmountTypeCodeQualifier", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMOASegment_MonetaryAmount(), ecorePackage.getEString(), "monetaryAmount", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMOASegment_CurrencyIdentificationCode(), ecorePackage.getEString(), "currencyIdentificationCode", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMOASegment_CurrencyTypeCodeQualifier(), ecorePackage.getEString(), "currencyTypeCodeQualifier", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMOASegment_StatusDescriptionCode(), ecorePackage.getEString(), "statusDescriptionCode", null, 0, 1, MOASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(linSegmentEClass, LINSegment.class, "LINSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLINSegment_LineItemIdentifier(), ecorePackage.getEString(), "lineItemIdentifier", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLINSegment_ActionRequest(), ecorePackage.getEString(), "actionRequest", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLINSegment_ItemNumberIdentification(), this.getItemNumberIdentification(), null, "itemNumberIdentification", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLINSegment_SublineInformation(), this.getSublineInformation(), null, "sublineInformation", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLINSegment_ConfigurationLevelNumber(), ecorePackage.getEString(), "configurationLevelNumber", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLINSegment_ConfigurationOperationCode(), ecorePackage.getEString(), "configurationOperationCode", null, 0, 1, LINSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(priSegmentEClass, PRISegment.class, "PRISegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPRISegment_Sub(), this.getPriceInformation(), null, "sub", null, 0, 1, PRISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(qtySegmentEClass, QTYSegment.class, "QTYSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getQTYSegment_QuantityDetails(), this.getQuantityDetail(), null, "quantityDetails", null, 0, -1, QTYSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(cuxSegmentEClass, CUXSegment.class, "CUXSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCUXSegment_CurrencyDetails1(), this.getCurrencyDetail(), null, "currencyDetails1", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCUXSegment_CurrencyDetails2(), this.getCurrencyDetail(), null, "currencyDetails2", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCUXSegment_CurrencyExchangeRate(), ecorePackage.getEString(), "currencyExchangeRate", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCUXSegment_ExchangeRateCurrencyMarketIdentifier(), ecorePackage.getEString(), "exchangeRateCurrencyMarketIdentifier", null, 0, 1, CUXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(taxSegmentEClass, TAXSegment.class, "TAXSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTAXSegment_TaxFunctionCodeQualifier(), ecorePackage.getEString(), "taxFunctionCodeQualifier", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTAXSegment_TaxType(), this.getTaxType(), null, "taxType", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTAXSegment_TaxAccountDetail(), this.getTaxAccountDetail(), null, "taxAccountDetail", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_TaxAssessmentBasicValue(), ecorePackage.getEString(), "taxAssessmentBasicValue", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTAXSegment_TaxDetail(), this.getTaxDetail(), null, "taxDetail", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_TaxCategoryCode(), ecorePackage.getEString(), "taxCategoryCode", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_PartyTaxIdentifier(), ecorePackage.getEString(), "partyTaxIdentifier", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTAXSegment_CalculationSequenceCode(), ecorePackage.getEString(), "calculationSequenceCode", null, 0, 1, TAXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(rffSegmentEClass, RFFSegment.class, "RFFSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRFFSegment_Rff1(), ecorePackage.getEString(), "rff1", null, 0, 1, RFFSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRFFSegment_Rff2(), ecorePackage.getEString(), "rff2", null, 0, 1, RFFSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(nadSegmentEClass, NADSegment.class, "NADSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNADSegment_PartyFunctionCodeQualifier(), ecorePackage.getEString(), "partyFunctionCodeQualifier", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNADSegment_PartyIdentificationDetails(), this.getPartyIdentificationDetail(), null, "partyIdentificationDetails", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNADSegment_NameAndAddress(), this.getNameAndAddress(), null, "nameAndAddress", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNADSegment_PartyName(), this.getPartyName(), null, "partyName", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNADSegment_Street(), this.getStreet(), null, "street", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNADSegment_CityName(), ecorePackage.getEString(), "cityName", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNADSegment_CountrySubEntityDetails(), this.getCountrySubEntityDetail(), null, "countrySubEntityDetails", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNADSegment_PostalIdentificationCode(), ecorePackage.getEString(), "postalIdentificationCode", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNADSegment_CountryNameCode(), ecorePackage.getEString(), "countryNameCode", null, 0, 1, NADSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(dtmSegmentEClass, DTMSegment.class, "DTMSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDTMSegment_DateTimePeriods(), this.getDateTimePeriod(), null, "dateTimePeriods", null, 0, -1, DTMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(bgmSegmentEClass, BGMSegment.class, "BGMSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBGMSegment_DocumentMessageName(), this.getDocumentMessage(), null, "documentMessageName", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBGMSegment_DocumentMessageIdentification(), this.getDocumentMessageIdentification(), null, "documentMessageIdentification", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBGMSegment_MessageFunctionCode(), ecorePackage.getEString(), "messageFunctionCode", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBGMSegment_ResponseTypeCode(), ecorePackage.getEString(), "responseTypeCode", null, 0, 1, BGMSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(patSegmentEClass, PATSegment.class, "PATSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPATSegment_SegmentCount(), ecorePackage.getEString(), "segmentCount", null, 0, 1, PATSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(ftxSegmentEClass, FTXSegment.class, "FTXSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFTXSegment_Todo1(), ecorePackage.getEString(), "todo1", null, 0, 1, FTXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFTXSegment_Todo2(), ecorePackage.getEString(), "todo2", null, 0, 1, FTXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFTXSegment_Todo3(), ecorePackage.getEString(), "todo3", null, 0, 1, FTXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFTXSegment_Todo4(), ecorePackage.getEString(), "todo4", null, 0, 1, FTXSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(ercSegmentEClass, ERCSegment.class, "ERCSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getERCSegment_ApplicationErrorDetails(), this.getApplicationErrorDetail(), null, "applicationErrorDetails", null, 0, -1, ERCSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(cntSegmentEClass, CNTSegment.class, "CNTSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCNTSegment_Todo1(), ecorePackage.getEString(), "todo1", null, 0, 1, CNTSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCNTSegment_Todo2(), ecorePackage.getEString(), "todo2", null, 0, 1, CNTSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(ctaSegmentEClass, CTASegment.class, "CTASegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCTASegment_Todo(), ecorePackage.getEString(), "todo", null, 0, 1, CTASegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(pciSegmentEClass, PCISegment.class, "PCISegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPCISegment_Todo(), ecorePackage.getEString(), "todo", null, 0, 1, PCISegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(unsSegmentEClass, UNSSegment.class, "UNSSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUNSSegment_SegmentCount(), ecorePackage.getEString(), "segmentCount", null, 0, 1, UNSSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(untSegmentEClass, UNTSegment.class, "UNTSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUNTSegment_SegmentCount(), ecorePackage.getEString(), "segmentCount", null, 0, 1, UNTSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNTSegment_MessageReferenceNumber(), ecorePackage.getEString(), "messageReferenceNumber", null, 0, 1, UNTSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(unzSegmentEClass, UNZSegment.class, "UNZSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUNZSegment_InterchangeControlCount(), ecorePackage.getEString(), "interchangeControlCount", null, 0, 1, UNZSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNZSegment_InterchangeControlRef(), ecorePackage.getEString(), "interchangeControlRef", null, 0, 1, UNZSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(abstractEdiFunctionEClass, AbstractEdiFunction.class, "AbstractEdiFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(unbHeaderEClass, UNBHeader.class, "UNBHeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUNBHeader_Syntax(), ecorePackage.getEString(), "syntax", null, 0, 1, UNBHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getUNBHeader_Num1(), ecorePackage.getEString(), "num1", null, 0, 1, UNBHeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(priceInformationEClass, PriceInformation.class, "PriceInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPriceInformation_PriceCodeQualifier(), ecorePackage.getEString(), "priceCodeQualifier", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPriceInformation_PriceAmount(), ecorePackage.getEString(), "priceAmount", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPriceInformation_PriceTypeCode(), ecorePackage.getEString(), "priceTypeCode", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPriceInformation_PriceSpecificationCode(), ecorePackage.getEString(), "priceSpecificationCode", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPriceInformation_UnitPriceBasisValue(), ecorePackage.getEString(), "unitPriceBasisValue", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPriceInformation_MeasurementUnitCode(), ecorePackage.getEString(), "measurementUnitCode", null, 0, 1, PriceInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(messageBodyFunctionEClass, MessageBodyFunction.class, "MessageBodyFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMessageBodyFunction_Type(), ecorePackage.getEString(), "type", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageBodyFunction_Version(), ecorePackage.getEString(), "version", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageBodyFunction_Release(), ecorePackage.getEString(), "release", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageBodyFunction_ControllingAgency(), ecorePackage.getEString(), "controllingAgency", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageBodyFunction_More(), ecorePackage.getEString(), "more", null, 0, 1, MessageBodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(messageIndentifierEClass, MessageIndentifier.class, "MessageIndentifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMessageIndentifier_MessageTypeCode(), ecorePackage.getEString(), "messageTypeCode", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageIndentifier_VersionIdentifier(), ecorePackage.getEString(), "versionIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageIndentifier_ReleaseIdentifier(), ecorePackage.getEString(), "releaseIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageIndentifier_ControllingAgencyIdentifier(), ecorePackage.getEString(), "controllingAgencyIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageIndentifier_MessageImplementationIdentificationCode(), ecorePackage.getEString(), "messageImplementationIdentificationCode", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageIndentifier_RevisionIdentifier(), ecorePackage.getEString(), "revisionIdentifier", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMessageIndentifier_DocumentStatusCode(), ecorePackage.getEString(), "documentStatusCode", null, 0, 1, MessageIndentifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRelationship_RelationshipDescriptionCode(), ecorePackage.getEString(), "relationshipDescriptionCode", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_CodeListResponsibleAgency(), ecorePackage.getEString(), "codeListResponsibleAgency", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRelationship_RelationshipDescription(), ecorePackage.getEString(), "relationshipDescription", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(productFunctionEClass, ProductFunction.class, "ProductFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getProductFunction_BookingClass(), ecorePackage.getEString(), "bookingClass", null, 0, 1, ProductFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProductFunction_Avail(), ecorePackage.getEString(), "avail", null, 0, 1, ProductFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(itemNumberIdentificationEClass, ItemNumberIdentification.class, "ItemNumberIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getItemNumberIdentification_ItemIdentifier(), ecorePackage.getEString(), "itemIdentifier", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getItemNumberIdentification_ItemTypeIdentificationCode(), ecorePackage.getEString(), "itemTypeIdentificationCode", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getItemNumberIdentification_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getItemNumberIdentification_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, ItemNumberIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(sublineInformationEClass, SublineInformation.class, "SublineInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSublineInformation_SublineIndicatorCode(), ecorePackage.getEString(), "sublineIndicatorCode", null, 0, 1, SublineInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSublineInformation_LineItemIdentifier(), ecorePackage.getEString(), "lineItemIdentifier", null, 0, 1, SublineInformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(quantityDetailEClass, QuantityDetail.class, "QuantityDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getQuantityDetail_QuantityTypeCodeQualifier(), ecorePackage.getEString(), "quantityTypeCodeQualifier", null, 0, 1, QuantityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQuantityDetail_Quantity(), ecorePackage.getEString(), "quantity", null, 0, 1, QuantityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQuantityDetail_MeasurementUnitCode(), ecorePackage.getEString(), "measurementUnitCode", null, 0, 1, QuantityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(streetEClass, Street.class, "Street", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStreet_StreetAndNumber(), ecorePackage.getEString(), "streetAndNumber", null, 0, -1, Street.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(countrySubEntityDetailEClass, CountrySubEntityDetail.class, "CountrySubEntityDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCountrySubEntityDetail_CountrySubEntityNameCode(), ecorePackage.getEString(), "countrySubEntityNameCode", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCountrySubEntityDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCountrySubEntityDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCountrySubEntityDetail_CountrySubEntityName(), ecorePackage.getEString(), "countrySubEntityName", null, 0, -1, CountrySubEntityDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(partyNameEClass, PartyName.class, "PartyName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPartyName_PartyName(), ecorePackage.getEString(), "partyName", null, 0, -1, PartyName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(nameAndAddressEClass, NameAndAddress.class, "NameAndAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNameAndAddress_NameAndAddress(), ecorePackage.getEString(), "nameAndAddress", null, 0, -1, NameAndAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(partyIdentificationDetailEClass, PartyIdentificationDetail.class, "PartyIdentificationDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPartyIdentificationDetail_PartyIdentifier(), ecorePackage.getEString(), "partyIdentifier", null, 0, 1, PartyIdentificationDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPartyIdentificationDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, PartyIdentificationDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPartyIdentificationDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, PartyIdentificationDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(applicationErrorDetailEClass, ApplicationErrorDetail.class, "ApplicationErrorDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getApplicationErrorDetail_ApplictionErrorCode(), ecorePackage.getEString(), "applictionErrorCode", null, 0, 1, ApplicationErrorDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getApplicationErrorDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, ApplicationErrorDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getApplicationErrorDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, ApplicationErrorDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(systemDetailFunctionEClass, SystemDetailFunction.class, "SystemDetailFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSystemDetailFunction_CompanyIdentification(), ecorePackage.getEString(), "companyIdentification", null, 0, 1, SystemDetailFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSystemDetailFunction_LocationCode(), ecorePackage.getEString(), "locationCode", null, 0, 1, SystemDetailFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSystemDetailFunction_LocationName(), ecorePackage.getEString(), "locationName", null, 0, 1, SystemDetailFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(taxDetailEClass, TaxDetail.class, "TaxDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTaxDetail_TaxRateDescriptionCode(), ecorePackage.getEString(), "taxRateDescriptionCode", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxDetail_CodeListIdentificationCode1(), ecorePackage.getEString(), "codeListIdentificationCode1", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxDetail_CodeListResponsibleAgencyCode1(), ecorePackage.getEString(), "codeListResponsibleAgencyCode1", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxDetail_TaxRateDescription(), ecorePackage.getEString(), "taxRateDescription", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxDetail_TaxRateBasisCode(), ecorePackage.getEString(), "taxRateBasisCode", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxDetail_CodeListIdentificationCode2(), ecorePackage.getEString(), "codeListIdentificationCode2", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxDetail_CodeListResponsibleAgencyCode2(), ecorePackage.getEString(), "codeListResponsibleAgencyCode2", null, 0, 1, TaxDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(taxAccountDetailEClass, TaxAccountDetail.class, "TaxAccountDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTaxAccountDetail_TaxAccountCode(), ecorePackage.getEString(), "taxAccountCode", null, 0, 1, TaxAccountDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxAccountDetail_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, TaxAccountDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxAccountDetail_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, TaxAccountDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(taxTypeEClass, TaxType.class, "TaxType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTaxType_TaxTypeNameCode(), ecorePackage.getEString(), "taxTypeNameCode", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxType_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxType_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaxType_TaxTypeName(), ecorePackage.getEString(), "taxTypeName", null, 0, 1, TaxType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(currencyDetailEClass, CurrencyDetail.class, "CurrencyDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCurrencyDetail_CurrencyUsageCodeQualifier(), ecorePackage.getEString(), "currencyUsageCodeQualifier", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCurrencyDetail_CurrencyIdentificationCode(), ecorePackage.getEString(), "currencyIdentificationCode", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCurrencyDetail_CurrencyTypeCodeQualifier(), ecorePackage.getEString(), "currencyTypeCodeQualifier", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCurrencyDetail_CurrencyRateValue(), ecorePackage.getEString(), "currencyRateValue", null, 0, 1, CurrencyDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(documentMessageIdentificationEClass, DocumentMessageIdentification.class, "DocumentMessageIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDocumentMessageIdentification_DocumentIdentifier(), ecorePackage.getEString(), "documentIdentifier", null, 0, 1, DocumentMessageIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDocumentMessageIdentification_VersionIdentifier(), ecorePackage.getEString(), "versionIdentifier", null, 0, 1, DocumentMessageIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDocumentMessageIdentification_RevisionIdentifier(), ecorePackage.getEString(), "revisionIdentifier", null, 0, 1, DocumentMessageIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(documentMessageEClass, DocumentMessage.class, "DocumentMessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDocumentMessage_DocumentNameCode(), ecorePackage.getEString(), "documentNameCode", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDocumentMessage_CodeListIdentificationCode(), ecorePackage.getEString(), "codeListIdentificationCode", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDocumentMessage_CodeListResponsibleAgencyCode(), ecorePackage.getEString(), "codeListResponsibleAgencyCode", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDocumentMessage_DocumentName(), ecorePackage.getEString(), "documentName", null, 0, 1, DocumentMessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(originatorFunctionEClass, OriginatorFunction.class, "OriginatorFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getOriginatorFunction_CountryCode(), ecorePackage.getEString(), "countryCode", null, 0, 1, OriginatorFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getOriginatorFunction_CurrencyCode(), ecorePackage.getEString(), "currencyCode", null, 0, 1, OriginatorFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getOriginatorFunction_LanguageCode(), ecorePackage.getEString(), "languageCode", null, 0, 1, OriginatorFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(originatorIdentificationFunctionEClass, OriginatorIdentificationFunction.class, "OriginatorIdentificationFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getOriginatorIdentificationFunction_TravelAgentId(), ecorePackage.getEString(), "travelAgentId", null, 0, 1, OriginatorIdentificationFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getOriginatorIdentificationFunction_InHouseId1(), ecorePackage.getEString(), "inHouseId1", null, 0, 1, OriginatorIdentificationFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getOriginatorIdentificationFunction_InHouseId2(), ecorePackage.getEString(), "inHouseId2", null, 0, 1, OriginatorIdentificationFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(locationFunctionEClass, LocationFunction.class, "LocationFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLocationFunction_LocationId(), ecorePackage.getEString(), "locationId", null, 0, 1, LocationFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLocationFunction_LocationName(), ecorePackage.getEString(), "locationName", null, 0, 1, LocationFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(interchangerFunctionEClass, InterchangerFunction.class, "InterchangerFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInterchangerFunction_Interchange(), ecorePackage.getEString(), "interchange", null, 0, 1, InterchangerFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInterchangerFunction_Interchange2(), ecorePackage.getEString(), "interchange2", null, 0, 1, InterchangerFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(dateOnlyFunctionEClass, DateOnlyFunction.class, "DateOnlyFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDateOnlyFunction_Date6(), ecorePackage.getEString(), "date6", null, 0, 1, DateOnlyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(dateAndTimeFunctionEClass, DateAndTimeFunction.class, "DateAndTimeFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDateAndTimeFunction_Date6(), ecorePackage.getEString(), "date6", null, 0, 1, DateAndTimeFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDateAndTimeFunction_Time4(), ecorePackage.getEString(), "time4", null, 0, 1, DateAndTimeFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(dateTimePeriodEClass, DateTimePeriod.class, "DateTimePeriod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDateTimePeriod_DateTimePeriodFunctionCodeQualifier(), ecorePackage.getEString(), "dateTimePeriodFunctionCodeQualifier", null, 0, 1, DateTimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDateTimePeriod_DateTimePeriodValue(), ecorePackage.getEString(), "dateTimePeriodValue", null, 0, 1, DateTimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDateTimePeriod_DateTimePeriodFormatCode(), ecorePackage.getEString(), "dateTimePeriodFormatCode", null, 0, 1, DateTimePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    // Create resource
-    createResource(eNS_URI);
+    if (eClassifier.getInstanceClassName() == null)
+    {
+      eClassifier.setInstanceClassName("io.thlaegler.edifact.edilang." + eClassifier.getName());
+      setGeneratedClassName(eClassifier);
+    }
   }
 
 } //EdilangPackageImpl

@@ -8,178 +8,178 @@ EdiModel:
 	segments+=AbstractEdiSegment*;
 
 AbstractEdiSegment:
-	UNASegment | 
-	UNBSegment | // header for trailer UNZ
-	UNHSegment | // header for trailer UNT
+	UNASegment | // Header UNA
+	UNBSegment | // Header for trailer UNZ
+	UNHSegment | // Header for trailer UNT
 	
-	MSGSegment | // Message type identification
-	ORGSegment | // Organisation
-	POCSegment | // Purpose of conveyance call
-	ODISegment | // Origin/destination
-	UCISegment | // ?
-	PDISegment | // Person demographic information
-	RPISegment | // ?
-	TVLSegment | // Travel itinerary
+	ADRSegment | // Address
+	AGRSegment | // Agreement identification
+	AJTSegment | // Adjustment details
+	ALCSegment | // Allowance or charge
+	ALISegment | // Additional information
+	APPSegment | // Applicability
+	APRSegment | // Additional price information
+	ARDSegment | // Monetary amount function
+	ARRSegment | // Array information
+	ASISegment | // Array structure identification
+	ATTSegment | // Attribute
+	AUTSegment | // Authentication result
+	BASSegment | // Basis
 	BGMSegment | // Beginning of message
-	DTMSegment | // Date/time/period
-	NADSegment | // Name and address
-	RFFSegment | // Reference
-	CUXSegment | // Currencies
-	TAXSegment | // Duty/tax/fee details
-	LINSegment | // Line item
-	QTYSegment | // Quantity
-	MOASegment | // Monetary amount
-	PRISegment | // Price details
-	PATSegment | // Payment terms basis
-	PCISegment | // Package identification
-	CTASegment | // Contact information
+	BIISegment | // Structure identification
+	BUSSegment | // Business function
+	CAVSegment | // Characteristic value
+	CCDSegment | // Credit cover details
+	CCISegment | // Characteristic/class id
+	CDISegment | // Physical or logical state
+	CDSSegment | // Code set identification
+	CDVSegment | // Code value definition
+	CEDSegment | // Computer environment details
+	CINSegment | // Clinical information
+	CLASegment | // Clause identification
+	CLISegment | // Clinical intervention
+	CMPSegment | // Composite data element identification
+	CNISegment | // Consignment information
 	CNTSegment | // Control total
-	FTXSegment | // Free text
+	CODSegment | // Component details
+	COMSegment | // Communication contact
+	COTSegment | // Contribution details
+	CPISegment | // Charge payment instructions
+	CPSSegment | // Consignment packing sequence
+	CPTSegment | // Account identification
+	CSTSegment | // Customs status of goods
+	CTASegment | // Contact information
+	CUXSegment | // Currencies
+	DAMSegment | // Damage
+	DFNSegment | // Definition function
+	DGSSegment | // Dangerous goods
+	DIISegment | // Directory identification
+	DIMSegment | // Dimensions
+	DLISegment | // Document line identification
+	DLMSegment | // Delivery limitations
+	DMSSegment | // Document/message summary
+	DOCSegment | // Document/message details
+	DRDSegment | // Data representation details
+	DSGSegment | // Dosage administration
+	DSISegment | // Data set identification
+	DTMSegment | // Date/time/period
+	EDTSegment | // Editing details
+	EFISegment | // External file link identification
+	ELMSegment | // Simple data element details
+	ELUSegment | // Data element usage details
+	ELVSegment | // Element value definition
+	EMPSegment | // Employment details
+	EQASegment | // Attached equipment
+	EQDSegment | // Equipment details
+	EQNSegment | // Number of units
+	ERPSegment | // Error point details
 	ERCSegment | // Application error information
-	
-//    ADR  Address
-//    AGR  Agreement identification
-//    AJT  Adjustment details
-//    ALC  Allowance or charge
-//    ALI  Additional information
-//+   APP  Applicability
-//    APR  Additional price information
-//    ARD  Monetary amount function
-//    ARR  Array information
-//    ASI  Array structure identification
-//    ATT  Attribute
-//    AUT  Authentication result
-//+   BAS  Basis
-//    BII  Structure identification
-//    BUS  Business function
-//    CAV  Characteristic value
-//    CCD  Credit cover details
-//    CCI  Characteristic/class id
-//    CDI  Physical or logical state
-//    CDS  Code set identification
-//    CDV  Code value definition
-//    CED  Computer environment details
-//    CIN  Clinical information
-//+   CLA  Clause identification
-//    CLI  Clinical intervention
-//    CMP  Composite data element identification
-//    CNI  Consignment information
-//    COD  Component details
-//    COM  Communication contact
-//    COT  Contribution details
-//    CPI  Charge payment instructions
-//    CPS  Consignment packing sequence
-//    CPT  Account identification
-//    CST  Customs status of goods
-//    DAM  Damage
-//    DFN  Definition function
-//    DGS  Dangerous goods
-//    DII  Directory identification
-//    DIM  Dimensions
-//    DLI  Document line identification
-//    DLM  Delivery limitations
-//    DMS  Document/message summary
-//    DOC  Document/message details
-//    DRD  Data representation details
-//    DSG  Dosage administration
-//    DSI  Data set identification
-//    EDT  Editing details
-//    EFI  External file link identification
-//    ELM  Simple data element details
-//    ELU  Data element usage details
-//    ELV  Element value definition
-//    EMP  Employment details
-//    EQA  Attached equipment
-//    EQD  Equipment details
-//    EQN  Number of units
-//    ERP  Error point details
-//*   EVE  Event
-//X   EVT  Event
-//    FCA  Financial charges allocation
-//    FII  Financial institution information
-//    FNS  Footnote set
-//    FNT  Footnote
-//    FOR  Formula
-//    FSQ  Formula sequence
-//    GDS  Nature of cargo
-//    GEI  Processing information
-//    GID  Goods item details
-//    GIN  Goods identity number
-//    GIR  Related identification numbers
-//X   GIS  General indicator
-//    GOR  Governmental requirements
-//    GRU  Segment group usage details
-//    HAN  Handling instructions
-//    HYN  Hierarchy information
-//    ICD  Insurance cover description
-//    IDE  Identity
-//*   IFD  Information detail
-//    IHC  Person characteristic
-//    IMD  Item description
-//    IND  Index details
-//    INP  Parties and instruction
-//    INV  Inventory management related details
-//    IRQ  Information required
-//    LAN  Language
-//    LOC  Place/location identification
-//    MEA  Measurements
-//    MEM  Membership details
-//    MKS  Market/sales channel information
-//    NAT  Nationality
-//    PAC  Package
-//    PAI  Payment instructions
-//    PAS  Attendance
-//    PCC  Premium calculation component details
-//*   PCD  Percentage details
-//+   PER  Period related details
-//    PGI  Product group information
-//    PIA  Additional product id
-//    PNA  Party identification
-//    PRC  Process identification
-//+   PRV  Proviso details
-//    PSD  Physical sample description
-//    PTY  Priority
-//    PYT  Payment terms
-//    QRS  Query and response
-//    QUA  Qualification
-//    QVR  Quantity variances
-//    RCS  Requirements and conditions
-//    REL  Relationship
-//    RJL  Accounting journal identification
-//    RNG  Range details
-//    ROD  Risk object type
-//    RSL  Result
-//*   RTE  Rate details
-//    SAL  Remuneration type identification
-//    SCC  Scheduling conditions
-//    SCD  Structure component definition
-//    SEG  Segment identification
-//    SEL  Seal number
-//    SEQ  Sequence details
-//    SFI  Safety information
-//    SGP  Split goods placement
-//    SGU  Segment usage details
-//    SPR  Organisation classification details
-//    SPS  Sampling parameters for summary statistics
-//    STA  Statistics
-//    STC  Statistical concept
-//    STG  Stages
-//    STS  Status
-//    TCC  Transport charge/rate calculations
-//    TDT  Details of transport
-//    TEM  Test method
-//    TMD  Transport movement details
-//    TMP  Temperature
-//    TOD  Terms of delivery or transport
-//    TPL  Transport placement
-//    TRU  Technical rules
-//    TSR  Transport service requirements
-//    VLI  Value list identification
+	EVESegment | // Event
+	EVTSegment | // Event
+	FCASegment | // Financial charges allocation
+	FIISegment | // Financial institution information
+	FNSSegment | // Footnote set
+	FNTSegment | // Footnote
+	FORSegment | // Formula
+	FSQSegment | // Formula sequence
+	FTXSegment | // Free text
+	GDSSegment | // Nature of cargo
+	GEISegment | // Processing information
+	GIDSegment | // Goods item details
+	GINSegment | // Goods identity number
+	GIRSegment | // Related identification numbers
+	GISSegment | // General indicator
+	GORSegment | // Governmental requirements
+	GRUSegment | // Segment group usage details
+	HANSegment | // Handling instructions
+	HYNSegment | // Hierarchy information
+	ICDSegment | // Insurance cover description
+	IDESegment | // Identity
+	IFDSegment | // Information detail
+	IHCSegment | // Person characteristic
+	IMDSegment | // Item description
+	INDSegment | // Index details
+	INPSegment | // Parties and instruction
+	INVSegment | // Inventory management related details
+	IRQSegment | // Information required
+	LANSegment | // Language
+	LINSegment | // Line item
+	LOCSegment | // Place/location identification
+	MEASegment | // Measurements
+	MEMSegment | // Membership details
+	MKSSegment | // Market/sales channel information
+	MOASegment | // Monetary amount
+	MSGSegment | // Message type identification
+	NADSegment | // Name and address
+	NATSegment | // Nationality
+	ODISegment | // Origin/destination
+	ORGSegment | // Organisation
+	PACSegment | // Package
+	PAISegment | // Payment instructions
+	PASSegment | // Attendance
+	PATSegment | // Payment terms basis
+	PCCSegment | // Premium calculation component details
+	PCDSegment | // Percentage details
+	PCISegment | // Package identification
+	PDISegment | // Person demographic information
+	PERSegment | // Period related details
+	PGISegment | // Product group information
+	PIASegment | // Additional product id
+	PNASegment | // Party identification
+	POCSegment | // Purpose of conveyance call
+	PRCSegment | // Process identification
+	PRISegment | // Price details
+	PRVSegment | // Proviso details
+	PSDSegment | // Physical sample description
+	PTYSegment | // Priority
+	PYTSegment | // Payment terms
+	QRSSegment | // Query and response
+	QTYSegment | // Quantity
+	QUASegment | // Qualification
+	QVRSegment | // Quantity variances
+	RCSSegment | // Requirements and conditions
+	RELSegment | // Relationship
+	RFFSegment | // Reference
+	RJLSegment | // Accounting journal identification
+	RNGSegment | // Range details
+	RODSegment | // Risk object type
+	RPISegment | // ?
+	RSLSegment | // Result
+	RTESegment | // Rate details
+	SALSegment | // Remuneration type identification
+	SCCSegment | // Scheduling conditions
+	SCDSegment | // Structure component definition
+	SEGSegment | // Segment identification
+	SELSegment | // Seal number
+	SEQSegment | // Sequence details
+	SFISegment | // Safety information
+	SGPSegment | // Split goods placement
+	SGUSegment | // Segment usage details
+	SPRSegment | // Organisation classification details
+	SPSSegment | // Sampling parameters for summary statistics
+	STASegment | // Statistics
+	STCSegment | // Statistical concept
+	STGSegment | // Stages
+	STSSegment | // Status
+	TAXSegment | // Duty/tax/fee details
+	TCCSegment | // Transport charge/rate calculations
+	TDTSegment | // Details of transport
+	TEMSegment | // Test method
+	TMDSegment | // Transport movement details
+	TMPSegment | // Temperature
+	TODSegment | // Terms of delivery or transport
+	TPLSegment | // Transport placement
+	TRUSegment | // Technical rules
+	TSRSegment | // Transport service requirements
+	TVLSegment | // Travel itinerary
+	UCISegment | // ?
+	VLISegment | // Value list identification
 
-	UNSSegment |
-	UNZSegment | // trailer for header UNB
-	UNTSegment // trailer for header UNH
+	UNSSegment | // Trailer UNS
+	UNZSegment | // Trailer for header UNB
+	UNTSegment // Trailer for header UNH
 ;
+
 
 UNASegment:
 	segment="UNA"
@@ -228,6 +228,977 @@ UNHSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
+
+
+
+//TODO
+ADRSegment:
+	segment="ADR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+AGRSegment:
+	segment="AGR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+AJTSegment:
+	segment="AJT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ALCSegment:
+	segment="ALC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ALISegment:
+	segment="ALI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+APPSegment:
+	segment="APP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+APRSegment:
+	segment="APR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ARDSegment:
+	segment="ARD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ARRSegment:
+	segment="ARR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ASISegment:
+	segment="ASI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ATTSegment:
+	segment="ATT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+AUTSegment:
+	segment="AUT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+BASSegment:
+	segment="BAS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+BIISegment:
+	segment="BII"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+BUSSegment:
+	segment="BUS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CAVSegment:
+	segment="CAV"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CCDSegment:
+	segment="CCD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CCISegment:
+	segment="CCI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CDISegment:
+	segment="CDI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CDSSegment:
+	segment="CDS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CDVSegment:
+	segment="CDV"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CEDSegment:
+	segment="CED"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CINSegment:
+	segment="CIN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+
+CLASegment:
+	segment="CLA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CLISegment:
+	segment="CLI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CMPSegment:
+	segment="CMP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CNISegment:
+	segment="CNI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CODSegment:
+	segment="COD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+COMSegment:
+	segment="COM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+COTSegment:
+	segment="COT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CPISegment:
+	segment="CPI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CPSSegment:
+	segment="CPS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CPTSegment:
+	segment="CPT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CSTSegment:
+	segment="CST"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DAMSegment:
+	segment="DAM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DFNSegment:
+	segment="DFN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DGSSegment:
+	segment="DGS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DIISegment:
+	segment="DII"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DIMSegment:
+	segment="DIM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DLISegment:
+	segment="DLI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DLMSegment:
+	segment="DLM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DMSSegment:
+	segment="DMS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DOCSegment:
+	segment="DOC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DRDSegment:
+	segment="DRD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DSGSegment:
+	segment="DSG"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DSISegment:
+	segment="DSI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+EDTSegment:
+	segment="EDT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+EFISegment:
+	segment="EFI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ELMSegment:
+	segment="ELM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ELUSegment:
+	segment="ELU"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ELVSegment:
+	segment="ELV"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+EMPSegment:
+	segment="EMP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+EQASegment:
+	segment="EQA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+EQDSegment:
+	segment="EQD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+
+EQNSegment:
+	segment="EQN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ERPSegment:
+	segment="ERP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+EVESegment:
+	segment="EVE"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+EVTSegment:
+	segment="EVT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FCASegment:
+	segment="FCA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FIISegment:
+	segment="FII"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FNSSegment:
+	segment="FNS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FNTSegment:
+	segment="FNT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FORSegment:
+	segment="FOR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FSQSegment:
+	segment="FSQ"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GDSSegment:
+	segment="GDS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GEISegment:
+	segment="GEI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GIDSegment:
+	segment="GID"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GINSegment:
+	segment="GIN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GIRSegment:
+	segment="GIR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GISSegment:
+	segment="GIS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GORSegment:
+	segment="GOR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+GRUSegment:
+	segment="GRU"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+HANSegment:
+	segment="HAN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+HYNSegment:
+	segment="HYN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ICDSegment:
+	segment="ICD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+IDESegment:
+	segment="IDE"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+IFDSegment:
+	segment="IFD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+IHCSegment:
+	segment="IHC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+IMDSegment:
+	segment="IMD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+INDSegment:
+	segment="IND"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+INPSegment:
+	segment="INP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+INVSegment:
+	segment="INV"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+IRQSegment:
+	segment="IRQ"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+LANSegment:
+	segment="LAN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+LOCSegment:
+	segment="LOC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+MEASegment:
+	segment="MEA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+MEMSegment:
+	segment="MEM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+MKSSegment:
+	segment="MKS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+NATSegment:
+	segment="NAT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+
+PACSegment:
+	segment="PAC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PAISegment:
+	segment="PAI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PASSegment:
+	segment="PAS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PCCSegment:
+	segment="PCC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PCDSegment:
+	segment="PCD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PERSegment:
+	segment="PER"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PGISegment:
+	segment="PGI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PIASegment:
+	segment="PIA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PNASegment:
+	segment="PNA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PRCSegment:
+	segment="PRC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PRVSegment:
+	segment="PRV"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PSDSegment:
+	segment="PSD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PTYSegment:
+	segment="PTY"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PYTSegment:
+	segment="PYT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+QRSSegment:
+	segment="QRS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+QUASegment:
+	segment="QUA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+QVRSegment:
+	segment="QVR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RCSSegment:
+	segment="RCS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RELSegment:
+	segment="REL"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RJLSegment:
+	segment="RJL"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RNGSegment:
+	segment="RNG"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RODSegment:
+	segment="ROD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RSLSegment:
+	segment="RSL"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RTESegment:
+	segment="RTE"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SALSegment:
+	segment="SAL"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SCCSegment:
+	segment="SCC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SCDSegment:
+	segment="SCD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SEGSegment:
+	segment="SEG"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SELSegment:
+	segment="SEL"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SEQSegment:
+	segment="SEQ"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SFISegment:
+	segment="SFI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SGPSegment:
+	segment="SGP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SGUSegment:
+	segment="SGU"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SPRSegment:
+	segment="SPR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SPSSegment:
+	segment="SPS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+STASegment:
+	segment="STA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+STCSegment:
+	segment="STC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+STGSegment:
+	segment="STG"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+STSSegment:
+	segment="STS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TCCSegment:
+	segment="TCC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TDTSegment:
+	segment="TDT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TEMSegment:
+	segment="TEM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TMDSegment:
+	segment="TMD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TMPSegment:
+	segment="TMP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TODSegment:
+	segment="TOD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TPLSegment:
+	segment="TPL"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TRUSegment:
+	segment="TRU"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TSRSegment:
+	segment="TSR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+VLISegment:
+	segment="VLI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+
+
 //MSG+1:46'
 MSGSegment:
 	segment="MSG"

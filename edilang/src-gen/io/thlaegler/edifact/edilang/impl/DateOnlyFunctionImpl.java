@@ -65,7 +65,7 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.DATE_ONLY_FUNCTION;
+    return EdilangPackage.eINSTANCE.getDateOnlyFunction();
   }
 
   /**

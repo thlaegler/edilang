@@ -65,7 +65,7 @@ public class PATSegmentImpl extends AbstractEdiSegmentImpl implements PATSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.PAT_SEGMENT;
+    return EdilangPackage.eINSTANCE.getPATSegment();
   }
 
   /**

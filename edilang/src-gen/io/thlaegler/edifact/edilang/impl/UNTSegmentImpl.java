@@ -86,7 +86,7 @@ public class UNTSegmentImpl extends AbstractEdiSegmentImpl implements UNTSegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.UNT_SEGMENT;
+    return EdilangPackage.eINSTANCE.getUNTSegment();
   }
 
   /**

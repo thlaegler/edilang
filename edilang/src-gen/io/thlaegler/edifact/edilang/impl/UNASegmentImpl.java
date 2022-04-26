@@ -35,7 +35,7 @@ public class UNASegmentImpl extends AbstractEdiSegmentImpl implements UNASegment
   @Override
   protected EClass eStaticClass()
   {
-    return EdilangPackage.Literals.UNA_SEGMENT;
+    return EdilangPackage.eINSTANCE.getUNASegment();
   }
 
 } //UNASegmentImpl
