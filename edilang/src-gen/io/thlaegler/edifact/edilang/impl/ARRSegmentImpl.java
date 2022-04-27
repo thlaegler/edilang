@@ -4,13 +4,24 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.ARRSegment;
+import io.thlaegler.edifact.edilang.ArrayCellDetail;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.PositionIdentification;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +31,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ARRSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ARRSegmentImpl#getPositionIdentification <em>Position Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ARRSegmentImpl#getArrayCellDetails <em>Array Cell Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +40,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ARRSegmentImpl extends AbstractEdiSegmentImpl implements ARRSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getPositionIdentification() <em>Position Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getPositionIdentification()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected PositionIdentification positionIdentification;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getArrayCellDetails() <em>Array Cell Details</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getArrayCellDetails()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected EList<ArrayCellDetail> arrayCellDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +86,26 @@ public class ARRSegmentImpl extends AbstractEdiSegmentImpl implements ARRSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public PositionIdentification getPositionIdentification()
   {
-    return todo;
+    return positionIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPositionIdentification(PositionIdentification newPositionIdentification, NotificationChain msgs)
+  {
+    PositionIdentification oldPositionIdentification = positionIdentification;
+    positionIdentification = newPositionIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION, oldPositionIdentification, newPositionIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +114,53 @@ public class ARRSegmentImpl extends AbstractEdiSegmentImpl implements ARRSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setPositionIdentification(PositionIdentification newPositionIdentification)
   {
-    String oldTodo = todo;
-    todo = newTodo;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ARR_SEGMENT__TODO, oldTodo, todo));
+    if (newPositionIdentification != positionIdentification)
+    {
+      NotificationChain msgs = null;
+      if (positionIdentification != null)
+        msgs = ((InternalEObject)positionIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION, null, msgs);
+      if (newPositionIdentification != null)
+        msgs = ((InternalEObject)newPositionIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION, null, msgs);
+      msgs = basicSetPositionIdentification(newPositionIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION, newPositionIdentification, newPositionIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<ArrayCellDetail> getArrayCellDetails()
+  {
+    if (arrayCellDetails == null)
+    {
+      arrayCellDetails = new EObjectContainmentEList<ArrayCellDetail>(ArrayCellDetail.class, this, EdilangPackage.ARR_SEGMENT__ARRAY_CELL_DETAILS);
+    }
+    return arrayCellDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION:
+        return basicSetPositionIdentification(null, msgs);
+      case EdilangPackage.ARR_SEGMENT__ARRAY_CELL_DETAILS:
+        return ((InternalEList<?>)getArrayCellDetails()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +173,10 @@ public class ARRSegmentImpl extends AbstractEdiSegmentImpl implements ARRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ARR_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION:
+        return getPositionIdentification();
+      case EdilangPackage.ARR_SEGMENT__ARRAY_CELL_DETAILS:
+        return getArrayCellDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -114,13 +186,18 @@ public class ARRSegmentImpl extends AbstractEdiSegmentImpl implements ARRSegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.ARR_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION:
+        setPositionIdentification((PositionIdentification)newValue);
+        return;
+      case EdilangPackage.ARR_SEGMENT__ARRAY_CELL_DETAILS:
+        getArrayCellDetails().clear();
+        getArrayCellDetails().addAll((Collection<? extends ArrayCellDetail>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +213,11 @@ public class ARRSegmentImpl extends AbstractEdiSegmentImpl implements ARRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ARR_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION:
+        setPositionIdentification((PositionIdentification)null);
+        return;
+      case EdilangPackage.ARR_SEGMENT__ARRAY_CELL_DETAILS:
+        getArrayCellDetails().clear();
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +233,12 @@ public class ARRSegmentImpl extends AbstractEdiSegmentImpl implements ARRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ARR_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.ARR_SEGMENT__POSITION_IDENTIFICATION:
+        return positionIdentification != null;
+      case EdilangPackage.ARR_SEGMENT__ARRAY_CELL_DETAILS:
+        return arrayCellDetails != null && !arrayCellDetails.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
-    result.append(')');
-    return result.toString();
   }
 
 } //ARRSegmentImpl

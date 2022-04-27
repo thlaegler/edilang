@@ -2067,6 +2067,222 @@ public interface EdilangFactory extends EFactory
   BasisType createBasisType();
 
   /**
+   * Returns a new object of class '<em>Communication Contact</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Communication Contact</em>'.
+   * @generated
+   */
+  CommunicationContact createCommunicationContact();
+
+  /**
+   * Returns a new object of class '<em>Agreement Type Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Agreement Type Identification</em>'.
+   * @generated
+   */
+  AgreementTypeIdentification createAgreementTypeIdentification();
+
+  /**
+   * Returns a new object of class '<em>Allowance Charge Information</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Allowance Charge Information</em>'.
+   * @generated
+   */
+  AllowanceChargeInformation createAllowanceChargeInformation();
+
+  /**
+   * Returns a new object of class '<em>Special Services Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Special Services Identification</em>'.
+   * @generated
+   */
+  SpecialServicesIdentification createSpecialServicesIdentification();
+
+  /**
+   * Returns a new object of class '<em>Applicability Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Applicability Type</em>'.
+   * @generated
+   */
+  ApplicabilityType createApplicabilityType();
+
+  /**
+   * Returns a new object of class '<em>Price Multiplier Information</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Price Multiplier Information</em>'.
+   * @generated
+   */
+  PriceMultiplierInformation createPriceMultiplierInformation();
+
+  /**
+   * Returns a new object of class '<em>Monetary Amount Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Monetary Amount Function</em>'.
+   * @generated
+   */
+  MonetaryAmountFunction createMonetaryAmountFunction();
+
+  /**
+   * Returns a new object of class '<em>Monetary Amount Function Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Monetary Amount Function Detail</em>'.
+   * @generated
+   */
+  MonetaryAmountFunctionDetail createMonetaryAmountFunctionDetail();
+
+  /**
+   * Returns a new object of class '<em>Array Cell Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Array Cell Detail</em>'.
+   * @generated
+   */
+  ArrayCellDetail createArrayCellDetail();
+
+  /**
+   * Returns a new object of class '<em>Array Structure Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Array Structure Identification</em>'.
+   * @generated
+   */
+  ArrayStructureIdentification createArrayStructureIdentification();
+
+  /**
+   * Returns a new object of class '<em>Bill Level Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bill Level Identification</em>'.
+   * @generated
+   */
+  BillLevelIdentification createBillLevelIdentification();
+
+  /**
+   * Returns a new object of class '<em>Characteristic Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Characteristic Value</em>'.
+   * @generated
+   */
+  CharacteristicValue createCharacteristicValue();
+
+  /**
+   * Returns a new object of class '<em>Measurement Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Measurement Detail</em>'.
+   * @generated
+   */
+  MeasurementDetail createMeasurementDetail();
+
+  /**
+   * Returns a new object of class '<em>Physical Logical State Information</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Physical Logical State Information</em>'.
+   * @generated
+   */
+  PhysicalLogicalStateInformation createPhysicalLogicalStateInformation();
+
+  /**
+   * Returns a new object of class '<em>Code Set Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Code Set Identification</em>'.
+   * @generated
+   */
+  CodeSetIdentification createCodeSetIdentification();
+
+  /**
+   * Returns a new object of class '<em>Computer Environment Identification</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Computer Environment Identification</em>'.
+   * @generated
+   */
+  ComputerEnvironmentIdentification createComputerEnvironmentIdentification();
+
+  /**
+   * Returns a new object of class '<em>Clinical Information Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Clinical Information Detail</em>'.
+   * @generated
+   */
+  ClinicalInformationDetail createClinicalInformationDetail();
+
+  /**
+   * Returns a new object of class '<em>Certainty Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Certainty Detail</em>'.
+   * @generated
+   */
+  CertaintyDetail createCertaintyDetail();
+
+  /**
+   * Returns a new object of class '<em>Clause Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Clause Name</em>'.
+   * @generated
+   */
+  ClauseName createClauseName();
+
+  /**
+   * Returns a new object of class '<em>Clinical Intervention Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Clinical Intervention Detail</em>'.
+   * @generated
+   */
+  ClinicalInterventionDetail createClinicalInterventionDetail();
+
+  /**
+   * Returns a new object of class '<em>Processing Indicator</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Processing Indicator</em>'.
+   * @generated
+   */
+  ProcessingIndicator createProcessingIndicator();
+
+  /**
+   * Returns a new object of class '<em>Marks Labels</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Marks Labels</em>'.
+   * @generated
+   */
+  MarksLabels createMarksLabels();
+
+  /**
+   * Returns a new object of class '<em>Type Of Marking</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Of Marking</em>'.
+   * @generated
+   */
+  TypeOfMarking createTypeOfMarking();
+
+  /**
+   * Returns a new object of class '<em>Government Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Government Action</em>'.
+   * @generated
+   */
+  GovernmentAction createGovernmentAction();
+
+  /**
    * Returns a new object of class '<em>Date Only Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

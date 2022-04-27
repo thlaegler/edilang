@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CCDSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CCDSegment#getCreditCoverRequestTypeCode <em>Credit Cover Request Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CCDSegment#getCreditCoverResponseTypeCode <em>Credit Cover Response Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CCDSegment#getCreditCoverRequestReasonCode <em>Credit Cover Request Reason Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCDSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface CCDSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Credit Cover Request Type Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCDSegment_Todo()
+   * @return the value of the '<em>Credit Cover Request Type Code</em>' attribute.
+   * @see #setCreditCoverRequestTypeCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCDSegment_CreditCoverRequestTypeCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getCreditCoverRequestTypeCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCDSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCDSegment#getCreditCoverRequestTypeCode <em>Credit Cover Request Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Credit Cover Request Type Code</em>' attribute.
+   * @see #getCreditCoverRequestTypeCode()
    * @generated
    */
-  void setTodo(String value);
+  void setCreditCoverRequestTypeCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Credit Cover Response Type Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Credit Cover Response Type Code</em>' attribute.
+   * @see #setCreditCoverResponseTypeCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCDSegment_CreditCoverResponseTypeCode()
+   * @model
+   * @generated
+   */
+  String getCreditCoverResponseTypeCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCDSegment#getCreditCoverResponseTypeCode <em>Credit Cover Response Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Credit Cover Response Type Code</em>' attribute.
+   * @see #getCreditCoverResponseTypeCode()
+   * @generated
+   */
+  void setCreditCoverResponseTypeCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Credit Cover Request Reason Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Credit Cover Request Reason Code</em>' attribute.
+   * @see #setCreditCoverRequestReasonCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCDSegment_CreditCoverRequestReasonCode()
+   * @model
+   * @generated
+   */
+  String getCreditCoverRequestReasonCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCDSegment#getCreditCoverRequestReasonCode <em>Credit Cover Request Reason Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Credit Cover Request Reason Code</em>' attribute.
+   * @see #getCreditCoverRequestReasonCode()
+   * @generated
+   */
+  void setCreditCoverRequestReasonCode(String value);
 
 } // CCDSegment

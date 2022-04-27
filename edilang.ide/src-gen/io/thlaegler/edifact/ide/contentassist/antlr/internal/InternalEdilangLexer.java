@@ -3826,8 +3826,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_QUOTE_AND_NL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60326:19: ( ( '\\'' | '~' ) ( '\\n' )? )
-            // InternalEdilang.g:60326:21: ( '\\'' | '~' ) ( '\\n' )?
+            // InternalEdilang.g:71795:19: ( ( '\\'' | '~' ) ( '\\n' )? )
+            // InternalEdilang.g:71795:21: ( '\\'' | '~' ) ( '\\n' )?
             {
             if ( input.LA(1)=='\''||input.LA(1)=='~' ) {
                 input.consume();
@@ -3838,7 +3838,7 @@ public class InternalEdilangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalEdilang.g:60326:32: ( '\\n' )?
+            // InternalEdilang.g:71795:32: ( '\\n' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -3847,7 +3847,7 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalEdilang.g:60326:32: '\\n'
+                    // InternalEdilang.g:71795:32: '\\n'
                     {
                     match('\n'); 
 
@@ -3872,8 +3872,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60328:11: ( ( '+' | '*' ) )
-            // InternalEdilang.g:60328:13: ( '+' | '*' )
+            // InternalEdilang.g:71797:11: ( ( '+' | '*' ) )
+            // InternalEdilang.g:71797:13: ( '+' | '*' )
             {
             if ( (input.LA(1)>='*' && input.LA(1)<='+') ) {
                 input.consume();
@@ -3900,8 +3900,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60330:12: ( ':' )
-            // InternalEdilang.g:60330:14: ':'
+            // InternalEdilang.g:71799:12: ( ':' )
+            // InternalEdilang.g:71799:14: ':'
             {
             match(':'); 
 
@@ -3920,8 +3920,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60332:10: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
-            // InternalEdilang.g:60332:12: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            // InternalEdilang.g:71801:10: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalEdilang.g:71801:12: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
             {
             matchRange('0','9'); 
             matchRange('0','9'); 
@@ -3955,8 +3955,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60334:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )? )
-            // InternalEdilang.g:60334:11: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
+            // InternalEdilang.g:71803:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )? )
+            // InternalEdilang.g:71803:11: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -3967,7 +3967,7 @@ public class InternalEdilangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalEdilang.g:60334:40: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
+            // InternalEdilang.g:71803:40: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -3976,9 +3976,9 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalEdilang.g:60334:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )
+                    // InternalEdilang.g:71803:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )
                     {
-                    // InternalEdilang.g:60334:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )*
+                    // InternalEdilang.g:71803:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )*
                     loop2:
                     do {
                         int alt2=2;
@@ -4051,11 +4051,11 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60336:13: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // InternalEdilang.g:60336:15: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // InternalEdilang.g:71805:13: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // InternalEdilang.g:71805:15: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // InternalEdilang.g:60336:19: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+            // InternalEdilang.g:71805:19: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
             loop4:
             do {
                 int alt4=3;
@@ -4071,7 +4071,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalEdilang.g:60336:20: '\\\\' .
+            	    // InternalEdilang.g:71805:20: '\\\\' .
             	    {
             	    match('\\'); 
             	    matchAny(); 
@@ -4079,7 +4079,7 @@ public class InternalEdilangLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // InternalEdilang.g:60336:27: ~ ( ( '\\\\' | '\"' ) )
+            	    // InternalEdilang.g:71805:27: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4116,10 +4116,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60338:9: ( ( '\\t' | '\\r' | '\\n' )+ )
-            // InternalEdilang.g:60338:11: ( '\\t' | '\\r' | '\\n' )+
+            // InternalEdilang.g:71807:9: ( ( '\\t' | '\\r' | '\\n' )+ )
+            // InternalEdilang.g:71807:11: ( '\\t' | '\\r' | '\\n' )+
             {
-            // InternalEdilang.g:60338:11: ( '\\t' | '\\r' | '\\n' )+
+            // InternalEdilang.g:71807:11: ( '\\t' | '\\r' | '\\n' )+
             int cnt5=0;
             loop5:
             do {
@@ -4173,12 +4173,12 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60340:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalEdilang.g:60340:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalEdilang.g:71809:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalEdilang.g:71809:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalEdilang.g:60340:24: ( options {greedy=false; } : . )*
+            // InternalEdilang.g:71809:24: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
@@ -4203,7 +4203,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalEdilang.g:60340:52: .
+            	    // InternalEdilang.g:71809:52: .
             	    {
             	    matchAny(); 
 
@@ -4233,12 +4233,12 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60342:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalEdilang.g:60342:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalEdilang.g:71811:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalEdilang.g:71811:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalEdilang.g:60342:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalEdilang.g:71811:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop7:
             do {
                 int alt7=2;
@@ -4251,7 +4251,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalEdilang.g:60342:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalEdilang.g:71811:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4271,7 +4271,7 @@ public class InternalEdilangLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalEdilang.g:60342:40: ( ( '\\r' )? '\\n' )?
+            // InternalEdilang.g:71811:40: ( ( '\\r' )? '\\n' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -4280,9 +4280,9 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // InternalEdilang.g:60342:41: ( '\\r' )? '\\n'
+                    // InternalEdilang.g:71811:41: ( '\\r' )? '\\n'
                     {
-                    // InternalEdilang.g:60342:41: ( '\\r' )?
+                    // InternalEdilang.g:71811:41: ( '\\r' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -4291,7 +4291,7 @@ public class InternalEdilangLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // InternalEdilang.g:60342:41: '\\r'
+                            // InternalEdilang.g:71811:41: '\\r'
                             {
                             match('\r'); 
 
@@ -4323,8 +4323,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:60344:16: ( . )
-            // InternalEdilang.g:60344:18: .
+            // InternalEdilang.g:71813:16: ( . )
+            // InternalEdilang.g:71813:18: .
             {
             matchAny(); 
 

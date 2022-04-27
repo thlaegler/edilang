@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CEDSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CEDSegment#getComputerEnvironmentDetailsCodeQualifier <em>Computer Environment Details Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CEDSegment#getComputerEnvironmentIdentification <em>Computer Environment Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CEDSegment#getFileGenerationCommandName <em>File Generation Command Name</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCEDSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface CEDSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Computer Environment Details Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCEDSegment_Todo()
+   * @return the value of the '<em>Computer Environment Details Code Qualifier</em>' attribute.
+   * @see #setComputerEnvironmentDetailsCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCEDSegment_ComputerEnvironmentDetailsCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getComputerEnvironmentDetailsCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CEDSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CEDSegment#getComputerEnvironmentDetailsCodeQualifier <em>Computer Environment Details Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Computer Environment Details Code Qualifier</em>' attribute.
+   * @see #getComputerEnvironmentDetailsCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setComputerEnvironmentDetailsCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Computer Environment Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Computer Environment Identification</em>' containment reference.
+   * @see #setComputerEnvironmentIdentification(ComputerEnvironmentIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCEDSegment_ComputerEnvironmentIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  ComputerEnvironmentIdentification getComputerEnvironmentIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CEDSegment#getComputerEnvironmentIdentification <em>Computer Environment Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Computer Environment Identification</em>' containment reference.
+   * @see #getComputerEnvironmentIdentification()
+   * @generated
+   */
+  void setComputerEnvironmentIdentification(ComputerEnvironmentIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>File Generation Command Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>File Generation Command Name</em>' attribute.
+   * @see #setFileGenerationCommandName(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCEDSegment_FileGenerationCommandName()
+   * @model
+   * @generated
+   */
+  String getFileGenerationCommandName();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CEDSegment#getFileGenerationCommandName <em>File Generation Command Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>File Generation Command Name</em>' attribute.
+   * @see #getFileGenerationCommandName()
+   * @generated
+   */
+  void setFileGenerationCommandName(String value);
 
 } // CEDSegment

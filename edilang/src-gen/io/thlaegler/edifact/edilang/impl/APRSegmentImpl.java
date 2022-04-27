@@ -5,10 +5,14 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.APRSegment;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.PriceMultiplierInformation;
+import io.thlaegler.edifact.edilang.ReasonForChange;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.APRSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.APRSegmentImpl#getTradeClassCode <em>Trade Class Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.APRSegmentImpl#getPriceMuliplierInformation <em>Price Muliplier Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.APRSegmentImpl#getReasonForChange <em>Reason For Change</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +34,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getTradeClassCode() <em>Trade Class Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getTradeClassCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String TRADE_CLASS_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getTradeClassCode() <em>Trade Class Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getTradeClassCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String tradeClassCode = TRADE_CLASS_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getPriceMuliplierInformation() <em>Price Muliplier Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPriceMuliplierInformation()
+   * @generated
+   * @ordered
+   */
+  protected PriceMultiplierInformation priceMuliplierInformation;
+
+  /**
+   * The cached value of the '{@link #getReasonForChange() <em>Reason For Change</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReasonForChange()
+   * @generated
+   * @ordered
+   */
+  protected ReasonForChange reasonForChange;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +100,9 @@ public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getTradeClassCode()
   {
-    return todo;
+    return tradeClassCode;
   }
 
   /**
@@ -85,12 +111,130 @@ public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setTradeClassCode(String newTradeClassCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldTradeClassCode = tradeClassCode;
+    tradeClassCode = newTradeClassCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.APR_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.APR_SEGMENT__TRADE_CLASS_CODE, oldTradeClassCode, tradeClassCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PriceMultiplierInformation getPriceMuliplierInformation()
+  {
+    return priceMuliplierInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPriceMuliplierInformation(PriceMultiplierInformation newPriceMuliplierInformation, NotificationChain msgs)
+  {
+    PriceMultiplierInformation oldPriceMuliplierInformation = priceMuliplierInformation;
+    priceMuliplierInformation = newPriceMuliplierInformation;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION, oldPriceMuliplierInformation, newPriceMuliplierInformation);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPriceMuliplierInformation(PriceMultiplierInformation newPriceMuliplierInformation)
+  {
+    if (newPriceMuliplierInformation != priceMuliplierInformation)
+    {
+      NotificationChain msgs = null;
+      if (priceMuliplierInformation != null)
+        msgs = ((InternalEObject)priceMuliplierInformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION, null, msgs);
+      if (newPriceMuliplierInformation != null)
+        msgs = ((InternalEObject)newPriceMuliplierInformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION, null, msgs);
+      msgs = basicSetPriceMuliplierInformation(newPriceMuliplierInformation, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION, newPriceMuliplierInformation, newPriceMuliplierInformation));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ReasonForChange getReasonForChange()
+  {
+    return reasonForChange;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetReasonForChange(ReasonForChange newReasonForChange, NotificationChain msgs)
+  {
+    ReasonForChange oldReasonForChange = reasonForChange;
+    reasonForChange = newReasonForChange;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE, oldReasonForChange, newReasonForChange);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setReasonForChange(ReasonForChange newReasonForChange)
+  {
+    if (newReasonForChange != reasonForChange)
+    {
+      NotificationChain msgs = null;
+      if (reasonForChange != null)
+        msgs = ((InternalEObject)reasonForChange).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE, null, msgs);
+      if (newReasonForChange != null)
+        msgs = ((InternalEObject)newReasonForChange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE, null, msgs);
+      msgs = basicSetReasonForChange(newReasonForChange, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE, newReasonForChange, newReasonForChange));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION:
+        return basicSetPriceMuliplierInformation(null, msgs);
+      case EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE:
+        return basicSetReasonForChange(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +247,12 @@ public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APR_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.APR_SEGMENT__TRADE_CLASS_CODE:
+        return getTradeClassCode();
+      case EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION:
+        return getPriceMuliplierInformation();
+      case EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE:
+        return getReasonForChange();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +267,14 @@ public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APR_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.APR_SEGMENT__TRADE_CLASS_CODE:
+        setTradeClassCode((String)newValue);
+        return;
+      case EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION:
+        setPriceMuliplierInformation((PriceMultiplierInformation)newValue);
+        return;
+      case EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE:
+        setReasonForChange((ReasonForChange)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +290,14 @@ public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APR_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.APR_SEGMENT__TRADE_CLASS_CODE:
+        setTradeClassCode(TRADE_CLASS_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION:
+        setPriceMuliplierInformation((PriceMultiplierInformation)null);
+        return;
+      case EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE:
+        setReasonForChange((ReasonForChange)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +313,12 @@ public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APR_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.APR_SEGMENT__TRADE_CLASS_CODE:
+        return TRADE_CLASS_CODE_EDEFAULT == null ? tradeClassCode != null : !TRADE_CLASS_CODE_EDEFAULT.equals(tradeClassCode);
+      case EdilangPackage.APR_SEGMENT__PRICE_MULIPLIER_INFORMATION:
+        return priceMuliplierInformation != null;
+      case EdilangPackage.APR_SEGMENT__REASON_FOR_CHANGE:
+        return reasonForChange != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +334,8 @@ public class APRSegmentImpl extends AbstractEdiSegmentImpl implements APRSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (tradeClassCode: ");
+    result.append(tradeClassCode);
     result.append(')');
     return result.toString();
   }

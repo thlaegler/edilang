@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.AUTSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.AUTSegmentImpl#getValidationResultValue <em>Validation Result Value</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.AUTSegmentImpl#getValidationKeyIdentifier <em>Validation Key Identifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +29,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getValidationResultValue() <em>Validation Result Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getValidationResultValue()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String VALIDATION_RESULT_VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getValidationResultValue() <em>Validation Result Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getValidationResultValue()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String validationResultValue = VALIDATION_RESULT_VALUE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getValidationKeyIdentifier() <em>Validation Key Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValidationKeyIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALIDATION_KEY_IDENTIFIER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValidationKeyIdentifier() <em>Validation Key Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValidationKeyIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected String validationKeyIdentifier = VALIDATION_KEY_IDENTIFIER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +95,9 @@ public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getValidationResultValue()
   {
-    return todo;
+    return validationResultValue;
   }
 
   /**
@@ -85,12 +106,37 @@ public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setValidationResultValue(String newValidationResultValue)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldValidationResultValue = validationResultValue;
+    validationResultValue = newValidationResultValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AUT_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AUT_SEGMENT__VALIDATION_RESULT_VALUE, oldValidationResultValue, validationResultValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getValidationKeyIdentifier()
+  {
+    return validationKeyIdentifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setValidationKeyIdentifier(String newValidationKeyIdentifier)
+  {
+    String oldValidationKeyIdentifier = validationKeyIdentifier;
+    validationKeyIdentifier = newValidationKeyIdentifier;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AUT_SEGMENT__VALIDATION_KEY_IDENTIFIER, oldValidationKeyIdentifier, validationKeyIdentifier));
   }
 
   /**
@@ -103,8 +149,10 @@ public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AUT_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_RESULT_VALUE:
+        return getValidationResultValue();
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_KEY_IDENTIFIER:
+        return getValidationKeyIdentifier();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +167,11 @@ public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AUT_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_RESULT_VALUE:
+        setValidationResultValue((String)newValue);
+        return;
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_KEY_IDENTIFIER:
+        setValidationKeyIdentifier((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +187,11 @@ public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AUT_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_RESULT_VALUE:
+        setValidationResultValue(VALIDATION_RESULT_VALUE_EDEFAULT);
+        return;
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_KEY_IDENTIFIER:
+        setValidationKeyIdentifier(VALIDATION_KEY_IDENTIFIER_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +207,10 @@ public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AUT_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_RESULT_VALUE:
+        return VALIDATION_RESULT_VALUE_EDEFAULT == null ? validationResultValue != null : !VALIDATION_RESULT_VALUE_EDEFAULT.equals(validationResultValue);
+      case EdilangPackage.AUT_SEGMENT__VALIDATION_KEY_IDENTIFIER:
+        return VALIDATION_KEY_IDENTIFIER_EDEFAULT == null ? validationKeyIdentifier != null : !VALIDATION_KEY_IDENTIFIER_EDEFAULT.equals(validationKeyIdentifier);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +226,10 @@ public class AUTSegmentImpl extends AbstractEdiSegmentImpl implements AUTSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (validationResultValue: ");
+    result.append(validationResultValue);
+    result.append(", validationKeyIdentifier: ");
+    result.append(validationKeyIdentifier);
     result.append(')');
     return result.toString();
   }

@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.APPSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.APPSegment#getApplicabilityCodeQualifier <em>Applicability Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.APPSegment#getApplicabilityType <em>Applicability Type</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPPSegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface APPSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Applicability Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPPSegment_Todo()
+   * @return the value of the '<em>Applicability Code Qualifier</em>' attribute.
+   * @see #setApplicabilityCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPPSegment_ApplicabilityCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getApplicabilityCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.APPSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.APPSegment#getApplicabilityCodeQualifier <em>Applicability Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Applicability Code Qualifier</em>' attribute.
+   * @see #getApplicabilityCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setApplicabilityCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Applicability Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Applicability Type</em>' containment reference.
+   * @see #setApplicabilityType(ApplicabilityType)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPPSegment_ApplicabilityType()
+   * @model containment="true"
+   * @generated
+   */
+  ApplicabilityType getApplicabilityType();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.APPSegment#getApplicabilityType <em>Applicability Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Applicability Type</em>' containment reference.
+   * @see #getApplicabilityType()
+   * @generated
+   */
+  void setApplicabilityType(ApplicabilityType value);
 
 } // APPSegment

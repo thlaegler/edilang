@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.DateAndTimeFunctionImpl#getDate6 <em>Date6</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.DateAndTimeFunctionImpl#getTime4 <em>Time4</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.DateAndTimeFunctionImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.DateAndTimeFunctionImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +29,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements DateAndTimeFunction
 {
   /**
-   * The default value of the '{@link #getDate6() <em>Date6</em>}' attribute.
+   * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDate6()
+   * @see #getDate()
    * @generated
    * @ordered
    */
-  protected static final String DATE6_EDEFAULT = null;
+  protected static final String DATE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDate6() <em>Date6</em>}' attribute.
+   * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDate6()
+   * @see #getDate()
    * @generated
    * @ordered
    */
-  protected String date6 = DATE6_EDEFAULT;
+  protected String date = DATE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getTime4() <em>Time4</em>}' attribute.
+   * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTime4()
+   * @see #getTime()
    * @generated
    * @ordered
    */
-  protected static final String TIME4_EDEFAULT = null;
+  protected static final String TIME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTime4() <em>Time4</em>}' attribute.
+   * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTime4()
+   * @see #getTime()
    * @generated
    * @ordered
    */
-  protected String time4 = TIME4_EDEFAULT;
+  protected String time = TIME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,9 +95,9 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
    * @generated
    */
   @Override
-  public String getDate6()
+  public String getDate()
   {
-    return date6;
+    return date;
   }
 
   /**
@@ -106,12 +106,12 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
    * @generated
    */
   @Override
-  public void setDate6(String newDate6)
+  public void setDate(String newDate)
   {
-    String oldDate6 = date6;
-    date6 = newDate6;
+    String oldDate = date;
+    date = newDate;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DATE_AND_TIME_FUNCTION__DATE6, oldDate6, date6));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DATE_AND_TIME_FUNCTION__DATE, oldDate, date));
   }
 
   /**
@@ -120,9 +120,9 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
    * @generated
    */
   @Override
-  public String getTime4()
+  public String getTime()
   {
-    return time4;
+    return time;
   }
 
   /**
@@ -131,12 +131,12 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
    * @generated
    */
   @Override
-  public void setTime4(String newTime4)
+  public void setTime(String newTime)
   {
-    String oldTime4 = time4;
-    time4 = newTime4;
+    String oldTime = time;
+    time = newTime;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DATE_AND_TIME_FUNCTION__TIME4, oldTime4, time4));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DATE_AND_TIME_FUNCTION__TIME, oldTime, time));
   }
 
   /**
@@ -149,10 +149,10 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE6:
-        return getDate6();
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME4:
-        return getTime4();
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE:
+        return getDate();
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME:
+        return getTime();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,11 +167,11 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE6:
-        setDate6((String)newValue);
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE:
+        setDate((String)newValue);
         return;
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME4:
-        setTime4((String)newValue);
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME:
+        setTime((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,11 +187,11 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE6:
-        setDate6(DATE6_EDEFAULT);
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE:
+        setDate(DATE_EDEFAULT);
         return;
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME4:
-        setTime4(TIME4_EDEFAULT);
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME:
+        setTime(TIME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -207,10 +207,10 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE6:
-        return DATE6_EDEFAULT == null ? date6 != null : !DATE6_EDEFAULT.equals(date6);
-      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME4:
-        return TIME4_EDEFAULT == null ? time4 != null : !TIME4_EDEFAULT.equals(time4);
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__DATE:
+        return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
+      case EdilangPackage.DATE_AND_TIME_FUNCTION__TIME:
+        return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
     }
     return super.eIsSet(featureID);
   }
@@ -226,10 +226,10 @@ public class DateAndTimeFunctionImpl extends AbstractEdiFunctionImpl implements 
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (date6: ");
-    result.append(date6);
-    result.append(", time4: ");
-    result.append(time4);
+    result.append(" (date: ");
+    result.append(date);
+    result.append(", time: ");
+    result.append(time);
     result.append(')');
     return result.toString();
   }

@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CDSSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CDSSegment#getCodeSetIdentification <em>Code Set Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CDSSegment#getDesignatedClassCode <em>Designated Class Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CDSSegment#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDSSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface CDSSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Code Set Identification</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDSSegment_Todo()
+   * @return the value of the '<em>Code Set Identification</em>' containment reference.
+   * @see #setCodeSetIdentification(CodeSetIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDSSegment_CodeSetIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  CodeSetIdentification getCodeSetIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CDSSegment#getCodeSetIdentification <em>Code Set Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Code Set Identification</em>' containment reference.
+   * @see #getCodeSetIdentification()
+   * @generated
+   */
+  void setCodeSetIdentification(CodeSetIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Designated Class Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Designated Class Code</em>' attribute.
+   * @see #setDesignatedClassCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDSSegment_DesignatedClassCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getDesignatedClassCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CDSSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CDSSegment#getDesignatedClassCode <em>Designated Class Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Designated Class Code</em>' attribute.
+   * @see #getDesignatedClassCode()
    * @generated
    */
-  void setTodo(String value);
+  void setDesignatedClassCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Maintenance Operation Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Maintenance Operation Code</em>' attribute.
+   * @see #setMaintenanceOperationCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDSSegment_MaintenanceOperationCode()
+   * @model
+   * @generated
+   */
+  String getMaintenanceOperationCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CDSSegment#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Maintenance Operation Code</em>' attribute.
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   */
+  void setMaintenanceOperationCode(String value);
 
 } // CDSSegment

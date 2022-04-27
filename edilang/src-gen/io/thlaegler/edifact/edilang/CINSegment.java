@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CINSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CINSegment#getClinicalInformationTypeCodeQualifier <em>Clinical Information Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CINSegment#getClinicalInformationDetails <em>Clinical Information Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CINSegment#getCertaintyDetails <em>Certainty Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCINSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface CINSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Clinical Information Type Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCINSegment_Todo()
+   * @return the value of the '<em>Clinical Information Type Code Qualifier</em>' attribute.
+   * @see #setClinicalInformationTypeCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCINSegment_ClinicalInformationTypeCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getClinicalInformationTypeCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CINSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CINSegment#getClinicalInformationTypeCodeQualifier <em>Clinical Information Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Clinical Information Type Code Qualifier</em>' attribute.
+   * @see #getClinicalInformationTypeCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setClinicalInformationTypeCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Clinical Information Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Clinical Information Details</em>' containment reference.
+   * @see #setClinicalInformationDetails(ClinicalInformationDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCINSegment_ClinicalInformationDetails()
+   * @model containment="true"
+   * @generated
+   */
+  ClinicalInformationDetail getClinicalInformationDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CINSegment#getClinicalInformationDetails <em>Clinical Information Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Clinical Information Details</em>' containment reference.
+   * @see #getClinicalInformationDetails()
+   * @generated
+   */
+  void setClinicalInformationDetails(ClinicalInformationDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Certainty Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Certainty Details</em>' containment reference.
+   * @see #setCertaintyDetails(CertaintyDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCINSegment_CertaintyDetails()
+   * @model containment="true"
+   * @generated
+   */
+  CertaintyDetail getCertaintyDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CINSegment#getCertaintyDetails <em>Certainty Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Certainty Details</em>' containment reference.
+   * @see #getCertaintyDetails()
+   * @generated
+   */
+  void setCertaintyDetails(CertaintyDetail value);
 
 } // CINSegment

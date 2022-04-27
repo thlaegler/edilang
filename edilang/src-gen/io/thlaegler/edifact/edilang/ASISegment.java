@@ -13,7 +13,10 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ASISegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ASISegment#getArrayStructureIdentification <em>Array Structure Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ASISegment#getPartyIdentificationDetails <em>Party Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ASISegment#getStatusDescriptionCode <em>Status Description Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ASISegment#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getASISegment()
@@ -23,25 +26,91 @@ package io.thlaegler.edifact.edilang;
 public interface ASISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Array Structure Identification</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getASISegment_Todo()
+   * @return the value of the '<em>Array Structure Identification</em>' containment reference.
+   * @see #setArrayStructureIdentification(ArrayStructureIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getASISegment_ArrayStructureIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  ArrayStructureIdentification getArrayStructureIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ASISegment#getArrayStructureIdentification <em>Array Structure Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Array Structure Identification</em>' containment reference.
+   * @see #getArrayStructureIdentification()
+   * @generated
+   */
+  void setArrayStructureIdentification(ArrayStructureIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Party Identification Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Party Identification Details</em>' containment reference.
+   * @see #setPartyIdentificationDetails(PartyIdentificationDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getASISegment_PartyIdentificationDetails()
+   * @model containment="true"
+   * @generated
+   */
+  PartyIdentificationDetail getPartyIdentificationDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ASISegment#getPartyIdentificationDetails <em>Party Identification Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Party Identification Details</em>' containment reference.
+   * @see #getPartyIdentificationDetails()
+   * @generated
+   */
+  void setPartyIdentificationDetails(PartyIdentificationDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Status Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Status Description Code</em>' attribute.
+   * @see #setStatusDescriptionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getASISegment_StatusDescriptionCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getStatusDescriptionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ASISegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ASISegment#getStatusDescriptionCode <em>Status Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Status Description Code</em>' attribute.
+   * @see #getStatusDescriptionCode()
    * @generated
    */
-  void setTodo(String value);
+  void setStatusDescriptionCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Maintenance Operation Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Maintenance Operation Code</em>' attribute.
+   * @see #setMaintenanceOperationCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getASISegment_MaintenanceOperationCode()
+   * @model
+   * @generated
+   */
+  String getMaintenanceOperationCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ASISegment#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Maintenance Operation Code</em>' attribute.
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   */
+  void setMaintenanceOperationCode(String value);
 
 } // ASISegment

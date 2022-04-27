@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.APPSegment;
+import io.thlaegler.edifact.edilang.ApplicabilityType;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.APPSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.APPSegmentImpl#getApplicabilityCodeQualifier <em>Applicability Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.APPSegmentImpl#getApplicabilityType <em>Applicability Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getApplicabilityCodeQualifier() <em>Applicability Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getApplicabilityCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String APPLICABILITY_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getApplicabilityCodeQualifier() <em>Applicability Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getApplicabilityCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String applicabilityCodeQualifier = APPLICABILITY_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getApplicabilityType() <em>Applicability Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getApplicabilityType()
+   * @generated
+   * @ordered
+   */
+  protected ApplicabilityType applicabilityType;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,9 @@ public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getApplicabilityCodeQualifier()
   {
-    return todo;
+    return applicabilityCodeQualifier;
   }
 
   /**
@@ -85,12 +99,78 @@ public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setApplicabilityCodeQualifier(String newApplicabilityCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldApplicabilityCodeQualifier = applicabilityCodeQualifier;
+    applicabilityCodeQualifier = newApplicabilityCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.APP_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.APP_SEGMENT__APPLICABILITY_CODE_QUALIFIER, oldApplicabilityCodeQualifier, applicabilityCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ApplicabilityType getApplicabilityType()
+  {
+    return applicabilityType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetApplicabilityType(ApplicabilityType newApplicabilityType, NotificationChain msgs)
+  {
+    ApplicabilityType oldApplicabilityType = applicabilityType;
+    applicabilityType = newApplicabilityType;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE, oldApplicabilityType, newApplicabilityType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setApplicabilityType(ApplicabilityType newApplicabilityType)
+  {
+    if (newApplicabilityType != applicabilityType)
+    {
+      NotificationChain msgs = null;
+      if (applicabilityType != null)
+        msgs = ((InternalEObject)applicabilityType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE, null, msgs);
+      if (newApplicabilityType != null)
+        msgs = ((InternalEObject)newApplicabilityType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE, null, msgs);
+      msgs = basicSetApplicabilityType(newApplicabilityType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE, newApplicabilityType, newApplicabilityType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE:
+        return basicSetApplicabilityType(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APP_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_CODE_QUALIFIER:
+        return getApplicabilityCodeQualifier();
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE:
+        return getApplicabilityType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APP_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_CODE_QUALIFIER:
+        setApplicabilityCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE:
+        setApplicabilityType((ApplicabilityType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APP_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_CODE_QUALIFIER:
+        setApplicabilityCodeQualifier(APPLICABILITY_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE:
+        setApplicabilityType((ApplicabilityType)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.APP_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_CODE_QUALIFIER:
+        return APPLICABILITY_CODE_QUALIFIER_EDEFAULT == null ? applicabilityCodeQualifier != null : !APPLICABILITY_CODE_QUALIFIER_EDEFAULT.equals(applicabilityCodeQualifier);
+      case EdilangPackage.APP_SEGMENT__APPLICABILITY_TYPE:
+        return applicabilityType != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class APPSegmentImpl extends AbstractEdiSegmentImpl implements APPSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (applicabilityCodeQualifier: ");
+    result.append(applicabilityCodeQualifier);
     result.append(')');
     return result.toString();
   }

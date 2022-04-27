@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.GISSegment;
+import io.thlaegler.edifact.edilang.ProcessingIndicator;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.GISSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.GISSegmentImpl#getProcessingIndicator <em>Processing Indicator</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +31,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class GISSegmentImpl extends AbstractEdiSegmentImpl implements GISSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getProcessingIndicator() <em>Processing Indicator</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getProcessingIndicator()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTodo()
-   * @generated
-   * @ordered
-   */
-  protected String todo = TODO_EDEFAULT;
+  protected ProcessingIndicator processingIndicator;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +67,26 @@ public class GISSegmentImpl extends AbstractEdiSegmentImpl implements GISSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public ProcessingIndicator getProcessingIndicator()
   {
-    return todo;
+    return processingIndicator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProcessingIndicator(ProcessingIndicator newProcessingIndicator, NotificationChain msgs)
+  {
+    ProcessingIndicator oldProcessingIndicator = processingIndicator;
+    processingIndicator = newProcessingIndicator;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR, oldProcessingIndicator, newProcessingIndicator);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +95,36 @@ public class GISSegmentImpl extends AbstractEdiSegmentImpl implements GISSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setProcessingIndicator(ProcessingIndicator newProcessingIndicator)
   {
-    String oldTodo = todo;
-    todo = newTodo;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.GIS_SEGMENT__TODO, oldTodo, todo));
+    if (newProcessingIndicator != processingIndicator)
+    {
+      NotificationChain msgs = null;
+      if (processingIndicator != null)
+        msgs = ((InternalEObject)processingIndicator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR, null, msgs);
+      if (newProcessingIndicator != null)
+        msgs = ((InternalEObject)newProcessingIndicator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR, null, msgs);
+      msgs = basicSetProcessingIndicator(newProcessingIndicator, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR, newProcessingIndicator, newProcessingIndicator));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR:
+        return basicSetProcessingIndicator(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +137,8 @@ public class GISSegmentImpl extends AbstractEdiSegmentImpl implements GISSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.GIS_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR:
+        return getProcessingIndicator();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +153,8 @@ public class GISSegmentImpl extends AbstractEdiSegmentImpl implements GISSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.GIS_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR:
+        setProcessingIndicator((ProcessingIndicator)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +170,8 @@ public class GISSegmentImpl extends AbstractEdiSegmentImpl implements GISSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.GIS_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR:
+        setProcessingIndicator((ProcessingIndicator)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +187,10 @@ public class GISSegmentImpl extends AbstractEdiSegmentImpl implements GISSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.GIS_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.GIS_SEGMENT__PROCESSING_INDICATOR:
+        return processingIndicator != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
-    result.append(')');
-    return result.toString();
   }
 
 } //GISSegmentImpl

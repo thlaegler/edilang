@@ -8,11 +8,13 @@ EdiModel:
 	segments+=AbstractEdiSegment*;
 
 AbstractEdiSegment:
+	// Header segments
 	UNASegment | // Service String advice header
 	UNBSegment | // Interchange Header with Interchange Trailer UNZ
 	UNHSegment | // Header with trailer UNT
 	UNGSegment | // Functional Group Header
 	
+	// Segments
 	ADRSegment | // Address
 	AGRSegment | // Agreement identification
 	AJTSegment | // Adjustment details
@@ -177,6 +179,7 @@ AbstractEdiSegment:
 	UCISegment | // ?
 	VLISegment | // Value list identification
 
+	// Trailer segments
 	UNSSegment | // Section Control Trailer UNS
 	UNZSegment | // Interchange Trailer for header UNB
 	UNTSegment | // Message Trailer
@@ -265,24 +268,24 @@ UNGSegment:
 ADRSegment:
 	segment="ADR"
 	PLUS
-	( addressUsage=AddressUsage )?
+	( addressUsage=AddressUsage )? // C817
 	PLUS
-	( addressDetails=AddressDetail )?
+	( addressDetails=AddressDetail )? // C090
 	(
 		PLUS
-		cityName=ID
+		cityName=ID // 3164
 		(
 			PLUS
-			postalIdentificationCode=ID
+			postalIdentificationCode=ID // 3251
 			(
 				PLUS
-				countryNameCode=ID
+				countryNameCode=ID // 3207
 				(
 					PLUS
-					countrySubEntityDetails=CountrySubEntityDetail
+					countrySubEntityDetails=CountrySubEntityDetail // C819
 					(
 						PLUS
-						locationIdentification=LocationIdentification
+						locationIdentification=LocationIdentification // C517
 					)?
 				)?
 			)?
@@ -290,72 +293,120 @@ ADRSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 AGRSegment:
 	segment="AGR"
 	PLUS
-	todo=ID
+	agreementTypeIdentification=AgreementTypeIdentification // C543
+	(
+		PLUS
+		serviceLayerCode=ID // 9419
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 AJTSegment:
 	segment="AJT"
 	PLUS
-	todo=ID
+	adjustmentReasonDescriptionCode=ID // 4465
+	(
+		PLUS
+		lineItemIdentifier=ID // 1082
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 ALCSegment:
 	segment="ALC"
 	PLUS
-	todo=ID
+	allowanceChargeCodeQualifier=ID // 5463
+	(
+		PLUS
+		allowanceChargeInformation=AllowanceChargeInformation // C552
+		(
+			PLUS
+			settlementMeansCode=ID // 4471
+			(
+				PLUS
+				calculationSequenceCode=ID // 1227
+				(
+					PLUS
+					specialServicesIdentification=SpecialServicesIdentification // C214
+				)?
+			)?
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 ALISegment:
 	segment="ALI"
 	PLUS
-	( countryOfOriginNameCode=ID )?
+	( countryOfOriginNameCode=ID )? // 3239
 	PLUS
-	( dutyRegimeTypeCode=AddressDetail )?
+	( dutyRegimeTypeCode=AddressDetail )? // 9213
 	(
 		PLUS
-		specialConditionCodes+=ID
+		specialConditionCodes+=ID // 4183
 	)*
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 APPSegment:
 	segment="APP"
 	PLUS
-	todo=ID
+	applicabilityCodeQualifier=ID // 9051
+	(
+		PLUS
+		applicabilityType=ApplicabilityType // C973
+	)
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 APRSegment:
 	segment="APR"
 	PLUS
-	todo=ID
+	tradeClassCode=ID // 4043
+	(
+		PLUS
+		priceMuliplierInformation=PriceMultiplierInformation // C138
+		(
+			PLUS
+			reasonForChange=ReasonForChange // C960
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 ARDSegment:
 	segment="ARD"
 	PLUS
-	todo=ID
+	monetaryAmountFunction=MonetaryAmountFunction // C549
+	(
+		PLUS
+		monetaryAmountFunctionDetails+=MonetaryAmountFunctionDetail // C008
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 ARRSegment:
 	segment="ARR"
 	PLUS
-	todo=ID
+	positionIdentification=PositionIdentification // C778
+	(
+		PLUS
+		arrayCellDetails+=ArrayCellDetail // C770
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 ASISegment:
 	segment="ASI"
 	PLUS
-	todo=ID
+	arrayStructureIdentification=ArrayStructureIdentification // C779
+	(
+		PLUS
+		partyIdentificationDetails=PartyIdentificationDetail // C082
+		(
+			PLUS
+			statusDescriptionCode=ID // 4405
+			(
+				PLUS
+				maintenanceOperationCode=ID // 4513
+			)
+		)
+	)
 	lineEnd=QUOTE_AND_NL
 ;
 ATTSegment:
@@ -372,11 +423,14 @@ ATTSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 AUTSegment:
 	segment="AUT"
 	PLUS
-	todo=ID
+	validationResultValue=ID // 9280
+	(
+		PLUS
+		validationKeyIdentifier=ID // 9282
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 BASSegment:
@@ -389,11 +443,18 @@ BASSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 BIISegment:
 	segment="BII"
 	PLUS
-	todo=ID
+	indexingStructureCodeQualifier=ID // 7429
+	(
+		PLUS
+		billLevelIdentification=BillLevelIdentification // C045
+		(
+			PLUS
+			itemIdentifier=ID // 7140
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
 BUSSegment:
@@ -418,74 +479,132 @@ BUSSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CAVSegment:
 	segment="CAV"
 	PLUS
-	todo=ID
+	characteristicValue=CharacteristicValue // C889
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CCDSegment:
 	segment="CCD"
 	PLUS
-	todo=ID
+	creditCoverRequestTypeCode=ID // 4505
+	(
+		PLUS
+		creditCoverResponseTypeCode=ID // 4507
+		(
+			PLUS
+			creditCoverRequestReasonCode=ID // 4509
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CCISegment:
 	segment="CCI"
 	PLUS
-	todo=ID
+	classTypeCode=ID // 7059
+	(
+		PLUS
+		measurementDetails=MeasurementDetail // C502
+		(
+			PLUS
+			productCharacteristic=ProductCharacteristic // C240
+			(
+				PLUS
+				characteristicRelevanceCode=ID // 4051
+			)?
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CDISegment:
 	segment="CDI"
 	PLUS
-	todo=ID
+	physicalLogicalStateTypeCodeQualifier=ID // 7001
+	PLUS
+	physicalLogicalStateInformation=PhysicalLogicalStateInformation // C564
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CDSSegment:
 	segment="CDS"
 	PLUS
-	todo=ID
+	codeSetIdentification=CodeSetIdentification // C702
+	(
+		PLUS
+		designatedClassCode=ID // 1507
+		(
+			PLUS
+			maintenanceOperationCode=ID // 4513
+		)
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CDVSegment:
 	segment="CDV"
 	PLUS
-	todo=ID
+	codeValue=ID // 9426
+	(
+		PLUS
+		codeName=ID // 9434
+		(
+			PLUS
+			maintenanceOperationCode=ID // 4513
+			(
+				PLUS
+				codeValueSourceCode=ID // 9453
+				(
+					PLUS
+					requirementsDesignatorCode=ID // 7299
+				)?
+			)?
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CEDSegment:
 	segment="CED"
 	PLUS
-	todo=ID
+	computerEnvironmentDetailsCodeQualifier=ID // 1501
+	PLUS
+	computerEnvironmentIdentification=ComputerEnvironmentIdentification // C079
+	(
+		PLUS
+		fileGenerationCommandName=ID // 9448
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CINSegment:
 	segment="CIN"
 	PLUS
-	todo=ID
+	clinicalInformationTypeCodeQualifier=ID // 6415
+	(
+		PLUS
+		clinicalInformationDetails=ClinicalInformationDetail // C836
+		(
+			PLUS
+			certaintyDetails=CertaintyDetail // C837
+		)?
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-
 CLASegment:
 	segment="CLA"
 	PLUS
-	todo=ID
+	clauseCodeQualifier=ID // 4059
+	(
+		PLUS
+		clauseName=ClauseName // C970
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 CLISegment:
 	segment="CLI"
 	PLUS
-	todo=ID
+	clinicalInterventionTypeCodeQualifier=ID // 9441
+	(
+		PLUS
+		clinicalInterventionDetails=ClinicalInterventionDetail // C828
+	)
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -509,11 +628,12 @@ CODSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 COMSegment:
 	segment="COM"
-	PLUS
-	todo=ID
+	(
+		PLUS
+		communicationContacts+=CommunicationContact // C076
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -796,18 +916,20 @@ GIRSegment:
 	todo=ID
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 GISSegment:
 	segment="GIS"
 	PLUS
-	todo=ID
+	processingIndicator=ProcessingIndicator // C529
 	lineEnd=QUOTE_AND_NL
 ;
-//TODO
 GORSegment:
 	segment="GOR"
 	PLUS
-	todo=ID
+	transportMovementCode=ID // 8323
+	(
+		PLUS
+		governmentAction+=GovernmentAction // C232
+	)*
 	lineEnd=QUOTE_AND_NL
 ;
 //TODO
@@ -1778,14 +1900,24 @@ CTASegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-// TODO
 PCISegment:
 	segment="PCI"
 	PLUS
-	( todo=ID )?
+	( marketingInstructionsCode=ID )? // 4233
+	(
+		PLUS
+		marksLabels=MarksLabels // C210
+		(
+			PLUS
+			containerPackageContentsIndicatorCode=ID // 8275
+			(
+				PLUS
+				typeOfMarking=TypeOfMarking // C827
+			)
+		)
+	)?
 	lineEnd=QUOTE_AND_NL
 ;
-
 //UNS+S'
 UNSSegment:
 	segment="UNS"
@@ -2557,13 +2689,365 @@ BasisType:
 		)?
 	)?
 ;
+// C076
+CommunicationContact:
+	communicationNumber=ID // 3148
+	(
+		COLON
+		communicationNumberCodeQualifier=ID // 3155
+	)?
+;
+// C543
+AgreementTypeIdentification:
+	agreementTypeCodeQualifier=ID // 7431
+	(
+		COLON
+		agreementTypeDescriptionCode=ID // 7433
+		(
+			COLON
+			codeListIdentificationCode=ID // 1131
+			(
+				COLON
+				codeListResponsibleAgencyCode=ID // 3055
+				(
+					COLON
+					agreementTypeDescription=ID // 7434
+				)?
+			)?
+		)?
+	)?
+;
+// C552
+AllowanceChargeInformation:
+	allowanceChargeIdentifier=ID // 1230
+	(
+		COLON
+		allowanceChargeIdentificationCode=ID // 5189
+	)?
+;
+// C214
+SpecialServicesIdentification:
+	specialServiceDescriptionCode=ID // 7161
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				specialServiceDescriptions+=ID // 7160
+			)*
+		)?
+	)?
+;
+// C973
+ApplicabilityType:
+	applicabilityTypeDescriptionCode=ID // 9049
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				applicabilityTypeDescriptions=ID // 9048
+			)?
+		)?
+	)?
+;
+// C138
+PriceMultiplierInformation:
+	priceMultiplierRate=ID // 5394
+	(
+		COLON
+		priceMultiplierTypeCodeQualifier=ID // 5393
+	)?
+;
+// C549
+MonetaryAmountFunction:
+	monetaryAmountFunctionDescriptionCode=ID // 5007
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				monetaryAmountFunctionDescription=ID // 5006
+			)?
+		)?
+	)?
+;
+// C008
+MonetaryAmountFunctionDetail:
+	monetaryAmountFunctionDetailDescriptionCode=ID // 5105
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				monetaryAmountFunctionDetailDescription=ID // 5104
+			)?
+		)?
+	)?
+;
+// C770
+ArrayCellDetail:
+	arrayCellDataDescription+=ID // 9424
+	(
+		COLON
+		arrayCellDataDescription+=ID // 9424
+	)*
+;
+// C779
+ArrayStructureIdentification:
+	arrayCellStructureIdentifier=ID // 9428
+	(
+		COLON
+		objectIdentificationCodeQualifier=ID // 7405
+	)?
+;
+// C045
+BillLevelIdentification:
+	levelOneIdentifier=ID // 7436
+	(
+		COLON
+		levelTwoIdentifier=ID // 7438
+		(
+			COLON
+			levelThreeIdentifier=ID // 7440
+			(
+				COLON
+				levelFourIdentifier=ID // 7442
+				(
+					COLON
+					levelFiveIdentifier=ID // 7444
+					(
+						COLON
+						levelSixIdentifier=ID // 7446
+					)?
+				)?
+			)?
+		)?
+	)?
+;
+// C889
+CharacteristicValue:
+	characteristicValueDescriptionCode=ID // 7111
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				characteristicValueDescription+=ID // 7110
+			)*
+		)?
+	)?
+;
+// C502
+MeasurementDetail:
+	measuredAttributeCode=ID // 6313
+	(
+		COLON
+		measurementSignificanceCode=ID // 6321
+		(
+			COLON
+			nonDiscreteMeasurementNameCode=ID // 6155
+			(
+				COLON
+				nonDiscreteMeasurementName=ID // 7154
+			)?
+		)?
+	)?
+;
+// C564
+PhysicalLogicalStateInformation:
+	physicalLogicalStateDescriptionCode=ID // 7007
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				physicalLogicalStateDescription=ID // 7006
+			)?
+		)?
+	)?
+;
+// C702
+CodeSetIdentification:
+	simpleDataElementTagIdentifier=ID // 9150
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
+// C079
+ComputerEnvironmentIdentification:
+	computerEnvironmentNameCode=ID // 1511
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				computerEnvironmentName=ID // 1510
+				(
+					COLON
+					versionIdentifier=ID // 1056
+					(
+						COLON
+						releaseIdentifier=ID // 1058
+						(
+							COLON
+							objectIdentifier=ID // 7402
+						)?
+					)?
+				)?
+			)?
+		)?
+	)?
+;
+// C836
+ClinicalInformationDetail:
+	clinicalInformationDescriptionIdentifier=ID // 6413
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				clinicalInformationDescription=ID // 6412
+			)?
+		)?
+	)?
+;
+// C837
+CertaintyDetail:
+	certaintyDescriptionCode=ID // 4049
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				certaintyDescription=ID // 4048
+			)?
+		)?
+	)?
+;
+// C970
+ClauseName:
+	clauseNameCode=ID // 4069
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				clauseName=ID // 4068
+			)?
+		)?
+	)?
+;
+// C828
+ClinicalInterventionDetail:
+	clinicalInterventionDescriptionCode=ID // 9437
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				clinicalInterventionDescription=ID // 9436
+			)?
+		)?
+	)?
+;
+// C529
+ProcessingIndicator:
+	processingIndicatorDescriptionCode=ID // 7365
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+			(
+				COLON
+				processTypeDescriptionCode=ID // 7187
+			)?
+		)?
+	)?
+;
+// C210
+MarksLabels:
+	shippingMarksDescriptions+=ID // 7102
+	(
+		COLON
+		shippingMarksDescriptions+=ID // 7102
+	)*
+;
+// C827
+TypeOfMarking:
+	markingTypeCode=ID // 7511
+	(
+		COLON
+		codeListIdentificationCode=ID // 1131
+		(
+			COLON
+			codeListResponsibleAgencyCode=ID // 3055
+		)?
+	)?
+;
+// C232
+GovernmentAction:
+	governmentAgencyIdentificationCode=ID // 9415
+	(
+		COLON
+		governmentInvolvementCode=ID // 9411
+		(
+			COLON
+			governmentActionCode=ID // 9417
+			(
+				COLON
+				governmentProcedureCode=ID // 9353
+			)?
+		)?
+	)?
+;
 DateOnlyFunction:
-	date6=ID
+	date=ID
 ;
 DateAndTimeFunction:
-	date6=ID
+	date=ID
 	COLON
-	time4=ID
+	time=ID
 ;
 DateTimePeriod:
 	dateTimePeriodFunctionCodeQualifier=ID

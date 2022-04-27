@@ -4,11 +4,15 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CINSegment;
+import io.thlaegler.edifact.edilang.CertaintyDetail;
+import io.thlaegler.edifact.edilang.ClinicalInformationDetail;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CINSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CINSegmentImpl#getClinicalInformationTypeCodeQualifier <em>Clinical Information Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CINSegmentImpl#getClinicalInformationDetails <em>Clinical Information Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CINSegmentImpl#getCertaintyDetails <em>Certainty Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +34,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getClinicalInformationTypeCodeQualifier() <em>Clinical Information Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getClinicalInformationTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getClinicalInformationTypeCodeQualifier() <em>Clinical Information Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getClinicalInformationTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String clinicalInformationTypeCodeQualifier = CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getClinicalInformationDetails() <em>Clinical Information Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getClinicalInformationDetails()
+   * @generated
+   * @ordered
+   */
+  protected ClinicalInformationDetail clinicalInformationDetails;
+
+  /**
+   * The cached value of the '{@link #getCertaintyDetails() <em>Certainty Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCertaintyDetails()
+   * @generated
+   * @ordered
+   */
+  protected CertaintyDetail certaintyDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +100,9 @@ public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getClinicalInformationTypeCodeQualifier()
   {
-    return todo;
+    return clinicalInformationTypeCodeQualifier;
   }
 
   /**
@@ -85,12 +111,130 @@ public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setClinicalInformationTypeCodeQualifier(String newClinicalInformationTypeCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldClinicalInformationTypeCodeQualifier = clinicalInformationTypeCodeQualifier;
+    clinicalInformationTypeCodeQualifier = newClinicalInformationTypeCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CIN_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER, oldClinicalInformationTypeCodeQualifier, clinicalInformationTypeCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ClinicalInformationDetail getClinicalInformationDetails()
+  {
+    return clinicalInformationDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetClinicalInformationDetails(ClinicalInformationDetail newClinicalInformationDetails, NotificationChain msgs)
+  {
+    ClinicalInformationDetail oldClinicalInformationDetails = clinicalInformationDetails;
+    clinicalInformationDetails = newClinicalInformationDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS, oldClinicalInformationDetails, newClinicalInformationDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setClinicalInformationDetails(ClinicalInformationDetail newClinicalInformationDetails)
+  {
+    if (newClinicalInformationDetails != clinicalInformationDetails)
+    {
+      NotificationChain msgs = null;
+      if (clinicalInformationDetails != null)
+        msgs = ((InternalEObject)clinicalInformationDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS, null, msgs);
+      if (newClinicalInformationDetails != null)
+        msgs = ((InternalEObject)newClinicalInformationDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS, null, msgs);
+      msgs = basicSetClinicalInformationDetails(newClinicalInformationDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS, newClinicalInformationDetails, newClinicalInformationDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CertaintyDetail getCertaintyDetails()
+  {
+    return certaintyDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCertaintyDetails(CertaintyDetail newCertaintyDetails, NotificationChain msgs)
+  {
+    CertaintyDetail oldCertaintyDetails = certaintyDetails;
+    certaintyDetails = newCertaintyDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS, oldCertaintyDetails, newCertaintyDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCertaintyDetails(CertaintyDetail newCertaintyDetails)
+  {
+    if (newCertaintyDetails != certaintyDetails)
+    {
+      NotificationChain msgs = null;
+      if (certaintyDetails != null)
+        msgs = ((InternalEObject)certaintyDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS, null, msgs);
+      if (newCertaintyDetails != null)
+        msgs = ((InternalEObject)newCertaintyDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS, null, msgs);
+      msgs = basicSetCertaintyDetails(newCertaintyDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS, newCertaintyDetails, newCertaintyDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS:
+        return basicSetClinicalInformationDetails(null, msgs);
+      case EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS:
+        return basicSetCertaintyDetails(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +247,12 @@ public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CIN_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER:
+        return getClinicalInformationTypeCodeQualifier();
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS:
+        return getClinicalInformationDetails();
+      case EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS:
+        return getCertaintyDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +267,14 @@ public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CIN_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER:
+        setClinicalInformationTypeCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS:
+        setClinicalInformationDetails((ClinicalInformationDetail)newValue);
+        return;
+      case EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS:
+        setCertaintyDetails((CertaintyDetail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +290,14 @@ public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CIN_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER:
+        setClinicalInformationTypeCodeQualifier(CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS:
+        setClinicalInformationDetails((ClinicalInformationDetail)null);
+        return;
+      case EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS:
+        setCertaintyDetails((CertaintyDetail)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +313,12 @@ public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CIN_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER:
+        return CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER_EDEFAULT == null ? clinicalInformationTypeCodeQualifier != null : !CLINICAL_INFORMATION_TYPE_CODE_QUALIFIER_EDEFAULT.equals(clinicalInformationTypeCodeQualifier);
+      case EdilangPackage.CIN_SEGMENT__CLINICAL_INFORMATION_DETAILS:
+        return clinicalInformationDetails != null;
+      case EdilangPackage.CIN_SEGMENT__CERTAINTY_DETAILS:
+        return certaintyDetails != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +334,8 @@ public class CINSegmentImpl extends AbstractEdiSegmentImpl implements CINSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (clinicalInformationTypeCodeQualifier: ");
+    result.append(clinicalInformationTypeCodeQualifier);
     result.append(')');
     return result.toString();
   }

@@ -5,12 +5,22 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.GORSegment;
+import io.thlaegler.edifact.edilang.GovernmentAction;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.GORSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.GORSegmentImpl#getTransportMovementCode <em>Transport Movement Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.GORSegmentImpl#getGovernmentAction <em>Government Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +39,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getTransportMovementCode() <em>Transport Movement Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getTransportMovementCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String TRANSPORT_MOVEMENT_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getTransportMovementCode() <em>Transport Movement Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getTransportMovementCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String transportMovementCode = TRANSPORT_MOVEMENT_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getGovernmentAction() <em>Government Action</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGovernmentAction()
+   * @generated
+   * @ordered
+   */
+  protected EList<GovernmentAction> governmentAction;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +95,9 @@ public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getTransportMovementCode()
   {
-    return todo;
+    return transportMovementCode;
   }
 
   /**
@@ -85,12 +106,43 @@ public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setTransportMovementCode(String newTransportMovementCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldTransportMovementCode = transportMovementCode;
+    transportMovementCode = newTransportMovementCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.GOR_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.GOR_SEGMENT__TRANSPORT_MOVEMENT_CODE, oldTransportMovementCode, transportMovementCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<GovernmentAction> getGovernmentAction()
+  {
+    if (governmentAction == null)
+    {
+      governmentAction = new EObjectContainmentEList<GovernmentAction>(GovernmentAction.class, this, EdilangPackage.GOR_SEGMENT__GOVERNMENT_ACTION);
+    }
+    return governmentAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.GOR_SEGMENT__GOVERNMENT_ACTION:
+        return ((InternalEList<?>)getGovernmentAction()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +155,10 @@ public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.GOR_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.GOR_SEGMENT__TRANSPORT_MOVEMENT_CODE:
+        return getTransportMovementCode();
+      case EdilangPackage.GOR_SEGMENT__GOVERNMENT_ACTION:
+        return getGovernmentAction();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -114,13 +168,18 @@ public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.GOR_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.GOR_SEGMENT__TRANSPORT_MOVEMENT_CODE:
+        setTransportMovementCode((String)newValue);
+        return;
+      case EdilangPackage.GOR_SEGMENT__GOVERNMENT_ACTION:
+        getGovernmentAction().clear();
+        getGovernmentAction().addAll((Collection<? extends GovernmentAction>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +195,11 @@ public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.GOR_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.GOR_SEGMENT__TRANSPORT_MOVEMENT_CODE:
+        setTransportMovementCode(TRANSPORT_MOVEMENT_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.GOR_SEGMENT__GOVERNMENT_ACTION:
+        getGovernmentAction().clear();
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +215,10 @@ public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.GOR_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.GOR_SEGMENT__TRANSPORT_MOVEMENT_CODE:
+        return TRANSPORT_MOVEMENT_CODE_EDEFAULT == null ? transportMovementCode != null : !TRANSPORT_MOVEMENT_CODE_EDEFAULT.equals(transportMovementCode);
+      case EdilangPackage.GOR_SEGMENT__GOVERNMENT_ACTION:
+        return governmentAction != null && !governmentAction.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +234,8 @@ public class GORSegmentImpl extends AbstractEdiSegmentImpl implements GORSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (transportMovementCode: ");
+    result.append(transportMovementCode);
     result.append(')');
     return result.toString();
   }

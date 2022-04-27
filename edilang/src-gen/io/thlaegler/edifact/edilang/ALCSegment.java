@@ -13,7 +13,11 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ALCSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ALCSegment#getAllowanceChargeCodeQualifier <em>Allowance Charge Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ALCSegment#getAllowanceChargeInformation <em>Allowance Charge Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ALCSegment#getSettlementMeansCode <em>Settlement Means Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ALCSegment#getCalculationSequenceCode <em>Calculation Sequence Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ALCSegment#getSpecialServicesIdentification <em>Special Services Identification</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getALCSegment()
@@ -23,25 +27,113 @@ package io.thlaegler.edifact.edilang;
 public interface ALCSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Allowance Charge Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getALCSegment_Todo()
+   * @return the value of the '<em>Allowance Charge Code Qualifier</em>' attribute.
+   * @see #setAllowanceChargeCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getALCSegment_AllowanceChargeCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getAllowanceChargeCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ALCSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ALCSegment#getAllowanceChargeCodeQualifier <em>Allowance Charge Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Allowance Charge Code Qualifier</em>' attribute.
+   * @see #getAllowanceChargeCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setAllowanceChargeCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Allowance Charge Information</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Allowance Charge Information</em>' containment reference.
+   * @see #setAllowanceChargeInformation(AllowanceChargeInformation)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getALCSegment_AllowanceChargeInformation()
+   * @model containment="true"
+   * @generated
+   */
+  AllowanceChargeInformation getAllowanceChargeInformation();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ALCSegment#getAllowanceChargeInformation <em>Allowance Charge Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Allowance Charge Information</em>' containment reference.
+   * @see #getAllowanceChargeInformation()
+   * @generated
+   */
+  void setAllowanceChargeInformation(AllowanceChargeInformation value);
+
+  /**
+   * Returns the value of the '<em><b>Settlement Means Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Settlement Means Code</em>' attribute.
+   * @see #setSettlementMeansCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getALCSegment_SettlementMeansCode()
+   * @model
+   * @generated
+   */
+  String getSettlementMeansCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ALCSegment#getSettlementMeansCode <em>Settlement Means Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Settlement Means Code</em>' attribute.
+   * @see #getSettlementMeansCode()
+   * @generated
+   */
+  void setSettlementMeansCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Calculation Sequence Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Calculation Sequence Code</em>' attribute.
+   * @see #setCalculationSequenceCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getALCSegment_CalculationSequenceCode()
+   * @model
+   * @generated
+   */
+  String getCalculationSequenceCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ALCSegment#getCalculationSequenceCode <em>Calculation Sequence Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Calculation Sequence Code</em>' attribute.
+   * @see #getCalculationSequenceCode()
+   * @generated
+   */
+  void setCalculationSequenceCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Special Services Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Special Services Identification</em>' containment reference.
+   * @see #setSpecialServicesIdentification(SpecialServicesIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getALCSegment_SpecialServicesIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  SpecialServicesIdentification getSpecialServicesIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ALCSegment#getSpecialServicesIdentification <em>Special Services Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Special Services Identification</em>' containment reference.
+   * @see #getSpecialServicesIdentification()
+   * @generated
+   */
+  void setSpecialServicesIdentification(SpecialServicesIdentification value);
 
 } // ALCSegment

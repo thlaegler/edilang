@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.AGRSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.AGRSegment#getAgreementTypeIdentification <em>Agreement Type Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.AGRSegment#getServiceLayerCode <em>Service Layer Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getAGRSegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface AGRSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Agreement Type Identification</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAGRSegment_Todo()
+   * @return the value of the '<em>Agreement Type Identification</em>' containment reference.
+   * @see #setAgreementTypeIdentification(AgreementTypeIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAGRSegment_AgreementTypeIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  AgreementTypeIdentification getAgreementTypeIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.AGRSegment#getAgreementTypeIdentification <em>Agreement Type Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Agreement Type Identification</em>' containment reference.
+   * @see #getAgreementTypeIdentification()
+   * @generated
+   */
+  void setAgreementTypeIdentification(AgreementTypeIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Service Layer Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Service Layer Code</em>' attribute.
+   * @see #setServiceLayerCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAGRSegment_ServiceLayerCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getServiceLayerCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.AGRSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.AGRSegment#getServiceLayerCode <em>Service Layer Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Service Layer Code</em>' attribute.
+   * @see #getServiceLayerCode()
    * @generated
    */
-  void setTodo(String value);
+  void setServiceLayerCode(String value);
 
 } // AGRSegment

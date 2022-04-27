@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.APRSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.APRSegment#getTradeClassCode <em>Trade Class Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.APRSegment#getPriceMuliplierInformation <em>Price Muliplier Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.APRSegment#getReasonForChange <em>Reason For Change</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPRSegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface APRSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Trade Class Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPRSegment_Todo()
+   * @return the value of the '<em>Trade Class Code</em>' attribute.
+   * @see #setTradeClassCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPRSegment_TradeClassCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getTradeClassCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.APRSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.APRSegment#getTradeClassCode <em>Trade Class Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Trade Class Code</em>' attribute.
+   * @see #getTradeClassCode()
    * @generated
    */
-  void setTodo(String value);
+  void setTradeClassCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Price Muliplier Information</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Price Muliplier Information</em>' containment reference.
+   * @see #setPriceMuliplierInformation(PriceMultiplierInformation)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPRSegment_PriceMuliplierInformation()
+   * @model containment="true"
+   * @generated
+   */
+  PriceMultiplierInformation getPriceMuliplierInformation();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.APRSegment#getPriceMuliplierInformation <em>Price Muliplier Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Price Muliplier Information</em>' containment reference.
+   * @see #getPriceMuliplierInformation()
+   * @generated
+   */
+  void setPriceMuliplierInformation(PriceMultiplierInformation value);
+
+  /**
+   * Returns the value of the '<em><b>Reason For Change</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Reason For Change</em>' containment reference.
+   * @see #setReasonForChange(ReasonForChange)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getAPRSegment_ReasonForChange()
+   * @model containment="true"
+   * @generated
+   */
+  ReasonForChange getReasonForChange();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.APRSegment#getReasonForChange <em>Reason For Change</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Reason For Change</em>' containment reference.
+   * @see #getReasonForChange()
+   * @generated
+   */
+  void setReasonForChange(ReasonForChange value);
 
 } // APRSegment

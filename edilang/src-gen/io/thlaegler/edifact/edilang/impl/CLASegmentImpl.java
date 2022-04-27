@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CLASegment;
+import io.thlaegler.edifact.edilang.ClauseName;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CLASegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CLASegmentImpl#getClauseCodeQualifier <em>Clause Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CLASegmentImpl#getClauseName <em>Clause Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getClauseCodeQualifier() <em>Clause Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getClauseCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String CLAUSE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getClauseCodeQualifier() <em>Clause Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getClauseCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String clauseCodeQualifier = CLAUSE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getClauseName() <em>Clause Name</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getClauseName()
+   * @generated
+   * @ordered
+   */
+  protected ClauseName clauseName;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,9 @@ public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getClauseCodeQualifier()
   {
-    return todo;
+    return clauseCodeQualifier;
   }
 
   /**
@@ -85,12 +99,78 @@ public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setClauseCodeQualifier(String newClauseCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldClauseCodeQualifier = clauseCodeQualifier;
+    clauseCodeQualifier = newClauseCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CLA_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CLA_SEGMENT__CLAUSE_CODE_QUALIFIER, oldClauseCodeQualifier, clauseCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ClauseName getClauseName()
+  {
+    return clauseName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetClauseName(ClauseName newClauseName, NotificationChain msgs)
+  {
+    ClauseName oldClauseName = clauseName;
+    clauseName = newClauseName;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CLA_SEGMENT__CLAUSE_NAME, oldClauseName, newClauseName);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setClauseName(ClauseName newClauseName)
+  {
+    if (newClauseName != clauseName)
+    {
+      NotificationChain msgs = null;
+      if (clauseName != null)
+        msgs = ((InternalEObject)clauseName).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CLA_SEGMENT__CLAUSE_NAME, null, msgs);
+      if (newClauseName != null)
+        msgs = ((InternalEObject)newClauseName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CLA_SEGMENT__CLAUSE_NAME, null, msgs);
+      msgs = basicSetClauseName(newClauseName, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CLA_SEGMENT__CLAUSE_NAME, newClauseName, newClauseName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_NAME:
+        return basicSetClauseName(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CLA_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_CODE_QUALIFIER:
+        return getClauseCodeQualifier();
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_NAME:
+        return getClauseName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CLA_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_CODE_QUALIFIER:
+        setClauseCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_NAME:
+        setClauseName((ClauseName)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CLA_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_CODE_QUALIFIER:
+        setClauseCodeQualifier(CLAUSE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_NAME:
+        setClauseName((ClauseName)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CLA_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_CODE_QUALIFIER:
+        return CLAUSE_CODE_QUALIFIER_EDEFAULT == null ? clauseCodeQualifier != null : !CLAUSE_CODE_QUALIFIER_EDEFAULT.equals(clauseCodeQualifier);
+      case EdilangPackage.CLA_SEGMENT__CLAUSE_NAME:
+        return clauseName != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class CLASegmentImpl extends AbstractEdiSegmentImpl implements CLASegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (clauseCodeQualifier: ");
+    result.append(clauseCodeQualifier);
     result.append(')');
     return result.toString();
   }

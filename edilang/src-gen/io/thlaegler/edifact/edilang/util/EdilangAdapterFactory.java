@@ -1211,6 +1211,126 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
         return createBasisTypeAdapter();
       }
       @Override
+      public Adapter caseCommunicationContact(CommunicationContact object)
+      {
+        return createCommunicationContactAdapter();
+      }
+      @Override
+      public Adapter caseAgreementTypeIdentification(AgreementTypeIdentification object)
+      {
+        return createAgreementTypeIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseAllowanceChargeInformation(AllowanceChargeInformation object)
+      {
+        return createAllowanceChargeInformationAdapter();
+      }
+      @Override
+      public Adapter caseSpecialServicesIdentification(SpecialServicesIdentification object)
+      {
+        return createSpecialServicesIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseApplicabilityType(ApplicabilityType object)
+      {
+        return createApplicabilityTypeAdapter();
+      }
+      @Override
+      public Adapter casePriceMultiplierInformation(PriceMultiplierInformation object)
+      {
+        return createPriceMultiplierInformationAdapter();
+      }
+      @Override
+      public Adapter caseMonetaryAmountFunction(MonetaryAmountFunction object)
+      {
+        return createMonetaryAmountFunctionAdapter();
+      }
+      @Override
+      public Adapter caseMonetaryAmountFunctionDetail(MonetaryAmountFunctionDetail object)
+      {
+        return createMonetaryAmountFunctionDetailAdapter();
+      }
+      @Override
+      public Adapter caseArrayCellDetail(ArrayCellDetail object)
+      {
+        return createArrayCellDetailAdapter();
+      }
+      @Override
+      public Adapter caseArrayStructureIdentification(ArrayStructureIdentification object)
+      {
+        return createArrayStructureIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseBillLevelIdentification(BillLevelIdentification object)
+      {
+        return createBillLevelIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseCharacteristicValue(CharacteristicValue object)
+      {
+        return createCharacteristicValueAdapter();
+      }
+      @Override
+      public Adapter caseMeasurementDetail(MeasurementDetail object)
+      {
+        return createMeasurementDetailAdapter();
+      }
+      @Override
+      public Adapter casePhysicalLogicalStateInformation(PhysicalLogicalStateInformation object)
+      {
+        return createPhysicalLogicalStateInformationAdapter();
+      }
+      @Override
+      public Adapter caseCodeSetIdentification(CodeSetIdentification object)
+      {
+        return createCodeSetIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseComputerEnvironmentIdentification(ComputerEnvironmentIdentification object)
+      {
+        return createComputerEnvironmentIdentificationAdapter();
+      }
+      @Override
+      public Adapter caseClinicalInformationDetail(ClinicalInformationDetail object)
+      {
+        return createClinicalInformationDetailAdapter();
+      }
+      @Override
+      public Adapter caseCertaintyDetail(CertaintyDetail object)
+      {
+        return createCertaintyDetailAdapter();
+      }
+      @Override
+      public Adapter caseClauseName(ClauseName object)
+      {
+        return createClauseNameAdapter();
+      }
+      @Override
+      public Adapter caseClinicalInterventionDetail(ClinicalInterventionDetail object)
+      {
+        return createClinicalInterventionDetailAdapter();
+      }
+      @Override
+      public Adapter caseProcessingIndicator(ProcessingIndicator object)
+      {
+        return createProcessingIndicatorAdapter();
+      }
+      @Override
+      public Adapter caseMarksLabels(MarksLabels object)
+      {
+        return createMarksLabelsAdapter();
+      }
+      @Override
+      public Adapter caseTypeOfMarking(TypeOfMarking object)
+      {
+        return createTypeOfMarkingAdapter();
+      }
+      @Override
+      public Adapter caseGovernmentAction(GovernmentAction object)
+      {
+        return createGovernmentActionAdapter();
+      }
+      @Override
       public Adapter caseDateOnlyFunction(DateOnlyFunction object)
       {
         return createDateOnlyFunctionAdapter();
@@ -4648,6 +4768,366 @@ public class EdilangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBasisTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CommunicationContact <em>Communication Contact</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CommunicationContact
+   * @generated
+   */
+  public Adapter createCommunicationContactAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.AgreementTypeIdentification <em>Agreement Type Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.AgreementTypeIdentification
+   * @generated
+   */
+  public Adapter createAgreementTypeIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.AllowanceChargeInformation <em>Allowance Charge Information</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.AllowanceChargeInformation
+   * @generated
+   */
+  public Adapter createAllowanceChargeInformationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.SpecialServicesIdentification <em>Special Services Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.SpecialServicesIdentification
+   * @generated
+   */
+  public Adapter createSpecialServicesIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ApplicabilityType <em>Applicability Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ApplicabilityType
+   * @generated
+   */
+  public Adapter createApplicabilityTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PriceMultiplierInformation <em>Price Multiplier Information</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PriceMultiplierInformation
+   * @generated
+   */
+  public Adapter createPriceMultiplierInformationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MonetaryAmountFunction <em>Monetary Amount Function</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.MonetaryAmountFunction
+   * @generated
+   */
+  public Adapter createMonetaryAmountFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MonetaryAmountFunctionDetail <em>Monetary Amount Function Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.MonetaryAmountFunctionDetail
+   * @generated
+   */
+  public Adapter createMonetaryAmountFunctionDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ArrayCellDetail <em>Array Cell Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ArrayCellDetail
+   * @generated
+   */
+  public Adapter createArrayCellDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ArrayStructureIdentification <em>Array Structure Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ArrayStructureIdentification
+   * @generated
+   */
+  public Adapter createArrayStructureIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.BillLevelIdentification <em>Bill Level Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.BillLevelIdentification
+   * @generated
+   */
+  public Adapter createBillLevelIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CharacteristicValue <em>Characteristic Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CharacteristicValue
+   * @generated
+   */
+  public Adapter createCharacteristicValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MeasurementDetail <em>Measurement Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.MeasurementDetail
+   * @generated
+   */
+  public Adapter createMeasurementDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.PhysicalLogicalStateInformation <em>Physical Logical State Information</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.PhysicalLogicalStateInformation
+   * @generated
+   */
+  public Adapter createPhysicalLogicalStateInformationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CodeSetIdentification <em>Code Set Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CodeSetIdentification
+   * @generated
+   */
+  public Adapter createCodeSetIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ComputerEnvironmentIdentification <em>Computer Environment Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ComputerEnvironmentIdentification
+   * @generated
+   */
+  public Adapter createComputerEnvironmentIdentificationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ClinicalInformationDetail <em>Clinical Information Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ClinicalInformationDetail
+   * @generated
+   */
+  public Adapter createClinicalInformationDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.CertaintyDetail <em>Certainty Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.CertaintyDetail
+   * @generated
+   */
+  public Adapter createCertaintyDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ClauseName <em>Clause Name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ClauseName
+   * @generated
+   */
+  public Adapter createClauseNameAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ClinicalInterventionDetail <em>Clinical Intervention Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ClinicalInterventionDetail
+   * @generated
+   */
+  public Adapter createClinicalInterventionDetailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.ProcessingIndicator <em>Processing Indicator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.ProcessingIndicator
+   * @generated
+   */
+  public Adapter createProcessingIndicatorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.MarksLabels <em>Marks Labels</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.MarksLabels
+   * @generated
+   */
+  public Adapter createMarksLabelsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.TypeOfMarking <em>Type Of Marking</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.TypeOfMarking
+   * @generated
+   */
+  public Adapter createTypeOfMarkingAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.thlaegler.edifact.edilang.GovernmentAction <em>Government Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.thlaegler.edifact.edilang.GovernmentAction
+   * @generated
+   */
+  public Adapter createGovernmentActionAdapter()
   {
     return null;
   }

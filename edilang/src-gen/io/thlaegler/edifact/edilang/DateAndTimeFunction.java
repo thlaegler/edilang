@@ -13,8 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getDate6 <em>Date6</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getTime4 <em>Time4</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getDate <em>Date</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateAndTimeFunction()
@@ -24,47 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface DateAndTimeFunction extends AbstractEdiFunction
 {
   /**
-   * Returns the value of the '<em><b>Date6</b></em>' attribute.
+   * Returns the value of the '<em><b>Date</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Date6</em>' attribute.
-   * @see #setDate6(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateAndTimeFunction_Date6()
+   * @return the value of the '<em>Date</em>' attribute.
+   * @see #setDate(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateAndTimeFunction_Date()
    * @model
    * @generated
    */
-  String getDate6();
+  String getDate();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getDate6 <em>Date6</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getDate <em>Date</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Date6</em>' attribute.
-   * @see #getDate6()
+   * @param value the new value of the '<em>Date</em>' attribute.
+   * @see #getDate()
    * @generated
    */
-  void setDate6(String value);
+  void setDate(String value);
 
   /**
-   * Returns the value of the '<em><b>Time4</b></em>' attribute.
+   * Returns the value of the '<em><b>Time</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Time4</em>' attribute.
-   * @see #setTime4(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateAndTimeFunction_Time4()
+   * @return the value of the '<em>Time</em>' attribute.
+   * @see #setTime(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateAndTimeFunction_Time()
    * @model
    * @generated
    */
-  String getTime4();
+  String getTime();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getTime4 <em>Time4</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getTime <em>Time</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Time4</em>' attribute.
-   * @see #getTime4()
+   * @param value the new value of the '<em>Time</em>' attribute.
+   * @see #getTime()
    * @generated
    */
-  void setTime4(String value);
+  void setTime(String value);
 
 } // DateAndTimeFunction

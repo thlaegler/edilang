@@ -13,7 +13,10 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CCISegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CCISegment#getClassTypeCode <em>Class Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CCISegment#getMeasurementDetails <em>Measurement Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CCISegment#getProductCharacteristic <em>Product Characteristic</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CCISegment#getCharacteristicRelevanceCode <em>Characteristic Relevance Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCISegment()
@@ -23,25 +26,91 @@ package io.thlaegler.edifact.edilang;
 public interface CCISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Class Type Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCISegment_Todo()
+   * @return the value of the '<em>Class Type Code</em>' attribute.
+   * @see #setClassTypeCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCISegment_ClassTypeCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getClassTypeCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCISegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCISegment#getClassTypeCode <em>Class Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Class Type Code</em>' attribute.
+   * @see #getClassTypeCode()
    * @generated
    */
-  void setTodo(String value);
+  void setClassTypeCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Measurement Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Measurement Details</em>' containment reference.
+   * @see #setMeasurementDetails(MeasurementDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCISegment_MeasurementDetails()
+   * @model containment="true"
+   * @generated
+   */
+  MeasurementDetail getMeasurementDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCISegment#getMeasurementDetails <em>Measurement Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Measurement Details</em>' containment reference.
+   * @see #getMeasurementDetails()
+   * @generated
+   */
+  void setMeasurementDetails(MeasurementDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Product Characteristic</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Product Characteristic</em>' containment reference.
+   * @see #setProductCharacteristic(ProductCharacteristic)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCISegment_ProductCharacteristic()
+   * @model containment="true"
+   * @generated
+   */
+  ProductCharacteristic getProductCharacteristic();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCISegment#getProductCharacteristic <em>Product Characteristic</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Product Characteristic</em>' containment reference.
+   * @see #getProductCharacteristic()
+   * @generated
+   */
+  void setProductCharacteristic(ProductCharacteristic value);
+
+  /**
+   * Returns the value of the '<em><b>Characteristic Relevance Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Characteristic Relevance Code</em>' attribute.
+   * @see #setCharacteristicRelevanceCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCCISegment_CharacteristicRelevanceCode()
+   * @model
+   * @generated
+   */
+  String getCharacteristicRelevanceCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CCISegment#getCharacteristicRelevanceCode <em>Characteristic Relevance Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Characteristic Relevance Code</em>' attribute.
+   * @see #getCharacteristicRelevanceCode()
+   * @generated
+   */
+  void setCharacteristicRelevanceCode(String value);
 
 } // CCISegment

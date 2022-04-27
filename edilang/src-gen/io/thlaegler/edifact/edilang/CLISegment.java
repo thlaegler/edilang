@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CLISegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CLISegment#getClinicalInterventionTypeCodeQualifier <em>Clinical Intervention Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CLISegment#getClinicalInterventionDetails <em>Clinical Intervention Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCLISegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface CLISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Clinical Intervention Type Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCLISegment_Todo()
+   * @return the value of the '<em>Clinical Intervention Type Code Qualifier</em>' attribute.
+   * @see #setClinicalInterventionTypeCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCLISegment_ClinicalInterventionTypeCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getClinicalInterventionTypeCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CLISegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CLISegment#getClinicalInterventionTypeCodeQualifier <em>Clinical Intervention Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Clinical Intervention Type Code Qualifier</em>' attribute.
+   * @see #getClinicalInterventionTypeCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setClinicalInterventionTypeCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Clinical Intervention Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Clinical Intervention Details</em>' containment reference.
+   * @see #setClinicalInterventionDetails(ClinicalInterventionDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCLISegment_ClinicalInterventionDetails()
+   * @model containment="true"
+   * @generated
+   */
+  ClinicalInterventionDetail getClinicalInterventionDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CLISegment#getClinicalInterventionDetails <em>Clinical Intervention Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Clinical Intervention Details</em>' containment reference.
+   * @see #getClinicalInterventionDetails()
+   * @generated
+   */
+  void setClinicalInterventionDetails(ClinicalInterventionDetail value);
 
 } // CLISegment

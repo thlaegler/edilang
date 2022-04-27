@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.AJTSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.AJTSegmentImpl#getAdjustmentReasonDescriptionCode <em>Adjustment Reason Description Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.AJTSegmentImpl#getLineItemIdentifier <em>Line Item Identifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +29,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getAdjustmentReasonDescriptionCode() <em>Adjustment Reason Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAdjustmentReasonDescriptionCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String ADJUSTMENT_REASON_DESCRIPTION_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getAdjustmentReasonDescriptionCode() <em>Adjustment Reason Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAdjustmentReasonDescriptionCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String adjustmentReasonDescriptionCode = ADJUSTMENT_REASON_DESCRIPTION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getLineItemIdentifier() <em>Line Item Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLineItemIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected static final String LINE_ITEM_IDENTIFIER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLineItemIdentifier() <em>Line Item Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLineItemIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected String lineItemIdentifier = LINE_ITEM_IDENTIFIER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +95,9 @@ public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getAdjustmentReasonDescriptionCode()
   {
-    return todo;
+    return adjustmentReasonDescriptionCode;
   }
 
   /**
@@ -85,12 +106,37 @@ public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setAdjustmentReasonDescriptionCode(String newAdjustmentReasonDescriptionCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldAdjustmentReasonDescriptionCode = adjustmentReasonDescriptionCode;
+    adjustmentReasonDescriptionCode = newAdjustmentReasonDescriptionCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AJT_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AJT_SEGMENT__ADJUSTMENT_REASON_DESCRIPTION_CODE, oldAdjustmentReasonDescriptionCode, adjustmentReasonDescriptionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getLineItemIdentifier()
+  {
+    return lineItemIdentifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLineItemIdentifier(String newLineItemIdentifier)
+  {
+    String oldLineItemIdentifier = lineItemIdentifier;
+    lineItemIdentifier = newLineItemIdentifier;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AJT_SEGMENT__LINE_ITEM_IDENTIFIER, oldLineItemIdentifier, lineItemIdentifier));
   }
 
   /**
@@ -103,8 +149,10 @@ public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AJT_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.AJT_SEGMENT__ADJUSTMENT_REASON_DESCRIPTION_CODE:
+        return getAdjustmentReasonDescriptionCode();
+      case EdilangPackage.AJT_SEGMENT__LINE_ITEM_IDENTIFIER:
+        return getLineItemIdentifier();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +167,11 @@ public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AJT_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.AJT_SEGMENT__ADJUSTMENT_REASON_DESCRIPTION_CODE:
+        setAdjustmentReasonDescriptionCode((String)newValue);
+        return;
+      case EdilangPackage.AJT_SEGMENT__LINE_ITEM_IDENTIFIER:
+        setLineItemIdentifier((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +187,11 @@ public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AJT_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.AJT_SEGMENT__ADJUSTMENT_REASON_DESCRIPTION_CODE:
+        setAdjustmentReasonDescriptionCode(ADJUSTMENT_REASON_DESCRIPTION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.AJT_SEGMENT__LINE_ITEM_IDENTIFIER:
+        setLineItemIdentifier(LINE_ITEM_IDENTIFIER_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +207,10 @@ public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AJT_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.AJT_SEGMENT__ADJUSTMENT_REASON_DESCRIPTION_CODE:
+        return ADJUSTMENT_REASON_DESCRIPTION_CODE_EDEFAULT == null ? adjustmentReasonDescriptionCode != null : !ADJUSTMENT_REASON_DESCRIPTION_CODE_EDEFAULT.equals(adjustmentReasonDescriptionCode);
+      case EdilangPackage.AJT_SEGMENT__LINE_ITEM_IDENTIFIER:
+        return LINE_ITEM_IDENTIFIER_EDEFAULT == null ? lineItemIdentifier != null : !LINE_ITEM_IDENTIFIER_EDEFAULT.equals(lineItemIdentifier);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +226,10 @@ public class AJTSegmentImpl extends AbstractEdiSegmentImpl implements AJTSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (adjustmentReasonDescriptionCode: ");
+    result.append(adjustmentReasonDescriptionCode);
+    result.append(", lineItemIdentifier: ");
+    result.append(lineItemIdentifier);
     result.append(')');
     return result.toString();
   }

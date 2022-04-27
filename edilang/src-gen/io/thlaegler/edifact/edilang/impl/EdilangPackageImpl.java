@@ -1634,6 +1634,174 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass communicationContactEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass agreementTypeIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass allowanceChargeInformationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass specialServicesIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass applicabilityTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass priceMultiplierInformationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass monetaryAmountFunctionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass monetaryAmountFunctionDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass arrayCellDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass arrayStructureIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass billLevelIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass characteristicValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass measurementDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass physicalLogicalStateInformationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass codeSetIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass computerEnvironmentIdentificationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass clinicalInformationDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass certaintyDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass clauseNameEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass clinicalInterventionDetailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass processingIndicatorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass marksLabelsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeOfMarkingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass governmentActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass dateOnlyFunctionEClass = null;
 
   /**
@@ -2145,9 +2313,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getAGRSegment_Todo()
+  public EReference getAGRSegment_AgreementTypeIdentification()
   {
-        return (EAttribute)getAGRSegment().getEStructuralFeatures().get(0);
+        return (EReference)getAGRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAGRSegment_ServiceLayerCode()
+  {
+        return (EAttribute)getAGRSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2171,9 +2350,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getAJTSegment_Todo()
+  public EAttribute getAJTSegment_AdjustmentReasonDescriptionCode()
   {
         return (EAttribute)getAJTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAJTSegment_LineItemIdentifier()
+  {
+        return (EAttribute)getAJTSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2197,9 +2387,53 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getALCSegment_Todo()
+  public EAttribute getALCSegment_AllowanceChargeCodeQualifier()
   {
         return (EAttribute)getALCSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getALCSegment_AllowanceChargeInformation()
+  {
+        return (EReference)getALCSegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getALCSegment_SettlementMeansCode()
+  {
+        return (EAttribute)getALCSegment().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getALCSegment_CalculationSequenceCode()
+  {
+        return (EAttribute)getALCSegment().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getALCSegment_SpecialServicesIdentification()
+  {
+        return (EReference)getALCSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2271,9 +2505,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getAPPSegment_Todo()
+  public EAttribute getAPPSegment_ApplicabilityCodeQualifier()
   {
         return (EAttribute)getAPPSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAPPSegment_ApplicabilityType()
+  {
+        return (EReference)getAPPSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2297,9 +2542,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getAPRSegment_Todo()
+  public EAttribute getAPRSegment_TradeClassCode()
   {
         return (EAttribute)getAPRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAPRSegment_PriceMuliplierInformation()
+  {
+        return (EReference)getAPRSegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAPRSegment_ReasonForChange()
+  {
+        return (EReference)getAPRSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2323,9 +2590,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getARDSegment_Todo()
+  public EReference getARDSegment_MonetaryAmountFunction()
   {
-        return (EAttribute)getARDSegment().getEStructuralFeatures().get(0);
+        return (EReference)getARDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getARDSegment_MonetaryAmountFunctionDetails()
+  {
+        return (EReference)getARDSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2349,9 +2627,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getARRSegment_Todo()
+  public EReference getARRSegment_PositionIdentification()
   {
-        return (EAttribute)getARRSegment().getEStructuralFeatures().get(0);
+        return (EReference)getARRSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getARRSegment_ArrayCellDetails()
+  {
+        return (EReference)getARRSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2375,9 +2664,42 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getASISegment_Todo()
+  public EReference getASISegment_ArrayStructureIdentification()
   {
-        return (EAttribute)getASISegment().getEStructuralFeatures().get(0);
+        return (EReference)getASISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getASISegment_PartyIdentificationDetails()
+  {
+        return (EReference)getASISegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getASISegment_StatusDescriptionCode()
+  {
+        return (EAttribute)getASISegment().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getASISegment_MaintenanceOperationCode()
+  {
+        return (EAttribute)getASISegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2449,9 +2771,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getAUTSegment_Todo()
+  public EAttribute getAUTSegment_ValidationResultValue()
   {
         return (EAttribute)getAUTSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAUTSegment_ValidationKeyIdentifier()
+  {
+        return (EAttribute)getAUTSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2512,9 +2845,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getBIISegment_Todo()
+  public EAttribute getBIISegment_IndexingStructureCodeQualifier()
   {
         return (EAttribute)getBIISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getBIISegment_BillLevelIdentification()
+  {
+        return (EReference)getBIISegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBIISegment_ItemIdentifier()
+  {
+        return (EAttribute)getBIISegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2608,9 +2963,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCAVSegment_Todo()
+  public EReference getCAVSegment_CharacteristicValue()
   {
-        return (EAttribute)getCAVSegment().getEStructuralFeatures().get(0);
+        return (EReference)getCAVSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2634,9 +2989,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCCDSegment_Todo()
+  public EAttribute getCCDSegment_CreditCoverRequestTypeCode()
   {
         return (EAttribute)getCCDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCCDSegment_CreditCoverResponseTypeCode()
+  {
+        return (EAttribute)getCCDSegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCCDSegment_CreditCoverRequestReasonCode()
+  {
+        return (EAttribute)getCCDSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2660,9 +3037,42 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCCISegment_Todo()
+  public EAttribute getCCISegment_ClassTypeCode()
   {
         return (EAttribute)getCCISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCCISegment_MeasurementDetails()
+  {
+        return (EReference)getCCISegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCCISegment_ProductCharacteristic()
+  {
+        return (EReference)getCCISegment().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCCISegment_CharacteristicRelevanceCode()
+  {
+        return (EAttribute)getCCISegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2686,9 +3096,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCDISegment_Todo()
+  public EAttribute getCDISegment_PhysicalLogicalStateTypeCodeQualifier()
   {
         return (EAttribute)getCDISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCDISegment_PhysicalLogicalStateInformation()
+  {
+        return (EReference)getCDISegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2712,9 +3133,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCDSSegment_Todo()
+  public EReference getCDSSegment_CodeSetIdentification()
   {
-        return (EAttribute)getCDSSegment().getEStructuralFeatures().get(0);
+        return (EReference)getCDSSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDSSegment_DesignatedClassCode()
+  {
+        return (EAttribute)getCDSSegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDSSegment_MaintenanceOperationCode()
+  {
+        return (EAttribute)getCDSSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2738,9 +3181,53 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCDVSegment_Todo()
+  public EAttribute getCDVSegment_CodeValue()
   {
         return (EAttribute)getCDVSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDVSegment_CodeName()
+  {
+        return (EAttribute)getCDVSegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDVSegment_MaintenanceOperationCode()
+  {
+        return (EAttribute)getCDVSegment().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDVSegment_CodeValueSourceCode()
+  {
+        return (EAttribute)getCDVSegment().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCDVSegment_RequirementsDesignatorCode()
+  {
+        return (EAttribute)getCDVSegment().getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2764,9 +3251,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCEDSegment_Todo()
+  public EAttribute getCEDSegment_ComputerEnvironmentDetailsCodeQualifier()
   {
         return (EAttribute)getCEDSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCEDSegment_ComputerEnvironmentIdentification()
+  {
+        return (EReference)getCEDSegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCEDSegment_FileGenerationCommandName()
+  {
+        return (EAttribute)getCEDSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2790,9 +3299,31 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCINSegment_Todo()
+  public EAttribute getCINSegment_ClinicalInformationTypeCodeQualifier()
   {
         return (EAttribute)getCINSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCINSegment_ClinicalInformationDetails()
+  {
+        return (EReference)getCINSegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCINSegment_CertaintyDetails()
+  {
+        return (EReference)getCINSegment().getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2816,9 +3347,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCLASegment_Todo()
+  public EAttribute getCLASegment_ClauseCodeQualifier()
   {
         return (EAttribute)getCLASegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCLASegment_ClauseName()
+  {
+        return (EReference)getCLASegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2842,9 +3384,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCLISegment_Todo()
+  public EAttribute getCLISegment_ClinicalInterventionTypeCodeQualifier()
   {
         return (EAttribute)getCLISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCLISegment_ClinicalInterventionDetails()
+  {
+        return (EReference)getCLISegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2946,9 +3499,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getCOMSegment_Todo()
+  public EReference getCOMSegment_CommunicationContacts()
   {
-        return (EAttribute)getCOMSegment().getEStructuralFeatures().get(0);
+        return (EReference)getCOMSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4012,9 +4565,9 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getGISSegment_Todo()
+  public EReference getGISSegment_ProcessingIndicator()
   {
-        return (EAttribute)getGISSegment().getEStructuralFeatures().get(0);
+        return (EReference)getGISSegment().getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4038,9 +4591,20 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getGORSegment_Todo()
+  public EAttribute getGORSegment_TransportMovementCode()
   {
         return (EAttribute)getGORSegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getGORSegment_GovernmentAction()
+  {
+        return (EReference)getGORSegment().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -7442,9 +8006,42 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getPCISegment_Todo()
+  public EAttribute getPCISegment_MarketingInstructionsCode()
   {
         return (EAttribute)getPCISegment().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getPCISegment_MarksLabels()
+  {
+        return (EReference)getPCISegment().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPCISegment_ContainerPackageContentsIndicatorCode()
+  {
+        return (EAttribute)getPCISegment().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getPCISegment_TypeOfMarking()
+  {
+        return (EReference)getPCISegment().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -10347,11 +10944,1317 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
+  public EClass getCommunicationContact()
+  {
+    if (communicationContactEClass == null)
+    {
+      communicationContactEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(227);
+    }
+    return communicationContactEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCommunicationContact_CommunicationNumber()
+  {
+        return (EAttribute)getCommunicationContact().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCommunicationContact_CommunicationNumberCodeQualifier()
+  {
+        return (EAttribute)getCommunicationContact().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAgreementTypeIdentification()
+  {
+    if (agreementTypeIdentificationEClass == null)
+    {
+      agreementTypeIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(228);
+    }
+    return agreementTypeIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAgreementTypeIdentification_AgreementTypeCodeQualifier()
+  {
+        return (EAttribute)getAgreementTypeIdentification().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAgreementTypeIdentification_AgreementTypeDescriptionCode()
+  {
+        return (EAttribute)getAgreementTypeIdentification().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAgreementTypeIdentification_CodeListIdentificationCode()
+  {
+        return (EAttribute)getAgreementTypeIdentification().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAgreementTypeIdentification_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getAgreementTypeIdentification().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAgreementTypeIdentification_AgreementTypeDescription()
+  {
+        return (EAttribute)getAgreementTypeIdentification().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAllowanceChargeInformation()
+  {
+    if (allowanceChargeInformationEClass == null)
+    {
+      allowanceChargeInformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(229);
+    }
+    return allowanceChargeInformationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAllowanceChargeInformation_AllowanceChargeIdentifier()
+  {
+        return (EAttribute)getAllowanceChargeInformation().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAllowanceChargeInformation_AllowanceChargeIdentificationCode()
+  {
+        return (EAttribute)getAllowanceChargeInformation().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSpecialServicesIdentification()
+  {
+    if (specialServicesIdentificationEClass == null)
+    {
+      specialServicesIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(230);
+    }
+    return specialServicesIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSpecialServicesIdentification_SpecialServiceDescriptionCode()
+  {
+        return (EAttribute)getSpecialServicesIdentification().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSpecialServicesIdentification_CodeListIdentificationCode()
+  {
+        return (EAttribute)getSpecialServicesIdentification().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSpecialServicesIdentification_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getSpecialServicesIdentification().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSpecialServicesIdentification_SpecialServiceDescriptions()
+  {
+        return (EAttribute)getSpecialServicesIdentification().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getApplicabilityType()
+  {
+    if (applicabilityTypeEClass == null)
+    {
+      applicabilityTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(231);
+    }
+    return applicabilityTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getApplicabilityType_ApplicabilityTypeDescriptionCode()
+  {
+        return (EAttribute)getApplicabilityType().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getApplicabilityType_CodeListIdentificationCode()
+  {
+        return (EAttribute)getApplicabilityType().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getApplicabilityType_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getApplicabilityType().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getApplicabilityType_ApplicabilityTypeDescriptions()
+  {
+        return (EAttribute)getApplicabilityType().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPriceMultiplierInformation()
+  {
+    if (priceMultiplierInformationEClass == null)
+    {
+      priceMultiplierInformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(232);
+    }
+    return priceMultiplierInformationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPriceMultiplierInformation_PriceMultiplierRate()
+  {
+        return (EAttribute)getPriceMultiplierInformation().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPriceMultiplierInformation_PriceMultiplierTypeCodeQualifier()
+  {
+        return (EAttribute)getPriceMultiplierInformation().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMonetaryAmountFunction()
+  {
+    if (monetaryAmountFunctionEClass == null)
+    {
+      monetaryAmountFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(233);
+    }
+    return monetaryAmountFunctionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunction_MonetaryAmountFunctionDescriptionCode()
+  {
+        return (EAttribute)getMonetaryAmountFunction().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunction_CodeListIdentificationCode()
+  {
+        return (EAttribute)getMonetaryAmountFunction().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunction_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getMonetaryAmountFunction().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunction_MonetaryAmountFunctionDescription()
+  {
+        return (EAttribute)getMonetaryAmountFunction().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMonetaryAmountFunctionDetail()
+  {
+    if (monetaryAmountFunctionDetailEClass == null)
+    {
+      monetaryAmountFunctionDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(234);
+    }
+    return monetaryAmountFunctionDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunctionDetail_MonetaryAmountFunctionDetailDescriptionCode()
+  {
+        return (EAttribute)getMonetaryAmountFunctionDetail().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunctionDetail_CodeListIdentificationCode()
+  {
+        return (EAttribute)getMonetaryAmountFunctionDetail().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunctionDetail_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getMonetaryAmountFunctionDetail().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMonetaryAmountFunctionDetail_MonetaryAmountFunctionDetailDescription()
+  {
+        return (EAttribute)getMonetaryAmountFunctionDetail().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getArrayCellDetail()
+  {
+    if (arrayCellDetailEClass == null)
+    {
+      arrayCellDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(235);
+    }
+    return arrayCellDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getArrayCellDetail_ArrayCellDataDescription()
+  {
+        return (EAttribute)getArrayCellDetail().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getArrayStructureIdentification()
+  {
+    if (arrayStructureIdentificationEClass == null)
+    {
+      arrayStructureIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(236);
+    }
+    return arrayStructureIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getArrayStructureIdentification_ArrayCellStructureIdentifier()
+  {
+        return (EAttribute)getArrayStructureIdentification().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getArrayStructureIdentification_ObjectIdentificationCodeQualifier()
+  {
+        return (EAttribute)getArrayStructureIdentification().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getBillLevelIdentification()
+  {
+    if (billLevelIdentificationEClass == null)
+    {
+      billLevelIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(237);
+    }
+    return billLevelIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBillLevelIdentification_LevelOneIdentifier()
+  {
+        return (EAttribute)getBillLevelIdentification().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBillLevelIdentification_LevelTwoIdentifier()
+  {
+        return (EAttribute)getBillLevelIdentification().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBillLevelIdentification_LevelThreeIdentifier()
+  {
+        return (EAttribute)getBillLevelIdentification().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBillLevelIdentification_LevelFourIdentifier()
+  {
+        return (EAttribute)getBillLevelIdentification().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBillLevelIdentification_LevelFiveIdentifier()
+  {
+        return (EAttribute)getBillLevelIdentification().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBillLevelIdentification_LevelSixIdentifier()
+  {
+        return (EAttribute)getBillLevelIdentification().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCharacteristicValue()
+  {
+    if (characteristicValueEClass == null)
+    {
+      characteristicValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(238);
+    }
+    return characteristicValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCharacteristicValue_CharacteristicValueDescriptionCode()
+  {
+        return (EAttribute)getCharacteristicValue().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCharacteristicValue_CodeListIdentificationCode()
+  {
+        return (EAttribute)getCharacteristicValue().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCharacteristicValue_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getCharacteristicValue().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCharacteristicValue_CharacteristicValueDescription()
+  {
+        return (EAttribute)getCharacteristicValue().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMeasurementDetail()
+  {
+    if (measurementDetailEClass == null)
+    {
+      measurementDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(239);
+    }
+    return measurementDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMeasurementDetail_MeasuredAttributeCode()
+  {
+        return (EAttribute)getMeasurementDetail().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMeasurementDetail_MeasurementSignificanceCode()
+  {
+        return (EAttribute)getMeasurementDetail().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMeasurementDetail_NonDiscreteMeasurementNameCode()
+  {
+        return (EAttribute)getMeasurementDetail().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMeasurementDetail_NonDiscreteMeasurementName()
+  {
+        return (EAttribute)getMeasurementDetail().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPhysicalLogicalStateInformation()
+  {
+    if (physicalLogicalStateInformationEClass == null)
+    {
+      physicalLogicalStateInformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(240);
+    }
+    return physicalLogicalStateInformationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPhysicalLogicalStateInformation_PhysicalLogicalStateDescriptionCode()
+  {
+        return (EAttribute)getPhysicalLogicalStateInformation().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPhysicalLogicalStateInformation_CodeListIdentificationCode()
+  {
+        return (EAttribute)getPhysicalLogicalStateInformation().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPhysicalLogicalStateInformation_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getPhysicalLogicalStateInformation().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPhysicalLogicalStateInformation_PhysicalLogicalStateDescription()
+  {
+        return (EAttribute)getPhysicalLogicalStateInformation().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCodeSetIdentification()
+  {
+    if (codeSetIdentificationEClass == null)
+    {
+      codeSetIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(241);
+    }
+    return codeSetIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCodeSetIdentification_SimpleDataElementTagIdentifier()
+  {
+        return (EAttribute)getCodeSetIdentification().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCodeSetIdentification_CodeListIdentificationCode()
+  {
+        return (EAttribute)getCodeSetIdentification().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCodeSetIdentification_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getCodeSetIdentification().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getComputerEnvironmentIdentification()
+  {
+    if (computerEnvironmentIdentificationEClass == null)
+    {
+      computerEnvironmentIdentificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(242);
+    }
+    return computerEnvironmentIdentificationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComputerEnvironmentIdentification_ComputerEnvironmentNameCode()
+  {
+        return (EAttribute)getComputerEnvironmentIdentification().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComputerEnvironmentIdentification_CodeListIdentificationCode()
+  {
+        return (EAttribute)getComputerEnvironmentIdentification().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComputerEnvironmentIdentification_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getComputerEnvironmentIdentification().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComputerEnvironmentIdentification_ComputerEnvironmentName()
+  {
+        return (EAttribute)getComputerEnvironmentIdentification().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComputerEnvironmentIdentification_VersionIdentifier()
+  {
+        return (EAttribute)getComputerEnvironmentIdentification().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComputerEnvironmentIdentification_ReleaseIdentifier()
+  {
+        return (EAttribute)getComputerEnvironmentIdentification().getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComputerEnvironmentIdentification_ObjectIdentifier()
+  {
+        return (EAttribute)getComputerEnvironmentIdentification().getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getClinicalInformationDetail()
+  {
+    if (clinicalInformationDetailEClass == null)
+    {
+      clinicalInformationDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(243);
+    }
+    return clinicalInformationDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInformationDetail_ClinicalInformationDescriptionIdentifier()
+  {
+        return (EAttribute)getClinicalInformationDetail().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInformationDetail_CodeListIdentificationCode()
+  {
+        return (EAttribute)getClinicalInformationDetail().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInformationDetail_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getClinicalInformationDetail().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInformationDetail_ClinicalInformationDescription()
+  {
+        return (EAttribute)getClinicalInformationDetail().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCertaintyDetail()
+  {
+    if (certaintyDetailEClass == null)
+    {
+      certaintyDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(244);
+    }
+    return certaintyDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCertaintyDetail_CertaintyDescriptionCode()
+  {
+        return (EAttribute)getCertaintyDetail().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCertaintyDetail_CodeListIdentificationCode()
+  {
+        return (EAttribute)getCertaintyDetail().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCertaintyDetail_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getCertaintyDetail().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCertaintyDetail_CertaintyDescription()
+  {
+        return (EAttribute)getCertaintyDetail().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getClauseName()
+  {
+    if (clauseNameEClass == null)
+    {
+      clauseNameEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(245);
+    }
+    return clauseNameEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClauseName_ClauseNameCode()
+  {
+        return (EAttribute)getClauseName().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClauseName_CodeListIdentificationCode()
+  {
+        return (EAttribute)getClauseName().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClauseName_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getClauseName().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClauseName_ClauseName()
+  {
+        return (EAttribute)getClauseName().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getClinicalInterventionDetail()
+  {
+    if (clinicalInterventionDetailEClass == null)
+    {
+      clinicalInterventionDetailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(246);
+    }
+    return clinicalInterventionDetailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInterventionDetail_ClinicalInterventionDescriptionCode()
+  {
+        return (EAttribute)getClinicalInterventionDetail().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInterventionDetail_CodeListIdentificationCode()
+  {
+        return (EAttribute)getClinicalInterventionDetail().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInterventionDetail_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getClinicalInterventionDetail().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getClinicalInterventionDetail_ClinicalInterventionDescription()
+  {
+        return (EAttribute)getClinicalInterventionDetail().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getProcessingIndicator()
+  {
+    if (processingIndicatorEClass == null)
+    {
+      processingIndicatorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(247);
+    }
+    return processingIndicatorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getProcessingIndicator_ProcessingIndicatorDescriptionCode()
+  {
+        return (EAttribute)getProcessingIndicator().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getProcessingIndicator_CodeListIdentificationCode()
+  {
+        return (EAttribute)getProcessingIndicator().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getProcessingIndicator_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getProcessingIndicator().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getProcessingIndicator_ProcessTypeDescriptionCode()
+  {
+        return (EAttribute)getProcessingIndicator().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMarksLabels()
+  {
+    if (marksLabelsEClass == null)
+    {
+      marksLabelsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(248);
+    }
+    return marksLabelsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMarksLabels_ShippingMarksDescriptions()
+  {
+        return (EAttribute)getMarksLabels().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getTypeOfMarking()
+  {
+    if (typeOfMarkingEClass == null)
+    {
+      typeOfMarkingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(249);
+    }
+    return typeOfMarkingEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTypeOfMarking_MarkingTypeCode()
+  {
+        return (EAttribute)getTypeOfMarking().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTypeOfMarking_CodeListIdentificationCode()
+  {
+        return (EAttribute)getTypeOfMarking().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getTypeOfMarking_CodeListResponsibleAgencyCode()
+  {
+        return (EAttribute)getTypeOfMarking().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getGovernmentAction()
+  {
+    if (governmentActionEClass == null)
+    {
+      governmentActionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(250);
+    }
+    return governmentActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGovernmentAction_GovernmentAgencyIdentificationCode()
+  {
+        return (EAttribute)getGovernmentAction().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGovernmentAction_GovernmentInvolvementCode()
+  {
+        return (EAttribute)getGovernmentAction().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGovernmentAction_GovernmentActionCode()
+  {
+        return (EAttribute)getGovernmentAction().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getGovernmentAction_GovernmentProcedureCode()
+  {
+        return (EAttribute)getGovernmentAction().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getDateOnlyFunction()
   {
     if (dateOnlyFunctionEClass == null)
     {
-      dateOnlyFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(227);
+      dateOnlyFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(251);
     }
     return dateOnlyFunctionEClass;
   }
@@ -10362,7 +12265,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getDateOnlyFunction_Date6()
+  public EAttribute getDateOnlyFunction_Date()
   {
         return (EAttribute)getDateOnlyFunction().getEStructuralFeatures().get(0);
   }
@@ -10377,7 +12280,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   {
     if (dateAndTimeFunctionEClass == null)
     {
-      dateAndTimeFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(228);
+      dateAndTimeFunctionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(252);
     }
     return dateAndTimeFunctionEClass;
   }
@@ -10388,7 +12291,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getDateAndTimeFunction_Date6()
+  public EAttribute getDateAndTimeFunction_Date()
   {
         return (EAttribute)getDateAndTimeFunction().getEStructuralFeatures().get(0);
   }
@@ -10399,7 +12302,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
    * @generated
    */
   @Override
-  public EAttribute getDateAndTimeFunction_Time4()
+  public EAttribute getDateAndTimeFunction_Time()
   {
         return (EAttribute)getDateAndTimeFunction().getEStructuralFeatures().get(1);
   }
@@ -10414,7 +12317,7 @@ public class EdilangPackageImpl extends EPackageImpl implements EdilangPackage
   {
     if (dateTimePeriodEClass == null)
     {
-      dateTimePeriodEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(229);
+      dateTimePeriodEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(EdilangPackage.eNS_URI).getEClassifiers().get(253);
     }
     return dateTimePeriodEClass;
   }

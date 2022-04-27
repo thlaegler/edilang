@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CEDSegment;
+import io.thlaegler.edifact.edilang.ComputerEnvironmentIdentification;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CEDSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CEDSegmentImpl#getComputerEnvironmentDetailsCodeQualifier <em>Computer Environment Details Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CEDSegmentImpl#getComputerEnvironmentIdentification <em>Computer Environment Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CEDSegmentImpl#getFileGenerationCommandName <em>File Generation Command Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +33,54 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getComputerEnvironmentDetailsCodeQualifier() <em>Computer Environment Details Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getComputerEnvironmentDetailsCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getComputerEnvironmentDetailsCodeQualifier() <em>Computer Environment Details Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getComputerEnvironmentDetailsCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String computerEnvironmentDetailsCodeQualifier = COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getComputerEnvironmentIdentification() <em>Computer Environment Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getComputerEnvironmentIdentification()
+   * @generated
+   * @ordered
+   */
+  protected ComputerEnvironmentIdentification computerEnvironmentIdentification;
+
+  /**
+   * The default value of the '{@link #getFileGenerationCommandName() <em>File Generation Command Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFileGenerationCommandName()
+   * @generated
+   * @ordered
+   */
+  protected static final String FILE_GENERATION_COMMAND_NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getFileGenerationCommandName() <em>File Generation Command Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFileGenerationCommandName()
+   * @generated
+   * @ordered
+   */
+  protected String fileGenerationCommandName = FILE_GENERATION_COMMAND_NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +109,9 @@ public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getComputerEnvironmentDetailsCodeQualifier()
   {
-    return todo;
+    return computerEnvironmentDetailsCodeQualifier;
   }
 
   /**
@@ -85,12 +120,103 @@ public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setComputerEnvironmentDetailsCodeQualifier(String newComputerEnvironmentDetailsCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldComputerEnvironmentDetailsCodeQualifier = computerEnvironmentDetailsCodeQualifier;
+    computerEnvironmentDetailsCodeQualifier = newComputerEnvironmentDetailsCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CED_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER, oldComputerEnvironmentDetailsCodeQualifier, computerEnvironmentDetailsCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ComputerEnvironmentIdentification getComputerEnvironmentIdentification()
+  {
+    return computerEnvironmentIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetComputerEnvironmentIdentification(ComputerEnvironmentIdentification newComputerEnvironmentIdentification, NotificationChain msgs)
+  {
+    ComputerEnvironmentIdentification oldComputerEnvironmentIdentification = computerEnvironmentIdentification;
+    computerEnvironmentIdentification = newComputerEnvironmentIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION, oldComputerEnvironmentIdentification, newComputerEnvironmentIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setComputerEnvironmentIdentification(ComputerEnvironmentIdentification newComputerEnvironmentIdentification)
+  {
+    if (newComputerEnvironmentIdentification != computerEnvironmentIdentification)
+    {
+      NotificationChain msgs = null;
+      if (computerEnvironmentIdentification != null)
+        msgs = ((InternalEObject)computerEnvironmentIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION, null, msgs);
+      if (newComputerEnvironmentIdentification != null)
+        msgs = ((InternalEObject)newComputerEnvironmentIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION, null, msgs);
+      msgs = basicSetComputerEnvironmentIdentification(newComputerEnvironmentIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION, newComputerEnvironmentIdentification, newComputerEnvironmentIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getFileGenerationCommandName()
+  {
+    return fileGenerationCommandName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setFileGenerationCommandName(String newFileGenerationCommandName)
+  {
+    String oldFileGenerationCommandName = fileGenerationCommandName;
+    fileGenerationCommandName = newFileGenerationCommandName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CED_SEGMENT__FILE_GENERATION_COMMAND_NAME, oldFileGenerationCommandName, fileGenerationCommandName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION:
+        return basicSetComputerEnvironmentIdentification(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +229,12 @@ public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CED_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER:
+        return getComputerEnvironmentDetailsCodeQualifier();
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION:
+        return getComputerEnvironmentIdentification();
+      case EdilangPackage.CED_SEGMENT__FILE_GENERATION_COMMAND_NAME:
+        return getFileGenerationCommandName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +249,14 @@ public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CED_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER:
+        setComputerEnvironmentDetailsCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION:
+        setComputerEnvironmentIdentification((ComputerEnvironmentIdentification)newValue);
+        return;
+      case EdilangPackage.CED_SEGMENT__FILE_GENERATION_COMMAND_NAME:
+        setFileGenerationCommandName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +272,14 @@ public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CED_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER:
+        setComputerEnvironmentDetailsCodeQualifier(COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION:
+        setComputerEnvironmentIdentification((ComputerEnvironmentIdentification)null);
+        return;
+      case EdilangPackage.CED_SEGMENT__FILE_GENERATION_COMMAND_NAME:
+        setFileGenerationCommandName(FILE_GENERATION_COMMAND_NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +295,12 @@ public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CED_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER:
+        return COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER_EDEFAULT == null ? computerEnvironmentDetailsCodeQualifier != null : !COMPUTER_ENVIRONMENT_DETAILS_CODE_QUALIFIER_EDEFAULT.equals(computerEnvironmentDetailsCodeQualifier);
+      case EdilangPackage.CED_SEGMENT__COMPUTER_ENVIRONMENT_IDENTIFICATION:
+        return computerEnvironmentIdentification != null;
+      case EdilangPackage.CED_SEGMENT__FILE_GENERATION_COMMAND_NAME:
+        return FILE_GENERATION_COMMAND_NAME_EDEFAULT == null ? fileGenerationCommandName != null : !FILE_GENERATION_COMMAND_NAME_EDEFAULT.equals(fileGenerationCommandName);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +316,10 @@ public class CEDSegmentImpl extends AbstractEdiSegmentImpl implements CEDSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (computerEnvironmentDetailsCodeQualifier: ");
+    result.append(computerEnvironmentDetailsCodeQualifier);
+    result.append(", fileGenerationCommandName: ");
+    result.append(fileGenerationCommandName);
     result.append(')');
     return result.toString();
   }

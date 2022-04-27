@@ -13,7 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CDISegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CDISegment#getPhysicalLogicalStateTypeCodeQualifier <em>Physical Logical State Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CDISegment#getPhysicalLogicalStateInformation <em>Physical Logical State Information</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDISegment()
@@ -23,25 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface CDISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Physical Logical State Type Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDISegment_Todo()
+   * @return the value of the '<em>Physical Logical State Type Code Qualifier</em>' attribute.
+   * @see #setPhysicalLogicalStateTypeCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDISegment_PhysicalLogicalStateTypeCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getPhysicalLogicalStateTypeCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CDISegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CDISegment#getPhysicalLogicalStateTypeCodeQualifier <em>Physical Logical State Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Physical Logical State Type Code Qualifier</em>' attribute.
+   * @see #getPhysicalLogicalStateTypeCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setPhysicalLogicalStateTypeCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Physical Logical State Information</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Physical Logical State Information</em>' containment reference.
+   * @see #setPhysicalLogicalStateInformation(PhysicalLogicalStateInformation)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCDISegment_PhysicalLogicalStateInformation()
+   * @model containment="true"
+   * @generated
+   */
+  PhysicalLogicalStateInformation getPhysicalLogicalStateInformation();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CDISegment#getPhysicalLogicalStateInformation <em>Physical Logical State Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Physical Logical State Information</em>' containment reference.
+   * @see #getPhysicalLogicalStateInformation()
+   * @generated
+   */
+  void setPhysicalLogicalStateInformation(PhysicalLogicalStateInformation value);
 
 } // CDISegment

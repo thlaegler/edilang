@@ -48,13 +48,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ADRSegment/locationIdentification"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//AGRSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AGRSegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//AGRSegment/agreementTypeIdentification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AGRSegment/serviceLayerCode"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//AJTSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AJTSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AJTSegment/adjustmentReasonDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AJTSegment/lineItemIdentifier"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//ALCSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALCSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALCSegment/allowanceChargeCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ALCSegment/allowanceChargeInformation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALCSegment/settlementMeansCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALCSegment/calculationSequenceCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ALCSegment/specialServicesIdentification"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//ALISegment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALISegment/countryOfOriginNameCode"/>
@@ -62,19 +68,27 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ALISegment/specialConditionCodes"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//APPSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//APPSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//APPSegment/applicabilityCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//APPSegment/applicabilityType"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//APRSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//APRSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//APRSegment/tradeClassCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//APRSegment/priceMuliplierInformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//APRSegment/reasonForChange"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//ARDSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ARDSegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ARDSegment/monetaryAmountFunction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ARDSegment/monetaryAmountFunctionDetails"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//ARRSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ARRSegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ARRSegment/positionIdentification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ARRSegment/arrayCellDetails"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//ASISegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ASISegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ASISegment/arrayStructureIdentification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ASISegment/partyIdentificationDetails"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ASISegment/statusDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ASISegment/maintenanceOperationCode"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//ATTSegment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ATTSegment/attributeFunctionCodeQualifier"/>
@@ -82,14 +96,17 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//ATTSegment/attributeDetail"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//AUTSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AUTSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AUTSegment/validationResultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AUTSegment/validationKeyIdentifier"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//BASSegment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BASSegment/basisCodeQualifier"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//BASSegment/basisType"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//BIISegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BIISegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BIISegment/indexingStructureCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//BIISegment/billLevelIdentification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BIISegment/itemIdentifier"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//BUSSegment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//BUSSegment/businessFunction"/>
@@ -99,34 +116,52 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BUSSegment/intraCompanyPaymentIndicatorCode"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CAVSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CAVSegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CAVSegment/characteristicValue"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CCDSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCDSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCDSegment/creditCoverRequestTypeCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCDSegment/creditCoverResponseTypeCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCDSegment/creditCoverRequestReasonCode"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CCISegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCISegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCISegment/classTypeCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CCISegment/measurementDetails"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CCISegment/productCharacteristic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CCISegment/characteristicRelevanceCode"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CDISegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDISegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDISegment/physicalLogicalStateTypeCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CDISegment/physicalLogicalStateInformation"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CDSSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDSSegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CDSSegment/codeSetIdentification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDSSegment/designatedClassCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDSSegment/maintenanceOperationCode"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CDVSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDVSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDVSegment/codeValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDVSegment/codeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDVSegment/maintenanceOperationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDVSegment/codeValueSourceCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CDVSegment/requirementsDesignatorCode"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CEDSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CEDSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CEDSegment/computerEnvironmentDetailsCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CEDSegment/computerEnvironmentIdentification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CEDSegment/fileGenerationCommandName"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CINSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CINSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CINSegment/clinicalInformationTypeCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CINSegment/clinicalInformationDetails"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CINSegment/certaintyDetails"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CLASegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CLASegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CLASegment/clauseCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CLASegment/clauseName"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CLISegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CLISegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CLISegment/clinicalInterventionTypeCodeQualifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CLISegment/clinicalInterventionDetails"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//CMPSegment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CMPSegment/todo"/>
@@ -138,7 +173,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CODSegment/todo"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//COMSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//COMSegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//COMSegment/communicationContacts"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//COTSegment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//COTSegment/todo"/>
@@ -261,10 +296,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GIRSegment/todo"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//GISSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GISSegment/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//GISSegment/processingIndicator"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//GORSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GORSegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GORSegment/transportMovementCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//GORSegment/governmentAction"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//GRUSegment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GRUSegment/todo"/>
@@ -632,7 +668,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//CTASegment/departmentEmployeeDetails"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//PCISegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PCISegment/todo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PCISegment/marketingInstructionsCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//PCISegment/marksLabels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PCISegment/containerPackageContentsIndicatorCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Edilang.ecore#//PCISegment/typeOfMarking"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//UNSSegment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//UNSSegment/segmentCount"/>
@@ -933,12 +972,146 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BasisType/codeListResponsibleAgencyCode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BasisType/basisTypeDescription"/>
     </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CommunicationContact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CommunicationContact/communicationNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CommunicationContact/communicationNumberCodeQualifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//AgreementTypeIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AgreementTypeIdentification/agreementTypeCodeQualifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AgreementTypeIdentification/agreementTypeDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AgreementTypeIdentification/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AgreementTypeIdentification/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AgreementTypeIdentification/agreementTypeDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//AllowanceChargeInformation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AllowanceChargeInformation/allowanceChargeIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//AllowanceChargeInformation/allowanceChargeIdentificationCode"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//SpecialServicesIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SpecialServicesIdentification/specialServiceDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SpecialServicesIdentification/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SpecialServicesIdentification/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//SpecialServicesIdentification/specialServiceDescriptions"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ApplicabilityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ApplicabilityType/applicabilityTypeDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ApplicabilityType/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ApplicabilityType/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ApplicabilityType/applicabilityTypeDescriptions"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PriceMultiplierInformation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PriceMultiplierInformation/priceMultiplierRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PriceMultiplierInformation/priceMultiplierTypeCodeQualifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//MonetaryAmountFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunction/monetaryAmountFunctionDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunction/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunction/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunction/monetaryAmountFunctionDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//MonetaryAmountFunctionDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunctionDetail/monetaryAmountFunctionDetailDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunctionDetail/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunctionDetail/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MonetaryAmountFunctionDetail/monetaryAmountFunctionDetailDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ArrayCellDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ArrayCellDetail/arrayCellDataDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ArrayStructureIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ArrayStructureIdentification/arrayCellStructureIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ArrayStructureIdentification/objectIdentificationCodeQualifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//BillLevelIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BillLevelIdentification/levelOneIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BillLevelIdentification/levelTwoIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BillLevelIdentification/levelThreeIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BillLevelIdentification/levelFourIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BillLevelIdentification/levelFiveIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//BillLevelIdentification/levelSixIdentifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CharacteristicValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CharacteristicValue/characteristicValueDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CharacteristicValue/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CharacteristicValue/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CharacteristicValue/characteristicValueDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//MeasurementDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MeasurementDetail/measuredAttributeCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MeasurementDetail/measurementSignificanceCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MeasurementDetail/nonDiscreteMeasurementNameCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MeasurementDetail/nonDiscreteMeasurementName"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//PhysicalLogicalStateInformation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PhysicalLogicalStateInformation/physicalLogicalStateDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PhysicalLogicalStateInformation/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PhysicalLogicalStateInformation/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//PhysicalLogicalStateInformation/physicalLogicalStateDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CodeSetIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CodeSetIdentification/simpleDataElementTagIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CodeSetIdentification/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CodeSetIdentification/codeListResponsibleAgencyCode"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ComputerEnvironmentIdentification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ComputerEnvironmentIdentification/computerEnvironmentNameCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ComputerEnvironmentIdentification/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ComputerEnvironmentIdentification/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ComputerEnvironmentIdentification/computerEnvironmentName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ComputerEnvironmentIdentification/versionIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ComputerEnvironmentIdentification/releaseIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ComputerEnvironmentIdentification/objectIdentifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ClinicalInformationDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInformationDetail/clinicalInformationDescriptionIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInformationDetail/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInformationDetail/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInformationDetail/clinicalInformationDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//CertaintyDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CertaintyDetail/certaintyDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CertaintyDetail/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CertaintyDetail/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//CertaintyDetail/certaintyDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ClauseName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClauseName/clauseNameCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClauseName/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClauseName/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClauseName/clauseName"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ClinicalInterventionDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInterventionDetail/clinicalInterventionDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInterventionDetail/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInterventionDetail/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ClinicalInterventionDetail/clinicalInterventionDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//ProcessingIndicator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ProcessingIndicator/processingIndicatorDescriptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ProcessingIndicator/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ProcessingIndicator/codeListResponsibleAgencyCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//ProcessingIndicator/processTypeDescriptionCode"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//MarksLabels">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//MarksLabels/shippingMarksDescriptions"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//TypeOfMarking">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TypeOfMarking/markingTypeCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TypeOfMarking/codeListIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//TypeOfMarking/codeListResponsibleAgencyCode"/>
+    </genClasses>
+    <genClasses ecoreClass="Edilang.ecore#//GovernmentAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GovernmentAction/governmentAgencyIdentificationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GovernmentAction/governmentInvolvementCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GovernmentAction/governmentActionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//GovernmentAction/governmentProcedureCode"/>
+    </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//DateOnlyFunction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DateOnlyFunction/date6"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DateOnlyFunction/date"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//DateAndTimeFunction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DateAndTimeFunction/date6"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DateAndTimeFunction/time4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DateAndTimeFunction/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DateAndTimeFunction/time"/>
     </genClasses>
     <genClasses ecoreClass="Edilang.ecore#//DateTimePeriod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Edilang.ecore#//DateTimePeriod/dateTimePeriodFunctionCodeQualifier"/>

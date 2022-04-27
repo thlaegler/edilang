@@ -4,11 +4,15 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.ASISegment;
+import io.thlaegler.edifact.edilang.ArrayStructureIdentification;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.PartyIdentificationDetail;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ASISegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ASISegmentImpl#getArrayStructureIdentification <em>Array Structure Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ASISegmentImpl#getPartyIdentificationDetails <em>Party Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ASISegmentImpl#getStatusDescriptionCode <em>Status Description Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ASISegmentImpl#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +35,64 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getArrayStructureIdentification() <em>Array Structure Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getArrayStructureIdentification()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected ArrayStructureIdentification arrayStructureIdentification;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getPartyIdentificationDetails() <em>Party Identification Details</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getPartyIdentificationDetails()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected PartyIdentificationDetail partyIdentificationDetails;
+
+  /**
+   * The default value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String STATUS_DESCRIPTION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStatusDescriptionCode()
+   * @generated
+   * @ordered
+   */
+  protected String statusDescriptionCode = STATUS_DESCRIPTION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMaintenanceOperationCode() <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String MAINTENANCE_OPERATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMaintenanceOperationCode() <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected String maintenanceOperationCode = MAINTENANCE_OPERATION_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +121,26 @@ public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public ArrayStructureIdentification getArrayStructureIdentification()
   {
-    return todo;
+    return arrayStructureIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetArrayStructureIdentification(ArrayStructureIdentification newArrayStructureIdentification, NotificationChain msgs)
+  {
+    ArrayStructureIdentification oldArrayStructureIdentification = arrayStructureIdentification;
+    arrayStructureIdentification = newArrayStructureIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION, oldArrayStructureIdentification, newArrayStructureIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +149,138 @@ public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setArrayStructureIdentification(ArrayStructureIdentification newArrayStructureIdentification)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newArrayStructureIdentification != arrayStructureIdentification)
+    {
+      NotificationChain msgs = null;
+      if (arrayStructureIdentification != null)
+        msgs = ((InternalEObject)arrayStructureIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION, null, msgs);
+      if (newArrayStructureIdentification != null)
+        msgs = ((InternalEObject)newArrayStructureIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION, null, msgs);
+      msgs = basicSetArrayStructureIdentification(newArrayStructureIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION, newArrayStructureIdentification, newArrayStructureIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PartyIdentificationDetail getPartyIdentificationDetails()
+  {
+    return partyIdentificationDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPartyIdentificationDetails(PartyIdentificationDetail newPartyIdentificationDetails, NotificationChain msgs)
+  {
+    PartyIdentificationDetail oldPartyIdentificationDetails = partyIdentificationDetails;
+    partyIdentificationDetails = newPartyIdentificationDetails;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ASI_SEGMENT__TODO, oldTodo, todo));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, oldPartyIdentificationDetails, newPartyIdentificationDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPartyIdentificationDetails(PartyIdentificationDetail newPartyIdentificationDetails)
+  {
+    if (newPartyIdentificationDetails != partyIdentificationDetails)
+    {
+      NotificationChain msgs = null;
+      if (partyIdentificationDetails != null)
+        msgs = ((InternalEObject)partyIdentificationDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, null, msgs);
+      if (newPartyIdentificationDetails != null)
+        msgs = ((InternalEObject)newPartyIdentificationDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, null, msgs);
+      msgs = basicSetPartyIdentificationDetails(newPartyIdentificationDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS, newPartyIdentificationDetails, newPartyIdentificationDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getStatusDescriptionCode()
+  {
+    return statusDescriptionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setStatusDescriptionCode(String newStatusDescriptionCode)
+  {
+    String oldStatusDescriptionCode = statusDescriptionCode;
+    statusDescriptionCode = newStatusDescriptionCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ASI_SEGMENT__STATUS_DESCRIPTION_CODE, oldStatusDescriptionCode, statusDescriptionCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getMaintenanceOperationCode()
+  {
+    return maintenanceOperationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setMaintenanceOperationCode(String newMaintenanceOperationCode)
+  {
+    String oldMaintenanceOperationCode = maintenanceOperationCode;
+    maintenanceOperationCode = newMaintenanceOperationCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ASI_SEGMENT__MAINTENANCE_OPERATION_CODE, oldMaintenanceOperationCode, maintenanceOperationCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION:
+        return basicSetArrayStructureIdentification(null, msgs);
+      case EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return basicSetPartyIdentificationDetails(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +293,14 @@ public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ASI_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION:
+        return getArrayStructureIdentification();
+      case EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return getPartyIdentificationDetails();
+      case EdilangPackage.ASI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return getStatusDescriptionCode();
+      case EdilangPackage.ASI_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        return getMaintenanceOperationCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +315,17 @@ public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ASI_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION:
+        setArrayStructureIdentification((ArrayStructureIdentification)newValue);
+        return;
+      case EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        setPartyIdentificationDetails((PartyIdentificationDetail)newValue);
+        return;
+      case EdilangPackage.ASI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode((String)newValue);
+        return;
+      case EdilangPackage.ASI_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        setMaintenanceOperationCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +341,17 @@ public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ASI_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION:
+        setArrayStructureIdentification((ArrayStructureIdentification)null);
+        return;
+      case EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        setPartyIdentificationDetails((PartyIdentificationDetail)null);
+        return;
+      case EdilangPackage.ASI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        setStatusDescriptionCode(STATUS_DESCRIPTION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.ASI_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        setMaintenanceOperationCode(MAINTENANCE_OPERATION_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +367,14 @@ public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ASI_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.ASI_SEGMENT__ARRAY_STRUCTURE_IDENTIFICATION:
+        return arrayStructureIdentification != null;
+      case EdilangPackage.ASI_SEGMENT__PARTY_IDENTIFICATION_DETAILS:
+        return partyIdentificationDetails != null;
+      case EdilangPackage.ASI_SEGMENT__STATUS_DESCRIPTION_CODE:
+        return STATUS_DESCRIPTION_CODE_EDEFAULT == null ? statusDescriptionCode != null : !STATUS_DESCRIPTION_CODE_EDEFAULT.equals(statusDescriptionCode);
+      case EdilangPackage.ASI_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        return MAINTENANCE_OPERATION_CODE_EDEFAULT == null ? maintenanceOperationCode != null : !MAINTENANCE_OPERATION_CODE_EDEFAULT.equals(maintenanceOperationCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +390,10 @@ public class ASISegmentImpl extends AbstractEdiSegmentImpl implements ASISegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (statusDescriptionCode: ");
+    result.append(statusDescriptionCode);
+    result.append(", maintenanceOperationCode: ");
+    result.append(maintenanceOperationCode);
     result.append(')');
     return result.toString();
   }

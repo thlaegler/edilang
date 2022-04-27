@@ -20,7 +20,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CCDSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CCDSegmentImpl#getCreditCoverRequestTypeCode <em>Credit Cover Request Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CCDSegmentImpl#getCreditCoverResponseTypeCode <em>Credit Cover Response Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CCDSegmentImpl#getCreditCoverRequestReasonCode <em>Credit Cover Request Reason Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +30,64 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getCreditCoverRequestTypeCode() <em>Credit Cover Request Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getCreditCoverRequestTypeCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String CREDIT_COVER_REQUEST_TYPE_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getCreditCoverRequestTypeCode() <em>Credit Cover Request Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getCreditCoverRequestTypeCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String creditCoverRequestTypeCode = CREDIT_COVER_REQUEST_TYPE_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCreditCoverResponseTypeCode() <em>Credit Cover Response Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCreditCoverResponseTypeCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String CREDIT_COVER_RESPONSE_TYPE_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCreditCoverResponseTypeCode() <em>Credit Cover Response Type Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCreditCoverResponseTypeCode()
+   * @generated
+   * @ordered
+   */
+  protected String creditCoverResponseTypeCode = CREDIT_COVER_RESPONSE_TYPE_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCreditCoverRequestReasonCode() <em>Credit Cover Request Reason Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCreditCoverRequestReasonCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String CREDIT_COVER_REQUEST_REASON_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCreditCoverRequestReasonCode() <em>Credit Cover Request Reason Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCreditCoverRequestReasonCode()
+   * @generated
+   * @ordered
+   */
+  protected String creditCoverRequestReasonCode = CREDIT_COVER_REQUEST_REASON_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +116,9 @@ public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getCreditCoverRequestTypeCode()
   {
-    return todo;
+    return creditCoverRequestTypeCode;
   }
 
   /**
@@ -85,12 +127,62 @@ public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setCreditCoverRequestTypeCode(String newCreditCoverRequestTypeCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldCreditCoverRequestTypeCode = creditCoverRequestTypeCode;
+    creditCoverRequestTypeCode = newCreditCoverRequestTypeCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCD_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_TYPE_CODE, oldCreditCoverRequestTypeCode, creditCoverRequestTypeCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCreditCoverResponseTypeCode()
+  {
+    return creditCoverResponseTypeCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCreditCoverResponseTypeCode(String newCreditCoverResponseTypeCode)
+  {
+    String oldCreditCoverResponseTypeCode = creditCoverResponseTypeCode;
+    creditCoverResponseTypeCode = newCreditCoverResponseTypeCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCD_SEGMENT__CREDIT_COVER_RESPONSE_TYPE_CODE, oldCreditCoverResponseTypeCode, creditCoverResponseTypeCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCreditCoverRequestReasonCode()
+  {
+    return creditCoverRequestReasonCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCreditCoverRequestReasonCode(String newCreditCoverRequestReasonCode)
+  {
+    String oldCreditCoverRequestReasonCode = creditCoverRequestReasonCode;
+    creditCoverRequestReasonCode = newCreditCoverRequestReasonCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_REASON_CODE, oldCreditCoverRequestReasonCode, creditCoverRequestReasonCode));
   }
 
   /**
@@ -103,8 +195,12 @@ public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCD_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_TYPE_CODE:
+        return getCreditCoverRequestTypeCode();
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_RESPONSE_TYPE_CODE:
+        return getCreditCoverResponseTypeCode();
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_REASON_CODE:
+        return getCreditCoverRequestReasonCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +215,14 @@ public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCD_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_TYPE_CODE:
+        setCreditCoverRequestTypeCode((String)newValue);
+        return;
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_RESPONSE_TYPE_CODE:
+        setCreditCoverResponseTypeCode((String)newValue);
+        return;
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_REASON_CODE:
+        setCreditCoverRequestReasonCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +238,14 @@ public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCD_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_TYPE_CODE:
+        setCreditCoverRequestTypeCode(CREDIT_COVER_REQUEST_TYPE_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_RESPONSE_TYPE_CODE:
+        setCreditCoverResponseTypeCode(CREDIT_COVER_RESPONSE_TYPE_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_REASON_CODE:
+        setCreditCoverRequestReasonCode(CREDIT_COVER_REQUEST_REASON_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +261,12 @@ public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCD_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_TYPE_CODE:
+        return CREDIT_COVER_REQUEST_TYPE_CODE_EDEFAULT == null ? creditCoverRequestTypeCode != null : !CREDIT_COVER_REQUEST_TYPE_CODE_EDEFAULT.equals(creditCoverRequestTypeCode);
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_RESPONSE_TYPE_CODE:
+        return CREDIT_COVER_RESPONSE_TYPE_CODE_EDEFAULT == null ? creditCoverResponseTypeCode != null : !CREDIT_COVER_RESPONSE_TYPE_CODE_EDEFAULT.equals(creditCoverResponseTypeCode);
+      case EdilangPackage.CCD_SEGMENT__CREDIT_COVER_REQUEST_REASON_CODE:
+        return CREDIT_COVER_REQUEST_REASON_CODE_EDEFAULT == null ? creditCoverRequestReasonCode != null : !CREDIT_COVER_REQUEST_REASON_CODE_EDEFAULT.equals(creditCoverRequestReasonCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +282,12 @@ public class CCDSegmentImpl extends AbstractEdiSegmentImpl implements CCDSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (creditCoverRequestTypeCode: ");
+    result.append(creditCoverRequestTypeCode);
+    result.append(", creditCoverResponseTypeCode: ");
+    result.append(creditCoverResponseTypeCode);
+    result.append(", creditCoverRequestReasonCode: ");
+    result.append(creditCoverRequestReasonCode);
     result.append(')');
     return result.toString();
   }

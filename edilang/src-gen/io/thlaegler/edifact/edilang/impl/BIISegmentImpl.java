@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.BIISegment;
+import io.thlaegler.edifact.edilang.BillLevelIdentification;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.BIISegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BIISegmentImpl#getIndexingStructureCodeQualifier <em>Indexing Structure Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BIISegmentImpl#getBillLevelIdentification <em>Bill Level Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.BIISegmentImpl#getItemIdentifier <em>Item Identifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +33,54 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getIndexingStructureCodeQualifier() <em>Indexing Structure Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getIndexingStructureCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String INDEXING_STRUCTURE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getIndexingStructureCodeQualifier() <em>Indexing Structure Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getIndexingStructureCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String indexingStructureCodeQualifier = INDEXING_STRUCTURE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getBillLevelIdentification() <em>Bill Level Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBillLevelIdentification()
+   * @generated
+   * @ordered
+   */
+  protected BillLevelIdentification billLevelIdentification;
+
+  /**
+   * The default value of the '{@link #getItemIdentifier() <em>Item Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getItemIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected static final String ITEM_IDENTIFIER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getItemIdentifier() <em>Item Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getItemIdentifier()
+   * @generated
+   * @ordered
+   */
+  protected String itemIdentifier = ITEM_IDENTIFIER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +109,9 @@ public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getIndexingStructureCodeQualifier()
   {
-    return todo;
+    return indexingStructureCodeQualifier;
   }
 
   /**
@@ -85,12 +120,103 @@ public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setIndexingStructureCodeQualifier(String newIndexingStructureCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldIndexingStructureCodeQualifier = indexingStructureCodeQualifier;
+    indexingStructureCodeQualifier = newIndexingStructureCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BII_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BII_SEGMENT__INDEXING_STRUCTURE_CODE_QUALIFIER, oldIndexingStructureCodeQualifier, indexingStructureCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BillLevelIdentification getBillLevelIdentification()
+  {
+    return billLevelIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBillLevelIdentification(BillLevelIdentification newBillLevelIdentification, NotificationChain msgs)
+  {
+    BillLevelIdentification oldBillLevelIdentification = billLevelIdentification;
+    billLevelIdentification = newBillLevelIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION, oldBillLevelIdentification, newBillLevelIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setBillLevelIdentification(BillLevelIdentification newBillLevelIdentification)
+  {
+    if (newBillLevelIdentification != billLevelIdentification)
+    {
+      NotificationChain msgs = null;
+      if (billLevelIdentification != null)
+        msgs = ((InternalEObject)billLevelIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION, null, msgs);
+      if (newBillLevelIdentification != null)
+        msgs = ((InternalEObject)newBillLevelIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION, null, msgs);
+      msgs = basicSetBillLevelIdentification(newBillLevelIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION, newBillLevelIdentification, newBillLevelIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getItemIdentifier()
+  {
+    return itemIdentifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setItemIdentifier(String newItemIdentifier)
+  {
+    String oldItemIdentifier = itemIdentifier;
+    itemIdentifier = newItemIdentifier;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.BII_SEGMENT__ITEM_IDENTIFIER, oldItemIdentifier, itemIdentifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION:
+        return basicSetBillLevelIdentification(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +229,12 @@ public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BII_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.BII_SEGMENT__INDEXING_STRUCTURE_CODE_QUALIFIER:
+        return getIndexingStructureCodeQualifier();
+      case EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION:
+        return getBillLevelIdentification();
+      case EdilangPackage.BII_SEGMENT__ITEM_IDENTIFIER:
+        return getItemIdentifier();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +249,14 @@ public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BII_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.BII_SEGMENT__INDEXING_STRUCTURE_CODE_QUALIFIER:
+        setIndexingStructureCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION:
+        setBillLevelIdentification((BillLevelIdentification)newValue);
+        return;
+      case EdilangPackage.BII_SEGMENT__ITEM_IDENTIFIER:
+        setItemIdentifier((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +272,14 @@ public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BII_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.BII_SEGMENT__INDEXING_STRUCTURE_CODE_QUALIFIER:
+        setIndexingStructureCodeQualifier(INDEXING_STRUCTURE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION:
+        setBillLevelIdentification((BillLevelIdentification)null);
+        return;
+      case EdilangPackage.BII_SEGMENT__ITEM_IDENTIFIER:
+        setItemIdentifier(ITEM_IDENTIFIER_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +295,12 @@ public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.BII_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.BII_SEGMENT__INDEXING_STRUCTURE_CODE_QUALIFIER:
+        return INDEXING_STRUCTURE_CODE_QUALIFIER_EDEFAULT == null ? indexingStructureCodeQualifier != null : !INDEXING_STRUCTURE_CODE_QUALIFIER_EDEFAULT.equals(indexingStructureCodeQualifier);
+      case EdilangPackage.BII_SEGMENT__BILL_LEVEL_IDENTIFICATION:
+        return billLevelIdentification != null;
+      case EdilangPackage.BII_SEGMENT__ITEM_IDENTIFIER:
+        return ITEM_IDENTIFIER_EDEFAULT == null ? itemIdentifier != null : !ITEM_IDENTIFIER_EDEFAULT.equals(itemIdentifier);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +316,10 @@ public class BIISegmentImpl extends AbstractEdiSegmentImpl implements BIISegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (indexingStructureCodeQualifier: ");
+    result.append(indexingStructureCodeQualifier);
+    result.append(", itemIdentifier: ");
+    result.append(itemIdentifier);
     result.append(')');
     return result.toString();
   }

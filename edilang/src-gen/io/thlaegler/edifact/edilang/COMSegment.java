@@ -3,6 +3,7 @@
  */
 package io.thlaegler.edifact.edilang;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,7 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.COMSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.COMSegment#getCommunicationContacts <em>Communication Contacts</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCOMSegment()
@@ -23,25 +24,15 @@ package io.thlaegler.edifact.edilang;
 public interface COMSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Communication Contacts</b></em>' containment reference list.
+   * The list contents are of type {@link io.thlaegler.edifact.edilang.CommunicationContact}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCOMSegment_Todo()
-   * @model
+   * @return the value of the '<em>Communication Contacts</em>' containment reference list.
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCOMSegment_CommunicationContacts()
+   * @model containment="true"
    * @generated
    */
-  String getTodo();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.COMSegment#getTodo <em>Todo</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
-   * @generated
-   */
-  void setTodo(String value);
+  EList<CommunicationContact> getCommunicationContacts();
 
 } // COMSegment

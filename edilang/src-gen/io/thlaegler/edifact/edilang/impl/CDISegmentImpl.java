@@ -5,10 +5,13 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CDISegment;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.PhysicalLogicalStateInformation;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CDISegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CDISegmentImpl#getPhysicalLogicalStateTypeCodeQualifier <em>Physical Logical State Type Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CDISegmentImpl#getPhysicalLogicalStateInformation <em>Physical Logical State Information</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getPhysicalLogicalStateTypeCodeQualifier() <em>Physical Logical State Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getPhysicalLogicalStateTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getPhysicalLogicalStateTypeCodeQualifier() <em>Physical Logical State Type Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getPhysicalLogicalStateTypeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String physicalLogicalStateTypeCodeQualifier = PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getPhysicalLogicalStateInformation() <em>Physical Logical State Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPhysicalLogicalStateInformation()
+   * @generated
+   * @ordered
+   */
+  protected PhysicalLogicalStateInformation physicalLogicalStateInformation;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,9 @@ public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getPhysicalLogicalStateTypeCodeQualifier()
   {
-    return todo;
+    return physicalLogicalStateTypeCodeQualifier;
   }
 
   /**
@@ -85,12 +99,78 @@ public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setPhysicalLogicalStateTypeCodeQualifier(String newPhysicalLogicalStateTypeCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldPhysicalLogicalStateTypeCodeQualifier = physicalLogicalStateTypeCodeQualifier;
+    physicalLogicalStateTypeCodeQualifier = newPhysicalLogicalStateTypeCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDI_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER, oldPhysicalLogicalStateTypeCodeQualifier, physicalLogicalStateTypeCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PhysicalLogicalStateInformation getPhysicalLogicalStateInformation()
+  {
+    return physicalLogicalStateInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPhysicalLogicalStateInformation(PhysicalLogicalStateInformation newPhysicalLogicalStateInformation, NotificationChain msgs)
+  {
+    PhysicalLogicalStateInformation oldPhysicalLogicalStateInformation = physicalLogicalStateInformation;
+    physicalLogicalStateInformation = newPhysicalLogicalStateInformation;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION, oldPhysicalLogicalStateInformation, newPhysicalLogicalStateInformation);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setPhysicalLogicalStateInformation(PhysicalLogicalStateInformation newPhysicalLogicalStateInformation)
+  {
+    if (newPhysicalLogicalStateInformation != physicalLogicalStateInformation)
+    {
+      NotificationChain msgs = null;
+      if (physicalLogicalStateInformation != null)
+        msgs = ((InternalEObject)physicalLogicalStateInformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION, null, msgs);
+      if (newPhysicalLogicalStateInformation != null)
+        msgs = ((InternalEObject)newPhysicalLogicalStateInformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION, null, msgs);
+      msgs = basicSetPhysicalLogicalStateInformation(newPhysicalLogicalStateInformation, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION, newPhysicalLogicalStateInformation, newPhysicalLogicalStateInformation));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION:
+        return basicSetPhysicalLogicalStateInformation(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDI_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER:
+        return getPhysicalLogicalStateTypeCodeQualifier();
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION:
+        return getPhysicalLogicalStateInformation();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDI_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER:
+        setPhysicalLogicalStateTypeCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION:
+        setPhysicalLogicalStateInformation((PhysicalLogicalStateInformation)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDI_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER:
+        setPhysicalLogicalStateTypeCodeQualifier(PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION:
+        setPhysicalLogicalStateInformation((PhysicalLogicalStateInformation)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDI_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER:
+        return PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER_EDEFAULT == null ? physicalLogicalStateTypeCodeQualifier != null : !PHYSICAL_LOGICAL_STATE_TYPE_CODE_QUALIFIER_EDEFAULT.equals(physicalLogicalStateTypeCodeQualifier);
+      case EdilangPackage.CDI_SEGMENT__PHYSICAL_LOGICAL_STATE_INFORMATION:
+        return physicalLogicalStateInformation != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class CDISegmentImpl extends AbstractEdiSegmentImpl implements CDISegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (physicalLogicalStateTypeCodeQualifier: ");
+    result.append(physicalLogicalStateTypeCodeQualifier);
     result.append(')');
     return result.toString();
   }

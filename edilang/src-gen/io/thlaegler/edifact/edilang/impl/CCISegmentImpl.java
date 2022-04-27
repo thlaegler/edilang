@@ -5,10 +5,14 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.CCISegment;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.MeasurementDetail;
+import io.thlaegler.edifact.edilang.ProductCharacteristic;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CCISegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CCISegmentImpl#getClassTypeCode <em>Class Type Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CCISegmentImpl#getMeasurementDetails <em>Measurement Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CCISegmentImpl#getProductCharacteristic <em>Product Characteristic</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CCISegmentImpl#getCharacteristicRelevanceCode <em>Characteristic Relevance Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +35,64 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getClassTypeCode() <em>Class Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getClassTypeCode()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String CLASS_TYPE_CODE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getClassTypeCode() <em>Class Type Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getClassTypeCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String classTypeCode = CLASS_TYPE_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getMeasurementDetails() <em>Measurement Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMeasurementDetails()
+   * @generated
+   * @ordered
+   */
+  protected MeasurementDetail measurementDetails;
+
+  /**
+   * The cached value of the '{@link #getProductCharacteristic() <em>Product Characteristic</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProductCharacteristic()
+   * @generated
+   * @ordered
+   */
+  protected ProductCharacteristic productCharacteristic;
+
+  /**
+   * The default value of the '{@link #getCharacteristicRelevanceCode() <em>Characteristic Relevance Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCharacteristicRelevanceCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String CHARACTERISTIC_RELEVANCE_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCharacteristicRelevanceCode() <em>Characteristic Relevance Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCharacteristicRelevanceCode()
+   * @generated
+   * @ordered
+   */
+  protected String characteristicRelevanceCode = CHARACTERISTIC_RELEVANCE_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +121,9 @@ public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getClassTypeCode()
   {
-    return todo;
+    return classTypeCode;
   }
 
   /**
@@ -85,12 +132,155 @@ public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setClassTypeCode(String newClassTypeCode)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldClassTypeCode = classTypeCode;
+    classTypeCode = newClassTypeCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCI_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCI_SEGMENT__CLASS_TYPE_CODE, oldClassTypeCode, classTypeCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MeasurementDetail getMeasurementDetails()
+  {
+    return measurementDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetMeasurementDetails(MeasurementDetail newMeasurementDetails, NotificationChain msgs)
+  {
+    MeasurementDetail oldMeasurementDetails = measurementDetails;
+    measurementDetails = newMeasurementDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS, oldMeasurementDetails, newMeasurementDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setMeasurementDetails(MeasurementDetail newMeasurementDetails)
+  {
+    if (newMeasurementDetails != measurementDetails)
+    {
+      NotificationChain msgs = null;
+      if (measurementDetails != null)
+        msgs = ((InternalEObject)measurementDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS, null, msgs);
+      if (newMeasurementDetails != null)
+        msgs = ((InternalEObject)newMeasurementDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS, null, msgs);
+      msgs = basicSetMeasurementDetails(newMeasurementDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS, newMeasurementDetails, newMeasurementDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ProductCharacteristic getProductCharacteristic()
+  {
+    return productCharacteristic;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProductCharacteristic(ProductCharacteristic newProductCharacteristic, NotificationChain msgs)
+  {
+    ProductCharacteristic oldProductCharacteristic = productCharacteristic;
+    productCharacteristic = newProductCharacteristic;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC, oldProductCharacteristic, newProductCharacteristic);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setProductCharacteristic(ProductCharacteristic newProductCharacteristic)
+  {
+    if (newProductCharacteristic != productCharacteristic)
+    {
+      NotificationChain msgs = null;
+      if (productCharacteristic != null)
+        msgs = ((InternalEObject)productCharacteristic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC, null, msgs);
+      if (newProductCharacteristic != null)
+        msgs = ((InternalEObject)newProductCharacteristic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC, null, msgs);
+      msgs = basicSetProductCharacteristic(newProductCharacteristic, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC, newProductCharacteristic, newProductCharacteristic));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCharacteristicRelevanceCode()
+  {
+    return characteristicRelevanceCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCharacteristicRelevanceCode(String newCharacteristicRelevanceCode)
+  {
+    String oldCharacteristicRelevanceCode = characteristicRelevanceCode;
+    characteristicRelevanceCode = newCharacteristicRelevanceCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CCI_SEGMENT__CHARACTERISTIC_RELEVANCE_CODE, oldCharacteristicRelevanceCode, characteristicRelevanceCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS:
+        return basicSetMeasurementDetails(null, msgs);
+      case EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return basicSetProductCharacteristic(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +293,14 @@ public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCI_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CCI_SEGMENT__CLASS_TYPE_CODE:
+        return getClassTypeCode();
+      case EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS:
+        return getMeasurementDetails();
+      case EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return getProductCharacteristic();
+      case EdilangPackage.CCI_SEGMENT__CHARACTERISTIC_RELEVANCE_CODE:
+        return getCharacteristicRelevanceCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +315,17 @@ public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCI_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CCI_SEGMENT__CLASS_TYPE_CODE:
+        setClassTypeCode((String)newValue);
+        return;
+      case EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS:
+        setMeasurementDetails((MeasurementDetail)newValue);
+        return;
+      case EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        setProductCharacteristic((ProductCharacteristic)newValue);
+        return;
+      case EdilangPackage.CCI_SEGMENT__CHARACTERISTIC_RELEVANCE_CODE:
+        setCharacteristicRelevanceCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +341,17 @@ public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCI_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CCI_SEGMENT__CLASS_TYPE_CODE:
+        setClassTypeCode(CLASS_TYPE_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS:
+        setMeasurementDetails((MeasurementDetail)null);
+        return;
+      case EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        setProductCharacteristic((ProductCharacteristic)null);
+        return;
+      case EdilangPackage.CCI_SEGMENT__CHARACTERISTIC_RELEVANCE_CODE:
+        setCharacteristicRelevanceCode(CHARACTERISTIC_RELEVANCE_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +367,14 @@ public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CCI_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CCI_SEGMENT__CLASS_TYPE_CODE:
+        return CLASS_TYPE_CODE_EDEFAULT == null ? classTypeCode != null : !CLASS_TYPE_CODE_EDEFAULT.equals(classTypeCode);
+      case EdilangPackage.CCI_SEGMENT__MEASUREMENT_DETAILS:
+        return measurementDetails != null;
+      case EdilangPackage.CCI_SEGMENT__PRODUCT_CHARACTERISTIC:
+        return productCharacteristic != null;
+      case EdilangPackage.CCI_SEGMENT__CHARACTERISTIC_RELEVANCE_CODE:
+        return CHARACTERISTIC_RELEVANCE_CODE_EDEFAULT == null ? characteristicRelevanceCode != null : !CHARACTERISTIC_RELEVANCE_CODE_EDEFAULT.equals(characteristicRelevanceCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +390,10 @@ public class CCISegmentImpl extends AbstractEdiSegmentImpl implements CCISegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (classTypeCode: ");
+    result.append(classTypeCode);
+    result.append(", characteristicRelevanceCode: ");
+    result.append(characteristicRelevanceCode);
     result.append(')');
     return result.toString();
   }

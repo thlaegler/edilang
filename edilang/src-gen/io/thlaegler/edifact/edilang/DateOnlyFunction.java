@@ -13,7 +13,7 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.DateOnlyFunction#getDate6 <em>Date6</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.DateOnlyFunction#getDate <em>Date</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateOnlyFunction()
@@ -23,25 +23,25 @@ package io.thlaegler.edifact.edilang;
 public interface DateOnlyFunction extends AbstractEdiFunction
 {
   /**
-   * Returns the value of the '<em><b>Date6</b></em>' attribute.
+   * Returns the value of the '<em><b>Date</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Date6</em>' attribute.
-   * @see #setDate6(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateOnlyFunction_Date6()
+   * @return the value of the '<em>Date</em>' attribute.
+   * @see #setDate(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getDateOnlyFunction_Date()
    * @model
    * @generated
    */
-  String getDate6();
+  String getDate();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DateOnlyFunction#getDate6 <em>Date6</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.DateOnlyFunction#getDate <em>Date</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Date6</em>' attribute.
-   * @see #getDate6()
+   * @param value the new value of the '<em>Date</em>' attribute.
+   * @see #getDate()
    * @generated
    */
-  void setDate6(String value);
+  void setDate(String value);
 
 } // DateOnlyFunction

@@ -3,6 +3,7 @@
  */
 package io.thlaegler.edifact.edilang;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.GORSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.GORSegment#getTransportMovementCode <em>Transport Movement Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.GORSegment#getGovernmentAction <em>Government Action</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getGORSegment()
@@ -23,25 +25,37 @@ package io.thlaegler.edifact.edilang;
 public interface GORSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Transport Movement Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getGORSegment_Todo()
+   * @return the value of the '<em>Transport Movement Code</em>' attribute.
+   * @see #setTransportMovementCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getGORSegment_TransportMovementCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getTransportMovementCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.GORSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.GORSegment#getTransportMovementCode <em>Transport Movement Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Transport Movement Code</em>' attribute.
+   * @see #getTransportMovementCode()
    * @generated
    */
-  void setTodo(String value);
+  void setTransportMovementCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Government Action</b></em>' containment reference list.
+   * The list contents are of type {@link io.thlaegler.edifact.edilang.GovernmentAction}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Government Action</em>' containment reference list.
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getGORSegment_GovernmentAction()
+   * @model containment="true"
+   * @generated
+   */
+  EList<GovernmentAction> getGovernmentAction();
 
 } // GORSegment

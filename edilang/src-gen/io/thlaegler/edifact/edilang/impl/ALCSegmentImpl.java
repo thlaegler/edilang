@@ -4,11 +4,15 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.ALCSegment;
+import io.thlaegler.edifact.edilang.AllowanceChargeInformation;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.SpecialServicesIdentification;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +24,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ALCSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALCSegmentImpl#getAllowanceChargeCodeQualifier <em>Allowance Charge Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALCSegmentImpl#getAllowanceChargeInformation <em>Allowance Charge Information</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALCSegmentImpl#getSettlementMeansCode <em>Settlement Means Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALCSegmentImpl#getCalculationSequenceCode <em>Calculation Sequence Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ALCSegmentImpl#getSpecialServicesIdentification <em>Special Services Identification</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +36,84 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getAllowanceChargeCodeQualifier() <em>Allowance Charge Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAllowanceChargeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String ALLOWANCE_CHARGE_CODE_QUALIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getAllowanceChargeCodeQualifier() <em>Allowance Charge Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAllowanceChargeCodeQualifier()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String allowanceChargeCodeQualifier = ALLOWANCE_CHARGE_CODE_QUALIFIER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getAllowanceChargeInformation() <em>Allowance Charge Information</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAllowanceChargeInformation()
+   * @generated
+   * @ordered
+   */
+  protected AllowanceChargeInformation allowanceChargeInformation;
+
+  /**
+   * The default value of the '{@link #getSettlementMeansCode() <em>Settlement Means Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSettlementMeansCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String SETTLEMENT_MEANS_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSettlementMeansCode() <em>Settlement Means Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSettlementMeansCode()
+   * @generated
+   * @ordered
+   */
+  protected String settlementMeansCode = SETTLEMENT_MEANS_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCalculationSequenceCode() <em>Calculation Sequence Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCalculationSequenceCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String CALCULATION_SEQUENCE_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCalculationSequenceCode() <em>Calculation Sequence Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCalculationSequenceCode()
+   * @generated
+   * @ordered
+   */
+  protected String calculationSequenceCode = CALCULATION_SEQUENCE_CODE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getSpecialServicesIdentification() <em>Special Services Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSpecialServicesIdentification()
+   * @generated
+   * @ordered
+   */
+  protected SpecialServicesIdentification specialServicesIdentification;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +142,9 @@ public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getAllowanceChargeCodeQualifier()
   {
-    return todo;
+    return allowanceChargeCodeQualifier;
   }
 
   /**
@@ -85,12 +153,180 @@ public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setAllowanceChargeCodeQualifier(String newAllowanceChargeCodeQualifier)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldAllowanceChargeCodeQualifier = allowanceChargeCodeQualifier;
+    allowanceChargeCodeQualifier = newAllowanceChargeCodeQualifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_CODE_QUALIFIER, oldAllowanceChargeCodeQualifier, allowanceChargeCodeQualifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AllowanceChargeInformation getAllowanceChargeInformation()
+  {
+    return allowanceChargeInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAllowanceChargeInformation(AllowanceChargeInformation newAllowanceChargeInformation, NotificationChain msgs)
+  {
+    AllowanceChargeInformation oldAllowanceChargeInformation = allowanceChargeInformation;
+    allowanceChargeInformation = newAllowanceChargeInformation;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION, oldAllowanceChargeInformation, newAllowanceChargeInformation);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAllowanceChargeInformation(AllowanceChargeInformation newAllowanceChargeInformation)
+  {
+    if (newAllowanceChargeInformation != allowanceChargeInformation)
+    {
+      NotificationChain msgs = null;
+      if (allowanceChargeInformation != null)
+        msgs = ((InternalEObject)allowanceChargeInformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION, null, msgs);
+      if (newAllowanceChargeInformation != null)
+        msgs = ((InternalEObject)newAllowanceChargeInformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION, null, msgs);
+      msgs = basicSetAllowanceChargeInformation(newAllowanceChargeInformation, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION, newAllowanceChargeInformation, newAllowanceChargeInformation));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getSettlementMeansCode()
+  {
+    return settlementMeansCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSettlementMeansCode(String newSettlementMeansCode)
+  {
+    String oldSettlementMeansCode = settlementMeansCode;
+    settlementMeansCode = newSettlementMeansCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__SETTLEMENT_MEANS_CODE, oldSettlementMeansCode, settlementMeansCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCalculationSequenceCode()
+  {
+    return calculationSequenceCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCalculationSequenceCode(String newCalculationSequenceCode)
+  {
+    String oldCalculationSequenceCode = calculationSequenceCode;
+    calculationSequenceCode = newCalculationSequenceCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__CALCULATION_SEQUENCE_CODE, oldCalculationSequenceCode, calculationSequenceCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SpecialServicesIdentification getSpecialServicesIdentification()
+  {
+    return specialServicesIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSpecialServicesIdentification(SpecialServicesIdentification newSpecialServicesIdentification, NotificationChain msgs)
+  {
+    SpecialServicesIdentification oldSpecialServicesIdentification = specialServicesIdentification;
+    specialServicesIdentification = newSpecialServicesIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION, oldSpecialServicesIdentification, newSpecialServicesIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSpecialServicesIdentification(SpecialServicesIdentification newSpecialServicesIdentification)
+  {
+    if (newSpecialServicesIdentification != specialServicesIdentification)
+    {
+      NotificationChain msgs = null;
+      if (specialServicesIdentification != null)
+        msgs = ((InternalEObject)specialServicesIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION, null, msgs);
+      if (newSpecialServicesIdentification != null)
+        msgs = ((InternalEObject)newSpecialServicesIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION, null, msgs);
+      msgs = basicSetSpecialServicesIdentification(newSpecialServicesIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION, newSpecialServicesIdentification, newSpecialServicesIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION:
+        return basicSetAllowanceChargeInformation(null, msgs);
+      case EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION:
+        return basicSetSpecialServicesIdentification(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +339,16 @@ public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ALC_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_CODE_QUALIFIER:
+        return getAllowanceChargeCodeQualifier();
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION:
+        return getAllowanceChargeInformation();
+      case EdilangPackage.ALC_SEGMENT__SETTLEMENT_MEANS_CODE:
+        return getSettlementMeansCode();
+      case EdilangPackage.ALC_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        return getCalculationSequenceCode();
+      case EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION:
+        return getSpecialServicesIdentification();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +363,20 @@ public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ALC_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_CODE_QUALIFIER:
+        setAllowanceChargeCodeQualifier((String)newValue);
+        return;
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION:
+        setAllowanceChargeInformation((AllowanceChargeInformation)newValue);
+        return;
+      case EdilangPackage.ALC_SEGMENT__SETTLEMENT_MEANS_CODE:
+        setSettlementMeansCode((String)newValue);
+        return;
+      case EdilangPackage.ALC_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        setCalculationSequenceCode((String)newValue);
+        return;
+      case EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION:
+        setSpecialServicesIdentification((SpecialServicesIdentification)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +392,20 @@ public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ALC_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_CODE_QUALIFIER:
+        setAllowanceChargeCodeQualifier(ALLOWANCE_CHARGE_CODE_QUALIFIER_EDEFAULT);
+        return;
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION:
+        setAllowanceChargeInformation((AllowanceChargeInformation)null);
+        return;
+      case EdilangPackage.ALC_SEGMENT__SETTLEMENT_MEANS_CODE:
+        setSettlementMeansCode(SETTLEMENT_MEANS_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.ALC_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        setCalculationSequenceCode(CALCULATION_SEQUENCE_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION:
+        setSpecialServicesIdentification((SpecialServicesIdentification)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +421,16 @@ public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ALC_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_CODE_QUALIFIER:
+        return ALLOWANCE_CHARGE_CODE_QUALIFIER_EDEFAULT == null ? allowanceChargeCodeQualifier != null : !ALLOWANCE_CHARGE_CODE_QUALIFIER_EDEFAULT.equals(allowanceChargeCodeQualifier);
+      case EdilangPackage.ALC_SEGMENT__ALLOWANCE_CHARGE_INFORMATION:
+        return allowanceChargeInformation != null;
+      case EdilangPackage.ALC_SEGMENT__SETTLEMENT_MEANS_CODE:
+        return SETTLEMENT_MEANS_CODE_EDEFAULT == null ? settlementMeansCode != null : !SETTLEMENT_MEANS_CODE_EDEFAULT.equals(settlementMeansCode);
+      case EdilangPackage.ALC_SEGMENT__CALCULATION_SEQUENCE_CODE:
+        return CALCULATION_SEQUENCE_CODE_EDEFAULT == null ? calculationSequenceCode != null : !CALCULATION_SEQUENCE_CODE_EDEFAULT.equals(calculationSequenceCode);
+      case EdilangPackage.ALC_SEGMENT__SPECIAL_SERVICES_IDENTIFICATION:
+        return specialServicesIdentification != null;
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +446,12 @@ public class ALCSegmentImpl extends AbstractEdiSegmentImpl implements ALCSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (allowanceChargeCodeQualifier: ");
+    result.append(allowanceChargeCodeQualifier);
+    result.append(", settlementMeansCode: ");
+    result.append(settlementMeansCode);
+    result.append(", calculationSequenceCode: ");
+    result.append(calculationSequenceCode);
     result.append(')');
     return result.toString();
   }

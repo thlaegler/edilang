@@ -13,7 +13,10 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.PCISegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.PCISegment#getMarketingInstructionsCode <em>Marketing Instructions Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.PCISegment#getMarksLabels <em>Marks Labels</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.PCISegment#getContainerPackageContentsIndicatorCode <em>Container Package Contents Indicator Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.PCISegment#getTypeOfMarking <em>Type Of Marking</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCISegment()
@@ -23,25 +26,91 @@ package io.thlaegler.edifact.edilang;
 public interface PCISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Marketing Instructions Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCISegment_Todo()
+   * @return the value of the '<em>Marketing Instructions Code</em>' attribute.
+   * @see #setMarketingInstructionsCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCISegment_MarketingInstructionsCode()
    * @model
    * @generated
    */
-  String getTodo();
+  String getMarketingInstructionsCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCISegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCISegment#getMarketingInstructionsCode <em>Marketing Instructions Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Marketing Instructions Code</em>' attribute.
+   * @see #getMarketingInstructionsCode()
    * @generated
    */
-  void setTodo(String value);
+  void setMarketingInstructionsCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Marks Labels</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Marks Labels</em>' containment reference.
+   * @see #setMarksLabels(MarksLabels)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCISegment_MarksLabels()
+   * @model containment="true"
+   * @generated
+   */
+  MarksLabels getMarksLabels();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCISegment#getMarksLabels <em>Marks Labels</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Marks Labels</em>' containment reference.
+   * @see #getMarksLabels()
+   * @generated
+   */
+  void setMarksLabels(MarksLabels value);
+
+  /**
+   * Returns the value of the '<em><b>Container Package Contents Indicator Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Container Package Contents Indicator Code</em>' attribute.
+   * @see #setContainerPackageContentsIndicatorCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCISegment_ContainerPackageContentsIndicatorCode()
+   * @model
+   * @generated
+   */
+  String getContainerPackageContentsIndicatorCode();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCISegment#getContainerPackageContentsIndicatorCode <em>Container Package Contents Indicator Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Container Package Contents Indicator Code</em>' attribute.
+   * @see #getContainerPackageContentsIndicatorCode()
+   * @generated
+   */
+  void setContainerPackageContentsIndicatorCode(String value);
+
+  /**
+   * Returns the value of the '<em><b>Type Of Marking</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type Of Marking</em>' containment reference.
+   * @see #setTypeOfMarking(TypeOfMarking)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getPCISegment_TypeOfMarking()
+   * @model containment="true"
+   * @generated
+   */
+  TypeOfMarking getTypeOfMarking();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.PCISegment#getTypeOfMarking <em>Type Of Marking</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type Of Marking</em>' containment reference.
+   * @see #getTypeOfMarking()
+   * @generated
+   */
+  void setTypeOfMarking(TypeOfMarking value);
 
 } // PCISegment

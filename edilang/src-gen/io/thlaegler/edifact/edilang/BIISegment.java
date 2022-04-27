@@ -13,7 +13,9 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.BIISegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BIISegment#getIndexingStructureCodeQualifier <em>Indexing Structure Code Qualifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BIISegment#getBillLevelIdentification <em>Bill Level Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.BIISegment#getItemIdentifier <em>Item Identifier</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getBIISegment()
@@ -23,25 +25,69 @@ package io.thlaegler.edifact.edilang;
 public interface BIISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Indexing Structure Code Qualifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBIISegment_Todo()
+   * @return the value of the '<em>Indexing Structure Code Qualifier</em>' attribute.
+   * @see #setIndexingStructureCodeQualifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBIISegment_IndexingStructureCodeQualifier()
    * @model
    * @generated
    */
-  String getTodo();
+  String getIndexingStructureCodeQualifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BIISegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BIISegment#getIndexingStructureCodeQualifier <em>Indexing Structure Code Qualifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Indexing Structure Code Qualifier</em>' attribute.
+   * @see #getIndexingStructureCodeQualifier()
    * @generated
    */
-  void setTodo(String value);
+  void setIndexingStructureCodeQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Bill Level Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Bill Level Identification</em>' containment reference.
+   * @see #setBillLevelIdentification(BillLevelIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBIISegment_BillLevelIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  BillLevelIdentification getBillLevelIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BIISegment#getBillLevelIdentification <em>Bill Level Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Bill Level Identification</em>' containment reference.
+   * @see #getBillLevelIdentification()
+   * @generated
+   */
+  void setBillLevelIdentification(BillLevelIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Item Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Item Identifier</em>' attribute.
+   * @see #setItemIdentifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getBIISegment_ItemIdentifier()
+   * @model
+   * @generated
+   */
+  String getItemIdentifier();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.BIISegment#getItemIdentifier <em>Item Identifier</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Item Identifier</em>' attribute.
+   * @see #getItemIdentifier()
+   * @generated
+   */
+  void setItemIdentifier(String value);
 
 } // BIISegment

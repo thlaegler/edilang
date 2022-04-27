@@ -13,7 +13,7 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.CAVSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.CAVSegment#getCharacteristicValue <em>Characteristic Value</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getCAVSegment()
@@ -23,25 +23,25 @@ package io.thlaegler.edifact.edilang;
 public interface CAVSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Characteristic Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCAVSegment_Todo()
-   * @model
+   * @return the value of the '<em>Characteristic Value</em>' containment reference.
+   * @see #setCharacteristicValue(CharacteristicValue)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getCAVSegment_CharacteristicValue()
+   * @model containment="true"
    * @generated
    */
-  String getTodo();
+  CharacteristicValue getCharacteristicValue();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CAVSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.CAVSegment#getCharacteristicValue <em>Characteristic Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Characteristic Value</em>' containment reference.
+   * @see #getCharacteristicValue()
    * @generated
    */
-  void setTodo(String value);
+  void setCharacteristicValue(CharacteristicValue value);
 
 } // CAVSegment

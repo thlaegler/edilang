@@ -4,11 +4,14 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.AGRSegment;
+import io.thlaegler.edifact.edilang.AgreementTypeIdentification;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.AGRSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.AGRSegmentImpl#getAgreementTypeIdentification <em>Agreement Type Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.AGRSegmentImpl#getServiceLayerCode <em>Service Layer Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getAgreementTypeIdentification() <em>Agreement Type Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getAgreementTypeIdentification()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected AgreementTypeIdentification agreementTypeIdentification;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getServiceLayerCode() <em>Service Layer Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getServiceLayerCode()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected static final String SERVICE_LAYER_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getServiceLayerCode() <em>Service Layer Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getServiceLayerCode()
+   * @generated
+   * @ordered
+   */
+  protected String serviceLayerCode = SERVICE_LAYER_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +88,26 @@ public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public AgreementTypeIdentification getAgreementTypeIdentification()
   {
-    return todo;
+    return agreementTypeIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAgreementTypeIdentification(AgreementTypeIdentification newAgreementTypeIdentification, NotificationChain msgs)
+  {
+    AgreementTypeIdentification oldAgreementTypeIdentification = agreementTypeIdentification;
+    agreementTypeIdentification = newAgreementTypeIdentification;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION, oldAgreementTypeIdentification, newAgreementTypeIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +116,61 @@ public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setAgreementTypeIdentification(AgreementTypeIdentification newAgreementTypeIdentification)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    if (newAgreementTypeIdentification != agreementTypeIdentification)
+    {
+      NotificationChain msgs = null;
+      if (agreementTypeIdentification != null)
+        msgs = ((InternalEObject)agreementTypeIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION, null, msgs);
+      if (newAgreementTypeIdentification != null)
+        msgs = ((InternalEObject)newAgreementTypeIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION, null, msgs);
+      msgs = basicSetAgreementTypeIdentification(newAgreementTypeIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION, newAgreementTypeIdentification, newAgreementTypeIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getServiceLayerCode()
+  {
+    return serviceLayerCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setServiceLayerCode(String newServiceLayerCode)
+  {
+    String oldServiceLayerCode = serviceLayerCode;
+    serviceLayerCode = newServiceLayerCode;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AGR_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.AGR_SEGMENT__SERVICE_LAYER_CODE, oldServiceLayerCode, serviceLayerCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION:
+        return basicSetAgreementTypeIdentification(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +183,10 @@ public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AGR_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION:
+        return getAgreementTypeIdentification();
+      case EdilangPackage.AGR_SEGMENT__SERVICE_LAYER_CODE:
+        return getServiceLayerCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +201,11 @@ public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AGR_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION:
+        setAgreementTypeIdentification((AgreementTypeIdentification)newValue);
+        return;
+      case EdilangPackage.AGR_SEGMENT__SERVICE_LAYER_CODE:
+        setServiceLayerCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +221,11 @@ public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AGR_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION:
+        setAgreementTypeIdentification((AgreementTypeIdentification)null);
+        return;
+      case EdilangPackage.AGR_SEGMENT__SERVICE_LAYER_CODE:
+        setServiceLayerCode(SERVICE_LAYER_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +241,10 @@ public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.AGR_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.AGR_SEGMENT__AGREEMENT_TYPE_IDENTIFICATION:
+        return agreementTypeIdentification != null;
+      case EdilangPackage.AGR_SEGMENT__SERVICE_LAYER_CODE:
+        return SERVICE_LAYER_CODE_EDEFAULT == null ? serviceLayerCode != null : !SERVICE_LAYER_CODE_EDEFAULT.equals(serviceLayerCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +260,8 @@ public class AGRSegmentImpl extends AbstractEdiSegmentImpl implements AGRSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (serviceLayerCode: ");
+    result.append(serviceLayerCode);
     result.append(')');
     return result.toString();
   }

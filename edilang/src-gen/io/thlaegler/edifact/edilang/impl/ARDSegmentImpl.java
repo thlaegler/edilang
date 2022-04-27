@@ -5,12 +5,23 @@ package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.ARDSegment;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.MonetaryAmountFunction;
+import io.thlaegler.edifact.edilang.MonetaryAmountFunctionDetail;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +31,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ARDSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ARDSegmentImpl#getMonetaryAmountFunction <em>Monetary Amount Function</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ARDSegmentImpl#getMonetaryAmountFunctionDetails <em>Monetary Amount Function Details</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +40,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ARDSegmentImpl extends AbstractEdiSegmentImpl implements ARDSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getMonetaryAmountFunction() <em>Monetary Amount Function</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getMonetaryAmountFunction()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected MonetaryAmountFunction monetaryAmountFunction;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getMonetaryAmountFunctionDetails() <em>Monetary Amount Function Details</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getMonetaryAmountFunctionDetails()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected EList<MonetaryAmountFunctionDetail> monetaryAmountFunctionDetails;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +86,26 @@ public class ARDSegmentImpl extends AbstractEdiSegmentImpl implements ARDSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public MonetaryAmountFunction getMonetaryAmountFunction()
   {
-    return todo;
+    return monetaryAmountFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetMonetaryAmountFunction(MonetaryAmountFunction newMonetaryAmountFunction, NotificationChain msgs)
+  {
+    MonetaryAmountFunction oldMonetaryAmountFunction = monetaryAmountFunction;
+    monetaryAmountFunction = newMonetaryAmountFunction;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION, oldMonetaryAmountFunction, newMonetaryAmountFunction);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +114,53 @@ public class ARDSegmentImpl extends AbstractEdiSegmentImpl implements ARDSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setMonetaryAmountFunction(MonetaryAmountFunction newMonetaryAmountFunction)
   {
-    String oldTodo = todo;
-    todo = newTodo;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ARD_SEGMENT__TODO, oldTodo, todo));
+    if (newMonetaryAmountFunction != monetaryAmountFunction)
+    {
+      NotificationChain msgs = null;
+      if (monetaryAmountFunction != null)
+        msgs = ((InternalEObject)monetaryAmountFunction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION, null, msgs);
+      if (newMonetaryAmountFunction != null)
+        msgs = ((InternalEObject)newMonetaryAmountFunction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION, null, msgs);
+      msgs = basicSetMonetaryAmountFunction(newMonetaryAmountFunction, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION, newMonetaryAmountFunction, newMonetaryAmountFunction));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<MonetaryAmountFunctionDetail> getMonetaryAmountFunctionDetails()
+  {
+    if (monetaryAmountFunctionDetails == null)
+    {
+      monetaryAmountFunctionDetails = new EObjectContainmentEList<MonetaryAmountFunctionDetail>(MonetaryAmountFunctionDetail.class, this, EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION_DETAILS);
+    }
+    return monetaryAmountFunctionDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION:
+        return basicSetMonetaryAmountFunction(null, msgs);
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION_DETAILS:
+        return ((InternalEList<?>)getMonetaryAmountFunctionDetails()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +173,10 @@ public class ARDSegmentImpl extends AbstractEdiSegmentImpl implements ARDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ARD_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION:
+        return getMonetaryAmountFunction();
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION_DETAILS:
+        return getMonetaryAmountFunctionDetails();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -114,13 +186,18 @@ public class ARDSegmentImpl extends AbstractEdiSegmentImpl implements ARDSegment
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.ARD_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION:
+        setMonetaryAmountFunction((MonetaryAmountFunction)newValue);
+        return;
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION_DETAILS:
+        getMonetaryAmountFunctionDetails().clear();
+        getMonetaryAmountFunctionDetails().addAll((Collection<? extends MonetaryAmountFunctionDetail>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +213,11 @@ public class ARDSegmentImpl extends AbstractEdiSegmentImpl implements ARDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ARD_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION:
+        setMonetaryAmountFunction((MonetaryAmountFunction)null);
+        return;
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION_DETAILS:
+        getMonetaryAmountFunctionDetails().clear();
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +233,12 @@ public class ARDSegmentImpl extends AbstractEdiSegmentImpl implements ARDSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ARD_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION:
+        return monetaryAmountFunction != null;
+      case EdilangPackage.ARD_SEGMENT__MONETARY_AMOUNT_FUNCTION_DETAILS:
+        return monetaryAmountFunctionDetails != null && !monetaryAmountFunctionDetails.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
-    result.append(')');
-    return result.toString();
   }
 
 } //ARDSegmentImpl

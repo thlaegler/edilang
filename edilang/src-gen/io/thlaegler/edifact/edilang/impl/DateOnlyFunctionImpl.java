@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.DateOnlyFunctionImpl#getDate6 <em>Date6</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.DateOnlyFunctionImpl#getDate <em>Date</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +28,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements DateOnlyFunction
 {
   /**
-   * The default value of the '{@link #getDate6() <em>Date6</em>}' attribute.
+   * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDate6()
+   * @see #getDate()
    * @generated
    * @ordered
    */
-  protected static final String DATE6_EDEFAULT = null;
+  protected static final String DATE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDate6() <em>Date6</em>}' attribute.
+   * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDate6()
+   * @see #getDate()
    * @generated
    * @ordered
    */
-  protected String date6 = DATE6_EDEFAULT;
+  protected String date = DATE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +74,9 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
    * @generated
    */
   @Override
-  public String getDate6()
+  public String getDate()
   {
-    return date6;
+    return date;
   }
 
   /**
@@ -85,12 +85,12 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
    * @generated
    */
   @Override
-  public void setDate6(String newDate6)
+  public void setDate(String newDate)
   {
-    String oldDate6 = date6;
-    date6 = newDate6;
+    String oldDate = date;
+    date = newDate;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DATE_ONLY_FUNCTION__DATE6, oldDate6, date6));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.DATE_ONLY_FUNCTION__DATE, oldDate, date));
   }
 
   /**
@@ -103,8 +103,8 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_ONLY_FUNCTION__DATE6:
-        return getDate6();
+      case EdilangPackage.DATE_ONLY_FUNCTION__DATE:
+        return getDate();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +119,8 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_ONLY_FUNCTION__DATE6:
-        setDate6((String)newValue);
+      case EdilangPackage.DATE_ONLY_FUNCTION__DATE:
+        setDate((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +136,8 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_ONLY_FUNCTION__DATE6:
-        setDate6(DATE6_EDEFAULT);
+      case EdilangPackage.DATE_ONLY_FUNCTION__DATE:
+        setDate(DATE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +153,8 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
   {
     switch (featureID)
     {
-      case EdilangPackage.DATE_ONLY_FUNCTION__DATE6:
-        return DATE6_EDEFAULT == null ? date6 != null : !DATE6_EDEFAULT.equals(date6);
+      case EdilangPackage.DATE_ONLY_FUNCTION__DATE:
+        return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +170,8 @@ public class DateOnlyFunctionImpl extends AbstractEdiFunctionImpl implements Dat
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (date6: ");
-    result.append(date6);
+    result.append(" (date: ");
+    result.append(date);
     result.append(')');
     return result.toString();
   }

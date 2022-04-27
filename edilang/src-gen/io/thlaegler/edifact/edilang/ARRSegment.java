@@ -3,6 +3,7 @@
  */
 package io.thlaegler.edifact.edilang;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ARRSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ARRSegment#getPositionIdentification <em>Position Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ARRSegment#getArrayCellDetails <em>Array Cell Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getARRSegment()
@@ -23,25 +25,37 @@ package io.thlaegler.edifact.edilang;
 public interface ARRSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Position Identification</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getARRSegment_Todo()
-   * @model
+   * @return the value of the '<em>Position Identification</em>' containment reference.
+   * @see #setPositionIdentification(PositionIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getARRSegment_PositionIdentification()
+   * @model containment="true"
    * @generated
    */
-  String getTodo();
+  PositionIdentification getPositionIdentification();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ARRSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ARRSegment#getPositionIdentification <em>Position Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Position Identification</em>' containment reference.
+   * @see #getPositionIdentification()
    * @generated
    */
-  void setTodo(String value);
+  void setPositionIdentification(PositionIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Array Cell Details</b></em>' containment reference list.
+   * The list contents are of type {@link io.thlaegler.edifact.edilang.ArrayCellDetail}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Array Cell Details</em>' containment reference list.
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getARRSegment_ArrayCellDetails()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ArrayCellDetail> getArrayCellDetails();
 
 } // ARRSegment

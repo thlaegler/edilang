@@ -292,6 +292,30 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.INDEX_VALUE: return createIndexValue();
       case EdilangPackage.CONTROL: return createControl();
       case EdilangPackage.BASIS_TYPE: return createBasisType();
+      case EdilangPackage.COMMUNICATION_CONTACT: return createCommunicationContact();
+      case EdilangPackage.AGREEMENT_TYPE_IDENTIFICATION: return createAgreementTypeIdentification();
+      case EdilangPackage.ALLOWANCE_CHARGE_INFORMATION: return createAllowanceChargeInformation();
+      case EdilangPackage.SPECIAL_SERVICES_IDENTIFICATION: return createSpecialServicesIdentification();
+      case EdilangPackage.APPLICABILITY_TYPE: return createApplicabilityType();
+      case EdilangPackage.PRICE_MULTIPLIER_INFORMATION: return createPriceMultiplierInformation();
+      case EdilangPackage.MONETARY_AMOUNT_FUNCTION: return createMonetaryAmountFunction();
+      case EdilangPackage.MONETARY_AMOUNT_FUNCTION_DETAIL: return createMonetaryAmountFunctionDetail();
+      case EdilangPackage.ARRAY_CELL_DETAIL: return createArrayCellDetail();
+      case EdilangPackage.ARRAY_STRUCTURE_IDENTIFICATION: return createArrayStructureIdentification();
+      case EdilangPackage.BILL_LEVEL_IDENTIFICATION: return createBillLevelIdentification();
+      case EdilangPackage.CHARACTERISTIC_VALUE: return createCharacteristicValue();
+      case EdilangPackage.MEASUREMENT_DETAIL: return createMeasurementDetail();
+      case EdilangPackage.PHYSICAL_LOGICAL_STATE_INFORMATION: return createPhysicalLogicalStateInformation();
+      case EdilangPackage.CODE_SET_IDENTIFICATION: return createCodeSetIdentification();
+      case EdilangPackage.COMPUTER_ENVIRONMENT_IDENTIFICATION: return createComputerEnvironmentIdentification();
+      case EdilangPackage.CLINICAL_INFORMATION_DETAIL: return createClinicalInformationDetail();
+      case EdilangPackage.CERTAINTY_DETAIL: return createCertaintyDetail();
+      case EdilangPackage.CLAUSE_NAME: return createClauseName();
+      case EdilangPackage.CLINICAL_INTERVENTION_DETAIL: return createClinicalInterventionDetail();
+      case EdilangPackage.PROCESSING_INDICATOR: return createProcessingIndicator();
+      case EdilangPackage.MARKS_LABELS: return createMarksLabels();
+      case EdilangPackage.TYPE_OF_MARKING: return createTypeOfMarking();
+      case EdilangPackage.GOVERNMENT_ACTION: return createGovernmentAction();
       case EdilangPackage.DATE_ONLY_FUNCTION: return createDateOnlyFunction();
       case EdilangPackage.DATE_AND_TIME_FUNCTION: return createDateAndTimeFunction();
       case EdilangPackage.DATE_TIME_PERIOD: return createDateTimePeriod();
@@ -3022,6 +3046,294 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
   {
     BasisTypeImpl basisType = new BasisTypeImpl();
     return basisType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CommunicationContact createCommunicationContact()
+  {
+    CommunicationContactImpl communicationContact = new CommunicationContactImpl();
+    return communicationContact;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AgreementTypeIdentification createAgreementTypeIdentification()
+  {
+    AgreementTypeIdentificationImpl agreementTypeIdentification = new AgreementTypeIdentificationImpl();
+    return agreementTypeIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AllowanceChargeInformation createAllowanceChargeInformation()
+  {
+    AllowanceChargeInformationImpl allowanceChargeInformation = new AllowanceChargeInformationImpl();
+    return allowanceChargeInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SpecialServicesIdentification createSpecialServicesIdentification()
+  {
+    SpecialServicesIdentificationImpl specialServicesIdentification = new SpecialServicesIdentificationImpl();
+    return specialServicesIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ApplicabilityType createApplicabilityType()
+  {
+    ApplicabilityTypeImpl applicabilityType = new ApplicabilityTypeImpl();
+    return applicabilityType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PriceMultiplierInformation createPriceMultiplierInformation()
+  {
+    PriceMultiplierInformationImpl priceMultiplierInformation = new PriceMultiplierInformationImpl();
+    return priceMultiplierInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MonetaryAmountFunction createMonetaryAmountFunction()
+  {
+    MonetaryAmountFunctionImpl monetaryAmountFunction = new MonetaryAmountFunctionImpl();
+    return monetaryAmountFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MonetaryAmountFunctionDetail createMonetaryAmountFunctionDetail()
+  {
+    MonetaryAmountFunctionDetailImpl monetaryAmountFunctionDetail = new MonetaryAmountFunctionDetailImpl();
+    return monetaryAmountFunctionDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ArrayCellDetail createArrayCellDetail()
+  {
+    ArrayCellDetailImpl arrayCellDetail = new ArrayCellDetailImpl();
+    return arrayCellDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ArrayStructureIdentification createArrayStructureIdentification()
+  {
+    ArrayStructureIdentificationImpl arrayStructureIdentification = new ArrayStructureIdentificationImpl();
+    return arrayStructureIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BillLevelIdentification createBillLevelIdentification()
+  {
+    BillLevelIdentificationImpl billLevelIdentification = new BillLevelIdentificationImpl();
+    return billLevelIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CharacteristicValue createCharacteristicValue()
+  {
+    CharacteristicValueImpl characteristicValue = new CharacteristicValueImpl();
+    return characteristicValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MeasurementDetail createMeasurementDetail()
+  {
+    MeasurementDetailImpl measurementDetail = new MeasurementDetailImpl();
+    return measurementDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PhysicalLogicalStateInformation createPhysicalLogicalStateInformation()
+  {
+    PhysicalLogicalStateInformationImpl physicalLogicalStateInformation = new PhysicalLogicalStateInformationImpl();
+    return physicalLogicalStateInformation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CodeSetIdentification createCodeSetIdentification()
+  {
+    CodeSetIdentificationImpl codeSetIdentification = new CodeSetIdentificationImpl();
+    return codeSetIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ComputerEnvironmentIdentification createComputerEnvironmentIdentification()
+  {
+    ComputerEnvironmentIdentificationImpl computerEnvironmentIdentification = new ComputerEnvironmentIdentificationImpl();
+    return computerEnvironmentIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ClinicalInformationDetail createClinicalInformationDetail()
+  {
+    ClinicalInformationDetailImpl clinicalInformationDetail = new ClinicalInformationDetailImpl();
+    return clinicalInformationDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CertaintyDetail createCertaintyDetail()
+  {
+    CertaintyDetailImpl certaintyDetail = new CertaintyDetailImpl();
+    return certaintyDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ClauseName createClauseName()
+  {
+    ClauseNameImpl clauseName = new ClauseNameImpl();
+    return clauseName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ClinicalInterventionDetail createClinicalInterventionDetail()
+  {
+    ClinicalInterventionDetailImpl clinicalInterventionDetail = new ClinicalInterventionDetailImpl();
+    return clinicalInterventionDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ProcessingIndicator createProcessingIndicator()
+  {
+    ProcessingIndicatorImpl processingIndicator = new ProcessingIndicatorImpl();
+    return processingIndicator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MarksLabels createMarksLabels()
+  {
+    MarksLabelsImpl marksLabels = new MarksLabelsImpl();
+    return marksLabels;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TypeOfMarking createTypeOfMarking()
+  {
+    TypeOfMarkingImpl typeOfMarking = new TypeOfMarkingImpl();
+    return typeOfMarking;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public GovernmentAction createGovernmentAction()
+  {
+    GovernmentActionImpl governmentAction = new GovernmentActionImpl();
+    return governmentAction;
   }
 
   /**

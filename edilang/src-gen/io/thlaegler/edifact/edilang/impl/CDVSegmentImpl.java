@@ -20,7 +20,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.CDVSegmentImpl#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CDVSegmentImpl#getCodeValue <em>Code Value</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CDVSegmentImpl#getCodeName <em>Code Name</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CDVSegmentImpl#getMaintenanceOperationCode <em>Maintenance Operation Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CDVSegmentImpl#getCodeValueSourceCode <em>Code Value Source Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.CDVSegmentImpl#getRequirementsDesignatorCode <em>Requirements Designator Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,104 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
 {
   /**
-   * The default value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The default value of the '{@link #getCodeValue() <em>Code Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getCodeValue()
    * @generated
    * @ordered
    */
-  protected static final String TODO_EDEFAULT = null;
+  protected static final String CODE_VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTodo() <em>Todo</em>}' attribute.
+   * The cached value of the '{@link #getCodeValue() <em>Code Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTodo()
+   * @see #getCodeValue()
    * @generated
    * @ordered
    */
-  protected String todo = TODO_EDEFAULT;
+  protected String codeValue = CODE_VALUE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCodeName() <em>Code Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCodeName()
+   * @generated
+   * @ordered
+   */
+  protected static final String CODE_NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCodeName() <em>Code Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCodeName()
+   * @generated
+   * @ordered
+   */
+  protected String codeName = CODE_NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMaintenanceOperationCode() <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String MAINTENANCE_OPERATION_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMaintenanceOperationCode() <em>Maintenance Operation Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMaintenanceOperationCode()
+   * @generated
+   * @ordered
+   */
+  protected String maintenanceOperationCode = MAINTENANCE_OPERATION_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCodeValueSourceCode() <em>Code Value Source Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCodeValueSourceCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String CODE_VALUE_SOURCE_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCodeValueSourceCode() <em>Code Value Source Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCodeValueSourceCode()
+   * @generated
+   * @ordered
+   */
+  protected String codeValueSourceCode = CODE_VALUE_SOURCE_CODE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getRequirementsDesignatorCode() <em>Requirements Designator Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRequirementsDesignatorCode()
+   * @generated
+   * @ordered
+   */
+  protected static final String REQUIREMENTS_DESIGNATOR_CODE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRequirementsDesignatorCode() <em>Requirements Designator Code</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRequirementsDesignatorCode()
+   * @generated
+   * @ordered
+   */
+  protected String requirementsDesignatorCode = REQUIREMENTS_DESIGNATOR_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +158,9 @@ public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
    * @generated
    */
   @Override
-  public String getTodo()
+  public String getCodeValue()
   {
-    return todo;
+    return codeValue;
   }
 
   /**
@@ -85,12 +169,112 @@ public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
    * @generated
    */
   @Override
-  public void setTodo(String newTodo)
+  public void setCodeValue(String newCodeValue)
   {
-    String oldTodo = todo;
-    todo = newTodo;
+    String oldCodeValue = codeValue;
+    codeValue = newCodeValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDV_SEGMENT__TODO, oldTodo, todo));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDV_SEGMENT__CODE_VALUE, oldCodeValue, codeValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCodeName()
+  {
+    return codeName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCodeName(String newCodeName)
+  {
+    String oldCodeName = codeName;
+    codeName = newCodeName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDV_SEGMENT__CODE_NAME, oldCodeName, codeName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getMaintenanceOperationCode()
+  {
+    return maintenanceOperationCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setMaintenanceOperationCode(String newMaintenanceOperationCode)
+  {
+    String oldMaintenanceOperationCode = maintenanceOperationCode;
+    maintenanceOperationCode = newMaintenanceOperationCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDV_SEGMENT__MAINTENANCE_OPERATION_CODE, oldMaintenanceOperationCode, maintenanceOperationCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCodeValueSourceCode()
+  {
+    return codeValueSourceCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCodeValueSourceCode(String newCodeValueSourceCode)
+  {
+    String oldCodeValueSourceCode = codeValueSourceCode;
+    codeValueSourceCode = newCodeValueSourceCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDV_SEGMENT__CODE_VALUE_SOURCE_CODE, oldCodeValueSourceCode, codeValueSourceCode));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getRequirementsDesignatorCode()
+  {
+    return requirementsDesignatorCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setRequirementsDesignatorCode(String newRequirementsDesignatorCode)
+  {
+    String oldRequirementsDesignatorCode = requirementsDesignatorCode;
+    requirementsDesignatorCode = newRequirementsDesignatorCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.CDV_SEGMENT__REQUIREMENTS_DESIGNATOR_CODE, oldRequirementsDesignatorCode, requirementsDesignatorCode));
   }
 
   /**
@@ -103,8 +287,16 @@ public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDV_SEGMENT__TODO:
-        return getTodo();
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE:
+        return getCodeValue();
+      case EdilangPackage.CDV_SEGMENT__CODE_NAME:
+        return getCodeName();
+      case EdilangPackage.CDV_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        return getMaintenanceOperationCode();
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE_SOURCE_CODE:
+        return getCodeValueSourceCode();
+      case EdilangPackage.CDV_SEGMENT__REQUIREMENTS_DESIGNATOR_CODE:
+        return getRequirementsDesignatorCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +311,20 @@ public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDV_SEGMENT__TODO:
-        setTodo((String)newValue);
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE:
+        setCodeValue((String)newValue);
+        return;
+      case EdilangPackage.CDV_SEGMENT__CODE_NAME:
+        setCodeName((String)newValue);
+        return;
+      case EdilangPackage.CDV_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        setMaintenanceOperationCode((String)newValue);
+        return;
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE_SOURCE_CODE:
+        setCodeValueSourceCode((String)newValue);
+        return;
+      case EdilangPackage.CDV_SEGMENT__REQUIREMENTS_DESIGNATOR_CODE:
+        setRequirementsDesignatorCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +340,20 @@ public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDV_SEGMENT__TODO:
-        setTodo(TODO_EDEFAULT);
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE:
+        setCodeValue(CODE_VALUE_EDEFAULT);
+        return;
+      case EdilangPackage.CDV_SEGMENT__CODE_NAME:
+        setCodeName(CODE_NAME_EDEFAULT);
+        return;
+      case EdilangPackage.CDV_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        setMaintenanceOperationCode(MAINTENANCE_OPERATION_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE_SOURCE_CODE:
+        setCodeValueSourceCode(CODE_VALUE_SOURCE_CODE_EDEFAULT);
+        return;
+      case EdilangPackage.CDV_SEGMENT__REQUIREMENTS_DESIGNATOR_CODE:
+        setRequirementsDesignatorCode(REQUIREMENTS_DESIGNATOR_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +369,16 @@ public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.CDV_SEGMENT__TODO:
-        return TODO_EDEFAULT == null ? todo != null : !TODO_EDEFAULT.equals(todo);
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE:
+        return CODE_VALUE_EDEFAULT == null ? codeValue != null : !CODE_VALUE_EDEFAULT.equals(codeValue);
+      case EdilangPackage.CDV_SEGMENT__CODE_NAME:
+        return CODE_NAME_EDEFAULT == null ? codeName != null : !CODE_NAME_EDEFAULT.equals(codeName);
+      case EdilangPackage.CDV_SEGMENT__MAINTENANCE_OPERATION_CODE:
+        return MAINTENANCE_OPERATION_CODE_EDEFAULT == null ? maintenanceOperationCode != null : !MAINTENANCE_OPERATION_CODE_EDEFAULT.equals(maintenanceOperationCode);
+      case EdilangPackage.CDV_SEGMENT__CODE_VALUE_SOURCE_CODE:
+        return CODE_VALUE_SOURCE_CODE_EDEFAULT == null ? codeValueSourceCode != null : !CODE_VALUE_SOURCE_CODE_EDEFAULT.equals(codeValueSourceCode);
+      case EdilangPackage.CDV_SEGMENT__REQUIREMENTS_DESIGNATOR_CODE:
+        return REQUIREMENTS_DESIGNATOR_CODE_EDEFAULT == null ? requirementsDesignatorCode != null : !REQUIREMENTS_DESIGNATOR_CODE_EDEFAULT.equals(requirementsDesignatorCode);
     }
     return super.eIsSet(featureID);
   }
@@ -170,8 +394,16 @@ public class CDVSegmentImpl extends AbstractEdiSegmentImpl implements CDVSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (todo: ");
-    result.append(todo);
+    result.append(" (codeValue: ");
+    result.append(codeValue);
+    result.append(", codeName: ");
+    result.append(codeName);
+    result.append(", maintenanceOperationCode: ");
+    result.append(maintenanceOperationCode);
+    result.append(", codeValueSourceCode: ");
+    result.append(codeValueSourceCode);
+    result.append(", requirementsDesignatorCode: ");
+    result.append(requirementsDesignatorCode);
     result.append(')');
     return result.toString();
   }

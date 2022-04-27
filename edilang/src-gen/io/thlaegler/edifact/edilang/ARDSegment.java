@@ -3,6 +3,7 @@
  */
 package io.thlaegler.edifact.edilang;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ARDSegment#getTodo <em>Todo</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ARDSegment#getMonetaryAmountFunction <em>Monetary Amount Function</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ARDSegment#getMonetaryAmountFunctionDetails <em>Monetary Amount Function Details</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getARDSegment()
@@ -23,25 +25,37 @@ package io.thlaegler.edifact.edilang;
 public interface ARDSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Todo</b></em>' attribute.
+   * Returns the value of the '<em><b>Monetary Amount Function</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Todo</em>' attribute.
-   * @see #setTodo(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getARDSegment_Todo()
-   * @model
+   * @return the value of the '<em>Monetary Amount Function</em>' containment reference.
+   * @see #setMonetaryAmountFunction(MonetaryAmountFunction)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getARDSegment_MonetaryAmountFunction()
+   * @model containment="true"
    * @generated
    */
-  String getTodo();
+  MonetaryAmountFunction getMonetaryAmountFunction();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ARDSegment#getTodo <em>Todo</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ARDSegment#getMonetaryAmountFunction <em>Monetary Amount Function</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Todo</em>' attribute.
-   * @see #getTodo()
+   * @param value the new value of the '<em>Monetary Amount Function</em>' containment reference.
+   * @see #getMonetaryAmountFunction()
    * @generated
    */
-  void setTodo(String value);
+  void setMonetaryAmountFunction(MonetaryAmountFunction value);
+
+  /**
+   * Returns the value of the '<em><b>Monetary Amount Function Details</b></em>' containment reference list.
+   * The list contents are of type {@link io.thlaegler.edifact.edilang.MonetaryAmountFunctionDetail}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Monetary Amount Function Details</em>' containment reference list.
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getARDSegment_MonetaryAmountFunctionDetails()
+   * @model containment="true"
+   * @generated
+   */
+  EList<MonetaryAmountFunctionDetail> getMonetaryAmountFunctionDetails();
 
 } // ARDSegment
