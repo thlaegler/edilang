@@ -12,8 +12,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
@@ -29,7 +27,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class MarksLabelsImpl extends MinimalEObjectImpl.Container implements MarksLabels
+public class MarksLabelsImpl extends AbstractEdiFunctionImpl implements MarksLabels
 {
   /**
    * The cached value of the '{@link #getShippingMarksDescriptions() <em>Shipping Marks Descriptions</em>}' attribute list.

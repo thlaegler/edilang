@@ -1,0 +1,302 @@
+Parsed EDIFACT model:
+
+UNB segment:
+	DateAndTime=(Time=0153, Date=220419)
+	AssiciationCode=T
+	InterchangeSender=(Interchange=UA)
+	InterchangeRecipient=(Interchange=NZ, Interchange2=IEDI)
+	InterchangeControlRecipientRef=94B142C20001
+	InterchangeControlSenderRef=49O697P70001
+	Header=(Syntax=IATA, Num1=1)
+
+UNH segment:
+	MessageReferenceNumber=001
+	Message=(ControllingAgency=IA, Release=2, Type=PAORES, Version=96)
+
+MSG segment:
+	MessageIdentifier=(MessageTypeCode=1, VersionIdentifier=47)
+
+ODI segment:
+	LocationIdentifier=LAX
+	SequencePositionIdentifier=NYC
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@7a784f8a (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[1])
+	ProductIdentificationDetails=(ProductIdentifier=2213)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=8), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@50f5840b (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[2])
+	ProductIdentificationDetails=(ProductIdentifier=1990)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=9), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=O, Avail=9), (BookingClass=A, Avail=8), (BookingClass=R, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=0), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@4149dbc3 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[3])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=9), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=O, Avail=9), (BookingClass=A, Avail=2), (BookingClass=R, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@61c5ecde (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[4])
+	ProductIdentificationDetails=(ProductIdentifier=2335)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=6), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@7fb7bd35 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[5])
+	ProductIdentificationDetails=(ProductIdentifier=2614)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=7), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=0), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@327a5b8e (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[6])
+	ProductIdentificationDetails=(ProductIdentifier=0247)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=7), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@9841e64 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[7])
+	ProductIdentificationDetails=(ProductIdentifier=1700)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=7), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@784004d2 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[8])
+	ProductIdentificationDetails=(ProductIdentifier=1928)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=6), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=7), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@2f844e0c (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[9])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+ERC segment:
+	ApplicationErrorDetails=[(ApplictionErrorCode=114)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@13ffc723 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[10])
+	ProductIdentificationDetails=(ProductIdentifier=2473)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=9), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=9), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@77f12eb6 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=JFK)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[11])
+	ProductIdentificationDetails=(ProductIdentifier=0514)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=8), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=0), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@5a0d965e (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[12])
+	ProductIdentificationDetails=(ProductIdentifier=1990)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=9), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=O, Avail=9), (BookingClass=A, Avail=8), (BookingClass=R, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=0), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@3503e764 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[13])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=9), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=O, Avail=9), (BookingClass=A, Avail=2), (BookingClass=R, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@50219e5c (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[14])
+	ProductIdentificationDetails=(ProductIdentifier=2335)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=6), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@47e0a075 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[15])
+	ProductIdentificationDetails=(ProductIdentifier=2614)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=7), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=0), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@44d1ba9b (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[16])
+	ProductIdentificationDetails=(ProductIdentifier=0247)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=7), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@225c63dc (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[17])
+	ProductIdentificationDetails=(ProductIdentifier=1700)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=7), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@4726df (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[18])
+	ProductIdentificationDetails=(ProductIdentifier=1928)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=6), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=7), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@26fbf37d (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[19])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=9), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=O, Avail=9), (BookingClass=A, Avail=2), (BookingClass=R, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@3d45e056 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=JFK)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[20])
+	ProductIdentificationDetails=(ProductIdentifier=0516)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=8), (BookingClass=C, Avail=6), (BookingClass=D, Avail=3), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=0), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@6bafdea2 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[21])
+	ProductIdentificationDetails=(ProductIdentifier=2473)
+	ProcessingIndicatorDescriptionCode=P
+
+PDI segment:
+	Products=[(BookingClass=J, Avail=9), (BookingClass=C, Avail=9), (BookingClass=D, Avail=9), (BookingClass=Z, Avail=0), (BookingClass=P, Avail=0), (BookingClass=I, Avail=0), (BookingClass=Y, Avail=9), (BookingClass=B, Avail=9), (BookingClass=M, Avail=9), (BookingClass=E, Avail=9), (BookingClass=U, Avail=9), (BookingClass=H, Avail=9), (BookingClass=Q, Avail=9), (BookingClass=V, Avail=9), (BookingClass=W, Avail=9), (BookingClass=S, Avail=9), (BookingClass=T, Avail=0), (BookingClass=L, Avail=0), (BookingClass=K, Avail=0), (BookingClass=G, Avail=0), (BookingClass=N, Avail=9), (BookingClass=X, Avail=0)]
+
+UNT segment:
+	MessageReferenceNumber=001
+	SegmentCount=46
+
+UNZ segment:
+	InterchangeControlCount=1
+	InterchangeControlRef=49O697P70001

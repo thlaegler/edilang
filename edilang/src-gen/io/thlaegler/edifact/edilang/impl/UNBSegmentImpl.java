@@ -3,26 +3,19 @@
  */
 package io.thlaegler.edifact.edilang.impl;
 
-import io.thlaegler.edifact.edilang.DateAndTimeFunction;
+import io.thlaegler.edifact.edilang.DateAndTime;
 import io.thlaegler.edifact.edilang.EdilangPackage;
 import io.thlaegler.edifact.edilang.InterchangerFunction;
 import io.thlaegler.edifact.edilang.UNBHeader;
 import io.thlaegler.edifact.edilang.UNBSegment;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -77,14 +70,14 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
   protected InterchangerFunction interchangeRecipient;
 
   /**
-   * The cached value of the '{@link #getDateAndTime() <em>Date And Time</em>}' containment reference list.
+   * The cached value of the '{@link #getDateAndTime() <em>Date And Time</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getDateAndTime()
    * @generated
    * @ordered
    */
-  protected EList<DateAndTimeFunction> dateAndTime;
+  protected DateAndTime dateAndTime;
 
   /**
    * The default value of the '{@link #getInterchangeControlSenderRef() <em>Interchange Control Sender Ref</em>}' attribute.
@@ -343,13 +336,48 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
    * @generated
    */
   @Override
-  public EList<DateAndTimeFunction> getDateAndTime()
+  public DateAndTime getDateAndTime()
   {
-    if (dateAndTime == null)
-    {
-      dateAndTime = new EObjectContainmentEList<DateAndTimeFunction>(DateAndTimeFunction.class, this, EdilangPackage.UNB_SEGMENT__DATE_AND_TIME);
-    }
     return dateAndTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDateAndTime(DateAndTime newDateAndTime, NotificationChain msgs)
+  {
+    DateAndTime oldDateAndTime = dateAndTime;
+    dateAndTime = newDateAndTime;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.UNB_SEGMENT__DATE_AND_TIME, oldDateAndTime, newDateAndTime);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDateAndTime(DateAndTime newDateAndTime)
+  {
+    if (newDateAndTime != dateAndTime)
+    {
+      NotificationChain msgs = null;
+      if (dateAndTime != null)
+        msgs = ((InternalEObject)dateAndTime).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.UNB_SEGMENT__DATE_AND_TIME, null, msgs);
+      if (newDateAndTime != null)
+        msgs = ((InternalEObject)newDateAndTime).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.UNB_SEGMENT__DATE_AND_TIME, null, msgs);
+      msgs = basicSetDateAndTime(newDateAndTime, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.UNB_SEGMENT__DATE_AND_TIME, newDateAndTime, newDateAndTime));
   }
 
   /**
@@ -469,7 +497,7 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_RECIPIENT:
         return basicSetInterchangeRecipient(null, msgs);
       case EdilangPackage.UNB_SEGMENT__DATE_AND_TIME:
-        return ((InternalEList<?>)getDateAndTime()).basicRemove(otherEnd, msgs);
+        return basicSetDateAndTime(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -509,7 +537,6 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -525,8 +552,7 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
         setInterchangeRecipient((InterchangerFunction)newValue);
         return;
       case EdilangPackage.UNB_SEGMENT__DATE_AND_TIME:
-        getDateAndTime().clear();
-        getDateAndTime().addAll((Collection<? extends DateAndTimeFunction>)newValue);
+        setDateAndTime((DateAndTime)newValue);
         return;
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_CONTROL_SENDER_REF:
         setInterchangeControlSenderRef((String)newValue);
@@ -564,7 +590,7 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
         setInterchangeRecipient((InterchangerFunction)null);
         return;
       case EdilangPackage.UNB_SEGMENT__DATE_AND_TIME:
-        getDateAndTime().clear();
+        setDateAndTime((DateAndTime)null);
         return;
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_CONTROL_SENDER_REF:
         setInterchangeControlSenderRef(INTERCHANGE_CONTROL_SENDER_REF_EDEFAULT);
@@ -599,7 +625,7 @@ public class UNBSegmentImpl extends AbstractEdiSegmentImpl implements UNBSegment
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_RECIPIENT:
         return interchangeRecipient != null;
       case EdilangPackage.UNB_SEGMENT__DATE_AND_TIME:
-        return dateAndTime != null && !dateAndTime.isEmpty();
+        return dateAndTime != null;
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_CONTROL_SENDER_REF:
         return INTERCHANGE_CONTROL_SENDER_REF_EDEFAULT == null ? interchangeControlSenderRef != null : !INTERCHANGE_CONTROL_SENDER_REF_EDEFAULT.equals(interchangeControlSenderRef);
       case EdilangPackage.UNB_SEGMENT__INTERCHANGE_CONTROL_RECIPIENT_REF:

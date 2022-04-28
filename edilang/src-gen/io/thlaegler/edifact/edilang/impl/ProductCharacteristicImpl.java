@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ProductCharacteristicImpl extends MinimalEObjectImpl.Container implements ProductCharacteristic
+public class ProductCharacteristicImpl extends AbstractEdiFunctionImpl implements ProductCharacteristic
 {
   /**
    * The default value of the '{@link #getCharacteristicDescriptionCode() <em>Characteristic Description Code</em>}' attribute.

@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ArrayStructureIdentificationImpl extends MinimalEObjectImpl.Container implements ArrayStructureIdentification
+public class ArrayStructureIdentificationImpl extends AbstractEdiFunctionImpl implements ArrayStructureIdentification
 {
   /**
    * The default value of the '{@link #getArrayCellStructureIdentifier() <em>Array Cell Structure Identifier</em>}' attribute.

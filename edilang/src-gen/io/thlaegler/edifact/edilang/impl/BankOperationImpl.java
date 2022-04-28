@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class BankOperationImpl extends MinimalEObjectImpl.Container implements BankOperation
+public class BankOperationImpl extends AbstractEdiFunctionImpl implements BankOperation
 {
   /**
    * The default value of the '{@link #getBankOperationCode() <em>Bank Operation Code</em>}' attribute.

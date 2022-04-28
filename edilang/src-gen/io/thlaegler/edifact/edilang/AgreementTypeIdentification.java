@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface AgreementTypeIdentification extends EObject
+public interface AgreementTypeIdentification extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Agreement Type Code Qualifier</b></em>' attribute.

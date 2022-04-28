@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Control extends EObject
+public interface Control extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Control Total Type Code Qualifier</b></em>' attribute.

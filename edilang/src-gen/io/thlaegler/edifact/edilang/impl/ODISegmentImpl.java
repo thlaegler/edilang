@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ODISegmentImpl#getOrigin <em>Origin</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.ODISegmentImpl#getDestination <em>Destination</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ODISegmentImpl#getLocationIdentifier <em>Location Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.ODISegmentImpl#getSequencePositionIdentifier <em>Sequence Position Identifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +29,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
 {
   /**
-   * The default value of the '{@link #getOrigin() <em>Origin</em>}' attribute.
+   * The default value of the '{@link #getLocationIdentifier() <em>Location Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOrigin()
+   * @see #getLocationIdentifier()
    * @generated
    * @ordered
    */
-  protected static final String ORIGIN_EDEFAULT = null;
+  protected static final String LOCATION_IDENTIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getOrigin() <em>Origin</em>}' attribute.
+   * The cached value of the '{@link #getLocationIdentifier() <em>Location Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOrigin()
+   * @see #getLocationIdentifier()
    * @generated
    * @ordered
    */
-  protected String origin = ORIGIN_EDEFAULT;
+  protected String locationIdentifier = LOCATION_IDENTIFIER_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDestination() <em>Destination</em>}' attribute.
+   * The default value of the '{@link #getSequencePositionIdentifier() <em>Sequence Position Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDestination()
+   * @see #getSequencePositionIdentifier()
    * @generated
    * @ordered
    */
-  protected static final String DESTINATION_EDEFAULT = null;
+  protected static final String SEQUENCE_POSITION_IDENTIFIER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDestination() <em>Destination</em>}' attribute.
+   * The cached value of the '{@link #getSequencePositionIdentifier() <em>Sequence Position Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDestination()
+   * @see #getSequencePositionIdentifier()
    * @generated
    * @ordered
    */
-  protected String destination = DESTINATION_EDEFAULT;
+  protected String sequencePositionIdentifier = SEQUENCE_POSITION_IDENTIFIER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,9 +95,9 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
    * @generated
    */
   @Override
-  public String getOrigin()
+  public String getLocationIdentifier()
   {
-    return origin;
+    return locationIdentifier;
   }
 
   /**
@@ -106,12 +106,12 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
    * @generated
    */
   @Override
-  public void setOrigin(String newOrigin)
+  public void setLocationIdentifier(String newLocationIdentifier)
   {
-    String oldOrigin = origin;
-    origin = newOrigin;
+    String oldLocationIdentifier = locationIdentifier;
+    locationIdentifier = newLocationIdentifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ODI_SEGMENT__ORIGIN, oldOrigin, origin));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ODI_SEGMENT__LOCATION_IDENTIFIER, oldLocationIdentifier, locationIdentifier));
   }
 
   /**
@@ -120,9 +120,9 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
    * @generated
    */
   @Override
-  public String getDestination()
+  public String getSequencePositionIdentifier()
   {
-    return destination;
+    return sequencePositionIdentifier;
   }
 
   /**
@@ -131,12 +131,12 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
    * @generated
    */
   @Override
-  public void setDestination(String newDestination)
+  public void setSequencePositionIdentifier(String newSequencePositionIdentifier)
   {
-    String oldDestination = destination;
-    destination = newDestination;
+    String oldSequencePositionIdentifier = sequencePositionIdentifier;
+    sequencePositionIdentifier = newSequencePositionIdentifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ODI_SEGMENT__DESTINATION, oldDestination, destination));
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.ODI_SEGMENT__SEQUENCE_POSITION_IDENTIFIER, oldSequencePositionIdentifier, sequencePositionIdentifier));
   }
 
   /**
@@ -149,10 +149,10 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ODI_SEGMENT__ORIGIN:
-        return getOrigin();
-      case EdilangPackage.ODI_SEGMENT__DESTINATION:
-        return getDestination();
+      case EdilangPackage.ODI_SEGMENT__LOCATION_IDENTIFIER:
+        return getLocationIdentifier();
+      case EdilangPackage.ODI_SEGMENT__SEQUENCE_POSITION_IDENTIFIER:
+        return getSequencePositionIdentifier();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,11 +167,11 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ODI_SEGMENT__ORIGIN:
-        setOrigin((String)newValue);
+      case EdilangPackage.ODI_SEGMENT__LOCATION_IDENTIFIER:
+        setLocationIdentifier((String)newValue);
         return;
-      case EdilangPackage.ODI_SEGMENT__DESTINATION:
-        setDestination((String)newValue);
+      case EdilangPackage.ODI_SEGMENT__SEQUENCE_POSITION_IDENTIFIER:
+        setSequencePositionIdentifier((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,11 +187,11 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ODI_SEGMENT__ORIGIN:
-        setOrigin(ORIGIN_EDEFAULT);
+      case EdilangPackage.ODI_SEGMENT__LOCATION_IDENTIFIER:
+        setLocationIdentifier(LOCATION_IDENTIFIER_EDEFAULT);
         return;
-      case EdilangPackage.ODI_SEGMENT__DESTINATION:
-        setDestination(DESTINATION_EDEFAULT);
+      case EdilangPackage.ODI_SEGMENT__SEQUENCE_POSITION_IDENTIFIER:
+        setSequencePositionIdentifier(SEQUENCE_POSITION_IDENTIFIER_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -207,10 +207,10 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
   {
     switch (featureID)
     {
-      case EdilangPackage.ODI_SEGMENT__ORIGIN:
-        return ORIGIN_EDEFAULT == null ? origin != null : !ORIGIN_EDEFAULT.equals(origin);
-      case EdilangPackage.ODI_SEGMENT__DESTINATION:
-        return DESTINATION_EDEFAULT == null ? destination != null : !DESTINATION_EDEFAULT.equals(destination);
+      case EdilangPackage.ODI_SEGMENT__LOCATION_IDENTIFIER:
+        return LOCATION_IDENTIFIER_EDEFAULT == null ? locationIdentifier != null : !LOCATION_IDENTIFIER_EDEFAULT.equals(locationIdentifier);
+      case EdilangPackage.ODI_SEGMENT__SEQUENCE_POSITION_IDENTIFIER:
+        return SEQUENCE_POSITION_IDENTIFIER_EDEFAULT == null ? sequencePositionIdentifier != null : !SEQUENCE_POSITION_IDENTIFIER_EDEFAULT.equals(sequencePositionIdentifier);
     }
     return super.eIsSet(featureID);
   }
@@ -226,10 +226,10 @@ public class ODISegmentImpl extends AbstractEdiSegmentImpl implements ODISegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (origin: ");
-    result.append(origin);
-    result.append(", destination: ");
-    result.append(destination);
+    result.append(" (locationIdentifier: ");
+    result.append(locationIdentifier);
+    result.append(", sequencePositionIdentifier: ");
+    result.append(sequencePositionIdentifier);
     result.append(')');
     return result.toString();
   }

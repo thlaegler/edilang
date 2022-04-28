@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,17 +13,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getDateAndTime <em>Date And Time</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getOriginCode <em>Origin Code</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getDestinationCode <em>Destination Code</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getCarrierId <em>Carrier Id</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getProductId <em>Product Id</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getCharacteristicId <em>Characteristic Id</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getProductIdCharacteristic <em>Product Id Characteristic</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getDescriptionIds <em>Description Ids</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getProductType <em>Product Type</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getLineItemNumber <em>Line Item Number</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorCode <em>Processing Indicator Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getProductDateTime <em>Product Date Time</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getLocation1 <em>Location1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getLocation2 <em>Location2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getCompanyIdentification <em>Company Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getProductIdentificationDetails <em>Product Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getSequenceNumberDetails <em>Sequence Number Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getLineItemIdentifier <em>Line Item Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorDescriptionCode <em>Processing Indicator Description Code</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment()
@@ -34,225 +30,179 @@ import org.eclipse.emf.common.util.EList;
 public interface TVLSegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Date And Time</b></em>' containment reference list.
-   * The list contents are of type {@link io.thlaegler.edifact.edilang.AbstractEdiFunction}.
+   * Returns the value of the '<em><b>Product Date Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Date And Time</em>' containment reference list.
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_DateAndTime()
+   * @return the value of the '<em>Product Date Time</em>' containment reference.
+   * @see #setProductDateTime(ProductDateTime)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_ProductDateTime()
    * @model containment="true"
    * @generated
    */
-  EList<AbstractEdiFunction> getDateAndTime();
+  ProductDateTime getProductDateTime();
 
   /**
-   * Returns the value of the '<em><b>Origin Code</b></em>' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductDateTime <em>Product Date Time</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Origin Code</em>' attribute.
-   * @see #setOriginCode(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_OriginCode()
+   * @param value the new value of the '<em>Product Date Time</em>' containment reference.
+   * @see #getProductDateTime()
+   * @generated
+   */
+  void setProductDateTime(ProductDateTime value);
+
+  /**
+   * Returns the value of the '<em><b>Location1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Location1</em>' containment reference.
+   * @see #setLocation1(Location)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_Location1()
+   * @model containment="true"
+   * @generated
+   */
+  Location getLocation1();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getLocation1 <em>Location1</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Location1</em>' containment reference.
+   * @see #getLocation1()
+   * @generated
+   */
+  void setLocation1(Location value);
+
+  /**
+   * Returns the value of the '<em><b>Location2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Location2</em>' containment reference.
+   * @see #setLocation2(Location)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_Location2()
+   * @model containment="true"
+   * @generated
+   */
+  Location getLocation2();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getLocation2 <em>Location2</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Location2</em>' containment reference.
+   * @see #getLocation2()
+   * @generated
+   */
+  void setLocation2(Location value);
+
+  /**
+   * Returns the value of the '<em><b>Company Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Company Identification</em>' containment reference.
+   * @see #setCompanyIdentification(CompanyIdentification)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_CompanyIdentification()
+   * @model containment="true"
+   * @generated
+   */
+  CompanyIdentification getCompanyIdentification();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getCompanyIdentification <em>Company Identification</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Company Identification</em>' containment reference.
+   * @see #getCompanyIdentification()
+   * @generated
+   */
+  void setCompanyIdentification(CompanyIdentification value);
+
+  /**
+   * Returns the value of the '<em><b>Product Identification Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Product Identification Details</em>' containment reference.
+   * @see #setProductIdentificationDetails(ProductIdentificationDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_ProductIdentificationDetails()
+   * @model containment="true"
+   * @generated
+   */
+  ProductIdentificationDetail getProductIdentificationDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductIdentificationDetails <em>Product Identification Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Product Identification Details</em>' containment reference.
+   * @see #getProductIdentificationDetails()
+   * @generated
+   */
+  void setProductIdentificationDetails(ProductIdentificationDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Sequence Number Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Sequence Number Details</em>' containment reference.
+   * @see #setSequenceNumberDetails(SequenceNumberDetail)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_SequenceNumberDetails()
+   * @model containment="true"
+   * @generated
+   */
+  SequenceNumberDetail getSequenceNumberDetails();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getSequenceNumberDetails <em>Sequence Number Details</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Sequence Number Details</em>' containment reference.
+   * @see #getSequenceNumberDetails()
+   * @generated
+   */
+  void setSequenceNumberDetails(SequenceNumberDetail value);
+
+  /**
+   * Returns the value of the '<em><b>Line Item Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Line Item Identifier</em>' attribute.
+   * @see #setLineItemIdentifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_LineItemIdentifier()
    * @model
    * @generated
    */
-  String getOriginCode();
+  String getLineItemIdentifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getOriginCode <em>Origin Code</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getLineItemIdentifier <em>Line Item Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Origin Code</em>' attribute.
-   * @see #getOriginCode()
+   * @param value the new value of the '<em>Line Item Identifier</em>' attribute.
+   * @see #getLineItemIdentifier()
    * @generated
    */
-  void setOriginCode(String value);
+  void setLineItemIdentifier(String value);
 
   /**
-   * Returns the value of the '<em><b>Destination Code</b></em>' attribute.
+   * Returns the value of the '<em><b>Processing Indicator Description Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Destination Code</em>' attribute.
-   * @see #setDestinationCode(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_DestinationCode()
+   * @return the value of the '<em>Processing Indicator Description Code</em>' attribute.
+   * @see #setProcessingIndicatorDescriptionCode(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_ProcessingIndicatorDescriptionCode()
    * @model
    * @generated
    */
-  String getDestinationCode();
+  String getProcessingIndicatorDescriptionCode();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getDestinationCode <em>Destination Code</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorDescriptionCode <em>Processing Indicator Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Destination Code</em>' attribute.
-   * @see #getDestinationCode()
+   * @param value the new value of the '<em>Processing Indicator Description Code</em>' attribute.
+   * @see #getProcessingIndicatorDescriptionCode()
    * @generated
    */
-  void setDestinationCode(String value);
-
-  /**
-   * Returns the value of the '<em><b>Carrier Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Carrier Id</em>' attribute.
-   * @see #setCarrierId(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_CarrierId()
-   * @model
-   * @generated
-   */
-  String getCarrierId();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getCarrierId <em>Carrier Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Carrier Id</em>' attribute.
-   * @see #getCarrierId()
-   * @generated
-   */
-  void setCarrierId(String value);
-
-  /**
-   * Returns the value of the '<em><b>Product Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Product Id</em>' attribute.
-   * @see #setProductId(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_ProductId()
-   * @model
-   * @generated
-   */
-  String getProductId();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductId <em>Product Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Product Id</em>' attribute.
-   * @see #getProductId()
-   * @generated
-   */
-  void setProductId(String value);
-
-  /**
-   * Returns the value of the '<em><b>Characteristic Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Characteristic Id</em>' attribute.
-   * @see #setCharacteristicId(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_CharacteristicId()
-   * @model
-   * @generated
-   */
-  String getCharacteristicId();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getCharacteristicId <em>Characteristic Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Characteristic Id</em>' attribute.
-   * @see #getCharacteristicId()
-   * @generated
-   */
-  void setCharacteristicId(String value);
-
-  /**
-   * Returns the value of the '<em><b>Product Id Characteristic</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Product Id Characteristic</em>' attribute.
-   * @see #setProductIdCharacteristic(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_ProductIdCharacteristic()
-   * @model
-   * @generated
-   */
-  String getProductIdCharacteristic();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductIdCharacteristic <em>Product Id Characteristic</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Product Id Characteristic</em>' attribute.
-   * @see #getProductIdCharacteristic()
-   * @generated
-   */
-  void setProductIdCharacteristic(String value);
-
-  /**
-   * Returns the value of the '<em><b>Description Ids</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Description Ids</em>' attribute list.
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_DescriptionIds()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getDescriptionIds();
-
-  /**
-   * Returns the value of the '<em><b>Product Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Product Type</em>' attribute.
-   * @see #setProductType(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_ProductType()
-   * @model
-   * @generated
-   */
-  String getProductType();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductType <em>Product Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Product Type</em>' attribute.
-   * @see #getProductType()
-   * @generated
-   */
-  void setProductType(String value);
-
-  /**
-   * Returns the value of the '<em><b>Line Item Number</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Line Item Number</em>' attribute.
-   * @see #setLineItemNumber(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_LineItemNumber()
-   * @model
-   * @generated
-   */
-  String getLineItemNumber();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getLineItemNumber <em>Line Item Number</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Line Item Number</em>' attribute.
-   * @see #getLineItemNumber()
-   * @generated
-   */
-  void setLineItemNumber(String value);
-
-  /**
-   * Returns the value of the '<em><b>Processing Indicator Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Processing Indicator Code</em>' attribute.
-   * @see #setProcessingIndicatorCode(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getTVLSegment_ProcessingIndicatorCode()
-   * @model
-   * @generated
-   */
-  String getProcessingIndicatorCode();
-
-  /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorCode <em>Processing Indicator Code</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Processing Indicator Code</em>' attribute.
-   * @see #getProcessingIndicatorCode()
-   * @generated
-   */
-  void setProcessingIndicatorCode(String value);
+  void setProcessingIndicatorDescriptionCode(String value);
 
 } // TVLSegment

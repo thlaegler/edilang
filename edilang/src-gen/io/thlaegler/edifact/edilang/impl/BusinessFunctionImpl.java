@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class BusinessFunctionImpl extends MinimalEObjectImpl.Container implements BusinessFunction
+public class BusinessFunctionImpl extends AbstractEdiFunctionImpl implements BusinessFunction
 {
   /**
    * The default value of the '{@link #getBusinessFunctionTypeCodeQualifier() <em>Business Function Type Code Qualifier</em>}' attribute.

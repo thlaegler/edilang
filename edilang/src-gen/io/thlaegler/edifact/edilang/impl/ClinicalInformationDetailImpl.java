@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ClinicalInformationDetailImpl extends MinimalEObjectImpl.Container implements ClinicalInformationDetail
+public class ClinicalInformationDetailImpl extends AbstractEdiFunctionImpl implements ClinicalInformationDetail
 {
   /**
    * The default value of the '{@link #getClinicalInformationDescriptionIdentifier() <em>Clinical Information Description Identifier</em>}' attribute.

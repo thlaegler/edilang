@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class StatusImpl extends MinimalEObjectImpl.Container implements Status
+public class StatusImpl extends AbstractEdiFunctionImpl implements Status
 {
   /**
    * The default value of the '{@link #getStatusDescriptionCode() <em>Status Description Code</em>}' attribute.

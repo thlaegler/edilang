@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class SpecialServicesIdentificationImpl extends MinimalEObjectImpl.Container implements SpecialServicesIdentification
+public class SpecialServicesIdentificationImpl extends AbstractEdiFunctionImpl implements SpecialServicesIdentification
 {
   /**
    * The default value of the '{@link #getSpecialServiceDescriptionCode() <em>Special Service Description Code</em>}' attribute.

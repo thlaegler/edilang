@@ -215,7 +215,7 @@ public interface EdilangPackage extends EPackage
   int UNB_SEGMENT__INTERCHANGE_RECIPIENT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Date And Time</b></em>' containment reference list.
+   * The feature id for the '<em><b>Date And Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -7584,124 +7584,6 @@ public interface EdilangPackage extends EPackage
   int MSG_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 4;
 
   /**
-   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ORGSegmentImpl <em>ORG Segment</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see io.thlaegler.edifact.edilang.impl.ORGSegmentImpl
-   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getORGSegment()
-   * @generated
-   */
-  int ORG_SEGMENT = 146;
-
-  /**
-   * The feature id for the '<em><b>Segment</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
-
-  /**
-   * The feature id for the '<em><b>Line End</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
-
-  /**
-   * The feature id for the '<em><b>System Detail1</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__SYSTEM_DETAIL1 = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Originator Identification</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__ORIGINATOR_IDENTIFICATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Location</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__LOCATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>System Detail2</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__SYSTEM_DETAIL2 = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Originator Type Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__ORIGINATOR_TYPE_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Originator</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__ORIGINATOR = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Originators Authority Request Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__ORIGINATORS_AUTHORITY_REQUEST_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Communication Number</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__COMMUNICATION_NUMBER = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 7;
-
-  /**
-   * The feature id for the '<em><b>Party Id Identification</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT__PARTY_ID_IDENTIFICATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 8;
-
-  /**
-   * The number of structural features of the '<em>ORG Segment</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ORG_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 9;
-
-  /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.POCSegmentImpl <em>POC Segment</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7709,7 +7591,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPOCSegment()
    * @generated
    */
-  int POC_SEGMENT = 147;
+  int POC_SEGMENT = 146;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -7766,61 +7648,6 @@ public interface EdilangPackage extends EPackage
   int POC_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ODISegmentImpl <em>ODI Segment</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see io.thlaegler.edifact.edilang.impl.ODISegmentImpl
-   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getODISegment()
-   * @generated
-   */
-  int ODI_SEGMENT = 148;
-
-  /**
-   * The feature id for the '<em><b>Segment</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ODI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
-
-  /**
-   * The feature id for the '<em><b>Line End</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ODI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
-
-  /**
-   * The feature id for the '<em><b>Origin</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ODI_SEGMENT__ORIGIN = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Destination</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ODI_SEGMENT__DESTINATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>ODI Segment</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ODI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
-
-  /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.UCISegmentImpl <em>UCI Segment</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7828,7 +7655,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getUCISegment()
    * @generated
    */
-  int UCI_SEGMENT = 149;
+  int UCI_SEGMENT = 147;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -7919,7 +7746,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPDISegment()
    * @generated
    */
-  int PDI_SEGMENT = 150;
+  int PDI_SEGMENT = 148;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -7967,142 +7794,6 @@ public interface EdilangPackage extends EPackage
   int PDI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl <em>TVL Segment</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see io.thlaegler.edifact.edilang.impl.TVLSegmentImpl
-   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTVLSegment()
-   * @generated
-   */
-  int TVL_SEGMENT = 151;
-
-  /**
-   * The feature id for the '<em><b>Segment</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
-
-  /**
-   * The feature id for the '<em><b>Line End</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
-
-  /**
-   * The feature id for the '<em><b>Date And Time</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__DATE_AND_TIME = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Origin Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__ORIGIN_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Destination Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__DESTINATION_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Carrier Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__CARRIER_ID = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Product Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__PRODUCT_ID = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Characteristic Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__CHARACTERISTIC_ID = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Product Id Characteristic</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__PRODUCT_ID_CHARACTERISTIC = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Description Ids</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__DESCRIPTION_IDS = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 7;
-
-  /**
-   * The feature id for the '<em><b>Product Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__PRODUCT_TYPE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 8;
-
-  /**
-   * The feature id for the '<em><b>Line Item Number</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__LINE_ITEM_NUMBER = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 9;
-
-  /**
-   * The feature id for the '<em><b>Processing Indicator Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT__PROCESSING_INDICATOR_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 10;
-
-  /**
-   * The number of structural features of the '<em>TVL Segment</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TVL_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 11;
-
-  /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RPISegmentImpl <em>RPI Segment</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -8110,7 +7801,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRPISegment()
    * @generated
    */
-  int RPI_SEGMENT = 152;
+  int RPI_SEGMENT = 149;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8165,7 +7856,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMOASegment()
    * @generated
    */
-  int MOA_SEGMENT = 153;
+  int MOA_SEGMENT = 150;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8247,7 +7938,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getLINSegment()
    * @generated
    */
-  int LIN_SEGMENT = 154;
+  int LIN_SEGMENT = 151;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8338,7 +8029,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPRISegment()
    * @generated
    */
-  int PRI_SEGMENT = 155;
+  int PRI_SEGMENT = 152;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8393,7 +8084,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getQTYSegment()
    * @generated
    */
-  int QTY_SEGMENT = 156;
+  int QTY_SEGMENT = 153;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8439,7 +8130,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCUXSegment()
    * @generated
    */
-  int CUX_SEGMENT = 157;
+  int CUX_SEGMENT = 154;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8512,7 +8203,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTAXSegment()
    * @generated
    */
-  int TAX_SEGMENT = 158;
+  int TAX_SEGMENT = 155;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8621,7 +8312,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRFFSegment()
    * @generated
    */
-  int RFF_SEGMENT = 159;
+  int RFF_SEGMENT = 156;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8676,7 +8367,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getNADSegment()
    * @generated
    */
-  int NAD_SEGMENT = 160;
+  int NAD_SEGMENT = 157;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8794,7 +8485,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDTMSegment()
    * @generated
    */
-  int DTM_SEGMENT = 161;
+  int DTM_SEGMENT = 158;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8840,7 +8531,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getBGMSegment()
    * @generated
    */
-  int BGM_SEGMENT = 162;
+  int BGM_SEGMENT = 159;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8913,7 +8604,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPATSegment()
    * @generated
    */
-  int PAT_SEGMENT = 163;
+  int PAT_SEGMENT = 160;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -8959,7 +8650,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getFTXSegment()
    * @generated
    */
-  int FTX_SEGMENT = 164;
+  int FTX_SEGMENT = 161;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9032,7 +8723,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getERCSegment()
    * @generated
    */
-  int ERC_SEGMENT = 165;
+  int ERC_SEGMENT = 162;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9078,7 +8769,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCNTSegment()
    * @generated
    */
-  int CNT_SEGMENT = 166;
+  int CNT_SEGMENT = 163;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9124,7 +8815,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCTASegment()
    * @generated
    */
-  int CTA_SEGMENT = 167;
+  int CTA_SEGMENT = 164;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9179,7 +8870,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPCISegment()
    * @generated
    */
-  int PCI_SEGMENT = 168;
+  int PCI_SEGMENT = 165;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9245,6 +8936,3646 @@ public interface EdilangPackage extends EPackage
   int PCI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 4;
 
   /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.AAISegmentImpl <em>AAI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.AAISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAAISegment()
+   * @generated
+   */
+  int AAI_SEGMENT = 166;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AAI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AAI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AAI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>AAI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AAI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ALSSegmentImpl <em>ALS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ALSSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getALSSegment()
+   * @generated
+   */
+  int ALS_SEGMENT = 167;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ALS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ODSSegmentImpl <em>ODS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ODSSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getODSSegment()
+   * @generated
+   */
+  int ODS_SEGMENT = 168;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ODS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.APDSegmentImpl <em>APD Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.APDSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAPDSegment()
+   * @generated
+   */
+  int APD_SEGMENT = 169;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APD_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APD_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APD_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>APD Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APD_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ADSSegmentImpl <em>ADS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ADSSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getADSSegment()
+   * @generated
+   */
+  int ADS_SEGMENT = 170;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ADS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ERISegmentImpl <em>ERI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ERISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getERISegment()
+   * @generated
+   */
+  int ERI_SEGMENT = 171;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ERI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ERI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ERI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ERI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ERI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ATRSegmentImpl <em>ATR Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ATRSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getATRSegment()
+   * @generated
+   */
+  int ATR_SEGMENT = 172;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATR_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATR_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATR_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ATR Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATR_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.BCDSegmentImpl <em>BCD Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.BCDSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getBCDSegment()
+   * @generated
+   */
+  int BCD_SEGMENT = 173;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BCD_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BCD_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BCD_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>BCD Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BCD_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.BLISegmentImpl <em>BLI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.BLISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getBLISegment()
+   * @generated
+   */
+  int BLI_SEGMENT = 174;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>BLI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MOVSegmentImpl <em>MOV Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.MOVSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMOVSegment()
+   * @generated
+   */
+  int MOV_SEGMENT = 175;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOV_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOV_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOV_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>MOV Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOV_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CLTSegmentImpl <em>CLT Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CLTSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCLTSegment()
+   * @generated
+   */
+  int CLT_SEGMENT = 176;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLT_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLT_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLT_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>CLT Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLT_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CMNSegmentImpl <em>CMN Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CMNSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCMNSegment()
+   * @generated
+   */
+  int CMN_SEGMENT = 177;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CMN_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CMN_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CMN_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>CMN Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CMN_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CNXSegmentImpl <em>CNX Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CNXSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCNXSegment()
+   * @generated
+   */
+  int CNX_SEGMENT = 178;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNX_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNX_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNX_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>CNX Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNX_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CRISegmentImpl <em>CRI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CRISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCRISegment()
+   * @generated
+   */
+  int CRI_SEGMENT = 179;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>CRI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CONSegmentImpl <em>CON Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CONSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCONSegment()
+   * @generated
+   */
+  int CON_SEGMENT = 180;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CON_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CON_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CON_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>CON Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CON_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CNYSegmentImpl <em>CNY Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CNYSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCNYSegment()
+   * @generated
+   */
+  int CNY_SEGMENT = 181;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNY_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNY_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNY_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>CNY Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CNY_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CURSegmentImpl <em>CUR Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CURSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCURSegment()
+   * @generated
+   */
+  int CUR_SEGMENT = 182;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CUR_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CUR_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CUR_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>CUR Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CUR_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DAVSegmentImpl <em>DAV Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.DAVSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDAVSegment()
+   * @generated
+   */
+  int DAV_SEGMENT = 183;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DAV_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DAV_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DAV_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>DAV Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DAV_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DTISegmentImpl <em>DTI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.DTISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDTISegment()
+   * @generated
+   */
+  int DTI_SEGMENT = 184;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DTI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DTI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DTI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>DTI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DTI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DNTSegmentImpl <em>DNT Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.DNTSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDNTSegment()
+   * @generated
+   */
+  int DNT_SEGMENT = 185;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNT_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNT_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNT_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>DNT Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DNT_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DISSegmentImpl <em>DIS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.DISSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDISSegment()
+   * @generated
+   */
+  int DIS_SEGMENT = 186;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>DIS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.SERSegmentImpl <em>SER Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.SERSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getSERSegment()
+   * @generated
+   */
+  int SER_SEGMENT = 187;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SER_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SER_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SER_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>SER Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SER_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.FRMSegmentImpl <em>FRM Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.FRMSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getFRMSegment()
+   * @generated
+   */
+  int FRM_SEGMENT = 188;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRM_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRM_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRM_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>FRM Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRM_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.FRQSegmentImpl <em>FRQ Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.FRQSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getFRQSegment()
+   * @generated
+   */
+  int FRQ_SEGMENT = 189;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRQ_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRQ_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRQ_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>FRQ Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FRQ_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.FTISegmentImpl <em>FTI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.FTISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getFTISegment()
+   * @generated
+   */
+  int FTI_SEGMENT = 190;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FTI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FTI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FTI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>FTI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FTI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.HDISegmentImpl <em>HDI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.HDISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getHDISegment()
+   * @generated
+   */
+  int HDI_SEGMENT = 191;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>HDI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.HDRSegmentImpl <em>HDR Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.HDRSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getHDRSegment()
+   * @generated
+   */
+  int HDR_SEGMENT = 192;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDR_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDR_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDR_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>HDR Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDR_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ADISegmentImpl <em>ADI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ADISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getADISegment()
+   * @generated
+   */
+  int ADI_SEGMENT = 193;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ADI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.HDSSegmentImpl <em>HDS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.HDSSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getHDSSegment()
+   * @generated
+   */
+  int HDS_SEGMENT = 194;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>HDS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HDS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ITDSegmentImpl <em>ITD Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ITDSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getITDSegment()
+   * @generated
+   */
+  int ITD_SEGMENT = 195;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITD_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITD_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITD_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ITD Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITD_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ITCSegmentImpl <em>ITC Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ITCSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getITCSegment()
+   * @generated
+   */
+  int ITC_SEGMENT = 196;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITC_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITC_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITC_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ITC Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITC_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ICISegmentImpl <em>ICI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ICISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getICISegment()
+   * @generated
+   */
+  int ICI_SEGMENT = 197;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ICI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ICI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ICI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ICI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ICI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.IFTSegmentImpl <em>IFT Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.IFTSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getIFTSegment()
+   * @generated
+   */
+  int IFT_SEGMENT = 198;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IFT_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IFT_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IFT_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>IFT Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IFT_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ITMSegmentImpl <em>ITM Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ITMSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getITMSegment()
+   * @generated
+   */
+  int ITM_SEGMENT = 199;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITM_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITM_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITM_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ITM Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITM_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.LNGSegmentImpl <em>LNG Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.LNGSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getLNGSegment()
+   * @generated
+   */
+  int LNG_SEGMENT = 200;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LNG_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LNG_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LNG_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>LNG Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LNG_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.LKPSegmentImpl <em>LKP Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.LKPSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getLKPSegment()
+   * @generated
+   */
+  int LKP_SEGMENT = 201;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LKP_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LKP_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LKP_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>LKP Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LKP_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PORSegmentImpl <em>POR Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PORSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPORSegment()
+   * @generated
+   */
+  int POR_SEGMENT = 202;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POR_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POR_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POR_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>POR Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POR_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MESSegmentImpl <em>MES Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.MESSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMESSegment()
+   * @generated
+   */
+  int MES_SEGMENT = 203;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MES_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MES_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MES_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>MES Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MES_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MSDSegmentImpl <em>MSD Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.MSDSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMSDSegment()
+   * @generated
+   */
+  int MSD_SEGMENT = 204;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MSD_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MSD_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MSD_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>MSD Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MSD_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MAPSegmentImpl <em>MAP Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.MAPSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMAPSegment()
+   * @generated
+   */
+  int MAP_SEGMENT = 205;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAP_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAP_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAP_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>MAP Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAP_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.NMESegmentImpl <em>NME Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.NMESegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getNMESegment()
+   * @generated
+   */
+  int NME_SEGMENT = 206;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NME_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NME_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NME_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>NME Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NME_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.NAASegmentImpl <em>NAA Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.NAASegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getNAASegment()
+   * @generated
+   */
+  int NAA_SEGMENT = 207;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAA_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAA_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAA_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>NAA Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAA_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.NUNSegmentImpl <em>NUN Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.NUNSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getNUNSegment()
+   * @generated
+   */
+  int NUN_SEGMENT = 208;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUN_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUN_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUN_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>NUN Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUN_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ODISegmentImpl <em>ODI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ODISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getODISegment()
+   * @generated
+   */
+  int ODI_SEGMENT = 209;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Location Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODI_SEGMENT__LOCATION_IDENTIFIER = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Sequence Position Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODI_SEGMENT__SEQUENCE_POSITION_IDENTIFIER = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>ODI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ODI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ORGSegmentImpl <em>ORG Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ORGSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getORGSegment()
+   * @generated
+   */
+  int ORG_SEGMENT = 210;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>System Detail1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__SYSTEM_DETAIL1 = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Originator Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__ORIGINATOR_IDENTIFICATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Location</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__LOCATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>System Detail2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__SYSTEM_DETAIL2 = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Originator Type Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__ORIGINATOR_TYPE_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Originator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__ORIGINATOR = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Originators Authority Request Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__ORIGINATORS_AUTHORITY_REQUEST_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Communication Number</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__COMMUNICATION_NUMBER = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Party Id Identification</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT__PARTY_ID_IDENTIFICATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 8;
+
+  /**
+   * The number of structural features of the '<em>ORG Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ORG_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 9;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.OTISegmentImpl <em>OTI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.OTISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getOTISegment()
+   * @generated
+   */
+  int OTI_SEGMENT = 211;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OTI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OTI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OTI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>OTI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OTI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PRTSegmentImpl <em>PRT Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PRTSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPRTSegment()
+   * @generated
+   */
+  int PRT_SEGMENT = 212;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRT_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRT_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRT_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PRT Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRT_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PMTSegmentImpl <em>PMT Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PMTSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPMTSegment()
+   * @generated
+   */
+  int PMT_SEGMENT = 213;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PMT_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PMT_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PMT_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PMT Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PMT_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.POPSegmentImpl <em>POP Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.POPSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPOPSegment()
+   * @generated
+   */
+  int POP_SEGMENT = 214;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POP_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POP_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POP_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>POP Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POP_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.POSSegmentImpl <em>POS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.POSSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPOSSegment()
+   * @generated
+   */
+  int POS_SEGMENT = 215;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>POS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PRESegmentImpl <em>PRE Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PRESegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPRESegment()
+   * @generated
+   */
+  int PRE_SEGMENT = 216;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRE_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRE_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRE_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PRE Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRE_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PRDSegmentImpl <em>PRD Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PRDSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPRDSegment()
+   * @generated
+   */
+  int PRD_SEGMENT = 217;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRD_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRD_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRD_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PRD Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRD_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PDTSegmentImpl <em>PDT Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PDTSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPDTSegment()
+   * @generated
+   */
+  int PDT_SEGMENT = 218;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDT_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDT_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDT_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PDT Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDT_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PLISegmentImpl <em>PLI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PLISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPLISegment()
+   * @generated
+   */
+  int PLI_SEGMENT = 219;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PLI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PROSegmentImpl <em>PRO Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PROSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPROSegment()
+   * @generated
+   */
+  int PRO_SEGMENT = 220;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRO_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRO_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRO_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PRO Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRO_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.QTISegmentImpl <em>QTI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.QTISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getQTISegment()
+   * @generated
+   */
+  int QTI_SEGMENT = 221;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QTI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QTI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QTI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>QTI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QTI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RTISegmentImpl <em>RTI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.RTISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRTISegment()
+   * @generated
+   */
+  int RTI_SEGMENT = 222;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>RTI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RTCSegmentImpl <em>RTC Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.RTCSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRTCSegment()
+   * @generated
+   */
+  int RTC_SEGMENT = 223;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTC_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTC_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTC_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>RTC Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTC_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RFRSegmentImpl <em>RFR Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.RFRSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRFRSegment()
+   * @generated
+   */
+  int RFR_SEGMENT = 224;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RFR_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RFR_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RFR_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>RFR Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RFR_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RLSSegmentImpl <em>RLS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.RLSSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRLSSegment()
+   * @generated
+   */
+  int RLS_SEGMENT = 225;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RLS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RLS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RLS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>RLS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RLS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RCISegmentImpl <em>RCI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.RCISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRCISegment()
+   * @generated
+   */
+  int RCI_SEGMENT = 226;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RCI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RCI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RCI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>RCI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RCI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RULSegmentImpl <em>RUL Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.RULSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRULSegment()
+   * @generated
+   */
+  int RUL_SEGMENT = 227;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUL_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUL_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUL_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>RUL Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUL_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.SDTSegmentImpl <em>SDT Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.SDTSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getSDTSegment()
+   * @generated
+   */
+  int SDT_SEGMENT = 228;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SDT_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SDT_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SDT_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>SDT Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SDT_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ASDSegmentImpl <em>ASD Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ASDSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getASDSegment()
+   * @generated
+   */
+  int ASD_SEGMENT = 229;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASD_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASD_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASD_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ASD Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASD_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PSISegmentImpl <em>PSI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.PSISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPSISegment()
+   * @generated
+   */
+  int PSI_SEGMENT = 230;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PSI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PSI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PSI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>PSI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PSI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.SSRSegmentImpl <em>SSR Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.SSRSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getSSRSegment()
+   * @generated
+   */
+  int SSR_SEGMENT = 231;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SSR_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SSR_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SSR_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>SSR Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SSR_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TFFSegmentImpl <em>TFF Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TFFSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTFFSegment()
+   * @generated
+   */
+  int TFF_SEGMENT = 232;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TFF_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TFF_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TFF_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TFF Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TFF_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TXSSegmentImpl <em>TXS Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TXSSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTXSSegment()
+   * @generated
+   */
+  int TXS_SEGMENT = 233;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TXS_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TXS_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TXS_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TXS Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TXS_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TCESegmentImpl <em>TCE Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TCESegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTCESegment()
+   * @generated
+   */
+  int TCE_SEGMENT = 234;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TCE_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TCE_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TCE_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TCE Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TCE_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TIZSegmentImpl <em>TIZ Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TIZSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTIZSegment()
+   * @generated
+   */
+  int TIZ_SEGMENT = 235;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIZ_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIZ_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIZ_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TIZ Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIZ_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ATISegmentImpl <em>ATI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ATISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getATISegment()
+   * @generated
+   */
+  int ATI_SEGMENT = 236;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>ATI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TRFSegmentImpl <em>TRF Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TRFSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTRFSegment()
+   * @generated
+   */
+  int TRF_SEGMENT = 237;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRF_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRF_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRF_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TRF Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRF_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl <em>TVL Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TVLSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTVLSegment()
+   * @generated
+   */
+  int TVL_SEGMENT = 238;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Product Date Time</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__PRODUCT_DATE_TIME = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Location1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__LOCATION1 = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Location2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__LOCATION2 = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Company Identification</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__COMPANY_IDENTIFICATION = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Product Identification Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Sequence Number Details</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Line Item Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__LINE_ITEM_IDENTIFIER = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Processing Indicator Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT__PROCESSING_INDICATOR_DESCRIPTION_CODE = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 7;
+
+  /**
+   * The number of structural features of the '<em>TVL Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVL_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 8;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TDISegmentImpl <em>TDI Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TDISegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTDISegment()
+   * @generated
+   */
+  int TDI_SEGMENT = 239;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TDI_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TDI_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TDI_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TDI Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TDI_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TIFSegmentImpl <em>TIF Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.TIFSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTIFSegment()
+   * @generated
+   */
+  int TIF_SEGMENT = 240;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIF_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIF_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIF_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TIF Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TIF_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.VEHSegmentImpl <em>VEH Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.VEHSegmentImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getVEHSegment()
+   * @generated
+   */
+  int VEH_SEGMENT = 241;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VEH_SEGMENT__SEGMENT = ABSTRACT_EDI_SEGMENT__SEGMENT;
+
+  /**
+   * The feature id for the '<em><b>Line End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VEH_SEGMENT__LINE_END = ABSTRACT_EDI_SEGMENT__LINE_END;
+
+  /**
+   * The feature id for the '<em><b>Todo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VEH_SEGMENT__TODO = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>VEH Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VEH_SEGMENT_FEATURE_COUNT = ABSTRACT_EDI_SEGMENT_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.UNSSegmentImpl <em>UNS Segment</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -9252,7 +12583,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getUNSSegment()
    * @generated
    */
-  int UNS_SEGMENT = 169;
+  int UNS_SEGMENT = 242;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9298,7 +12629,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getUNTSegment()
    * @generated
    */
-  int UNT_SEGMENT = 170;
+  int UNT_SEGMENT = 243;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9353,7 +12684,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getUNZSegment()
    * @generated
    */
-  int UNZ_SEGMENT = 171;
+  int UNZ_SEGMENT = 244;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9408,7 +12739,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getUNESegment()
    * @generated
    */
-  int UNE_SEGMENT = 172;
+  int UNE_SEGMENT = 245;
 
   /**
    * The feature id for the '<em><b>Segment</b></em>' attribute.
@@ -9454,7 +12785,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAbstractEdiFunction()
    * @generated
    */
-  int ABSTRACT_EDI_FUNCTION = 173;
+  int ABSTRACT_EDI_FUNCTION = 246;
 
   /**
    * The number of structural features of the '<em>Abstract Edi Function</em>' class.
@@ -9473,7 +12804,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getUNBHeader()
    * @generated
    */
-  int UNB_HEADER = 174;
+  int UNB_HEADER = 247;
 
   /**
    * The feature id for the '<em><b>Syntax</b></em>' attribute.
@@ -9510,7 +12841,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPriceInformation()
    * @generated
    */
-  int PRICE_INFORMATION = 175;
+  int PRICE_INFORMATION = 248;
 
   /**
    * The feature id for the '<em><b>Price Code Qualifier</b></em>' attribute.
@@ -9583,7 +12914,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMessageBodyFunction()
    * @generated
    */
-  int MESSAGE_BODY_FUNCTION = 176;
+  int MESSAGE_BODY_FUNCTION = 249;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -9647,7 +12978,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMessageIndentifier()
    * @generated
    */
-  int MESSAGE_INDENTIFIER = 177;
+  int MESSAGE_INDENTIFIER = 250;
 
   /**
    * The feature id for the '<em><b>Message Type Code</b></em>' attribute.
@@ -9729,7 +13060,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRelationship()
    * @generated
    */
-  int RELATIONSHIP = 178;
+  int RELATIONSHIP = 251;
 
   /**
    * The feature id for the '<em><b>Relationship Description Code</b></em>' attribute.
@@ -9784,7 +13115,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getProductFunction()
    * @generated
    */
-  int PRODUCT_FUNCTION = 179;
+  int PRODUCT_FUNCTION = 252;
 
   /**
    * The feature id for the '<em><b>Booking Class</b></em>' attribute.
@@ -9821,7 +13152,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getItemNumberIdentification()
    * @generated
    */
-  int ITEM_NUMBER_IDENTIFICATION = 180;
+  int ITEM_NUMBER_IDENTIFICATION = 253;
 
   /**
    * The feature id for the '<em><b>Item Identifier</b></em>' attribute.
@@ -9876,7 +13207,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getSublineInformation()
    * @generated
    */
-  int SUBLINE_INFORMATION = 181;
+  int SUBLINE_INFORMATION = 254;
 
   /**
    * The feature id for the '<em><b>Subline Indicator Code</b></em>' attribute.
@@ -9913,7 +13244,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getQuantityDetail()
    * @generated
    */
-  int QUANTITY_DETAIL = 182;
+  int QUANTITY_DETAIL = 255;
 
   /**
    * The feature id for the '<em><b>Quantity Type Code Qualifier</b></em>' attribute.
@@ -9959,7 +13290,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getStreet()
    * @generated
    */
-  int STREET = 183;
+  int STREET = 256;
 
   /**
    * The feature id for the '<em><b>Street And Number</b></em>' attribute list.
@@ -9987,7 +13318,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCountrySubEntityDetail()
    * @generated
    */
-  int COUNTRY_SUB_ENTITY_DETAIL = 184;
+  int COUNTRY_SUB_ENTITY_DETAIL = 257;
 
   /**
    * The feature id for the '<em><b>Country Sub Entity Name Code</b></em>' attribute list.
@@ -10042,7 +13373,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPartyName()
    * @generated
    */
-  int PARTY_NAME = 185;
+  int PARTY_NAME = 258;
 
   /**
    * The feature id for the '<em><b>Party Name</b></em>' attribute list.
@@ -10070,7 +13401,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getNameAndAddress()
    * @generated
    */
-  int NAME_AND_ADDRESS = 186;
+  int NAME_AND_ADDRESS = 259;
 
   /**
    * The feature id for the '<em><b>Name And Address</b></em>' attribute list.
@@ -10098,7 +13429,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPartyIdentificationDetail()
    * @generated
    */
-  int PARTY_IDENTIFICATION_DETAIL = 187;
+  int PARTY_IDENTIFICATION_DETAIL = 260;
 
   /**
    * The feature id for the '<em><b>Party Identifier</b></em>' attribute.
@@ -10144,7 +13475,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getApplicationErrorDetail()
    * @generated
    */
-  int APPLICATION_ERROR_DETAIL = 188;
+  int APPLICATION_ERROR_DETAIL = 261;
 
   /**
    * The feature id for the '<em><b>Appliction Error Code</b></em>' attribute.
@@ -10190,7 +13521,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getSystemDetailFunction()
    * @generated
    */
-  int SYSTEM_DETAIL_FUNCTION = 189;
+  int SYSTEM_DETAIL_FUNCTION = 262;
 
   /**
    * The feature id for the '<em><b>Company Identification</b></em>' attribute.
@@ -10236,7 +13567,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTaxDetail()
    * @generated
    */
-  int TAX_DETAIL = 190;
+  int TAX_DETAIL = 263;
 
   /**
    * The feature id for the '<em><b>Tax Rate Description Code</b></em>' attribute.
@@ -10318,7 +13649,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTaxAccountDetail()
    * @generated
    */
-  int TAX_ACCOUNT_DETAIL = 191;
+  int TAX_ACCOUNT_DETAIL = 264;
 
   /**
    * The feature id for the '<em><b>Tax Account Code</b></em>' attribute.
@@ -10364,7 +13695,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTaxType()
    * @generated
    */
-  int TAX_TYPE = 192;
+  int TAX_TYPE = 265;
 
   /**
    * The feature id for the '<em><b>Tax Type Name Code</b></em>' attribute.
@@ -10419,7 +13750,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCurrencyDetail()
    * @generated
    */
-  int CURRENCY_DETAIL = 193;
+  int CURRENCY_DETAIL = 266;
 
   /**
    * The feature id for the '<em><b>Currency Usage Code Qualifier</b></em>' attribute.
@@ -10474,7 +13805,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDocumentMessageIdentification()
    * @generated
    */
-  int DOCUMENT_MESSAGE_IDENTIFICATION = 194;
+  int DOCUMENT_MESSAGE_IDENTIFICATION = 267;
 
   /**
    * The feature id for the '<em><b>Document Identifier</b></em>' attribute.
@@ -10520,7 +13851,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDocumentMessage()
    * @generated
    */
-  int DOCUMENT_MESSAGE = 195;
+  int DOCUMENT_MESSAGE = 268;
 
   /**
    * The feature id for the '<em><b>Document Name Code</b></em>' attribute.
@@ -10575,7 +13906,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getOriginatorFunction()
    * @generated
    */
-  int ORIGINATOR_FUNCTION = 196;
+  int ORIGINATOR_FUNCTION = 269;
 
   /**
    * The feature id for the '<em><b>Country Code</b></em>' attribute.
@@ -10621,7 +13952,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getOriginatorIdentificationFunction()
    * @generated
    */
-  int ORIGINATOR_IDENTIFICATION_FUNCTION = 197;
+  int ORIGINATOR_IDENTIFICATION_FUNCTION = 270;
 
   /**
    * The feature id for the '<em><b>Travel Agent Id</b></em>' attribute.
@@ -10660,23 +13991,23 @@ public interface EdilangPackage extends EPackage
   int ORIGINATOR_IDENTIFICATION_FUNCTION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.LocationFunctionImpl <em>Location Function</em>}' class.
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.LocationImpl <em>Location</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see io.thlaegler.edifact.edilang.impl.LocationFunctionImpl
-   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getLocationFunction()
+   * @see io.thlaegler.edifact.edilang.impl.LocationImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getLocation()
    * @generated
    */
-  int LOCATION_FUNCTION = 198;
+  int LOCATION = 271;
 
   /**
-   * The feature id for the '<em><b>Location Id</b></em>' attribute.
+   * The feature id for the '<em><b>Location Identifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LOCATION_FUNCTION__LOCATION_ID = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
+  int LOCATION__LOCATION_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Location Name</b></em>' attribute.
@@ -10685,16 +14016,34 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOCATION_FUNCTION__LOCATION_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
+  int LOCATION__LOCATION_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Location Function</em>' class.
+   * The feature id for the '<em><b>Country Identifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LOCATION_FUNCTION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
+  int LOCATION__COUNTRY_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Location Function Code Qualifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOCATION__LOCATION_FUNCTION_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Location</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOCATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.InterchangerFunctionImpl <em>Interchanger Function</em>}' class.
@@ -10704,7 +14053,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getInterchangerFunction()
    * @generated
    */
-  int INTERCHANGER_FUNCTION = 199;
+  int INTERCHANGER_FUNCTION = 272;
 
   /**
    * The feature id for the '<em><b>Interchange</b></em>' attribute.
@@ -10741,7 +14090,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getLocationIdentification()
    * @generated
    */
-  int LOCATION_IDENTIFICATION = 200;
+  int LOCATION_IDENTIFICATION = 273;
 
   /**
    * The feature id for the '<em><b>Location Name Code</b></em>' attribute.
@@ -10750,7 +14099,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOCATION_IDENTIFICATION__LOCATION_NAME_CODE = 0;
+  int LOCATION_IDENTIFICATION__LOCATION_NAME_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -10759,7 +14108,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOCATION_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int LOCATION_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -10768,7 +14117,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOCATION_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int LOCATION_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Location Name</b></em>' attribute.
@@ -10777,7 +14126,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOCATION_IDENTIFICATION__LOCATION_NAME = 3;
+  int LOCATION_IDENTIFICATION__LOCATION_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Location Identification</em>' class.
@@ -10786,7 +14135,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOCATION_IDENTIFICATION_FEATURE_COUNT = 4;
+  int LOCATION_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.AddressDetailImpl <em>Address Detail</em>}' class.
@@ -10796,7 +14145,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAddressDetail()
    * @generated
    */
-  int ADDRESS_DETAIL = 201;
+  int ADDRESS_DETAIL = 274;
 
   /**
    * The feature id for the '<em><b>Address Format Code</b></em>' attribute.
@@ -10805,7 +14154,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDRESS_DETAIL__ADDRESS_FORMAT_CODE = 0;
+  int ADDRESS_DETAIL__ADDRESS_FORMAT_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Address Component Descriptions</b></em>' attribute list.
@@ -10814,7 +14163,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDRESS_DETAIL__ADDRESS_COMPONENT_DESCRIPTIONS = 1;
+  int ADDRESS_DETAIL__ADDRESS_COMPONENT_DESCRIPTIONS = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Address Detail</em>' class.
@@ -10823,7 +14172,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDRESS_DETAIL_FEATURE_COUNT = 2;
+  int ADDRESS_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.AddressUsageImpl <em>Address Usage</em>}' class.
@@ -10833,7 +14182,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAddressUsage()
    * @generated
    */
-  int ADDRESS_USAGE = 202;
+  int ADDRESS_USAGE = 275;
 
   /**
    * The feature id for the '<em><b>Address Purpose Code</b></em>' attribute.
@@ -10842,7 +14191,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDRESS_USAGE__ADDRESS_PURPOSE_CODE = 0;
+  int ADDRESS_USAGE__ADDRESS_PURPOSE_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Address Type Code</b></em>' attribute.
@@ -10851,7 +14200,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDRESS_USAGE__ADDRESS_TYPE_CODE = 1;
+  int ADDRESS_USAGE__ADDRESS_TYPE_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Address Status Code</b></em>' attribute.
@@ -10860,7 +14209,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDRESS_USAGE__ADDRESS_STATUS_CODE = 2;
+  int ADDRESS_USAGE__ADDRESS_STATUS_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Address Usage</em>' class.
@@ -10869,7 +14218,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDRESS_USAGE_FEATURE_COUNT = 3;
+  int ADDRESS_USAGE_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.AttributeDetailImpl <em>Attribute Detail</em>}' class.
@@ -10879,7 +14228,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAttributeDetail()
    * @generated
    */
-  int ATTRIBUTE_DETAIL = 203;
+  int ATTRIBUTE_DETAIL = 276;
 
   /**
    * The feature id for the '<em><b>Attribute Description Code</b></em>' attribute.
@@ -10888,7 +14237,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_DETAIL__ATTRIBUTE_DESCRIPTION_CODE = 0;
+  int ATTRIBUTE_DETAIL__ATTRIBUTE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -10897,7 +14246,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_DETAIL__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int ATTRIBUTE_DETAIL__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -10906,7 +14255,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int ATTRIBUTE_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Attribute Description</b></em>' attribute.
@@ -10915,7 +14264,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_DETAIL__ATTRIBUTE_DESCRIPTION = 3;
+  int ATTRIBUTE_DETAIL__ATTRIBUTE_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Attribute Detail</em>' class.
@@ -10924,7 +14273,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_DETAIL_FEATURE_COUNT = 4;
+  int ATTRIBUTE_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.AttributeTypeImpl <em>Attribute Type</em>}' class.
@@ -10934,7 +14283,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAttributeType()
    * @generated
    */
-  int ATTRIBUTE_TYPE = 204;
+  int ATTRIBUTE_TYPE = 277;
 
   /**
    * The feature id for the '<em><b>Attribute Type Description Code</b></em>' attribute.
@@ -10943,7 +14292,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE__ATTRIBUTE_TYPE_DESCRIPTION_CODE = 0;
+  int ATTRIBUTE_TYPE__ATTRIBUTE_TYPE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -10952,7 +14301,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int ATTRIBUTE_TYPE__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -10961,7 +14310,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int ATTRIBUTE_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Attribute Type Description</b></em>' attribute.
@@ -10970,7 +14319,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE__ATTRIBUTE_TYPE_DESCRIPTION = 3;
+  int ATTRIBUTE_TYPE__ATTRIBUTE_TYPE_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Attribute Type</em>' class.
@@ -10979,7 +14328,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE_FEATURE_COUNT = 4;
+  int ATTRIBUTE_TYPE_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.BankOperationImpl <em>Bank Operation</em>}' class.
@@ -10989,7 +14338,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getBankOperation()
    * @generated
    */
-  int BANK_OPERATION = 205;
+  int BANK_OPERATION = 278;
 
   /**
    * The feature id for the '<em><b>Bank Operation Code</b></em>' attribute.
@@ -10998,7 +14347,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BANK_OPERATION__BANK_OPERATION_CODE = 0;
+  int BANK_OPERATION__BANK_OPERATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11007,7 +14356,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BANK_OPERATION__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int BANK_OPERATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11016,7 +14365,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BANK_OPERATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int BANK_OPERATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Bank Operation</em>' class.
@@ -11025,7 +14374,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BANK_OPERATION_FEATURE_COUNT = 3;
+  int BANK_OPERATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.BusinessFunctionImpl <em>Business Function</em>}' class.
@@ -11035,7 +14384,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getBusinessFunction()
    * @generated
    */
-  int BUSINESS_FUNCTION = 206;
+  int BUSINESS_FUNCTION = 279;
 
   /**
    * The feature id for the '<em><b>Business Function Type Code Qualifier</b></em>' attribute.
@@ -11044,7 +14393,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUSINESS_FUNCTION__BUSINESS_FUNCTION_TYPE_CODE_QUALIFIER = 0;
+  int BUSINESS_FUNCTION__BUSINESS_FUNCTION_TYPE_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Business Function Code</b></em>' attribute.
@@ -11053,7 +14402,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUSINESS_FUNCTION__BUSINESS_FUNCTION_CODE = 1;
+  int BUSINESS_FUNCTION__BUSINESS_FUNCTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11062,7 +14411,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUSINESS_FUNCTION__CODE_LIST_IDENTIFICATION_CODE = 2;
+  int BUSINESS_FUNCTION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11071,7 +14420,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUSINESS_FUNCTION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 3;
+  int BUSINESS_FUNCTION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Business Description</b></em>' attribute.
@@ -11080,7 +14429,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUSINESS_FUNCTION__BUSINESS_DESCRIPTION = 4;
+  int BUSINESS_FUNCTION__BUSINESS_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Business Function</em>' class.
@@ -11089,7 +14438,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUSINESS_FUNCTION_FEATURE_COUNT = 5;
+  int BUSINESS_FUNCTION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DepartmentEmployeeDetailImpl <em>Department Employee Detail</em>}' class.
@@ -11099,7 +14448,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDepartmentEmployeeDetail()
    * @generated
    */
-  int DEPARTMENT_EMPLOYEE_DETAIL = 207;
+  int DEPARTMENT_EMPLOYEE_DETAIL = 280;
 
   /**
    * The feature id for the '<em><b>Department Employee Name Code</b></em>' attribute.
@@ -11108,7 +14457,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEPARTMENT_EMPLOYEE_DETAIL__DEPARTMENT_EMPLOYEE_NAME_CODE = 0;
+  int DEPARTMENT_EMPLOYEE_DETAIL__DEPARTMENT_EMPLOYEE_NAME_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Department Employee Name</b></em>' attribute.
@@ -11117,7 +14466,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEPARTMENT_EMPLOYEE_DETAIL__DEPARTMENT_EMPLOYEE_NAME = 1;
+  int DEPARTMENT_EMPLOYEE_DETAIL__DEPARTMENT_EMPLOYEE_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Department Employee Detail</em>' class.
@@ -11126,7 +14475,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEPARTMENT_EMPLOYEE_DETAIL_FEATURE_COUNT = 2;
+  int DEPARTMENT_EMPLOYEE_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.IdentificationNumberImpl <em>Identification Number</em>}' class.
@@ -11136,7 +14485,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getIdentificationNumber()
    * @generated
    */
-  int IDENTIFICATION_NUMBER = 208;
+  int IDENTIFICATION_NUMBER = 281;
 
   /**
    * The feature id for the '<em><b>Object Identifier</b></em>' attribute.
@@ -11145,7 +14494,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENTIFICATION_NUMBER__OBJECT_IDENTIFIER = 0;
+  int IDENTIFICATION_NUMBER__OBJECT_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Object Identification Code Qualifier</b></em>' attribute.
@@ -11154,7 +14503,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENTIFICATION_NUMBER__OBJECT_IDENTIFICATION_CODE_QUALIFIER = 1;
+  int IDENTIFICATION_NUMBER__OBJECT_IDENTIFICATION_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Status Description Code</b></em>' attribute.
@@ -11163,7 +14512,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENTIFICATION_NUMBER__STATUS_DESCRIPTION_CODE = 2;
+  int IDENTIFICATION_NUMBER__STATUS_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Identification Number</em>' class.
@@ -11172,7 +14521,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENTIFICATION_NUMBER_FEATURE_COUNT = 3;
+  int IDENTIFICATION_NUMBER_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PositionIdentificationImpl <em>Position Identification</em>}' class.
@@ -11182,7 +14531,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPositionIdentification()
    * @generated
    */
-  int POSITION_IDENTIFICATION = 209;
+  int POSITION_IDENTIFICATION = 282;
 
   /**
    * The feature id for the '<em><b>Hierarchy Structure Level Identifier</b></em>' attribute.
@@ -11191,7 +14540,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POSITION_IDENTIFICATION__HIERARCHY_STRUCTURE_LEVEL_IDENTIFIER = 0;
+  int POSITION_IDENTIFICATION__HIERARCHY_STRUCTURE_LEVEL_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Sequence Position Identifier</b></em>' attribute.
@@ -11200,7 +14549,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POSITION_IDENTIFICATION__SEQUENCE_POSITION_IDENTIFIER = 1;
+  int POSITION_IDENTIFICATION__SEQUENCE_POSITION_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Position Identification</em>' class.
@@ -11209,7 +14558,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int POSITION_IDENTIFICATION_FEATURE_COUNT = 2;
+  int POSITION_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ProductCharacteristicImpl <em>Product Characteristic</em>}' class.
@@ -11219,7 +14568,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getProductCharacteristic()
    * @generated
    */
-  int PRODUCT_CHARACTERISTIC = 210;
+  int PRODUCT_CHARACTERISTIC = 283;
 
   /**
    * The feature id for the '<em><b>Characteristic Description Code</b></em>' attribute.
@@ -11228,7 +14577,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRODUCT_CHARACTERISTIC__CHARACTERISTIC_DESCRIPTION_CODE = 0;
+  int PRODUCT_CHARACTERISTIC__CHARACTERISTIC_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11237,7 +14586,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRODUCT_CHARACTERISTIC__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int PRODUCT_CHARACTERISTIC__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11246,7 +14595,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRODUCT_CHARACTERISTIC__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int PRODUCT_CHARACTERISTIC__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Characteristic Description1</b></em>' attribute.
@@ -11255,7 +14604,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRODUCT_CHARACTERISTIC__CHARACTERISTIC_DESCRIPTION1 = 3;
+  int PRODUCT_CHARACTERISTIC__CHARACTERISTIC_DESCRIPTION1 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Characteristic Description2</b></em>' attribute.
@@ -11264,7 +14613,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRODUCT_CHARACTERISTIC__CHARACTERISTIC_DESCRIPTION2 = 4;
+  int PRODUCT_CHARACTERISTIC__CHARACTERISTIC_DESCRIPTION2 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Product Characteristic</em>' class.
@@ -11273,7 +14622,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRODUCT_CHARACTERISTIC_FEATURE_COUNT = 5;
+  int PRODUCT_CHARACTERISTIC_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.NationalityDetailImpl <em>Nationality Detail</em>}' class.
@@ -11283,7 +14632,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getNationalityDetail()
    * @generated
    */
-  int NATIONALITY_DETAIL = 211;
+  int NATIONALITY_DETAIL = 284;
 
   /**
    * The feature id for the '<em><b>Nationality Name Code</b></em>' attribute.
@@ -11292,7 +14641,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NATIONALITY_DETAIL__NATIONALITY_NAME_CODE = 0;
+  int NATIONALITY_DETAIL__NATIONALITY_NAME_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11301,7 +14650,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NATIONALITY_DETAIL__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int NATIONALITY_DETAIL__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11310,7 +14659,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NATIONALITY_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int NATIONALITY_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Nationality Name</b></em>' attribute.
@@ -11319,7 +14668,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NATIONALITY_DETAIL__NATIONALITY_NAME = 3;
+  int NATIONALITY_DETAIL__NATIONALITY_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Nationality Detail</em>' class.
@@ -11328,7 +14677,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NATIONALITY_DETAIL_FEATURE_COUNT = 4;
+  int NATIONALITY_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PercentageDetailImpl <em>Percentage Detail</em>}' class.
@@ -11338,7 +14687,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPercentageDetail()
    * @generated
    */
-  int PERCENTAGE_DETAIL = 212;
+  int PERCENTAGE_DETAIL = 285;
 
   /**
    * The feature id for the '<em><b>Percentage Type Code Qualifier</b></em>' attribute.
@@ -11347,7 +14696,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERCENTAGE_DETAIL__PERCENTAGE_TYPE_CODE_QUALIFIER = 0;
+  int PERCENTAGE_DETAIL__PERCENTAGE_TYPE_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Percentage</b></em>' attribute.
@@ -11356,7 +14705,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERCENTAGE_DETAIL__PERCENTAGE = 1;
+  int PERCENTAGE_DETAIL__PERCENTAGE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Percentage Basis Identification Code</b></em>' attribute.
@@ -11365,7 +14714,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERCENTAGE_DETAIL__PERCENTAGE_BASIS_IDENTIFICATION_CODE = 2;
+  int PERCENTAGE_DETAIL__PERCENTAGE_BASIS_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11374,7 +14723,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERCENTAGE_DETAIL__CODE_LIST_IDENTIFICATION_CODE = 3;
+  int PERCENTAGE_DETAIL__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11383,7 +14732,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERCENTAGE_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 4;
+  int PERCENTAGE_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Percentage Detail</em>' class.
@@ -11392,7 +14741,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERCENTAGE_DETAIL_FEATURE_COUNT = 5;
+  int PERCENTAGE_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.RateDetailImpl <em>Rate Detail</em>}' class.
@@ -11402,7 +14751,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getRateDetail()
    * @generated
    */
-  int RATE_DETAIL = 213;
+  int RATE_DETAIL = 286;
 
   /**
    * The feature id for the '<em><b>Rate Type Code Qualifier</b></em>' attribute.
@@ -11411,7 +14760,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RATE_DETAIL__RATE_TYPE_CODE_QUALIFIER = 0;
+  int RATE_DETAIL__RATE_TYPE_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Unit Price Basis Rate</b></em>' attribute.
@@ -11420,7 +14769,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RATE_DETAIL__UNIT_PRICE_BASIS_RATE = 1;
+  int RATE_DETAIL__UNIT_PRICE_BASIS_RATE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Unit Price Basis Value</b></em>' attribute.
@@ -11429,7 +14778,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RATE_DETAIL__UNIT_PRICE_BASIS_VALUE = 2;
+  int RATE_DETAIL__UNIT_PRICE_BASIS_VALUE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Measurement Unit Code</b></em>' attribute.
@@ -11438,7 +14787,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RATE_DETAIL__MEASUREMENT_UNIT_CODE = 3;
+  int RATE_DETAIL__MEASUREMENT_UNIT_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Rate Detail</em>' class.
@@ -11447,7 +14796,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RATE_DETAIL_FEATURE_COUNT = 4;
+  int RATE_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.StatusCategoryImpl <em>Status Category</em>}' class.
@@ -11457,7 +14806,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getStatusCategory()
    * @generated
    */
-  int STATUS_CATEGORY = 214;
+  int STATUS_CATEGORY = 287;
 
   /**
    * The feature id for the '<em><b>Status Category Code</b></em>' attribute.
@@ -11466,7 +14815,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_CATEGORY__STATUS_CATEGORY_CODE = 0;
+  int STATUS_CATEGORY__STATUS_CATEGORY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11475,7 +14824,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_CATEGORY__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int STATUS_CATEGORY__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11484,7 +14833,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_CATEGORY__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int STATUS_CATEGORY__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Status Category</em>' class.
@@ -11493,7 +14842,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_CATEGORY_FEATURE_COUNT = 3;
+  int STATUS_CATEGORY_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.StatusImpl <em>Status</em>}' class.
@@ -11503,7 +14852,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getStatus()
    * @generated
    */
-  int STATUS = 215;
+  int STATUS = 288;
 
   /**
    * The feature id for the '<em><b>Status Description Code</b></em>' attribute.
@@ -11512,7 +14861,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS__STATUS_DESCRIPTION_CODE = 0;
+  int STATUS__STATUS_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11521,7 +14870,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int STATUS__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11530,7 +14879,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int STATUS__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Status Description</b></em>' attribute.
@@ -11539,7 +14888,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS__STATUS_DESCRIPTION = 3;
+  int STATUS__STATUS_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Status</em>' class.
@@ -11548,7 +14897,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_FEATURE_COUNT = 4;
+  int STATUS_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.StatusReasonImpl <em>Status Reason</em>}' class.
@@ -11558,7 +14907,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getStatusReason()
    * @generated
    */
-  int STATUS_REASON = 216;
+  int STATUS_REASON = 289;
 
   /**
    * The feature id for the '<em><b>Status Reason Description Code</b></em>' attribute.
@@ -11567,7 +14916,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_REASON__STATUS_REASON_DESCRIPTION_CODE = 0;
+  int STATUS_REASON__STATUS_REASON_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11576,7 +14925,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_REASON__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int STATUS_REASON__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11585,7 +14934,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_REASON__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int STATUS_REASON__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Status Reason Description</b></em>' attribute.
@@ -11594,7 +14943,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_REASON__STATUS_REASON_DESCRIPTION = 3;
+  int STATUS_REASON__STATUS_REASON_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Status Reason</em>' class.
@@ -11603,7 +14952,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATUS_REASON_FEATURE_COUNT = 4;
+  int STATUS_REASON_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ValueListIdentificationImpl <em>Value List Identification</em>}' class.
@@ -11613,7 +14962,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getValueListIdentification()
    * @generated
    */
-  int VALUE_LIST_IDENTIFICATION = 217;
+  int VALUE_LIST_IDENTIFICATION = 290;
 
   /**
    * The feature id for the '<em><b>Value List Identifier</b></em>' attribute.
@@ -11622,7 +14971,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VALUE_LIST_IDENTIFICATION__VALUE_LIST_IDENTIFIER = 0;
+  int VALUE_LIST_IDENTIFICATION__VALUE_LIST_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Object Identification Code Qualifier</b></em>' attribute.
@@ -11631,7 +14980,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VALUE_LIST_IDENTIFICATION__OBJECT_IDENTIFICATION_CODE_QUALIFIER = 1;
+  int VALUE_LIST_IDENTIFICATION__OBJECT_IDENTIFICATION_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Value List Identification</em>' class.
@@ -11640,7 +14989,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VALUE_LIST_IDENTIFICATION_FEATURE_COUNT = 2;
+  int VALUE_LIST_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TermsOfDeliveryTransportImpl <em>Terms Of Delivery Transport</em>}' class.
@@ -11650,7 +14999,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTermsOfDeliveryTransport()
    * @generated
    */
-  int TERMS_OF_DELIVERY_TRANSPORT = 218;
+  int TERMS_OF_DELIVERY_TRANSPORT = 291;
 
   /**
    * The feature id for the '<em><b>Delivery Transport Terms Description Code</b></em>' attribute.
@@ -11659,7 +15008,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMS_OF_DELIVERY_TRANSPORT__DELIVERY_TRANSPORT_TERMS_DESCRIPTION_CODE = 0;
+  int TERMS_OF_DELIVERY_TRANSPORT__DELIVERY_TRANSPORT_TERMS_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11668,7 +15017,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMS_OF_DELIVERY_TRANSPORT__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int TERMS_OF_DELIVERY_TRANSPORT__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11677,7 +15026,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMS_OF_DELIVERY_TRANSPORT__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int TERMS_OF_DELIVERY_TRANSPORT__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Delivery Transport Terms Descriptions</b></em>' attribute list.
@@ -11686,7 +15035,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMS_OF_DELIVERY_TRANSPORT__DELIVERY_TRANSPORT_TERMS_DESCRIPTIONS = 3;
+  int TERMS_OF_DELIVERY_TRANSPORT__DELIVERY_TRANSPORT_TERMS_DESCRIPTIONS = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Terms Of Delivery Transport</em>' class.
@@ -11695,7 +15044,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMS_OF_DELIVERY_TRANSPORT_FEATURE_COUNT = 4;
+  int TERMS_OF_DELIVERY_TRANSPORT_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.QuantityDifferenceInformationImpl <em>Quantity Difference Information</em>}' class.
@@ -11705,7 +15054,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getQuantityDifferenceInformation()
    * @generated
    */
-  int QUANTITY_DIFFERENCE_INFORMATION = 219;
+  int QUANTITY_DIFFERENCE_INFORMATION = 292;
 
   /**
    * The feature id for the '<em><b>Quantity Variance Value</b></em>' attribute.
@@ -11714,7 +15063,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUANTITY_DIFFERENCE_INFORMATION__QUANTITY_VARIANCE_VALUE = 0;
+  int QUANTITY_DIFFERENCE_INFORMATION__QUANTITY_VARIANCE_VALUE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Quantity Type Code Qualifier</b></em>' attribute.
@@ -11723,7 +15072,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUANTITY_DIFFERENCE_INFORMATION__QUANTITY_TYPE_CODE_QUALIFIER = 1;
+  int QUANTITY_DIFFERENCE_INFORMATION__QUANTITY_TYPE_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Quantity Difference Information</em>' class.
@@ -11732,7 +15081,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUANTITY_DIFFERENCE_INFORMATION_FEATURE_COUNT = 2;
+  int QUANTITY_DIFFERENCE_INFORMATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ReasonForChangeImpl <em>Reason For Change</em>}' class.
@@ -11742,7 +15091,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getReasonForChange()
    * @generated
    */
-  int REASON_FOR_CHANGE = 220;
+  int REASON_FOR_CHANGE = 293;
 
   /**
    * The feature id for the '<em><b>Change Reason Description Code</b></em>' attribute.
@@ -11751,7 +15100,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REASON_FOR_CHANGE__CHANGE_REASON_DESCRIPTION_CODE = 0;
+  int REASON_FOR_CHANGE__CHANGE_REASON_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11760,7 +15109,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REASON_FOR_CHANGE__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int REASON_FOR_CHANGE__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11769,7 +15118,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REASON_FOR_CHANGE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int REASON_FOR_CHANGE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Change Reason Descriptions</b></em>' attribute.
@@ -11778,7 +15127,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REASON_FOR_CHANGE__CHANGE_REASON_DESCRIPTIONS = 3;
+  int REASON_FOR_CHANGE__CHANGE_REASON_DESCRIPTIONS = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Reason For Change</em>' class.
@@ -11787,7 +15136,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REASON_FOR_CHANGE_FEATURE_COUNT = 4;
+  int REASON_FOR_CHANGE_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.LanguageDetailImpl <em>Language Detail</em>}' class.
@@ -11797,7 +15146,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getLanguageDetail()
    * @generated
    */
-  int LANGUAGE_DETAIL = 221;
+  int LANGUAGE_DETAIL = 294;
 
   /**
    * The feature id for the '<em><b>Language Name Code</b></em>' attribute.
@@ -11806,7 +15155,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LANGUAGE_DETAIL__LANGUAGE_NAME_CODE = 0;
+  int LANGUAGE_DETAIL__LANGUAGE_NAME_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Language Name</b></em>' attribute.
@@ -11815,7 +15164,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LANGUAGE_DETAIL__LANGUAGE_NAME = 1;
+  int LANGUAGE_DETAIL__LANGUAGE_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Language Detail</em>' class.
@@ -11824,7 +15173,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LANGUAGE_DETAIL_FEATURE_COUNT = 2;
+  int LANGUAGE_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.InformationRequestImpl <em>Information Request</em>}' class.
@@ -11834,7 +15183,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getInformationRequest()
    * @generated
    */
-  int INFORMATION_REQUEST = 222;
+  int INFORMATION_REQUEST = 295;
 
   /**
    * The feature id for the '<em><b>Requested Information Description Code</b></em>' attribute.
@@ -11843,7 +15192,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INFORMATION_REQUEST__REQUESTED_INFORMATION_DESCRIPTION_CODE = 0;
+  int INFORMATION_REQUEST__REQUESTED_INFORMATION_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11852,7 +15201,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INFORMATION_REQUEST__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int INFORMATION_REQUEST__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11861,7 +15210,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INFORMATION_REQUEST__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int INFORMATION_REQUEST__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Requested Information Description</b></em>' attribute.
@@ -11870,7 +15219,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INFORMATION_REQUEST__REQUESTED_INFORMATION_DESCRIPTION = 3;
+  int INFORMATION_REQUEST__REQUESTED_INFORMATION_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Information Request</em>' class.
@@ -11879,7 +15228,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INFORMATION_REQUEST_FEATURE_COUNT = 4;
+  int INFORMATION_REQUEST_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.IndexIdentificationImpl <em>Index Identification</em>}' class.
@@ -11889,7 +15238,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getIndexIdentification()
    * @generated
    */
-  int INDEX_IDENTIFICATION = 223;
+  int INDEX_IDENTIFICATION = 296;
 
   /**
    * The feature id for the '<em><b>Index Code Qualifier</b></em>' attribute.
@@ -11898,7 +15247,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_IDENTIFICATION__INDEX_CODE_QUALIFIER = 0;
+  int INDEX_IDENTIFICATION__INDEX_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Index Type Identifier</b></em>' attribute.
@@ -11907,7 +15256,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_IDENTIFICATION__INDEX_TYPE_IDENTIFIER = 1;
+  int INDEX_IDENTIFICATION__INDEX_TYPE_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -11916,7 +15265,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = 2;
+  int INDEX_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -11925,7 +15274,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 3;
+  int INDEX_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Index Identification</em>' class.
@@ -11934,7 +15283,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_IDENTIFICATION_FEATURE_COUNT = 4;
+  int INDEX_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.IndexValueImpl <em>Index Value</em>}' class.
@@ -11944,7 +15293,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getIndexValue()
    * @generated
    */
-  int INDEX_VALUE = 224;
+  int INDEX_VALUE = 297;
 
   /**
    * The feature id for the '<em><b>Index Value</b></em>' attribute.
@@ -11953,7 +15302,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_VALUE__INDEX_VALUE = 0;
+  int INDEX_VALUE__INDEX_VALUE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Index Value Representation Code</b></em>' attribute.
@@ -11962,7 +15311,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_VALUE__INDEX_VALUE_REPRESENTATION_CODE = 1;
+  int INDEX_VALUE__INDEX_VALUE_REPRESENTATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Index Value</em>' class.
@@ -11971,7 +15320,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDEX_VALUE_FEATURE_COUNT = 2;
+  int INDEX_VALUE_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ControlImpl <em>Control</em>}' class.
@@ -11981,7 +15330,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getControl()
    * @generated
    */
-  int CONTROL = 225;
+  int CONTROL = 298;
 
   /**
    * The feature id for the '<em><b>Control Total Type Code Qualifier</b></em>' attribute.
@@ -11990,7 +15339,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTROL__CONTROL_TOTAL_TYPE_CODE_QUALIFIER = 0;
+  int CONTROL__CONTROL_TOTAL_TYPE_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Control Total Value</b></em>' attribute.
@@ -11999,7 +15348,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTROL__CONTROL_TOTAL_VALUE = 1;
+  int CONTROL__CONTROL_TOTAL_VALUE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Measurement Unit Code</b></em>' attribute.
@@ -12008,7 +15357,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTROL__MEASUREMENT_UNIT_CODE = 2;
+  int CONTROL__MEASUREMENT_UNIT_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Control</em>' class.
@@ -12017,7 +15366,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTROL_FEATURE_COUNT = 3;
+  int CONTROL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.BasisTypeImpl <em>Basis Type</em>}' class.
@@ -12027,7 +15376,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getBasisType()
    * @generated
    */
-  int BASIS_TYPE = 226;
+  int BASIS_TYPE = 299;
 
   /**
    * The feature id for the '<em><b>Basis Type Description Code</b></em>' attribute.
@@ -12036,7 +15385,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIS_TYPE__BASIS_TYPE_DESCRIPTION_CODE = 0;
+  int BASIS_TYPE__BASIS_TYPE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12045,7 +15394,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIS_TYPE__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int BASIS_TYPE__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12054,7 +15403,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIS_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int BASIS_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Basis Type Description</b></em>' attribute.
@@ -12063,7 +15412,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIS_TYPE__BASIS_TYPE_DESCRIPTION = 3;
+  int BASIS_TYPE__BASIS_TYPE_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Basis Type</em>' class.
@@ -12072,7 +15421,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIS_TYPE_FEATURE_COUNT = 4;
+  int BASIS_TYPE_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CommunicationContactImpl <em>Communication Contact</em>}' class.
@@ -12082,7 +15431,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCommunicationContact()
    * @generated
    */
-  int COMMUNICATION_CONTACT = 227;
+  int COMMUNICATION_CONTACT = 300;
 
   /**
    * The feature id for the '<em><b>Communication Number</b></em>' attribute.
@@ -12091,7 +15440,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMMUNICATION_CONTACT__COMMUNICATION_NUMBER = 0;
+  int COMMUNICATION_CONTACT__COMMUNICATION_NUMBER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Communication Number Code Qualifier</b></em>' attribute.
@@ -12100,7 +15449,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMMUNICATION_CONTACT__COMMUNICATION_NUMBER_CODE_QUALIFIER = 1;
+  int COMMUNICATION_CONTACT__COMMUNICATION_NUMBER_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Communication Contact</em>' class.
@@ -12109,7 +15458,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMMUNICATION_CONTACT_FEATURE_COUNT = 2;
+  int COMMUNICATION_CONTACT_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.AgreementTypeIdentificationImpl <em>Agreement Type Identification</em>}' class.
@@ -12119,7 +15468,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAgreementTypeIdentification()
    * @generated
    */
-  int AGREEMENT_TYPE_IDENTIFICATION = 228;
+  int AGREEMENT_TYPE_IDENTIFICATION = 301;
 
   /**
    * The feature id for the '<em><b>Agreement Type Code Qualifier</b></em>' attribute.
@@ -12128,7 +15477,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGREEMENT_TYPE_IDENTIFICATION__AGREEMENT_TYPE_CODE_QUALIFIER = 0;
+  int AGREEMENT_TYPE_IDENTIFICATION__AGREEMENT_TYPE_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Agreement Type Description Code</b></em>' attribute.
@@ -12137,7 +15486,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGREEMENT_TYPE_IDENTIFICATION__AGREEMENT_TYPE_DESCRIPTION_CODE = 1;
+  int AGREEMENT_TYPE_IDENTIFICATION__AGREEMENT_TYPE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12146,7 +15495,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGREEMENT_TYPE_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = 2;
+  int AGREEMENT_TYPE_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12155,7 +15504,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGREEMENT_TYPE_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 3;
+  int AGREEMENT_TYPE_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Agreement Type Description</b></em>' attribute.
@@ -12164,7 +15513,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGREEMENT_TYPE_IDENTIFICATION__AGREEMENT_TYPE_DESCRIPTION = 4;
+  int AGREEMENT_TYPE_IDENTIFICATION__AGREEMENT_TYPE_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Agreement Type Identification</em>' class.
@@ -12173,7 +15522,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGREEMENT_TYPE_IDENTIFICATION_FEATURE_COUNT = 5;
+  int AGREEMENT_TYPE_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.AllowanceChargeInformationImpl <em>Allowance Charge Information</em>}' class.
@@ -12183,7 +15532,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getAllowanceChargeInformation()
    * @generated
    */
-  int ALLOWANCE_CHARGE_INFORMATION = 229;
+  int ALLOWANCE_CHARGE_INFORMATION = 302;
 
   /**
    * The feature id for the '<em><b>Allowance Charge Identifier</b></em>' attribute.
@@ -12192,7 +15541,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ALLOWANCE_CHARGE_INFORMATION__ALLOWANCE_CHARGE_IDENTIFIER = 0;
+  int ALLOWANCE_CHARGE_INFORMATION__ALLOWANCE_CHARGE_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Allowance Charge Identification Code</b></em>' attribute.
@@ -12201,7 +15550,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ALLOWANCE_CHARGE_INFORMATION__ALLOWANCE_CHARGE_IDENTIFICATION_CODE = 1;
+  int ALLOWANCE_CHARGE_INFORMATION__ALLOWANCE_CHARGE_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Allowance Charge Information</em>' class.
@@ -12210,7 +15559,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ALLOWANCE_CHARGE_INFORMATION_FEATURE_COUNT = 2;
+  int ALLOWANCE_CHARGE_INFORMATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.SpecialServicesIdentificationImpl <em>Special Services Identification</em>}' class.
@@ -12220,7 +15569,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getSpecialServicesIdentification()
    * @generated
    */
-  int SPECIAL_SERVICES_IDENTIFICATION = 230;
+  int SPECIAL_SERVICES_IDENTIFICATION = 303;
 
   /**
    * The feature id for the '<em><b>Special Service Description Code</b></em>' attribute.
@@ -12229,7 +15578,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_SERVICES_IDENTIFICATION__SPECIAL_SERVICE_DESCRIPTION_CODE = 0;
+  int SPECIAL_SERVICES_IDENTIFICATION__SPECIAL_SERVICE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12238,7 +15587,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_SERVICES_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int SPECIAL_SERVICES_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12247,7 +15596,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_SERVICES_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int SPECIAL_SERVICES_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Special Service Descriptions</b></em>' attribute list.
@@ -12256,7 +15605,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_SERVICES_IDENTIFICATION__SPECIAL_SERVICE_DESCRIPTIONS = 3;
+  int SPECIAL_SERVICES_IDENTIFICATION__SPECIAL_SERVICE_DESCRIPTIONS = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Special Services Identification</em>' class.
@@ -12265,7 +15614,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_SERVICES_IDENTIFICATION_FEATURE_COUNT = 4;
+  int SPECIAL_SERVICES_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ApplicabilityTypeImpl <em>Applicability Type</em>}' class.
@@ -12275,7 +15624,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getApplicabilityType()
    * @generated
    */
-  int APPLICABILITY_TYPE = 231;
+  int APPLICABILITY_TYPE = 304;
 
   /**
    * The feature id for the '<em><b>Applicability Type Description Code</b></em>' attribute.
@@ -12284,7 +15633,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int APPLICABILITY_TYPE__APPLICABILITY_TYPE_DESCRIPTION_CODE = 0;
+  int APPLICABILITY_TYPE__APPLICABILITY_TYPE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12293,7 +15642,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int APPLICABILITY_TYPE__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int APPLICABILITY_TYPE__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12302,7 +15651,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int APPLICABILITY_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int APPLICABILITY_TYPE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Applicability Type Descriptions</b></em>' attribute.
@@ -12311,7 +15660,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int APPLICABILITY_TYPE__APPLICABILITY_TYPE_DESCRIPTIONS = 3;
+  int APPLICABILITY_TYPE__APPLICABILITY_TYPE_DESCRIPTIONS = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Applicability Type</em>' class.
@@ -12320,7 +15669,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int APPLICABILITY_TYPE_FEATURE_COUNT = 4;
+  int APPLICABILITY_TYPE_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PriceMultiplierInformationImpl <em>Price Multiplier Information</em>}' class.
@@ -12330,7 +15679,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPriceMultiplierInformation()
    * @generated
    */
-  int PRICE_MULTIPLIER_INFORMATION = 232;
+  int PRICE_MULTIPLIER_INFORMATION = 305;
 
   /**
    * The feature id for the '<em><b>Price Multiplier Rate</b></em>' attribute.
@@ -12339,7 +15688,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRICE_MULTIPLIER_INFORMATION__PRICE_MULTIPLIER_RATE = 0;
+  int PRICE_MULTIPLIER_INFORMATION__PRICE_MULTIPLIER_RATE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Price Multiplier Type Code Qualifier</b></em>' attribute.
@@ -12348,7 +15697,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRICE_MULTIPLIER_INFORMATION__PRICE_MULTIPLIER_TYPE_CODE_QUALIFIER = 1;
+  int PRICE_MULTIPLIER_INFORMATION__PRICE_MULTIPLIER_TYPE_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Price Multiplier Information</em>' class.
@@ -12357,7 +15706,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRICE_MULTIPLIER_INFORMATION_FEATURE_COUNT = 2;
+  int PRICE_MULTIPLIER_INFORMATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MonetaryAmountFunctionImpl <em>Monetary Amount Function</em>}' class.
@@ -12367,7 +15716,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMonetaryAmountFunction()
    * @generated
    */
-  int MONETARY_AMOUNT_FUNCTION = 233;
+  int MONETARY_AMOUNT_FUNCTION = 306;
 
   /**
    * The feature id for the '<em><b>Monetary Amount Function Description Code</b></em>' attribute.
@@ -12376,7 +15725,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION__MONETARY_AMOUNT_FUNCTION_DESCRIPTION_CODE = 0;
+  int MONETARY_AMOUNT_FUNCTION__MONETARY_AMOUNT_FUNCTION_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12385,7 +15734,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int MONETARY_AMOUNT_FUNCTION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12394,7 +15743,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int MONETARY_AMOUNT_FUNCTION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Monetary Amount Function Description</b></em>' attribute.
@@ -12403,7 +15752,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION__MONETARY_AMOUNT_FUNCTION_DESCRIPTION = 3;
+  int MONETARY_AMOUNT_FUNCTION__MONETARY_AMOUNT_FUNCTION_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Monetary Amount Function</em>' class.
@@ -12412,7 +15761,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION_FEATURE_COUNT = 4;
+  int MONETARY_AMOUNT_FUNCTION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MonetaryAmountFunctionDetailImpl <em>Monetary Amount Function Detail</em>}' class.
@@ -12422,7 +15771,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMonetaryAmountFunctionDetail()
    * @generated
    */
-  int MONETARY_AMOUNT_FUNCTION_DETAIL = 234;
+  int MONETARY_AMOUNT_FUNCTION_DETAIL = 307;
 
   /**
    * The feature id for the '<em><b>Monetary Amount Function Detail Description Code</b></em>' attribute.
@@ -12431,7 +15780,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION_DETAIL__MONETARY_AMOUNT_FUNCTION_DETAIL_DESCRIPTION_CODE = 0;
+  int MONETARY_AMOUNT_FUNCTION_DETAIL__MONETARY_AMOUNT_FUNCTION_DETAIL_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12440,7 +15789,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION_DETAIL__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int MONETARY_AMOUNT_FUNCTION_DETAIL__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12449,7 +15798,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int MONETARY_AMOUNT_FUNCTION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Monetary Amount Function Detail Description</b></em>' attribute.
@@ -12458,7 +15807,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION_DETAIL__MONETARY_AMOUNT_FUNCTION_DETAIL_DESCRIPTION = 3;
+  int MONETARY_AMOUNT_FUNCTION_DETAIL__MONETARY_AMOUNT_FUNCTION_DETAIL_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Monetary Amount Function Detail</em>' class.
@@ -12467,7 +15816,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONETARY_AMOUNT_FUNCTION_DETAIL_FEATURE_COUNT = 4;
+  int MONETARY_AMOUNT_FUNCTION_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ArrayCellDetailImpl <em>Array Cell Detail</em>}' class.
@@ -12477,7 +15826,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getArrayCellDetail()
    * @generated
    */
-  int ARRAY_CELL_DETAIL = 235;
+  int ARRAY_CELL_DETAIL = 308;
 
   /**
    * The feature id for the '<em><b>Array Cell Data Description</b></em>' attribute list.
@@ -12486,7 +15835,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARRAY_CELL_DETAIL__ARRAY_CELL_DATA_DESCRIPTION = 0;
+  int ARRAY_CELL_DETAIL__ARRAY_CELL_DATA_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Array Cell Detail</em>' class.
@@ -12495,7 +15844,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARRAY_CELL_DETAIL_FEATURE_COUNT = 1;
+  int ARRAY_CELL_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ArrayStructureIdentificationImpl <em>Array Structure Identification</em>}' class.
@@ -12505,7 +15854,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getArrayStructureIdentification()
    * @generated
    */
-  int ARRAY_STRUCTURE_IDENTIFICATION = 236;
+  int ARRAY_STRUCTURE_IDENTIFICATION = 309;
 
   /**
    * The feature id for the '<em><b>Array Cell Structure Identifier</b></em>' attribute.
@@ -12514,7 +15863,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARRAY_STRUCTURE_IDENTIFICATION__ARRAY_CELL_STRUCTURE_IDENTIFIER = 0;
+  int ARRAY_STRUCTURE_IDENTIFICATION__ARRAY_CELL_STRUCTURE_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Object Identification Code Qualifier</b></em>' attribute.
@@ -12523,7 +15872,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARRAY_STRUCTURE_IDENTIFICATION__OBJECT_IDENTIFICATION_CODE_QUALIFIER = 1;
+  int ARRAY_STRUCTURE_IDENTIFICATION__OBJECT_IDENTIFICATION_CODE_QUALIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Array Structure Identification</em>' class.
@@ -12532,7 +15881,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARRAY_STRUCTURE_IDENTIFICATION_FEATURE_COUNT = 2;
+  int ARRAY_STRUCTURE_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.BillLevelIdentificationImpl <em>Bill Level Identification</em>}' class.
@@ -12542,7 +15891,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getBillLevelIdentification()
    * @generated
    */
-  int BILL_LEVEL_IDENTIFICATION = 237;
+  int BILL_LEVEL_IDENTIFICATION = 310;
 
   /**
    * The feature id for the '<em><b>Level One Identifier</b></em>' attribute.
@@ -12551,7 +15900,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILL_LEVEL_IDENTIFICATION__LEVEL_ONE_IDENTIFIER = 0;
+  int BILL_LEVEL_IDENTIFICATION__LEVEL_ONE_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Level Two Identifier</b></em>' attribute.
@@ -12560,7 +15909,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILL_LEVEL_IDENTIFICATION__LEVEL_TWO_IDENTIFIER = 1;
+  int BILL_LEVEL_IDENTIFICATION__LEVEL_TWO_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Level Three Identifier</b></em>' attribute.
@@ -12569,7 +15918,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILL_LEVEL_IDENTIFICATION__LEVEL_THREE_IDENTIFIER = 2;
+  int BILL_LEVEL_IDENTIFICATION__LEVEL_THREE_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Level Four Identifier</b></em>' attribute.
@@ -12578,7 +15927,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILL_LEVEL_IDENTIFICATION__LEVEL_FOUR_IDENTIFIER = 3;
+  int BILL_LEVEL_IDENTIFICATION__LEVEL_FOUR_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Level Five Identifier</b></em>' attribute.
@@ -12587,7 +15936,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILL_LEVEL_IDENTIFICATION__LEVEL_FIVE_IDENTIFIER = 4;
+  int BILL_LEVEL_IDENTIFICATION__LEVEL_FIVE_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Level Six Identifier</b></em>' attribute.
@@ -12596,7 +15945,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILL_LEVEL_IDENTIFICATION__LEVEL_SIX_IDENTIFIER = 5;
+  int BILL_LEVEL_IDENTIFICATION__LEVEL_SIX_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Bill Level Identification</em>' class.
@@ -12605,7 +15954,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BILL_LEVEL_IDENTIFICATION_FEATURE_COUNT = 6;
+  int BILL_LEVEL_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CharacteristicValueImpl <em>Characteristic Value</em>}' class.
@@ -12615,7 +15964,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCharacteristicValue()
    * @generated
    */
-  int CHARACTERISTIC_VALUE = 238;
+  int CHARACTERISTIC_VALUE = 311;
 
   /**
    * The feature id for the '<em><b>Characteristic Value Description Code</b></em>' attribute.
@@ -12624,7 +15973,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTERISTIC_VALUE__CHARACTERISTIC_VALUE_DESCRIPTION_CODE = 0;
+  int CHARACTERISTIC_VALUE__CHARACTERISTIC_VALUE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12633,7 +15982,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTERISTIC_VALUE__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int CHARACTERISTIC_VALUE__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12642,7 +15991,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTERISTIC_VALUE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int CHARACTERISTIC_VALUE__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Characteristic Value Description</b></em>' attribute list.
@@ -12651,7 +16000,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTERISTIC_VALUE__CHARACTERISTIC_VALUE_DESCRIPTION = 3;
+  int CHARACTERISTIC_VALUE__CHARACTERISTIC_VALUE_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Characteristic Value</em>' class.
@@ -12660,7 +16009,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTERISTIC_VALUE_FEATURE_COUNT = 4;
+  int CHARACTERISTIC_VALUE_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MeasurementDetailImpl <em>Measurement Detail</em>}' class.
@@ -12670,7 +16019,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMeasurementDetail()
    * @generated
    */
-  int MEASUREMENT_DETAIL = 239;
+  int MEASUREMENT_DETAIL = 312;
 
   /**
    * The feature id for the '<em><b>Measured Attribute Code</b></em>' attribute.
@@ -12679,7 +16028,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MEASUREMENT_DETAIL__MEASURED_ATTRIBUTE_CODE = 0;
+  int MEASUREMENT_DETAIL__MEASURED_ATTRIBUTE_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Measurement Significance Code</b></em>' attribute.
@@ -12688,7 +16037,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MEASUREMENT_DETAIL__MEASUREMENT_SIGNIFICANCE_CODE = 1;
+  int MEASUREMENT_DETAIL__MEASUREMENT_SIGNIFICANCE_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Non Discrete Measurement Name Code</b></em>' attribute.
@@ -12697,7 +16046,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MEASUREMENT_DETAIL__NON_DISCRETE_MEASUREMENT_NAME_CODE = 2;
+  int MEASUREMENT_DETAIL__NON_DISCRETE_MEASUREMENT_NAME_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Non Discrete Measurement Name</b></em>' attribute.
@@ -12706,7 +16055,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MEASUREMENT_DETAIL__NON_DISCRETE_MEASUREMENT_NAME = 3;
+  int MEASUREMENT_DETAIL__NON_DISCRETE_MEASUREMENT_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Measurement Detail</em>' class.
@@ -12715,7 +16064,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MEASUREMENT_DETAIL_FEATURE_COUNT = 4;
+  int MEASUREMENT_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.PhysicalLogicalStateInformationImpl <em>Physical Logical State Information</em>}' class.
@@ -12725,7 +16074,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getPhysicalLogicalStateInformation()
    * @generated
    */
-  int PHYSICAL_LOGICAL_STATE_INFORMATION = 240;
+  int PHYSICAL_LOGICAL_STATE_INFORMATION = 313;
 
   /**
    * The feature id for the '<em><b>Physical Logical State Description Code</b></em>' attribute.
@@ -12734,7 +16083,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHYSICAL_LOGICAL_STATE_INFORMATION__PHYSICAL_LOGICAL_STATE_DESCRIPTION_CODE = 0;
+  int PHYSICAL_LOGICAL_STATE_INFORMATION__PHYSICAL_LOGICAL_STATE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12743,7 +16092,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHYSICAL_LOGICAL_STATE_INFORMATION__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int PHYSICAL_LOGICAL_STATE_INFORMATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12752,7 +16101,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHYSICAL_LOGICAL_STATE_INFORMATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int PHYSICAL_LOGICAL_STATE_INFORMATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Physical Logical State Description</b></em>' attribute.
@@ -12761,7 +16110,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHYSICAL_LOGICAL_STATE_INFORMATION__PHYSICAL_LOGICAL_STATE_DESCRIPTION = 3;
+  int PHYSICAL_LOGICAL_STATE_INFORMATION__PHYSICAL_LOGICAL_STATE_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Physical Logical State Information</em>' class.
@@ -12770,7 +16119,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHYSICAL_LOGICAL_STATE_INFORMATION_FEATURE_COUNT = 4;
+  int PHYSICAL_LOGICAL_STATE_INFORMATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CodeSetIdentificationImpl <em>Code Set Identification</em>}' class.
@@ -12780,7 +16129,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCodeSetIdentification()
    * @generated
    */
-  int CODE_SET_IDENTIFICATION = 241;
+  int CODE_SET_IDENTIFICATION = 314;
 
   /**
    * The feature id for the '<em><b>Simple Data Element Tag Identifier</b></em>' attribute.
@@ -12789,7 +16138,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CODE_SET_IDENTIFICATION__SIMPLE_DATA_ELEMENT_TAG_IDENTIFIER = 0;
+  int CODE_SET_IDENTIFICATION__SIMPLE_DATA_ELEMENT_TAG_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12798,7 +16147,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CODE_SET_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int CODE_SET_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12807,7 +16156,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CODE_SET_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int CODE_SET_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Code Set Identification</em>' class.
@@ -12816,7 +16165,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CODE_SET_IDENTIFICATION_FEATURE_COUNT = 3;
+  int CODE_SET_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ComputerEnvironmentIdentificationImpl <em>Computer Environment Identification</em>}' class.
@@ -12826,7 +16175,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getComputerEnvironmentIdentification()
    * @generated
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION = 242;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION = 315;
 
   /**
    * The feature id for the '<em><b>Computer Environment Name Code</b></em>' attribute.
@@ -12835,7 +16184,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION__COMPUTER_ENVIRONMENT_NAME_CODE = 0;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION__COMPUTER_ENVIRONMENT_NAME_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12844,7 +16193,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12853,7 +16202,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Computer Environment Name</b></em>' attribute.
@@ -12862,7 +16211,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION__COMPUTER_ENVIRONMENT_NAME = 3;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION__COMPUTER_ENVIRONMENT_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Version Identifier</b></em>' attribute.
@@ -12871,7 +16220,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION__VERSION_IDENTIFIER = 4;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION__VERSION_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Release Identifier</b></em>' attribute.
@@ -12880,7 +16229,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION__RELEASE_IDENTIFIER = 5;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION__RELEASE_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Object Identifier</b></em>' attribute.
@@ -12889,7 +16238,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION__OBJECT_IDENTIFIER = 6;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION__OBJECT_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Computer Environment Identification</em>' class.
@@ -12898,7 +16247,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTER_ENVIRONMENT_IDENTIFICATION_FEATURE_COUNT = 7;
+  int COMPUTER_ENVIRONMENT_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ClinicalInformationDetailImpl <em>Clinical Information Detail</em>}' class.
@@ -12908,7 +16257,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getClinicalInformationDetail()
    * @generated
    */
-  int CLINICAL_INFORMATION_DETAIL = 243;
+  int CLINICAL_INFORMATION_DETAIL = 316;
 
   /**
    * The feature id for the '<em><b>Clinical Information Description Identifier</b></em>' attribute.
@@ -12917,7 +16266,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INFORMATION_DETAIL__CLINICAL_INFORMATION_DESCRIPTION_IDENTIFIER = 0;
+  int CLINICAL_INFORMATION_DETAIL__CLINICAL_INFORMATION_DESCRIPTION_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12926,7 +16275,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INFORMATION_DETAIL__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int CLINICAL_INFORMATION_DETAIL__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12935,7 +16284,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INFORMATION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int CLINICAL_INFORMATION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Clinical Information Description</b></em>' attribute.
@@ -12944,7 +16293,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INFORMATION_DETAIL__CLINICAL_INFORMATION_DESCRIPTION = 3;
+  int CLINICAL_INFORMATION_DETAIL__CLINICAL_INFORMATION_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Clinical Information Detail</em>' class.
@@ -12953,7 +16302,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INFORMATION_DETAIL_FEATURE_COUNT = 4;
+  int CLINICAL_INFORMATION_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CertaintyDetailImpl <em>Certainty Detail</em>}' class.
@@ -12963,7 +16312,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCertaintyDetail()
    * @generated
    */
-  int CERTAINTY_DETAIL = 244;
+  int CERTAINTY_DETAIL = 317;
 
   /**
    * The feature id for the '<em><b>Certainty Description Code</b></em>' attribute.
@@ -12972,7 +16321,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CERTAINTY_DETAIL__CERTAINTY_DESCRIPTION_CODE = 0;
+  int CERTAINTY_DETAIL__CERTAINTY_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -12981,7 +16330,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CERTAINTY_DETAIL__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int CERTAINTY_DETAIL__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -12990,7 +16339,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CERTAINTY_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int CERTAINTY_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Certainty Description</b></em>' attribute.
@@ -12999,7 +16348,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CERTAINTY_DETAIL__CERTAINTY_DESCRIPTION = 3;
+  int CERTAINTY_DETAIL__CERTAINTY_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Certainty Detail</em>' class.
@@ -13008,7 +16357,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CERTAINTY_DETAIL_FEATURE_COUNT = 4;
+  int CERTAINTY_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ClauseNameImpl <em>Clause Name</em>}' class.
@@ -13018,7 +16367,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getClauseName()
    * @generated
    */
-  int CLAUSE_NAME = 245;
+  int CLAUSE_NAME = 318;
 
   /**
    * The feature id for the '<em><b>Clause Name Code</b></em>' attribute.
@@ -13027,7 +16376,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLAUSE_NAME__CLAUSE_NAME_CODE = 0;
+  int CLAUSE_NAME__CLAUSE_NAME_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -13036,7 +16385,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLAUSE_NAME__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int CLAUSE_NAME__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -13045,7 +16394,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLAUSE_NAME__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int CLAUSE_NAME__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Clause Name</b></em>' attribute.
@@ -13054,7 +16403,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLAUSE_NAME__CLAUSE_NAME = 3;
+  int CLAUSE_NAME__CLAUSE_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Clause Name</em>' class.
@@ -13063,7 +16412,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLAUSE_NAME_FEATURE_COUNT = 4;
+  int CLAUSE_NAME_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ClinicalInterventionDetailImpl <em>Clinical Intervention Detail</em>}' class.
@@ -13073,7 +16422,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getClinicalInterventionDetail()
    * @generated
    */
-  int CLINICAL_INTERVENTION_DETAIL = 246;
+  int CLINICAL_INTERVENTION_DETAIL = 319;
 
   /**
    * The feature id for the '<em><b>Clinical Intervention Description Code</b></em>' attribute.
@@ -13082,7 +16431,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INTERVENTION_DETAIL__CLINICAL_INTERVENTION_DESCRIPTION_CODE = 0;
+  int CLINICAL_INTERVENTION_DETAIL__CLINICAL_INTERVENTION_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -13091,7 +16440,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INTERVENTION_DETAIL__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int CLINICAL_INTERVENTION_DETAIL__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -13100,7 +16449,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INTERVENTION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int CLINICAL_INTERVENTION_DETAIL__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Clinical Intervention Description</b></em>' attribute.
@@ -13109,7 +16458,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INTERVENTION_DETAIL__CLINICAL_INTERVENTION_DESCRIPTION = 3;
+  int CLINICAL_INTERVENTION_DETAIL__CLINICAL_INTERVENTION_DESCRIPTION = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Clinical Intervention Detail</em>' class.
@@ -13118,7 +16467,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLINICAL_INTERVENTION_DETAIL_FEATURE_COUNT = 4;
+  int CLINICAL_INTERVENTION_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ProcessingIndicatorImpl <em>Processing Indicator</em>}' class.
@@ -13128,7 +16477,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getProcessingIndicator()
    * @generated
    */
-  int PROCESSING_INDICATOR = 247;
+  int PROCESSING_INDICATOR = 320;
 
   /**
    * The feature id for the '<em><b>Processing Indicator Description Code</b></em>' attribute.
@@ -13137,7 +16486,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCESSING_INDICATOR__PROCESSING_INDICATOR_DESCRIPTION_CODE = 0;
+  int PROCESSING_INDICATOR__PROCESSING_INDICATOR_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -13146,7 +16495,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCESSING_INDICATOR__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int PROCESSING_INDICATOR__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -13155,7 +16504,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCESSING_INDICATOR__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int PROCESSING_INDICATOR__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Process Type Description Code</b></em>' attribute.
@@ -13164,7 +16513,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCESSING_INDICATOR__PROCESS_TYPE_DESCRIPTION_CODE = 3;
+  int PROCESSING_INDICATOR__PROCESS_TYPE_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Processing Indicator</em>' class.
@@ -13173,7 +16522,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCESSING_INDICATOR_FEATURE_COUNT = 4;
+  int PROCESSING_INDICATOR_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.MarksLabelsImpl <em>Marks Labels</em>}' class.
@@ -13183,7 +16532,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getMarksLabels()
    * @generated
    */
-  int MARKS_LABELS = 248;
+  int MARKS_LABELS = 321;
 
   /**
    * The feature id for the '<em><b>Shipping Marks Descriptions</b></em>' attribute list.
@@ -13192,7 +16541,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MARKS_LABELS__SHIPPING_MARKS_DESCRIPTIONS = 0;
+  int MARKS_LABELS__SHIPPING_MARKS_DESCRIPTIONS = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Marks Labels</em>' class.
@@ -13201,7 +16550,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MARKS_LABELS_FEATURE_COUNT = 1;
+  int MARKS_LABELS_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.TypeOfMarkingImpl <em>Type Of Marking</em>}' class.
@@ -13211,7 +16560,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getTypeOfMarking()
    * @generated
    */
-  int TYPE_OF_MARKING = 249;
+  int TYPE_OF_MARKING = 322;
 
   /**
    * The feature id for the '<em><b>Marking Type Code</b></em>' attribute.
@@ -13220,7 +16569,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_OF_MARKING__MARKING_TYPE_CODE = 0;
+  int TYPE_OF_MARKING__MARKING_TYPE_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Code List Identification Code</b></em>' attribute.
@@ -13229,7 +16578,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_OF_MARKING__CODE_LIST_IDENTIFICATION_CODE = 1;
+  int TYPE_OF_MARKING__CODE_LIST_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Code List Responsible Agency Code</b></em>' attribute.
@@ -13238,7 +16587,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_OF_MARKING__CODE_LIST_RESPONSIBLE_AGENCY_CODE = 2;
+  int TYPE_OF_MARKING__CODE_LIST_RESPONSIBLE_AGENCY_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Type Of Marking</em>' class.
@@ -13247,7 +16596,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_OF_MARKING_FEATURE_COUNT = 3;
+  int TYPE_OF_MARKING_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.GovernmentActionImpl <em>Government Action</em>}' class.
@@ -13257,7 +16606,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getGovernmentAction()
    * @generated
    */
-  int GOVERNMENT_ACTION = 250;
+  int GOVERNMENT_ACTION = 323;
 
   /**
    * The feature id for the '<em><b>Government Agency Identification Code</b></em>' attribute.
@@ -13266,7 +16615,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOVERNMENT_ACTION__GOVERNMENT_AGENCY_IDENTIFICATION_CODE = 0;
+  int GOVERNMENT_ACTION__GOVERNMENT_AGENCY_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Government Involvement Code</b></em>' attribute.
@@ -13275,7 +16624,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOVERNMENT_ACTION__GOVERNMENT_INVOLVEMENT_CODE = 1;
+  int GOVERNMENT_ACTION__GOVERNMENT_INVOLVEMENT_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Government Action Code</b></em>' attribute.
@@ -13284,7 +16633,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOVERNMENT_ACTION__GOVERNMENT_ACTION_CODE = 2;
+  int GOVERNMENT_ACTION__GOVERNMENT_ACTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Government Procedure Code</b></em>' attribute.
@@ -13293,7 +16642,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOVERNMENT_ACTION__GOVERNMENT_PROCEDURE_CODE = 3;
+  int GOVERNMENT_ACTION__GOVERNMENT_PROCEDURE_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Government Action</em>' class.
@@ -13302,17 +16651,219 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOVERNMENT_ACTION_FEATURE_COUNT = 4;
+  int GOVERNMENT_ACTION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
 
   /**
-   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DateOnlyFunctionImpl <em>Date Only Function</em>}' class.
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ProductDateTimeImpl <em>Product Date Time</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see io.thlaegler.edifact.edilang.impl.DateOnlyFunctionImpl
-   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDateOnlyFunction()
+   * @see io.thlaegler.edifact.edilang.impl.ProductDateTimeImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getProductDateTime()
    * @generated
    */
-  int DATE_ONLY_FUNCTION = 251;
+  int PRODUCT_DATE_TIME = 324;
+
+  /**
+   * The feature id for the '<em><b>Date Time1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_DATE_TIME__DATE_TIME1 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Date Time2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_DATE_TIME__DATE_TIME2 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Date Variation Number</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_DATE_TIME__DATE_VARIATION_NUMBER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Product Date Time</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_DATE_TIME_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.CompanyIdentificationImpl <em>Company Identification</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.CompanyIdentificationImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getCompanyIdentification()
+   * @generated
+   */
+  int COMPANY_IDENTIFICATION = 325;
+
+  /**
+   * The feature id for the '<em><b>Party Name1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPANY_IDENTIFICATION__PARTY_NAME1 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Party Name2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPANY_IDENTIFICATION__PARTY_NAME2 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Party Name3</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPANY_IDENTIFICATION__PARTY_NAME3 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Company Identification</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPANY_IDENTIFICATION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.ProductIdentificationDetailImpl <em>Product Identification Detail</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.ProductIdentificationDetailImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getProductIdentificationDetail()
+   * @generated
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL = 326;
+
+  /**
+   * The feature id for the '<em><b>Product Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL__PRODUCT_IDENTIFIER = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Characteristic Description Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL__CHARACTERISTIC_DESCRIPTION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Product Characteristic Identification Code</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL__PRODUCT_CHARACTERISTIC_IDENTIFICATION_CODE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Item Description Code1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL__ITEM_DESCRIPTION_CODE1 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Item Description Code2</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL__ITEM_DESCRIPTION_CODE2 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Item Description Code3</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL__ITEM_DESCRIPTION_CODE3 = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Product Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL__PRODUCT_NAME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 6;
+
+  /**
+   * The number of structural features of the '<em>Product Identification Detail</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_IDENTIFICATION_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 7;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.SequenceNumberDetailImpl <em>Sequence Number Detail</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.SequenceNumberDetailImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getSequenceNumberDetail()
+   * @generated
+   */
+  int SEQUENCE_NUMBER_DETAIL = 327;
+
+  /**
+   * The feature id for the '<em><b>Sequence Position Identifiers</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_NUMBER_DETAIL__SEQUENCE_POSITION_IDENTIFIERS = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Sequence Number Detail</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SEQUENCE_NUMBER_DETAIL_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DateAndTimeImpl <em>Date And Time</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.DateAndTimeImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDateAndTime()
+   * @generated
+   */
+  int DATE_AND_TIME = 328;
 
   /**
    * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -13321,35 +16872,7 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DATE_ONLY_FUNCTION__DATE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Date Only Function</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DATE_ONLY_FUNCTION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DateAndTimeFunctionImpl <em>Date And Time Function</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see io.thlaegler.edifact.edilang.impl.DateAndTimeFunctionImpl
-   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDateAndTimeFunction()
-   * @generated
-   */
-  int DATE_AND_TIME_FUNCTION = 252;
-
-  /**
-   * The feature id for the '<em><b>Date</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DATE_AND_TIME_FUNCTION__DATE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
+  int DATE_AND_TIME__DATE = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -13358,16 +16881,81 @@ public interface EdilangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DATE_AND_TIME_FUNCTION__TIME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
+  int DATE_AND_TIME__TIME = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Date And Time Function</em>' class.
+   * The number of structural features of the '<em>Date And Time</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DATE_AND_TIME_FUNCTION_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
+  int DATE_AND_TIME_FEATURE_COUNT = ABSTRACT_EDI_FUNCTION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DateOnlyImpl <em>Date Only</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.DateOnlyImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDateOnly()
+   * @generated
+   */
+  int DATE_ONLY = 329;
+
+  /**
+   * The feature id for the '<em><b>Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE_ONLY__DATE = 0;
+
+  /**
+   * The number of structural features of the '<em>Date Only</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE_ONLY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DateWithTimeImpl <em>Date With Time</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.thlaegler.edifact.edilang.impl.DateWithTimeImpl
+   * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDateWithTime()
+   * @generated
+   */
+  int DATE_WITH_TIME = 330;
+
+  /**
+   * The feature id for the '<em><b>Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE_WITH_TIME__DATE = 0;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE_WITH_TIME__TIME = 1;
+
+  /**
+   * The number of structural features of the '<em>Date With Time</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATE_WITH_TIME_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link io.thlaegler.edifact.edilang.impl.DateTimePeriodImpl <em>Date Time Period</em>}' class.
@@ -13377,7 +16965,7 @@ public interface EdilangPackage extends EPackage
    * @see io.thlaegler.edifact.edilang.impl.EdilangPackageImpl#getDateTimePeriod()
    * @generated
    */
-  int DATE_TIME_PERIOD = 253;
+  int DATE_TIME_PERIOD = 331;
 
   /**
    * The feature id for the '<em><b>Date Time Period Function Code Qualifier</b></em>' attribute.
@@ -13523,10 +17111,10 @@ public interface EdilangPackage extends EPackage
   EReference getUNBSegment_InterchangeRecipient();
 
   /**
-   * Returns the meta object for the containment reference list '{@link io.thlaegler.edifact.edilang.UNBSegment#getDateAndTime <em>Date And Time</em>}'.
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.UNBSegment#getDateAndTime <em>Date And Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Date And Time</em>'.
+   * @return the meta object for the containment reference '<em>Date And Time</em>'.
    * @see io.thlaegler.edifact.edilang.UNBSegment#getDateAndTime()
    * @see #getUNBSegment()
    * @generated
@@ -17517,115 +21105,6 @@ public interface EdilangPackage extends EPackage
   EReference getMSGSegment_Relationship();
 
   /**
-   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ORGSegment <em>ORG Segment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>ORG Segment</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment
-   * @generated
-   */
-  EClass getORGSegment();
-
-  /**
-   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail1 <em>System Detail1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>System Detail1</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail1()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EReference getORGSegment_SystemDetail1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginatorIdentification <em>Originator Identification</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Originator Identification</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginatorIdentification()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EReference getORGSegment_OriginatorIdentification();
-
-  /**
-   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getLocation <em>Location</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Location</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getLocation()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EReference getORGSegment_Location();
-
-  /**
-   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail2 <em>System Detail2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>System Detail2</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail2()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EReference getORGSegment_SystemDetail2();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginatorTypeCode <em>Originator Type Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Originator Type Code</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginatorTypeCode()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EAttribute getORGSegment_OriginatorTypeCode();
-
-  /**
-   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginator <em>Originator</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Originator</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginator()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EReference getORGSegment_Originator();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginatorsAuthorityRequestCode <em>Originators Authority Request Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Originators Authority Request Code</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginatorsAuthorityRequestCode()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EAttribute getORGSegment_OriginatorsAuthorityRequestCode();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getCommunicationNumber <em>Communication Number</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Communication Number</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getCommunicationNumber()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EAttribute getORGSegment_CommunicationNumber();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getPartyIdIdentification <em>Party Id Identification</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Party Id Identification</em>'.
-   * @see io.thlaegler.edifact.edilang.ORGSegment#getPartyIdIdentification()
-   * @see #getORGSegment()
-   * @generated
-   */
-  EAttribute getORGSegment_PartyIdIdentification();
-
-  /**
    * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.POCSegment <em>POC Segment</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -17667,38 +21146,6 @@ public interface EdilangPackage extends EPackage
    * @generated
    */
   EAttribute getPOCSegment_DepartureTime();
-
-  /**
-   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ODISegment <em>ODI Segment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>ODI Segment</em>'.
-   * @see io.thlaegler.edifact.edilang.ODISegment
-   * @generated
-   */
-  EClass getODISegment();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ODISegment#getOrigin <em>Origin</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Origin</em>'.
-   * @see io.thlaegler.edifact.edilang.ODISegment#getOrigin()
-   * @see #getODISegment()
-   * @generated
-   */
-  EAttribute getODISegment_Origin();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ODISegment#getDestination <em>Destination</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Destination</em>'.
-   * @see io.thlaegler.edifact.edilang.ODISegment#getDestination()
-   * @see #getODISegment()
-   * @generated
-   */
-  EAttribute getODISegment_Destination();
 
   /**
    * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.UCISegment <em>UCI Segment</em>}'.
@@ -17807,137 +21254,6 @@ public interface EdilangPackage extends EPackage
    * @generated
    */
   EReference getPDISegment_Products();
-
-  /**
-   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TVLSegment <em>TVL Segment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>TVL Segment</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment
-   * @generated
-   */
-  EClass getTVLSegment();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link io.thlaegler.edifact.edilang.TVLSegment#getDateAndTime <em>Date And Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Date And Time</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getDateAndTime()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EReference getTVLSegment_DateAndTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getOriginCode <em>Origin Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Origin Code</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getOriginCode()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_OriginCode();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getDestinationCode <em>Destination Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Destination Code</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getDestinationCode()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_DestinationCode();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getCarrierId <em>Carrier Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Carrier Id</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getCarrierId()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_CarrierId();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductId <em>Product Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Product Id</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getProductId()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_ProductId();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getCharacteristicId <em>Characteristic Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Characteristic Id</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getCharacteristicId()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_CharacteristicId();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductIdCharacteristic <em>Product Id Characteristic</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Product Id Characteristic</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getProductIdCharacteristic()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_ProductIdCharacteristic();
-
-  /**
-   * Returns the meta object for the attribute list '{@link io.thlaegler.edifact.edilang.TVLSegment#getDescriptionIds <em>Description Ids</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Description Ids</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getDescriptionIds()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_DescriptionIds();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductType <em>Product Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Product Type</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getProductType()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_ProductType();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getLineItemNumber <em>Line Item Number</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Line Item Number</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getLineItemNumber()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_LineItemNumber();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorCode <em>Processing Indicator Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Processing Indicator Code</em>'.
-   * @see io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorCode()
-   * @see #getTVLSegment()
-   * @generated
-   */
-  EAttribute getTVLSegment_ProcessingIndicatorCode();
 
   /**
    * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.RPISegment <em>RPI Segment</em>}'.
@@ -18735,6 +22051,1778 @@ public interface EdilangPackage extends EPackage
    * @generated
    */
   EReference getPCISegment_TypeOfMarking();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.AAISegment <em>AAI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>AAI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.AAISegment
+   * @generated
+   */
+  EClass getAAISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.AAISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.AAISegment#getTodo()
+   * @see #getAAISegment()
+   * @generated
+   */
+  EAttribute getAAISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ALSSegment <em>ALS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ALS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ALSSegment
+   * @generated
+   */
+  EClass getALSSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ALSSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ALSSegment#getTodo()
+   * @see #getALSSegment()
+   * @generated
+   */
+  EAttribute getALSSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ODSSegment <em>ODS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ODS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ODSSegment
+   * @generated
+   */
+  EClass getODSSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ODSSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ODSSegment#getTodo()
+   * @see #getODSSegment()
+   * @generated
+   */
+  EAttribute getODSSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.APDSegment <em>APD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>APD Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.APDSegment
+   * @generated
+   */
+  EClass getAPDSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.APDSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.APDSegment#getTodo()
+   * @see #getAPDSegment()
+   * @generated
+   */
+  EAttribute getAPDSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ADSSegment <em>ADS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ADS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ADSSegment
+   * @generated
+   */
+  EClass getADSSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ADSSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ADSSegment#getTodo()
+   * @see #getADSSegment()
+   * @generated
+   */
+  EAttribute getADSSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ERISegment <em>ERI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ERI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ERISegment
+   * @generated
+   */
+  EClass getERISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ERISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ERISegment#getTodo()
+   * @see #getERISegment()
+   * @generated
+   */
+  EAttribute getERISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ATRSegment <em>ATR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ATR Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ATRSegment
+   * @generated
+   */
+  EClass getATRSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ATRSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ATRSegment#getTodo()
+   * @see #getATRSegment()
+   * @generated
+   */
+  EAttribute getATRSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.BCDSegment <em>BCD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>BCD Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.BCDSegment
+   * @generated
+   */
+  EClass getBCDSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.BCDSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.BCDSegment#getTodo()
+   * @see #getBCDSegment()
+   * @generated
+   */
+  EAttribute getBCDSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.BLISegment <em>BLI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>BLI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.BLISegment
+   * @generated
+   */
+  EClass getBLISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.BLISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.BLISegment#getTodo()
+   * @see #getBLISegment()
+   * @generated
+   */
+  EAttribute getBLISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.MOVSegment <em>MOV Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MOV Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.MOVSegment
+   * @generated
+   */
+  EClass getMOVSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.MOVSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.MOVSegment#getTodo()
+   * @see #getMOVSegment()
+   * @generated
+   */
+  EAttribute getMOVSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CLTSegment <em>CLT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CLT Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.CLTSegment
+   * @generated
+   */
+  EClass getCLTSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CLTSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.CLTSegment#getTodo()
+   * @see #getCLTSegment()
+   * @generated
+   */
+  EAttribute getCLTSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CMNSegment <em>CMN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CMN Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.CMNSegment
+   * @generated
+   */
+  EClass getCMNSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CMNSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.CMNSegment#getTodo()
+   * @see #getCMNSegment()
+   * @generated
+   */
+  EAttribute getCMNSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CNXSegment <em>CNX Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CNX Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.CNXSegment
+   * @generated
+   */
+  EClass getCNXSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CNXSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.CNXSegment#getTodo()
+   * @see #getCNXSegment()
+   * @generated
+   */
+  EAttribute getCNXSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CRISegment <em>CRI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CRI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.CRISegment
+   * @generated
+   */
+  EClass getCRISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CRISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.CRISegment#getTodo()
+   * @see #getCRISegment()
+   * @generated
+   */
+  EAttribute getCRISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CONSegment <em>CON Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CON Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.CONSegment
+   * @generated
+   */
+  EClass getCONSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CONSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.CONSegment#getTodo()
+   * @see #getCONSegment()
+   * @generated
+   */
+  EAttribute getCONSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CNYSegment <em>CNY Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CNY Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.CNYSegment
+   * @generated
+   */
+  EClass getCNYSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CNYSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.CNYSegment#getTodo()
+   * @see #getCNYSegment()
+   * @generated
+   */
+  EAttribute getCNYSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CURSegment <em>CUR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CUR Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.CURSegment
+   * @generated
+   */
+  EClass getCURSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CURSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.CURSegment#getTodo()
+   * @see #getCURSegment()
+   * @generated
+   */
+  EAttribute getCURSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DAVSegment <em>DAV Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>DAV Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.DAVSegment
+   * @generated
+   */
+  EClass getDAVSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DAVSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.DAVSegment#getTodo()
+   * @see #getDAVSegment()
+   * @generated
+   */
+  EAttribute getDAVSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DTISegment <em>DTI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>DTI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.DTISegment
+   * @generated
+   */
+  EClass getDTISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DTISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.DTISegment#getTodo()
+   * @see #getDTISegment()
+   * @generated
+   */
+  EAttribute getDTISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DNTSegment <em>DNT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>DNT Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.DNTSegment
+   * @generated
+   */
+  EClass getDNTSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DNTSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.DNTSegment#getTodo()
+   * @see #getDNTSegment()
+   * @generated
+   */
+  EAttribute getDNTSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DISSegment <em>DIS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>DIS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.DISSegment
+   * @generated
+   */
+  EClass getDISSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DISSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.DISSegment#getTodo()
+   * @see #getDISSegment()
+   * @generated
+   */
+  EAttribute getDISSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.SERSegment <em>SER Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>SER Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.SERSegment
+   * @generated
+   */
+  EClass getSERSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.SERSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.SERSegment#getTodo()
+   * @see #getSERSegment()
+   * @generated
+   */
+  EAttribute getSERSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.FRMSegment <em>FRM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>FRM Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.FRMSegment
+   * @generated
+   */
+  EClass getFRMSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.FRMSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.FRMSegment#getTodo()
+   * @see #getFRMSegment()
+   * @generated
+   */
+  EAttribute getFRMSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.FRQSegment <em>FRQ Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>FRQ Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.FRQSegment
+   * @generated
+   */
+  EClass getFRQSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.FRQSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.FRQSegment#getTodo()
+   * @see #getFRQSegment()
+   * @generated
+   */
+  EAttribute getFRQSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.FTISegment <em>FTI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>FTI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.FTISegment
+   * @generated
+   */
+  EClass getFTISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.FTISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.FTISegment#getTodo()
+   * @see #getFTISegment()
+   * @generated
+   */
+  EAttribute getFTISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.HDISegment <em>HDI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>HDI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.HDISegment
+   * @generated
+   */
+  EClass getHDISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.HDISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.HDISegment#getTodo()
+   * @see #getHDISegment()
+   * @generated
+   */
+  EAttribute getHDISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.HDRSegment <em>HDR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>HDR Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.HDRSegment
+   * @generated
+   */
+  EClass getHDRSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.HDRSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.HDRSegment#getTodo()
+   * @see #getHDRSegment()
+   * @generated
+   */
+  EAttribute getHDRSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ADISegment <em>ADI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ADI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ADISegment
+   * @generated
+   */
+  EClass getADISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ADISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ADISegment#getTodo()
+   * @see #getADISegment()
+   * @generated
+   */
+  EAttribute getADISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.HDSSegment <em>HDS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>HDS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.HDSSegment
+   * @generated
+   */
+  EClass getHDSSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.HDSSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.HDSSegment#getTodo()
+   * @see #getHDSSegment()
+   * @generated
+   */
+  EAttribute getHDSSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ITDSegment <em>ITD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ITD Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ITDSegment
+   * @generated
+   */
+  EClass getITDSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ITDSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ITDSegment#getTodo()
+   * @see #getITDSegment()
+   * @generated
+   */
+  EAttribute getITDSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ITCSegment <em>ITC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ITC Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ITCSegment
+   * @generated
+   */
+  EClass getITCSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ITCSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ITCSegment#getTodo()
+   * @see #getITCSegment()
+   * @generated
+   */
+  EAttribute getITCSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ICISegment <em>ICI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ICI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ICISegment
+   * @generated
+   */
+  EClass getICISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ICISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ICISegment#getTodo()
+   * @see #getICISegment()
+   * @generated
+   */
+  EAttribute getICISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.IFTSegment <em>IFT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>IFT Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.IFTSegment
+   * @generated
+   */
+  EClass getIFTSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.IFTSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.IFTSegment#getTodo()
+   * @see #getIFTSegment()
+   * @generated
+   */
+  EAttribute getIFTSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ITMSegment <em>ITM Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ITM Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ITMSegment
+   * @generated
+   */
+  EClass getITMSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ITMSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ITMSegment#getTodo()
+   * @see #getITMSegment()
+   * @generated
+   */
+  EAttribute getITMSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.LNGSegment <em>LNG Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>LNG Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.LNGSegment
+   * @generated
+   */
+  EClass getLNGSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.LNGSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.LNGSegment#getTodo()
+   * @see #getLNGSegment()
+   * @generated
+   */
+  EAttribute getLNGSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.LKPSegment <em>LKP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>LKP Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.LKPSegment
+   * @generated
+   */
+  EClass getLKPSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.LKPSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.LKPSegment#getTodo()
+   * @see #getLKPSegment()
+   * @generated
+   */
+  EAttribute getLKPSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PORSegment <em>POR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>POR Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PORSegment
+   * @generated
+   */
+  EClass getPORSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PORSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PORSegment#getTodo()
+   * @see #getPORSegment()
+   * @generated
+   */
+  EAttribute getPORSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.MESSegment <em>MES Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MES Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.MESSegment
+   * @generated
+   */
+  EClass getMESSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.MESSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.MESSegment#getTodo()
+   * @see #getMESSegment()
+   * @generated
+   */
+  EAttribute getMESSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.MSDSegment <em>MSD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MSD Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.MSDSegment
+   * @generated
+   */
+  EClass getMSDSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.MSDSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.MSDSegment#getTodo()
+   * @see #getMSDSegment()
+   * @generated
+   */
+  EAttribute getMSDSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.MAPSegment <em>MAP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MAP Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.MAPSegment
+   * @generated
+   */
+  EClass getMAPSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.MAPSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.MAPSegment#getTodo()
+   * @see #getMAPSegment()
+   * @generated
+   */
+  EAttribute getMAPSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.NMESegment <em>NME Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>NME Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.NMESegment
+   * @generated
+   */
+  EClass getNMESegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.NMESegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.NMESegment#getTodo()
+   * @see #getNMESegment()
+   * @generated
+   */
+  EAttribute getNMESegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.NAASegment <em>NAA Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>NAA Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.NAASegment
+   * @generated
+   */
+  EClass getNAASegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.NAASegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.NAASegment#getTodo()
+   * @see #getNAASegment()
+   * @generated
+   */
+  EAttribute getNAASegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.NUNSegment <em>NUN Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>NUN Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.NUNSegment
+   * @generated
+   */
+  EClass getNUNSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.NUNSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.NUNSegment#getTodo()
+   * @see #getNUNSegment()
+   * @generated
+   */
+  EAttribute getNUNSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ODISegment <em>ODI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ODI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ODISegment
+   * @generated
+   */
+  EClass getODISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ODISegment#getLocationIdentifier <em>Location Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Location Identifier</em>'.
+   * @see io.thlaegler.edifact.edilang.ODISegment#getLocationIdentifier()
+   * @see #getODISegment()
+   * @generated
+   */
+  EAttribute getODISegment_LocationIdentifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ODISegment#getSequencePositionIdentifier <em>Sequence Position Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Sequence Position Identifier</em>'.
+   * @see io.thlaegler.edifact.edilang.ODISegment#getSequencePositionIdentifier()
+   * @see #getODISegment()
+   * @generated
+   */
+  EAttribute getODISegment_SequencePositionIdentifier();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ORGSegment <em>ORG Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ORG Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment
+   * @generated
+   */
+  EClass getORGSegment();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail1 <em>System Detail1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>System Detail1</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail1()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EReference getORGSegment_SystemDetail1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginatorIdentification <em>Originator Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Originator Identification</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginatorIdentification()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EReference getORGSegment_OriginatorIdentification();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getLocation <em>Location</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Location</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getLocation()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EReference getORGSegment_Location();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail2 <em>System Detail2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>System Detail2</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getSystemDetail2()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EReference getORGSegment_SystemDetail2();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginatorTypeCode <em>Originator Type Code</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Originator Type Code</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginatorTypeCode()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EAttribute getORGSegment_OriginatorTypeCode();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginator <em>Originator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Originator</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginator()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EReference getORGSegment_Originator();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getOriginatorsAuthorityRequestCode <em>Originators Authority Request Code</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Originators Authority Request Code</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getOriginatorsAuthorityRequestCode()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EAttribute getORGSegment_OriginatorsAuthorityRequestCode();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getCommunicationNumber <em>Communication Number</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Communication Number</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getCommunicationNumber()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EAttribute getORGSegment_CommunicationNumber();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ORGSegment#getPartyIdIdentification <em>Party Id Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Party Id Identification</em>'.
+   * @see io.thlaegler.edifact.edilang.ORGSegment#getPartyIdIdentification()
+   * @see #getORGSegment()
+   * @generated
+   */
+  EAttribute getORGSegment_PartyIdIdentification();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.OTISegment <em>OTI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>OTI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.OTISegment
+   * @generated
+   */
+  EClass getOTISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.OTISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.OTISegment#getTodo()
+   * @see #getOTISegment()
+   * @generated
+   */
+  EAttribute getOTISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PRTSegment <em>PRT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PRT Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PRTSegment
+   * @generated
+   */
+  EClass getPRTSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PRTSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PRTSegment#getTodo()
+   * @see #getPRTSegment()
+   * @generated
+   */
+  EAttribute getPRTSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PMTSegment <em>PMT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PMT Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PMTSegment
+   * @generated
+   */
+  EClass getPMTSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PMTSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PMTSegment#getTodo()
+   * @see #getPMTSegment()
+   * @generated
+   */
+  EAttribute getPMTSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.POPSegment <em>POP Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>POP Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.POPSegment
+   * @generated
+   */
+  EClass getPOPSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.POPSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.POPSegment#getTodo()
+   * @see #getPOPSegment()
+   * @generated
+   */
+  EAttribute getPOPSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.POSSegment <em>POS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>POS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.POSSegment
+   * @generated
+   */
+  EClass getPOSSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.POSSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.POSSegment#getTodo()
+   * @see #getPOSSegment()
+   * @generated
+   */
+  EAttribute getPOSSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PRESegment <em>PRE Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PRE Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PRESegment
+   * @generated
+   */
+  EClass getPRESegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PRESegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PRESegment#getTodo()
+   * @see #getPRESegment()
+   * @generated
+   */
+  EAttribute getPRESegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PRDSegment <em>PRD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PRD Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PRDSegment
+   * @generated
+   */
+  EClass getPRDSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PRDSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PRDSegment#getTodo()
+   * @see #getPRDSegment()
+   * @generated
+   */
+  EAttribute getPRDSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PDTSegment <em>PDT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PDT Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PDTSegment
+   * @generated
+   */
+  EClass getPDTSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PDTSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PDTSegment#getTodo()
+   * @see #getPDTSegment()
+   * @generated
+   */
+  EAttribute getPDTSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PLISegment <em>PLI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PLI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PLISegment
+   * @generated
+   */
+  EClass getPLISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PLISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PLISegment#getTodo()
+   * @see #getPLISegment()
+   * @generated
+   */
+  EAttribute getPLISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PROSegment <em>PRO Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PRO Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PROSegment
+   * @generated
+   */
+  EClass getPROSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PROSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PROSegment#getTodo()
+   * @see #getPROSegment()
+   * @generated
+   */
+  EAttribute getPROSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.QTISegment <em>QTI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>QTI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.QTISegment
+   * @generated
+   */
+  EClass getQTISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.QTISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.QTISegment#getTodo()
+   * @see #getQTISegment()
+   * @generated
+   */
+  EAttribute getQTISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.RTISegment <em>RTI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RTI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.RTISegment
+   * @generated
+   */
+  EClass getRTISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.RTISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.RTISegment#getTodo()
+   * @see #getRTISegment()
+   * @generated
+   */
+  EAttribute getRTISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.RTCSegment <em>RTC Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RTC Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.RTCSegment
+   * @generated
+   */
+  EClass getRTCSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.RTCSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.RTCSegment#getTodo()
+   * @see #getRTCSegment()
+   * @generated
+   */
+  EAttribute getRTCSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.RFRSegment <em>RFR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RFR Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.RFRSegment
+   * @generated
+   */
+  EClass getRFRSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.RFRSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.RFRSegment#getTodo()
+   * @see #getRFRSegment()
+   * @generated
+   */
+  EAttribute getRFRSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.RLSSegment <em>RLS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RLS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.RLSSegment
+   * @generated
+   */
+  EClass getRLSSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.RLSSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.RLSSegment#getTodo()
+   * @see #getRLSSegment()
+   * @generated
+   */
+  EAttribute getRLSSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.RCISegment <em>RCI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RCI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.RCISegment
+   * @generated
+   */
+  EClass getRCISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.RCISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.RCISegment#getTodo()
+   * @see #getRCISegment()
+   * @generated
+   */
+  EAttribute getRCISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.RULSegment <em>RUL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RUL Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.RULSegment
+   * @generated
+   */
+  EClass getRULSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.RULSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.RULSegment#getTodo()
+   * @see #getRULSegment()
+   * @generated
+   */
+  EAttribute getRULSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.SDTSegment <em>SDT Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>SDT Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.SDTSegment
+   * @generated
+   */
+  EClass getSDTSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.SDTSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.SDTSegment#getTodo()
+   * @see #getSDTSegment()
+   * @generated
+   */
+  EAttribute getSDTSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ASDSegment <em>ASD Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ASD Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ASDSegment
+   * @generated
+   */
+  EClass getASDSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ASDSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ASDSegment#getTodo()
+   * @see #getASDSegment()
+   * @generated
+   */
+  EAttribute getASDSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.PSISegment <em>PSI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PSI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.PSISegment
+   * @generated
+   */
+  EClass getPSISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.PSISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.PSISegment#getTodo()
+   * @see #getPSISegment()
+   * @generated
+   */
+  EAttribute getPSISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.SSRSegment <em>SSR Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>SSR Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.SSRSegment
+   * @generated
+   */
+  EClass getSSRSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.SSRSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.SSRSegment#getTodo()
+   * @see #getSSRSegment()
+   * @generated
+   */
+  EAttribute getSSRSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TFFSegment <em>TFF Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TFF Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TFFSegment
+   * @generated
+   */
+  EClass getTFFSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TFFSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.TFFSegment#getTodo()
+   * @see #getTFFSegment()
+   * @generated
+   */
+  EAttribute getTFFSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TXSSegment <em>TXS Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TXS Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TXSSegment
+   * @generated
+   */
+  EClass getTXSSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TXSSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.TXSSegment#getTodo()
+   * @see #getTXSSegment()
+   * @generated
+   */
+  EAttribute getTXSSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TCESegment <em>TCE Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TCE Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TCESegment
+   * @generated
+   */
+  EClass getTCESegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TCESegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.TCESegment#getTodo()
+   * @see #getTCESegment()
+   * @generated
+   */
+  EAttribute getTCESegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TIZSegment <em>TIZ Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TIZ Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TIZSegment
+   * @generated
+   */
+  EClass getTIZSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TIZSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.TIZSegment#getTodo()
+   * @see #getTIZSegment()
+   * @generated
+   */
+  EAttribute getTIZSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ATISegment <em>ATI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>ATI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.ATISegment
+   * @generated
+   */
+  EClass getATISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ATISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.ATISegment#getTodo()
+   * @see #getATISegment()
+   * @generated
+   */
+  EAttribute getATISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TRFSegment <em>TRF Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TRF Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TRFSegment
+   * @generated
+   */
+  EClass getTRFSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TRFSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.TRFSegment#getTodo()
+   * @see #getTRFSegment()
+   * @generated
+   */
+  EAttribute getTRFSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TVLSegment <em>TVL Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TVL Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment
+   * @generated
+   */
+  EClass getTVLSegment();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductDateTime <em>Product Date Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Product Date Time</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getProductDateTime()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EReference getTVLSegment_ProductDateTime();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.TVLSegment#getLocation1 <em>Location1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Location1</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getLocation1()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EReference getTVLSegment_Location1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.TVLSegment#getLocation2 <em>Location2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Location2</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getLocation2()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EReference getTVLSegment_Location2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.TVLSegment#getCompanyIdentification <em>Company Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Company Identification</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getCompanyIdentification()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EReference getTVLSegment_CompanyIdentification();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.TVLSegment#getProductIdentificationDetails <em>Product Identification Details</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Product Identification Details</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getProductIdentificationDetails()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EReference getTVLSegment_ProductIdentificationDetails();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.TVLSegment#getSequenceNumberDetails <em>Sequence Number Details</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sequence Number Details</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getSequenceNumberDetails()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EReference getTVLSegment_SequenceNumberDetails();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getLineItemIdentifier <em>Line Item Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Line Item Identifier</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getLineItemIdentifier()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EAttribute getTVLSegment_LineItemIdentifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorDescriptionCode <em>Processing Indicator Description Code</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Processing Indicator Description Code</em>'.
+   * @see io.thlaegler.edifact.edilang.TVLSegment#getProcessingIndicatorDescriptionCode()
+   * @see #getTVLSegment()
+   * @generated
+   */
+  EAttribute getTVLSegment_ProcessingIndicatorDescriptionCode();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TDISegment <em>TDI Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TDI Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TDISegment
+   * @generated
+   */
+  EClass getTDISegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TDISegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.TDISegment#getTodo()
+   * @see #getTDISegment()
+   * @generated
+   */
+  EAttribute getTDISegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.TIFSegment <em>TIF Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TIF Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.TIFSegment
+   * @generated
+   */
+  EClass getTIFSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.TIFSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.TIFSegment#getTodo()
+   * @see #getTIFSegment()
+   * @generated
+   */
+  EAttribute getTIFSegment_Todo();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.VEHSegment <em>VEH Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>VEH Segment</em>'.
+   * @see io.thlaegler.edifact.edilang.VEHSegment
+   * @generated
+   */
+  EClass getVEHSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.VEHSegment#getTodo <em>Todo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Todo</em>'.
+   * @see io.thlaegler.edifact.edilang.VEHSegment#getTodo()
+   * @see #getVEHSegment()
+   * @generated
+   */
+  EAttribute getVEHSegment_Todo();
 
   /**
    * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.UNSSegment <em>UNS Segment</em>}'.
@@ -19995,36 +25083,58 @@ public interface EdilangPackage extends EPackage
   EAttribute getOriginatorIdentificationFunction_InHouseId2();
 
   /**
-   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.LocationFunction <em>Location Function</em>}'.
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.Location <em>Location</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Location Function</em>'.
-   * @see io.thlaegler.edifact.edilang.LocationFunction
+   * @return the meta object for class '<em>Location</em>'.
+   * @see io.thlaegler.edifact.edilang.Location
    * @generated
    */
-  EClass getLocationFunction();
+  EClass getLocation();
 
   /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.LocationFunction#getLocationId <em>Location Id</em>}'.
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.Location#getLocationIdentifier <em>Location Identifier</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Location Id</em>'.
-   * @see io.thlaegler.edifact.edilang.LocationFunction#getLocationId()
-   * @see #getLocationFunction()
+   * @return the meta object for the attribute '<em>Location Identifier</em>'.
+   * @see io.thlaegler.edifact.edilang.Location#getLocationIdentifier()
+   * @see #getLocation()
    * @generated
    */
-  EAttribute getLocationFunction_LocationId();
+  EAttribute getLocation_LocationIdentifier();
 
   /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.LocationFunction#getLocationName <em>Location Name</em>}'.
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.Location#getLocationName <em>Location Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Location Name</em>'.
-   * @see io.thlaegler.edifact.edilang.LocationFunction#getLocationName()
-   * @see #getLocationFunction()
+   * @see io.thlaegler.edifact.edilang.Location#getLocationName()
+   * @see #getLocation()
    * @generated
    */
-  EAttribute getLocationFunction_LocationName();
+  EAttribute getLocation_LocationName();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.Location#getCountryIdentifier <em>Country Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Country Identifier</em>'.
+   * @see io.thlaegler.edifact.edilang.Location#getCountryIdentifier()
+   * @see #getLocation()
+   * @generated
+   */
+  EAttribute getLocation_CountryIdentifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.Location#getLocationFunctionCodeQualifier <em>Location Function Code Qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Location Function Code Qualifier</em>'.
+   * @see io.thlaegler.edifact.edilang.Location#getLocationFunctionCodeQualifier()
+   * @see #getLocation()
+   * @generated
+   */
+  EAttribute getLocation_LocationFunctionCodeQualifier();
 
   /**
    * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.InterchangerFunction <em>Interchanger Function</em>}'.
@@ -22527,57 +27637,283 @@ public interface EdilangPackage extends EPackage
   EAttribute getGovernmentAction_GovernmentProcedureCode();
 
   /**
-   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DateOnlyFunction <em>Date Only Function</em>}'.
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ProductDateTime <em>Product Date Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Date Only Function</em>'.
-   * @see io.thlaegler.edifact.edilang.DateOnlyFunction
+   * @return the meta object for class '<em>Product Date Time</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductDateTime
    * @generated
    */
-  EClass getDateOnlyFunction();
+  EClass getProductDateTime();
 
   /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateOnlyFunction#getDate <em>Date</em>}'.
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ProductDateTime#getDateTime1 <em>Date Time1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Date Time1</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductDateTime#getDateTime1()
+   * @see #getProductDateTime()
+   * @generated
+   */
+  EReference getProductDateTime_DateTime1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.thlaegler.edifact.edilang.ProductDateTime#getDateTime2 <em>Date Time2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Date Time2</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductDateTime#getDateTime2()
+   * @see #getProductDateTime()
+   * @generated
+   */
+  EReference getProductDateTime_DateTime2();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductDateTime#getDateVariationNumber <em>Date Variation Number</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Date Variation Number</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductDateTime#getDateVariationNumber()
+   * @see #getProductDateTime()
+   * @generated
+   */
+  EAttribute getProductDateTime_DateVariationNumber();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.CompanyIdentification <em>Company Identification</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Company Identification</em>'.
+   * @see io.thlaegler.edifact.edilang.CompanyIdentification
+   * @generated
+   */
+  EClass getCompanyIdentification();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CompanyIdentification#getPartyName1 <em>Party Name1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Party Name1</em>'.
+   * @see io.thlaegler.edifact.edilang.CompanyIdentification#getPartyName1()
+   * @see #getCompanyIdentification()
+   * @generated
+   */
+  EAttribute getCompanyIdentification_PartyName1();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CompanyIdentification#getPartyName2 <em>Party Name2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Party Name2</em>'.
+   * @see io.thlaegler.edifact.edilang.CompanyIdentification#getPartyName2()
+   * @see #getCompanyIdentification()
+   * @generated
+   */
+  EAttribute getCompanyIdentification_PartyName2();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.CompanyIdentification#getPartyName3 <em>Party Name3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Party Name3</em>'.
+   * @see io.thlaegler.edifact.edilang.CompanyIdentification#getPartyName3()
+   * @see #getCompanyIdentification()
+   * @generated
+   */
+  EAttribute getCompanyIdentification_PartyName3();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail <em>Product Identification Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Product Identification Detail</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail
+   * @generated
+   */
+  EClass getProductIdentificationDetail();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail#getProductIdentifier <em>Product Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Product Identifier</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail#getProductIdentifier()
+   * @see #getProductIdentificationDetail()
+   * @generated
+   */
+  EAttribute getProductIdentificationDetail_ProductIdentifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail#getCharacteristicDescriptionCode <em>Characteristic Description Code</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Characteristic Description Code</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail#getCharacteristicDescriptionCode()
+   * @see #getProductIdentificationDetail()
+   * @generated
+   */
+  EAttribute getProductIdentificationDetail_CharacteristicDescriptionCode();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail#getProductCharacteristicIdentificationCode <em>Product Characteristic Identification Code</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Product Characteristic Identification Code</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail#getProductCharacteristicIdentificationCode()
+   * @see #getProductIdentificationDetail()
+   * @generated
+   */
+  EAttribute getProductIdentificationDetail_ProductCharacteristicIdentificationCode();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail#getItemDescriptionCode1 <em>Item Description Code1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Item Description Code1</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail#getItemDescriptionCode1()
+   * @see #getProductIdentificationDetail()
+   * @generated
+   */
+  EAttribute getProductIdentificationDetail_ItemDescriptionCode1();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail#getItemDescriptionCode2 <em>Item Description Code2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Item Description Code2</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail#getItemDescriptionCode2()
+   * @see #getProductIdentificationDetail()
+   * @generated
+   */
+  EAttribute getProductIdentificationDetail_ItemDescriptionCode2();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail#getItemDescriptionCode3 <em>Item Description Code3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Item Description Code3</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail#getItemDescriptionCode3()
+   * @see #getProductIdentificationDetail()
+   * @generated
+   */
+  EAttribute getProductIdentificationDetail_ItemDescriptionCode3();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.ProductIdentificationDetail#getProductName <em>Product Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Product Name</em>'.
+   * @see io.thlaegler.edifact.edilang.ProductIdentificationDetail#getProductName()
+   * @see #getProductIdentificationDetail()
+   * @generated
+   */
+  EAttribute getProductIdentificationDetail_ProductName();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.SequenceNumberDetail <em>Sequence Number Detail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sequence Number Detail</em>'.
+   * @see io.thlaegler.edifact.edilang.SequenceNumberDetail
+   * @generated
+   */
+  EClass getSequenceNumberDetail();
+
+  /**
+   * Returns the meta object for the attribute list '{@link io.thlaegler.edifact.edilang.SequenceNumberDetail#getSequencePositionIdentifiers <em>Sequence Position Identifiers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Sequence Position Identifiers</em>'.
+   * @see io.thlaegler.edifact.edilang.SequenceNumberDetail#getSequencePositionIdentifiers()
+   * @see #getSequenceNumberDetail()
+   * @generated
+   */
+  EAttribute getSequenceNumberDetail_SequencePositionIdentifiers();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DateAndTime <em>Date And Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Date And Time</em>'.
+   * @see io.thlaegler.edifact.edilang.DateAndTime
+   * @generated
+   */
+  EClass getDateAndTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateAndTime#getDate <em>Date</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Date</em>'.
-   * @see io.thlaegler.edifact.edilang.DateOnlyFunction#getDate()
-   * @see #getDateOnlyFunction()
+   * @see io.thlaegler.edifact.edilang.DateAndTime#getDate()
+   * @see #getDateAndTime()
    * @generated
    */
-  EAttribute getDateOnlyFunction_Date();
+  EAttribute getDateAndTime_Date();
 
   /**
-   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DateAndTimeFunction <em>Date And Time Function</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Date And Time Function</em>'.
-   * @see io.thlaegler.edifact.edilang.DateAndTimeFunction
-   * @generated
-   */
-  EClass getDateAndTimeFunction();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getDate <em>Date</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Date</em>'.
-   * @see io.thlaegler.edifact.edilang.DateAndTimeFunction#getDate()
-   * @see #getDateAndTimeFunction()
-   * @generated
-   */
-  EAttribute getDateAndTimeFunction_Date();
-
-  /**
-   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateAndTimeFunction#getTime <em>Time</em>}'.
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateAndTime#getTime <em>Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Time</em>'.
-   * @see io.thlaegler.edifact.edilang.DateAndTimeFunction#getTime()
-   * @see #getDateAndTimeFunction()
+   * @see io.thlaegler.edifact.edilang.DateAndTime#getTime()
+   * @see #getDateAndTime()
    * @generated
    */
-  EAttribute getDateAndTimeFunction_Time();
+  EAttribute getDateAndTime_Time();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DateOnly <em>Date Only</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Date Only</em>'.
+   * @see io.thlaegler.edifact.edilang.DateOnly
+   * @generated
+   */
+  EClass getDateOnly();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateOnly#getDate <em>Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Date</em>'.
+   * @see io.thlaegler.edifact.edilang.DateOnly#getDate()
+   * @see #getDateOnly()
+   * @generated
+   */
+  EAttribute getDateOnly_Date();
+
+  /**
+   * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DateWithTime <em>Date With Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Date With Time</em>'.
+   * @see io.thlaegler.edifact.edilang.DateWithTime
+   * @generated
+   */
+  EClass getDateWithTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateWithTime#getDate <em>Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Date</em>'.
+   * @see io.thlaegler.edifact.edilang.DateWithTime#getDate()
+   * @see #getDateWithTime()
+   * @generated
+   */
+  EAttribute getDateWithTime_Date();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.thlaegler.edifact.edilang.DateWithTime#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Time</em>'.
+   * @see io.thlaegler.edifact.edilang.DateWithTime#getTime()
+   * @see #getDateWithTime()
+   * @generated
+   */
+  EAttribute getDateWithTime_Time();
 
   /**
    * Returns the meta object for class '{@link io.thlaegler.edifact.edilang.DateTimePeriod <em>Date Time Period</em>}'.

@@ -4,7 +4,7 @@
 package io.thlaegler.edifact.edilang.impl;
 
 import io.thlaegler.edifact.edilang.EdilangPackage;
-import io.thlaegler.edifact.edilang.LocationFunction;
+import io.thlaegler.edifact.edilang.Location;
 import io.thlaegler.edifact.edilang.ORGSegment;
 import io.thlaegler.edifact.edilang.OriginatorFunction;
 import io.thlaegler.edifact.edilang.OriginatorIdentificationFunction;
@@ -69,7 +69,7 @@ public class ORGSegmentImpl extends AbstractEdiSegmentImpl implements ORGSegment
    * @generated
    * @ordered
    */
-  protected LocationFunction location;
+  protected Location location;
 
   /**
    * The cached value of the '{@link #getSystemDetail2() <em>System Detail2</em>}' containment reference.
@@ -298,7 +298,7 @@ public class ORGSegmentImpl extends AbstractEdiSegmentImpl implements ORGSegment
    * @generated
    */
   @Override
-  public LocationFunction getLocation()
+  public Location getLocation()
   {
     return location;
   }
@@ -308,9 +308,9 @@ public class ORGSegmentImpl extends AbstractEdiSegmentImpl implements ORGSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLocation(LocationFunction newLocation, NotificationChain msgs)
+  public NotificationChain basicSetLocation(Location newLocation, NotificationChain msgs)
   {
-    LocationFunction oldLocation = location;
+    Location oldLocation = location;
     location = newLocation;
     if (eNotificationRequired())
     {
@@ -326,7 +326,7 @@ public class ORGSegmentImpl extends AbstractEdiSegmentImpl implements ORGSegment
    * @generated
    */
   @Override
-  public void setLocation(LocationFunction newLocation)
+  public void setLocation(Location newLocation)
   {
     if (newLocation != location)
     {
@@ -615,7 +615,7 @@ public class ORGSegmentImpl extends AbstractEdiSegmentImpl implements ORGSegment
         setOriginatorIdentification((OriginatorIdentificationFunction)newValue);
         return;
       case EdilangPackage.ORG_SEGMENT__LOCATION:
-        setLocation((LocationFunction)newValue);
+        setLocation((Location)newValue);
         return;
       case EdilangPackage.ORG_SEGMENT__SYSTEM_DETAIL2:
         setSystemDetail2((SystemDetailFunction)newValue);
@@ -656,7 +656,7 @@ public class ORGSegmentImpl extends AbstractEdiSegmentImpl implements ORGSegment
         setOriginatorIdentification((OriginatorIdentificationFunction)null);
         return;
       case EdilangPackage.ORG_SEGMENT__LOCATION:
-        setLocation((LocationFunction)null);
+        setLocation((Location)null);
         return;
       case EdilangPackage.ORG_SEGMENT__SYSTEM_DETAIL2:
         setSystemDetail2((SystemDetailFunction)null);

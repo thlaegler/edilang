@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface NationalityDetail extends EObject
+public interface NationalityDetail extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Nationality Name Code</b></em>' attribute.

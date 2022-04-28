@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PositionIdentification extends EObject
+public interface PositionIdentification extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Hierarchy Structure Level Identifier</b></em>' attribute.

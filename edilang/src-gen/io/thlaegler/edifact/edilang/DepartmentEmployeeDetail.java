@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface DepartmentEmployeeDetail extends EObject
+public interface DepartmentEmployeeDetail extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Department Employee Name Code</b></em>' attribute.

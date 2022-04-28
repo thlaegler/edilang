@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class BillLevelIdentificationImpl extends MinimalEObjectImpl.Container implements BillLevelIdentification
+public class BillLevelIdentificationImpl extends AbstractEdiFunctionImpl implements BillLevelIdentification
 {
   /**
    * The default value of the '{@link #getLevelOneIdentifier() <em>Level One Identifier</em>}' attribute.

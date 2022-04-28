@@ -258,7 +258,7 @@ public class EdilangSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (PLUS (PLUS PLUS?)?)?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     dateAndTime+=DateAndTimeFunction PLUS (ambiguity) lineEnd=QUOTE_AND_NL
+	 *     dateAndTime=DateAndTime PLUS (ambiguity) lineEnd=QUOTE_AND_NL
 	 *     header=UNBHeader PLUS PLUS PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL
 	 *     interchangeControlSenderRef=ID (ambiguity) lineEnd=QUOTE_AND_NL
 	 *     interchangeRecipient=InterchangerFunction PLUS PLUS (ambiguity) lineEnd=QUOTE_AND_NL

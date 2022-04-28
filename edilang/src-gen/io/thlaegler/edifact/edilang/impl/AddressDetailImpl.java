@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
@@ -33,7 +32,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class AddressDetailImpl extends MinimalEObjectImpl.Container implements AddressDetail
+public class AddressDetailImpl extends AbstractEdiFunctionImpl implements AddressDetail
 {
   /**
    * The default value of the '{@link #getAddressFormatCode() <em>Address Format Code</em>}' attribute.

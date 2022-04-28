@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class MonetaryAmountFunctionDetailImpl extends MinimalEObjectImpl.Container implements MonetaryAmountFunctionDetail
+public class MonetaryAmountFunctionDetailImpl extends AbstractEdiFunctionImpl implements MonetaryAmountFunctionDetail
 {
   /**
    * The default value of the '{@link #getMonetaryAmountFunctionDetailDescriptionCode() <em>Monetary Amount Function Detail Description Code</em>}' attribute.

@@ -13,8 +13,8 @@ package io.thlaegler.edifact.edilang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.ODISegment#getOrigin <em>Origin</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.ODISegment#getDestination <em>Destination</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ODISegment#getLocationIdentifier <em>Location Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.ODISegment#getSequencePositionIdentifier <em>Sequence Position Identifier</em>}</li>
  * </ul>
  *
  * @see io.thlaegler.edifact.edilang.EdilangPackage#getODISegment()
@@ -24,47 +24,47 @@ package io.thlaegler.edifact.edilang;
 public interface ODISegment extends AbstractEdiSegment
 {
   /**
-   * Returns the value of the '<em><b>Origin</b></em>' attribute.
+   * Returns the value of the '<em><b>Location Identifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Origin</em>' attribute.
-   * @see #setOrigin(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getODISegment_Origin()
+   * @return the value of the '<em>Location Identifier</em>' attribute.
+   * @see #setLocationIdentifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getODISegment_LocationIdentifier()
    * @model
    * @generated
    */
-  String getOrigin();
+  String getLocationIdentifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ODISegment#getOrigin <em>Origin</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ODISegment#getLocationIdentifier <em>Location Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Origin</em>' attribute.
-   * @see #getOrigin()
+   * @param value the new value of the '<em>Location Identifier</em>' attribute.
+   * @see #getLocationIdentifier()
    * @generated
    */
-  void setOrigin(String value);
+  void setLocationIdentifier(String value);
 
   /**
-   * Returns the value of the '<em><b>Destination</b></em>' attribute.
+   * Returns the value of the '<em><b>Sequence Position Identifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Destination</em>' attribute.
-   * @see #setDestination(String)
-   * @see io.thlaegler.edifact.edilang.EdilangPackage#getODISegment_Destination()
+   * @return the value of the '<em>Sequence Position Identifier</em>' attribute.
+   * @see #setSequencePositionIdentifier(String)
+   * @see io.thlaegler.edifact.edilang.EdilangPackage#getODISegment_SequencePositionIdentifier()
    * @model
    * @generated
    */
-  String getDestination();
+  String getSequencePositionIdentifier();
 
   /**
-   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ODISegment#getDestination <em>Destination</em>}' attribute.
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.ODISegment#getSequencePositionIdentifier <em>Sequence Position Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Destination</em>' attribute.
-   * @see #getDestination()
+   * @param value the new value of the '<em>Sequence Position Identifier</em>' attribute.
+   * @see #getSequencePositionIdentifier()
    * @generated
    */
-  void setDestination(String value);
+  void setSequencePositionIdentifier(String value);
 
 } // ODISegment

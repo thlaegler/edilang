@@ -211,12 +211,9 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.TSR_SEGMENT: return createTSRSegment();
       case EdilangPackage.VLI_SEGMENT: return createVLISegment();
       case EdilangPackage.MSG_SEGMENT: return createMSGSegment();
-      case EdilangPackage.ORG_SEGMENT: return createORGSegment();
       case EdilangPackage.POC_SEGMENT: return createPOCSegment();
-      case EdilangPackage.ODI_SEGMENT: return createODISegment();
       case EdilangPackage.UCI_SEGMENT: return createUCISegment();
       case EdilangPackage.PDI_SEGMENT: return createPDISegment();
-      case EdilangPackage.TVL_SEGMENT: return createTVLSegment();
       case EdilangPackage.RPI_SEGMENT: return createRPISegment();
       case EdilangPackage.MOA_SEGMENT: return createMOASegment();
       case EdilangPackage.LIN_SEGMENT: return createLINSegment();
@@ -234,6 +231,82 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.CNT_SEGMENT: return createCNTSegment();
       case EdilangPackage.CTA_SEGMENT: return createCTASegment();
       case EdilangPackage.PCI_SEGMENT: return createPCISegment();
+      case EdilangPackage.AAI_SEGMENT: return createAAISegment();
+      case EdilangPackage.ALS_SEGMENT: return createALSSegment();
+      case EdilangPackage.ODS_SEGMENT: return createODSSegment();
+      case EdilangPackage.APD_SEGMENT: return createAPDSegment();
+      case EdilangPackage.ADS_SEGMENT: return createADSSegment();
+      case EdilangPackage.ERI_SEGMENT: return createERISegment();
+      case EdilangPackage.ATR_SEGMENT: return createATRSegment();
+      case EdilangPackage.BCD_SEGMENT: return createBCDSegment();
+      case EdilangPackage.BLI_SEGMENT: return createBLISegment();
+      case EdilangPackage.MOV_SEGMENT: return createMOVSegment();
+      case EdilangPackage.CLT_SEGMENT: return createCLTSegment();
+      case EdilangPackage.CMN_SEGMENT: return createCMNSegment();
+      case EdilangPackage.CNX_SEGMENT: return createCNXSegment();
+      case EdilangPackage.CRI_SEGMENT: return createCRISegment();
+      case EdilangPackage.CON_SEGMENT: return createCONSegment();
+      case EdilangPackage.CNY_SEGMENT: return createCNYSegment();
+      case EdilangPackage.CUR_SEGMENT: return createCURSegment();
+      case EdilangPackage.DAV_SEGMENT: return createDAVSegment();
+      case EdilangPackage.DTI_SEGMENT: return createDTISegment();
+      case EdilangPackage.DNT_SEGMENT: return createDNTSegment();
+      case EdilangPackage.DIS_SEGMENT: return createDISSegment();
+      case EdilangPackage.SER_SEGMENT: return createSERSegment();
+      case EdilangPackage.FRM_SEGMENT: return createFRMSegment();
+      case EdilangPackage.FRQ_SEGMENT: return createFRQSegment();
+      case EdilangPackage.FTI_SEGMENT: return createFTISegment();
+      case EdilangPackage.HDI_SEGMENT: return createHDISegment();
+      case EdilangPackage.HDR_SEGMENT: return createHDRSegment();
+      case EdilangPackage.ADI_SEGMENT: return createADISegment();
+      case EdilangPackage.HDS_SEGMENT: return createHDSSegment();
+      case EdilangPackage.ITD_SEGMENT: return createITDSegment();
+      case EdilangPackage.ITC_SEGMENT: return createITCSegment();
+      case EdilangPackage.ICI_SEGMENT: return createICISegment();
+      case EdilangPackage.IFT_SEGMENT: return createIFTSegment();
+      case EdilangPackage.ITM_SEGMENT: return createITMSegment();
+      case EdilangPackage.LNG_SEGMENT: return createLNGSegment();
+      case EdilangPackage.LKP_SEGMENT: return createLKPSegment();
+      case EdilangPackage.POR_SEGMENT: return createPORSegment();
+      case EdilangPackage.MES_SEGMENT: return createMESSegment();
+      case EdilangPackage.MSD_SEGMENT: return createMSDSegment();
+      case EdilangPackage.MAP_SEGMENT: return createMAPSegment();
+      case EdilangPackage.NME_SEGMENT: return createNMESegment();
+      case EdilangPackage.NAA_SEGMENT: return createNAASegment();
+      case EdilangPackage.NUN_SEGMENT: return createNUNSegment();
+      case EdilangPackage.ODI_SEGMENT: return createODISegment();
+      case EdilangPackage.ORG_SEGMENT: return createORGSegment();
+      case EdilangPackage.OTI_SEGMENT: return createOTISegment();
+      case EdilangPackage.PRT_SEGMENT: return createPRTSegment();
+      case EdilangPackage.PMT_SEGMENT: return createPMTSegment();
+      case EdilangPackage.POP_SEGMENT: return createPOPSegment();
+      case EdilangPackage.POS_SEGMENT: return createPOSSegment();
+      case EdilangPackage.PRE_SEGMENT: return createPRESegment();
+      case EdilangPackage.PRD_SEGMENT: return createPRDSegment();
+      case EdilangPackage.PDT_SEGMENT: return createPDTSegment();
+      case EdilangPackage.PLI_SEGMENT: return createPLISegment();
+      case EdilangPackage.PRO_SEGMENT: return createPROSegment();
+      case EdilangPackage.QTI_SEGMENT: return createQTISegment();
+      case EdilangPackage.RTI_SEGMENT: return createRTISegment();
+      case EdilangPackage.RTC_SEGMENT: return createRTCSegment();
+      case EdilangPackage.RFR_SEGMENT: return createRFRSegment();
+      case EdilangPackage.RLS_SEGMENT: return createRLSSegment();
+      case EdilangPackage.RCI_SEGMENT: return createRCISegment();
+      case EdilangPackage.RUL_SEGMENT: return createRULSegment();
+      case EdilangPackage.SDT_SEGMENT: return createSDTSegment();
+      case EdilangPackage.ASD_SEGMENT: return createASDSegment();
+      case EdilangPackage.PSI_SEGMENT: return createPSISegment();
+      case EdilangPackage.SSR_SEGMENT: return createSSRSegment();
+      case EdilangPackage.TFF_SEGMENT: return createTFFSegment();
+      case EdilangPackage.TXS_SEGMENT: return createTXSSegment();
+      case EdilangPackage.TCE_SEGMENT: return createTCESegment();
+      case EdilangPackage.TIZ_SEGMENT: return createTIZSegment();
+      case EdilangPackage.ATI_SEGMENT: return createATISegment();
+      case EdilangPackage.TRF_SEGMENT: return createTRFSegment();
+      case EdilangPackage.TVL_SEGMENT: return createTVLSegment();
+      case EdilangPackage.TDI_SEGMENT: return createTDISegment();
+      case EdilangPackage.TIF_SEGMENT: return createTIFSegment();
+      case EdilangPackage.VEH_SEGMENT: return createVEHSegment();
       case EdilangPackage.UNS_SEGMENT: return createUNSSegment();
       case EdilangPackage.UNT_SEGMENT: return createUNTSegment();
       case EdilangPackage.UNZ_SEGMENT: return createUNZSegment();
@@ -263,7 +336,7 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.DOCUMENT_MESSAGE: return createDocumentMessage();
       case EdilangPackage.ORIGINATOR_FUNCTION: return createOriginatorFunction();
       case EdilangPackage.ORIGINATOR_IDENTIFICATION_FUNCTION: return createOriginatorIdentificationFunction();
-      case EdilangPackage.LOCATION_FUNCTION: return createLocationFunction();
+      case EdilangPackage.LOCATION: return createLocation();
       case EdilangPackage.INTERCHANGER_FUNCTION: return createInterchangerFunction();
       case EdilangPackage.LOCATION_IDENTIFICATION: return createLocationIdentification();
       case EdilangPackage.ADDRESS_DETAIL: return createAddressDetail();
@@ -316,8 +389,13 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
       case EdilangPackage.MARKS_LABELS: return createMarksLabels();
       case EdilangPackage.TYPE_OF_MARKING: return createTypeOfMarking();
       case EdilangPackage.GOVERNMENT_ACTION: return createGovernmentAction();
-      case EdilangPackage.DATE_ONLY_FUNCTION: return createDateOnlyFunction();
-      case EdilangPackage.DATE_AND_TIME_FUNCTION: return createDateAndTimeFunction();
+      case EdilangPackage.PRODUCT_DATE_TIME: return createProductDateTime();
+      case EdilangPackage.COMPANY_IDENTIFICATION: return createCompanyIdentification();
+      case EdilangPackage.PRODUCT_IDENTIFICATION_DETAIL: return createProductIdentificationDetail();
+      case EdilangPackage.SEQUENCE_NUMBER_DETAIL: return createSequenceNumberDetail();
+      case EdilangPackage.DATE_AND_TIME: return createDateAndTime();
+      case EdilangPackage.DATE_ONLY: return createDateOnly();
+      case EdilangPackage.DATE_WITH_TIME: return createDateWithTime();
       case EdilangPackage.DATE_TIME_PERIOD: return createDateTimePeriod();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -2082,34 +2160,10 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
-  public ORGSegment createORGSegment()
-  {
-    ORGSegmentImpl orgSegment = new ORGSegmentImpl();
-    return orgSegment;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public POCSegment createPOCSegment()
   {
     POCSegmentImpl pocSegment = new POCSegmentImpl();
     return pocSegment;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public ODISegment createODISegment()
-  {
-    ODISegmentImpl odiSegment = new ODISegmentImpl();
-    return odiSegment;
   }
 
   /**
@@ -2134,18 +2188,6 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
   {
     PDISegmentImpl pdiSegment = new PDISegmentImpl();
     return pdiSegment;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public TVLSegment createTVLSegment()
-  {
-    TVLSegmentImpl tvlSegment = new TVLSegmentImpl();
-    return tvlSegment;
   }
 
   /**
@@ -2350,6 +2392,918 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
   {
     PCISegmentImpl pciSegment = new PCISegmentImpl();
     return pciSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AAISegment createAAISegment()
+  {
+    AAISegmentImpl aaiSegment = new AAISegmentImpl();
+    return aaiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ALSSegment createALSSegment()
+  {
+    ALSSegmentImpl alsSegment = new ALSSegmentImpl();
+    return alsSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ODSSegment createODSSegment()
+  {
+    ODSSegmentImpl odsSegment = new ODSSegmentImpl();
+    return odsSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public APDSegment createAPDSegment()
+  {
+    APDSegmentImpl apdSegment = new APDSegmentImpl();
+    return apdSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ADSSegment createADSSegment()
+  {
+    ADSSegmentImpl adsSegment = new ADSSegmentImpl();
+    return adsSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ERISegment createERISegment()
+  {
+    ERISegmentImpl eriSegment = new ERISegmentImpl();
+    return eriSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ATRSegment createATRSegment()
+  {
+    ATRSegmentImpl atrSegment = new ATRSegmentImpl();
+    return atrSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BCDSegment createBCDSegment()
+  {
+    BCDSegmentImpl bcdSegment = new BCDSegmentImpl();
+    return bcdSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BLISegment createBLISegment()
+  {
+    BLISegmentImpl bliSegment = new BLISegmentImpl();
+    return bliSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MOVSegment createMOVSegment()
+  {
+    MOVSegmentImpl movSegment = new MOVSegmentImpl();
+    return movSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CLTSegment createCLTSegment()
+  {
+    CLTSegmentImpl cltSegment = new CLTSegmentImpl();
+    return cltSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CMNSegment createCMNSegment()
+  {
+    CMNSegmentImpl cmnSegment = new CMNSegmentImpl();
+    return cmnSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CNXSegment createCNXSegment()
+  {
+    CNXSegmentImpl cnxSegment = new CNXSegmentImpl();
+    return cnxSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CRISegment createCRISegment()
+  {
+    CRISegmentImpl criSegment = new CRISegmentImpl();
+    return criSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CONSegment createCONSegment()
+  {
+    CONSegmentImpl conSegment = new CONSegmentImpl();
+    return conSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CNYSegment createCNYSegment()
+  {
+    CNYSegmentImpl cnySegment = new CNYSegmentImpl();
+    return cnySegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CURSegment createCURSegment()
+  {
+    CURSegmentImpl curSegment = new CURSegmentImpl();
+    return curSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DAVSegment createDAVSegment()
+  {
+    DAVSegmentImpl davSegment = new DAVSegmentImpl();
+    return davSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DTISegment createDTISegment()
+  {
+    DTISegmentImpl dtiSegment = new DTISegmentImpl();
+    return dtiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DNTSegment createDNTSegment()
+  {
+    DNTSegmentImpl dntSegment = new DNTSegmentImpl();
+    return dntSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DISSegment createDISSegment()
+  {
+    DISSegmentImpl disSegment = new DISSegmentImpl();
+    return disSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SERSegment createSERSegment()
+  {
+    SERSegmentImpl serSegment = new SERSegmentImpl();
+    return serSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public FRMSegment createFRMSegment()
+  {
+    FRMSegmentImpl frmSegment = new FRMSegmentImpl();
+    return frmSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public FRQSegment createFRQSegment()
+  {
+    FRQSegmentImpl frqSegment = new FRQSegmentImpl();
+    return frqSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public FTISegment createFTISegment()
+  {
+    FTISegmentImpl ftiSegment = new FTISegmentImpl();
+    return ftiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public HDISegment createHDISegment()
+  {
+    HDISegmentImpl hdiSegment = new HDISegmentImpl();
+    return hdiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public HDRSegment createHDRSegment()
+  {
+    HDRSegmentImpl hdrSegment = new HDRSegmentImpl();
+    return hdrSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ADISegment createADISegment()
+  {
+    ADISegmentImpl adiSegment = new ADISegmentImpl();
+    return adiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public HDSSegment createHDSSegment()
+  {
+    HDSSegmentImpl hdsSegment = new HDSSegmentImpl();
+    return hdsSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ITDSegment createITDSegment()
+  {
+    ITDSegmentImpl itdSegment = new ITDSegmentImpl();
+    return itdSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ITCSegment createITCSegment()
+  {
+    ITCSegmentImpl itcSegment = new ITCSegmentImpl();
+    return itcSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ICISegment createICISegment()
+  {
+    ICISegmentImpl iciSegment = new ICISegmentImpl();
+    return iciSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IFTSegment createIFTSegment()
+  {
+    IFTSegmentImpl iftSegment = new IFTSegmentImpl();
+    return iftSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ITMSegment createITMSegment()
+  {
+    ITMSegmentImpl itmSegment = new ITMSegmentImpl();
+    return itmSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public LNGSegment createLNGSegment()
+  {
+    LNGSegmentImpl lngSegment = new LNGSegmentImpl();
+    return lngSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public LKPSegment createLKPSegment()
+  {
+    LKPSegmentImpl lkpSegment = new LKPSegmentImpl();
+    return lkpSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PORSegment createPORSegment()
+  {
+    PORSegmentImpl porSegment = new PORSegmentImpl();
+    return porSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MESSegment createMESSegment()
+  {
+    MESSegmentImpl mesSegment = new MESSegmentImpl();
+    return mesSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MSDSegment createMSDSegment()
+  {
+    MSDSegmentImpl msdSegment = new MSDSegmentImpl();
+    return msdSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public MAPSegment createMAPSegment()
+  {
+    MAPSegmentImpl mapSegment = new MAPSegmentImpl();
+    return mapSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NMESegment createNMESegment()
+  {
+    NMESegmentImpl nmeSegment = new NMESegmentImpl();
+    return nmeSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NAASegment createNAASegment()
+  {
+    NAASegmentImpl naaSegment = new NAASegmentImpl();
+    return naaSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NUNSegment createNUNSegment()
+  {
+    NUNSegmentImpl nunSegment = new NUNSegmentImpl();
+    return nunSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ODISegment createODISegment()
+  {
+    ODISegmentImpl odiSegment = new ODISegmentImpl();
+    return odiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ORGSegment createORGSegment()
+  {
+    ORGSegmentImpl orgSegment = new ORGSegmentImpl();
+    return orgSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public OTISegment createOTISegment()
+  {
+    OTISegmentImpl otiSegment = new OTISegmentImpl();
+    return otiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PRTSegment createPRTSegment()
+  {
+    PRTSegmentImpl prtSegment = new PRTSegmentImpl();
+    return prtSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PMTSegment createPMTSegment()
+  {
+    PMTSegmentImpl pmtSegment = new PMTSegmentImpl();
+    return pmtSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public POPSegment createPOPSegment()
+  {
+    POPSegmentImpl popSegment = new POPSegmentImpl();
+    return popSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public POSSegment createPOSSegment()
+  {
+    POSSegmentImpl posSegment = new POSSegmentImpl();
+    return posSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PRESegment createPRESegment()
+  {
+    PRESegmentImpl preSegment = new PRESegmentImpl();
+    return preSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PRDSegment createPRDSegment()
+  {
+    PRDSegmentImpl prdSegment = new PRDSegmentImpl();
+    return prdSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PDTSegment createPDTSegment()
+  {
+    PDTSegmentImpl pdtSegment = new PDTSegmentImpl();
+    return pdtSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PLISegment createPLISegment()
+  {
+    PLISegmentImpl pliSegment = new PLISegmentImpl();
+    return pliSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PROSegment createPROSegment()
+  {
+    PROSegmentImpl proSegment = new PROSegmentImpl();
+    return proSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public QTISegment createQTISegment()
+  {
+    QTISegmentImpl qtiSegment = new QTISegmentImpl();
+    return qtiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RTISegment createRTISegment()
+  {
+    RTISegmentImpl rtiSegment = new RTISegmentImpl();
+    return rtiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RTCSegment createRTCSegment()
+  {
+    RTCSegmentImpl rtcSegment = new RTCSegmentImpl();
+    return rtcSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RFRSegment createRFRSegment()
+  {
+    RFRSegmentImpl rfrSegment = new RFRSegmentImpl();
+    return rfrSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RLSSegment createRLSSegment()
+  {
+    RLSSegmentImpl rlsSegment = new RLSSegmentImpl();
+    return rlsSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RCISegment createRCISegment()
+  {
+    RCISegmentImpl rciSegment = new RCISegmentImpl();
+    return rciSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RULSegment createRULSegment()
+  {
+    RULSegmentImpl rulSegment = new RULSegmentImpl();
+    return rulSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SDTSegment createSDTSegment()
+  {
+    SDTSegmentImpl sdtSegment = new SDTSegmentImpl();
+    return sdtSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ASDSegment createASDSegment()
+  {
+    ASDSegmentImpl asdSegment = new ASDSegmentImpl();
+    return asdSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PSISegment createPSISegment()
+  {
+    PSISegmentImpl psiSegment = new PSISegmentImpl();
+    return psiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SSRSegment createSSRSegment()
+  {
+    SSRSegmentImpl ssrSegment = new SSRSegmentImpl();
+    return ssrSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TFFSegment createTFFSegment()
+  {
+    TFFSegmentImpl tffSegment = new TFFSegmentImpl();
+    return tffSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TXSSegment createTXSSegment()
+  {
+    TXSSegmentImpl txsSegment = new TXSSegmentImpl();
+    return txsSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TCESegment createTCESegment()
+  {
+    TCESegmentImpl tceSegment = new TCESegmentImpl();
+    return tceSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TIZSegment createTIZSegment()
+  {
+    TIZSegmentImpl tizSegment = new TIZSegmentImpl();
+    return tizSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ATISegment createATISegment()
+  {
+    ATISegmentImpl atiSegment = new ATISegmentImpl();
+    return atiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TRFSegment createTRFSegment()
+  {
+    TRFSegmentImpl trfSegment = new TRFSegmentImpl();
+    return trfSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TVLSegment createTVLSegment()
+  {
+    TVLSegmentImpl tvlSegment = new TVLSegmentImpl();
+    return tvlSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TDISegment createTDISegment()
+  {
+    TDISegmentImpl tdiSegment = new TDISegmentImpl();
+    return tdiSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TIFSegment createTIFSegment()
+  {
+    TIFSegmentImpl tifSegment = new TIFSegmentImpl();
+    return tifSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public VEHSegment createVEHSegment()
+  {
+    VEHSegmentImpl vehSegment = new VEHSegmentImpl();
+    return vehSegment;
   }
 
   /**
@@ -2706,10 +3660,10 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
-  public LocationFunction createLocationFunction()
+  public Location createLocation()
   {
-    LocationFunctionImpl locationFunction = new LocationFunctionImpl();
-    return locationFunction;
+    LocationImpl location = new LocationImpl();
+    return location;
   }
 
   /**
@@ -3342,10 +4296,10 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
-  public DateOnlyFunction createDateOnlyFunction()
+  public ProductDateTime createProductDateTime()
   {
-    DateOnlyFunctionImpl dateOnlyFunction = new DateOnlyFunctionImpl();
-    return dateOnlyFunction;
+    ProductDateTimeImpl productDateTime = new ProductDateTimeImpl();
+    return productDateTime;
   }
 
   /**
@@ -3354,10 +4308,70 @@ public class EdilangFactoryImpl extends EFactoryImpl implements EdilangFactory
    * @generated
    */
   @Override
-  public DateAndTimeFunction createDateAndTimeFunction()
+  public CompanyIdentification createCompanyIdentification()
   {
-    DateAndTimeFunctionImpl dateAndTimeFunction = new DateAndTimeFunctionImpl();
-    return dateAndTimeFunction;
+    CompanyIdentificationImpl companyIdentification = new CompanyIdentificationImpl();
+    return companyIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ProductIdentificationDetail createProductIdentificationDetail()
+  {
+    ProductIdentificationDetailImpl productIdentificationDetail = new ProductIdentificationDetailImpl();
+    return productIdentificationDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SequenceNumberDetail createSequenceNumberDetail()
+  {
+    SequenceNumberDetailImpl sequenceNumberDetail = new SequenceNumberDetailImpl();
+    return sequenceNumberDetail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DateAndTime createDateAndTime()
+  {
+    DateAndTimeImpl dateAndTime = new DateAndTimeImpl();
+    return dateAndTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DateOnly createDateOnly()
+  {
+    DateOnlyImpl dateOnly = new DateOnlyImpl();
+    return dateOnly;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DateWithTime createDateWithTime()
+  {
+    DateWithTimeImpl dateWithTime = new DateWithTimeImpl();
+    return dateWithTime;
   }
 
   /**

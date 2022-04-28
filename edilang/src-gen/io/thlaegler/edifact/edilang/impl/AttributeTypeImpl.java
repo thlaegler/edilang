@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements AttributeType
+public class AttributeTypeImpl extends AbstractEdiFunctionImpl implements AttributeType
 {
   /**
    * The default value of the '{@link #getAttributeTypeDescriptionCode() <em>Attribute Type Description Code</em>}' attribute.

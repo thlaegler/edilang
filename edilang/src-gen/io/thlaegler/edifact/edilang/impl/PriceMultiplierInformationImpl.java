@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class PriceMultiplierInformationImpl extends MinimalEObjectImpl.Container implements PriceMultiplierInformation
+public class PriceMultiplierInformationImpl extends AbstractEdiFunctionImpl implements PriceMultiplierInformation
 {
   /**
    * The default value of the '{@link #getPriceMultiplierRate() <em>Price Multiplier Rate</em>}' attribute.

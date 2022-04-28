@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -97,16 +96,26 @@ public interface UNBSegment extends AbstractEdiSegment
   void setInterchangeRecipient(InterchangerFunction value);
 
   /**
-   * Returns the value of the '<em><b>Date And Time</b></em>' containment reference list.
-   * The list contents are of type {@link io.thlaegler.edifact.edilang.DateAndTimeFunction}.
+   * Returns the value of the '<em><b>Date And Time</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Date And Time</em>' containment reference list.
+   * @return the value of the '<em>Date And Time</em>' containment reference.
+   * @see #setDateAndTime(DateAndTime)
    * @see io.thlaegler.edifact.edilang.EdilangPackage#getUNBSegment_DateAndTime()
    * @model containment="true"
    * @generated
    */
-  EList<DateAndTimeFunction> getDateAndTime();
+  DateAndTime getDateAndTime();
+
+  /**
+   * Sets the value of the '{@link io.thlaegler.edifact.edilang.UNBSegment#getDateAndTime <em>Date And Time</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Date And Time</em>' containment reference.
+   * @see #getDateAndTime()
+   * @generated
+   */
+  void setDateAndTime(DateAndTime value);
 
   /**
    * Returns the value of the '<em><b>Interchange Control Sender Ref</b></em>' attribute.

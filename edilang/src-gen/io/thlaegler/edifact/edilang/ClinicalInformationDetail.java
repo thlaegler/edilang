@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ClinicalInformationDetail extends EObject
+public interface ClinicalInformationDetail extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Clinical Information Description Identifier</b></em>' attribute.

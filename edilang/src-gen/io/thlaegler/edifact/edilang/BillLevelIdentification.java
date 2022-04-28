@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface BillLevelIdentification extends EObject
+public interface BillLevelIdentification extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Level One Identifier</b></em>' attribute.

@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface MonetaryAmountFunctionDetail extends EObject
+public interface MonetaryAmountFunctionDetail extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Monetary Amount Function Detail Description Code</b></em>' attribute.

@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class CharacteristicValueImpl extends MinimalEObjectImpl.Container implements CharacteristicValue
+public class CharacteristicValueImpl extends AbstractEdiFunctionImpl implements CharacteristicValue
 {
   /**
    * The default value of the '{@link #getCharacteristicValueDescriptionCode() <em>Characteristic Value Description Code</em>}' attribute.

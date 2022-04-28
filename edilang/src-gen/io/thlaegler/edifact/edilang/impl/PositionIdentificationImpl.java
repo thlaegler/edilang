@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class PositionIdentificationImpl extends MinimalEObjectImpl.Container implements PositionIdentification
+public class PositionIdentificationImpl extends AbstractEdiFunctionImpl implements PositionIdentification
 {
   /**
    * The default value of the '{@link #getHierarchyStructureLevelIdentifier() <em>Hierarchy Structure Level Identifier</em>}' attribute.

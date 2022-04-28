@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ComputerEnvironmentIdentificationImpl extends MinimalEObjectImpl.Container implements ComputerEnvironmentIdentification
+public class ComputerEnvironmentIdentificationImpl extends AbstractEdiFunctionImpl implements ComputerEnvironmentIdentification
 {
   /**
    * The default value of the '{@link #getComputerEnvironmentNameCode() <em>Computer Environment Name Code</em>}' attribute.

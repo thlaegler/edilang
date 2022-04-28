@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ValueListIdentificationImpl extends MinimalEObjectImpl.Container implements ValueListIdentification
+public class ValueListIdentificationImpl extends AbstractEdiFunctionImpl implements ValueListIdentification
 {
   /**
    * The default value of the '{@link #getValueListIdentifier() <em>Value List Identifier</em>}' attribute.

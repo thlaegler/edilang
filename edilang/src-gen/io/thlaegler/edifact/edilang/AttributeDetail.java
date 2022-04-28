@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface AttributeDetail extends EObject
+public interface AttributeDetail extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Attribute Description Code</b></em>' attribute.

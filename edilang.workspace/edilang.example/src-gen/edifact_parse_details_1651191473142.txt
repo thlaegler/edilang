@@ -1,0 +1,346 @@
+Parsed EDIFACT model:
+
+UNB segment:
+	DateAndTime=(Time=1838, Date=220406)
+	AssiciationCode=O
+	InterchangeSender=(Interchange=NZ, Interchange2=IEDI)
+	InterchangeRecipient=(Interchange=UA)
+	InterchangeControlSenderRef=94B142C20001
+	Header=(Syntax=IATA, Num1=1)
+
+UNH segment:
+	MessageReferenceNumber=001
+	Message=(ControllingAgency=IA, Release=2, Type=PAOREQ, Version=96)
+
+MSG segment:
+	MessageIdentifier=(MessageTypeCode=1, VersionIdentifier=46)
+
+ORG segment:
+	SystemDetail1=(CompanyIdentification=NZ, LocationName=00, LocationCode=AKL)
+	SystemDetail2=(CompanyIdentification=NZ)
+	OriginatorTypeCode=A
+	Originator=(CountryCode=NZ, CurrencyCode=NZD)
+	OriginatorsAuthorityRequestCode=PR
+	Location=(LocationIdentifier=AKL)
+
+ODI segment:
+	LocationIdentifier=LAX
+	SequencePositionIdentifier=NYC
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@a0e8f35 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[1])
+	ProductIdentificationDetails=(ProductIdentifier=9519)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@47c0b59c (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[1])
+	ProductIdentificationDetails=(ProductIdentifier=2213)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@35e842ae (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[2])
+	ProductIdentificationDetails=(ProductIdentifier=9515)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@2da000bf (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[2])
+	ProductIdentificationDetails=(ProductIdentifier=1990)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@453e7dd (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[3])
+	ProductIdentificationDetails=(ProductIdentifier=9516)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@243454de (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[3])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@54e4c3fc (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[4])
+	ProductIdentificationDetails=(ProductIdentifier=9517)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@5e616cf9 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[4])
+	ProductIdentificationDetails=(ProductIdentifier=2335)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@2f267d6 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[5])
+	ProductIdentificationDetails=(ProductIdentifier=9520)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@6b8ee547 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[5])
+	ProductIdentificationDetails=(ProductIdentifier=2614)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@5f8c7676 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[6])
+	ProductIdentificationDetails=(ProductIdentifier=9514)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@56faa1c9 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[6])
+	ProductIdentificationDetails=(ProductIdentifier=0247)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@5f51134f (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[7])
+	ProductIdentificationDetails=(ProductIdentifier=9511)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@7b5e58e0 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[7])
+	ProductIdentificationDetails=(ProductIdentifier=1700)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@562a9da (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[8])
+	ProductIdentificationDetails=(ProductIdentifier=9513)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@adb607b (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[8])
+	ProductIdentificationDetails=(ProductIdentifier=1928)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@710695c3 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[9])
+	ProductIdentificationDetails=(ProductIdentifier=9518)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@1eeeda3f (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[9])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@78f6e9be (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=NZ)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[10])
+	ProductIdentificationDetails=(ProductIdentifier=9512)
+	ProcessingIndicatorDescriptionCode=N
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@6bb88d48 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[10])
+	ProductIdentificationDetails=(ProductIdentifier=2473)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@14e6c387 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=JFK)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[11])
+	ProductIdentificationDetails=(ProductIdentifier=0514)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@63dac053 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[12])
+	ProductIdentificationDetails=(ProductIdentifier=1990)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@49824990 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[13])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@d0a0e4b (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[14])
+	ProductIdentificationDetails=(ProductIdentifier=2335)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@682d40a8 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[15])
+	ProductIdentificationDetails=(ProductIdentifier=2614)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@1897de75 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[16])
+	ProductIdentificationDetails=(ProductIdentifier=0247)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@70eebbc6 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[17])
+	ProductIdentificationDetails=(ProductIdentifier=1700)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@3b275292 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[18])
+	ProductIdentificationDetails=(ProductIdentifier=1928)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@2f38ade6 (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[19])
+	ProductIdentificationDetails=(ProductIdentifier=1802)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@3cd83e8b (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=JFK)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[20])
+	ProductIdentificationDetails=(ProductIdentifier=0516)
+	ProcessingIndicatorDescriptionCode=P
+
+TVL segment:
+	LineItemIdentifier=1
+	ProductDateTime=(DateTime1=io.thlaegler.edifact.edilang.impl.DateOnlyImpl@6b6d8f3d (date: 101022))
+	Location1=(LocationIdentifier=LAX)
+	Location2=(LocationIdentifier=EWR)
+	CompanyIdentification=(PartyName1=UA)
+	SequenceNumberDetails=(SequencePositionIdentifiers=[21])
+	ProductIdentificationDetails=(ProductIdentifier=2473)
+	ProcessingIndicatorDescriptionCode=P
+
+UNT segment:
+	MessageReferenceNumber=001
+	SegmentCount=36
+
+UNZ segment:
+	InterchangeControlCount=1
+	InterchangeControlRef=94B142C20001

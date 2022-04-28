@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AddressUsageImpl extends MinimalEObjectImpl.Container implements AddressUsage
+public class AddressUsageImpl extends AbstractEdiFunctionImpl implements AddressUsage
 {
   /**
    * The default value of the '{@link #getAddressPurposeCode() <em>Address Purpose Code</em>}' attribute.

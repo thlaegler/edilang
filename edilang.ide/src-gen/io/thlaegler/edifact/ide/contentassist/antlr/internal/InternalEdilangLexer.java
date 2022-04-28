@@ -27,37 +27,48 @@ public class InternalEdilangLexer extends Lexer {
     public static final int T__58=58;
     public static final int T__51=51;
     public static final int T__137=137;
+    public static final int T__258=258;
     public static final int T__52=52;
     public static final int T__136=136;
+    public static final int T__257=257;
     public static final int T__53=53;
     public static final int T__139=139;
     public static final int T__54=54;
     public static final int T__138=138;
     public static final int T__133=133;
+    public static final int T__254=254;
     public static final int T__132=132;
+    public static final int T__253=253;
     public static final int T__60=60;
     public static final int T__135=135;
+    public static final int T__256=256;
     public static final int T__61=61;
     public static final int T__134=134;
+    public static final int T__255=255;
+    public static final int T__250=250;
     public static final int RULE_ID=7;
     public static final int T__131=131;
+    public static final int T__252=252;
     public static final int T__130=130;
-    public static final int RULE_COLON=4;
+    public static final int T__251=251;
     public static final int RULE_INT=8;
     public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=11;
     public static final int T__67=67;
     public static final int T__129=129;
     public static final int T__68=68;
     public static final int T__69=69;
     public static final int T__62=62;
     public static final int T__126=126;
+    public static final int T__247=247;
     public static final int T__63=63;
     public static final int T__125=125;
+    public static final int T__246=246;
     public static final int T__64=64;
     public static final int T__128=128;
+    public static final int T__249=249;
     public static final int T__65=65;
     public static final int T__127=127;
+    public static final int T__248=248;
     public static final int T__166=166;
     public static final int T__165=165;
     public static final int T__168=168;
@@ -100,27 +111,113 @@ public class InternalEdilangLexer extends Lexer {
     public static final int T__42=42;
     public static final int T__43=43;
     public static final int T__149=149;
-    public static final int T__91=91;
     public static final int T__100=100;
-    public static final int T__92=92;
-    public static final int T__93=93;
+    public static final int T__221=221;
+    public static final int T__220=220;
     public static final int T__102=102;
-    public static final int T__94=94;
+    public static final int T__223=223;
     public static final int T__101=101;
-    public static final int T__184=184;
-    public static final int T__183=183;
-    public static final int T__90=90;
-    public static final int T__185=185;
-    public static final int T__180=180;
-    public static final int T__182=182;
-    public static final int T__181=181;
+    public static final int T__222=222;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
-    public static final int T__99=99;
+    public static final int T__218=218;
+    public static final int T__217=217;
     public static final int T__14=14;
+    public static final int T__219=219;
+    public static final int T__214=214;
+    public static final int T__213=213;
+    public static final int T__216=216;
+    public static final int T__215=215;
+    public static final int T__210=210;
+    public static final int T__212=212;
+    public static final int T__211=211;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int T__207=207;
+    public static final int T__23=23;
+    public static final int T__206=206;
+    public static final int T__24=24;
+    public static final int T__209=209;
+    public static final int T__25=25;
+    public static final int T__208=208;
+    public static final int T__203=203;
+    public static final int T__202=202;
+    public static final int T__20=20;
+    public static final int T__205=205;
+    public static final int T__21=21;
+    public static final int T__204=204;
+    public static final int T__122=122;
+    public static final int T__243=243;
+    public static final int T__121=121;
+    public static final int T__242=242;
+    public static final int T__124=124;
+    public static final int T__245=245;
+    public static final int T__123=123;
+    public static final int T__244=244;
+    public static final int T__120=120;
+    public static final int T__241=241;
+    public static final int T__240=240;
+    public static final int RULE_SL_COMMENT=12;
+    public static final int T__119=119;
+    public static final int T__118=118;
+    public static final int T__239=239;
+    public static final int T__115=115;
+    public static final int T__236=236;
+    public static final int EOF=-1;
+    public static final int T__114=114;
+    public static final int T__235=235;
+    public static final int T__117=117;
+    public static final int T__238=238;
+    public static final int T__116=116;
+    public static final int T__237=237;
+    public static final int T__111=111;
+    public static final int T__232=232;
+    public static final int T__110=110;
+    public static final int T__231=231;
+    public static final int T__113=113;
+    public static final int T__234=234;
+    public static final int T__112=112;
+    public static final int T__233=233;
+    public static final int T__230=230;
+    public static final int T__108=108;
+    public static final int T__229=229;
+    public static final int T__107=107;
+    public static final int T__228=228;
+    public static final int T__109=109;
+    public static final int T__104=104;
+    public static final int T__225=225;
+    public static final int T__103=103;
+    public static final int T__224=224;
+    public static final int T__106=106;
+    public static final int T__227=227;
+    public static final int T__105=105;
+    public static final int T__226=226;
+    public static final int RULE_COLON=4;
+    public static final int RULE_ML_COMMENT=11;
+    public static final int T__201=201;
+    public static final int T__200=200;
+    public static final int T__91=91;
+    public static final int T__188=188;
+    public static final int T__92=92;
+    public static final int T__187=187;
+    public static final int T__93=93;
+    public static final int T__94=94;
+    public static final int T__189=189;
+    public static final int T__184=184;
+    public static final int T__183=183;
+    public static final int T__186=186;
+    public static final int T__90=90;
+    public static final int T__185=185;
+    public static final int T__180=180;
+    public static final int T__182=182;
+    public static final int T__181=181;
+    public static final int T__99=99;
     public static final int T__95=95;
     public static final int T__96=96;
     public static final int T__97=97;
@@ -135,66 +232,42 @@ public class InternalEdilangLexer extends Lexer {
     public static final int T__174=174;
     public static final int T__171=171;
     public static final int T__170=170;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
-    public static final int T__29=29;
-    public static final int T__22=22;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
     public static final int T__169=169;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int T__122=122;
     public static final int T__70=70;
-    public static final int T__121=121;
     public static final int T__71=71;
-    public static final int T__124=124;
     public static final int T__72=72;
-    public static final int T__123=123;
-    public static final int T__120=120;
     public static final int RULE_STRING=9;
-    public static final int RULE_SL_COMMENT=12;
     public static final int T__77=77;
-    public static final int T__119=119;
     public static final int T__78=78;
-    public static final int T__118=118;
     public static final int T__79=79;
     public static final int RULE_PLUS=5;
     public static final int T__73=73;
-    public static final int T__115=115;
-    public static final int EOF=-1;
     public static final int T__74=74;
-    public static final int T__114=114;
     public static final int T__75=75;
-    public static final int T__117=117;
     public static final int T__76=76;
-    public static final int T__116=116;
     public static final int T__80=80;
-    public static final int T__111=111;
+    public static final int T__199=199;
     public static final int T__81=81;
-    public static final int T__110=110;
+    public static final int T__198=198;
     public static final int T__82=82;
-    public static final int T__113=113;
     public static final int T__83=83;
-    public static final int T__112=112;
+    public static final int T__195=195;
+    public static final int T__194=194;
     public static final int RULE_WS=10;
+    public static final int T__197=197;
+    public static final int T__196=196;
+    public static final int T__191=191;
+    public static final int T__190=190;
+    public static final int T__193=193;
+    public static final int T__192=192;
     public static final int RULE_ANY_OTHER=13;
     public static final int RULE_QUOTE_AND_NL=6;
     public static final int T__88=88;
-    public static final int T__108=108;
     public static final int T__89=89;
-    public static final int T__107=107;
-    public static final int T__109=109;
     public static final int T__84=84;
-    public static final int T__104=104;
     public static final int T__85=85;
-    public static final int T__103=103;
     public static final int T__86=86;
-    public static final int T__106=106;
     public static final int T__87=87;
-    public static final int T__105=105;
 
     // delegates
     // delegators
@@ -3259,10 +3332,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__159;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:156:8: ( 'ORG' )
-            // InternalEdilang.g:156:10: 'ORG'
+            // InternalEdilang.g:156:8: ( 'POC' )
+            // InternalEdilang.g:156:10: 'POC'
             {
-            match("ORG"); 
+            match("POC"); 
 
 
             }
@@ -3280,10 +3353,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__160;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:157:8: ( 'POC' )
-            // InternalEdilang.g:157:10: 'POC'
+            // InternalEdilang.g:157:8: ( 'UCI' )
+            // InternalEdilang.g:157:10: 'UCI'
             {
-            match("POC"); 
+            match("UCI"); 
 
 
             }
@@ -3301,10 +3374,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__161;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:158:8: ( 'ODI' )
-            // InternalEdilang.g:158:10: 'ODI'
+            // InternalEdilang.g:158:8: ( 'PDI' )
+            // InternalEdilang.g:158:10: 'PDI'
             {
-            match("ODI"); 
+            match("PDI"); 
 
 
             }
@@ -3322,10 +3395,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__162;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:159:8: ( 'UCI' )
-            // InternalEdilang.g:159:10: 'UCI'
+            // InternalEdilang.g:159:8: ( 'RPI' )
+            // InternalEdilang.g:159:10: 'RPI'
             {
-            match("UCI"); 
+            match("RPI"); 
 
 
             }
@@ -3343,10 +3416,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__163;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:160:8: ( 'PDI' )
-            // InternalEdilang.g:160:10: 'PDI'
+            // InternalEdilang.g:160:8: ( 'MOA' )
+            // InternalEdilang.g:160:10: 'MOA'
             {
-            match("PDI"); 
+            match("MOA"); 
 
 
             }
@@ -3364,10 +3437,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__164;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:161:8: ( 'TVL' )
-            // InternalEdilang.g:161:10: 'TVL'
+            // InternalEdilang.g:161:8: ( 'LIN' )
+            // InternalEdilang.g:161:10: 'LIN'
             {
-            match("TVL"); 
+            match("LIN"); 
 
 
             }
@@ -3385,10 +3458,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__165;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:162:8: ( 'RPI' )
-            // InternalEdilang.g:162:10: 'RPI'
+            // InternalEdilang.g:162:8: ( 'PRI' )
+            // InternalEdilang.g:162:10: 'PRI'
             {
-            match("RPI"); 
+            match("PRI"); 
 
 
             }
@@ -3406,10 +3479,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__166;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:163:8: ( 'MOA' )
-            // InternalEdilang.g:163:10: 'MOA'
+            // InternalEdilang.g:163:8: ( 'QTY' )
+            // InternalEdilang.g:163:10: 'QTY'
             {
-            match("MOA"); 
+            match("QTY"); 
 
 
             }
@@ -3427,10 +3500,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__167;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:164:8: ( 'LIN' )
-            // InternalEdilang.g:164:10: 'LIN'
+            // InternalEdilang.g:164:8: ( 'CUX' )
+            // InternalEdilang.g:164:10: 'CUX'
             {
-            match("LIN"); 
+            match("CUX"); 
 
 
             }
@@ -3448,10 +3521,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__168;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:165:8: ( 'PRI' )
-            // InternalEdilang.g:165:10: 'PRI'
+            // InternalEdilang.g:165:8: ( 'TAX' )
+            // InternalEdilang.g:165:10: 'TAX'
             {
-            match("PRI"); 
+            match("TAX"); 
 
 
             }
@@ -3469,10 +3542,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__169;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:166:8: ( 'QTY' )
-            // InternalEdilang.g:166:10: 'QTY'
+            // InternalEdilang.g:166:8: ( 'RFF' )
+            // InternalEdilang.g:166:10: 'RFF'
             {
-            match("QTY"); 
+            match("RFF"); 
 
 
             }
@@ -3490,10 +3563,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__170;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:167:8: ( 'CUX' )
-            // InternalEdilang.g:167:10: 'CUX'
+            // InternalEdilang.g:167:8: ( 'NAD' )
+            // InternalEdilang.g:167:10: 'NAD'
             {
-            match("CUX"); 
+            match("NAD"); 
 
 
             }
@@ -3511,10 +3584,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__171;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:168:8: ( 'TAX' )
-            // InternalEdilang.g:168:10: 'TAX'
+            // InternalEdilang.g:168:8: ( 'DTM' )
+            // InternalEdilang.g:168:10: 'DTM'
             {
-            match("TAX"); 
+            match("DTM"); 
 
 
             }
@@ -3532,10 +3605,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__172;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:169:8: ( 'RFF' )
-            // InternalEdilang.g:169:10: 'RFF'
+            // InternalEdilang.g:169:8: ( 'BGM' )
+            // InternalEdilang.g:169:10: 'BGM'
             {
-            match("RFF"); 
+            match("BGM"); 
 
 
             }
@@ -3553,10 +3626,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__173;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:170:8: ( 'NAD' )
-            // InternalEdilang.g:170:10: 'NAD'
+            // InternalEdilang.g:170:8: ( 'PAT' )
+            // InternalEdilang.g:170:10: 'PAT'
             {
-            match("NAD"); 
+            match("PAT"); 
 
 
             }
@@ -3574,10 +3647,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__174;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:171:8: ( 'DTM' )
-            // InternalEdilang.g:171:10: 'DTM'
+            // InternalEdilang.g:171:8: ( 'FTX' )
+            // InternalEdilang.g:171:10: 'FTX'
             {
-            match("DTM"); 
+            match("FTX"); 
 
 
             }
@@ -3595,10 +3668,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__175;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:172:8: ( 'BGM' )
-            // InternalEdilang.g:172:10: 'BGM'
+            // InternalEdilang.g:172:8: ( 'ERC' )
+            // InternalEdilang.g:172:10: 'ERC'
             {
-            match("BGM"); 
+            match("ERC"); 
 
 
             }
@@ -3616,10 +3689,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__176;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:173:8: ( 'PAT' )
-            // InternalEdilang.g:173:10: 'PAT'
+            // InternalEdilang.g:173:8: ( 'CNT' )
+            // InternalEdilang.g:173:10: 'CNT'
             {
-            match("PAT"); 
+            match("CNT"); 
 
 
             }
@@ -3637,10 +3710,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__177;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:174:8: ( 'FTX' )
-            // InternalEdilang.g:174:10: 'FTX'
+            // InternalEdilang.g:174:8: ( 'CTA' )
+            // InternalEdilang.g:174:10: 'CTA'
             {
-            match("FTX"); 
+            match("CTA"); 
 
 
             }
@@ -3658,10 +3731,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__178;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:175:8: ( 'ERC' )
-            // InternalEdilang.g:175:10: 'ERC'
+            // InternalEdilang.g:175:8: ( 'PCI' )
+            // InternalEdilang.g:175:10: 'PCI'
             {
-            match("ERC"); 
+            match("PCI"); 
 
 
             }
@@ -3679,10 +3752,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__179;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:176:8: ( 'CNT' )
-            // InternalEdilang.g:176:10: 'CNT'
+            // InternalEdilang.g:176:8: ( 'AAI' )
+            // InternalEdilang.g:176:10: 'AAI'
             {
-            match("CNT"); 
+            match("AAI"); 
 
 
             }
@@ -3700,10 +3773,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__180;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:177:8: ( 'CTA' )
-            // InternalEdilang.g:177:10: 'CTA'
+            // InternalEdilang.g:177:8: ( 'ALS' )
+            // InternalEdilang.g:177:10: 'ALS'
             {
-            match("CTA"); 
+            match("ALS"); 
 
 
             }
@@ -3721,10 +3794,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__181;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:178:8: ( 'PCI' )
-            // InternalEdilang.g:178:10: 'PCI'
+            // InternalEdilang.g:178:8: ( 'ODS' )
+            // InternalEdilang.g:178:10: 'ODS'
             {
-            match("PCI"); 
+            match("ODS"); 
 
 
             }
@@ -3742,10 +3815,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__182;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:179:8: ( 'UNS' )
-            // InternalEdilang.g:179:10: 'UNS'
+            // InternalEdilang.g:179:8: ( 'APD' )
+            // InternalEdilang.g:179:10: 'APD'
             {
-            match("UNS"); 
+            match("APD"); 
 
 
             }
@@ -3763,10 +3836,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__183;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:180:8: ( 'UNT' )
-            // InternalEdilang.g:180:10: 'UNT'
+            // InternalEdilang.g:180:8: ( 'ADS' )
+            // InternalEdilang.g:180:10: 'ADS'
             {
-            match("UNT"); 
+            match("ADS"); 
 
 
             }
@@ -3784,10 +3857,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__184;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:181:8: ( 'UNZ' )
-            // InternalEdilang.g:181:10: 'UNZ'
+            // InternalEdilang.g:181:8: ( 'ERI' )
+            // InternalEdilang.g:181:10: 'ERI'
             {
-            match("UNZ"); 
+            match("ERI"); 
 
 
             }
@@ -3805,10 +3878,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = T__185;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:182:8: ( 'UNE' )
-            // InternalEdilang.g:182:10: 'UNE'
+            // InternalEdilang.g:182:8: ( 'ATR' )
+            // InternalEdilang.g:182:10: 'ATR'
             {
-            match("UNE"); 
+            match("ATR"); 
 
 
             }
@@ -3821,13 +3894,1546 @@ public class InternalEdilangLexer extends Lexer {
     }
     // $ANTLR end "T__185"
 
+    // $ANTLR start "T__186"
+    public final void mT__186() throws RecognitionException {
+        try {
+            int _type = T__186;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:183:8: ( 'BCD' )
+            // InternalEdilang.g:183:10: 'BCD'
+            {
+            match("BCD"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__186"
+
+    // $ANTLR start "T__187"
+    public final void mT__187() throws RecognitionException {
+        try {
+            int _type = T__187;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:184:8: ( 'BLI' )
+            // InternalEdilang.g:184:10: 'BLI'
+            {
+            match("BLI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__187"
+
+    // $ANTLR start "T__188"
+    public final void mT__188() throws RecognitionException {
+        try {
+            int _type = T__188;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:185:8: ( 'MOV' )
+            // InternalEdilang.g:185:10: 'MOV'
+            {
+            match("MOV"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__188"
+
+    // $ANTLR start "T__189"
+    public final void mT__189() throws RecognitionException {
+        try {
+            int _type = T__189;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:186:8: ( 'CLT' )
+            // InternalEdilang.g:186:10: 'CLT'
+            {
+            match("CLT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__189"
+
+    // $ANTLR start "T__190"
+    public final void mT__190() throws RecognitionException {
+        try {
+            int _type = T__190;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:187:8: ( 'CMN' )
+            // InternalEdilang.g:187:10: 'CMN'
+            {
+            match("CMN"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__190"
+
+    // $ANTLR start "T__191"
+    public final void mT__191() throws RecognitionException {
+        try {
+            int _type = T__191;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:188:8: ( 'CNX' )
+            // InternalEdilang.g:188:10: 'CNX'
+            {
+            match("CNX"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__191"
+
+    // $ANTLR start "T__192"
+    public final void mT__192() throws RecognitionException {
+        try {
+            int _type = T__192;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:189:8: ( 'CRI' )
+            // InternalEdilang.g:189:10: 'CRI'
+            {
+            match("CRI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__192"
+
+    // $ANTLR start "T__193"
+    public final void mT__193() throws RecognitionException {
+        try {
+            int _type = T__193;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:190:8: ( 'CON' )
+            // InternalEdilang.g:190:10: 'CON'
+            {
+            match("CON"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__193"
+
+    // $ANTLR start "T__194"
+    public final void mT__194() throws RecognitionException {
+        try {
+            int _type = T__194;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:191:8: ( 'CNY' )
+            // InternalEdilang.g:191:10: 'CNY'
+            {
+            match("CNY"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__194"
+
+    // $ANTLR start "T__195"
+    public final void mT__195() throws RecognitionException {
+        try {
+            int _type = T__195;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:192:8: ( 'CUR' )
+            // InternalEdilang.g:192:10: 'CUR'
+            {
+            match("CUR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__195"
+
+    // $ANTLR start "T__196"
+    public final void mT__196() throws RecognitionException {
+        try {
+            int _type = T__196;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:193:8: ( 'DAV' )
+            // InternalEdilang.g:193:10: 'DAV'
+            {
+            match("DAV"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__196"
+
+    // $ANTLR start "T__197"
+    public final void mT__197() throws RecognitionException {
+        try {
+            int _type = T__197;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:194:8: ( 'DTI' )
+            // InternalEdilang.g:194:10: 'DTI'
+            {
+            match("DTI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__197"
+
+    // $ANTLR start "T__198"
+    public final void mT__198() throws RecognitionException {
+        try {
+            int _type = T__198;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:195:8: ( 'DNT' )
+            // InternalEdilang.g:195:10: 'DNT'
+            {
+            match("DNT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__198"
+
+    // $ANTLR start "T__199"
+    public final void mT__199() throws RecognitionException {
+        try {
+            int _type = T__199;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:196:8: ( 'DIS' )
+            // InternalEdilang.g:196:10: 'DIS'
+            {
+            match("DIS"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__199"
+
+    // $ANTLR start "T__200"
+    public final void mT__200() throws RecognitionException {
+        try {
+            int _type = T__200;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:197:8: ( 'SER' )
+            // InternalEdilang.g:197:10: 'SER'
+            {
+            match("SER"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__200"
+
+    // $ANTLR start "T__201"
+    public final void mT__201() throws RecognitionException {
+        try {
+            int _type = T__201;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:198:8: ( 'FRM' )
+            // InternalEdilang.g:198:10: 'FRM'
+            {
+            match("FRM"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__201"
+
+    // $ANTLR start "T__202"
+    public final void mT__202() throws RecognitionException {
+        try {
+            int _type = T__202;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:199:8: ( 'FRQ' )
+            // InternalEdilang.g:199:10: 'FRQ'
+            {
+            match("FRQ"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__202"
+
+    // $ANTLR start "T__203"
+    public final void mT__203() throws RecognitionException {
+        try {
+            int _type = T__203;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:200:8: ( 'FTI' )
+            // InternalEdilang.g:200:10: 'FTI'
+            {
+            match("FTI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__203"
+
+    // $ANTLR start "T__204"
+    public final void mT__204() throws RecognitionException {
+        try {
+            int _type = T__204;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:201:8: ( 'HDI' )
+            // InternalEdilang.g:201:10: 'HDI'
+            {
+            match("HDI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__204"
+
+    // $ANTLR start "T__205"
+    public final void mT__205() throws RecognitionException {
+        try {
+            int _type = T__205;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:202:8: ( 'HDR' )
+            // InternalEdilang.g:202:10: 'HDR'
+            {
+            match("HDR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__205"
+
+    // $ANTLR start "T__206"
+    public final void mT__206() throws RecognitionException {
+        try {
+            int _type = T__206;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:203:8: ( 'ADI' )
+            // InternalEdilang.g:203:10: 'ADI'
+            {
+            match("ADI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__206"
+
+    // $ANTLR start "T__207"
+    public final void mT__207() throws RecognitionException {
+        try {
+            int _type = T__207;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:204:8: ( 'HDS' )
+            // InternalEdilang.g:204:10: 'HDS'
+            {
+            match("HDS"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__207"
+
+    // $ANTLR start "T__208"
+    public final void mT__208() throws RecognitionException {
+        try {
+            int _type = T__208;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:205:8: ( 'ITD' )
+            // InternalEdilang.g:205:10: 'ITD'
+            {
+            match("ITD"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__208"
+
+    // $ANTLR start "T__209"
+    public final void mT__209() throws RecognitionException {
+        try {
+            int _type = T__209;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:206:8: ( 'ITC' )
+            // InternalEdilang.g:206:10: 'ITC'
+            {
+            match("ITC"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__209"
+
+    // $ANTLR start "T__210"
+    public final void mT__210() throws RecognitionException {
+        try {
+            int _type = T__210;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:207:8: ( 'ICI' )
+            // InternalEdilang.g:207:10: 'ICI'
+            {
+            match("ICI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__210"
+
+    // $ANTLR start "T__211"
+    public final void mT__211() throws RecognitionException {
+        try {
+            int _type = T__211;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:208:8: ( 'IFT' )
+            // InternalEdilang.g:208:10: 'IFT'
+            {
+            match("IFT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__211"
+
+    // $ANTLR start "T__212"
+    public final void mT__212() throws RecognitionException {
+        try {
+            int _type = T__212;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:209:8: ( 'ITM' )
+            // InternalEdilang.g:209:10: 'ITM'
+            {
+            match("ITM"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__212"
+
+    // $ANTLR start "T__213"
+    public final void mT__213() throws RecognitionException {
+        try {
+            int _type = T__213;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:210:8: ( 'LNG' )
+            // InternalEdilang.g:210:10: 'LNG'
+            {
+            match("LNG"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__213"
+
+    // $ANTLR start "T__214"
+    public final void mT__214() throws RecognitionException {
+        try {
+            int _type = T__214;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:211:8: ( 'LKP' )
+            // InternalEdilang.g:211:10: 'LKP'
+            {
+            match("LKP"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__214"
+
+    // $ANTLR start "T__215"
+    public final void mT__215() throws RecognitionException {
+        try {
+            int _type = T__215;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:212:8: ( 'POR' )
+            // InternalEdilang.g:212:10: 'POR'
+            {
+            match("POR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__215"
+
+    // $ANTLR start "T__216"
+    public final void mT__216() throws RecognitionException {
+        try {
+            int _type = T__216;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:213:8: ( 'MES' )
+            // InternalEdilang.g:213:10: 'MES'
+            {
+            match("MES"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__216"
+
+    // $ANTLR start "T__217"
+    public final void mT__217() throws RecognitionException {
+        try {
+            int _type = T__217;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:214:8: ( 'MSD' )
+            // InternalEdilang.g:214:10: 'MSD'
+            {
+            match("MSD"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__217"
+
+    // $ANTLR start "T__218"
+    public final void mT__218() throws RecognitionException {
+        try {
+            int _type = T__218;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:215:8: ( 'MAP' )
+            // InternalEdilang.g:215:10: 'MAP'
+            {
+            match("MAP"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__218"
+
+    // $ANTLR start "T__219"
+    public final void mT__219() throws RecognitionException {
+        try {
+            int _type = T__219;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:216:8: ( 'NME' )
+            // InternalEdilang.g:216:10: 'NME'
+            {
+            match("NME"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__219"
+
+    // $ANTLR start "T__220"
+    public final void mT__220() throws RecognitionException {
+        try {
+            int _type = T__220;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:217:8: ( 'NA' )
+            // InternalEdilang.g:217:10: 'NA'
+            {
+            match("NA"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__220"
+
+    // $ANTLR start "T__221"
+    public final void mT__221() throws RecognitionException {
+        try {
+            int _type = T__221;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:218:8: ( 'NUN' )
+            // InternalEdilang.g:218:10: 'NUN'
+            {
+            match("NUN"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__221"
+
+    // $ANTLR start "T__222"
+    public final void mT__222() throws RecognitionException {
+        try {
+            int _type = T__222;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:219:8: ( 'ODI' )
+            // InternalEdilang.g:219:10: 'ODI'
+            {
+            match("ODI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__222"
+
+    // $ANTLR start "T__223"
+    public final void mT__223() throws RecognitionException {
+        try {
+            int _type = T__223;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:220:8: ( 'ORG' )
+            // InternalEdilang.g:220:10: 'ORG'
+            {
+            match("ORG"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__223"
+
+    // $ANTLR start "T__224"
+    public final void mT__224() throws RecognitionException {
+        try {
+            int _type = T__224;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:221:8: ( 'OTI' )
+            // InternalEdilang.g:221:10: 'OTI'
+            {
+            match("OTI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__224"
+
+    // $ANTLR start "T__225"
+    public final void mT__225() throws RecognitionException {
+        try {
+            int _type = T__225;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:222:8: ( 'PRT' )
+            // InternalEdilang.g:222:10: 'PRT'
+            {
+            match("PRT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__225"
+
+    // $ANTLR start "T__226"
+    public final void mT__226() throws RecognitionException {
+        try {
+            int _type = T__226;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:223:8: ( 'PMT' )
+            // InternalEdilang.g:223:10: 'PMT'
+            {
+            match("PMT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__226"
+
+    // $ANTLR start "T__227"
+    public final void mT__227() throws RecognitionException {
+        try {
+            int _type = T__227;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:224:8: ( 'POP' )
+            // InternalEdilang.g:224:10: 'POP'
+            {
+            match("POP"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__227"
+
+    // $ANTLR start "T__228"
+    public final void mT__228() throws RecognitionException {
+        try {
+            int _type = T__228;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:225:8: ( 'POS' )
+            // InternalEdilang.g:225:10: 'POS'
+            {
+            match("POS"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__228"
+
+    // $ANTLR start "T__229"
+    public final void mT__229() throws RecognitionException {
+        try {
+            int _type = T__229;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:226:8: ( 'PRE' )
+            // InternalEdilang.g:226:10: 'PRE'
+            {
+            match("PRE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__229"
+
+    // $ANTLR start "T__230"
+    public final void mT__230() throws RecognitionException {
+        try {
+            int _type = T__230;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:227:8: ( 'PRRD' )
+            // InternalEdilang.g:227:10: 'PRRD'
+            {
+            match("PRRD"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__230"
+
+    // $ANTLR start "T__231"
+    public final void mT__231() throws RecognitionException {
+        try {
+            int _type = T__231;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:228:8: ( 'PDT' )
+            // InternalEdilang.g:228:10: 'PDT'
+            {
+            match("PDT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__231"
+
+    // $ANTLR start "T__232"
+    public final void mT__232() throws RecognitionException {
+        try {
+            int _type = T__232;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:229:8: ( 'PLI' )
+            // InternalEdilang.g:229:10: 'PLI'
+            {
+            match("PLI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__232"
+
+    // $ANTLR start "T__233"
+    public final void mT__233() throws RecognitionException {
+        try {
+            int _type = T__233;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:230:8: ( 'PRO' )
+            // InternalEdilang.g:230:10: 'PRO'
+            {
+            match("PRO"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__233"
+
+    // $ANTLR start "T__234"
+    public final void mT__234() throws RecognitionException {
+        try {
+            int _type = T__234;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:231:8: ( 'QTI' )
+            // InternalEdilang.g:231:10: 'QTI'
+            {
+            match("QTI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__234"
+
+    // $ANTLR start "T__235"
+    public final void mT__235() throws RecognitionException {
+        try {
+            int _type = T__235;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:232:8: ( 'RTI' )
+            // InternalEdilang.g:232:10: 'RTI'
+            {
+            match("RTI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__235"
+
+    // $ANTLR start "T__236"
+    public final void mT__236() throws RecognitionException {
+        try {
+            int _type = T__236;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:233:8: ( 'RTC' )
+            // InternalEdilang.g:233:10: 'RTC'
+            {
+            match("RTC"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__236"
+
+    // $ANTLR start "T__237"
+    public final void mT__237() throws RecognitionException {
+        try {
+            int _type = T__237;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:234:8: ( 'RFR' )
+            // InternalEdilang.g:234:10: 'RFR'
+            {
+            match("RFR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__237"
+
+    // $ANTLR start "T__238"
+    public final void mT__238() throws RecognitionException {
+        try {
+            int _type = T__238;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:235:8: ( 'RLS' )
+            // InternalEdilang.g:235:10: 'RLS'
+            {
+            match("RLS"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__238"
+
+    // $ANTLR start "T__239"
+    public final void mT__239() throws RecognitionException {
+        try {
+            int _type = T__239;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:236:8: ( 'RCI' )
+            // InternalEdilang.g:236:10: 'RCI'
+            {
+            match("RCI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__239"
+
+    // $ANTLR start "T__240"
+    public final void mT__240() throws RecognitionException {
+        try {
+            int _type = T__240;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:237:8: ( 'RUL' )
+            // InternalEdilang.g:237:10: 'RUL'
+            {
+            match("RUL"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__240"
+
+    // $ANTLR start "T__241"
+    public final void mT__241() throws RecognitionException {
+        try {
+            int _type = T__241;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:238:8: ( 'SDT' )
+            // InternalEdilang.g:238:10: 'SDT'
+            {
+            match("SDT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__241"
+
+    // $ANTLR start "T__242"
+    public final void mT__242() throws RecognitionException {
+        try {
+            int _type = T__242;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:239:8: ( 'ASD' )
+            // InternalEdilang.g:239:10: 'ASD'
+            {
+            match("ASD"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__242"
+
+    // $ANTLR start "T__243"
+    public final void mT__243() throws RecognitionException {
+        try {
+            int _type = T__243;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:240:8: ( 'PSI' )
+            // InternalEdilang.g:240:10: 'PSI'
+            {
+            match("PSI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__243"
+
+    // $ANTLR start "T__244"
+    public final void mT__244() throws RecognitionException {
+        try {
+            int _type = T__244;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:241:8: ( 'SSR' )
+            // InternalEdilang.g:241:10: 'SSR'
+            {
+            match("SSR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__244"
+
+    // $ANTLR start "T__245"
+    public final void mT__245() throws RecognitionException {
+        try {
+            int _type = T__245;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:242:8: ( 'TFF' )
+            // InternalEdilang.g:242:10: 'TFF'
+            {
+            match("TFF"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__245"
+
+    // $ANTLR start "T__246"
+    public final void mT__246() throws RecognitionException {
+        try {
+            int _type = T__246;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:243:8: ( 'TXS' )
+            // InternalEdilang.g:243:10: 'TXS'
+            {
+            match("TXS"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__246"
+
+    // $ANTLR start "T__247"
+    public final void mT__247() throws RecognitionException {
+        try {
+            int _type = T__247;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:244:8: ( 'TCE' )
+            // InternalEdilang.g:244:10: 'TCE'
+            {
+            match("TCE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__247"
+
+    // $ANTLR start "T__248"
+    public final void mT__248() throws RecognitionException {
+        try {
+            int _type = T__248;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:245:8: ( 'TIZ' )
+            // InternalEdilang.g:245:10: 'TIZ'
+            {
+            match("TIZ"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__248"
+
+    // $ANTLR start "T__249"
+    public final void mT__249() throws RecognitionException {
+        try {
+            int _type = T__249;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:246:8: ( 'ATI' )
+            // InternalEdilang.g:246:10: 'ATI'
+            {
+            match("ATI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__249"
+
+    // $ANTLR start "T__250"
+    public final void mT__250() throws RecognitionException {
+        try {
+            int _type = T__250;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:247:8: ( 'TRF' )
+            // InternalEdilang.g:247:10: 'TRF'
+            {
+            match("TRF"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__250"
+
+    // $ANTLR start "T__251"
+    public final void mT__251() throws RecognitionException {
+        try {
+            int _type = T__251;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:248:8: ( 'TVL' )
+            // InternalEdilang.g:248:10: 'TVL'
+            {
+            match("TVL"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__251"
+
+    // $ANTLR start "T__252"
+    public final void mT__252() throws RecognitionException {
+        try {
+            int _type = T__252;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:249:8: ( 'TDI' )
+            // InternalEdilang.g:249:10: 'TDI'
+            {
+            match("TDI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__252"
+
+    // $ANTLR start "T__253"
+    public final void mT__253() throws RecognitionException {
+        try {
+            int _type = T__253;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:250:8: ( 'TIF' )
+            // InternalEdilang.g:250:10: 'TIF'
+            {
+            match("TIF"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__253"
+
+    // $ANTLR start "T__254"
+    public final void mT__254() throws RecognitionException {
+        try {
+            int _type = T__254;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:251:8: ( 'VEH' )
+            // InternalEdilang.g:251:10: 'VEH'
+            {
+            match("VEH"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__254"
+
+    // $ANTLR start "T__255"
+    public final void mT__255() throws RecognitionException {
+        try {
+            int _type = T__255;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:252:8: ( 'UNS' )
+            // InternalEdilang.g:252:10: 'UNS'
+            {
+            match("UNS"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__255"
+
+    // $ANTLR start "T__256"
+    public final void mT__256() throws RecognitionException {
+        try {
+            int _type = T__256;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:253:8: ( 'UNT' )
+            // InternalEdilang.g:253:10: 'UNT'
+            {
+            match("UNT"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__256"
+
+    // $ANTLR start "T__257"
+    public final void mT__257() throws RecognitionException {
+        try {
+            int _type = T__257;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:254:8: ( 'UNZ' )
+            // InternalEdilang.g:254:10: 'UNZ'
+            {
+            match("UNZ"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__257"
+
+    // $ANTLR start "T__258"
+    public final void mT__258() throws RecognitionException {
+        try {
+            int _type = T__258;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalEdilang.g:255:8: ( 'UNE' )
+            // InternalEdilang.g:255:10: 'UNE'
+            {
+            match("UNE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__258"
+
     // $ANTLR start "RULE_QUOTE_AND_NL"
     public final void mRULE_QUOTE_AND_NL() throws RecognitionException {
         try {
             int _type = RULE_QUOTE_AND_NL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71795:19: ( ( '\\'' | '~' ) ( '\\n' )? )
-            // InternalEdilang.g:71795:21: ( '\\'' | '~' ) ( '\\n' )?
+            // InternalEdilang.g:86615:19: ( ( '\\'' | '~' ) ( '\\n' )? )
+            // InternalEdilang.g:86615:21: ( '\\'' | '~' ) ( '\\n' )?
             {
             if ( input.LA(1)=='\''||input.LA(1)=='~' ) {
                 input.consume();
@@ -3838,7 +5444,7 @@ public class InternalEdilangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalEdilang.g:71795:32: ( '\\n' )?
+            // InternalEdilang.g:86615:32: ( '\\n' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -3847,7 +5453,7 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalEdilang.g:71795:32: '\\n'
+                    // InternalEdilang.g:86615:32: '\\n'
                     {
                     match('\n'); 
 
@@ -3872,8 +5478,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71797:11: ( ( '+' | '*' ) )
-            // InternalEdilang.g:71797:13: ( '+' | '*' )
+            // InternalEdilang.g:86617:11: ( ( '+' | '*' ) )
+            // InternalEdilang.g:86617:13: ( '+' | '*' )
             {
             if ( (input.LA(1)>='*' && input.LA(1)<='+') ) {
                 input.consume();
@@ -3900,8 +5506,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71799:12: ( ':' )
-            // InternalEdilang.g:71799:14: ':'
+            // InternalEdilang.g:86619:12: ( ':' )
+            // InternalEdilang.g:86619:14: ':'
             {
             match(':'); 
 
@@ -3920,8 +5526,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71801:10: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
-            // InternalEdilang.g:71801:12: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            // InternalEdilang.g:86621:10: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalEdilang.g:86621:12: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
             {
             matchRange('0','9'); 
             matchRange('0','9'); 
@@ -3955,8 +5561,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71803:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )? )
-            // InternalEdilang.g:71803:11: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
+            // InternalEdilang.g:86623:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )? )
+            // InternalEdilang.g:86623:11: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -3967,7 +5573,7 @@ public class InternalEdilangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalEdilang.g:71803:40: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
+            // InternalEdilang.g:86623:40: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -3976,9 +5582,9 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalEdilang.g:71803:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )
+                    // InternalEdilang.g:86623:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )* ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )
                     {
-                    // InternalEdilang.g:71803:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )*
+                    // InternalEdilang.g:86623:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | ' ' | '?' )*
                     loop2:
                     do {
                         int alt2=2;
@@ -4051,11 +5657,11 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71805:13: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // InternalEdilang.g:71805:15: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // InternalEdilang.g:86625:13: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // InternalEdilang.g:86625:15: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // InternalEdilang.g:71805:19: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+            // InternalEdilang.g:86625:19: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
             loop4:
             do {
                 int alt4=3;
@@ -4071,7 +5677,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalEdilang.g:71805:20: '\\\\' .
+            	    // InternalEdilang.g:86625:20: '\\\\' .
             	    {
             	    match('\\'); 
             	    matchAny(); 
@@ -4079,7 +5685,7 @@ public class InternalEdilangLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // InternalEdilang.g:71805:27: ~ ( ( '\\\\' | '\"' ) )
+            	    // InternalEdilang.g:86625:27: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4116,10 +5722,10 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71807:9: ( ( '\\t' | '\\r' | '\\n' )+ )
-            // InternalEdilang.g:71807:11: ( '\\t' | '\\r' | '\\n' )+
+            // InternalEdilang.g:86627:9: ( ( '\\t' | '\\r' | '\\n' )+ )
+            // InternalEdilang.g:86627:11: ( '\\t' | '\\r' | '\\n' )+
             {
-            // InternalEdilang.g:71807:11: ( '\\t' | '\\r' | '\\n' )+
+            // InternalEdilang.g:86627:11: ( '\\t' | '\\r' | '\\n' )+
             int cnt5=0;
             loop5:
             do {
@@ -4173,12 +5779,12 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71809:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalEdilang.g:71809:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalEdilang.g:86629:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalEdilang.g:86629:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalEdilang.g:71809:24: ( options {greedy=false; } : . )*
+            // InternalEdilang.g:86629:24: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
@@ -4203,7 +5809,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalEdilang.g:71809:52: .
+            	    // InternalEdilang.g:86629:52: .
             	    {
             	    matchAny(); 
 
@@ -4233,12 +5839,12 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71811:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalEdilang.g:71811:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalEdilang.g:86631:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalEdilang.g:86631:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalEdilang.g:71811:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalEdilang.g:86631:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop7:
             do {
                 int alt7=2;
@@ -4251,7 +5857,7 @@ public class InternalEdilangLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalEdilang.g:71811:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalEdilang.g:86631:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4271,7 +5877,7 @@ public class InternalEdilangLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalEdilang.g:71811:40: ( ( '\\r' )? '\\n' )?
+            // InternalEdilang.g:86631:40: ( ( '\\r' )? '\\n' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -4280,9 +5886,9 @@ public class InternalEdilangLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // InternalEdilang.g:71811:41: ( '\\r' )? '\\n'
+                    // InternalEdilang.g:86631:41: ( '\\r' )? '\\n'
                     {
-                    // InternalEdilang.g:71811:41: ( '\\r' )?
+                    // InternalEdilang.g:86631:41: ( '\\r' )?
                     int alt8=2;
                     int LA8_0 = input.LA(1);
 
@@ -4291,7 +5897,7 @@ public class InternalEdilangLexer extends Lexer {
                     }
                     switch (alt8) {
                         case 1 :
-                            // InternalEdilang.g:71811:41: '\\r'
+                            // InternalEdilang.g:86631:41: '\\r'
                             {
                             match('\r'); 
 
@@ -4323,8 +5929,8 @@ public class InternalEdilangLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEdilang.g:71813:16: ( . )
-            // InternalEdilang.g:71813:18: .
+            // InternalEdilang.g:86633:16: ( . )
+            // InternalEdilang.g:86633:18: .
             {
             matchAny(); 
 
@@ -4339,8 +5945,8 @@ public class InternalEdilangLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalEdilang.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | T__183 | T__184 | T__185 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
-        int alt10=182;
+        // InternalEdilang.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | T__183 | T__184 | T__185 | T__186 | T__187 | T__188 | T__189 | T__190 | T__191 | T__192 | T__193 | T__194 | T__195 | T__196 | T__197 | T__198 | T__199 | T__200 | T__201 | T__202 | T__203 | T__204 | T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | T__226 | T__227 | T__228 | T__229 | T__230 | T__231 | T__232 | T__233 | T__234 | T__235 | T__236 | T__237 | T__238 | T__239 | T__240 | T__241 | T__242 | T__243 | T__244 | T__245 | T__246 | T__247 | T__248 | T__249 | T__250 | T__251 | T__252 | T__253 | T__254 | T__255 | T__256 | T__257 | T__258 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
+        int alt10=255;
         alt10 = dfa10.predict(input);
         switch (alt10) {
             case 1 :
@@ -5548,70 +7154,581 @@ public class InternalEdilangLexer extends Lexer {
                 }
                 break;
             case 173 :
-                // InternalEdilang.g:1:1128: RULE_QUOTE_AND_NL
+                // InternalEdilang.g:1:1128: T__186
+                {
+                mT__186(); 
+
+                }
+                break;
+            case 174 :
+                // InternalEdilang.g:1:1135: T__187
+                {
+                mT__187(); 
+
+                }
+                break;
+            case 175 :
+                // InternalEdilang.g:1:1142: T__188
+                {
+                mT__188(); 
+
+                }
+                break;
+            case 176 :
+                // InternalEdilang.g:1:1149: T__189
+                {
+                mT__189(); 
+
+                }
+                break;
+            case 177 :
+                // InternalEdilang.g:1:1156: T__190
+                {
+                mT__190(); 
+
+                }
+                break;
+            case 178 :
+                // InternalEdilang.g:1:1163: T__191
+                {
+                mT__191(); 
+
+                }
+                break;
+            case 179 :
+                // InternalEdilang.g:1:1170: T__192
+                {
+                mT__192(); 
+
+                }
+                break;
+            case 180 :
+                // InternalEdilang.g:1:1177: T__193
+                {
+                mT__193(); 
+
+                }
+                break;
+            case 181 :
+                // InternalEdilang.g:1:1184: T__194
+                {
+                mT__194(); 
+
+                }
+                break;
+            case 182 :
+                // InternalEdilang.g:1:1191: T__195
+                {
+                mT__195(); 
+
+                }
+                break;
+            case 183 :
+                // InternalEdilang.g:1:1198: T__196
+                {
+                mT__196(); 
+
+                }
+                break;
+            case 184 :
+                // InternalEdilang.g:1:1205: T__197
+                {
+                mT__197(); 
+
+                }
+                break;
+            case 185 :
+                // InternalEdilang.g:1:1212: T__198
+                {
+                mT__198(); 
+
+                }
+                break;
+            case 186 :
+                // InternalEdilang.g:1:1219: T__199
+                {
+                mT__199(); 
+
+                }
+                break;
+            case 187 :
+                // InternalEdilang.g:1:1226: T__200
+                {
+                mT__200(); 
+
+                }
+                break;
+            case 188 :
+                // InternalEdilang.g:1:1233: T__201
+                {
+                mT__201(); 
+
+                }
+                break;
+            case 189 :
+                // InternalEdilang.g:1:1240: T__202
+                {
+                mT__202(); 
+
+                }
+                break;
+            case 190 :
+                // InternalEdilang.g:1:1247: T__203
+                {
+                mT__203(); 
+
+                }
+                break;
+            case 191 :
+                // InternalEdilang.g:1:1254: T__204
+                {
+                mT__204(); 
+
+                }
+                break;
+            case 192 :
+                // InternalEdilang.g:1:1261: T__205
+                {
+                mT__205(); 
+
+                }
+                break;
+            case 193 :
+                // InternalEdilang.g:1:1268: T__206
+                {
+                mT__206(); 
+
+                }
+                break;
+            case 194 :
+                // InternalEdilang.g:1:1275: T__207
+                {
+                mT__207(); 
+
+                }
+                break;
+            case 195 :
+                // InternalEdilang.g:1:1282: T__208
+                {
+                mT__208(); 
+
+                }
+                break;
+            case 196 :
+                // InternalEdilang.g:1:1289: T__209
+                {
+                mT__209(); 
+
+                }
+                break;
+            case 197 :
+                // InternalEdilang.g:1:1296: T__210
+                {
+                mT__210(); 
+
+                }
+                break;
+            case 198 :
+                // InternalEdilang.g:1:1303: T__211
+                {
+                mT__211(); 
+
+                }
+                break;
+            case 199 :
+                // InternalEdilang.g:1:1310: T__212
+                {
+                mT__212(); 
+
+                }
+                break;
+            case 200 :
+                // InternalEdilang.g:1:1317: T__213
+                {
+                mT__213(); 
+
+                }
+                break;
+            case 201 :
+                // InternalEdilang.g:1:1324: T__214
+                {
+                mT__214(); 
+
+                }
+                break;
+            case 202 :
+                // InternalEdilang.g:1:1331: T__215
+                {
+                mT__215(); 
+
+                }
+                break;
+            case 203 :
+                // InternalEdilang.g:1:1338: T__216
+                {
+                mT__216(); 
+
+                }
+                break;
+            case 204 :
+                // InternalEdilang.g:1:1345: T__217
+                {
+                mT__217(); 
+
+                }
+                break;
+            case 205 :
+                // InternalEdilang.g:1:1352: T__218
+                {
+                mT__218(); 
+
+                }
+                break;
+            case 206 :
+                // InternalEdilang.g:1:1359: T__219
+                {
+                mT__219(); 
+
+                }
+                break;
+            case 207 :
+                // InternalEdilang.g:1:1366: T__220
+                {
+                mT__220(); 
+
+                }
+                break;
+            case 208 :
+                // InternalEdilang.g:1:1373: T__221
+                {
+                mT__221(); 
+
+                }
+                break;
+            case 209 :
+                // InternalEdilang.g:1:1380: T__222
+                {
+                mT__222(); 
+
+                }
+                break;
+            case 210 :
+                // InternalEdilang.g:1:1387: T__223
+                {
+                mT__223(); 
+
+                }
+                break;
+            case 211 :
+                // InternalEdilang.g:1:1394: T__224
+                {
+                mT__224(); 
+
+                }
+                break;
+            case 212 :
+                // InternalEdilang.g:1:1401: T__225
+                {
+                mT__225(); 
+
+                }
+                break;
+            case 213 :
+                // InternalEdilang.g:1:1408: T__226
+                {
+                mT__226(); 
+
+                }
+                break;
+            case 214 :
+                // InternalEdilang.g:1:1415: T__227
+                {
+                mT__227(); 
+
+                }
+                break;
+            case 215 :
+                // InternalEdilang.g:1:1422: T__228
+                {
+                mT__228(); 
+
+                }
+                break;
+            case 216 :
+                // InternalEdilang.g:1:1429: T__229
+                {
+                mT__229(); 
+
+                }
+                break;
+            case 217 :
+                // InternalEdilang.g:1:1436: T__230
+                {
+                mT__230(); 
+
+                }
+                break;
+            case 218 :
+                // InternalEdilang.g:1:1443: T__231
+                {
+                mT__231(); 
+
+                }
+                break;
+            case 219 :
+                // InternalEdilang.g:1:1450: T__232
+                {
+                mT__232(); 
+
+                }
+                break;
+            case 220 :
+                // InternalEdilang.g:1:1457: T__233
+                {
+                mT__233(); 
+
+                }
+                break;
+            case 221 :
+                // InternalEdilang.g:1:1464: T__234
+                {
+                mT__234(); 
+
+                }
+                break;
+            case 222 :
+                // InternalEdilang.g:1:1471: T__235
+                {
+                mT__235(); 
+
+                }
+                break;
+            case 223 :
+                // InternalEdilang.g:1:1478: T__236
+                {
+                mT__236(); 
+
+                }
+                break;
+            case 224 :
+                // InternalEdilang.g:1:1485: T__237
+                {
+                mT__237(); 
+
+                }
+                break;
+            case 225 :
+                // InternalEdilang.g:1:1492: T__238
+                {
+                mT__238(); 
+
+                }
+                break;
+            case 226 :
+                // InternalEdilang.g:1:1499: T__239
+                {
+                mT__239(); 
+
+                }
+                break;
+            case 227 :
+                // InternalEdilang.g:1:1506: T__240
+                {
+                mT__240(); 
+
+                }
+                break;
+            case 228 :
+                // InternalEdilang.g:1:1513: T__241
+                {
+                mT__241(); 
+
+                }
+                break;
+            case 229 :
+                // InternalEdilang.g:1:1520: T__242
+                {
+                mT__242(); 
+
+                }
+                break;
+            case 230 :
+                // InternalEdilang.g:1:1527: T__243
+                {
+                mT__243(); 
+
+                }
+                break;
+            case 231 :
+                // InternalEdilang.g:1:1534: T__244
+                {
+                mT__244(); 
+
+                }
+                break;
+            case 232 :
+                // InternalEdilang.g:1:1541: T__245
+                {
+                mT__245(); 
+
+                }
+                break;
+            case 233 :
+                // InternalEdilang.g:1:1548: T__246
+                {
+                mT__246(); 
+
+                }
+                break;
+            case 234 :
+                // InternalEdilang.g:1:1555: T__247
+                {
+                mT__247(); 
+
+                }
+                break;
+            case 235 :
+                // InternalEdilang.g:1:1562: T__248
+                {
+                mT__248(); 
+
+                }
+                break;
+            case 236 :
+                // InternalEdilang.g:1:1569: T__249
+                {
+                mT__249(); 
+
+                }
+                break;
+            case 237 :
+                // InternalEdilang.g:1:1576: T__250
+                {
+                mT__250(); 
+
+                }
+                break;
+            case 238 :
+                // InternalEdilang.g:1:1583: T__251
+                {
+                mT__251(); 
+
+                }
+                break;
+            case 239 :
+                // InternalEdilang.g:1:1590: T__252
+                {
+                mT__252(); 
+
+                }
+                break;
+            case 240 :
+                // InternalEdilang.g:1:1597: T__253
+                {
+                mT__253(); 
+
+                }
+                break;
+            case 241 :
+                // InternalEdilang.g:1:1604: T__254
+                {
+                mT__254(); 
+
+                }
+                break;
+            case 242 :
+                // InternalEdilang.g:1:1611: T__255
+                {
+                mT__255(); 
+
+                }
+                break;
+            case 243 :
+                // InternalEdilang.g:1:1618: T__256
+                {
+                mT__256(); 
+
+                }
+                break;
+            case 244 :
+                // InternalEdilang.g:1:1625: T__257
+                {
+                mT__257(); 
+
+                }
+                break;
+            case 245 :
+                // InternalEdilang.g:1:1632: T__258
+                {
+                mT__258(); 
+
+                }
+                break;
+            case 246 :
+                // InternalEdilang.g:1:1639: RULE_QUOTE_AND_NL
                 {
                 mRULE_QUOTE_AND_NL(); 
 
                 }
                 break;
-            case 174 :
-                // InternalEdilang.g:1:1146: RULE_PLUS
+            case 247 :
+                // InternalEdilang.g:1:1657: RULE_PLUS
                 {
                 mRULE_PLUS(); 
 
                 }
                 break;
-            case 175 :
-                // InternalEdilang.g:1:1156: RULE_COLON
+            case 248 :
+                // InternalEdilang.g:1:1667: RULE_COLON
                 {
                 mRULE_COLON(); 
 
                 }
                 break;
-            case 176 :
-                // InternalEdilang.g:1:1167: RULE_INT
+            case 249 :
+                // InternalEdilang.g:1:1678: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 177 :
-                // InternalEdilang.g:1:1176: RULE_ID
+            case 250 :
+                // InternalEdilang.g:1:1687: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 178 :
-                // InternalEdilang.g:1:1184: RULE_STRING
+            case 251 :
+                // InternalEdilang.g:1:1695: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 179 :
-                // InternalEdilang.g:1:1196: RULE_WS
+            case 252 :
+                // InternalEdilang.g:1:1707: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 180 :
-                // InternalEdilang.g:1:1204: RULE_ML_COMMENT
+            case 253 :
+                // InternalEdilang.g:1:1715: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 181 :
-                // InternalEdilang.g:1:1220: RULE_SL_COMMENT
+            case 254 :
+                // InternalEdilang.g:1:1731: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 182 :
-                // InternalEdilang.g:1:1236: RULE_ANY_OTHER
+            case 255 :
+                // InternalEdilang.g:1:1747: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -5625,173 +7742,197 @@ public class InternalEdilangLexer extends Lexer {
 
     protected DFA10 dfa10 = new DFA10(this);
     static final String DFA10_eotS =
-        "\1\uffff\1\36\24\42\3\uffff\1\42\1\uffff\1\36\1\uffff\1\36\2\uffff\2\42\1\uffff\164\42\3\uffff\1\42\4\uffff\1\u014b\1\u014c\1\u014d\1\u014e\1\u014f\1\u0150\1\u0151\1\u0152\1\u0153\1\u0154\1\u0155\1\u0156\1\u0157\1\u0158\1\u0159\1\u015a\1\u015b\1\u015c\1\u015d\1\u015e\1\u015f\1\u0160\1\u0161\1\u0162\1\u0163\1\u0164\1\u0165\1\u0166\1\u0167\1\u0168\1\u0169\1\u016a\1\u016b\1\u016c\1\u016d\1\u016e\1\u016f\1\u0170\1\u0171\1\u0172\1\u0173\1\u0174\1\u0175\1\u0176\1\u0177\1\u0178\1\u0179\1\u017a\1\u017b\1\u017c\1\u017d\1\u017e\1\u017f\1\u0180\1\u0181\1\u0182\1\u0183\1\u0184\1\u0185\1\u0186\1\u0187\1\u0188\1\u0189\1\u018a\1\u018b\1\u018c\1\u018d\1\u018e\1\u018f\1\u0190\1\u0191\1\u0192\1\u0193\1\u0194\1\u0195\1\u0196\1\u0197\1\u0198\1\u0199\1\u019a\1\u019b\1\u019c\1\u019d\1\u019e\1\u019f\1\u01a0\1\u01a1\1\u01a2\1\u01a3\1\u01a4\1\u01a5\1\u01a6\1\u01a7\1\u01a8\1\u01a9\1\u01aa\1\u01ab\1\u01ac\1\u01ad\1\u01ae\1\u01af\1\u01b0\1\u01b1\1\u01b2\1\u01b3\1\u01b4\1\u01b5\1\u01b6\1\u01b7\1\u01b8\1\u01b9\1\u01ba\1\u01bb\1\u01bc\1\u01bd\1\u01be\1\u01bf\1\u01c0\1\u01c1\1\u01c2\1\u01c3\1\u01c4\1\u01c5\1\u01c6\1\u01c7\1\u01c8\1\u01c9\1\u01ca\1\u01cb\1\u01cc\1\u01cd\1\u01ce\1\u01cf\1\u01d0\1\u01d1\1\u01d2\1\u01d3\1\u01d4\1\u01d5\1\u01d6\1\u01d7\1\u01d8\1\u01d9\1\u01da\1\u01db\1\u01dc\1\u01dd\1\u01de\1\u01df\1\u01e0\1\u01e1\1\u01e2\1\u01e3\1\u01e4\1\u01e5\1\u01e6\1\u01e7\1\u01e8\1\u01e9\1\u01ea\1\u01eb\1\u01ec\1\u01ed\1\u01ee\1\u01ef\1\u01f0\1\u01f1\1\u01f2\1\u01f3\1\u01f4\1\u01f5\1\42\u00ab\uffff\14\42\1\u0203\1\uffff";
+        "\1\uffff\1\36\24\42\3\uffff\1\42\1\uffff\1\36\1\uffff\1\36\2\uffff\2\42\1\uffff\121\42\1\u014b\72\42\3\uffff\1\42\4\uffff\1\u01ac\1\u01ad\1\u01ae\1\u01af\1\u01b0\1\u01b1\1\u01b2\1\u01b3\1\u01b4\1\u01b5\1\u01b6\1\u01b7\1\u01b8\1\u01b9\1\u01ba\1\u01bb\1\u01bc\1\u01bd\1\u01be\1\u01bf\1\u01c0\1\u01c1\1\u01c2\1\u01c3\1\u01c4\1\u01c5\1\u01c6\1\u01c7\1\u01c8\1\u01c9\1\u01ca\1\u01cb\1\u01cc\1\u01cd\1\u01ce\1\u01cf\1\u01d0\1\u01d1\1\u01d2\1\u01d3\1\u01d4\1\u01d5\1\u01d6\1\u01d7\1\u01d8\1\u01d9\1\u01da\1\u01db\1\u01dc\1\u01dd\1\u01de\1\u01df\1\u01e0\1\u01e1\1\u01e2\1\u01e3\1\u01e4\1\u01e5\1\u01e6\1\u01e7\1\u01e8\1\u01e9\1\u01ea\1\u01eb\1\u01ec\1\u01ed\1\u01ee\1\u01ef\1\u01f0\1\u01f1\1\u01f2\1\u01f3\1\u01f4\1\u01f5\1\u01f6\1\u01f7\1\u01f8\1\u01f9\1\u01fa\1\u01fb\1\u01fc\1\u01fd\1\u01fe\1\u01ff\1\u0200\1\u0201\1\u0202\1\u0203\1\u0204\1\u0205\1\u0206\1\u0207\1\u0208\1\u0209\1\u020a\1\u020b\1\u020c\1\u020d\1\u020e\1\u020f\1\u0210\1\u0211\1\u0212\1\u0213\1\u0214\1\u0215\1\u0216\1\u0217\1\u0218\1\u0219\1\u021a\1\u021b\1\u021c\1\u021d\1\u021e\1\u021f\1\u0220\1\u0221\1\u0222\1\u0223\1\u0224\1\u0225\1\u0226\1\u0227\1\u0228\1\u0229\1\u022a\1\u022b\1\u022c\1\u022d\1\u022e\1\u022f\1\u0230\1\u0231\1\u0232\1\u0233\1\u0234\1\u0235\1\u0236\1\u0237\1\u0238\1\u0239\1\u023a\1\u023b\1\u023c\1\u023d\1\u023e\1\u023f\1\uffff\1\u0240\1\u0241\1\u0242\1\u0243\1\u0244\1\u0245\1\u0246\1\u0247\1\u0248\1\u0249\1\u024a\1\u024b\1\u024c\1\u024d\1\u024e\1\u024f\1\u0250\1\u0251\1\42\1\u0253\1\u0254\1\u0255\1\u0256\1\u0257\1\u0258\1\u0259\1\u025a\1\u025b\1\u025c\1\u025d\1\u025e\1\u025f\1\u0260\1\u0261\1\u0262\1\u0263\1\u0264\1\u0265\1\u0266\1\u0267\1\u0268\1\u0269\1\u026a\1\u026b\1\u026c\1\u026d\1\u026e\1\u026f\1\u0270\1\u0271\1\u0272\1\u0273\1\u0274\1\u0275\1\u0276\1\u0277\1\u0278\1\u0279\1\u027a\1\u027b\1\u027c\1\u027d\1\u027e\1\u027f\1\u0280\1\u0281\1\u0282\1\u0283\1\u0284\1\u0285\1\u0286\1\u0287\1\u0288\1\u0289\1\u028a\1\u028b\1\u028c\1\u028d\1\u028e\1\u028f\1\u0290\1\u0291\1\u0292\1\u0293\1\u0294\1\u0295\1\u0296\1\u0297\1\u0298\1\u0299\1\u029a\1\u029b\1\u029c\1\u029d\1\u029e\1\42\u00a6\uffff\1\u02a0\114\uffff\1\42\1\uffff\13\42\1\u02ad\1\uffff";
     static final String DFA10_eofS =
-        "\u0204\uffff";
+        "\u02ae\uffff";
     static final String DFA10_minS =
-        "\1\0\1\77\1\103\1\104\3\101\1\104\1\103\1\104\1\101\1\103\1\101\1\105\2\101\1\122\1\103\2\101\1\114\1\104\3\uffff\1\60\1\uffff\1\0\1\uffff\1\52\2\uffff\1\101\1\111\1\uffff\2\122\1\124\1\103\1\120\1\104\1\111\2\124\1\123\1\111\1\123\1\115\1\126\1\104\1\111\1\104\1\116\1\101\1\120\1\111\1\104\1\111\1\124\1\130\1\101\1\115\1\116\1\123\2\111\1\123\1\103\1\104\1\107\1\115\1\124\1\111\1\115\1\120\1\101\1\103\1\105\1\101\1\111\1\123\1\122\1\121\1\130\1\123\1\111\1\104\1\122\1\125\2\116\1\104\1\105\1\104\1\103\2\104\1\121\1\116\1\103\1\116\1\101\1\123\1\107\1\101\1\104\2\103\1\122\1\111\2\101\1\103\1\104\1\131\1\124\1\103\1\111\1\123\1\101\1\122\1\131\1\123\2\114\1\107\1\104\1\114\1\105\1\111\1\106\1\114\1\103\1\107\1\111\1\120\1\122\1\101\1\103\1\124\1\115\2\104\1\114\1\125\1\122\1\114\1\130\1\111\1\107\1\111\3\uffff\1\60\4\uffff\u00ab\40\1\60\u00ab\uffff\14\60\1\40\1\uffff";
+        "\1\0\1\77\1\103\4\101\1\104\1\103\1\104\1\101\1\103\4\101\1\122\1\103\2\101\1\105\1\104\3\uffff\1\60\1\uffff\1\0\1\uffff\1\52\2\uffff\1\101\1\111\1\uffff\1\111\1\122\1\124\1\103\3\104\1\111\1\124\1\111\1\123\1\111\1\123\1\115\1\104\1\111\1\126\1\104\1\111\1\104\1\116\1\101\1\116\1\111\1\104\1\111\1\124\1\122\1\101\1\111\1\115\1\116\1\123\2\111\1\123\1\103\1\104\1\107\1\111\2\124\1\111\1\115\1\120\1\101\1\103\1\105\1\101\1\111\1\123\1\122\1\121\1\111\1\115\1\123\1\111\1\104\1\122\1\125\2\116\1\111\1\104\1\105\1\104\1\103\2\104\1\121\1\103\1\116\1\103\1\116\1\107\1\120\1\101\1\123\1\104\1\101\1\120\1\40\1\105\1\116\2\103\1\122\1\111\2\101\1\103\1\104\1\131\1\124\1\103\1\111\1\124\1\111\1\123\1\101\1\122\2\111\2\114\1\107\1\104\1\114\1\103\1\111\1\106\1\123\2\114\1\103\1\107\1\111\1\120\1\122\1\101\1\124\1\122\1\103\1\111\1\115\2\104\1\114\1\106\1\122\1\130\1\106\1\123\1\106\1\114\1\111\1\110\1\111\1\107\1\111\3\uffff\1\60\4\uffff\u0094\40\1\uffff\22\40\1\104\114\40\1\60\u00a6\uffff\1\40\114\uffff\1\60\1\uffff\13\60\1\40\1\uffff";
     static final String DFA10_maxS =
-        "\1\uffff\1\77\1\116\3\125\1\124\1\126\1\124\1\122\1\131\1\122\1\117\1\123\1\101\1\131\1\126\2\124\1\126\1\114\1\122\3\uffff\1\71\1\uffff\1\uffff\1\uffff\1\57\2\uffff\1\132\1\111\1\uffff\2\122\1\124\1\111\2\122\1\111\2\124\1\123\1\111\1\123\1\115\1\126\1\111\1\126\1\104\1\116\1\111\1\120\4\124\1\130\1\101\1\115\1\116\1\123\2\115\1\123\1\103\1\104\1\111\1\115\1\124\1\111\1\126\1\120\1\116\1\120\1\124\1\101\1\111\1\124\1\122\1\121\1\130\1\123\1\111\1\123\1\122\1\125\2\116\1\104\1\105\1\104\1\103\1\104\1\126\1\121\1\116\1\103\1\116\1\115\1\123\1\107\1\101\2\124\1\111\1\122\1\111\2\101\1\126\1\104\1\131\1\124\1\103\1\111\1\123\1\101\1\122\1\131\1\123\2\114\1\107\1\104\1\114\1\105\1\111\1\106\1\114\1\104\1\121\1\111\1\125\1\123\1\130\1\103\1\124\1\115\1\120\1\104\1\114\1\125\1\122\1\114\1\130\1\111\1\107\1\111\3\uffff\1\71\4\uffff\u00ab\172\1\71\u00ab\uffff\14\71\1\172\1\uffff";
+        "\1\uffff\1\77\1\116\3\125\1\124\1\126\1\124\1\122\1\131\1\124\1\117\1\123\1\125\1\131\1\126\1\125\1\124\1\130\1\114\1\124\3\uffff\1\71\1\uffff\1\uffff\1\uffff\1\57\2\uffff\1\132\1\111\1\uffff\1\123\1\122\1\124\1\123\2\122\1\111\2\124\1\111\1\123\1\111\1\123\1\115\1\104\1\111\1\126\1\111\1\126\1\104\1\116\1\124\1\120\1\131\3\124\1\130\1\101\1\111\1\126\1\116\2\123\1\115\1\123\1\103\1\104\1\111\1\115\2\124\1\111\1\126\1\120\1\116\1\120\1\124\1\101\1\111\1\124\1\122\1\121\1\130\1\121\1\123\1\111\1\123\1\122\1\125\2\116\1\123\1\111\1\105\1\124\1\103\1\104\1\126\1\121\1\115\1\116\1\103\1\116\1\107\1\120\2\123\1\107\1\126\1\120\1\172\1\105\1\116\1\124\1\111\1\122\1\111\2\101\1\126\1\111\1\131\1\124\1\123\2\124\1\111\1\123\1\101\1\122\1\131\1\123\2\114\1\107\1\104\1\114\2\111\1\122\1\123\2\114\1\104\1\122\1\111\1\125\1\123\1\130\1\124\1\122\1\105\1\124\1\115\1\120\1\104\1\114\1\125\1\122\1\130\1\106\1\123\1\132\1\114\1\111\1\110\1\123\1\107\1\111\3\uffff\1\71\4\uffff\u0094\172\1\uffff\22\172\1\104\114\172\1\71\u00a6\uffff\1\172\114\uffff\1\71\1\uffff\13\71\1\172\1\uffff";
     static final String DFA10_acceptS =
-        "\26\uffff\1\u00ad\1\u00ae\1\u00af\1\uffff\1\u00b1\1\uffff\1\u00b3\1\uffff\1\u00b6\1\1\2\uffff\1\u00b1\164\uffff\1\u00ad\1\u00ae\1\u00af\1\uffff\1\u00b2\1\u00b3\1\u00b4\1\u00b5\u00ac\uffff\1\2\1\3\1\4\1\5\1\u00a9\1\u00aa\1\u00ab\1\u00ac\1\u0095\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\u00a2\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\u00a6\1\41\1\42\1\43\1\44\1\45\1\46\1\47\1\u009d\1\u00a7\1\50\1\51\1\52\1\53\1\54\1\55\1\56\1\57\1\60\1\61\1\62\1\63\1\u00a1\1\64\1\65\1\66\1\67\1\70\1\71\1\72\1\73\1\74\1\75\1\u00a5\1\76\1\77\1\100\1\101\1\102\1\103\1\104\1\105\1\u00a4\1\106\1\107\1\110\1\111\1\112\1\113\1\114\1\115\1\116\1\117\1\120\1\121\1\122\1\123\1\124\1\125\1\126\1\127\1\130\1\131\1\132\1\u009a\1\133\1\134\1\135\1\u0091\1\u0099\1\136\1\u00a0\1\137\1\140\1\141\1\u00a3\1\142\1\143\1\u00a8\1\144\1\145\1\146\1\147\1\150\1\151\1\u009b\1\152\1\153\1\154\1\u0093\1\u0096\1\155\1\156\1\157\1\u009c\1\160\1\161\1\162\1\163\1\164\1\165\1\166\1\u0098\1\u009f\1\167\1\170\1\171\1\172\1\173\1\174\1\175\1\176\1\177\1\u0080\1\u0081\1\u0082\1\u0083\1\u0084\1\u0085\1\u0086\1\u0087\1\u0088\1\u0089\1\u008a\1\u008b\1\u008c\1\u008d\1\u008e\1\u008f\1\u0097\1\u009e\1\u0090\1\u0092\1\u0094\15\uffff\1\u00b0";
+        "\26\uffff\1\u00f6\1\u00f7\1\u00f8\1\uffff\1\u00fa\1\uffff\1\u00fc\1\uffff\1\u00ff\1\1\2\uffff\1\u00fa\u008c\uffff\1\u00f6\1\u00f7\1\u00f8\1\uffff\1\u00fb\1\u00fc\1\u00fd\1\u00fe\u0094\uffff\1\u00cf\140\uffff\1\2\1\3\1\4\1\5\1\u00f2\1\u00f3\1\u00f4\1\u00f5\1\u0093\1\6\1\u00aa\1\u00c1\1\7\1\10\1\11\1\12\1\u00a7\1\13\1\14\1\u00a9\1\15\1\16\1\17\1\u00e5\1\20\1\u00ac\1\u00ec\1\21\1\u00a6\1\22\1\23\1\24\1\u009f\1\u00ad\1\u00ae\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\u00b0\1\37\1\u00b1\1\40\1\u00a3\1\u00b2\1\u00b5\1\41\1\42\1\43\1\u00b4\1\44\1\45\1\46\1\47\1\u009a\1\u00b6\1\u00a4\1\u00b3\1\50\1\u00b7\1\51\1\52\1\53\1\54\1\u00ba\1\55\1\56\1\57\1\60\1\61\1\62\1\63\1\u009e\1\u00b8\1\u00b9\1\64\1\65\1\66\1\67\1\70\1\71\1\72\1\73\1\74\1\75\1\u00a2\1\u00ab\1\76\1\77\1\100\1\101\1\102\1\103\1\104\1\105\1\u00a1\1\u00be\1\u00bc\1\u00bd\1\106\1\107\1\110\1\111\1\112\1\113\1\114\1\115\1\116\1\117\1\u00bf\1\u00c0\1\u00c2\1\120\1\u00c5\1\121\1\122\1\u00c6\1\123\1\124\1\125\1\126\1\127\1\130\1\u00c3\1\u00c4\1\u00c7\1\131\1\132\1\u0097\1\u00c8\1\u00c9\1\133\1\134\1\u00cb\1\135\1\u0091\1\u00cc\1\u0096\1\u00af\1\u00cd\1\136\1\u009d\1\u00ce\1\u00d0\1\137\1\140\1\141\1\u00a0\1\142\1\143\1\u00a5\1\144\1\145\1\146\1\147\1\150\1\151\1\u0098\1\u00d4\1\u00d8\1\uffff\1\u00dc\1\152\1\u00e6\1\153\1\154\1\u0092\1\u00ca\1\u00d6\1\u00d7\1\u0094\1\u00da\1\u00d5\1\u00db\1\155\1\156\1\157\1\u0099\1\u00dd\1\160\1\u00e2\1\161\1\162\1\163\1\164\1\165\1\166\1\u00de\1\u00df\1\u0095\1\u009c\1\u00e0\1\u00e1\1\u00e3\1\167\1\170\1\171\1\172\1\173\1\174\1\u00bb\1\175\1\176\1\177\1\u0080\1\u0081\1\u0082\1\u0083\1\u0084\1\u0085\1\u0086\1\u00e4\1\u00e7\1\u0087\1\u00ea\1\u0088\1\u00ef\1\u0089\1\u008a\1\u008b\1\u008c\1\u008d\1\u008e\1\u00ed\1\u008f\1\u009b\1\u00e8\1\u00e9\1\u00eb\1\u00f0\1\u00ee\1\u0090\1\u00f1\1\u00a8\1\u00d1\1\u00d2\1\u00d3\1\uffff\1\u00d9\14\uffff\1\u00f9";
     static final String DFA10_specialS =
-        "\1\0\32\uffff\1\1\u01e8\uffff}>";
+        "\1\0\32\uffff\1\1\u0292\uffff}>";
     static final String[] DFA10_transitionS = {
             "\11\36\2\34\2\36\1\34\24\36\1\33\4\36\1\26\2\36\2\27\2\36\1\1\1\35\12\31\1\30\6\36\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\2\32\1\14\1\15\1\16\1\25\1\17\1\20\1\21\1\22\1\23\1\2\1\24\4\32\6\36\32\32\3\36\1\26\uff81\36",
             "\1\37",
             "\1\41\12\uffff\1\40",
-            "\1\43\2\uffff\1\44\2\uffff\1\45\1\uffff\1\46\3\uffff\1\47\1\uffff\1\50\1\51\1\52\1\53",
-            "\1\54\5\uffff\1\57\1\uffff\1\55\13\uffff\1\56",
-            "\1\60\1\uffff\1\61\1\62\1\63\3\uffff\1\64\2\uffff\1\65\1\66\1\67\1\70\1\71\2\uffff\1\72\1\74\1\73",
-            "\1\75\4\uffff\1\76\1\77\1\uffff\1\100\2\uffff\1\101\1\102\1\uffff\1\103\2\uffff\1\104\1\105\1\106",
-            "\1\107\1\uffff\1\110\5\uffff\1\111\1\112\3\uffff\1\113\1\114\3\uffff\1\115",
-            "\1\116\5\uffff\1\117\4\uffff\1\120\1\121\3\uffff\1\122\1\123",
-            "\1\124\1\125\3\uffff\1\126\5\uffff\1\127\2\uffff\1\130",
-            "\1\131\27\uffff\1\132",
-            "\1\133\1\134\1\uffff\1\135\1\uffff\1\136\4\uffff\1\137\1\140\3\uffff\1\141",
-            "\1\142\7\uffff\1\144\5\uffff\1\143",
-            "\1\145\5\uffff\1\146\3\uffff\1\150\3\uffff\1\147",
-            "\1\151",
-            "\1\152\1\uffff\1\153\1\165\1\154\1\uffff\1\155\1\uffff\1\156\4\uffff\1\157\1\164\2\uffff\1\160\1\161\1\162\4\uffff\1\163",
-            "\1\166\1\uffff\1\171\1\167\1\170",
-            "\1\172\1\uffff\1\173\1\u0082\3\uffff\1\174\3\uffff\1\175\1\176\1\u0081\2\uffff\1\177\1\u0080",
-            "\1\u0083\1\uffff\1\u0084\1\uffff\1\u0085\1\u0086\1\u0087\10\uffff\1\u0088\3\uffff\1\u0089",
-            "\1\u0093\1\uffff\1\u008a\1\u008b\1\u008c\7\uffff\1\u008d\1\uffff\1\u008e\1\u008f\1\uffff\1\u0090\1\u0091\2\uffff\1\u0092",
-            "\1\u0094",
-            "\1\u0096\15\uffff\1\u0095",
+            "\1\54\2\uffff\1\43\2\uffff\1\44\2\uffff\1\45\1\uffff\1\46\3\uffff\1\47\1\uffff\1\50\1\51\1\52\1\53",
+            "\1\55\1\uffff\1\61\3\uffff\1\60\1\uffff\1\56\2\uffff\1\62\10\uffff\1\57",
+            "\1\63\1\uffff\1\64\1\65\1\66\3\uffff\1\67\2\uffff\1\70\1\71\1\72\1\73\1\74\1\uffff\1\100\1\75\1\77\1\76",
+            "\1\101\4\uffff\1\102\1\103\1\uffff\1\104\2\uffff\1\105\1\106\1\113\1\107\2\uffff\1\110\1\111\1\112",
+            "\1\114\1\uffff\1\115\5\uffff\1\116\1\117\3\uffff\1\120\1\121\3\uffff\1\122",
+            "\1\123\5\uffff\1\124\4\uffff\1\125\1\126\2\uffff\1\131\1\127\1\130",
+            "\1\132\1\133\3\uffff\1\134\5\uffff\1\135\2\uffff\1\136",
+            "\1\137\2\uffff\1\141\24\uffff\1\140",
+            "\1\142\1\143\1\uffff\1\144\1\uffff\1\145\4\uffff\1\146\1\147\3\uffff\1\150\1\uffff\1\151",
+            "\1\152\7\uffff\1\154\1\uffff\1\156\2\uffff\1\155\1\153",
+            "\1\163\3\uffff\1\157\5\uffff\1\160\3\uffff\1\162\3\uffff\1\161",
+            "\1\164\13\uffff\1\165\7\uffff\1\166",
+            "\1\167\1\uffff\1\170\1\u0082\1\171\1\uffff\1\172\1\uffff\1\173\2\uffff\1\u0084\1\u0083\1\174\1\u0081\2\uffff\1\175\1\176\1\177\4\uffff\1\u0080",
+            "\1\u0085\1\uffff\1\u0088\1\u0086\1\u0087",
+            "\1\u0089\1\uffff\1\u008a\1\u0091\3\uffff\1\u008b\1\uffff\1\u0092\1\uffff\1\u008c\1\u008d\1\u0090\2\uffff\1\u008e\1\u008f\1\u0093",
+            "\1\u0094\1\uffff\1\u0095\1\u009b\1\u0096\1\u0097\1\u0098\10\uffff\1\u0099\2\uffff\1\u009c\1\u009a",
+            "\1\u00a5\1\uffff\1\u009d\1\u009e\1\u009f\1\u00a6\2\uffff\1\u00a8\3\uffff\1\u00a0\1\uffff\1\u00a1\1\u00a2\1\uffff\1\u00a3\1\u00a4\2\uffff\1\u00a9\1\uffff\1\u00a7",
+            "\1\u00ab\6\uffff\1\u00aa",
+            "\1\u00ac\15\uffff\1\u00ad\1\uffff\1\u00ae",
             "",
             "",
             "",
-            "\12\u009a",
+            "\12\u00b2",
             "",
-            "\0\u009b",
+            "\0\u00b3",
             "",
-            "\1\u009d\4\uffff\1\u009e",
+            "\1\u00b5\4\uffff\1\u00b6",
             "",
             "",
-            "\1\u009f\1\u00a0\2\uffff\1\u00a6\1\uffff\1\u00a2\1\u00a1\12\uffff\1\u00a3\1\u00a4\5\uffff\1\u00a5",
-            "\1\u00a7",
-            "",
-            "\1\u00a8",
-            "\1\u00a9",
-            "\1\u00aa",
-            "\1\u00ab\5\uffff\1\u00ac",
-            "\1\u00ad\1\uffff\1\u00ae",
-            "\1\u00af\15\uffff\1\u00b0",
-            "\1\u00b1",
-            "\1\u00b2",
-            "\1\u00b3",
-            "\1\u00b4",
-            "\1\u00b5",
-            "\1\u00b6",
-            "\1\u00b7",
-            "\1\u00b8",
-            "\1\u00b9\4\uffff\1\u00ba",
-            "\1\u00bb\11\uffff\1\u00bc\2\uffff\1\u00bd",
-            "\1\u00be",
+            "\1\u00b7\1\u00b8\2\uffff\1\u00be\1\uffff\1\u00ba\1\u00b9\12\uffff\1\u00bb\1\u00bc\5\uffff\1\u00bd",
             "\1\u00bf",
-            "\1\u00c0\7\uffff\1\u00c1",
-            "\1\u00c2",
-            "\1\u00c3\12\uffff\1\u00c4",
-            "\1\u00c5\10\uffff\1\u00c6\6\uffff\1\u00c7",
-            "\1\u00c8\11\uffff\1\u00c9\1\u00ca",
-            "\1\u00cb",
-            "\1\u00cc",
-            "\1\u00cd",
-            "\1\u00ce",
-            "\1\u00cf",
-            "\1\u00d0",
-            "\1\u00d1\3\uffff\1\u00d2",
-            "\1\u00d3\3\uffff\1\u00d4",
+            "",
+            "\1\u00c2\10\uffff\1\u00c0\1\u00c1",
+            "\1\u00c3",
+            "\1\u00c4",
+            "\1\u00c5\5\uffff\1\u00c6\11\uffff\1\u00c7",
+            "\1\u00ca\13\uffff\1\u00c8\1\uffff\1\u00c9",
+            "\1\u00cb\15\uffff\1\u00cc",
+            "\1\u00ce\4\uffff\1\u00cd",
+            "\1\u00d1\10\uffff\1\u00d0\1\uffff\1\u00cf",
+            "\1\u00d2",
+            "\1\u00d3",
+            "\1\u00d4",
             "\1\u00d5",
             "\1\u00d6",
             "\1\u00d7",
-            "\1\u00d8\1\uffff\1\u00d9",
+            "\1\u00d8",
+            "\1\u00d9",
             "\1\u00da",
-            "\1\u00db",
-            "\1\u00dc",
-            "\1\u00dd\7\uffff\1\u00de\1\u00df",
+            "\1\u00db\4\uffff\1\u00dc",
+            "\1\u00dd\11\uffff\1\u00de\2\uffff\1\u00df",
             "\1\u00e0",
-            "\1\u00e1\2\uffff\1\u00e2\11\uffff\1\u00e3",
-            "\1\u00e5\14\uffff\1\u00e4",
-            "\1\u00e6\16\uffff\1\u00e7",
-            "\1\u00e8",
-            "\1\u00e9",
-            "\1\u00ea\1\u00eb",
-            "\1\u00ec",
-            "\1\u00ed",
-            "\1\u00ee",
-            "\1\u00ef",
-            "\1\u00f0",
-            "\1\u00f1\11\uffff\1\u00f2\3\uffff\1\u00f3\1\u00f4",
+            "\1\u00e1",
+            "\1\u00e2\7\uffff\1\u00e3\12\uffff\1\u00e4",
+            "\1\u00e6\1\uffff\1\u00e5",
+            "\1\u00e7\12\uffff\1\u00e8\3\uffff\1\u00e9\1\u00ea",
+            "\1\u00eb\10\uffff\1\u00ec\1\u00ee\5\uffff\1\u00ed",
+            "\1\u00ef\11\uffff\1\u00f0\1\u00f1",
+            "\1\u00f2",
+            "\1\u00f4\5\uffff\1\u00f3",
             "\1\u00f5",
             "\1\u00f6",
-            "\1\u00f7",
-            "\1\u00f8",
+            "\1\u00f7\10\uffff\1\u00f8",
             "\1\u00f9",
             "\1\u00fa",
-            "\1\u00fb",
-            "\1\u00fc",
-            "\1\u00fd",
-            "\1\u00fe\13\uffff\1\u00ff\5\uffff\1\u0100",
+            "\1\u00fb\3\uffff\1\u00fc\5\uffff\1\u00fd",
+            "\1\u00fe\3\uffff\1\u00ff",
+            "\1\u0100",
             "\1\u0101",
             "\1\u0102",
-            "\1\u0103",
-            "\1\u0104",
-            "\1\u0105\13\uffff\1\u0106",
+            "\1\u0103\1\uffff\1\u0104",
+            "\1\u0106\3\uffff\1\u0105",
             "\1\u0107",
             "\1\u0108",
             "\1\u0109",
-            "\1\u010b\17\uffff\1\u010a",
-            "\1\u010c\5\uffff\1\u010d\11\uffff\1\u010e\1\u010f",
-            "\1\u0110\1\u0111\4\uffff\1\u0112",
-            "\1\u0113",
-            "\1\u0114",
-            "\1\u0115",
+            "\1\u010a\7\uffff\1\u010b\1\u010c",
+            "\1\u010d",
+            "\1\u010e\2\uffff\1\u010f\11\uffff\1\u0110",
+            "\1\u0112\5\uffff\1\u0113\6\uffff\1\u0111",
+            "\1\u0114\16\uffff\1\u0115",
             "\1\u0116",
-            "\1\u0117\5\uffff\1\u0119\14\uffff\1\u0118",
+            "\1\u0117",
+            "\1\u0118\1\u0119",
             "\1\u011a",
             "\1\u011b",
-            "\1\u011c",
-            "\1\u011d",
-            "\1\u011e",
-            "\1\u011f",
+            "\1\u011d\16\uffff\1\u011c",
+            "\1\u011e\3\uffff\1\u011f",
             "\1\u0120",
             "\1\u0121",
-            "\1\u0122",
-            "\1\u0123",
-            "\1\u0124",
-            "\1\u0125",
+            "\1\u0122\11\uffff\1\u0123\3\uffff\1\u0124\1\u0125",
             "\1\u0126",
             "\1\u0127",
             "\1\u0128",
             "\1\u0129",
-            "\1\u012a",
-            "\1\u012b",
-            "\1\u012c",
-            "\1\u012d\1\u012e",
-            "\1\u012f\4\uffff\1\u0130\4\uffff\1\u0131",
+            "\1\u012a\10\uffff\1\u012b\1\u012c",
+            "\1\u012d\4\uffff\1\u012e",
+            "\1\u012f",
+            "\1\u0130\17\uffff\1\u0131",
             "\1\u0132",
-            "\1\u0133\4\uffff\1\u0134",
-            "\1\u0135\1\u0136",
-            "\1\u0137\1\uffff\1\u0138\3\uffff\1\u0139\13\uffff\1\u013a\4\uffff\1\u013b",
+            "\1\u0133",
+            "\1\u0134\13\uffff\1\u0135\5\uffff\1\u0136",
+            "\1\u0137",
+            "\1\u0139\1\u0138\10\uffff\1\u013a",
+            "\1\u013b",
             "\1\u013c",
             "\1\u013d",
             "\1\u013e",
-            "\1\u013f\13\uffff\1\u0140",
-            "\1\u0141",
-            "\1\u0142",
+            "\1\u013f",
+            "\1\u0140\13\uffff\1\u0141\5\uffff\1\u0142",
             "\1\u0143",
-            "\1\u0144",
-            "\1\u0145",
-            "\1\u0146",
-            "\1\u0147",
+            "\1\u0145\2\uffff\1\u0144",
+            "\1\u0146\24\uffff\1\u0147",
             "\1\u0148",
-            "\1\u0149",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\3\42\1\u014a\17\42\1\u0149\6\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u014c",
+            "\1\u014d",
+            "\1\u014e\5\uffff\1\u014f\11\uffff\1\u0150\1\u0151",
+            "\1\u0152\1\u0153\4\uffff\1\u0154",
+            "\1\u0155",
+            "\1\u0156",
+            "\1\u0157",
+            "\1\u0158",
+            "\1\u0159\1\uffff\1\u015d\3\uffff\1\u015b\5\uffff\1\u015f\2\uffff\1\u015e\1\uffff\1\u015c\1\uffff\1\u015a",
+            "\1\u0160\4\uffff\1\u0161",
+            "\1\u0162",
+            "\1\u0163",
+            "\1\u0164\14\uffff\1\u0166\1\uffff\1\u0165\1\u0167",
+            "\1\u0168\12\uffff\1\u0169",
+            "\1\u016a",
+            "\1\u016b",
+            "\1\u016c",
+            "\1\u016d",
+            "\1\u016e",
+            "\1\u0170\17\uffff\1\u016f",
+            "\1\u0172\11\uffff\1\u0171",
+            "\1\u0173",
+            "\1\u0174",
+            "\1\u0175",
+            "\1\u0176",
+            "\1\u0177",
+            "\1\u017a\1\uffff\1\u0178\3\uffff\1\u0179",
+            "\1\u017b",
+            "\1\u017c\13\uffff\1\u017d",
+            "\1\u017e",
+            "\1\u017f",
+            "\1\u0180",
+            "\1\u0181\1\u0182",
+            "\1\u0183\4\uffff\1\u0184\4\uffff\1\u0185\1\u0186",
+            "\1\u0187",
+            "\1\u0188\4\uffff\1\u0189",
+            "\1\u018a\1\u018b",
+            "\1\u018c\1\uffff\1\u018d\3\uffff\1\u018e\13\uffff\1\u018f\4\uffff\1\u0190",
+            "\1\u0191",
+            "\1\u0192",
+            "\1\u0193\1\uffff\1\u0194",
+            "\1\u0196\12\uffff\1\u0195",
+            "\1\u0197",
+            "\1\u0198\13\uffff\1\u0199",
+            "\1\u019a",
+            "\1\u019b",
+            "\1\u019d\16\uffff\1\u019c",
+            "\1\u019e",
+            "\1\u019f",
+            "\1\u01a0",
+            "\1\u01a1",
+            "\1\u01a3\23\uffff\1\u01a2",
+            "\1\u01a4",
+            "\1\u01a5",
+            "\1\u01a6",
+            "\1\u01a8\11\uffff\1\u01a7",
+            "\1\u01a9",
+            "\1\u01aa",
             "",
             "",
             "",
-            "\12\u014a",
+            "\12\u01ab",
             "",
             "",
             "",
@@ -5944,6 +8085,79 @@ public class InternalEdilangLexer extends Lexer {
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u0252",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
@@ -5967,7 +8181,7 @@ public class InternalEdilangLexer extends Lexer {
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\12\u01f6",
+            "\12\u029f",
             "",
             "",
             "",
@@ -6062,6 +8276,79 @@ public class InternalEdilangLexer extends Lexer {
             "",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
             "",
             "",
@@ -6138,19 +8425,19 @@ public class InternalEdilangLexer extends Lexer {
             "",
             "",
             "",
+            "\12\u02a1",
             "",
-            "\12\u01f7",
-            "\12\u01f8",
-            "\12\u01f9",
-            "\12\u01fa",
-            "\12\u01fb",
-            "\12\u01fc",
-            "\12\u01fd",
-            "\12\u01fe",
-            "\12\u01ff",
-            "\12\u0200",
-            "\12\u0201",
-            "\12\u0202",
+            "\12\u02a2",
+            "\12\u02a3",
+            "\12\u02a4",
+            "\12\u02a5",
+            "\12\u02a6",
+            "\12\u02a7",
+            "\12\u02a8",
+            "\12\u02a9",
+            "\12\u02aa",
+            "\12\u02ab",
+            "\12\u02ac",
             "\1\42\14\uffff\2\42\1\uffff\12\42\5\uffff\1\42\1\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             ""
     };
@@ -6185,7 +8472,7 @@ public class InternalEdilangLexer extends Lexer {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | T__183 | T__184 | T__185 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | T__144 | T__145 | T__146 | T__147 | T__148 | T__149 | T__150 | T__151 | T__152 | T__153 | T__154 | T__155 | T__156 | T__157 | T__158 | T__159 | T__160 | T__161 | T__162 | T__163 | T__164 | T__165 | T__166 | T__167 | T__168 | T__169 | T__170 | T__171 | T__172 | T__173 | T__174 | T__175 | T__176 | T__177 | T__178 | T__179 | T__180 | T__181 | T__182 | T__183 | T__184 | T__185 | T__186 | T__187 | T__188 | T__189 | T__190 | T__191 | T__192 | T__193 | T__194 | T__195 | T__196 | T__197 | T__198 | T__199 | T__200 | T__201 | T__202 | T__203 | T__204 | T__205 | T__206 | T__207 | T__208 | T__209 | T__210 | T__211 | T__212 | T__213 | T__214 | T__215 | T__216 | T__217 | T__218 | T__219 | T__220 | T__221 | T__222 | T__223 | T__224 | T__225 | T__226 | T__227 | T__228 | T__229 | T__230 | T__231 | T__232 | T__233 | T__234 | T__235 | T__236 | T__237 | T__238 | T__239 | T__240 | T__241 | T__242 | T__243 | T__244 | T__245 | T__246 | T__247 | T__248 | T__249 | T__250 | T__251 | T__252 | T__253 | T__254 | T__255 | T__256 | T__257 | T__258 | RULE_QUOTE_AND_NL | RULE_PLUS | RULE_COLON | RULE_INT | RULE_ID | RULE_STRING | RULE_WS | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -6261,7 +8548,7 @@ public class InternalEdilangLexer extends Lexer {
                         int LA10_27 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA10_27>='\u0000' && LA10_27<='\uFFFF')) ) {s = 155;}
+                        if ( ((LA10_27>='\u0000' && LA10_27<='\uFFFF')) ) {s = 179;}
 
                         else s = 30;
 

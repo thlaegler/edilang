@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *
  * @generated
  */
-public class TermsOfDeliveryTransportImpl extends MinimalEObjectImpl.Container implements TermsOfDeliveryTransport
+public class TermsOfDeliveryTransportImpl extends AbstractEdiFunctionImpl implements TermsOfDeliveryTransport
 {
   /**
    * The default value of the '{@link #getDeliveryTransportTermsDescriptionCode() <em>Delivery Transport Terms Description Code</em>}' attribute.

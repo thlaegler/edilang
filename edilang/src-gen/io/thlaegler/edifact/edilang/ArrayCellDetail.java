@@ -5,8 +5,6 @@ package io.thlaegler.edifact.edilang;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Array Cell Detail</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ArrayCellDetail extends EObject
+public interface ArrayCellDetail extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Array Cell Data Description</b></em>' attribute list.

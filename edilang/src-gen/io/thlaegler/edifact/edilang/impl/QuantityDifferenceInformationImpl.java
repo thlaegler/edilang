@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class QuantityDifferenceInformationImpl extends MinimalEObjectImpl.Container implements QuantityDifferenceInformation
+public class QuantityDifferenceInformationImpl extends AbstractEdiFunctionImpl implements QuantityDifferenceInformation
 {
   /**
    * The default value of the '{@link #getQuantityVarianceValue() <em>Quantity Variance Value</em>}' attribute.

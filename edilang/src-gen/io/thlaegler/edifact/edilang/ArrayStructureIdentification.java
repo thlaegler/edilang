@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ArrayStructureIdentification extends EObject
+public interface ArrayStructureIdentification extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Array Cell Structure Identifier</b></em>' attribute.

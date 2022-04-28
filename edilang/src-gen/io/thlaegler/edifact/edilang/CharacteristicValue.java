@@ -5,8 +5,6 @@ package io.thlaegler.edifact.edilang;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Characteristic Value</b></em>'.
@@ -26,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CharacteristicValue extends EObject
+public interface CharacteristicValue extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Characteristic Value Description Code</b></em>' attribute.

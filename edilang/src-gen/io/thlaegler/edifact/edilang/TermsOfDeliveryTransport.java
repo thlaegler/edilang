@@ -5,8 +5,6 @@ package io.thlaegler.edifact.edilang;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Terms Of Delivery Transport</b></em>'.
@@ -26,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface TermsOfDeliveryTransport extends EObject
+public interface TermsOfDeliveryTransport extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Delivery Transport Terms Description Code</b></em>' attribute.

@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ApplicabilityTypeImpl extends MinimalEObjectImpl.Container implements ApplicabilityType
+public class ApplicabilityTypeImpl extends AbstractEdiFunctionImpl implements ApplicabilityType
 {
   /**
    * The default value of the '{@link #getApplicabilityTypeDescriptionCode() <em>Applicability Type Description Code</em>}' attribute.

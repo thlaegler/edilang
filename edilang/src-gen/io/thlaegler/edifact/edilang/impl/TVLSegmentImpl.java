@@ -3,25 +3,21 @@
  */
 package io.thlaegler.edifact.edilang.impl;
 
-import io.thlaegler.edifact.edilang.AbstractEdiFunction;
+import io.thlaegler.edifact.edilang.CompanyIdentification;
 import io.thlaegler.edifact.edilang.EdilangPackage;
+import io.thlaegler.edifact.edilang.Location;
+import io.thlaegler.edifact.edilang.ProductDateTime;
+import io.thlaegler.edifact.edilang.ProductIdentificationDetail;
+import io.thlaegler.edifact.edilang.SequenceNumberDetail;
 import io.thlaegler.edifact.edilang.TVLSegment;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,17 +27,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getDateAndTime <em>Date And Time</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getOriginCode <em>Origin Code</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getDestinationCode <em>Destination Code</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getCarrierId <em>Carrier Id</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getProductId <em>Product Id</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getCharacteristicId <em>Characteristic Id</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getProductIdCharacteristic <em>Product Id Characteristic</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getDescriptionIds <em>Description Ids</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getProductType <em>Product Type</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getLineItemNumber <em>Line Item Number</em>}</li>
- *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getProcessingIndicatorCode <em>Processing Indicator Code</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getProductDateTime <em>Product Date Time</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getLocation1 <em>Location1</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getLocation2 <em>Location2</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getCompanyIdentification <em>Company Identification</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getProductIdentificationDetails <em>Product Identification Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getSequenceNumberDetails <em>Sequence Number Details</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getLineItemIdentifier <em>Line Item Identifier</em>}</li>
+ *   <li>{@link io.thlaegler.edifact.edilang.impl.TVLSegmentImpl#getProcessingIndicatorDescriptionCode <em>Processing Indicator Description Code</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,204 +42,104 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
 {
   /**
-   * The cached value of the '{@link #getDateAndTime() <em>Date And Time</em>}' containment reference list.
+   * The cached value of the '{@link #getProductDateTime() <em>Product Date Time</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDateAndTime()
+   * @see #getProductDateTime()
    * @generated
    * @ordered
    */
-  protected EList<AbstractEdiFunction> dateAndTime;
+  protected ProductDateTime productDateTime;
 
   /**
-   * The default value of the '{@link #getOriginCode() <em>Origin Code</em>}' attribute.
+   * The cached value of the '{@link #getLocation1() <em>Location1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOriginCode()
+   * @see #getLocation1()
    * @generated
    * @ordered
    */
-  protected static final String ORIGIN_CODE_EDEFAULT = null;
+  protected Location location1;
 
   /**
-   * The cached value of the '{@link #getOriginCode() <em>Origin Code</em>}' attribute.
+   * The cached value of the '{@link #getLocation2() <em>Location2</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOriginCode()
+   * @see #getLocation2()
    * @generated
    * @ordered
    */
-  protected String originCode = ORIGIN_CODE_EDEFAULT;
+  protected Location location2;
 
   /**
-   * The default value of the '{@link #getDestinationCode() <em>Destination Code</em>}' attribute.
+   * The cached value of the '{@link #getCompanyIdentification() <em>Company Identification</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDestinationCode()
+   * @see #getCompanyIdentification()
    * @generated
    * @ordered
    */
-  protected static final String DESTINATION_CODE_EDEFAULT = null;
+  protected CompanyIdentification companyIdentification;
 
   /**
-   * The cached value of the '{@link #getDestinationCode() <em>Destination Code</em>}' attribute.
+   * The cached value of the '{@link #getProductIdentificationDetails() <em>Product Identification Details</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDestinationCode()
+   * @see #getProductIdentificationDetails()
    * @generated
    * @ordered
    */
-  protected String destinationCode = DESTINATION_CODE_EDEFAULT;
+  protected ProductIdentificationDetail productIdentificationDetails;
 
   /**
-   * The default value of the '{@link #getCarrierId() <em>Carrier Id</em>}' attribute.
+   * The cached value of the '{@link #getSequenceNumberDetails() <em>Sequence Number Details</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCarrierId()
+   * @see #getSequenceNumberDetails()
    * @generated
    * @ordered
    */
-  protected static final String CARRIER_ID_EDEFAULT = null;
+  protected SequenceNumberDetail sequenceNumberDetails;
 
   /**
-   * The cached value of the '{@link #getCarrierId() <em>Carrier Id</em>}' attribute.
+   * The default value of the '{@link #getLineItemIdentifier() <em>Line Item Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCarrierId()
+   * @see #getLineItemIdentifier()
    * @generated
    * @ordered
    */
-  protected String carrierId = CARRIER_ID_EDEFAULT;
+  protected static final String LINE_ITEM_IDENTIFIER_EDEFAULT = null;
 
   /**
-   * The default value of the '{@link #getProductId() <em>Product Id</em>}' attribute.
+   * The cached value of the '{@link #getLineItemIdentifier() <em>Line Item Identifier</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getProductId()
+   * @see #getLineItemIdentifier()
    * @generated
    * @ordered
    */
-  protected static final String PRODUCT_ID_EDEFAULT = null;
+  protected String lineItemIdentifier = LINE_ITEM_IDENTIFIER_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getProductId() <em>Product Id</em>}' attribute.
+   * The default value of the '{@link #getProcessingIndicatorDescriptionCode() <em>Processing Indicator Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getProductId()
+   * @see #getProcessingIndicatorDescriptionCode()
    * @generated
    * @ordered
    */
-  protected String productId = PRODUCT_ID_EDEFAULT;
+  protected static final String PROCESSING_INDICATOR_DESCRIPTION_CODE_EDEFAULT = null;
 
   /**
-   * The default value of the '{@link #getCharacteristicId() <em>Characteristic Id</em>}' attribute.
+   * The cached value of the '{@link #getProcessingIndicatorDescriptionCode() <em>Processing Indicator Description Code</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCharacteristicId()
+   * @see #getProcessingIndicatorDescriptionCode()
    * @generated
    * @ordered
    */
-  protected static final String CHARACTERISTIC_ID_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getCharacteristicId() <em>Characteristic Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCharacteristicId()
-   * @generated
-   * @ordered
-   */
-  protected String characteristicId = CHARACTERISTIC_ID_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getProductIdCharacteristic() <em>Product Id Characteristic</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProductIdCharacteristic()
-   * @generated
-   * @ordered
-   */
-  protected static final String PRODUCT_ID_CHARACTERISTIC_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getProductIdCharacteristic() <em>Product Id Characteristic</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProductIdCharacteristic()
-   * @generated
-   * @ordered
-   */
-  protected String productIdCharacteristic = PRODUCT_ID_CHARACTERISTIC_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getDescriptionIds() <em>Description Ids</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescriptionIds()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> descriptionIds;
-
-  /**
-   * The default value of the '{@link #getProductType() <em>Product Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProductType()
-   * @generated
-   * @ordered
-   */
-  protected static final String PRODUCT_TYPE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getProductType() <em>Product Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProductType()
-   * @generated
-   * @ordered
-   */
-  protected String productType = PRODUCT_TYPE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getLineItemNumber() <em>Line Item Number</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLineItemNumber()
-   * @generated
-   * @ordered
-   */
-  protected static final String LINE_ITEM_NUMBER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getLineItemNumber() <em>Line Item Number</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLineItemNumber()
-   * @generated
-   * @ordered
-   */
-  protected String lineItemNumber = LINE_ITEM_NUMBER_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getProcessingIndicatorCode() <em>Processing Indicator Code</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProcessingIndicatorCode()
-   * @generated
-   * @ordered
-   */
-  protected static final String PROCESSING_INDICATOR_CODE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getProcessingIndicatorCode() <em>Processing Indicator Code</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProcessingIndicatorCode()
-   * @generated
-   * @ordered
-   */
-  protected String processingIndicatorCode = PROCESSING_INDICATOR_CODE_EDEFAULT;
+  protected String processingIndicatorDescriptionCode = PROCESSING_INDICATOR_DESCRIPTION_CODE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -275,13 +168,26 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * @generated
    */
   @Override
-  public EList<AbstractEdiFunction> getDateAndTime()
+  public ProductDateTime getProductDateTime()
   {
-    if (dateAndTime == null)
+    return productDateTime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProductDateTime(ProductDateTime newProductDateTime, NotificationChain msgs)
+  {
+    ProductDateTime oldProductDateTime = productDateTime;
+    productDateTime = newProductDateTime;
+    if (eNotificationRequired())
     {
-      dateAndTime = new EObjectContainmentEList<AbstractEdiFunction>(AbstractEdiFunction.class, this, EdilangPackage.TVL_SEGMENT__DATE_AND_TIME);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME, oldProductDateTime, newProductDateTime);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return dateAndTime;
+    return msgs;
   }
 
   /**
@@ -290,163 +196,20 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * @generated
    */
   @Override
-  public String getOriginCode()
+  public void setProductDateTime(ProductDateTime newProductDateTime)
   {
-    return originCode;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setOriginCode(String newOriginCode)
-  {
-    String oldOriginCode = originCode;
-    originCode = newOriginCode;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__ORIGIN_CODE, oldOriginCode, originCode));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getDestinationCode()
-  {
-    return destinationCode;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setDestinationCode(String newDestinationCode)
-  {
-    String oldDestinationCode = destinationCode;
-    destinationCode = newDestinationCode;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__DESTINATION_CODE, oldDestinationCode, destinationCode));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getCarrierId()
-  {
-    return carrierId;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setCarrierId(String newCarrierId)
-  {
-    String oldCarrierId = carrierId;
-    carrierId = newCarrierId;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__CARRIER_ID, oldCarrierId, carrierId));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getProductId()
-  {
-    return productId;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setProductId(String newProductId)
-  {
-    String oldProductId = productId;
-    productId = newProductId;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PRODUCT_ID, oldProductId, productId));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getCharacteristicId()
-  {
-    return characteristicId;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setCharacteristicId(String newCharacteristicId)
-  {
-    String oldCharacteristicId = characteristicId;
-    characteristicId = newCharacteristicId;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__CHARACTERISTIC_ID, oldCharacteristicId, characteristicId));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getProductIdCharacteristic()
-  {
-    return productIdCharacteristic;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setProductIdCharacteristic(String newProductIdCharacteristic)
-  {
-    String oldProductIdCharacteristic = productIdCharacteristic;
-    productIdCharacteristic = newProductIdCharacteristic;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PRODUCT_ID_CHARACTERISTIC, oldProductIdCharacteristic, productIdCharacteristic));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<String> getDescriptionIds()
-  {
-    if (descriptionIds == null)
+    if (newProductDateTime != productDateTime)
     {
-      descriptionIds = new EDataTypeEList<String>(String.class, this, EdilangPackage.TVL_SEGMENT__DESCRIPTION_IDS);
+      NotificationChain msgs = null;
+      if (productDateTime != null)
+        msgs = ((InternalEObject)productDateTime).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME, null, msgs);
+      if (newProductDateTime != null)
+        msgs = ((InternalEObject)newProductDateTime).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME, null, msgs);
+      msgs = basicSetProductDateTime(newProductDateTime, msgs);
+      if (msgs != null) msgs.dispatch();
     }
-    return descriptionIds;
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME, newProductDateTime, newProductDateTime));
   }
 
   /**
@@ -455,9 +218,9 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * @generated
    */
   @Override
-  public String getProductType()
+  public Location getLocation1()
   {
-    return productType;
+    return location1;
   }
 
   /**
@@ -465,13 +228,16 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setProductType(String newProductType)
+  public NotificationChain basicSetLocation1(Location newLocation1, NotificationChain msgs)
   {
-    String oldProductType = productType;
-    productType = newProductType;
+    Location oldLocation1 = location1;
+    location1 = newLocation1;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PRODUCT_TYPE, oldProductType, productType));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__LOCATION1, oldLocation1, newLocation1);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -480,9 +246,20 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * @generated
    */
   @Override
-  public String getLineItemNumber()
+  public void setLocation1(Location newLocation1)
   {
-    return lineItemNumber;
+    if (newLocation1 != location1)
+    {
+      NotificationChain msgs = null;
+      if (location1 != null)
+        msgs = ((InternalEObject)location1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__LOCATION1, null, msgs);
+      if (newLocation1 != null)
+        msgs = ((InternalEObject)newLocation1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__LOCATION1, null, msgs);
+      msgs = basicSetLocation1(newLocation1, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__LOCATION1, newLocation1, newLocation1));
   }
 
   /**
@@ -491,12 +268,26 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * @generated
    */
   @Override
-  public void setLineItemNumber(String newLineItemNumber)
+  public Location getLocation2()
   {
-    String oldLineItemNumber = lineItemNumber;
-    lineItemNumber = newLineItemNumber;
+    return location2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLocation2(Location newLocation2, NotificationChain msgs)
+  {
+    Location oldLocation2 = location2;
+    location2 = newLocation2;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__LINE_ITEM_NUMBER, oldLineItemNumber, lineItemNumber));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__LOCATION2, oldLocation2, newLocation2);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -505,9 +296,20 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * @generated
    */
   @Override
-  public String getProcessingIndicatorCode()
+  public void setLocation2(Location newLocation2)
   {
-    return processingIndicatorCode;
+    if (newLocation2 != location2)
+    {
+      NotificationChain msgs = null;
+      if (location2 != null)
+        msgs = ((InternalEObject)location2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__LOCATION2, null, msgs);
+      if (newLocation2 != null)
+        msgs = ((InternalEObject)newLocation2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__LOCATION2, null, msgs);
+      msgs = basicSetLocation2(newLocation2, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__LOCATION2, newLocation2, newLocation2));
   }
 
   /**
@@ -516,12 +318,198 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * @generated
    */
   @Override
-  public void setProcessingIndicatorCode(String newProcessingIndicatorCode)
+  public CompanyIdentification getCompanyIdentification()
   {
-    String oldProcessingIndicatorCode = processingIndicatorCode;
-    processingIndicatorCode = newProcessingIndicatorCode;
+    return companyIdentification;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCompanyIdentification(CompanyIdentification newCompanyIdentification, NotificationChain msgs)
+  {
+    CompanyIdentification oldCompanyIdentification = companyIdentification;
+    companyIdentification = newCompanyIdentification;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_CODE, oldProcessingIndicatorCode, processingIndicatorCode));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION, oldCompanyIdentification, newCompanyIdentification);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCompanyIdentification(CompanyIdentification newCompanyIdentification)
+  {
+    if (newCompanyIdentification != companyIdentification)
+    {
+      NotificationChain msgs = null;
+      if (companyIdentification != null)
+        msgs = ((InternalEObject)companyIdentification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION, null, msgs);
+      if (newCompanyIdentification != null)
+        msgs = ((InternalEObject)newCompanyIdentification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION, null, msgs);
+      msgs = basicSetCompanyIdentification(newCompanyIdentification, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION, newCompanyIdentification, newCompanyIdentification));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ProductIdentificationDetail getProductIdentificationDetails()
+  {
+    return productIdentificationDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProductIdentificationDetails(ProductIdentificationDetail newProductIdentificationDetails, NotificationChain msgs)
+  {
+    ProductIdentificationDetail oldProductIdentificationDetails = productIdentificationDetails;
+    productIdentificationDetails = newProductIdentificationDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS, oldProductIdentificationDetails, newProductIdentificationDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setProductIdentificationDetails(ProductIdentificationDetail newProductIdentificationDetails)
+  {
+    if (newProductIdentificationDetails != productIdentificationDetails)
+    {
+      NotificationChain msgs = null;
+      if (productIdentificationDetails != null)
+        msgs = ((InternalEObject)productIdentificationDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS, null, msgs);
+      if (newProductIdentificationDetails != null)
+        msgs = ((InternalEObject)newProductIdentificationDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS, null, msgs);
+      msgs = basicSetProductIdentificationDetails(newProductIdentificationDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS, newProductIdentificationDetails, newProductIdentificationDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SequenceNumberDetail getSequenceNumberDetails()
+  {
+    return sequenceNumberDetails;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSequenceNumberDetails(SequenceNumberDetail newSequenceNumberDetails, NotificationChain msgs)
+  {
+    SequenceNumberDetail oldSequenceNumberDetails = sequenceNumberDetails;
+    sequenceNumberDetails = newSequenceNumberDetails;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS, oldSequenceNumberDetails, newSequenceNumberDetails);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setSequenceNumberDetails(SequenceNumberDetail newSequenceNumberDetails)
+  {
+    if (newSequenceNumberDetails != sequenceNumberDetails)
+    {
+      NotificationChain msgs = null;
+      if (sequenceNumberDetails != null)
+        msgs = ((InternalEObject)sequenceNumberDetails).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS, null, msgs);
+      if (newSequenceNumberDetails != null)
+        msgs = ((InternalEObject)newSequenceNumberDetails).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS, null, msgs);
+      msgs = basicSetSequenceNumberDetails(newSequenceNumberDetails, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS, newSequenceNumberDetails, newSequenceNumberDetails));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getLineItemIdentifier()
+  {
+    return lineItemIdentifier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLineItemIdentifier(String newLineItemIdentifier)
+  {
+    String oldLineItemIdentifier = lineItemIdentifier;
+    lineItemIdentifier = newLineItemIdentifier;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__LINE_ITEM_IDENTIFIER, oldLineItemIdentifier, lineItemIdentifier));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getProcessingIndicatorDescriptionCode()
+  {
+    return processingIndicatorDescriptionCode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setProcessingIndicatorDescriptionCode(String newProcessingIndicatorDescriptionCode)
+  {
+    String oldProcessingIndicatorDescriptionCode = processingIndicatorDescriptionCode;
+    processingIndicatorDescriptionCode = newProcessingIndicatorDescriptionCode;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_DESCRIPTION_CODE, oldProcessingIndicatorDescriptionCode, processingIndicatorDescriptionCode));
   }
 
   /**
@@ -534,8 +522,18 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TVL_SEGMENT__DATE_AND_TIME:
-        return ((InternalEList<?>)getDateAndTime()).basicRemove(otherEnd, msgs);
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME:
+        return basicSetProductDateTime(null, msgs);
+      case EdilangPackage.TVL_SEGMENT__LOCATION1:
+        return basicSetLocation1(null, msgs);
+      case EdilangPackage.TVL_SEGMENT__LOCATION2:
+        return basicSetLocation2(null, msgs);
+      case EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION:
+        return basicSetCompanyIdentification(null, msgs);
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS:
+        return basicSetProductIdentificationDetails(null, msgs);
+      case EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS:
+        return basicSetSequenceNumberDetails(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -550,28 +548,22 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TVL_SEGMENT__DATE_AND_TIME:
-        return getDateAndTime();
-      case EdilangPackage.TVL_SEGMENT__ORIGIN_CODE:
-        return getOriginCode();
-      case EdilangPackage.TVL_SEGMENT__DESTINATION_CODE:
-        return getDestinationCode();
-      case EdilangPackage.TVL_SEGMENT__CARRIER_ID:
-        return getCarrierId();
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID:
-        return getProductId();
-      case EdilangPackage.TVL_SEGMENT__CHARACTERISTIC_ID:
-        return getCharacteristicId();
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID_CHARACTERISTIC:
-        return getProductIdCharacteristic();
-      case EdilangPackage.TVL_SEGMENT__DESCRIPTION_IDS:
-        return getDescriptionIds();
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_TYPE:
-        return getProductType();
-      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_NUMBER:
-        return getLineItemNumber();
-      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_CODE:
-        return getProcessingIndicatorCode();
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME:
+        return getProductDateTime();
+      case EdilangPackage.TVL_SEGMENT__LOCATION1:
+        return getLocation1();
+      case EdilangPackage.TVL_SEGMENT__LOCATION2:
+        return getLocation2();
+      case EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION:
+        return getCompanyIdentification();
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS:
+        return getProductIdentificationDetails();
+      case EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS:
+        return getSequenceNumberDetails();
+      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_IDENTIFIER:
+        return getLineItemIdentifier();
+      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_DESCRIPTION_CODE:
+        return getProcessingIndicatorDescriptionCode();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -581,46 +573,34 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case EdilangPackage.TVL_SEGMENT__DATE_AND_TIME:
-        getDateAndTime().clear();
-        getDateAndTime().addAll((Collection<? extends AbstractEdiFunction>)newValue);
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME:
+        setProductDateTime((ProductDateTime)newValue);
         return;
-      case EdilangPackage.TVL_SEGMENT__ORIGIN_CODE:
-        setOriginCode((String)newValue);
+      case EdilangPackage.TVL_SEGMENT__LOCATION1:
+        setLocation1((Location)newValue);
         return;
-      case EdilangPackage.TVL_SEGMENT__DESTINATION_CODE:
-        setDestinationCode((String)newValue);
+      case EdilangPackage.TVL_SEGMENT__LOCATION2:
+        setLocation2((Location)newValue);
         return;
-      case EdilangPackage.TVL_SEGMENT__CARRIER_ID:
-        setCarrierId((String)newValue);
+      case EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION:
+        setCompanyIdentification((CompanyIdentification)newValue);
         return;
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID:
-        setProductId((String)newValue);
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS:
+        setProductIdentificationDetails((ProductIdentificationDetail)newValue);
         return;
-      case EdilangPackage.TVL_SEGMENT__CHARACTERISTIC_ID:
-        setCharacteristicId((String)newValue);
+      case EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS:
+        setSequenceNumberDetails((SequenceNumberDetail)newValue);
         return;
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID_CHARACTERISTIC:
-        setProductIdCharacteristic((String)newValue);
+      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_IDENTIFIER:
+        setLineItemIdentifier((String)newValue);
         return;
-      case EdilangPackage.TVL_SEGMENT__DESCRIPTION_IDS:
-        getDescriptionIds().clear();
-        getDescriptionIds().addAll((Collection<? extends String>)newValue);
-        return;
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_TYPE:
-        setProductType((String)newValue);
-        return;
-      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_NUMBER:
-        setLineItemNumber((String)newValue);
-        return;
-      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_CODE:
-        setProcessingIndicatorCode((String)newValue);
+      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_DESCRIPTION_CODE:
+        setProcessingIndicatorDescriptionCode((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -636,38 +616,29 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TVL_SEGMENT__DATE_AND_TIME:
-        getDateAndTime().clear();
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME:
+        setProductDateTime((ProductDateTime)null);
         return;
-      case EdilangPackage.TVL_SEGMENT__ORIGIN_CODE:
-        setOriginCode(ORIGIN_CODE_EDEFAULT);
+      case EdilangPackage.TVL_SEGMENT__LOCATION1:
+        setLocation1((Location)null);
         return;
-      case EdilangPackage.TVL_SEGMENT__DESTINATION_CODE:
-        setDestinationCode(DESTINATION_CODE_EDEFAULT);
+      case EdilangPackage.TVL_SEGMENT__LOCATION2:
+        setLocation2((Location)null);
         return;
-      case EdilangPackage.TVL_SEGMENT__CARRIER_ID:
-        setCarrierId(CARRIER_ID_EDEFAULT);
+      case EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION:
+        setCompanyIdentification((CompanyIdentification)null);
         return;
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID:
-        setProductId(PRODUCT_ID_EDEFAULT);
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS:
+        setProductIdentificationDetails((ProductIdentificationDetail)null);
         return;
-      case EdilangPackage.TVL_SEGMENT__CHARACTERISTIC_ID:
-        setCharacteristicId(CHARACTERISTIC_ID_EDEFAULT);
+      case EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS:
+        setSequenceNumberDetails((SequenceNumberDetail)null);
         return;
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID_CHARACTERISTIC:
-        setProductIdCharacteristic(PRODUCT_ID_CHARACTERISTIC_EDEFAULT);
+      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_IDENTIFIER:
+        setLineItemIdentifier(LINE_ITEM_IDENTIFIER_EDEFAULT);
         return;
-      case EdilangPackage.TVL_SEGMENT__DESCRIPTION_IDS:
-        getDescriptionIds().clear();
-        return;
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_TYPE:
-        setProductType(PRODUCT_TYPE_EDEFAULT);
-        return;
-      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_NUMBER:
-        setLineItemNumber(LINE_ITEM_NUMBER_EDEFAULT);
-        return;
-      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_CODE:
-        setProcessingIndicatorCode(PROCESSING_INDICATOR_CODE_EDEFAULT);
+      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_DESCRIPTION_CODE:
+        setProcessingIndicatorDescriptionCode(PROCESSING_INDICATOR_DESCRIPTION_CODE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -683,28 +654,22 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
   {
     switch (featureID)
     {
-      case EdilangPackage.TVL_SEGMENT__DATE_AND_TIME:
-        return dateAndTime != null && !dateAndTime.isEmpty();
-      case EdilangPackage.TVL_SEGMENT__ORIGIN_CODE:
-        return ORIGIN_CODE_EDEFAULT == null ? originCode != null : !ORIGIN_CODE_EDEFAULT.equals(originCode);
-      case EdilangPackage.TVL_SEGMENT__DESTINATION_CODE:
-        return DESTINATION_CODE_EDEFAULT == null ? destinationCode != null : !DESTINATION_CODE_EDEFAULT.equals(destinationCode);
-      case EdilangPackage.TVL_SEGMENT__CARRIER_ID:
-        return CARRIER_ID_EDEFAULT == null ? carrierId != null : !CARRIER_ID_EDEFAULT.equals(carrierId);
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID:
-        return PRODUCT_ID_EDEFAULT == null ? productId != null : !PRODUCT_ID_EDEFAULT.equals(productId);
-      case EdilangPackage.TVL_SEGMENT__CHARACTERISTIC_ID:
-        return CHARACTERISTIC_ID_EDEFAULT == null ? characteristicId != null : !CHARACTERISTIC_ID_EDEFAULT.equals(characteristicId);
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_ID_CHARACTERISTIC:
-        return PRODUCT_ID_CHARACTERISTIC_EDEFAULT == null ? productIdCharacteristic != null : !PRODUCT_ID_CHARACTERISTIC_EDEFAULT.equals(productIdCharacteristic);
-      case EdilangPackage.TVL_SEGMENT__DESCRIPTION_IDS:
-        return descriptionIds != null && !descriptionIds.isEmpty();
-      case EdilangPackage.TVL_SEGMENT__PRODUCT_TYPE:
-        return PRODUCT_TYPE_EDEFAULT == null ? productType != null : !PRODUCT_TYPE_EDEFAULT.equals(productType);
-      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_NUMBER:
-        return LINE_ITEM_NUMBER_EDEFAULT == null ? lineItemNumber != null : !LINE_ITEM_NUMBER_EDEFAULT.equals(lineItemNumber);
-      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_CODE:
-        return PROCESSING_INDICATOR_CODE_EDEFAULT == null ? processingIndicatorCode != null : !PROCESSING_INDICATOR_CODE_EDEFAULT.equals(processingIndicatorCode);
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_DATE_TIME:
+        return productDateTime != null;
+      case EdilangPackage.TVL_SEGMENT__LOCATION1:
+        return location1 != null;
+      case EdilangPackage.TVL_SEGMENT__LOCATION2:
+        return location2 != null;
+      case EdilangPackage.TVL_SEGMENT__COMPANY_IDENTIFICATION:
+        return companyIdentification != null;
+      case EdilangPackage.TVL_SEGMENT__PRODUCT_IDENTIFICATION_DETAILS:
+        return productIdentificationDetails != null;
+      case EdilangPackage.TVL_SEGMENT__SEQUENCE_NUMBER_DETAILS:
+        return sequenceNumberDetails != null;
+      case EdilangPackage.TVL_SEGMENT__LINE_ITEM_IDENTIFIER:
+        return LINE_ITEM_IDENTIFIER_EDEFAULT == null ? lineItemIdentifier != null : !LINE_ITEM_IDENTIFIER_EDEFAULT.equals(lineItemIdentifier);
+      case EdilangPackage.TVL_SEGMENT__PROCESSING_INDICATOR_DESCRIPTION_CODE:
+        return PROCESSING_INDICATOR_DESCRIPTION_CODE_EDEFAULT == null ? processingIndicatorDescriptionCode != null : !PROCESSING_INDICATOR_DESCRIPTION_CODE_EDEFAULT.equals(processingIndicatorDescriptionCode);
     }
     return super.eIsSet(featureID);
   }
@@ -720,26 +685,10 @@ public class TVLSegmentImpl extends AbstractEdiSegmentImpl implements TVLSegment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (originCode: ");
-    result.append(originCode);
-    result.append(", destinationCode: ");
-    result.append(destinationCode);
-    result.append(", carrierId: ");
-    result.append(carrierId);
-    result.append(", productId: ");
-    result.append(productId);
-    result.append(", characteristicId: ");
-    result.append(characteristicId);
-    result.append(", productIdCharacteristic: ");
-    result.append(productIdCharacteristic);
-    result.append(", descriptionIds: ");
-    result.append(descriptionIds);
-    result.append(", productType: ");
-    result.append(productType);
-    result.append(", lineItemNumber: ");
-    result.append(lineItemNumber);
-    result.append(", processingIndicatorCode: ");
-    result.append(processingIndicatorCode);
+    result.append(" (lineItemIdentifier: ");
+    result.append(lineItemIdentifier);
+    result.append(", processingIndicatorDescriptionCode: ");
+    result.append(processingIndicatorDescriptionCode);
     result.append(')');
     return result.toString();
   }

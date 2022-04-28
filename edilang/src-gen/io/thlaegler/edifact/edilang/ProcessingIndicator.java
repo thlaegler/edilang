@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ProcessingIndicator extends EObject
+public interface ProcessingIndicator extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Processing Indicator Description Code</b></em>' attribute.

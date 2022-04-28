@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class GovernmentActionImpl extends MinimalEObjectImpl.Container implements GovernmentAction
+public class GovernmentActionImpl extends AbstractEdiFunctionImpl implements GovernmentAction
 {
   /**
    * The default value of the '{@link #getGovernmentAgencyIdentificationCode() <em>Government Agency Identification Code</em>}' attribute.

@@ -7,6 +7,9 @@ generate edilang "http://www.thlaegler.io/edifact/Edilang"
 EdiModel:
 	segments+=AbstractEdiSegment*;
 
+// See Segment directory Interactive (IDSD): https://service.unece.org/trade/untdid/d20b/tisd/tisdi2.htm
+// See Segment directory Batch (EDSD): https://service.unece.org/trade/untdid/d20b/trsd/trsdi2.htm
+
 AbstractEdiSegment:
 	// Header segments
 	UNASegment | // Service String advice header
@@ -115,8 +118,6 @@ AbstractEdiSegment:
 	MSGSegment | // Message type identification
 	NADSegment | // Name and address
 	NATSegment | // Nationality
-	ODISegment | // Origin/destination
-	ORGSegment | // Organisation
 	PACSegment | // Package
 	PAISegment | // Payment instructions
 	PASSegment | // Attendance
@@ -146,7 +147,6 @@ AbstractEdiSegment:
 	RJLSegment | // Accounting journal identification
 	RNGSegment | // Range details
 	RODSegment | // Risk object type
-	RPISegment | // ?
 	RSLSegment | // Result
 	RTESegment | // Rate details
 	SALSegment | // Remuneration type identification
@@ -175,9 +175,87 @@ AbstractEdiSegment:
 	TPLSegment | // Transport placement
 	TRUSegment | // Technical rules
 	TSRSegment | // Transport service requirements
-	TVLSegment | // Travel itinerary
 	UCISegment | // ?
 	VLISegment | // Value list identification
+	
+	// https://service.unece.org/trade/untdid/d20b/tisd/tisdi2.htm
+	AAISegment | // Accommodation allocation information
+	ALSSegment | // Additional location information
+	ODSSegment | // Additional product details
+	APDSegment | // Additional transport details
+	ADSSegment | // Address
+	ERISegment | // Application error information
+	ATRSegment | // Attribute
+	BCDSegment | // Benefit and coverage detail
+	BLISegment | // Billable information
+	MOVSegment | // Car delivery instruction
+	CLTSegment | // Clear terminate information
+	CMNSegment | // Commission information
+	CNXSegment | // Connection details
+	CRISegment | // Consumer reference information
+	CONSegment | // Contact information
+	CNYSegment | // Country information
+	CURSegment | // Currencies
+	DAVSegment | // Daily availability
+	DTISegment | // Date and time information
+	DNTSegment | // Dental information
+	DISSegment | // Discount information
+	SERSegment | // Facility information
+	FRMSegment | // Follow-up action
+	FRQSegment | // Frequency
+	FTISegment | // Frequent traveller information
+	HDISegment | // Hardware device information
+	HDRSegment | // Header information
+	ADISegment | // Health care claim adjudication information
+	HDSSegment | // Health diagnosis service and delivery
+	ITDSegment | // Information type data
+	ITCSegment | // Institutional claim
+	ICISegment | // Insurance cover information
+	IFTSegment | // Interactive free text
+	ITMSegment | // Item number
+	LNGSegment | // Language
+	LKPSegment | // Level indication
+	PORSegment | // Location and/or related time information
+	MESSegment | // Measurements
+	MSDSegment | // Message action details
+	MAPSegment | // Message application product information
+	NMESegment | // Name
+	NAASegment | // Name and address
+	NUNSegment | // Number of units
+	ODISegment | // Origin and destination details
+	ORGSegment | // Originator of request details
+	OTISegment | // Other insurance
+	PRTSegment | // Party information
+	PMTSegment | // Payment information
+	POPSegment | // Period of operation
+	POSSegment | // Point of sale information
+	PRESegment | // Price details
+	PRDSegment | // Product identification
+	PDTSegment | // Product information
+	PLISegment | // Product location information
+	PROSegment | // Promotions
+	QTISegment | // Quantity
+	RPISegment | // Quantity and action details
+	RTISegment | // Rate details
+	RTCSegment | // Rate types
+	RFRSegment | // Reference
+	RLSSegment | // Relationship
+	RCISegment | // Reservation control information
+	RULSegment | // Rule information
+	SDTSegment | // Selection details
+	ASDSegment | // Service details
+	PSISegment | // Service information
+	SSRSegment | // Special requirement details
+	TFFSegment | // Tariff information
+	TXSSegment | // Taxes
+	TCESegment | // Time and certainty
+	TIZSegment | // Time zone information
+	ATISegment | // Tour information
+	TRFSegment | // Traffic restriction details
+	TVLSegment | // Travel product information
+	TDISegment | // Traveller document information
+	TIFSegment | // Traveller information
+	VEHSegment | // Vehicle
 
 	// Trailer segments
 	UNSSegment | // Section Control Trailer UNS
@@ -185,7 +263,6 @@ AbstractEdiSegment:
 	UNTSegment | // Message Trailer
 	UNESegment // Functional Group Trailer
 ;
-
 
 UNASegment:
 	segment="UNA"
@@ -204,7 +281,7 @@ UNBSegment:
 	PLUS
 	( interchangeRecipient=InterchangerFunction )?
 	PLUS
-	( dateAndTime+=DateAndTimeFunction )?
+	( dateAndTime=DateAndTime )?
 	PLUS
 	( interchangeControlSenderRef=ID )?
 	(
@@ -1515,34 +1592,6 @@ MSGSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//ORG+1A:MUC+27213082:ATHGR28CS+ATH++T+GR:EUR:EN+A9996WSSU+04261178+1A'
-//ORG+NZ:AKL:00++AKL+NZ+A+NZ:NZD+PR'
-ORGSegment:
-	segment="ORG"
-	PLUS
-	( systemDetail1=SystemDetailFunction )?
-	PLUS
-	( originatorIdentification=OriginatorIdentificationFunction )?
-	PLUS
-	( location=LocationFunction )?
-	PLUS
-	( systemDetail2=SystemDetailFunction )?
-	PLUS
-	( originatorTypeCode=ID )?
-	PLUS
-	( originator=OriginatorFunction )?
-	PLUS
-	( originatorsAuthorityRequestCode=ID )?
-	(
-		PLUS
-		communicationNumber=ID
-		(
-			PLUS
-			partyIdIdentification=ID
-		)?
-	)?
-	lineEnd=QUOTE_AND_NL
-;
 //POC+BNE+220120'
 POCSegment:
 	segment="POC"
@@ -1556,18 +1605,6 @@ POCSegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
-//ODI+BNE+ZQN'
-ODISegment:
-	segment="ODI"
-	(
-		PLUS
-		(origin=ID)?
-		PLUS
-		(destination=ID)?
-	)?
-	lineEnd=QUOTE_AND_NL
-;
-//
 UCISegment:
 	segment="UCI"
 	PLUS
@@ -1593,63 +1630,6 @@ PDISegment:
 		PLUS
 		products+=ProductFunction
 	)*
-	lineEnd=QUOTE_AND_NL
-;
-//TVL+230120+CHC+ZQN+NZ+5641+3+2+P"
-TVLSegment:
-	segment="TVL"
-	PLUS
-	(
-		(
-			dateAndTime+=DateOnlyFunction
-//			(
-//				COLON 
-//				dateAndTime+=DateOnly
-//			)*
-		)
-		|
-		(
-			dateAndTime+=DateAndTimeFunction
-			(
-				COLON 
-				dateAndTime+=DateAndTimeFunction
-			)*
-		)
-	)
-	PLUS
-	(originCode=ID)?
-	PLUS
-	(destinationCode=ID)?
-	PLUS
-	(carrierId=ID)?
-	PLUS
-	(
-		productId=ID
-		(
-			COLON
-			characteristicId=ID
-			(
-				COLON
-				productIdCharacteristic=ID
-				(
-					COLON
-					descriptionIds+=ID	
-				)*
-			)?
-		)?
-	)?
-	(
-		PLUS
-		productType=ID
-		( 
-			PLUS
-			lineItemNumber=ID
-			(
-				PLUS
-				processingIndicatorCode=ID
-			)?
-		)?
-	)?
 	lineEnd=QUOTE_AND_NL
 ;
 //RPI+1+SS'
@@ -1918,6 +1898,585 @@ PCISegment:
 	)?
 	lineEnd=QUOTE_AND_NL
 ;
+//TODO
+AAISegment:
+	segment="AAI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ALSSegment:
+	segment="ALS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ODSSegment:
+	segment="ODS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+APDSegment:
+	segment="APD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ADSSegment:
+	segment="ADS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ERISegment:
+	segment="ERI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ATRSegment:
+	segment="ATR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+BCDSegment:
+	segment="BCD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+BLISegment:
+	segment="BLI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+MOVSegment:
+	segment="MOV"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CLTSegment:
+	segment="CLT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CMNSegment:
+	segment="CMN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CNXSegment:
+	segment="CNX"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CRISegment:
+	segment="CRI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CONSegment:
+	segment="CON"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CNYSegment:
+	segment="CNY"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+CURSegment:
+	segment="CUR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DAVSegment:
+	segment="DAV"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DTISegment:
+	segment="DTI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DNTSegment:
+	segment="DNT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+DISSegment:
+	segment="DIS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SERSegment:
+	segment="SER"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FRMSegment:
+	segment="FRM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FRQSegment:
+	segment="FRQ"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+FTISegment:
+	segment="FTI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+HDISegment:
+	segment="HDI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+HDRSegment:
+	segment="HDR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ADISegment:
+	segment="ADI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+HDSSegment:
+	segment="HDS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ITDSegment:
+	segment="ITD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ITCSegment:
+	segment="ITC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ICISegment:
+	segment="ICI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+IFTSegment:
+	segment="IFT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ITMSegment:
+	segment="ITM"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+LNGSegment:
+	segment="LNG"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+LKPSegment:
+	segment="LKP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PORSegment:
+	segment="POR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+MESSegment:
+	segment="MES"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+MSDSegment:
+	segment="MSD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+MAPSegment:
+	segment="MAP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+NMESegment:
+	segment="NME"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+NAASegment:
+	segment="NA"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+NUNSegment:
+	segment="NUN"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//ODI+BNE+ZQN'
+ODISegment:
+	segment="ODI"
+	(
+		PLUS
+		(locationIdentifier=ID)?
+		PLUS
+		(sequencePositionIdentifier=ID)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//ORG+1A:MUC+27213082:ATHGR28CS+ATH++T+GR:EUR:EN+A9996WSSU+04261178+1A'
+//ORG+NZ:AKL:00++AKL+NZ+A+NZ:NZD+PR'
+ORGSegment:
+	segment="ORG"
+	PLUS
+	( systemDetail1=SystemDetailFunction )?
+	PLUS
+	( originatorIdentification=OriginatorIdentificationFunction )?
+	PLUS
+	( location=Location )?
+	PLUS
+	( systemDetail2=SystemDetailFunction )?
+	PLUS
+	( originatorTypeCode=ID )?
+	PLUS
+	( originator=OriginatorFunction )?
+	PLUS
+	( originatorsAuthorityRequestCode=ID )?
+	(
+		PLUS
+		communicationNumber=ID
+		(
+			PLUS
+			partyIdIdentification=ID
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+OTISegment:
+	segment="OTI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PRTSegment:
+	segment="PRT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PMTSegment:
+	segment="PMT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+POPSegment:
+	segment="POP"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+POSSegment:
+	segment="POS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PRESegment:
+	segment="PRE"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PRDSegment:
+	segment="PRRD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PDTSegment:
+	segment="PDT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PLISegment:
+	segment="PLI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PROSegment:
+	segment="PRO"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+QTISegment:
+	segment="QTI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RTISegment:
+	segment="RTI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RTCSegment:
+	segment="RTC"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RFRSegment:
+	segment="RFR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RLSSegment:
+	segment="RLS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RCISegment:
+	segment="RCI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+RULSegment:
+	segment="RUL"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SDTSegment:
+	segment="SDT"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ASDSegment:
+	segment="ASD"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+PSISegment:
+	segment="PSI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+SSRSegment:
+	segment="SSR"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TFFSegment:
+	segment="TFF"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TXSSegment:
+	segment="TXS"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TCESegment:
+	segment="TCE"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TIZSegment:
+	segment="TIZ"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+ATISegment:
+	segment="ATI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TRFSegment:
+	segment="TRF"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TVL+230120+CHC+ZQN+NZ+5641+3+2+P"
+TVLSegment:
+	segment="TVL"
+	PLUS
+	productDateTime=ProductDateTime // E987
+	PLUS
+	(location1=Location)? // E975
+	PLUS
+	(location2=Location)? // E975
+	PLUS
+	(companyIdentification=CompanyIdentification)? // E988
+	(
+		PLUS
+		productIdentificationDetails=ProductIdentificationDetail // E989
+		(
+			PLUS
+			sequenceNumberDetails=SequenceNumberDetail // E990
+			(
+				PLUS
+				lineItemIdentifier=ID // 1082
+				(
+					PLUS
+					processingIndicatorDescriptionCode=ID // 7365
+				)?
+			)?
+		)?
+	)?
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TDISegment:
+	segment="TDI"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+TIFSegment:
+	segment="TIF"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
+//TODO
+VEHSegment:
+	segment="VEH"
+	PLUS
+	todo=ID
+	lineEnd=QUOTE_AND_NL
+;
 //UNS+S'
 UNSSegment:
 	segment="UNS"
@@ -1975,10 +2534,64 @@ AbstractEdiFunction:
 	DocumentMessage |
 	OriginatorFunction |
 	OriginatorIdentificationFunction |
-	LocationFunction |
+	Location |
 	InterchangerFunction |
-	DateOnlyFunction |
-	DateAndTimeFunction |
+	LocationIdentification |
+	AddressDetail |
+	AddressUsage |
+	AttributeDetail |
+	AttributeType |
+	BankOperation |
+	BusinessFunction |
+	DepartmentEmployeeDetail |
+	IdentificationNumber |
+	PositionIdentification |
+	ProductCharacteristic |
+	NationalityDetail |
+	PercentageDetail |
+	RateDetail |
+	StatusCategory |
+	Status |
+	StatusReason |
+	ValueListIdentification |
+	TermsOfDeliveryTransport |
+	QuantityDifferenceInformation |
+	ReasonForChange |
+	LanguageDetail |
+	InformationRequest |
+	IndexIdentification |
+	IndexValue |
+	Control |
+	BasisType |
+	CommunicationContact |
+	AgreementTypeIdentification |
+	AllowanceChargeInformation |
+	SpecialServicesIdentification |
+	ApplicabilityType |
+	PriceMultiplierInformation |
+	MonetaryAmountFunction |
+	MonetaryAmountFunctionDetail |
+	ArrayCellDetail |
+	ArrayStructureIdentification |
+	BillLevelIdentification |
+	CharacteristicValue |
+	MeasurementDetail |
+	PhysicalLogicalStateInformation |
+	CodeSetIdentification |
+	ComputerEnvironmentIdentification |
+	ClinicalInformationDetail |
+	CertaintyDetail |
+	ClauseName |
+	ClinicalInterventionDetail |
+	ProcessingIndicator |
+	MarksLabels |
+	TypeOfMarking |
+	GovernmentAction |
+	CompanyIdentification |
+	ProductIdentificationDetail |
+	SequenceNumberDetail |
+	ProductDateTime |
+	DateAndTime |
 	DateTimePeriod
 ;
 UNBHeader:
@@ -2307,11 +2920,19 @@ OriginatorIdentificationFunction:
 		)?
 	)?
 ;
-LocationFunction:
-	locationId=ID
+Location:
+	locationIdentifier=ID
 	(
 		COLON
 		locationName=ID
+		(
+			COLON
+			countryIdentifier=ID
+			(
+				COLON
+				locationFunctionCodeQualifier=ID
+			)?
+		)?
 	)?
 ;
 InterchangerFunction:
@@ -3041,13 +3662,81 @@ GovernmentAction:
 		)?
 	)?
 ;
-DateOnlyFunction:
-	date=ID
+// E987
+ProductDateTime:
+	dateTime1=DateOnly
+	(
+		COLON
+		dateTime2=DateOnly
+		(
+			COLON
+			dateVariationNumber=ID
+		)?
+	)?
 ;
-DateAndTimeFunction:
-	date=ID
+// E988
+CompanyIdentification:
+	partyName1=ID // 3036
+	(
+		COLON
+		partyName2=ID // 3036
+		(
+			COLON
+			partyName3=ID // 3036
+		)?
+	)?
+;
+// E989
+ProductIdentificationDetail:
+	productIdentifier=ID
+	(
+		COLON
+		characteristicDescriptionCode=ID
+		(
+			COLON
+			productCharacteristicIdentificationCode=ID
+			(
+				COLON
+				itemDescriptionCode1=ID
+				(
+					COLON
+					itemDescriptionCode2=ID	
+					(
+						COLON
+						itemDescriptionCode3=ID	
+						(
+							COLON
+							productName=ID	
+						)?
+					)?
+				)?
+			)?
+		)?
+	)?
+;
+// E990
+SequenceNumberDetail:
+	sequencePositionIdentifiers+=ID
+	(
+		COLON
+		sequencePositionIdentifiers+=ID
+	)*
+;
+//TODO: conflict when concat multiple dates and times
+DateAndTime:
+	date=ID // 2000
+	(
+		COLON
+		time=ID // 2002
+	)?
+;
+DateOnly:
+	date=ID // 2000
+;
+DateWithTime:
+	date=ID // 2000
 	COLON
-	time=ID
+	time=ID // 2002
 ;
 DateTimePeriod:
 	dateTimePeriodFunctionCodeQualifier=ID
@@ -3064,8 +3753,8 @@ DateTimePeriod:
 terminal QUOTE_AND_NL: ( "'" | "~" ) ( "\n" )?;
 terminal PLUS: ( "+" | "*" );
 terminal COLON: ":";
-//terminal INT_DATE returns ecore::EString: ( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" );
-//terminal INT_TIME returns ecore::EString: ( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" );
+//terminal INT_DATE returns ecore::EString: ( "0" | "1" | "2" | "3" )( "0".."9" )( "0" | "1" )( "0".."9" )( "2" )( "0".."9" );
+//terminal INT_TIME returns ecore::EString: ( "0" | "1" | "2" )( "0".."9" )( "0" | "1" | "2" | "3" | "4" | "5" )( "0".."9" );
 @Override
 terminal INT returns ecore::EInt: ( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" )( "0".."9" );
 @Override

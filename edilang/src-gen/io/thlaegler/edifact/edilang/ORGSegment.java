@@ -79,12 +79,12 @@ public interface ORGSegment extends AbstractEdiSegment
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Location</em>' containment reference.
-   * @see #setLocation(LocationFunction)
+   * @see #setLocation(Location)
    * @see io.thlaegler.edifact.edilang.EdilangPackage#getORGSegment_Location()
    * @model containment="true"
    * @generated
    */
-  LocationFunction getLocation();
+  Location getLocation();
 
   /**
    * Sets the value of the '{@link io.thlaegler.edifact.edilang.ORGSegment#getLocation <em>Location</em>}' containment reference.
@@ -94,7 +94,7 @@ public interface ORGSegment extends AbstractEdiSegment
    * @see #getLocation()
    * @generated
    */
-  void setLocation(LocationFunction value);
+  void setLocation(Location value);
 
   /**
    * Returns the value of the '<em><b>System Detail2</b></em>' containment reference.

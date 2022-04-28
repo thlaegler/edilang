@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ReasonForChangeImpl extends MinimalEObjectImpl.Container implements ReasonForChange
+public class ReasonForChangeImpl extends AbstractEdiFunctionImpl implements ReasonForChange
 {
   /**
    * The default value of the '{@link #getChangeReasonDescriptionCode() <em>Change Reason Description Code</em>}' attribute.

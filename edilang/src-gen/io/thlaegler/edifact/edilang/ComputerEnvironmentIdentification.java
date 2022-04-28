@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ComputerEnvironmentIdentification extends EObject
+public interface ComputerEnvironmentIdentification extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Computer Environment Name Code</b></em>' attribute.

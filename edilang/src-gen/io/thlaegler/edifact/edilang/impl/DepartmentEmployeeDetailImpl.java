@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class DepartmentEmployeeDetailImpl extends MinimalEObjectImpl.Container implements DepartmentEmployeeDetail
+public class DepartmentEmployeeDetailImpl extends AbstractEdiFunctionImpl implements DepartmentEmployeeDetail
 {
   /**
    * The default value of the '{@link #getDepartmentEmployeeNameCode() <em>Department Employee Name Code</em>}' attribute.

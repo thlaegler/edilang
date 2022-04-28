@@ -1338,15 +1338,6 @@ public interface EdilangFactory extends EFactory
   MSGSegment createMSGSegment();
 
   /**
-   * Returns a new object of class '<em>ORG Segment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>ORG Segment</em>'.
-   * @generated
-   */
-  ORGSegment createORGSegment();
-
-  /**
    * Returns a new object of class '<em>POC Segment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1354,15 +1345,6 @@ public interface EdilangFactory extends EFactory
    * @generated
    */
   POCSegment createPOCSegment();
-
-  /**
-   * Returns a new object of class '<em>ODI Segment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>ODI Segment</em>'.
-   * @generated
-   */
-  ODISegment createODISegment();
 
   /**
    * Returns a new object of class '<em>UCI Segment</em>'.
@@ -1381,15 +1363,6 @@ public interface EdilangFactory extends EFactory
    * @generated
    */
   PDISegment createPDISegment();
-
-  /**
-   * Returns a new object of class '<em>TVL Segment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>TVL Segment</em>'.
-   * @generated
-   */
-  TVLSegment createTVLSegment();
 
   /**
    * Returns a new object of class '<em>RPI Segment</em>'.
@@ -1543,6 +1516,690 @@ public interface EdilangFactory extends EFactory
    * @generated
    */
   PCISegment createPCISegment();
+
+  /**
+   * Returns a new object of class '<em>AAI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>AAI Segment</em>'.
+   * @generated
+   */
+  AAISegment createAAISegment();
+
+  /**
+   * Returns a new object of class '<em>ALS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ALS Segment</em>'.
+   * @generated
+   */
+  ALSSegment createALSSegment();
+
+  /**
+   * Returns a new object of class '<em>ODS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ODS Segment</em>'.
+   * @generated
+   */
+  ODSSegment createODSSegment();
+
+  /**
+   * Returns a new object of class '<em>APD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>APD Segment</em>'.
+   * @generated
+   */
+  APDSegment createAPDSegment();
+
+  /**
+   * Returns a new object of class '<em>ADS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ADS Segment</em>'.
+   * @generated
+   */
+  ADSSegment createADSSegment();
+
+  /**
+   * Returns a new object of class '<em>ERI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ERI Segment</em>'.
+   * @generated
+   */
+  ERISegment createERISegment();
+
+  /**
+   * Returns a new object of class '<em>ATR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ATR Segment</em>'.
+   * @generated
+   */
+  ATRSegment createATRSegment();
+
+  /**
+   * Returns a new object of class '<em>BCD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>BCD Segment</em>'.
+   * @generated
+   */
+  BCDSegment createBCDSegment();
+
+  /**
+   * Returns a new object of class '<em>BLI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>BLI Segment</em>'.
+   * @generated
+   */
+  BLISegment createBLISegment();
+
+  /**
+   * Returns a new object of class '<em>MOV Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MOV Segment</em>'.
+   * @generated
+   */
+  MOVSegment createMOVSegment();
+
+  /**
+   * Returns a new object of class '<em>CLT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CLT Segment</em>'.
+   * @generated
+   */
+  CLTSegment createCLTSegment();
+
+  /**
+   * Returns a new object of class '<em>CMN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CMN Segment</em>'.
+   * @generated
+   */
+  CMNSegment createCMNSegment();
+
+  /**
+   * Returns a new object of class '<em>CNX Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CNX Segment</em>'.
+   * @generated
+   */
+  CNXSegment createCNXSegment();
+
+  /**
+   * Returns a new object of class '<em>CRI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CRI Segment</em>'.
+   * @generated
+   */
+  CRISegment createCRISegment();
+
+  /**
+   * Returns a new object of class '<em>CON Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CON Segment</em>'.
+   * @generated
+   */
+  CONSegment createCONSegment();
+
+  /**
+   * Returns a new object of class '<em>CNY Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CNY Segment</em>'.
+   * @generated
+   */
+  CNYSegment createCNYSegment();
+
+  /**
+   * Returns a new object of class '<em>CUR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CUR Segment</em>'.
+   * @generated
+   */
+  CURSegment createCURSegment();
+
+  /**
+   * Returns a new object of class '<em>DAV Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>DAV Segment</em>'.
+   * @generated
+   */
+  DAVSegment createDAVSegment();
+
+  /**
+   * Returns a new object of class '<em>DTI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>DTI Segment</em>'.
+   * @generated
+   */
+  DTISegment createDTISegment();
+
+  /**
+   * Returns a new object of class '<em>DNT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>DNT Segment</em>'.
+   * @generated
+   */
+  DNTSegment createDNTSegment();
+
+  /**
+   * Returns a new object of class '<em>DIS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>DIS Segment</em>'.
+   * @generated
+   */
+  DISSegment createDISSegment();
+
+  /**
+   * Returns a new object of class '<em>SER Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>SER Segment</em>'.
+   * @generated
+   */
+  SERSegment createSERSegment();
+
+  /**
+   * Returns a new object of class '<em>FRM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>FRM Segment</em>'.
+   * @generated
+   */
+  FRMSegment createFRMSegment();
+
+  /**
+   * Returns a new object of class '<em>FRQ Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>FRQ Segment</em>'.
+   * @generated
+   */
+  FRQSegment createFRQSegment();
+
+  /**
+   * Returns a new object of class '<em>FTI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>FTI Segment</em>'.
+   * @generated
+   */
+  FTISegment createFTISegment();
+
+  /**
+   * Returns a new object of class '<em>HDI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>HDI Segment</em>'.
+   * @generated
+   */
+  HDISegment createHDISegment();
+
+  /**
+   * Returns a new object of class '<em>HDR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>HDR Segment</em>'.
+   * @generated
+   */
+  HDRSegment createHDRSegment();
+
+  /**
+   * Returns a new object of class '<em>ADI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ADI Segment</em>'.
+   * @generated
+   */
+  ADISegment createADISegment();
+
+  /**
+   * Returns a new object of class '<em>HDS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>HDS Segment</em>'.
+   * @generated
+   */
+  HDSSegment createHDSSegment();
+
+  /**
+   * Returns a new object of class '<em>ITD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ITD Segment</em>'.
+   * @generated
+   */
+  ITDSegment createITDSegment();
+
+  /**
+   * Returns a new object of class '<em>ITC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ITC Segment</em>'.
+   * @generated
+   */
+  ITCSegment createITCSegment();
+
+  /**
+   * Returns a new object of class '<em>ICI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ICI Segment</em>'.
+   * @generated
+   */
+  ICISegment createICISegment();
+
+  /**
+   * Returns a new object of class '<em>IFT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>IFT Segment</em>'.
+   * @generated
+   */
+  IFTSegment createIFTSegment();
+
+  /**
+   * Returns a new object of class '<em>ITM Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ITM Segment</em>'.
+   * @generated
+   */
+  ITMSegment createITMSegment();
+
+  /**
+   * Returns a new object of class '<em>LNG Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>LNG Segment</em>'.
+   * @generated
+   */
+  LNGSegment createLNGSegment();
+
+  /**
+   * Returns a new object of class '<em>LKP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>LKP Segment</em>'.
+   * @generated
+   */
+  LKPSegment createLKPSegment();
+
+  /**
+   * Returns a new object of class '<em>POR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>POR Segment</em>'.
+   * @generated
+   */
+  PORSegment createPORSegment();
+
+  /**
+   * Returns a new object of class '<em>MES Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MES Segment</em>'.
+   * @generated
+   */
+  MESSegment createMESSegment();
+
+  /**
+   * Returns a new object of class '<em>MSD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MSD Segment</em>'.
+   * @generated
+   */
+  MSDSegment createMSDSegment();
+
+  /**
+   * Returns a new object of class '<em>MAP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MAP Segment</em>'.
+   * @generated
+   */
+  MAPSegment createMAPSegment();
+
+  /**
+   * Returns a new object of class '<em>NME Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>NME Segment</em>'.
+   * @generated
+   */
+  NMESegment createNMESegment();
+
+  /**
+   * Returns a new object of class '<em>NAA Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>NAA Segment</em>'.
+   * @generated
+   */
+  NAASegment createNAASegment();
+
+  /**
+   * Returns a new object of class '<em>NUN Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>NUN Segment</em>'.
+   * @generated
+   */
+  NUNSegment createNUNSegment();
+
+  /**
+   * Returns a new object of class '<em>ODI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ODI Segment</em>'.
+   * @generated
+   */
+  ODISegment createODISegment();
+
+  /**
+   * Returns a new object of class '<em>ORG Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ORG Segment</em>'.
+   * @generated
+   */
+  ORGSegment createORGSegment();
+
+  /**
+   * Returns a new object of class '<em>OTI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>OTI Segment</em>'.
+   * @generated
+   */
+  OTISegment createOTISegment();
+
+  /**
+   * Returns a new object of class '<em>PRT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PRT Segment</em>'.
+   * @generated
+   */
+  PRTSegment createPRTSegment();
+
+  /**
+   * Returns a new object of class '<em>PMT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PMT Segment</em>'.
+   * @generated
+   */
+  PMTSegment createPMTSegment();
+
+  /**
+   * Returns a new object of class '<em>POP Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>POP Segment</em>'.
+   * @generated
+   */
+  POPSegment createPOPSegment();
+
+  /**
+   * Returns a new object of class '<em>POS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>POS Segment</em>'.
+   * @generated
+   */
+  POSSegment createPOSSegment();
+
+  /**
+   * Returns a new object of class '<em>PRE Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PRE Segment</em>'.
+   * @generated
+   */
+  PRESegment createPRESegment();
+
+  /**
+   * Returns a new object of class '<em>PRD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PRD Segment</em>'.
+   * @generated
+   */
+  PRDSegment createPRDSegment();
+
+  /**
+   * Returns a new object of class '<em>PDT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PDT Segment</em>'.
+   * @generated
+   */
+  PDTSegment createPDTSegment();
+
+  /**
+   * Returns a new object of class '<em>PLI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PLI Segment</em>'.
+   * @generated
+   */
+  PLISegment createPLISegment();
+
+  /**
+   * Returns a new object of class '<em>PRO Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PRO Segment</em>'.
+   * @generated
+   */
+  PROSegment createPROSegment();
+
+  /**
+   * Returns a new object of class '<em>QTI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>QTI Segment</em>'.
+   * @generated
+   */
+  QTISegment createQTISegment();
+
+  /**
+   * Returns a new object of class '<em>RTI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RTI Segment</em>'.
+   * @generated
+   */
+  RTISegment createRTISegment();
+
+  /**
+   * Returns a new object of class '<em>RTC Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RTC Segment</em>'.
+   * @generated
+   */
+  RTCSegment createRTCSegment();
+
+  /**
+   * Returns a new object of class '<em>RFR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RFR Segment</em>'.
+   * @generated
+   */
+  RFRSegment createRFRSegment();
+
+  /**
+   * Returns a new object of class '<em>RLS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RLS Segment</em>'.
+   * @generated
+   */
+  RLSSegment createRLSSegment();
+
+  /**
+   * Returns a new object of class '<em>RCI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RCI Segment</em>'.
+   * @generated
+   */
+  RCISegment createRCISegment();
+
+  /**
+   * Returns a new object of class '<em>RUL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RUL Segment</em>'.
+   * @generated
+   */
+  RULSegment createRULSegment();
+
+  /**
+   * Returns a new object of class '<em>SDT Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>SDT Segment</em>'.
+   * @generated
+   */
+  SDTSegment createSDTSegment();
+
+  /**
+   * Returns a new object of class '<em>ASD Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ASD Segment</em>'.
+   * @generated
+   */
+  ASDSegment createASDSegment();
+
+  /**
+   * Returns a new object of class '<em>PSI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PSI Segment</em>'.
+   * @generated
+   */
+  PSISegment createPSISegment();
+
+  /**
+   * Returns a new object of class '<em>SSR Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>SSR Segment</em>'.
+   * @generated
+   */
+  SSRSegment createSSRSegment();
+
+  /**
+   * Returns a new object of class '<em>TFF Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TFF Segment</em>'.
+   * @generated
+   */
+  TFFSegment createTFFSegment();
+
+  /**
+   * Returns a new object of class '<em>TXS Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TXS Segment</em>'.
+   * @generated
+   */
+  TXSSegment createTXSSegment();
+
+  /**
+   * Returns a new object of class '<em>TCE Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TCE Segment</em>'.
+   * @generated
+   */
+  TCESegment createTCESegment();
+
+  /**
+   * Returns a new object of class '<em>TIZ Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TIZ Segment</em>'.
+   * @generated
+   */
+  TIZSegment createTIZSegment();
+
+  /**
+   * Returns a new object of class '<em>ATI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ATI Segment</em>'.
+   * @generated
+   */
+  ATISegment createATISegment();
+
+  /**
+   * Returns a new object of class '<em>TRF Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TRF Segment</em>'.
+   * @generated
+   */
+  TRFSegment createTRFSegment();
+
+  /**
+   * Returns a new object of class '<em>TVL Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TVL Segment</em>'.
+   * @generated
+   */
+  TVLSegment createTVLSegment();
+
+  /**
+   * Returns a new object of class '<em>TDI Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TDI Segment</em>'.
+   * @generated
+   */
+  TDISegment createTDISegment();
+
+  /**
+   * Returns a new object of class '<em>TIF Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>TIF Segment</em>'.
+   * @generated
+   */
+  TIFSegment createTIFSegment();
+
+  /**
+   * Returns a new object of class '<em>VEH Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>VEH Segment</em>'.
+   * @generated
+   */
+  VEHSegment createVEHSegment();
 
   /**
    * Returns a new object of class '<em>UNS Segment</em>'.
@@ -1806,13 +2463,13 @@ public interface EdilangFactory extends EFactory
   OriginatorIdentificationFunction createOriginatorIdentificationFunction();
 
   /**
-   * Returns a new object of class '<em>Location Function</em>'.
+   * Returns a new object of class '<em>Location</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Location Function</em>'.
+   * @return a new object of class '<em>Location</em>'.
    * @generated
    */
-  LocationFunction createLocationFunction();
+  Location createLocation();
 
   /**
    * Returns a new object of class '<em>Interchanger Function</em>'.
@@ -2283,22 +2940,67 @@ public interface EdilangFactory extends EFactory
   GovernmentAction createGovernmentAction();
 
   /**
-   * Returns a new object of class '<em>Date Only Function</em>'.
+   * Returns a new object of class '<em>Product Date Time</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Date Only Function</em>'.
+   * @return a new object of class '<em>Product Date Time</em>'.
    * @generated
    */
-  DateOnlyFunction createDateOnlyFunction();
+  ProductDateTime createProductDateTime();
 
   /**
-   * Returns a new object of class '<em>Date And Time Function</em>'.
+   * Returns a new object of class '<em>Company Identification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Date And Time Function</em>'.
+   * @return a new object of class '<em>Company Identification</em>'.
    * @generated
    */
-  DateAndTimeFunction createDateAndTimeFunction();
+  CompanyIdentification createCompanyIdentification();
+
+  /**
+   * Returns a new object of class '<em>Product Identification Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Product Identification Detail</em>'.
+   * @generated
+   */
+  ProductIdentificationDetail createProductIdentificationDetail();
+
+  /**
+   * Returns a new object of class '<em>Sequence Number Detail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sequence Number Detail</em>'.
+   * @generated
+   */
+  SequenceNumberDetail createSequenceNumberDetail();
+
+  /**
+   * Returns a new object of class '<em>Date And Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Date And Time</em>'.
+   * @generated
+   */
+  DateAndTime createDateAndTime();
+
+  /**
+   * Returns a new object of class '<em>Date Only</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Date Only</em>'.
+   * @generated
+   */
+  DateOnly createDateOnly();
+
+  /**
+   * Returns a new object of class '<em>Date With Time</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Date With Time</em>'.
+   * @generated
+   */
+  DateWithTime createDateWithTime();
 
   /**
    * Returns a new object of class '<em>Date Time Period</em>'.

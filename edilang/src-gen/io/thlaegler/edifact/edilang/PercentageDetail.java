@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PercentageDetail extends EObject
+public interface PercentageDetail extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Percentage Type Code Qualifier</b></em>' attribute.

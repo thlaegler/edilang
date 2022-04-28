@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class CodeSetIdentificationImpl extends MinimalEObjectImpl.Container implements CodeSetIdentification
+public class CodeSetIdentificationImpl extends AbstractEdiFunctionImpl implements CodeSetIdentification
 {
   /**
    * The default value of the '{@link #getSimpleDataElementTagIdentifier() <em>Simple Data Element Tag Identifier</em>}' attribute.

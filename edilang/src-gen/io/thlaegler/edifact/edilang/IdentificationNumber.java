@@ -3,7 +3,6 @@
  */
 package io.thlaegler.edifact.edilang;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface IdentificationNumber extends EObject
+public interface IdentificationNumber extends AbstractEdiFunction
 {
   /**
    * Returns the value of the '<em><b>Object Identifier</b></em>' attribute.

@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class PercentageDetailImpl extends MinimalEObjectImpl.Container implements PercentageDetail
+public class PercentageDetailImpl extends AbstractEdiFunctionImpl implements PercentageDetail
 {
   /**
    * The default value of the '{@link #getPercentageTypeCodeQualifier() <em>Percentage Type Code Qualifier</em>}' attribute.
